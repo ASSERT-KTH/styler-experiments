@@ -1,0 +1,63 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "141",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/141/SVGPolylineElement.java\nindex f18f153c535..5d09e36c472 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/141/SVGPolylineElement.java\n@@ -29,5 +29,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+  SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/141/SVGPolylineElement.java\nindex f18f153c535..fafd0bab680 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/141/SVGPolylineElement.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -29,5 +30,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+    SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/141/SVGPolylineElement.java\nindex f18f153c535..0ee33ce2727 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/141/SVGPolylineElement.java\n@@ -28,6 +28,7 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n-public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n-}\n+\n+\n+public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/141/SVGPolylineElement.java\nindex f18f153c535..5d09e36c472 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/141/SVGPolylineElement.java\n@@ -29,5 +29,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+  SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/141/SVGPolylineElement.java\nindex f18f153c535..015d3c9fc45 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/141/SVGPolylineElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/141/SVGPolylineElement.java\n@@ -29,5 +29,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGPolylineElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+    SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

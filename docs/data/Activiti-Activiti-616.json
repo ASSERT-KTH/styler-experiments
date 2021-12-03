@@ -1,0 +1,89 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "616",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.engine.impl.persistence.entity.data.integration;\n\nimport org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\nimport org.activiti.engine.impl.persistence.entity.data.AbstractDataManager;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..39df160d7cb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/616/MybatisIntegrationContextDataManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.engine.impl.persistence.entity.data.integration;\n \n import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..39df160d7cb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/616/MybatisIntegrationContextDataManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.engine.impl.persistence.entity.data.integration;\n \n import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..3eda47b5373 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/616/MybatisIntegrationContextDataManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.engine.impl.persistence.entity.data.integration;\n \n import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\n@@ -36,4 +37,4 @@ public class MybatisIntegrationContextDataManager extends AbstractDataManager<In\n         return IntegrationContextEntityImpl.class;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "'CLASS_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..b26668a00e2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/616/MybatisIntegrationContextDataManager.java\n@@ -20,20 +20,20 @@ import org.activiti.engine.impl.persistence.entity.data.AbstractDataManager;\n import org.activiti.engine.impl.persistence.entity.integration.IntegrationContextEntity;\n import org.activiti.engine.impl.persistence.entity.integration.IntegrationContextEntityImpl;\n \n-public class MybatisIntegrationContextDataManager extends AbstractDataManager<IntegrationContextEntity> implements IntegrationContextDataManager {\n \n-    public MybatisIntegrationContextDataManager(ProcessEngineConfigurationImpl processEngineConfiguration) {\n-        super(processEngineConfiguration);\n-    }\n+public class MybatisIntegrationContextDataManager extends AbstractDataManager<IntegrationContextEntity> implements IntegrationContextDataManager {\n \n-    @Override\n-    public IntegrationContextEntity create() {\n-        return new IntegrationContextEntityImpl();\n-    }\n+  public MybatisIntegrationContextDataManager(ProcessEngineConfigurationImpl processEngineConfiguration) {\n+                                                                                                        super(processEngineConfiguration);\n+  }\n \n-    @Override\n-    public Class<? extends IntegrationContextEntity> getManagedEntityClass() {\n-        return IntegrationContextEntityImpl.class;\n-    }\n+  @Override\n+  public IntegrationContextEntity create() {\n+    return new IntegrationContextEntityImpl();\n+  }\n \n-}\n+  @Override\n+  public Class<? extends IntegrationContextEntity> getManagedEntityClass() {\n+    return IntegrationContextEntityImpl.class;\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..6fa7b0c74ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/616/MybatisIntegrationContextDataManager.java\n@@ -13,7 +13,9 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package org.activiti.engine.impl.persistence.entity.data.integration;\n+package org.activiti.engine.impl.persistence.entity.data.\n+\n+integration;\n \n import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\n import org.activiti.engine.impl.persistence.entity.data.AbstractDataManager;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/616/MybatisIntegrationContextDataManager.java\nindex 006c5e52dbf..39df160d7cb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/616/MybatisIntegrationContextDataManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/616/MybatisIntegrationContextDataManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.engine.impl.persistence.entity.data.integration;\n \n import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

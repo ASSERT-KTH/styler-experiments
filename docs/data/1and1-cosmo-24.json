@@ -1,0 +1,96 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "24",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "public class CosmoSqlException extends CosmoException {\n\n    private static final long serialVersionUID = -2851581052368637599L;\n    /**\n     * Constructor.\n     * @param cause - If somethig is wrong this exception is thrown.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "15",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/24/CosmoSqlException.java\nindex 3ed9378e1f2..ea0c38b76b7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/24/CosmoSqlException.java\n@@ -12,9 +12,9 @@ package org.unitedinternet.cosmo;\n  * @author ccoman\n  */\n public class CosmoSqlException extends CosmoException {\n-\n     private static final long serialVersionUID = -2851581052368637599L;\n-    /**\n+\n+/**\n      * Constructor.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/24/CosmoSqlException.java\nindex 3ed9378e1f2..c887f284d73 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/24/CosmoSqlException.java\n@@ -1,30 +1,33 @@\n /*\n  * CosmoIOException.java Apr 18, 2012\n- * \n+ *\n  * Copyright (c) 2012 1&1 Internet AG. All rights reserved.\n- * \n+ *\n  * $Id$\n  */\n package org.unitedinternet.cosmo;\n \n /**\n  * An instance of {@link java.lang.RuntimeException}.\n+ *\n  * @author ccoman\n  */\n public class CosmoSqlException extends CosmoException {\n \n     private static final long serialVersionUID = -2851581052368637599L;\n+\n     /**\n      * Constructor.\n+     *\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n     public CosmoSqlException(Throwable cause) {\n         super(cause);\n     }\n+\n     /**\n-     * \n      * @param message The message exception.\n-     * @param cause - If somethig is wrong this exception is thrown.\n+     * @param cause   - If somethig is wrong this exception is thrown.\n      */\n     public CosmoSqlException(String message, Throwable cause) {\n         super(message, cause);\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/24/CosmoSqlException.java\nindex 3ed9378e1f2..25be06407d1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/24/CosmoSqlException.java\n@@ -29,4 +29,4 @@ public class CosmoSqlException extends CosmoException {\n     public CosmoSqlException(String message, Throwable cause) {\n         super(message, cause);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/24/CosmoSqlException.java\nindex 3ed9378e1f2..2baefd9fc0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/24/CosmoSqlException.java\n@@ -11,6 +11,8 @@ package org.unitedinternet.cosmo;\n  * An instance of {@link java.lang.RuntimeException}.\n  * @author ccoman\n  */\n+\n+\n public class CosmoSqlException extends CosmoException {\n \n     private static final long serialVersionUID = -2851581052368637599L;\n@@ -18,6 +20,7 @@ public class CosmoSqlException extends CosmoException {\n      * Constructor.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n+\n     public CosmoSqlException(Throwable cause) {\n         super(cause);\n     }\n@@ -26,7 +29,9 @@ public class CosmoSqlException extends CosmoException {\n      * @param message The message exception.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n+\n+\n     public CosmoSqlException(String message, Throwable cause) {\n         super(message, cause);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "15",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/24/CosmoSqlException.java\nindex 3ed9378e1f2..ea0c38b76b7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/24/CosmoSqlException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/24/CosmoSqlException.java\n@@ -12,9 +12,9 @@ package org.unitedinternet.cosmo;\n  * @author ccoman\n  */\n public class CosmoSqlException extends CosmoException {\n-\n     private static final long serialVersionUID = -2851581052368637599L;\n-    /**\n+\n+/**\n      * Constructor.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

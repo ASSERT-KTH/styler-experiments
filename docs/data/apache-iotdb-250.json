@@ -1,0 +1,82 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "250",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.apache.iotdb.db.mqtt;\n\nimport org.apache.iotdb.db.auth.AuthException;\nimport org.apache.iotdb.db.auth.authorizer.BasicAuthorizer;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/250/BrokerAuthenticator.java\nindex 4deabe0fac0..7453c3e9760 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/250/BrokerAuthenticator.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.mqtt;\n \n import org.apache.iotdb.db.auth.AuthException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/250/BrokerAuthenticator.java\nindex 4deabe0fac0..e1982d6d3b2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/250/BrokerAuthenticator.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.mqtt;\n \n import org.apache.iotdb.db.auth.AuthException;\n@@ -26,7 +27,9 @@ import org.apache.commons.lang3.StringUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n-/** The MQTT broker authenticator. */\n+/**\n+ * The MQTT broker authenticator.\n+ */\n public class BrokerAuthenticator implements IAuthenticator {\n   private static final Logger LOG = LoggerFactory.getLogger(BrokerAuthenticator.class);\n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "'String' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/250/BrokerAuthenticator.java\nindex 4deabe0fac0..f4fd9a9935e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/250/BrokerAuthenticator.java\n@@ -20,22 +20,23 @@ package org.apache.iotdb.db.mqtt;\n import org.apache.iotdb.db.auth.AuthException;\n import org.apache.iotdb.db.auth.authorizer.BasicAuthorizer;\n import org.apache.iotdb.db.auth.authorizer.IAuthorizer;\n-\n import io.moquette.broker.security.IAuthenticator;\n import org.apache.commons.lang3.StringUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n /** The MQTT broker authenticator. */\n+\n public class BrokerAuthenticator implements IAuthenticator {\n+\n   private static final Logger LOG = LoggerFactory.getLogger(BrokerAuthenticator.class);\n \n   @Override\n-  public boolean checkValid(String clientId, String username, byte[] password) {\n+  public boolean checkValid(\n+    String clientId, String username, byte[] password) {\n     if (StringUtils.isBlank(username) || password == null) {\n       return false;\n     }\n-\n     try {\n       IAuthorizer authorizer = BasicAuthorizer.getInstance();\n       return authorizer.login(username, new String(password));\n@@ -44,4 +45,4 @@ public class BrokerAuthenticator implements IAuthenticator {\n       return false;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/250/BrokerAuthenticator.java\nindex 4deabe0fac0..7453c3e9760 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/250/BrokerAuthenticator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/250/BrokerAuthenticator.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.mqtt;\n \n import org.apache.iotdb.db.auth.AuthException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "419",
+    "information": {
+        "violations": [
+            {
+                "line": "57",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string uri = 2;</code>\n   */\n  com.google.protobuf.ByteString getUriBytes();\n\n  public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/419/RecognitionAudioOrBuilder.java\nindex c41082816b3..81371180952 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/419/RecognitionAudioOrBuilder.java\n@@ -54,6 +54,7 @@ public interface RecognitionAudioOrBuilder\n    *\n    * <code>string uri = 2;</code>\n    */\n+\n   com.google.protobuf.ByteString getUriBytes();\n \n   public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/419/RecognitionAudioOrBuilder.java\nindex c41082816b3..ef77b2be4b7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/419/RecognitionAudioOrBuilder.java\n@@ -9,8 +9,6 @@ public interface RecognitionAudioOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The audio data bytes encoded as specified in\n    * `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a\n@@ -22,8 +20,6 @@ public interface RecognitionAudioOrBuilder\n   com.google.protobuf.ByteString getContent();\n \n   /**\n-   *\n-   *\n    * <pre>\n    * URI that points to a file that contains audio data bytes as specified in\n    * `RecognitionConfig`. The file must not be compressed (for example, gzip).\n@@ -38,9 +34,8 @@ public interface RecognitionAudioOrBuilder\n    * <code>string uri = 2;</code>\n    */\n   java.lang.String getUri();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * URI that points to a file that contains audio data bytes as specified in\n    * `RecognitionConfig`. The file must not be compressed (for example, gzip).\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/419/RecognitionAudioOrBuilder.java\nindex c41082816b3..b6756582e12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/419/RecognitionAudioOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.cloud.speech.v1;\n \n-public interface RecognitionAudioOrBuilder\n-    extends\n+public interface RecognitionAudioOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.cloud.speech.v1.RecognitionAudio)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -38,7 +37,8 @@ public interface RecognitionAudioOrBuilder\n    * <code>string uri = 2;</code>\n    */\n   java.lang.String getUri();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -57,4 +57,4 @@ public interface RecognitionAudioOrBuilder\n   com.google.protobuf.ByteString getUriBytes();\n \n   public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "57",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "59",
+                    "column": "92",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/419/RecognitionAudioOrBuilder.java\nindex c41082816b3..f75ac274745 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/419/RecognitionAudioOrBuilder.java\n@@ -54,7 +54,7 @@ public interface RecognitionAudioOrBuilder\n    *\n    * <code>string uri = 2;</code>\n    */\n-  com.google.protobuf.ByteString getUriBytes();\n+  com.google.protobuf.ByteString getUriBytes()\n \n-  public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n+  ; public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/419/RecognitionAudioOrBuilder.java\nindex c41082816b3..81371180952 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/419/RecognitionAudioOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/419/RecognitionAudioOrBuilder.java\n@@ -54,6 +54,7 @@ public interface RecognitionAudioOrBuilder\n    *\n    * <code>string uri = 2;</code>\n    */\n+\n   com.google.protobuf.ByteString getUriBytes();\n \n   public com.google.cloud.speech.v1.RecognitionAudio.AudioSourceCase getAudioSourceCase();\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

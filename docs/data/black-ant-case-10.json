@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "10",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "49",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Bean\n    public MultipartResolver multipartResolver(){\n        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n        multipartResolver.setMaxUploadSize(10000000);\n        return multipartResolver;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/10/DemoApplication.java\nindex 4961d06fc62..e4c5a49b0d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/10/DemoApplication.java\n@@ -14,7 +14,7 @@ public class DemoApplication {\n     }\n \n     @Bean\n-    public MultipartResolver multipartResolver(){\n+    public MultipartResolver multipartResolver() {\n         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n         multipartResolver.setMaxUploadSize(10000000);\n         return multipartResolver;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/10/DemoApplication.java\nindex 4961d06fc62..e4c5a49b0d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/10/DemoApplication.java\n@@ -14,7 +14,7 @@ public class DemoApplication {\n     }\n \n     @Bean\n-    public MultipartResolver multipartResolver(){\n+    public MultipartResolver multipartResolver() {\n         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n         multipartResolver.setMaxUploadSize(10000000);\n         return multipartResolver;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/10/DemoApplication.java\nindex 4961d06fc62..c52a0020da6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/10/DemoApplication.java\n@@ -14,9 +14,9 @@ public class DemoApplication {\n     }\n \n     @Bean\n-    public MultipartResolver multipartResolver(){\n+    public MultipartResolver multipartResolver() {\n         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n         multipartResolver.setMaxUploadSize(10000000);\n         return multipartResolver;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/10/DemoApplication.java\nindex 4961d06fc62..e4c5a49b0d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/10/DemoApplication.java\n@@ -14,7 +14,7 @@ public class DemoApplication {\n     }\n \n     @Bean\n-    public MultipartResolver multipartResolver(){\n+    public MultipartResolver multipartResolver() {\n         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n         multipartResolver.setMaxUploadSize(10000000);\n         return multipartResolver;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/10/DemoApplication.java\nindex 4961d06fc62..e4c5a49b0d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/10/DemoApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/10/DemoApplication.java\n@@ -14,7 +14,7 @@ public class DemoApplication {\n     }\n \n     @Bean\n-    public MultipartResolver multipartResolver(){\n+    public MultipartResolver multipartResolver() {\n         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();\n         multipartResolver.setMaxUploadSize(10000000);\n         return multipartResolver;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

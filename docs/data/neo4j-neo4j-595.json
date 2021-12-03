@@ -1,0 +1,102 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "595",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "41",
+                    "column": "36",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "41",
+                    "column": "120",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/595/RoutingTableGetter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/595/RoutingTableGetter.java\nindex a180e28d9bb..6deea2b2879 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/595/RoutingTableGetter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/595/RoutingTableGetter.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.bolt.routing;\n \n import java.util.concurrent.CompletableFuture;\n@@ -33,9 +34,9 @@ public interface RoutingTableGetter\n      * Retrieves the routing table\n      *\n      * @param statementProcessor The statement processor which will be used to get the routing information.\n-     * @param routingContext Meta information used by the routing procedure to create the routing table.\n-     * @param databaseName The name of the database from the routing table will be get.\n+     * @param routingContext     Meta information used by the routing procedure to create the routing table.\n+     * @param databaseName       The name of the database from the routing table will be get.\n      * @return A promise of a routing table\n      */\n-    CompletableFuture<MapValue> get( StatementProcessor statementProcessor, MapValue routingContext, String databaseName );\n+    CompletableFuture<MapValue> get(StatementProcessor statementProcessor, MapValue routingContext, String databaseName);\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

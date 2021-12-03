@@ -1,0 +1,97 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "358",
+    "information": {
+        "violations": [
+            {
+                "line": "82",
+                "column": "15",
+                "severity": "warning",
+                "message": "'{' at column 15 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "          });\n          asyncResult.result().frameHandler((frame) ->\n              {\n                if (frame.isBinary() || frame.isText()) {\n                  onMessage.handle(frame.binaryData());\n                }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/358/WebsocketClientUtil.java\nindex c6463587e4f..33566b93544 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/358/WebsocketClientUtil.java\n@@ -78,9 +78,8 @@ public final class WebsocketClientUtil {\n           asyncResult.result().pongHandler(pong -> {\n             // ignore, just prevent NPE.\n           });\n-          asyncResult.result().frameHandler((frame) ->\n-              {\n-                if (frame.isBinary() || frame.isText()) {\n+          asyncResult.result().frameHandler((frame) -> {\n+            if (frame.isBinary() || frame.isText()) {\n                   onMessage.handle(frame.binaryData());\n                 }\n               }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "82",
+                    "column": "15",
+                    "severity": "warning",
+                    "message": "'{' at column 15 should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/358/WebsocketClientUtil.java\nindex c6463587e4f..1024c6317ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/358/WebsocketClientUtil.java\n@@ -51,8 +51,8 @@ public final class WebsocketClientUtil {\n   }\n \n   public void open(IpPort ipPort, String url, Handler<Void> onOpen, Handler<Void> onClose,\n-      Handler<Buffer> onMessage, Handler<Throwable> onException,\n-      Handler<Throwable> onConnectFailed) {\n+                   Handler<Buffer> onMessage, Handler<Throwable> onException,\n+                   Handler<Throwable> onConnectFailed) {\n     HttpClientWithContext vertxHttpClient = websocketClientPool.getClient();\n     vertxHttpClient.runOnContext(client -> {\n       WebSocketConnectOptions options = new WebSocketConnectOptions();\n@@ -110,7 +110,7 @@ public final class WebsocketClientUtil {\n   }\n \n   public SignRequest createSignRequest(String method, IpPort ipPort, RequestParam requestParam, String url,\n-      Map<String, String> headers) {\n+                                       Map<String, String> headers) {\n     SignRequest signReq = new SignRequest();\n     StringBuilder endpoint = new StringBuilder(\"https://\" + ipPort.getHostOrIp());\n     endpoint.append(\":\" + ipPort.getPort());\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/358/WebsocketClientUtil.java\nindex c6463587e4f..b4cf9f13d05 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/358/WebsocketClientUtil.java\n@@ -78,13 +78,11 @@ public final class WebsocketClientUtil {\n           asyncResult.result().pongHandler(pong -> {\n             // ignore, just prevent NPE.\n           });\n-          asyncResult.result().frameHandler((frame) ->\n-              {\n+          asyncResult.result().frameHandler((frame) -> {\n                 if (frame.isBinary() || frame.isText()) {\n                   onMessage.handle(frame.binaryData());\n                 }\n-              }\n-          );\n+              });\n         }\n       });\n     });\n@@ -121,11 +119,10 @@ public final class WebsocketClientUtil {\n       LOGGER.error(\"set uri failed, uri is {}, message: {}\", endpoint.toString(), e.getMessage());\n     }\n     signReq.setContent((requestParam.getBody() != null && requestParam.getBody().length > 0)\n-        ? new ByteArrayInputStream(requestParam.getBody())\n-        : null);\n+        ? new ByteArrayInputStream(requestParam.getBody()) : null);\n     signReq.setHeaders(headers);\n     signReq.setHttpMethod(method);\n     signReq.setQueryParams(requestParam.getQueryParamsMap());\n     return signReq;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "51",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 187).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 207).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "105",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "116",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/358/WebsocketClientUtil.java\nindex c6463587e4f..b931d021540 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/358/WebsocketClientUtil.java\n@@ -23,7 +23,6 @@ import java.net.URISyntaxException;\n import java.util.HashMap;\n import java.util.List;\n import java.util.Map;\n-\n import org.apache.servicecomb.foundation.auth.AuthHeaderProvider;\n import org.apache.servicecomb.foundation.auth.SignRequest;\n import org.apache.servicecomb.foundation.common.net.IpPort;\n@@ -31,7 +30,6 @@ import org.apache.servicecomb.foundation.vertx.client.http.HttpClientWithContext\n import org.apache.servicecomb.serviceregistry.config.ServiceRegistryConfig;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import io.vertx.core.Handler;\n import io.vertx.core.MultiMap;\n import io.vertx.core.buffer.Buffer;\n@@ -50,15 +48,12 @@ public final class WebsocketClientUtil {\n     authHeaderProviders = serviceRegistryConfig.getAuthHeaderProviders();\n   }\n \n-  public void open(IpPort ipPort, String url, Handler<Void> onOpen, Handler<Void> onClose,\n-      Handler<Buffer> onMessage, Handler<Throwable> onException,\n-      Handler<Throwable> onConnectFailed) {\n+  public void open(IpPort ipPort, String url, Handler<Void> onOpen, Handler<Void> onClose, Handler<Buffer> onMessage, Handler<Throwable> onException, Handler<Throwable> onConnectFailed) {\n     HttpClientWithContext vertxHttpClient = websocketClientPool.getClient();\n     vertxHttpClient.runOnContext(client -> {\n       WebSocketConnectOptions options = new WebSocketConnectOptions();\n-      options.setHost(ipPort.getHostOrIp()).setPort(ipPort.getPort()).setURI(url)\n-          .setHeaders(getDefaultHeaders().addAll(getSignAuthHeaders(\n-              createSignRequest(HttpMethod.GET.name(), ipPort, new RequestParam(), url, new HashMap<>()))));\n+      options.setHost(ipPort.getHostOrIp()).setPort(ipPort.getPort())\n+                                           .setURI(url).setHeaders(getDefaultHeaders().addAll(getSignAuthHeaders(createSignRequest(HttpMethod.GET.name(), ipPort, new RequestParam(), url, new HashMap<>()))));\n       client.webSocket(options, asyncResult -> {\n         if (asyncResult.failed()) {\n           onConnectFailed.handle(asyncResult.cause());\n@@ -78,13 +73,11 @@ public final class WebsocketClientUtil {\n           asyncResult.result().pongHandler(pong -> {\n             // ignore, just prevent NPE.\n           });\n-          asyncResult.result().frameHandler((frame) ->\n-              {\n-                if (frame.isBinary() || frame.isText()) {\n-                  onMessage.handle(frame.binaryData());\n-                }\n-              }\n-          );\n+          asyncResult.result().frameHandler((frame) -> {\n+            if (frame.isBinary() || frame.isText()) {\n+              onMessage.handle(frame.binaryData());\n+            }\n+          });\n         }\n       });\n     });\n@@ -98,8 +91,8 @@ public final class WebsocketClientUtil {\n     Map<String, String> headers = new HashMap<>();\n     headers.put(RestClientUtil.HEADER_CONTENT_TYPE, \"application/json\");\n     headers.put(RestClientUtil.HEADER_USER_AGENT, \"cse-serviceregistry-client/1.0.0\");\n-    headers.put(RestClientUtil.HEADER_TENANT_NAME, ServiceRegistryConfig.INSTANCE.getTenantName());\n-\n+    headers.put(RestClientUtil.HEADER_TENANT_NAME,\n+ServiceRegistryConfig.INSTANCE.getTenantName());\n     return headers;\n   }\n \n@@ -109,8 +102,7 @@ public final class WebsocketClientUtil {\n     return headers;\n   }\n \n-  public SignRequest createSignRequest(String method, IpPort ipPort, RequestParam requestParam, String url,\n-      Map<String, String> headers) {\n+  public SignRequest createSignRequest(String method, IpPort ipPort, RequestParam requestParam, String url, Map<String, String> headers) {\n     SignRequest signReq = new SignRequest();\n     StringBuilder endpoint = new StringBuilder(\"https://\" + ipPort.getHostOrIp());\n     endpoint.append(\":\" + ipPort.getPort());\n@@ -120,12 +112,11 @@ public final class WebsocketClientUtil {\n     } catch (URISyntaxException e) {\n       LOGGER.error(\"set uri failed, uri is {}, message: {}\", endpoint.toString(), e.getMessage());\n     }\n-    signReq.setContent((requestParam.getBody() != null && requestParam.getBody().length > 0)\n-        ? new ByteArrayInputStream(requestParam.getBody())\n-        : null);\n+\n+    signReq.setContent((requestParam.getBody() != null && requestParam.getBody().length > 0) ? new ByteArrayInputStream(requestParam.getBody()) : null);\n     signReq.setHeaders(headers);\n     signReq.setHttpMethod(method);\n     signReq.setQueryParams(requestParam.getQueryParamsMap());\n     return signReq;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/358/WebsocketClientUtil.java\nindex c6463587e4f..33566b93544 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/358/WebsocketClientUtil.java\n@@ -78,9 +78,8 @@ public final class WebsocketClientUtil {\n           asyncResult.result().pongHandler(pong -> {\n             // ignore, just prevent NPE.\n           });\n-          asyncResult.result().frameHandler((frame) ->\n-              {\n-                if (frame.isBinary() || frame.isText()) {\n+          asyncResult.result().frameHandler((frame) -> {\n+            if (frame.isBinary() || frame.isText()) {\n                   onMessage.handle(frame.binaryData());\n                 }\n               }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/358/WebsocketClientUtil.java\nindex c6463587e4f..33566b93544 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/358/WebsocketClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/358/WebsocketClientUtil.java\n@@ -78,9 +78,8 @@ public final class WebsocketClientUtil {\n           asyncResult.result().pongHandler(pong -> {\n             // ignore, just prevent NPE.\n           });\n-          asyncResult.result().frameHandler((frame) ->\n-              {\n-                if (frame.isBinary() || frame.isText()) {\n+          asyncResult.result().frameHandler((frame) -> {\n+            if (frame.isBinary() || frame.isText()) {\n                   onMessage.handle(frame.binaryData());\n                 }\n               }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

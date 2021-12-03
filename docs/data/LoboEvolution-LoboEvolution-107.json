@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "107",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface RElement extends RCollection, UINode {\n\n\t/**\n\t * <p>getCollapsibleMarginBottom.</p>\n\t *\n\t * @return a int.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/107/RElement.java\nindex c19562cd344..3c19f61456c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/107/RElement.java\n@@ -33,12 +33,12 @@ import org.loboevolution.html.dom.domimpl.UINode;\n  */\n public interface RElement extends RCollection, UINode {\n \n-\t/**\n+    /**\n \t * <p>getCollapsibleMarginBottom.</p>\n \t *\n \t * @return a int.\n \t */\n-\tint getCollapsibleMarginBottom();\n+ int getCollapsibleMarginBottom();\n \n \t/**\n \t * <p>getCollapsibleMarginTop.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/107/RElement.java\nindex c19562cd344..9ee98823b6e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/107/RElement.java\n@@ -33,65 +33,65 @@ import org.loboevolution.html.dom.domimpl.UINode;\n  */\n public interface RElement extends RCollection, UINode {\n \n-\t/**\n-\t * <p>getCollapsibleMarginBottom.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getCollapsibleMarginBottom();\n+    /**\n+     * <p>getCollapsibleMarginBottom.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getCollapsibleMarginBottom();\n \n-\t/**\n-\t * <p>getCollapsibleMarginTop.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getCollapsibleMarginTop();\n+    /**\n+     * <p>getCollapsibleMarginTop.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getCollapsibleMarginTop();\n \n-\t/**\n-\t * <p>getMarginBottom.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginBottom();\n+    /**\n+     * <p>getMarginBottom.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getMarginBottom();\n \n-\t/**\n-\t * <p>getMarginLeft.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginLeft();\n+    /**\n+     * <p>getMarginLeft.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getMarginLeft();\n \n-\t/**\n-\t * <p>getMarginRight.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginRight();\n+    /**\n+     * <p>getMarginRight.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getMarginRight();\n \n-\t/**\n-\t * <p>getMarginTop.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginTop();\n+    /**\n+     * <p>getMarginTop.</p>\n+     *\n+     * @return a int.\n+     */\n+    int getMarginTop();\n \n-\t/**\n-\t * Vertical alignment for elements rendered in a line. Returns one of the\n-\t * constants defined in this class.\n-\t *\n-\t * @return a int.\n-\t */\n-\tdefault int getVAlign() {\n-\t\treturn AlignValues.BASELINE.getValue();\n-\t}\n+    /**\n+     * Vertical alignment for elements rendered in a line. Returns one of the\n+     * constants defined in this class.\n+     *\n+     * @return a int.\n+     */\n+    default int getVAlign() {\n+        return AlignValues.BASELINE.getValue();\n+    }\n \n-\t/**\n-\t * Lays out the subtree below the RElement. The RElement is expected to set its\n-\t * own dimensions, but not its origin.\n-\t *\n-\t * @param availWidth  The available width from the parent's canvas.\n-\t * @param availHeight The available height from the parent's canvas.\n-\t * @param sizeOnly    Whether the layout is for sizing determination only.\n-\t */\n-\tvoid layout(int availWidth, int availHeight, boolean sizeOnly);\n+    /**\n+     * Lays out the subtree below the RElement. The RElement is expected to set its\n+     * own dimensions, but not its origin.\n+     *\n+     * @param availWidth  The available width from the parent's canvas.\n+     * @param availHeight The available height from the parent's canvas.\n+     * @param sizeOnly    Whether the layout is for sizing determination only.\n+     */\n+    void layout(int availWidth, int availHeight, boolean sizeOnly);\n }\n",
+            "diff_size": 54
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/107/RElement.java\nindex c19562cd344..fcf7de68020 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/107/RElement.java\n@@ -31,67 +31,85 @@ import org.loboevolution.html.dom.domimpl.UINode;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface RElement extends RCollection, UINode {\n \n-\t/**\n-\t * <p>getCollapsibleMarginBottom.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getCollapsibleMarginBottom();\n-\n-\t/**\n-\t * <p>getCollapsibleMarginTop.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getCollapsibleMarginTop();\n-\n-\t/**\n-\t * <p>getMarginBottom.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginBottom();\n-\n-\t/**\n-\t * <p>getMarginLeft.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginLeft();\n-\n-\t/**\n-\t * <p>getMarginRight.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginRight();\n-\n-\t/**\n-\t * <p>getMarginTop.</p>\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getMarginTop();\n-\n-\t/**\n-\t * Vertical alignment for elements rendered in a line. Returns one of the\n-\t * constants defined in this class.\n-\t *\n-\t * @return a int.\n-\t */\n-\tdefault int getVAlign() {\n-\t\treturn AlignValues.BASELINE.getValue();\n-\t}\n-\n-\t/**\n-\t * Lays out the subtree below the RElement. The RElement is expected to set its\n-\t * own dimensions, but not its origin.\n-\t *\n-\t * @param availWidth  The available width from the parent's canvas.\n-\t * @param availHeight The available height from the parent's canvas.\n-\t * @param sizeOnly    Whether the layout is for sizing determination only.\n-\t */\n-\tvoid layout(int availWidth, int availHeight, boolean sizeOnly);\n-}\n+    /**\n+     * <p>getCollapsibleMarginBottom.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getCollapsibleMarginBottom();\n+\n+    /**\n+     * <p>getCollapsibleMarginTop.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getCollapsibleMarginTop();\n+\n+    /**\n+     * <p>getMarginBottom.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getMarginBottom();\n+\n+    /**\n+     * <p>getMarginLeft.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getMarginLeft();\n+\n+    /**\n+     * <p>getMarginRight.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getMarginRight();\n+\n+    /**\n+     * <p>getMarginTop.</p>\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getMarginTop();\n+\n+    /**\n+     * Vertical alignment for elements rendered in a line. Returns one of the\n+     * constants defined in this class.\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    default int getVAlign() {\n+        return AlignValues.BASELINE.getValue();\n+    }\n+\n+    /**\n+     * Lays out the subtree below the RElement. The RElement is expected to set its\n+     * own dimensions, but not its origin.\n+     *\n+     * @param availWidth  The available width from the parent's canvas.\n+     * @param availHeight The available height from the parent's canvas.\n+     * @param sizeOnly    Whether the layout is for sizing determination only.\n+     */\n+\n+\n+    void layout(int availWidth, int availHeight, boolean sizeOnly);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 80
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/107/RElement.java\nindex c19562cd344..3c19f61456c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/107/RElement.java\n@@ -33,12 +33,12 @@ import org.loboevolution.html.dom.domimpl.UINode;\n  */\n public interface RElement extends RCollection, UINode {\n \n-\t/**\n+    /**\n \t * <p>getCollapsibleMarginBottom.</p>\n \t *\n \t * @return a int.\n \t */\n-\tint getCollapsibleMarginBottom();\n+ int getCollapsibleMarginBottom();\n \n \t/**\n \t * <p>getCollapsibleMarginTop.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/107/RElement.java\nindex c19562cd344..3c19f61456c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/107/RElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/107/RElement.java\n@@ -33,12 +33,12 @@ import org.loboevolution.html.dom.domimpl.UINode;\n  */\n public interface RElement extends RCollection, UINode {\n \n-\t/**\n+    /**\n \t * <p>getCollapsibleMarginBottom.</p>\n \t *\n \t * @return a int.\n \t */\n-\tint getCollapsibleMarginBottom();\n+ int getCollapsibleMarginBottom();\n \n \t/**\n \t * <p>getCollapsibleMarginTop.</p>\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

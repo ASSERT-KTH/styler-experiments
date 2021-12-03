@@ -1,0 +1,61 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "68",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.rest.internal.jsonhome;\n\nimport java.util.HashMap;\nimport java.util.Map;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/68/JsonHome.java\nindex 58f522973d2..1d8380f694d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/68/JsonHome.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.rest.internal.jsonhome;\n \n import java.util.HashMap;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/68/JsonHome.java\nindex 58f522973d2..1d8380f694d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/68/JsonHome.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.rest.internal.jsonhome;\n \n import java.util.HashMap;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/68/JsonHome.java\nindex 58f522973d2..1d8380f694d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/68/JsonHome.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.rest.internal.jsonhome;\n \n import java.util.HashMap;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/68/JsonHome.java\nindex 58f522973d2..4186ad06fd1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/68/JsonHome.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/68/JsonHome.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.rest.internal.jsonhome;\n \n import java.util.HashMap;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

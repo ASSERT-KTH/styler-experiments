@@ -1,0 +1,71 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "column": "53",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private DiscoveryFilter filter = null;\n\n  public DiscoveryClientUtil(DiscoveryFilter filter){\n    this.filter = filter;\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/12/DiscoveryClientUtil.java\nindex 4aa326610a3..16eb66e3dfd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/12/DiscoveryClientUtil.java\n@@ -35,7 +35,7 @@ public  class DiscoveryClientUtil<T> {\n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/12/DiscoveryClientUtil.java\nindex 4aa326610a3..9278f3f57de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/12/DiscoveryClientUtil.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.springboot.common;\n \n import java.util.ArrayList;\n@@ -30,12 +31,12 @@ import org.apache.servicecomb.serviceregistry.discovery.DiscoveryContext;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryFilter;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryTree;\n \n-public  class DiscoveryClientUtil<T> {\n+public class DiscoveryClientUtil<T> {\n \n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n@@ -44,7 +45,7 @@ public  class DiscoveryClientUtil<T> {\n     context.setInputParameters(serviceId);\n \n     DiscoveryTree discoveryTree = discoveryTrees.computeIfAbsent(serviceId, key -> {\n-      DiscoveryTree tree =  new DiscoveryTree();\n+      DiscoveryTree tree = new DiscoveryTree();\n       tree.addFilter(filter);\n       return tree;\n     });\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/12/DiscoveryClientUtil.java\nindex 4aa326610a3..79a5d2bbac6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/12/DiscoveryClientUtil.java\n@@ -30,12 +30,12 @@ import org.apache.servicecomb.serviceregistry.discovery.DiscoveryContext;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryFilter;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryTree;\n \n-public  class DiscoveryClientUtil<T> {\n+public class DiscoveryClientUtil<T> {\n \n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n@@ -44,7 +44,7 @@ public  class DiscoveryClientUtil<T> {\n     context.setInputParameters(serviceId);\n \n     DiscoveryTree discoveryTree = discoveryTrees.computeIfAbsent(serviceId, key -> {\n-      DiscoveryTree tree =  new DiscoveryTree();\n+      DiscoveryTree tree = new DiscoveryTree();\n       tree.addFilter(filter);\n       return tree;\n     });\n@@ -68,4 +68,4 @@ public  class DiscoveryClientUtil<T> {\n     }\n     return serviceIDList;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "51",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/12/DiscoveryClientUtil.java\nindex 4aa326610a3..55759745ee5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/12/DiscoveryClientUtil.java\n@@ -19,7 +19,6 @@ package org.apache.servicecomb.springboot.common;\n import java.util.ArrayList;\n import java.util.List;\n import java.util.Map;\n-\n import org.apache.servicecomb.foundation.common.cache.VersionedCache;\n import org.apache.servicecomb.foundation.common.concurrent.ConcurrentHashMapEx;\n import org.apache.servicecomb.serviceregistry.RegistryUtils;\n@@ -30,12 +29,12 @@ import org.apache.servicecomb.serviceregistry.discovery.DiscoveryContext;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryFilter;\n import org.apache.servicecomb.serviceregistry.discovery.DiscoveryTree;\n \n-public  class DiscoveryClientUtil<T> {\n-\n+public class DiscoveryClientUtil<T> {\n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n+\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n@@ -43,17 +42,13 @@ public  class DiscoveryClientUtil<T> {\n     DiscoveryContext context = new DiscoveryContext();\n     context.setInputParameters(serviceId);\n \n-    DiscoveryTree discoveryTree = discoveryTrees.computeIfAbsent(serviceId, key -> {\n-      DiscoveryTree tree =  new DiscoveryTree();\n-      tree.addFilter(filter);\n-      return tree;\n+    DiscoveryTree discoveryTree = discoveryTrees.computeIfAbsent(serviceId,\n+key -> {\n+                                    DiscoveryTree tree = new DiscoveryTree();\n+                                    tree.addFilter(filter);\n+                                    return tree;\n     });\n-\n-    VersionedCache serversVersionedCache = discoveryTree.discovery(context,\n-        RegistryUtils.getAppId(),\n-        serviceId,\n-        DefinitionConst.VERSION_RULE_ALL);\n-\n+    VersionedCache serversVersionedCache = discoveryTree.discovery(context, RegistryUtils.getAppId(), serviceId, DefinitionConst.VERSION_RULE_ALL);\n     return serversVersionedCache.data();\n   }\n \n@@ -68,4 +63,4 @@ public  class DiscoveryClientUtil<T> {\n     }\n     return serviceIDList;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/12/DiscoveryClientUtil.java\nindex 4aa326610a3..16eb66e3dfd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/12/DiscoveryClientUtil.java\n@@ -35,7 +35,7 @@ public  class DiscoveryClientUtil<T> {\n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/12/DiscoveryClientUtil.java\nindex 4aa326610a3..16eb66e3dfd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/12/DiscoveryClientUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/12/DiscoveryClientUtil.java\n@@ -35,7 +35,7 @@ public  class DiscoveryClientUtil<T> {\n   private Map<String, DiscoveryTree> discoveryTrees = new ConcurrentHashMapEx<>();\n   private DiscoveryFilter filter = null;\n \n-  public DiscoveryClientUtil(DiscoveryFilter filter){\n+  public DiscoveryClientUtil(DiscoveryFilter filter) {\n     this.filter = filter;\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

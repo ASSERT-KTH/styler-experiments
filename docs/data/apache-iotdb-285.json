@@ -1,0 +1,113 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "285",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.physical.crud;\n\nimport org.apache.iotdb.db.exception.query.QueryProcessException;\nimport org.apache.iotdb.db.metadata.PartialPath;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/285/RawDataQueryPlan.java\nindex fc975df2b92..0d31d8dba03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/285/RawDataQueryPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/285/RawDataQueryPlan.java\nindex fc975df2b92..0d31d8dba03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/285/RawDataQueryPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "63",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "74",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 145).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "95",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/285/RawDataQueryPlan.java\nindex fc975df2b92..696bc60d53c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/285/RawDataQueryPlan.java\n@@ -24,7 +24,6 @@ import org.apache.iotdb.db.qp.logical.Operator;\n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n import org.apache.iotdb.tsfile.read.common.Path;\n import org.apache.iotdb.tsfile.read.expression.IExpression;\n-\n import java.util.ArrayList;\n import java.util.Collections;\n import java.util.HashMap;\n@@ -61,9 +60,7 @@ public class RawDataQueryPlan extends QueryPlan {\n   }\n \n   public void addDeduplicatedPaths(PartialPath path) {\n-    deviceToMeasurements\n-        .computeIfAbsent(path.getDevice(), key -> new HashSet<>())\n-        .add(path.getMeasurement());\n+    deviceToMeasurements.computeIfAbsent(path.getDevice(), key -> new HashSet<>()).add(path.getMeasurement());\n     this.deduplicatedPaths.add(path);\n   }\n \n@@ -71,13 +68,10 @@ public class RawDataQueryPlan extends QueryPlan {\n    * used for AlignByDevice Query, the query is executed by each device, So we only maintain\n    * measurements of current device.\n    */\n+\n   public void setDeduplicatedPaths(List<PartialPath> deduplicatedPaths) {\n     deviceToMeasurements.clear();\n-    deduplicatedPaths.forEach(\n-        path ->\n-            deviceToMeasurements\n-                .computeIfAbsent(path.getDevice(), key -> new HashSet<>())\n-                .add(path.getMeasurement()));\n+    deduplicatedPaths.forEach(path -> deviceToMeasurements.computeIfAbsent(path.getDevice(), key -> new HashSet<>()).add(path.getMeasurement()));\n     this.deduplicatedPaths = deduplicatedPaths;\n   }\n \n@@ -98,12 +92,10 @@ public class RawDataQueryPlan extends QueryPlan {\n   }\n \n   public void addFilterPathInDeviceToMeasurements(Path path) {\n-    deviceToMeasurements\n-        .computeIfAbsent(path.getDevice(), key -> new HashSet<>())\n-        .add(path.getMeasurement());\n+    deviceToMeasurements.computeIfAbsent(path.getDevice(), key -> new HashSet<>()).add(path.getMeasurement());\n   }\n \n   public Map<String, Set<String>> getDeviceToMeasurements() {\n     return deviceToMeasurements;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "67",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/285/RawDataQueryPlan.java\nindex fc975df2b92..0cbbdce4b3a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/285/RawDataQueryPlan.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.physical.crud;\n+package org.apache.iotdb.db.qp.physical.crud\n \n-import org.apache.iotdb.db.exception.query.QueryProcessException;\n+; import org.apache.iotdb.db.exception.query.QueryProcessException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.logical.Operator;\n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/285/RawDataQueryPlan.java\nindex fc975df2b92..0d31d8dba03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/285/RawDataQueryPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/285/RawDataQueryPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

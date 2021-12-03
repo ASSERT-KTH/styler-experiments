@@ -1,0 +1,63 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "104",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "column": "48",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\t} \n\n\tprivate String convertName(String name){\n\t\treturn StringUtils.convertWithSeperator(name, splitor);\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/104/SplitorPropertyStrategy.java\nindex b3c9cce55db..902e3be2df4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/104/SplitorPropertyStrategy.java\n@@ -43,7 +43,7 @@ public class SplitorPropertyStrategy extends PropertyNamingStrategy {\n \t\treturn convertName(defaultName);\n \t} \n \n-\tprivate String convertName(String name){\n+\tprivate String convertName(String name) {\n \t\treturn StringUtils.convertWithSeperator(name, splitor);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/104/SplitorPropertyStrategy.java\nindex b3c9cce55db..c2d83d54098 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/104/SplitorPropertyStrategy.java\n@@ -9,43 +9,43 @@ import com.fasterxml.jackson.databind.introspect.AnnotatedMethod;\n \n public class SplitorPropertyStrategy extends PropertyNamingStrategy {\n \n-\t/**\n-\t * \n-\t */\n-\tprivate static final long serialVersionUID = 1L;\n-\t\n-\tprivate String splitor = \"_\";\n-\t\n-\tpublic SplitorPropertyStrategy() {\n-\t\tsuper();\n-\t}\n-\n-\tpublic SplitorPropertyStrategy(String splitor) {\n-\t\tsuper();\n-\t\tthis.splitor = splitor;\n-\t}\n-\n-\t@Override\n-\tpublic String nameForField(MapperConfig<?> config, AnnotatedField field,\n-\t\t\tString defaultName) {\n-\t\treturn convertName(defaultName);\n-\t}\n-\n-\t@Override\n-\tpublic String nameForGetterMethod(MapperConfig<?> config,\n-\t\t\tAnnotatedMethod method, String defaultName) {\n-\t\treturn convertName(defaultName);\n-\t}\n-\n-\t@Override\n-\tpublic String nameForSetterMethod(MapperConfig<?> config,\n-\t\t\tAnnotatedMethod method, String defaultName) {\n-\t\treturn convertName(defaultName);\n-\t} \n-\n-\tprivate String convertName(String name){\n-\t\treturn StringUtils.convertWithSeperator(name, splitor);\n-\t}\n+  /**\n+   *\n+   */\n+  private static final long serialVersionUID = 1L;\n+\n+  private String splitor = \"_\";\n+\n+  public SplitorPropertyStrategy() {\n+    super();\n+  }\n+\n+  public SplitorPropertyStrategy(String splitor) {\n+    super();\n+    this.splitor = splitor;\n+  }\n+\n+  @Override\n+  public String nameForField(MapperConfig<?> config, AnnotatedField field,\n+                             String defaultName) {\n+    return convertName(defaultName);\n+  }\n+\n+  @Override\n+  public String nameForGetterMethod(MapperConfig<?> config,\n+                                    AnnotatedMethod method, String defaultName) {\n+    return convertName(defaultName);\n+  }\n+\n+  @Override\n+  public String nameForSetterMethod(MapperConfig<?> config,\n+                                    AnnotatedMethod method, String defaultName) {\n+    return convertName(defaultName);\n+  }\n+\n+  private String convertName(String name) {\n+    return StringUtils.convertWithSeperator(name, splitor);\n+  }\n \n \n }\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/104/SplitorPropertyStrategy.java\nindex b3c9cce55db..5bdcbcd7c9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/104/SplitorPropertyStrategy.java\n@@ -28,24 +28,24 @@ public class SplitorPropertyStrategy extends PropertyNamingStrategy {\n \t@Override\n \tpublic String nameForField(MapperConfig<?> config, AnnotatedField field,\n \t\t\tString defaultName) {\n-\t\treturn convertName(defaultName);\n+\treturn convertName(defaultName);\n \t}\n \n \t@Override\n \tpublic String nameForGetterMethod(MapperConfig<?> config,\n \t\t\tAnnotatedMethod method, String defaultName) {\n-\t\treturn convertName(defaultName);\n+\treturn convertName(defaultName);\n \t}\n \n \t@Override\n \tpublic String nameForSetterMethod(MapperConfig<?> config,\n \t\t\tAnnotatedMethod method, String defaultName) {\n-\t\treturn convertName(defaultName);\n-\t} \n+\treturn convertName(defaultName);\n+\t}\n \n-\tprivate String convertName(String name){\n-\t\treturn StringUtils.convertWithSeperator(name, splitor);\n+private String convertName(String name) {\n+\treturn StringUtils.convertWithSeperator(name, splitor);\n \t}\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/104/SplitorPropertyStrategy.java\nindex b3c9cce55db..902e3be2df4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/104/SplitorPropertyStrategy.java\n@@ -43,7 +43,7 @@ public class SplitorPropertyStrategy extends PropertyNamingStrategy {\n \t\treturn convertName(defaultName);\n \t} \n \n-\tprivate String convertName(String name){\n+\tprivate String convertName(String name) {\n \t\treturn StringUtils.convertWithSeperator(name, splitor);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/104/SplitorPropertyStrategy.java\nindex b3c9cce55db..902e3be2df4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/104/SplitorPropertyStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/104/SplitorPropertyStrategy.java\n@@ -43,7 +43,7 @@ public class SplitorPropertyStrategy extends PropertyNamingStrategy {\n \t\treturn convertName(defaultName);\n \t} \n \n-\tprivate String convertName(String name){\n+\tprivate String convertName(String name) {\n \t\treturn StringUtils.convertWithSeperator(name, splitor);\n \t}\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

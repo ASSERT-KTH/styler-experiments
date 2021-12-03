@@ -1,0 +1,62 @@
+{
+    "project_name": "opencb-opencga",
+    "violation_id": "134",
+    "information": {
+        "violations": [
+            {
+                "line": "54",
+                "severity": "error",
+                "message": "Line matches the illegal pattern 'Trailing whitespace'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "            }\n            return dependentPermissions;\n        }        \n    }\n\n    public ClinicalAnalysisAclEntry() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/134/ClinicalAnalysisAclEntry.java\nindex de5cb29f0b0..384459eef21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/134/ClinicalAnalysisAclEntry.java\n@@ -51,7 +51,7 @@ public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisA\n                 }\n             }\n             return dependentPermissions;\n-        }        \n+        }\n     }\n \n     public ClinicalAnalysisAclEntry() {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/134/ClinicalAnalysisAclEntry.java\nindex de5cb29f0b0..487b60e5777 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/134/ClinicalAnalysisAclEntry.java\n@@ -28,58 +28,58 @@ import java.util.stream.Collectors;\n  */\n public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions> {\n \n-    public enum ClinicalAnalysisPermissions {\n-        VIEW(Collections.emptyList()),\n-        UPDATE(Collections.singletonList(VIEW)),\n-        DELETE(Arrays.asList(VIEW, UPDATE));\n+  public enum ClinicalAnalysisPermissions {\n+    VIEW(Collections.emptyList()),\n+    UPDATE(Collections.singletonList(VIEW)),\n+    DELETE(Arrays.asList(VIEW, UPDATE));\n \n-        private List<ClinicalAnalysisPermissions> implicitPermissions;\n+    private List<ClinicalAnalysisPermissions> implicitPermissions;\n \n-        ClinicalAnalysisPermissions(List<ClinicalAnalysisPermissions> implicitPermissions) {\n-            this.implicitPermissions = implicitPermissions;\n-        }\n-\n-        public List<ClinicalAnalysisPermissions> getImplicitPermissions() {\n-            return implicitPermissions;\n-        }\n-\n-        public List<ClinicalAnalysisPermissions> getDependentPermissions() {\n-            List<ClinicalAnalysisPermissions> dependentPermissions = new LinkedList<>();\n-            for (ClinicalAnalysisPermissions permission : EnumSet.complementOf(EnumSet.of(this))) {\n-                if (permission.getImplicitPermissions().contains(this)) {\n-                    dependentPermissions.add(permission);\n-                }\n-            }\n-            return dependentPermissions;\n-        }        \n+    ClinicalAnalysisPermissions(List<ClinicalAnalysisPermissions> implicitPermissions) {\n+      this.implicitPermissions = implicitPermissions;\n     }\n \n-    public ClinicalAnalysisAclEntry() {\n-        this(\"\", Collections.emptyList());\n+    public List<ClinicalAnalysisPermissions> getImplicitPermissions() {\n+      return implicitPermissions;\n     }\n \n-    public ClinicalAnalysisAclEntry(String member, EnumSet<ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions> permissions) {\n-        super(member, permissions);\n+    public List<ClinicalAnalysisPermissions> getDependentPermissions() {\n+      List<ClinicalAnalysisPermissions> dependentPermissions = new LinkedList<>();\n+      for (ClinicalAnalysisPermissions permission : EnumSet.complementOf(EnumSet.of(this))) {\n+        if (permission.getImplicitPermissions().contains(this)) {\n+          dependentPermissions.add(permission);\n+        }\n+      }\n+      return dependentPermissions;\n     }\n+  }\n \n-    public ClinicalAnalysisAclEntry(String member, ObjectMap permissions) {\n-        super(member, EnumSet.noneOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class));\n+  public ClinicalAnalysisAclEntry() {\n+    this(\"\", Collections.emptyList());\n+  }\n \n-        EnumSet<ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions> aux =\n-                EnumSet.allOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class);\n-        for (ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions permission : aux) {\n-            if (permissions.containsKey(permission.name()) && permissions.getBoolean(permission.name())) {\n-                this.permissions.add(permission);\n-            }\n-        }\n+  public ClinicalAnalysisAclEntry(String member, EnumSet<ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions> permissions) {\n+    super(member, permissions);\n+  }\n+\n+  public ClinicalAnalysisAclEntry(String member, ObjectMap permissions) {\n+    super(member, EnumSet.noneOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class));\n+\n+    EnumSet<ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions> aux =\n+        EnumSet.allOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class);\n+    for (ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions permission : aux) {\n+      if (permissions.containsKey(permission.name()) && permissions.getBoolean(permission.name())) {\n+        this.permissions.add(permission);\n+      }\n     }\n+  }\n \n-    public ClinicalAnalysisAclEntry(String member, List<String> permissions) {\n-        super(member, EnumSet.noneOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class));\n+  public ClinicalAnalysisAclEntry(String member, List<String> permissions) {\n+    super(member, EnumSet.noneOf(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions.class));\n \n-        if (CollectionUtils.isNotEmpty(permissions)) {\n-            this.permissions.addAll(\n-                    permissions.stream().map(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions::valueOf).collect(Collectors.toList()));\n-        }\n+    if (CollectionUtils.isNotEmpty(permissions)) {\n+      this.permissions.addAll(\n+          permissions.stream().map(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions::valueOf).collect(Collectors.toList()));\n     }\n+  }\n }\n",
+            "diff_size": 57
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/134/ClinicalAnalysisAclEntry.java\nindex de5cb29f0b0..f8680ccf277 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/134/ClinicalAnalysisAclEntry.java\n@@ -51,10 +51,10 @@ public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisA\n                 }\n             }\n             return dependentPermissions;\n-        }        \n+        }\n     }\n \n-    public ClinicalAnalysisAclEntry() {\n+public ClinicalAnalysisAclEntry() {\n         this(\"\", Collections.emptyList());\n     }\n \n@@ -82,4 +82,4 @@ public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisA\n                     permissions.stream().map(ClinicalAnalysisAclEntry.ClinicalAnalysisPermissions::valueOf).collect(Collectors.toList()));\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/134/ClinicalAnalysisAclEntry.java\nindex de5cb29f0b0..384459eef21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/134/ClinicalAnalysisAclEntry.java\n@@ -51,7 +51,7 @@ public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisA\n                 }\n             }\n             return dependentPermissions;\n-        }        \n+        }\n     }\n \n     public ClinicalAnalysisAclEntry() {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/134/ClinicalAnalysisAclEntry.java\nindex de5cb29f0b0..239b9358a6c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/134/ClinicalAnalysisAclEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/134/ClinicalAnalysisAclEntry.java\n@@ -51,10 +51,9 @@ public class ClinicalAnalysisAclEntry extends AbstractAclEntry<ClinicalAnalysisA\n                 }\n             }\n             return dependentPermissions;\n-        }        \n-    }\n+                    }}\n \n-    public ClinicalAnalysisAclEntry() {\n+        public ClinicalAnalysisAclEntry() {\n         this(\"\", Collections.emptyList());\n     }\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

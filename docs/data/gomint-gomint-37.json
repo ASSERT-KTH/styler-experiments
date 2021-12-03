@@ -1,0 +1,90 @@
+{
+    "project_name": "gomint-gomint",
+    "violation_id": "37",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "error",
+                "message": "Line is longer than 180 characters (found 211).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class StainedHardenedClay extends Block implements BlockStainedHardenedClay {\n\n    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>( v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()) );\n\n    @Override\n    public String getBlockId() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 211).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/37/StainedHardenedClay.java\nindex 0c0ffb6d20e..10862262f34 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/37/StainedHardenedClay.java\n@@ -11,10 +11,11 @@ import io.gomint.world.block.data.BlockColor;\n  * @author geNAZt\n  * @version 1.0\n  */\n-@RegisterInfo( sId = \"minecraft:stained_hardened_clay\" )\n+@RegisterInfo(sId = \"minecraft:stained_hardened_clay\")\n public class StainedHardenedClay extends Block implements BlockStainedHardenedClay {\n \n-    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>( v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()) );\n+    private static final EnumBlockState<BlockColor, String> COLOR =\n+        new EnumBlockState<>(v -> new String[] {\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()));\n \n     @Override\n     public String getBlockId() {\n@@ -28,7 +29,7 @@ public class StainedHardenedClay extends Block implements BlockStainedHardenedCl\n \n     @Override\n     public Class<? extends ItemStack>[] getToolInterfaces() {\n-        return new Class[]{\n+        return new Class[] {\n             ItemWoodenPickaxe.class,\n             ItemIronPickaxe.class,\n             ItemDiamondPickaxe.class,\n@@ -53,8 +54,8 @@ public class StainedHardenedClay extends Block implements BlockStainedHardenedCl\n     }\n \n     @Override\n-    public void setColor( BlockColor color ) {\n-        COLOR.setState(this, color );\n+    public void setColor(BlockColor color) {\n+        COLOR.setState(this, color);\n     }\n \n     @Override\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 211).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/37/StainedHardenedClay.java\nindex 0c0ffb6d20e..b9997fe647c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/37/StainedHardenedClay.java\n@@ -62,4 +62,4 @@ public class StainedHardenedClay extends Block implements BlockStainedHardenedCl\n         return true;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 211).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "15",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 310).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/37/StainedHardenedClay.java\nindex 0c0ffb6d20e..bc352dbaf01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/37/StainedHardenedClay.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/37/StainedHardenedClay.java\n@@ -12,11 +12,7 @@ import io.gomint.world.block.data.BlockColor;\n  * @version 1.0\n  */\n @RegisterInfo( sId = \"minecraft:stained_hardened_clay\" )\n-public class StainedHardenedClay extends Block implements BlockStainedHardenedClay {\n-\n-    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>( v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()) );\n-\n-    @Override\n+public class StainedHardenedClay extends Block implements BlockStainedHardenedClay {private static final EnumBlockState<BlockColor, String >COLOR= new EnumBlockState<> ( v->new String []{ \"color\" },BlockColor . values() , e->e . name() . toLowerCase() , v->BlockColor . valueOf(v . toUpperCase() ) );@ Override\n     public String getBlockId() {\n         return \"minecraft:stained_hardened_clay\";\n     }\n",
+            "diff_size": 5
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

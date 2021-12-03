@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "248",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/248/MyPullResult.java\nindex 7b408cde5b2..6a7d580e49e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/248/MyPullResult.java\n@@ -14,23 +14,25 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.spark.ml.psf.pagerank;\n \n import com.tencent.angel.ml.matrix.psf.get.base.GetResult;\n \n public class MyPullResult extends GetResult {\n-  private long[] keys;\n-  private float[] vals;\n-  public MyPullResult(long[] keys, float[] vals) {\n-    this.keys = keys;\n-    this.vals = vals;\n-  }\n+    private long[] keys;\n+    private float[] vals;\n+\n+    public MyPullResult(long[] keys, float[] vals) {\n+        this.keys = keys;\n+        this.vals = vals;\n+    }\n \n-  public long[] getKeys() {\n-    return keys;\n-  }\n+    public long[] getKeys() {\n+        return keys;\n+    }\n \n-  public float[] getValues() {\n-    return vals;\n-  }\n+    public float[] getValues() {\n+        return vals;\n+    }\n }\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/248/MyPullResult.java\nindex 7b408cde5b2..649a11e9178 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/248/MyPullResult.java\n@@ -33,4 +33,4 @@ public class MyPullResult extends GetResult {\n   public float[] getValues() {\n     return vals;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/248/MyPullResult.java\nindex 7b408cde5b2..389db325399 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/248/MyPullResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/248/MyPullResult.java\n@@ -19,8 +19,10 @@ package com.tencent.angel.spark.ml.psf.pagerank;\n import com.tencent.angel.ml.matrix.psf.get.base.GetResult;\n \n public class MyPullResult extends GetResult {\n+\n   private long[] keys;\n   private float[] vals;\n+\n   public MyPullResult(long[] keys, float[] vals) {\n     this.keys = keys;\n     this.vals = vals;\n@@ -33,4 +35,5 @@ public class MyPullResult extends GetResult {\n   public float[] getValues() {\n     return vals;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

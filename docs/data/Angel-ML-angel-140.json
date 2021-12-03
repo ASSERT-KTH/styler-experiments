@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "140",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/140/BinaryGradPair.java\nindex 97d19ac51b2..bbb23f3ba89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/140/BinaryGradPair.java\n@@ -23,109 +23,109 @@ import java.io.Serializable;\n \n public class BinaryGradPair implements GradPair, Serializable {\n \n-  private double grad;\n-  private double hess;\n-\n-  public BinaryGradPair() {\n-  }\n-\n-  public BinaryGradPair(double grad, double hess) {\n-    this.grad = grad;\n-    this.hess = hess;\n-  }\n-\n-  @Override\n-  public void plusBy(GradPair gradPair) {\n-    this.grad += ((BinaryGradPair) gradPair).grad;\n-    this.hess += ((BinaryGradPair) gradPair).hess;\n-  }\n-\n-  public void plusBy(double grad, double hess) {\n-    this.grad += grad;\n-    this.hess += hess;\n-  }\n-\n-  @Override\n-  public void subtractBy(GradPair gradPair) {\n-    this.grad -= ((BinaryGradPair) gradPair).grad;\n-    this.hess -= ((BinaryGradPair) gradPair).hess;\n-  }\n-\n-  public void subtractBy(double grad, double hess) {\n-    this.grad -= grad;\n-    this.hess -= hess;\n-  }\n-\n-  @Override\n-  public GradPair plus(GradPair gradPair) {\n-    GradPair res = this.copy();\n-    res.plusBy(gradPair);\n-    return res;\n-  }\n-\n-  public GradPair plus(double grad, double hess) {\n-    return new BinaryGradPair(this.grad + grad, this.hess + hess);\n-  }\n-\n-  @Override\n-  public GradPair subtract(GradPair gradPair) {\n-    GradPair res = this.copy();\n-    res.subtractBy(gradPair);\n-    return res;\n-  }\n-\n-  public GradPair subtract(double grad, double hess) {\n-    return new BinaryGradPair(this.grad - grad, this.hess - hess);\n-  }\n-\n-  @Override\n-  public void timesBy(double x) {\n-    this.grad *= x;\n-    this.hess *= x;\n-  }\n-\n-  @Override\n-  public float calcGain(GBDTParam param) {\n-    return (float) param.calcGain(grad, hess);\n-  }\n-\n-  public float calcWeight(GBDTParam param) {\n-    return (float) param.calcWeight(grad, hess);\n-  }\n-\n-  @Override\n-  public boolean satisfyWeight(GBDTParam param) {\n-    return param.satisfyWeight(hess);\n-  }\n-\n-  @Override\n-  public GradPair copy() {\n-    return new BinaryGradPair(grad, hess);\n-  }\n-\n-  public double getGrad() {\n-    return grad;\n-  }\n-\n-  public double getHess() {\n-    return hess;\n-  }\n-\n-  public void setGrad(double grad) {\n-    this.grad = grad;\n-  }\n-\n-  public void setHess(double hess) {\n-    this.hess = hess;\n-  }\n-\n-  public void set(double grad, double hess) {\n-    this.grad = grad;\n-    this.hess = hess;\n-  }\n-\n-  @Override\n-  public String toString() {\n-    return \"(\" + grad + \", \" + hess + \")\";\n-  }\n+    private double grad;\n+    private double hess;\n+\n+    public BinaryGradPair() {\n+    }\n+\n+    public BinaryGradPair(double grad, double hess) {\n+        this.grad = grad;\n+        this.hess = hess;\n+    }\n+\n+    @Override\n+    public void plusBy(GradPair gradPair) {\n+        this.grad += ((BinaryGradPair) gradPair).grad;\n+        this.hess += ((BinaryGradPair) gradPair).hess;\n+    }\n+\n+    public void plusBy(double grad, double hess) {\n+        this.grad += grad;\n+        this.hess += hess;\n+    }\n+\n+    @Override\n+    public void subtractBy(GradPair gradPair) {\n+        this.grad -= ((BinaryGradPair) gradPair).grad;\n+        this.hess -= ((BinaryGradPair) gradPair).hess;\n+    }\n+\n+    public void subtractBy(double grad, double hess) {\n+        this.grad -= grad;\n+        this.hess -= hess;\n+    }\n+\n+    @Override\n+    public GradPair plus(GradPair gradPair) {\n+        GradPair res = this.copy();\n+        res.plusBy(gradPair);\n+        return res;\n+    }\n+\n+    public GradPair plus(double grad, double hess) {\n+        return new BinaryGradPair(this.grad + grad, this.hess + hess);\n+    }\n+\n+    @Override\n+    public GradPair subtract(GradPair gradPair) {\n+        GradPair res = this.copy();\n+        res.subtractBy(gradPair);\n+        return res;\n+    }\n+\n+    public GradPair subtract(double grad, double hess) {\n+        return new BinaryGradPair(this.grad - grad, this.hess - hess);\n+    }\n+\n+    @Override\n+    public void timesBy(double x) {\n+        this.grad *= x;\n+        this.hess *= x;\n+    }\n+\n+    @Override\n+    public float calcGain(GBDTParam param) {\n+        return (float) param.calcGain(grad, hess);\n+    }\n+\n+    public float calcWeight(GBDTParam param) {\n+        return (float) param.calcWeight(grad, hess);\n+    }\n+\n+    @Override\n+    public boolean satisfyWeight(GBDTParam param) {\n+        return param.satisfyWeight(hess);\n+    }\n+\n+    @Override\n+    public GradPair copy() {\n+        return new BinaryGradPair(grad, hess);\n+    }\n+\n+    public double getGrad() {\n+        return grad;\n+    }\n+\n+    public double getHess() {\n+        return hess;\n+    }\n+\n+    public void setGrad(double grad) {\n+        this.grad = grad;\n+    }\n+\n+    public void setHess(double hess) {\n+        this.hess = hess;\n+    }\n+\n+    public void set(double grad, double hess) {\n+        this.grad = grad;\n+        this.hess = hess;\n+    }\n+\n+    @Override\n+    public String toString() {\n+        return \"(\" + grad + \", \" + hess + \")\";\n+    }\n }\n",
+            "diff_size": 105
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/140/BinaryGradPair.java\nindex 97d19ac51b2..0b7224bce5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/140/BinaryGradPair.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.spark.ml.tree.gbdt.histogram;\n \n import com.tencent.angel.spark.ml.tree.tree.param.GBDTParam;\n@@ -128,4 +127,4 @@ public class BinaryGradPair implements GradPair, Serializable {\n   public String toString() {\n     return \"(\" + grad + \", \" + hess + \")\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/140/BinaryGradPair.java\nindex 97d19ac51b2..dbd37e72b6e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/140/BinaryGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/140/BinaryGradPair.java\n@@ -26,8 +26,7 @@ public class BinaryGradPair implements GradPair, Serializable {\n   private double grad;\n   private double hess;\n \n-  public BinaryGradPair() {\n-  }\n+  public BinaryGradPair() {}\n \n   public BinaryGradPair(double grad, double hess) {\n     this.grad = grad;\n@@ -128,4 +127,5 @@ public class BinaryGradPair implements GradPair, Serializable {\n   public String toString() {\n     return \"(\" + grad + \", \" + hess + \")\";\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

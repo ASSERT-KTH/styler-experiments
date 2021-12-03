@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "84",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.exception.metadata;\n\nimport org.apache.iotdb.db.exception.IoTDBException;\nimport org.apache.iotdb.rpc.TSStatusCode;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/84/MetadataException.java\nindex c2b74a82353..96f321e4489 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/84/MetadataException.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.exception.metadata;\n \n import org.apache.iotdb.db.exception.IoTDBException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/84/MetadataException.java\nindex c2b74a82353..96f321e4489 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/84/MetadataException.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.exception.metadata;\n \n import org.apache.iotdb.db.exception.IoTDBException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/84/MetadataException.java\nindex c2b74a82353..50436ca99b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/84/MetadataException.java\n@@ -25,6 +25,7 @@ import org.apache.iotdb.rpc.TSStatusCode;\n  * If query metadata constructs schema but passes illegal parameters to EncodingConvertor or\n  * DataTypeConverter,this exception will be threw.\n  */\n+\n public class MetadataException extends IoTDBException {\n \n   private static final long serialVersionUID = 3415275599091623570L;\n@@ -60,4 +61,4 @@ public class MetadataException extends IoTDBException {\n   public MetadataException(String message, int errorCode, boolean isUserException) {\n     super(message, errorCode, isUserException);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/84/MetadataException.java\nindex c2b74a82353..96f321e4489 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/84/MetadataException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/84/MetadataException.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.exception.metadata;\n \n import org.apache.iotdb.db.exception.IoTDBException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

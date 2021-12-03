@@ -1,0 +1,96 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "3237",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3237/package-info.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3237/package-info.java\nindex c0d89c4f375..ecea66ffc1a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3237/package-info.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3237/package-info.java\n@@ -21,5 +21,6 @@\n  * Implementation for embedding a Neo4j graph database in an application.\n  * Classes are provided for both read/write mode and read only mode.\n  */\n+\n package org.neo4j.kernel;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3237/package-info.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3237/package-info.java\nindex c0d89c4f375..9a735a9e995 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3237/package-info.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3237/package-info.java\n@@ -21,5 +21,4 @@\n  * Implementation for embedding a Neo4j graph database in an application.\n  * Classes are provided for both read/write mode and read only mode.\n  */\n-package org.neo4j.kernel;\n-\n+package org.neo4j.kernel;\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

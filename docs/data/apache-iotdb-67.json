@@ -1,0 +1,94 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "67",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.sync.receiver;\n\nimport org.apache.iotdb.db.concurrent.ThreadName;\nimport org.apache.iotdb.db.conf.IoTDBConfig;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/67/SyncServerManager.java\nindex 96ec8ef21cc..9357a905088 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/67/SyncServerManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver;\n \n import org.apache.iotdb.db.concurrent.ThreadName;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/67/SyncServerManager.java\nindex 96ec8ef21cc..b82e298190e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/67/SyncServerManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver;\n \n import org.apache.iotdb.db.concurrent.ThreadName;\n@@ -35,7 +36,9 @@ import org.slf4j.LoggerFactory;\n \n import java.io.IOException;\n \n-/** sync receiver server. */\n+/**\n+ * sync receiver server.\n+ */\n public class SyncServerManager extends ThriftService implements SyncServerManagerMBean {\n   private static Logger logger = LoggerFactory.getLogger(SyncServerManager.class);\n   private SyncServiceImpl serviceImpl;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "'CLASS_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 315).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/67/SyncServerManager.java\nindex 96ec8ef21cc..faa22298715 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/67/SyncServerManager.java\n@@ -29,17 +29,16 @@ import org.apache.iotdb.db.sync.receiver.load.FileLoaderManager;\n import org.apache.iotdb.db.sync.receiver.recover.SyncReceiverLogAnalyzer;\n import org.apache.iotdb.db.sync.receiver.transfer.SyncServiceImpl;\n import org.apache.iotdb.service.sync.thrift.SyncService;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.IOException;\n \n /** sync receiver server. */\n+\n public class SyncServerManager extends ThriftService implements SyncServerManagerMBean {\n+\n   private static Logger logger = LoggerFactory.getLogger(SyncServerManager.class);\n   private SyncServiceImpl serviceImpl;\n-\n   private static class ServerManagerHolder {\n \n     private static final SyncServerManager INSTANCE = new SyncServerManager();\n@@ -68,17 +67,7 @@ public class SyncServerManager extends ThriftService implements SyncServerManage\n   @Override\n   public void initThriftServiceThread() {\n     IoTDBConfig config = IoTDBDescriptor.getInstance().getConfig();\n-    thriftServiceThread =\n-        new ThriftServiceThread(\n-            processor,\n-            getID().getName(),\n-            ThreadName.SYNC_CLIENT.getName(),\n-            config.getRpcAddress(),\n-            config.getSyncServerPort(),\n-            Integer.MAX_VALUE,\n-            config.getThriftServerAwaitTimeForStopService(),\n-            new SyncServerThriftHandler(serviceImpl),\n-            config.isRpcThriftCompressionEnable());\n+    thriftServiceThread = new ThriftServiceThread(processor, getID().getName(), ThreadName.SYNC_CLIENT.getName(), config.getRpcAddress(), config.getSyncServerPort(), Integer.MAX_VALUE, config.getThriftServerAwaitTimeForStopService(), new SyncServerThriftHandler(serviceImpl), config.isRpcThriftCompressionEnable());\n     thriftServiceThread.setName(ThreadName.SYNC_SERVER.getName());\n   }\n \n@@ -105,8 +94,7 @@ public class SyncServerManager extends ThriftService implements SyncServerManage\n       logger.error(\"Can not recover receiver sync state\", e);\n     }\n     if (config.getIpWhiteList() == null) {\n-      logger.error(\n-          \"Sync server failed to start because IP white list is null, please set IP white list.\");\n+      logger.error(\"Sync server failed to start because IP white list is null, please set IP white list.\");\n       return;\n     }\n     config.setIpWhiteList(config.getIpWhiteList().replace(\" \", \"\"));\n@@ -120,4 +108,4 @@ public class SyncServerManager extends ThriftService implements SyncServerManage\n       super.stopService();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 19
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/67/SyncServerManager.java\nindex 96ec8ef21cc..9357a905088 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/67/SyncServerManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/67/SyncServerManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver;\n \n import org.apache.iotdb.db.concurrent.ThreadName;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

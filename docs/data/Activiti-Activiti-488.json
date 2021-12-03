@@ -1,0 +1,76 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "488",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.api.process.model.events;\n\nimport org.activiti.api.model.shared.event.RuntimeEvent;\nimport org.activiti.api.process.model.BPMNSignal;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/488/BPMNSignalEvent.java\nindex c78db0dac7c..b0164630626 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/488/BPMNSignalEvent.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.process.model.events;\n \n import org.activiti.api.model.shared.event.RuntimeEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/488/BPMNSignalEvent.java\nindex c78db0dac7c..b0164630626 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/488/BPMNSignalEvent.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.process.model.events;\n \n import org.activiti.api.model.shared.event.RuntimeEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/488/BPMNSignalEvent.java\nindex c78db0dac7c..3749712e8e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/488/BPMNSignalEvent.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.process.model.events;\n \n import org.activiti.api.model.shared.event.RuntimeEvent;\n@@ -23,4 +24,4 @@ public interface BPMNSignalEvent extends RuntimeEvent<BPMNSignal, BPMNSignalEven\n     enum SignalEvents {\n         SIGNAL_RECEIVED\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "'INTERFACE_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/488/BPMNSignalEvent.java\nindex c78db0dac7c..550d1a3ce9d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/488/BPMNSignalEvent.java\n@@ -18,9 +18,10 @@ package org.activiti.api.process.model.events;\n import org.activiti.api.model.shared.event.RuntimeEvent;\n import org.activiti.api.process.model.BPMNSignal;\n \n+\n public interface BPMNSignalEvent extends RuntimeEvent<BPMNSignal, BPMNSignalEvent.SignalEvents> {\n \n-    enum SignalEvents {\n-        SIGNAL_RECEIVED\n-    }\n-}\n+  enum SignalEvents {\n+    SIGNAL_RECEIVED\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/488/BPMNSignalEvent.java\nindex c78db0dac7c..b0164630626 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/488/BPMNSignalEvent.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.process.model.events;\n \n import org.activiti.api.model.shared.event.RuntimeEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/488/BPMNSignalEvent.java\nindex c78db0dac7c..b0164630626 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/488/BPMNSignalEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/488/BPMNSignalEvent.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.process.model.events;\n \n import org.activiti.api.model.shared.event.RuntimeEvent;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

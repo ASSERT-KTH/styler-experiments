@@ -1,0 +1,71 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "60",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "9",
+                "severity": "error",
+                "message": "'for' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public UserRepertory(SysUser... users) {\n        for(SysUser user : users) {\n            this.users.put(user.getUsername(), user);\n        }\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/60/UserRepertory.java\nindex feaf904a816..0bdcfd777ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/60/UserRepertory.java\n@@ -22,7 +22,7 @@ public class UserRepertory {\n     }\n \n     public UserRepertory(SysUser... users) {\n-        for(SysUser user : users) {\n+        for (SysUser user : users) {\n             this.users.put(user.getUsername(), user);\n         }\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/60/UserRepertory.java\nindex feaf904a816..0bdcfd777ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/60/UserRepertory.java\n@@ -22,7 +22,7 @@ public class UserRepertory {\n     }\n \n     public UserRepertory(SysUser... users) {\n-        for(SysUser user : users) {\n+        for (SysUser user : users) {\n             this.users.put(user.getUsername(), user);\n         }\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "9",
+                    "severity": "error",
+                    "message": "'for' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/60/UserRepertory.java\nindex feaf904a816..d1bfc8e6708 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/60/UserRepertory.java\n@@ -36,4 +36,4 @@ public class UserRepertory {\n     public SysUser getUser(String id) {\n         return users.get(id);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/60/UserRepertory.java\nindex feaf904a816..0bdcfd777ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/60/UserRepertory.java\n@@ -22,7 +22,7 @@ public class UserRepertory {\n     }\n \n     public UserRepertory(SysUser... users) {\n-        for(SysUser user : users) {\n+        for (SysUser user : users) {\n             this.users.put(user.getUsername(), user);\n         }\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/60/UserRepertory.java\nindex feaf904a816..0bdcfd777ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/60/UserRepertory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/60/UserRepertory.java\n@@ -22,7 +22,7 @@ public class UserRepertory {\n     }\n \n     public UserRepertory(SysUser... users) {\n-        for(SysUser user : users) {\n+        for (SysUser user : users) {\n             this.users.put(user.getUsername(), user);\n         }\n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

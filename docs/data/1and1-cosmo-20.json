@@ -1,0 +1,133 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "20",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "severity": "warning",
+                "message": "Class.forName(x) vermeiden. Bitte forName mit 3 Parametern benutzen: Class.forName(x, true, this.getClass().getClassLoader()). Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#donot bzw. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4971254",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "        if(delegateClass != null){\n            try {\n                Class<?> delegateCls = Class.forName(delegateClass);\n                BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                delegate = (ServletContextListener) delegateCls.newInstance();\n            } catch (ClassNotFoundException e) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..5d462595fcf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/20/BeforeSpringContextLoaderListener.java\n@@ -30,7 +30,8 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n         if(delegateClass != null){\n             try {\n-                Class<?> delegateCls = Class.forName(delegateClass);\n+                Class < ? >delegateCls = Class .\n+                        forName (delegateClass);\n                 BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Class.forName(x) vermeiden. Bitte forName mit 3 Parametern benutzen: Class.forName(x, true, this.getClass().getClassLoader()). Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#donot bzw. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4971254",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..70d76277a8f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/20/BeforeSpringContextLoaderListener.java\n@@ -1,8 +1,8 @@\n /*\n  * BeforeSpringContextLoaderListener.java Jan 22, 2013\n- * \n+ *\n  * Copyright (c) 2013 1&1 Internet AG. All rights reserved.\n- * \n+ *\n  * $Id$\n  */\n package org.unitedinternet.cosmo.servletcontext;\n@@ -15,45 +15,45 @@ import javax.servlet.ServletContextListener;\n /**\n  * The class is used to load listeners which have to be forced to execute before Spring context is loaded\n  * (like Resteasy Bootstrap)\n- * @author izidaru\n  *\n+ * @author izidaru\n  */\n public class BeforeSpringContextLoaderListener implements ServletContextListener {\n     private static final String COSMO_PROPERTY_DELEGATE_LISTENER = \"cosmo.extensions.BeforeSpringContextLoaderListener\";\n     private ServletContextListener delegate;\n-    \n+\n     @Override\n     public void contextInitialized(ServletContextEvent sce) {\n         Properties applicationProperties = ServletContextUtil.\n                 extractApplicationProperties(sce.getServletContext());\n \n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n-        if(delegateClass != null){\n+        if (delegateClass != null) {\n             try {\n                 Class<?> delegateCls = Class.forName(delegateClass);\n                 BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass +\n                         \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             } catch (InstantiationException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass +\n                         \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             } catch (IllegalAccessException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass +\n                         \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             }\n         }\n-        \n-        if(delegate != null){\n+\n+        if (delegate != null) {\n             delegate.contextInitialized(sce);\n         }\n-        \n+\n     }\n \n     @Override\n     public void contextDestroyed(ServletContextEvent sce) {\n-        if(delegate != null){\n+        if (delegate != null) {\n             delegate.contextDestroyed(sce);\n         }\n     }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Class.forName(x) vermeiden. Bitte forName mit 3 Parametern benutzen: Class.forName(x, true, this.getClass().getClassLoader()). Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#donot bzw. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4971254",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "38",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..8297e455716 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/20/BeforeSpringContextLoaderListener.java\n@@ -24,8 +24,7 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n     \n     @Override\n     public void contextInitialized(ServletContextEvent sce) {\n-        Properties applicationProperties = ServletContextUtil.\n-                extractApplicationProperties(sce.getServletContext());\n+        Properties applicationProperties = ServletContextUtil.extractApplicationProperties(sce.getServletContext());\n \n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n         if(delegateClass != null){\n@@ -34,14 +33,11 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n                 BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n-            } catch (InstantiationException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n-            } catch (IllegalAccessException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+    } catch (InstantiationException e) {\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+    } catch (IllegalAccessException e) {\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             }\n         }\n         \n@@ -58,4 +54,4 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n         }\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Class.forName(x) vermeiden. Bitte forName mit 3 Parametern benutzen: Class.forName(x, true, this.getClass().getClassLoader()). Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#donot bzw. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4971254",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..035f5e63e3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/20/BeforeSpringContextLoaderListener.java\n@@ -8,7 +8,6 @@\n package org.unitedinternet.cosmo.servletcontext;\n \n import java.util.Properties;\n-\n import javax.servlet.ServletContextEvent;\n import javax.servlet.ServletContextListener;\n \n@@ -18,44 +17,39 @@ import javax.servlet.ServletContextListener;\n  * @author izidaru\n  *\n  */\n+\n+\n public class BeforeSpringContextLoaderListener implements ServletContextListener {\n+\n     private static final String COSMO_PROPERTY_DELEGATE_LISTENER = \"cosmo.extensions.BeforeSpringContextLoaderListener\";\n     private ServletContextListener delegate;\n-    \n+\n     @Override\n     public void contextInitialized(ServletContextEvent sce) {\n-        Properties applicationProperties = ServletContextUtil.\n-                extractApplicationProperties(sce.getServletContext());\n-\n+        Properties applicationProperties = ServletContextUtil.extractApplicationProperties(sce.getServletContext());\n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n-        if(delegateClass != null){\n+        if (delegateClass != null) {\n             try {\n                 Class<?> delegateCls = Class.forName(delegateClass);\n                 BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             } catch (InstantiationException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             } catch (IllegalAccessException e) {\n-                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n-                        \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n+                throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \" defined in \" + COSMO_PROPERTY_DELEGATE_LISTENER, e);\n             }\n         }\n-        \n-        if(delegate != null){\n+        if (delegate != null) {\n             delegate.contextInitialized(sce);\n         }\n-        \n     }\n \n     @Override\n     public void contextDestroyed(ServletContextEvent sce) {\n-        if(delegate != null){\n+        if (delegate != null) {\n             delegate.contextDestroyed(sce);\n         }\n     }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Class.forName(x) vermeiden. Bitte forName mit 3 Parametern benutzen: Class.forName(x, true, this.getClass().getClassLoader()). Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#donot bzw. http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4971254",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "33",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..cd1ce875c32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/20/BeforeSpringContextLoaderListener.java\n@@ -30,8 +30,7 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n         if(delegateClass != null){\n             try {\n-                Class<?> delegateCls = Class.forName(delegateClass);\n-                BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n+            Class < ? > delegateCls=Class.forName(delegateClass);BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n                 throw new RuntimeException(\"Unable to initialize delegate listener: \" + delegateClass + \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/20/BeforeSpringContextLoaderListener.java\nindex bde3b372339..5d462595fcf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/20/BeforeSpringContextLoaderListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/20/BeforeSpringContextLoaderListener.java\n@@ -30,7 +30,8 @@ public class BeforeSpringContextLoaderListener implements ServletContextListener\n         String delegateClass = applicationProperties.getProperty(COSMO_PROPERTY_DELEGATE_LISTENER);\n         if(delegateClass != null){\n             try {\n-                Class<?> delegateCls = Class.forName(delegateClass);\n+                Class < ? >delegateCls = Class .\n+                        forName (delegateClass);\n                 BeforeSpringContextLoaderListener.class.getClassLoader().loadClass(delegateClass);\n                 delegate = (ServletContextListener) delegateCls.newInstance();\n             } catch (ClassNotFoundException e) {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

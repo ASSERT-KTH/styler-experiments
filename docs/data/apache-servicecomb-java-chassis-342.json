@@ -1,0 +1,188 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "342",
+    "information": {
+        "violations": [
+            {
+                "line": "111",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 140).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  /**\n   * Currently we don't provide configuration about {@link org.apache.servicecomb.serviceregistry.consumer.StaticMicroserviceVersionFactory}\n   */\n  public String getStaticMicroserviceVersionFactory() {\n    return \"org.apache.servicecomb.core.definition.StaticMicroserviceVersionMetaFactory\";",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/342/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/342/ServiceRegistryConfig.java\nindex dc5847a5caf..8e3ee3da6f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/342/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/342/ServiceRegistryConfig.java\n@@ -136,8 +136,7 @@ public final class ServiceRegistryConfig {\n     return deployInstances;\n   }\n \n-\n-  public boolean isSsl() {\n+public boolean isSsl() {\n     getIpPort();\n     return this.ssl;\n   }\n@@ -332,4 +331,4 @@ public final class ServiceRegistryConfig {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "109",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "117",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "140",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "161",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "169",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 137).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "177",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "184",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "193",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "200",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "207",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "214",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "219",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 144).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "226",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "231",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "236",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/342/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/342/ServiceRegistryConfig.java\nindex dc5847a5caf..3fcd3ca3388 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/342/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/342/ServiceRegistryConfig.java\n@@ -20,24 +20,22 @@ package org.apache.servicecomb.serviceregistry.config;\n import java.net.URI;\n import java.util.ArrayList;\n import java.util.List;\n-\n import org.apache.servicecomb.deployment.Deployment;\n import org.apache.servicecomb.deployment.DeploymentProvider;\n import org.apache.servicecomb.foundation.common.net.IpPort;\n import org.apache.servicecomb.foundation.common.net.NetUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.netflix.config.DynamicBooleanProperty;\n import com.netflix.config.DynamicIntProperty;\n import com.netflix.config.DynamicPropertyFactory;\n import com.netflix.config.DynamicStringProperty;\n-\n import io.vertx.core.http.HttpVersion;\n \n /**\n  * Created by   on 2016/12/23.\n  */\n+\n public final class ServiceRegistryConfig {\n   private static final Logger LOGGER = LoggerFactory.getLogger(ServiceRegistryConfig.class);\n \n@@ -100,55 +98,52 @@ public final class ServiceRegistryConfig {\n   public static final String WORKER_POOL_NAME = \"registry-vert.x-worker-thread\";\n \n   private ServiceRegistryConfig() {\n-\n   }\n \n   public String getMicroserviceVersionFactory() {\n-    return DynamicPropertyFactory.getInstance().getStringProperty(MICROSERVICE_VERSION_FACTORY, null).get();\n+    return DynamicPropertyFactory.getInstance().getStringProperty(MICROSERVICE_VERSION_FACTORY, null)\n+                                               .get();\n   }\n \n   /**\n    * Currently we don't provide configuration about {@link org.apache.servicecomb.serviceregistry.consumer.StaticMicroserviceVersionFactory}\n    */\n+\n   public String getStaticMicroserviceVersionFactory() {\n     return \"org.apache.servicecomb.core.definition.StaticMicroserviceVersionMetaFactory\";\n   }\n \n   public HttpVersion getHttpVersion() {\n-    DynamicStringProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getStringProperty(\"servicecomb.service.registry.client.httpVersion\", \"HTTP_1_1\");\n+    DynamicStringProperty property = DynamicPropertyFactory.getInstance().getStringProperty(\"servicecomb.service.registry.client.httpVersion\", \"HTTP_1_1\");\n     return HttpVersion.valueOf(property.get());\n   }\n \n   public int getInstances() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(VERTICLE_INSTANCES, 1);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(VERTICLE_INSTANCES, 1);\n     int deployInstances = property.get();\n     if (deployInstances <= 0) {\n       int nAvailableProcessors = Runtime.getRuntime().availableProcessors();\n       LOGGER.warn(\"The property `{}` must be positive integer, fallback to use number of available processors: {}\",\n-          VERTICLE_INSTANCES,\n-          nAvailableProcessors);\n+VERTICLE_INSTANCES,\n+nAvailableProcessors);\n       return nAvailableProcessors;\n     }\n     return deployInstances;\n   }\n \n-\n   public boolean isSsl() {\n     getIpPort();\n     return this.ssl;\n   }\n \n   public ArrayList<IpPort> getIpPort() {\n-    List<String> uriList = Deployment.getSystemBootStrapInfo(DeploymentProvider.SYSTEM_KEY_SERVICE_CENTER)\n-        .getAccessURL();\n+    List<String> uriList = Deployment.getSystemBootStrapInfo(DeploymentProvider.SYSTEM_KEY_SERVICE_CENTER).getAccessURL();\n     ArrayList<IpPort> ipPortList = new ArrayList<>();\n     uriList.forEach(anUriList -> {\n       try {\n         URI uri = new URI(anUriList.trim());\n+\n+\n         this.ssl = \"https\".equals(uri.getScheme());\n         ipPortList.add(NetUtils.parseIpPort(uri));\n       } catch (Exception e) {\n@@ -163,105 +158,82 @@ public final class ServiceRegistryConfig {\n   }\n \n   public int getConnectionTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.connection\", DEFAULT_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.connection\",\n+      DEFAULT_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 0 ? DEFAULT_TIMEOUT_IN_MS : timeout;\n   }\n \n   public int getIdleConnectionTimeout() {\n     // connection pool idle timeout based on client heart beat interval. Heart beat default value is 30.\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.idle\", DEFAULT_TIMEOUT_IN_SECONDS * 2);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.idle\",\n+      DEFAULT_TIMEOUT_IN_SECONDS * 2);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_TIMEOUT_IN_SECONDS * 2 : timeout;\n   }\n \n   public int getIdleWatchTimeout() {\n     // watch idle timeout based on SC PING/PONG interval. SC default value is 30.\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.watch\", DEFAULT_TIMEOUT_IN_SECONDS * 2);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.watch\",\n+      DEFAULT_TIMEOUT_IN_SECONDS * 2);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_TIMEOUT_IN_SECONDS * 2 : timeout;\n   }\n \n   public int getRequestTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.request\", DEFAULT_REQUEST_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.request\",\n+      DEFAULT_REQUEST_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_TIMEOUT_IN_MS : timeout;\n   }\n \n   //Set the timeout of the heartbeat request\n+\n   public int getHeartBeatRequestTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\",\n-                DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\",\n+      DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n \n   public int getHeartbeatInterval() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.healthCheck.interval\",\n-                DEFAULT_CHECK_INTERVAL_IN_S);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.healthCheck.interval\",\n+      DEFAULT_CHECK_INTERVAL_IN_S);\n     int interval = property.get();\n     return interval < 0 ? DEFAULT_CHECK_INTERVAL_IN_S : interval;\n   }\n \n   public int getInstancePullInterval() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.pull.interval\",\n-                DEFAULT_CHECK_INTERVAL_IN_S);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.pull.interval\",\n+      DEFAULT_CHECK_INTERVAL_IN_S);\n     int interval = property.get();\n     return interval < 0 ? DEFAULT_CHECK_INTERVAL_IN_S : interval;\n   }\n \n   public boolean isRegistryAutoDiscovery() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.autodiscovery\",\n-                false);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.autodiscovery\", false);\n     return property.get();\n   }\n \n   public int getResendHeartBeatTimes() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.healthCheck.times\",\n-                DEFAULT_CHECK_TIMES);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.healthCheck.times\",\n+      DEFAULT_CHECK_TIMES);\n     int times = property.get();\n     return times < 0 ? DEFAULT_CHECK_TIMES : times;\n   }\n \n   public boolean isEmptyInstanceProtectionEnabled() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.empty.protection\",\n-                true);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.empty.protection\", true);\n     return property.get();\n   }\n \n   public boolean isPreferIpAddress() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.preferIpAddress\",\n-                false);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.preferIpAddress\", false);\n     return property.get();\n   }\n \n   public boolean isWatch() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.watch\",\n-                true);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.watch\", true);\n     return property.get();\n   }\n \n@@ -320,7 +292,8 @@ public final class ServiceRegistryConfig {\n   private String getProperty(String defaultValue, String... keys) {\n     String property = null;\n     for (String key : keys) {\n-      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null).get();\n+      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null)\n+                                                     .get();\n       if (property != null) {\n         break;\n       }\n@@ -332,4 +305,4 @@ public final class ServiceRegistryConfig {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 69
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

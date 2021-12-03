@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "28",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "column": "50",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    private List<GrantedAuthority> authorities;\n\n    public User(String username, String password,List<GrantedAuthority> authorities) {\n        this.username = username;\n        this.password = password;\n        this.authorities = authorities;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/28/User.java\nindex 6a14adc409e..d29cb534bf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/28/User.java\n@@ -15,7 +15,7 @@ public class User implements UserDetails {\n     private String password;\n     private List<GrantedAuthority> authorities;\n \n-    public User(String username, String password,List<GrantedAuthority> authorities) {\n+    public User(String username, String password, List<GrantedAuthority> authorities) {\n         this.username = username;\n         this.password = password;\n         this.authorities = authorities;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/28/User.java\nindex 6a14adc409e..d29cb534bf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/28/User.java\n@@ -15,7 +15,7 @@ public class User implements UserDetails {\n     private String password;\n     private List<GrantedAuthority> authorities;\n \n-    public User(String username, String password,List<GrantedAuthority> authorities) {\n+    public User(String username, String password, List<GrantedAuthority> authorities) {\n         this.username = username;\n         this.password = password;\n         this.authorities = authorities;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/28/User.java\nindex 6a14adc409e..140fca53177 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/28/User.java\n@@ -15,7 +15,7 @@ public class User implements UserDetails {\n     private String password;\n     private List<GrantedAuthority> authorities;\n \n-    public User(String username, String password,List<GrantedAuthority> authorities) {\n+    public User(String username, String password, List<GrantedAuthority> authorities) {\n         this.username = username;\n         this.password = password;\n         this.authorities = authorities;\n@@ -55,4 +55,4 @@ public class User implements UserDetails {\n     public boolean isEnabled() {\n         return true;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/28/User.java\nindex 6a14adc409e..d29cb534bf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/28/User.java\n@@ -15,7 +15,7 @@ public class User implements UserDetails {\n     private String password;\n     private List<GrantedAuthority> authorities;\n \n-    public User(String username, String password,List<GrantedAuthority> authorities) {\n+    public User(String username, String password, List<GrantedAuthority> authorities) {\n         this.username = username;\n         this.password = password;\n         this.authorities = authorities;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/28/User.java\nindex 6a14adc409e..d29cb534bf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/28/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/28/User.java\n@@ -15,7 +15,7 @@ public class User implements UserDetails {\n     private String password;\n     private List<GrantedAuthority> authorities;\n \n-    public User(String username, String password,List<GrantedAuthority> authorities) {\n+    public User(String username, String password, List<GrantedAuthority> authorities) {\n         this.username = username;\n         this.password = password;\n         this.authorities = authorities;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

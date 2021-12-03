@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "8",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "column": "78",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "        })\n@EnableAsync\npublic class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n\n    private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/8/AppDispatcherServletConfiguration.java\nindex 0cdae0f6a8d..40d53666952 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/8/AppDispatcherServletConfiguration.java\n@@ -35,7 +35,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl\n                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n         })\n @EnableAsync\n-public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n+public class AppDispatcherServletConfiguration implements WebMvcRegistrations {\n \n     private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/8/AppDispatcherServletConfiguration.java\nindex 0cdae0f6a8d..4211a863323 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/8/AppDispatcherServletConfiguration.java\n@@ -21,21 +21,21 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl\n  */\n @Configuration\n @ComponentScan(value = {\n-        \"org.flowable.app.rest\",\n-        \"org.flowable.ui.admin.rest\",\n-        \"org.flowable.ui.task.rest.runtime\",\n-        \"org.flowable.ui.idm.rest.app\",\n-        \"org.flowable.ui.common.rest.exception\",\n-        \"org.flowable.ui.modeler.rest.app\",\n-        \"org.flowable.ui.common.rest\"},\n-        excludeFilters = {\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = RemoteAccountResource.class),\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = StencilSetResource.class),\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorUsersResource.class),\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n-        })\n+    \"org.flowable.app.rest\",\n+    \"org.flowable.ui.admin.rest\",\n+    \"org.flowable.ui.task.rest.runtime\",\n+    \"org.flowable.ui.idm.rest.app\",\n+    \"org.flowable.ui.common.rest.exception\",\n+    \"org.flowable.ui.modeler.rest.app\",\n+    \"org.flowable.ui.common.rest\"},\n+    excludeFilters = {\n+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = RemoteAccountResource.class),\n+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = StencilSetResource.class),\n+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorUsersResource.class),\n+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n+    })\n @EnableAsync\n-public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n+public class AppDispatcherServletConfiguration implements WebMvcRegistrations {\n \n     private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n \n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/8/AppDispatcherServletConfiguration.java\nindex 0cdae0f6a8d..29b20b75947 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/8/AppDispatcherServletConfiguration.java\n@@ -29,13 +29,12 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl\n         \"org.flowable.ui.modeler.rest.app\",\n         \"org.flowable.ui.common.rest\"},\n         excludeFilters = {\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = RemoteAccountResource.class),\n+    @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = RemoteAccountResource.class),\n                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = StencilSetResource.class),\n                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorUsersResource.class),\n-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n-        })\n+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)})\n @EnableAsync\n-public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n+public class AppDispatcherServletConfiguration implements WebMvcRegistrations {\n \n     private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n \n@@ -63,4 +62,4 @@ public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n         return requestMappingHandlerMapping;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/8/AppDispatcherServletConfiguration.java\nindex 0cdae0f6a8d..40d53666952 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/8/AppDispatcherServletConfiguration.java\n@@ -35,7 +35,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl\n                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n         })\n @EnableAsync\n-public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n+public class AppDispatcherServletConfiguration implements WebMvcRegistrations {\n \n     private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/8/AppDispatcherServletConfiguration.java\nindex 0cdae0f6a8d..40d53666952 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/8/AppDispatcherServletConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/8/AppDispatcherServletConfiguration.java\n@@ -35,7 +35,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl\n                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = EditorGroupsResource.class)\n         })\n @EnableAsync\n-public class AppDispatcherServletConfiguration implements WebMvcRegistrations{\n+public class AppDispatcherServletConfiguration implements WebMvcRegistrations {\n \n     private static final Logger LOGGER = LoggerFactory.getLogger(AppDispatcherServletConfiguration.class);\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

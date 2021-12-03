@@ -1,0 +1,71 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "8",
+    "information": {
+        "violations": [
+            {
+                "line": "84",
+                "column": "5",
+                "severity": "warning",
+                "message": "'method def' child has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "            runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n        }\n    return subNode;\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/8/SecurityIdentityNode.java\nindex 35786096a05..515f41e62e0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/8/SecurityIdentityNode.java\n@@ -81,6 +81,6 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n             RunAsNode runAs = new RunAsNode();\n             runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n         }\n-    return subNode;\n+        return subNode;\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/8/SecurityIdentityNode.java\nindex 35786096a05..9a9ae27115d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/8/SecurityIdentityNode.java\n@@ -31,8 +31,7 @@ import com.sun.enterprise.deployment.xml.TagNames;\n /**\n  * This node handles all information relative to security-indentity tag\n  *\n- * @author  Jerome Dochez\n- * @version\n+ * @author Jerome Dochez\n  */\n public class SecurityIdentityNode extends DeploymentDescriptorNode {\n \n@@ -48,12 +47,12 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n \n     @Override\n     protected Map getDispatchTable() {\n-        return  null;\n+        return null;\n     }\n \n     @Override\n     public void startElement(XMLElement element, Attributes attributes) {\n-        if( EjbTagNames.USE_CALLER_IDENTITY.equals(element.getQName()) ) {\n+        if (EjbTagNames.USE_CALLER_IDENTITY.equals(element.getQName())) {\n             ((EjbDescriptor) getParentNode().getDescriptor()).\n                 setUsesCallerIdentity(true);\n         } else {\n@@ -75,12 +74,14 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n         Node subNode = appendChild(parent, nodeName);\n         appendTextChild(subNode, TagNames.DESCRIPTION, descriptor.getSecurityIdentityDescription());\n         if (descriptor.getUsesCallerIdentity()) {\n-            Node useCaller = subNode.getOwnerDocument().createElement(EjbTagNames.USE_CALLER_IDENTITY);\n+            Node useCaller =\n+                subNode.getOwnerDocument().createElement(EjbTagNames.USE_CALLER_IDENTITY);\n             subNode.appendChild(useCaller);\n         } else {\n             RunAsNode runAs = new RunAsNode();\n-            runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n+            runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY,\n+                descriptor.getRunAsIdentity());\n         }\n-    return subNode;\n+        return subNode;\n     }\n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "84",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/8/SecurityIdentityNode.java\nindex 35786096a05..d009f7acf6a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/8/SecurityIdentityNode.java\n@@ -48,7 +48,7 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n \n     @Override\n     protected Map getDispatchTable() {\n-        return  null;\n+        return null;\n     }\n \n     @Override\n@@ -81,6 +81,6 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n             RunAsNode runAs = new RunAsNode();\n             runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n         }\n-    return subNode;\n+return subNode;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/8/SecurityIdentityNode.java\nindex 35786096a05..515f41e62e0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/8/SecurityIdentityNode.java\n@@ -81,6 +81,6 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n             RunAsNode runAs = new RunAsNode();\n             runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n         }\n-    return subNode;\n+        return subNode;\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/8/SecurityIdentityNode.java\nindex 35786096a05..c4baa4ee091 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/8/SecurityIdentityNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/8/SecurityIdentityNode.java\n@@ -81,6 +81,7 @@ public class SecurityIdentityNode extends DeploymentDescriptorNode {\n             RunAsNode runAs = new RunAsNode();\n             runAs.writeDescriptor(subNode, TagNames.RUNAS_SPECIFIED_IDENTITY, descriptor.getRunAsIdentity());\n         }\n-    return subNode;\n+\n+        return subNode;\n     }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

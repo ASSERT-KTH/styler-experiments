@@ -1,0 +1,62 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "127",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n\t\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..9521463e56f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/127/PerunAttributeConfigurer.java\n@@ -8,5 +8,4 @@ import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n \tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..f50e75b5976 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/127/PerunAttributeConfigurer.java\n@@ -7,6 +7,6 @@ import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n \n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n-\tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n+    public List<PerunAttribute<T>> getAttributeDescriptions();\n+\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..951342bf1ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/127/PerunAttributeConfigurer.java\n@@ -8,5 +8,4 @@ import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n \tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n-}\n+\t}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..f180e67e5e2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/127/PerunAttributeConfigurer.java\n@@ -1,12 +1,12 @@\n package cz.metacentrum.perun.ldapc.beans;\n \n import java.util.List;\n-\n import cz.metacentrum.perun.core.api.PerunBean;\n import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n \n+\n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n-\tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n-}\n+\n+ public List<PerunAttribute<T>> getAttributeDescriptions();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..9521463e56f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/127/PerunAttributeConfigurer.java\n@@ -8,5 +8,4 @@ import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n \tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/127/PerunAttributeConfigurer.java\nindex 9396125ea6f..809780938f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/127/PerunAttributeConfigurer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/127/PerunAttributeConfigurer.java\n@@ -7,6 +7,6 @@ import cz.metacentrum.perun.ldapc.model.PerunAttribute;\n \n public interface PerunAttributeConfigurer<T extends PerunBean> {\n \n-\tpublic List<PerunAttribute<T>> getAttributeDescriptions();\n-\t\n-}\n+\tpublic List<PerunAttribute<T>> getAttributeDescriptions()\n+\n+ ; }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

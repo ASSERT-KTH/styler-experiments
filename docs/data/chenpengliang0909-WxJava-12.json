@@ -1,0 +1,97 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "48",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 121).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  @Override\n  public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n    String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n\n    WxError error = WxError.fromJson(response, WxType.MP);\n    if (error.getErrorCode() != 0) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..9da2b8d3682 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/12/WxMpAiOpenServiceImpl.java\n@@ -45,9 +45,11 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n \n   @Override\n   public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n-    String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n \n-    WxError error = WxError.fromJson(response, WxType.MP);\n+    String\n+  response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n+\n+     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n     }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..18eb8224502 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/12/WxMpAiOpenServiceImpl.java\n@@ -33,8 +33,8 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n     }\n \n     this.wxMpService.execute(VoiceUploadRequestExecutor.create(this.wxMpService.getRequestHttp()),\n-      String.format(VOICE_UPLOAD_URL, \"mp3\", voiceId, lang.getCode()),\n-      voiceFile);\n+        String.format(VOICE_UPLOAD_URL, \"mp3\", voiceId, lang.getCode()),\n+        voiceFile);\n   }\n \n   @Override\n@@ -45,7 +45,8 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n \n   @Override\n   public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n-    String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n+    String response =\n+        this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n \n     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n@@ -62,7 +63,7 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n     }\n \n     final String response = this.wxMpService.get(VOICE_QUERY_RESULT_URL,\n-      String.format(\"voice_id=%s&lang=%s\", voiceId, lang.getCode()));\n+        String.format(\"voice_id=%s&lang=%s\", voiceId, lang.getCode()));\n     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "48",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..e97cd7b6820 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/12/WxMpAiOpenServiceImpl.java\n@@ -70,4 +70,4 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n \n     return JSON_PARSER.parse(response).getAsJsonObject().get(\"result\").getAsString();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "46",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..40f69f5c561 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/12/WxMpAiOpenServiceImpl.java\n@@ -1,7 +1,6 @@\n package me.chanjar.weixin.mp.api.impl;\n \n import java.io.File;\n-\n import com.google.gson.JsonParser;\n import me.chanjar.weixin.common.WxType;\n import me.chanjar.weixin.common.error.WxError;\n@@ -18,6 +17,8 @@ import me.chanjar.weixin.mp.util.requestexecuter.voice.VoiceUploadRequestExecuto\n  *\n  * @author <a href=\"https://github.com/binarywang\">Binary Wang</a>\n  */\n+\n+\n public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n   private static final JsonParser JSON_PARSER = new JsonParser();\n   private WxMpService wxMpService;\n@@ -31,10 +32,7 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n     if (lang == null) {\n       lang = AiLangType.zh_CN;\n     }\n-\n-    this.wxMpService.execute(VoiceUploadRequestExecutor.create(this.wxMpService.getRequestHttp()),\n-      String.format(VOICE_UPLOAD_URL, \"mp3\", voiceId, lang.getCode()),\n-      voiceFile);\n+    this.wxMpService.execute(VoiceUploadRequestExecutor.create(this.wxMpService.getRequestHttp()), String.format(VOICE_UPLOAD_URL, \"mp3\", voiceId, lang.getCode()), voiceFile);\n   }\n \n   @Override\n@@ -46,7 +44,6 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n   @Override\n   public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n     String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n-\n     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n@@ -62,7 +59,7 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n     }\n \n     final String response = this.wxMpService.get(VOICE_QUERY_RESULT_URL,\n-      String.format(\"voice_id=%s&lang=%s\", voiceId, lang.getCode()));\n+                                                 String.format(\"voice_id=%s&lang=%s\", voiceId, lang.getCode()));\n     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n@@ -70,4 +67,4 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n \n     return JSON_PARSER.parse(response).getAsJsonObject().get(\"result\").getAsString();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..9da2b8d3682 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/12/WxMpAiOpenServiceImpl.java\n@@ -45,9 +45,11 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n \n   @Override\n   public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n-    String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n \n-    WxError error = WxError.fromJson(response, WxType.MP);\n+    String\n+  response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n+\n+     WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n     }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 225).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "47",
+                    "column": "107",
+                    "severity": "warning",
+                    "message": "'{' at column 107 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/12/WxMpAiOpenServiceImpl.java\nindex 628b6c55f8d..8c48466938c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/12/WxMpAiOpenServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/12/WxMpAiOpenServiceImpl.java\n@@ -44,10 +44,9 @@ public class WxMpAiOpenServiceImpl implements WxMpAiOpenService {\n   }\n \n   @Override\n-  public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException {\n-    String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n+  public String translate(AiLangType langFrom, AiLangType langTo, String content) throws WxErrorException { String response = this.wxMpService.post(String.format(TRANSLATE_URL, langFrom.getCode(), langTo.getCode()), content);\n \n-    WxError error = WxError.fromJson(response, WxType.MP);\n+  WxError error = WxError.fromJson(response, WxType.MP);\n     if (error.getErrorCode() != 0) {\n       throw new WxErrorException(error);\n     }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

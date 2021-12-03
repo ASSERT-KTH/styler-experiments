@@ -1,0 +1,71 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "19",
+    "information": {
+        "violations": [
+            {
+                "line": "4",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "import org.junit.Test;\nimport org.springframework.context.ApplicationContext;\nimport \norg.springframework.context.support.ClassPathXmlApplicationContext;\n//\u6d4b\u8bd5\u7c7b\npublic class TransactionTest {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/19/TransactionTest.java\nindex 1a4a6f02bfd..a1dc8bd493b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/19/TransactionTest.java\n@@ -1,8 +1,7 @@\n package com.itheima.jdbc;\r\n import org.junit.Test;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n //\u6d4b\u8bd5\u7c7b\r\n public class TransactionTest {\r\n \t@Test\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "5",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/19/TransactionTest.java\nindex 1a4a6f02bfd..207d205eb66 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/19/TransactionTest.java\n@@ -1,34 +1,36 @@\n package com.itheima.jdbc;\r\n+\r\n import org.junit.Test;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import\r\n+    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+\r\n //\u6d4b\u8bd5\u7c7b\r\n public class TransactionTest {\r\n-\t@Test\r\n-\tpublic void xmlTest(){\r\n-\t\tApplicationContext applicationContext = \r\n-\t\t   new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n-\t\t// \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n-\t\tAccountDao accountDao = \r\n-            (AccountDao)applicationContext.getBean(\"accountDao\");\r\n-\t\t// \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n-\t\taccountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n-\t    // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n-\t    System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n-\t}\r\n-\t\r\n-\t@Test\r\n-\tpublic void annotationTest(){\r\n-\t    ApplicationContext applicationContext = \r\n-\tnew ClassPathXmlApplicationContext(\"applicationContext-annotation.xml\");\r\n-\t    // \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n-\t    AccountDao accountDao = \r\n-\t(AccountDao)applicationContext.getBean(\"accountDao\");\r\n-\t    // \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n-\t    accountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n-\t    // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n-\t    System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n-\t}\r\n+    @Test\r\n+    public void xmlTest() {\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n+        // \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n+        AccountDao accountDao =\r\n+            (AccountDao) applicationContext.getBean(\"accountDao\");\r\n+        // \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n+        accountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n+        // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n+        System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n+    }\r\n+\r\n+    @Test\r\n+    public void annotationTest() {\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(\"applicationContext-annotation.xml\");\r\n+        // \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n+        AccountDao accountDao =\r\n+            (AccountDao) applicationContext.getBean(\"accountDao\");\r\n+        // \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n+        accountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n+        // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n+        System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n+    }\r\n \r\n }\r\n",
+            "diff_size": 29
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/19/TransactionTest.java\nindex 1a4a6f02bfd..2b7684eb087 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/19/TransactionTest.java\n@@ -1,8 +1,8 @@\n package com.itheima.jdbc;\r\n import org.junit.Test;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\n+\n //\u6d4b\u8bd5\u7c7b\r\n public class TransactionTest {\r\n \t@Test\r\n@@ -10,25 +10,21 @@ public class TransactionTest {\n \t\tApplicationContext applicationContext = \r\n \t\t   new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n \t\t// \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n-\t\tAccountDao accountDao = \r\n-            (AccountDao)applicationContext.getBean(\"accountDao\");\r\n-\t\t// \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n-\t\taccountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n-\t    // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n+\t\tAccountDao accountDao = (AccountDao)applicationContext.getBean(\"accountDao\");\n+// \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n+\t\taccountDao.transfer(\"Jack\", \"Rose\", 100.0);\n+// \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n \t    System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n \t}\r\n \t\r\n \t@Test\r\n \tpublic void annotationTest(){\r\n-\t    ApplicationContext applicationContext = \r\n-\tnew ClassPathXmlApplicationContext(\"applicationContext-annotation.xml\");\r\n-\t    // \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n-\t    AccountDao accountDao = \r\n-\t(AccountDao)applicationContext.getBean(\"accountDao\");\r\n-\t    // \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n+\t    ApplicationContext applicationContext = new ClassPathXmlApplicationContext(\"applicationContext-annotation.xml\");\n+// \u83b7\u53d6AccountDao\u5b9e\u4f8b\r\n+\t    AccountDao accountDao = (AccountDao)applicationContext.getBean(\"accountDao\");\n+// \u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684\u8f6c\u8d26\u65b9\u6cd5\r\n \t    accountDao.transfer(\"Jack\", \"Rose\", 100.0);\r\n \t    // \u8f93\u51fa\u63d0\u793a\u4fe1\u606f\r\n \t    System.out.println(\"\u8f6c\u8d26\u6210\u529f\uff01\");\r\n-\t}\r\n-\r\n-}\r\n+\t}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/19/TransactionTest.java\nindex 1a4a6f02bfd..a1dc8bd493b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/19/TransactionTest.java\n@@ -1,8 +1,7 @@\n package com.itheima.jdbc;\r\n import org.junit.Test;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n //\u6d4b\u8bd5\u7c7b\r\n public class TransactionTest {\r\n \t@Test\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/19/TransactionTest.java\nindex 1a4a6f02bfd..a1dc8bd493b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/19/TransactionTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/19/TransactionTest.java\n@@ -1,8 +1,7 @@\n package com.itheima.jdbc;\r\n import org.junit.Test;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n //\u6d4b\u8bd5\u7c7b\r\n public class TransactionTest {\r\n \t@Test\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

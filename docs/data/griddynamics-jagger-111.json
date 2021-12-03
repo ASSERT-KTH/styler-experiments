@@ -1,0 +1,125 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "111",
+    "information": {
+        "violations": [
+            {
+                "line": "92",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 155).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public void tick(long time, LinkedHashMap<NodeId, WorkloadConfiguration> workloadConfigurations) {\n        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n            if (entry.getValue().getDelay() != delay) {\n                workloadConfigurations.put(entry.getKey(), WorkloadConfiguration.with(entry.getValue().getThreads(), delay));\n            }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "92",
+                    "column": "12",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: 'for' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/111/UserWorkload.java\nindex ee1134421c6..ac7b57a3b77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/111/UserWorkload.java\n@@ -89,7 +89,7 @@ public class UserWorkload {\n     }\n \n     public void tick(long time, LinkedHashMap<NodeId, WorkloadConfiguration> workloadConfigurations) {\n-        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n+        for(Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n             if (entry.getValue().getDelay() != delay) {\n                 workloadConfigurations.put(entry.getKey(), WorkloadConfiguration.with(entry.getValue().getThreads(), delay));\n             }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/111/UserWorkload.java\nindex ee1134421c6..f36c3b0e60e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/111/UserWorkload.java\n@@ -89,7 +89,8 @@ public class UserWorkload {\n     }\n \n     public void tick(long time, LinkedHashMap<NodeId, WorkloadConfiguration> workloadConfigurations) {\n-        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n+        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(\n+                workloadConfigurations.entrySet())) {\n             if (entry.getValue().getDelay() != delay) {\n                 workloadConfigurations.put(entry.getKey(), WorkloadConfiguration.with(entry.getValue().getThreads(), delay));\n             }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/111/UserWorkload.java\nindex ee1134421c6..e844fc60f6a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/111/UserWorkload.java\n@@ -99,4 +99,4 @@ public class UserWorkload {\n             group.tick(time, workloadConfigurations);\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "93",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/111/UserWorkload.java\nindex ee1134421c6..64c790c43d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/111/UserWorkload.java\n@@ -24,7 +24,6 @@ import com.griddynamics.jagger.coordinator.NodeId;\n import com.griddynamics.jagger.user.ProcessingConfig;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.util.ArrayList;\n import java.util.LinkedHashMap;\n import java.util.List;\n@@ -33,11 +32,14 @@ import java.util.Map;\n /**\n  * User: dkotlyarov\n  */\n+\n+\n public class UserWorkload {\n-    private static final Logger log = LoggerFactory.getLogger(UserWorkload.class);\n \n+    private static final Logger log = LoggerFactory.getLogger(UserWorkload.class);\n     private final boolean main;\n     private final UserClock clock;\n+\n     ArrayList<UserGroup> groups;\n     private final int delay;\n \n@@ -46,7 +48,6 @@ public class UserWorkload {\n         this.clock = clock;\n         this.groups = new ArrayList<UserGroup>(users.size());\n         this.delay = delay;\n-\n         for (ProcessingConfig.Test.Task.User userConfig : users) {\n             groups.add(new UserGroup(this.getClock(), groups.size(), userConfig, time));\n         }\n@@ -99,4 +100,4 @@ public class UserWorkload {\n             group.tick(time, workloadConfigurations);\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "92",
+                    "column": "12",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: 'for' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/111/UserWorkload.java\nindex ee1134421c6..ac7b57a3b77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/111/UserWorkload.java\n@@ -89,7 +89,7 @@ public class UserWorkload {\n     }\n \n     public void tick(long time, LinkedHashMap<NodeId, WorkloadConfiguration> workloadConfigurations) {\n-        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n+        for(Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n             if (entry.getValue().getDelay() != delay) {\n                 workloadConfigurations.put(entry.getKey(), WorkloadConfiguration.with(entry.getValue().getThreads(), delay));\n             }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "93",
+                    "severity": "warning",
+                    "message": "'WorkloadConfiguration' has incorrect indentation level 12, expected level should be 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "93",
+                    "column": "34",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "94",
+                    "severity": "warning",
+                    "message": "'if' has incorrect indentation level 13, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/111/UserWorkload.java\nindex ee1134421c6..60e271e2dbe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/111/UserWorkload.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/111/UserWorkload.java\n@@ -89,8 +89,9 @@ public class UserWorkload {\n     }\n \n     public void tick(long time, LinkedHashMap<NodeId, WorkloadConfiguration> workloadConfigurations) {\n-        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId, WorkloadConfiguration>>(workloadConfigurations.entrySet())) {\n-            if (entry.getValue().getDelay() != delay) {\n+        for (Map.Entry<NodeId, WorkloadConfiguration> entry : new ArrayList<Map.Entry<NodeId ,\n+            WorkloadConfiguration >>(workloadConfigurations.entrySet())) {\n+             if (entry.getValue().getDelay() != delay) {\n                 workloadConfigurations.put(entry.getKey(), WorkloadConfiguration.with(entry.getValue().getThreads(), delay));\n             }\n         }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

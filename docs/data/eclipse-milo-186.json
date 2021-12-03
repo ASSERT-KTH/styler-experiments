@@ -1,0 +1,118 @@
+{
+    "project_name": "eclipse-milo",
+    "violation_id": "186",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=297\");\n\n    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=298\");\n\n    private final String name;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "38",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/186/Argument.java\nindex a5adf79e8f1..493569224b5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/186/Argument.java\n@@ -35,7 +35,8 @@ public class Argument extends Structure implements UaStructure {\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=297\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=298\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID =\n+        ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=298\");\n \n     private final String name;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "38",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "51",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/186/Argument.java\nindex a5adf79e8f1..7916ab69713 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/186/Argument.java\n@@ -47,9 +47,8 @@ public class Argument extends Structure implements UaStructure {\n \n     private final LocalizedText description;\n \n-    public Argument(String name, NodeId dataType, Integer valueRank, UInteger[] arrayDimensions,\n-                    LocalizedText description) {\n-        this.name = name;\n+    public Argument(String name, NodeId dataType, Integer valueRank, UInteger[] arrayDimensions, LocalizedText description) {\n+    this.name = name;\n         this.dataType = dataType;\n         this.valueRank = valueRank;\n         this.arrayDimensions = arrayDimensions;\n@@ -116,4 +115,4 @@ public class Argument extends Structure implements UaStructure {\n             encoder.writeLocalizedText(\"Description\", value.getDescription());\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/186/Argument.java\nindex a5adf79e8f1..aa290521a3f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/186/Argument.java\n@@ -31,10 +31,13 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n )\n @ToString\n public class Argument extends Structure implements UaStructure {\n+\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=296\");\n \n+\n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=297\");\n \n+\n     public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=298\");\n \n     private final String name;\n@@ -47,8 +50,11 @@ public class Argument extends Structure implements UaStructure {\n \n     private final LocalizedText description;\n \n-    public Argument(String name, NodeId dataType, Integer valueRank, UInteger[] arrayDimensions,\n-                    LocalizedText description) {\n+    public Argument(\n+        String name,\n+        NodeId dataType,\n+        Integer valueRank,\n+        UInteger[] arrayDimensions, LocalizedText description) {\n         this.name = name;\n         this.dataType = dataType;\n         this.valueRank = valueRank;\n@@ -100,9 +106,13 @@ public class Argument extends Structure implements UaStructure {\n         @Override\n         public Argument decode(SerializationContext context, UaDecoder decoder) {\n             String name = decoder.readString(\"Name\");\n+\n             NodeId dataType = decoder.readNodeId(\"DataType\");\n+\n             Integer valueRank = decoder.readInt32(\"ValueRank\");\n+\n             UInteger[] arrayDimensions = decoder.readUInt32Array(\"ArrayDimensions\");\n+\n             LocalizedText description = decoder.readLocalizedText(\"Description\");\n             return new Argument(name, dataType, valueRank, arrayDimensions, description);\n         }\n@@ -116,4 +126,5 @@ public class Argument extends Structure implements UaStructure {\n             encoder.writeLocalizedText(\"Description\", value.getDescription());\n         }\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "38",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "76",
+                    "severity": "error",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                },
+                {
+                    "line": "39",
+                    "column": "15",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/186/Argument.java\nindex a5adf79e8f1..e9180d09446 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/186/Argument.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/186/Argument.java\n@@ -35,7 +35,8 @@ public class Argument extends Structure implements UaStructure {\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=297\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=298\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId .\n+        parse (\"nsu=http://opcfoundation.org/UA/;i=298\");\n \n     private final String name;\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

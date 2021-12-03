@@ -1,0 +1,86 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "321",
+    "information": {
+        "violations": [
+            {
+                "line": "62",
+                "column": "61",
+                "severity": "warning",
+                "message": "':' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n    metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n    metrics.put(name + \".average\", value);\n    metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/321/WindowCounter.java\nindex 9684f20c191..eed32e2b199 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/321/WindowCounter.java\n@@ -59,8 +59,8 @@ public class WindowCounter {\n     metrics.put(name + \".count\", this.adjustValue(count.getCount(windowTimeIndex)));\n     metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n     metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n-    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n-        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n+    double value = count.getCount(windowTimeIndex) == 0 ? 0\n+        : (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n     metrics.put(name + \".average\", value);\n     metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));\n     metrics.put(name + \".tps\", this.adjustValue(count.getValue(windowTimeIndex).doubleValue()));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "62",
+                    "column": "61",
+                    "severity": "warning",
+                    "message": "':' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "62",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/321/WindowCounter.java\nindex 9684f20c191..85460a61547 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/321/WindowCounter.java\n@@ -59,8 +59,7 @@ public class WindowCounter {\n     metrics.put(name + \".count\", this.adjustValue(count.getCount(windowTimeIndex)));\n     metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n     metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n-    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n-        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n+    double value = count.getCount(windowTimeIndex) == 0 ? 0 : (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n     metrics.put(name + \".average\", value);\n     metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));\n     metrics.put(name + \".tps\", this.adjustValue(count.getValue(windowTimeIndex).doubleValue()));\n@@ -73,4 +72,4 @@ public class WindowCounter {\n   private double adjustValue(double value) {\n     return value < 0 ? 0 : value;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "62",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/321/WindowCounter.java\nindex 9684f20c191..1385ee7f12f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/321/WindowCounter.java\n@@ -19,7 +19,6 @@ package org.apache.servicecomb.metrics.core.custom;\n \n import java.util.HashMap;\n import java.util.Map;\n-\n import com.netflix.servo.monitor.MaxGauge;\n import com.netflix.servo.monitor.MinGauge;\n import com.netflix.servo.monitor.MonitorConfig;\n@@ -59,8 +58,8 @@ public class WindowCounter {\n     metrics.put(name + \".count\", this.adjustValue(count.getCount(windowTimeIndex)));\n     metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n     metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n-    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n-        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n+\n+    double value = count.getCount(windowTimeIndex) == 0 ? 0 : (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n     metrics.put(name + \".average\", value);\n     metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));\n     metrics.put(name + \".tps\", this.adjustValue(count.getValue(windowTimeIndex).doubleValue()));\n@@ -70,7 +69,8 @@ public class WindowCounter {\n   //for time-related monitor type, if stop poll value over one window time,\n   //the value may return -1 because servo can't known precise value of previous step\n   //so must change to return 0\n+\n   private double adjustValue(double value) {\n     return value < 0 ? 0 : value;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/321/WindowCounter.java\nindex 9684f20c191..eed32e2b199 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/321/WindowCounter.java\n@@ -59,8 +59,8 @@ public class WindowCounter {\n     metrics.put(name + \".count\", this.adjustValue(count.getCount(windowTimeIndex)));\n     metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n     metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n-    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n-        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n+    double value = count.getCount(windowTimeIndex) == 0 ? 0\n+        : (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n     metrics.put(name + \".average\", value);\n     metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));\n     metrics.put(name + \".tps\", this.adjustValue(count.getValue(windowTimeIndex).doubleValue()));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/321/WindowCounter.java\nindex 9684f20c191..eed32e2b199 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/321/WindowCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/321/WindowCounter.java\n@@ -59,8 +59,8 @@ public class WindowCounter {\n     metrics.put(name + \".count\", this.adjustValue(count.getCount(windowTimeIndex)));\n     metrics.put(name + \".max\", this.adjustValue(max.getValue(windowTimeIndex)));\n     metrics.put(name + \".min\", this.adjustValue(min.getValue(windowTimeIndex)));\n-    double value = count.getCount(windowTimeIndex) == 0 ? 0 :\n-        (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n+    double value = count.getCount(windowTimeIndex) == 0 ? 0\n+        : (double) this.total.getCount(windowTimeIndex) / (double) this.count.getCount(windowTimeIndex);\n     metrics.put(name + \".average\", value);\n     metrics.put(name + \".rate\", this.adjustValue(total.getValue(windowTimeIndex).doubleValue()));\n     metrics.put(name + \".tps\", this.adjustValue(count.getValue(windowTimeIndex).doubleValue()));\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "188",
+    "information": {
+        "violations": [
+            {
+                "line": "162",
+                "column": "52",
+                "severity": "warning",
+                "message": "';' is followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck"
+            }
+        ]
+    },
+    "source_code": "    FieldSchema<T> fieldSchema = null;\n    try {\n      for (int n = input.readFieldNumber(); n != 0; ) {\n        fieldSchema = fieldMap.getFieldByNumber(n);\n        if (fieldSchema != null) {\n          n = fieldSchema.mergeFrom(input, message);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/188/MessageReadSchema.java\nindex acdc01c8f7c..e7479f1fbbc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/188/MessageReadSchema.java\n@@ -159,7 +159,7 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void mergeFrom(InputEx input, T message) throws IOException {\n     FieldSchema<T> fieldSchema = null;\n     try {\n-      for (int n = input.readFieldNumber(); n != 0; ) {\n+      for (int n = input.readFieldNumber(); n != 0;) {\n         fieldSchema = fieldMap.getFieldByNumber(n);\n         if (fieldSchema != null) {\n           n = fieldSchema.mergeFrom(input, message);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "162",
+                    "column": "52",
+                    "severity": "warning",
+                    "message": "';' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "162",
+                    "column": "52",
+                    "severity": "warning",
+                    "message": "';' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyForIteratorPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/188/MessageReadSchema.java\nindex acdc01c8f7c..8be4692c1bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/188/MessageReadSchema.java\n@@ -139,13 +139,13 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n         LOGGER.info(\"java field {}:{} not exist in proto message {}, ignore it.\",\n             beanDescriptor.getJavaType().getRawClass().getName(),\n             propertyDescriptor.getName(), message.getCanonicalName());\n-        continue;\n+continue;\n       }\n       if (propertyDescriptor.getSetter() == null) {\n         LOGGER.info(\"no setter for java field {}:{} in proto message {}, ignore it.\",\n             beanDescriptor.getJavaType().getRawClass().getName(),\n             propertyDescriptor.getName(), message.getCanonicalName());\n-        continue;\n+continue;\n       }\n \n       FieldSchema<T> fieldSchema = deserializerSchemaManager.createSchemaField(protoField, propertyDescriptor);\n@@ -184,4 +184,4 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void writeTo(OutputEx output, Object value) throws IOException {\n     throw new UnsupportedOperationException();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "139",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "140",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 180).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "145",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 128).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "146",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 184).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/188/MessageReadSchema.java\nindex acdc01c8f7c..8b8f284598b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/188/MessageReadSchema.java\n@@ -22,7 +22,6 @@ import java.lang.reflect.Type;\n import java.util.ArrayList;\n import java.util.List;\n import java.util.Map;\n-\n import org.apache.servicecomb.foundation.protobuf.ProtoMapper;\n import org.apache.servicecomb.foundation.protobuf.internal.ProtoConst;\n import org.apache.servicecomb.foundation.protobuf.internal.ProtoUtils;\n@@ -30,10 +29,8 @@ import org.apache.servicecomb.foundation.protobuf.internal.bean.BeanDescriptor;\n import org.apache.servicecomb.foundation.protobuf.internal.bean.PropertyDescriptor;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.fasterxml.jackson.databind.JavaType;\n import com.fasterxml.jackson.databind.type.TypeFactory;\n-\n import io.protostuff.InputEx;\n import io.protostuff.OutputEx;\n import io.protostuff.SchemaEx;\n@@ -51,7 +48,9 @@ import io.protostuff.runtime.RuntimeEnv.Instantiator;\n  * so one schema should support dynamic and concrete logic at the same time\n  * </pre>\n  */\n-public class MessageReadSchema<T> implements SchemaEx<T> {\n+\n+public class MessageReadSchema<T>\n+  implements SchemaEx<T> {\n   private static final Logger LOGGER = LoggerFactory.getLogger(MessageReadSchema.class);\n \n   protected ProtoMapper protoMapper;\n@@ -73,7 +72,8 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n     this.message = message;\n     this.types = types;\n     if (!ProtoUtils.isWrapArguments(message) && types.size() > 0) {\n-      this.javaType = TypeFactory.defaultInstance().constructType(types.values().iterator().next());\n+      this.javaType = TypeFactory.defaultInstance().constructType(types.values().iterator()\n+                                                                                .next());\n       this.instantiator = RuntimeEnv.newInstantiator((Class<T>) javaType.getRawClass());\n     } else {\n       this.javaType = ProtoConst.MAP_TYPE;\n@@ -91,6 +91,7 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n     if (javaType.isJavaLangObject() || Map.class.isAssignableFrom(javaType.getRawClass())) {\n       javaType = ProtoConst.MAP_TYPE;\n     }\n+\n     this.instantiator = RuntimeEnv.newInstantiator((Class<T>) javaType.getRawClass());\n   }\n \n@@ -117,10 +118,10 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void init() {\n     if (types != null) {\n       if (ProtoUtils.isWrapArguments(message)) {\n-        this.fieldMap = (FieldMapEx<T>) protoMapper.getDeserializerSchemaManager()\n-            .createMapFields(message, types);\n+        this.fieldMap = (FieldMapEx<T>) protoMapper.getDeserializerSchemaManager().createMapFields(message, types);\n         return;\n       }\n+\n       this.createFieldMap();\n       return;\n     }\n@@ -131,20 +132,18 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   private void createFieldMap() {\n     DeserializerSchemaManager deserializerSchemaManager = protoMapper.getDeserializerSchemaManager();\n     BeanDescriptor beanDescriptor = protoMapper.getBeanDescriptorManager().getOrCreateBeanDescriptor(javaType);\n-\n     List<FieldSchema<T>> fieldSchemas = new ArrayList<>();\n     for (PropertyDescriptor propertyDescriptor : beanDescriptor.getPropertyDescriptors().values()) {\n       Field protoField = message.getField(propertyDescriptor.getName());\n       if (protoField == null) {\n-        LOGGER.info(\"java field {}:{} not exist in proto message {}, ignore it.\",\n-            beanDescriptor.getJavaType().getRawClass().getName(),\n-            propertyDescriptor.getName(), message.getCanonicalName());\n+        LOGGER.info(\"java field {}:{} not exist in proto message {}, ignore it.\", beanDescriptor.getJavaType().getRawClass()\n+                                                                                                              .getName(), propertyDescriptor.getName(), message.getCanonicalName());\n         continue;\n       }\n+\n       if (propertyDescriptor.getSetter() == null) {\n-        LOGGER.info(\"no setter for java field {}:{} in proto message {}, ignore it.\",\n-            beanDescriptor.getJavaType().getRawClass().getName(),\n-            propertyDescriptor.getName(), message.getCanonicalName());\n+        LOGGER.info(\"no setter for java field {}:{} in proto message {}, ignore it.\", beanDescriptor.getJavaType().getRawClass()\n+                                                                                                                  .getName(), propertyDescriptor.getName(), message.getCanonicalName());\n         continue;\n       }\n \n@@ -159,7 +158,7 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void mergeFrom(InputEx input, T message) throws IOException {\n     FieldSchema<T> fieldSchema = null;\n     try {\n-      for (int n = input.readFieldNumber(); n != 0; ) {\n+      for (int n = input.readFieldNumber(); n != 0;) {\n         fieldSchema = fieldMap.getFieldByNumber(n);\n         if (fieldSchema != null) {\n           n = fieldSchema.mergeFrom(input, message);\n@@ -172,10 +171,10 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n     } catch (Throwable e) {\n       Field protoField = fieldSchema.getProtoField();\n       LOGGER.error(\"Failed to mergeFrom, field={}:{}, type={}\",\n-          protoField.getType().getCanonicalName(),\n-          protoField.getName(),\n-          protoField.getTypeName(),\n-          e.getMessage());\n+protoField.getType().getCanonicalName(),\n+protoField.getName(),\n+protoField.getTypeName(),\n+e.getMessage());\n       throw e;\n     }\n   }\n@@ -184,4 +183,4 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void writeTo(OutputEx output, Object value) throws IOException {\n     throw new UnsupportedOperationException();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 26
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/188/MessageReadSchema.java\nindex acdc01c8f7c..e7479f1fbbc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/188/MessageReadSchema.java\n@@ -159,7 +159,7 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void mergeFrom(InputEx input, T message) throws IOException {\n     FieldSchema<T> fieldSchema = null;\n     try {\n-      for (int n = input.readFieldNumber(); n != 0; ) {\n+      for (int n = input.readFieldNumber(); n != 0;) {\n         fieldSchema = fieldMap.getFieldByNumber(n);\n         if (fieldSchema != null) {\n           n = fieldSchema.mergeFrom(input, message);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/188/MessageReadSchema.java\nindex acdc01c8f7c..e7479f1fbbc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/188/MessageReadSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/188/MessageReadSchema.java\n@@ -159,7 +159,7 @@ public class MessageReadSchema<T> implements SchemaEx<T> {\n   public void mergeFrom(InputEx input, T message) throws IOException {\n     FieldSchema<T> fieldSchema = null;\n     try {\n-      for (int n = input.readFieldNumber(); n != 0; ) {\n+      for (int n = input.readFieldNumber(); n != 0;) {\n         fieldSchema = fieldMap.getFieldByNumber(n);\n         if (fieldSchema != null) {\n           n = fieldSchema.mergeFrom(input, message);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

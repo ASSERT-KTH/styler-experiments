@@ -1,0 +1,111 @@
+{
+    "project_name": "DaGeRe-peass",
+    "violation_id": "65",
+    "information": {
+        "violations": [
+            {
+                "line": "4",
+                "column": "4",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic enum InstrumentationConstants {\n   ;\n   public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "';' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/65/InstrumentationConstants.java\nindex dde7b1139b4..075409a2eca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/65/InstrumentationConstants.java\n@@ -1,6 +1,6 @@\n package de.peass.kiekerInstrument;\n \n public enum InstrumentationConstants {\n-   ;\n+;\n    public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "3",
+                    "severity": "error",
+                    "message": "';' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/65/InstrumentationConstants.java\nindex dde7b1139b4..f034a6c84c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/65/InstrumentationConstants.java\n@@ -1,6 +1,6 @@\n package de.peass.kiekerInstrument;\n \n public enum InstrumentationConstants {\n-   ;\n-   public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n+  ;\n+  public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "3",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/naturalize/65/InstrumentationConstants.java\nindex dde7b1139b4..35778b60081 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/naturalize/65/InstrumentationConstants.java\n@@ -1,6 +1,5 @@\n package de.peass.kiekerInstrument;\n \n-public enum InstrumentationConstants {\n-   ;\n+public enum InstrumentationConstants {;\n    public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n-}\n+\t}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "5",
+                    "column": "2",
+                    "severity": "error",
+                    "message": "';' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/65/InstrumentationConstants.java\nindex dde7b1139b4..c13314faa2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/65/InstrumentationConstants.java\n@@ -1,6 +1,8 @@\n package de.peass.kiekerInstrument;\n \n+\n public enum InstrumentationConstants {\n-   ;\n-   public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n-}\n+ ;\n+\n+ public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "';' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/random/files-repaired/65/InstrumentationConstants.java\nindex dde7b1139b4..075409a2eca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/random/files-repaired/65/InstrumentationConstants.java\n@@ -1,6 +1,6 @@\n package de.peass.kiekerInstrument;\n \n public enum InstrumentationConstants {\n-   ;\n+;\n    public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "';' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/65/InstrumentationConstants.java\nindex dde7b1139b4..075409a2eca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/65/InstrumentationConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/65/InstrumentationConstants.java\n@@ -1,6 +1,6 @@\n package de.peass.kiekerInstrument;\n \n public enum InstrumentationConstants {\n-   ;\n+;\n    public static final String PREFIX = \"_kieker_sourceInstrumentation_\";\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

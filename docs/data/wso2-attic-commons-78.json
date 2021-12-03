@@ -1,0 +1,76 @@
+{
+    "project_name": "wso2-attic-commons",
+    "violation_id": "78",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 168).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\tpublic static void main(String[] args)throws AxisFault {\n\t\t\n\t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n\t\tOMElement payload = createPayLoad();\n\t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n\t\tOptions opts = new Options();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wso2-attic-commons/styler/05_predictions/final/files-repaired/78/Axiomclient.java\nindex 2cf6e277120..2611603b206 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wso2-attic-commons/styler/05_predictions/final/files-repaired/78/Axiomclient.java\n@@ -22,9 +22,9 @@ public class Axiomclient {\n \n \t\n \tpublic static void main(String[] args)throws AxisFault {\n-\t\t\n-\t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n-\t\tOMElement payload = createPayLoad();\n+ ConfigurationContext cc = ConfigurationContextFactory\n+         .createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n+  OMElement payload = createPayLoad();\n \t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n \t\tOptions opts = new Options();\n \t\topts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/checkstyle_idea/78/Axiomclient.java\nindex 2cf6e277120..8da755c520e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/checkstyle_idea/78/Axiomclient.java\n@@ -20,49 +20,51 @@ import org.apache.rampart.RampartMessageData;\n \n public class Axiomclient {\n \n-\t\n-\tpublic static void main(String[] args)throws AxisFault {\n-\t\t\n-\t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n-\t\tOMElement payload = createPayLoad();\n-\t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n-\t\tOptions opts = new Options();\n-\t\topts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n-\t\topts.setAction(\"urn:add\");\n \n-\t\tserviceclient.setOptions(opts);\n-\t\n+  public static void main(String[] args) throws AxisFault {\n \n-\t\t//for (int i = 0; i < 4; i++) {\n-\t\t\ttry {\n-\t\t\t\tOMElement response = serviceclient.sendReceive(payload);\n-\t\t\t\tSystem.out.println(response);\n-\t\t\t} catch (RemoteException e) {\n-\t\t\t\te.printStackTrace();\n-\t\t\t}\n-\t\t\t\n-\t\t\ttry {\n-\t\t\t\tThread.sleep(1000);\n-\t\t\t} catch (InterruptedException e) {\n-\t\t\t\te.printStackTrace();\n-\t\t\t}\n+    ConfigurationContext cc =\n+      ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\n+        \"/opt/sign_only/axis2.xml\");\n+    OMElement payload = createPayLoad();\n+    ServiceClient serviceclient = new ServiceClient(cc, null);\n+    Options opts = new Options();\n+    opts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n+    opts.setAction(\"urn:add\");\n \n-\t\t//}\n-\t}\n+    serviceclient.setOptions(opts);\n \n-\tpublic static OMElement createPayLoad(){\n-\t\tOMFactory fac = OMAbstractFactory.getOMFactory();\n-\t\tOMNamespace omNs = fac.createOMNamespace(\"http://service.esb.wso2.org\", \"ns\");\n-\t\tOMElement method = fac.createOMElement(\"add\", omNs);\n-\t\tOMElement value1 = fac.createOMElement(\"x\", omNs);\n-\t\tOMElement value2 = fac.createOMElement(\"y\", omNs);\n \n-\t\tvalue1.addChild(fac.createOMText(value1, \"10\"));\n-\t\tvalue2.addChild(fac.createOMText(value2, \"10\"));\n-\t\tmethod.addChild(value1);\n-\t\tmethod.addChild(value2);\n+    //for (int i = 0; i < 4; i++) {\n+    try {\n+      OMElement response = serviceclient.sendReceive(payload);\n+      System.out.println(response);\n+    } catch (RemoteException e) {\n+      e.printStackTrace();\n+    }\n \n-\t\treturn method;\n-\t}\n+    try {\n+      Thread.sleep(1000);\n+    } catch (InterruptedException e) {\n+      e.printStackTrace();\n+    }\n+\n+    //}\n+  }\n+\n+  public static OMElement createPayLoad() {\n+    OMFactory fac = OMAbstractFactory.getOMFactory();\n+    OMNamespace omNs = fac.createOMNamespace(\"http://service.esb.wso2.org\", \"ns\");\n+    OMElement method = fac.createOMElement(\"add\", omNs);\n+    OMElement value1 = fac.createOMElement(\"x\", omNs);\n+    OMElement value2 = fac.createOMElement(\"y\", omNs);\n+\n+    value1.addChild(fac.createOMText(value1, \"10\"));\n+    value2.addChild(fac.createOMText(value2, \"10\"));\n+    method.addChild(value1);\n+    method.addChild(value2);\n+\n+    return method;\n+  }\n }\n \n",
+            "diff_size": 62
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/naturalize/78/Axiomclient.java\nindex 2cf6e277120..d2ff5cb7dbc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/naturalize/78/Axiomclient.java\n@@ -21,33 +21,30 @@ import org.apache.rampart.RampartMessageData;\n public class Axiomclient {\n \n \t\n-\tpublic static void main(String[] args)throws AxisFault {\n-\t\t\n-\t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n+\tpublic static void main(String[] args) throws AxisFault{\n+ConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n \t\tOMElement payload = createPayLoad();\n-\t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n-\t\tOptions opts = new Options();\n-\t\topts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n+\t\tServiceClient serviceclient = new ServiceClient(cc, null);\n+Options opts = new Options();\n+opts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n \t\topts.setAction(\"urn:add\");\n \n \t\tserviceclient.setOptions(opts);\n-\t\n \n-\t\t//for (int i = 0; i < 4; i++) {\n+//for (int i = 0; i < 4; i++) {\n \t\t\ttry {\n \t\t\t\tOMElement response = serviceclient.sendReceive(payload);\n \t\t\t\tSystem.out.println(response);\n \t\t\t} catch (RemoteException e) {\n \t\t\t\te.printStackTrace();\n \t\t\t}\n-\t\t\t\n-\t\t\ttry {\n-\t\t\t\tThread.sleep(1000);\n+\n+try {\n+    Thread.sleep(1000);\n \t\t\t} catch (InterruptedException e) {\n \t\t\t\te.printStackTrace();\n \t\t\t}\n-\n-\t\t//}\n+//}\n \t}\n \n \tpublic static OMElement createPayLoad(){\n@@ -64,5 +61,4 @@ public class Axiomclient {\n \n \t\treturn method;\n \t}\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 168).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/styler/05_predictions/random/files-repaired/78/Axiomclient.java\nindex 2cf6e277120..e839d5b9cb6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/styler/05_predictions/random/files-repaired/78/Axiomclient.java\n@@ -22,9 +22,9 @@ public class Axiomclient {\n \n \t\n \tpublic static void main(String[] args)throws AxisFault {\n-\t\t\n+\n \t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n-\t\tOMElement payload = createPayLoad();\n+  OMElement payload = createPayLoad();\n \t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n \t\tOptions opts = new Options();\n \t\topts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/styler/05_predictions/three_grams/files-repaired/78/Axiomclient.java\nindex 2cf6e277120..2611603b206 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/violations/78/Axiomclient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wso2-attic-commons/styler/05_predictions/three_grams/files-repaired/78/Axiomclient.java\n@@ -22,9 +22,9 @@ public class Axiomclient {\n \n \t\n \tpublic static void main(String[] args)throws AxisFault {\n-\t\t\n-\t\tConfigurationContext cc = ConfigurationContextFactory.createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n-\t\tOMElement payload = createPayLoad();\n+ ConfigurationContext cc = ConfigurationContextFactory\n+         .createConfigurationContextFromFileSystem(\"/opt/sign_only/client_repo\",\"/opt/sign_only/axis2.xml\");\n+  OMElement payload = createPayLoad();\n \t\tServiceClient serviceclient = new ServiceClient(cc, null);   \n \t\tOptions opts = new Options();\n \t\topts.setTo(new EndpointReference(\"http://localhost:8280/soap/RMProxy\"));\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "3272",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "28",
+                    "column": "30",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "28",
+                    "column": "62",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "30",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "22",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3272/MetadataMismatchException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3272/MetadataMismatchException.java\nindex 63a7bb2e2a8..eb67e5a4dbf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3272/MetadataMismatchException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3272/MetadataMismatchException.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.index.internal.gbptree;\n \n /**\n@@ -24,13 +25,13 @@ package org.neo4j.index.internal.gbptree;\n  */\n public class MetadataMismatchException extends RuntimeException\n {\n-    MetadataMismatchException( String message, Throwable cause )\n+    MetadataMismatchException(String message, Throwable cause)\n     {\n-        super( message, cause );\n+        super(message, cause);\n     }\n \n-    MetadataMismatchException( String message )\n+    MetadataMismatchException(String message)\n     {\n-        super( message );\n+        super(message);\n     }\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

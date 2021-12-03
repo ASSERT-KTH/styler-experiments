@@ -1,0 +1,166 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "4136",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "57",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "69",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "39",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "87",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "50",
+                    "column": "12",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "50",
+                    "column": "24",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "10",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "31",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "43",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "57",
+                    "column": "33",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4136/URLAccessRules.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/4136/URLAccessRules.java\nindex 3a354814043..0d6d39eba54 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4136/URLAccessRules.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/4136/URLAccessRules.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.impl.security;\n \n import java.util.Map;\n@@ -26,36 +27,36 @@ import org.neo4j.graphdb.security.URLAccessValidationError;\n \n public class URLAccessRules\n {\n-    private static final URLAccessRule ALWAYS_PERMITTED = ( config, url ) -> url;\n+  private static final URLAccessRule ALWAYS_PERMITTED = (config, url) -> url;\n \n-    private URLAccessRules()\n-    {\n-    }\n+  private URLAccessRules()\n+  {\n+  }\n \n-    public static URLAccessRule alwaysPermitted()\n-    {\n-        return ALWAYS_PERMITTED;\n-    }\n+  public static URLAccessRule alwaysPermitted()\n+  {\n+    return ALWAYS_PERMITTED;\n+  }\n \n-    private static final URLAccessRule FILE_ACCESS = new FileURLAccessRule();\n+  private static final URLAccessRule FILE_ACCESS = new FileURLAccessRule();\n \n-    public static URLAccessRule fileAccess()\n-    {\n-        return FILE_ACCESS;\n-    }\n+  public static URLAccessRule fileAccess()\n+  {\n+    return FILE_ACCESS;\n+  }\n \n-    public static URLAccessRule combined( final Map<String,URLAccessRule> urlAccessRules )\n+  public static URLAccessRule combined(final Map<String, URLAccessRule> urlAccessRules)\n+  {\n+    return (config, url) ->\n     {\n-        return ( config, url ) ->\n-        {\n-            String protocol = url.getProtocol();\n-            URLAccessRule protocolRule = urlAccessRules.get( protocol );\n-            if ( protocolRule == null )\n-            {\n-                throw new URLAccessValidationError( \"loading resources via protocol '\" + protocol +\n-                        \"' is not permitted\" );\n-            }\n-            return protocolRule.validate( config, url );\n-        };\n-    }\n+      String protocol = url.getProtocol();\n+      URLAccessRule protocolRule = urlAccessRules.get(protocol);\n+      if (protocolRule == null)\n+      {\n+        throw new URLAccessValidationError(\"loading resources via protocol '\" + protocol +\n+            \"' is not permitted\");\n+      }\n+      return protocolRule.validate(config, url);\n+    };\n+  }\n }\n",
+            "diff_size": 29
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4136/URLAccessRules.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/4136/URLAccessRules.java\nindex 3a354814043..039f6f85f9f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4136/URLAccessRules.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/4136/URLAccessRules.java\n@@ -52,10 +52,10 @@ public class URLAccessRules\n             URLAccessRule protocolRule = urlAccessRules.get( protocol );\n             if ( protocolRule == null )\n             {\n-                throw new URLAccessValidationError( \"loading resources via protocol '\" + protocol +\n-                        \"' is not permitted\" );\n+                throw new URLAccessValidationError( \"loading resources via protocol '\" + protocol + \"' is not permitted\" );\n             }\n-            return protocolRule.validate( config, url );\n+\n+return protocolRule.validate( config, url );\n         };\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "395",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.engine.flush;\n\nimport org.apache.iotdb.db.engine.memtable.AbstractMemTable;\nimport org.apache.iotdb.db.engine.memtable.IMemTable;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/395/NotifyFlushMemTable.java\nindex 4aeb66c4c15..08583560dfe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/395/NotifyFlushMemTable.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.engine.flush;\n \n import org.apache.iotdb.db.engine.memtable.AbstractMemTable;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/395/NotifyFlushMemTable.java\nindex 4aeb66c4c15..08583560dfe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/395/NotifyFlushMemTable.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.engine.flush;\n \n import org.apache.iotdb.db.engine.memtable.AbstractMemTable;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/395/NotifyFlushMemTable.java\nindex 4aeb66c4c15..b8e16fd804f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/395/NotifyFlushMemTable.java\n@@ -27,6 +27,7 @@ import org.apache.iotdb.tsfile.write.schema.IMeasurementSchema;\n  * Only used in sync flush and async close to start a flush task This memtable is not managed by\n  * MemTablePool and does not store any data.\n  */\n+\n public class NotifyFlushMemTable extends AbstractMemTable {\n \n   @Override\n@@ -43,4 +44,4 @@ public class NotifyFlushMemTable extends AbstractMemTable {\n   public boolean isSignalMemTable() {\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/395/NotifyFlushMemTable.java\nindex 4aeb66c4c15..08583560dfe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/395/NotifyFlushMemTable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/395/NotifyFlushMemTable.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.engine.flush;\n \n import org.apache.iotdb.db.engine.memtable.AbstractMemTable;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "101",
+    "information": {
+        "violations": [
+            {
+                "line": "41",
+                "column": "32",
+                "severity": "warning",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "public class WorkManagementStatsProvider {\n\n    private String moduleName; //ra-name\n    private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n\n    public WorkManagementStatsProvider(String moduleName) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/101/WorkManagementStatsProvider.java\nindex 0ca8f2137d2..dafeac776d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/101/WorkManagementStatsProvider.java\n@@ -38,7 +38,10 @@ import org.glassfish.external.probe.provider.annotations.ProbeParam;\n @Description(\"Connector Container Work Management Statistics\")\n public class WorkManagementStatsProvider {\n \n-    private String moduleName; //ra-name\n+    private String moduleName;\n+\n+    //ra-name\n+\n     private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n \n     public WorkManagementStatsProvider(String moduleName) {\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "41",
+                    "column": "32",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/101/WorkManagementStatsProvider.java\nindex 0ca8f2137d2..a1d143b840d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/101/WorkManagementStatsProvider.java\n@@ -33,7 +33,7 @@ import org.glassfish.external.probe.provider.annotations.ProbeParam;\n  *\n  * @author Jagadish Ramu\n  */\n-@AMXMetadata(type=\"connector-service-mon\", group=\"monitoring\")\n+@AMXMetadata(type = \"connector-service-mon\", group = \"monitoring\")\n @ManagedObject\n @Description(\"Connector Container Work Management Statistics\")\n public class WorkManagementStatsProvider {\n@@ -48,26 +48,26 @@ public class WorkManagementStatsProvider {\n     long time = System.currentTimeMillis();\n \n     private final CountStatisticImpl submittedWorkCount =\n-            new CountStatisticImpl(\"SubmittedWorkCount\", StatisticImpl.UNIT_COUNT,\n-                    \"Number of work objects submitted by a connector module for execution\");\n+        new CountStatisticImpl(\"SubmittedWorkCount\", StatisticImpl.UNIT_COUNT,\n+            \"Number of work objects submitted by a connector module for execution\");\n     private final CountStatisticImpl rejectedWorkCount =\n-            new CountStatisticImpl(\"RejectedWorkCount\", StatisticImpl.UNIT_COUNT,\n-                    \"Number of work objects rejected by the application server\");\n+        new CountStatisticImpl(\"RejectedWorkCount\", StatisticImpl.UNIT_COUNT,\n+            \"Number of work objects rejected by the application server\");\n     private final CountStatisticImpl completedWorkCount =\n-            new CountStatisticImpl(\"CompletedWorkCount\", StatisticImpl.UNIT_COUNT,\n-                    \"Number of work objects completed execution\");\n+        new CountStatisticImpl(\"CompletedWorkCount\", StatisticImpl.UNIT_COUNT,\n+            \"Number of work objects completed execution\");\n \n     private final RangeStatisticImpl activeWorkCount =\n-            new RangeStatisticImpl(0, 0, 0, \"ActiveWorkCount\", StatisticImpl.UNIT_COUNT,\n-                    \"Number of active work objects\", time, time);\n+        new RangeStatisticImpl(0, 0, 0, \"ActiveWorkCount\", StatisticImpl.UNIT_COUNT,\n+            \"Number of active work objects\", time, time);\n \n     private final RangeStatisticImpl waitQueueLength =\n-            new RangeStatisticImpl(0, 0, 0, \"WaitQueueLength\", StatisticImpl.UNIT_COUNT,\n-                    \"Number of work objects waiting in the queue for execution\", time, time);\n+        new RangeStatisticImpl(0, 0, 0, \"WaitQueueLength\", StatisticImpl.UNIT_COUNT,\n+            \"Number of work objects waiting in the queue for execution\", time, time);\n \n     private final RangeStatisticImpl workRequestWaitTime =\n-            new RangeStatisticImpl(0, 0, 0, \"WorkRequestWaitTime\", StatisticImpl.UNIT_COUNT,\n-                    \"Wait time of a work object before it gets executed\", time, time);\n+        new RangeStatisticImpl(0, 0, 0, \"WorkRequestWaitTime\", StatisticImpl.UNIT_COUNT,\n+            \"Wait time of a work object before it gets executed\", time, time);\n \n \n     @ManagedAttribute(id = \"submittedworkcount\")\n@@ -113,7 +113,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workSubmitted\")\n     public void workSubmitted(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             submittedWorkCount.increment();\n@@ -122,7 +122,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workQueued\")\n     public void workQueued(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             synchronized (waitQueueLength) {\n@@ -134,8 +134,8 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workWaitedFor\")\n     public void workWaitedFor(\n-            @ProbeParam(\"raName\") String raName,\n-            @ProbeParam(\"elapsedTime\") long elapsedTime\n+        @ProbeParam(\"raName\") String raName,\n+        @ProbeParam(\"elapsedTime\") long elapsedTime\n     ) {\n         if (isValidEvent(raName)) {\n             workRequestWaitTime.setCurrent(elapsedTime);\n@@ -144,7 +144,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workDequeued\")\n     public void workDequeued(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             synchronized (waitQueueLength) {\n@@ -155,7 +155,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessingStarted\")\n     public void workProcessingStarted(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             synchronized (activeWorkCount) {\n@@ -166,7 +166,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessingCompleted\")\n     public void workProcessingCompleted(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             synchronized (activeWorkCount) {\n@@ -177,7 +177,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessed\")\n     public void workProcessed(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             completedWorkCount.increment();\n@@ -187,7 +187,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workTimedOut\")\n     public void workTimedOut(\n-            @ProbeParam(\"raName\") String raName\n+        @ProbeParam(\"raName\") String raName\n     ) {\n         if (isValidEvent(raName)) {\n             rejectedWorkCount.increment();\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "56",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "64",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "68",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "72",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "76",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/101/WorkManagementStatsProvider.java\nindex 0ca8f2137d2..5a9409d5129 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/101/WorkManagementStatsProvider.java\n@@ -38,7 +38,9 @@ import org.glassfish.external.probe.provider.annotations.ProbeParam;\n @Description(\"Connector Container Work Management Statistics\")\n public class WorkManagementStatsProvider {\n \n-    private String moduleName; //ra-name\n+    private String moduleName;\n+\n+//ra-name\n     private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n \n     public WorkManagementStatsProvider(String moduleName) {\n@@ -50,27 +52,28 @@ public class WorkManagementStatsProvider {\n     private final CountStatisticImpl submittedWorkCount =\n             new CountStatisticImpl(\"SubmittedWorkCount\", StatisticImpl.UNIT_COUNT,\n                     \"Number of work objects submitted by a connector module for execution\");\n-    private final CountStatisticImpl rejectedWorkCount =\n+\n+private final CountStatisticImpl rejectedWorkCount =\n             new CountStatisticImpl(\"RejectedWorkCount\", StatisticImpl.UNIT_COUNT,\n                     \"Number of work objects rejected by the application server\");\n-    private final CountStatisticImpl completedWorkCount =\n+\n+private final CountStatisticImpl completedWorkCount =\n             new CountStatisticImpl(\"CompletedWorkCount\", StatisticImpl.UNIT_COUNT,\n                     \"Number of work objects completed execution\");\n \n-    private final RangeStatisticImpl activeWorkCount =\n+private final RangeStatisticImpl activeWorkCount =\n             new RangeStatisticImpl(0, 0, 0, \"ActiveWorkCount\", StatisticImpl.UNIT_COUNT,\n                     \"Number of active work objects\", time, time);\n \n-    private final RangeStatisticImpl waitQueueLength =\n+private final RangeStatisticImpl waitQueueLength =\n             new RangeStatisticImpl(0, 0, 0, \"WaitQueueLength\", StatisticImpl.UNIT_COUNT,\n                     \"Number of work objects waiting in the queue for execution\", time, time);\n \n-    private final RangeStatisticImpl workRequestWaitTime =\n+private final RangeStatisticImpl workRequestWaitTime =\n             new RangeStatisticImpl(0, 0, 0, \"WorkRequestWaitTime\", StatisticImpl.UNIT_COUNT,\n                     \"Wait time of a work object before it gets executed\", time, time);\n \n-\n-    @ManagedAttribute(id = \"submittedworkcount\")\n+@ManagedAttribute(id = \"submittedworkcount\")\n     @Description(\"Number of work objects submitted by a connector module for execution\")\n     public CountStatistic getSubmittedWorkCount() {\n         return submittedWorkCount;\n@@ -113,8 +116,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workSubmitted\")\n     public void workSubmitted(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             submittedWorkCount.increment();\n         }\n@@ -122,8 +124,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workQueued\")\n     public void workQueued(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             synchronized (waitQueueLength) {\n                 waitQueueLength.setCurrent(waitQueueLength.getCurrent() + 1);\n@@ -144,8 +145,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workDequeued\")\n     public void workDequeued(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             synchronized (waitQueueLength) {\n                 waitQueueLength.setCurrent(waitQueueLength.getCurrent() - 1);\n@@ -155,8 +155,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessingStarted\")\n     public void workProcessingStarted(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             synchronized (activeWorkCount) {\n                 activeWorkCount.setCurrent(activeWorkCount.getCurrent() + 1);\n@@ -166,8 +165,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessingCompleted\")\n     public void workProcessingCompleted(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             synchronized (activeWorkCount) {\n                 activeWorkCount.setCurrent(activeWorkCount.getCurrent() - 1);\n@@ -177,8 +175,7 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workProcessed\")\n     public void workProcessed(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             completedWorkCount.increment();\n         }\n@@ -187,10 +184,9 @@ public class WorkManagementStatsProvider {\n \n     @ProbeListener(DOTTED_NAME + \"workTimedOut\")\n     public void workTimedOut(\n-            @ProbeParam(\"raName\") String raName\n-    ) {\n+            @ProbeParam(\"raName\") String raName) {\n         if (isValidEvent(raName)) {\n             rejectedWorkCount.increment();\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "41",
+                    "column": "31",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/101/WorkManagementStatsProvider.java\nindex 0ca8f2137d2..113d34f8670 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/101/WorkManagementStatsProvider.java\n@@ -38,7 +38,8 @@ import org.glassfish.external.probe.provider.annotations.ProbeParam;\n @Description(\"Connector Container Work Management Statistics\")\n public class WorkManagementStatsProvider {\n \n-    private String moduleName; //ra-name\n+    private String moduleName;//ra-name private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n+\n     private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n \n     public WorkManagementStatsProvider(String moduleName) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/101/WorkManagementStatsProvider.java\nindex 0ca8f2137d2..dafeac776d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/101/WorkManagementStatsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/101/WorkManagementStatsProvider.java\n@@ -38,7 +38,10 @@ import org.glassfish.external.probe.provider.annotations.ProbeParam;\n @Description(\"Connector Container Work Management Statistics\")\n public class WorkManagementStatsProvider {\n \n-    private String moduleName; //ra-name\n+    private String moduleName;\n+\n+    //ra-name\n+\n     private static final String DOTTED_NAME = \"glassfish:jca:work-management:\";\n \n     public WorkManagementStatsProvider(String moduleName) {\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

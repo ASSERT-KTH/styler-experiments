@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "111",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "34",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "//\tprivate Object rootObject;\n\t\n\tpublic ETemplateContext(){\n\t\tdataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/111/ETemplateContext.java\nindex 20d2aeb675b..1926769ec32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/111/ETemplateContext.java\n@@ -13,7 +13,7 @@ public class ETemplateContext {\n \tprivate Map<String, Object> dataContext = Maps.newHashMap();\n //\tprivate Object rootObject;\n \t\n-\tpublic ETemplateContext(){\n+\tpublic ETemplateContext() {\n \t\tdataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/111/ETemplateContext.java\nindex 20d2aeb675b..ca054525b46 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/111/ETemplateContext.java\n@@ -8,40 +8,40 @@ import org.onetwo.ext.poi.utils.TheFunction;\n import com.google.common.collect.Maps;\n \n public class ETemplateContext {\n-\t\n-\tprivate Map<String, Object> rootObject = Maps.newHashMap();\n-\tprivate Map<String, Object> dataContext = Maps.newHashMap();\n+\n+  private Map<String, Object> rootObject = Maps.newHashMap();\n+  private Map<String, Object> dataContext = Maps.newHashMap();\n //\tprivate Object rootObject;\n-\t\n-\tpublic ETemplateContext(){\n-\t\tdataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n-\t}\n \n-\tpublic Object put(String key, Object value) {\n-\t\treturn rootObject.put(key, value);\n-\t}\n+  public ETemplateContext() {\n+    dataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n+  }\n \n-\tpublic void putAll(Map<? extends String, ? extends Object> m) {\n-\t\trootObject.putAll(m);\n-\t}\n-\t\n+  public Object put(String key, Object value) {\n+    return rootObject.put(key, value);\n+  }\n \n-\tpublic Object remove(Object key) {\n-\t\treturn rootObject.remove(key);\n-\t}\n+  public void putAll(Map<? extends String, ? extends Object> m) {\n+    rootObject.putAll(m);\n+  }\n \n-\tpublic Object get(Object key) {\n-\t\treturn rootObject.get(key);\n-\t}\n \n-\tpublic Map<String, Object> getRootObject() {\n+  public Object remove(Object key) {\n+    return rootObject.remove(key);\n+  }\n+\n+  public Object get(Object key) {\n+    return rootObject.get(key);\n+  }\n+\n+  public Map<String, Object> getRootObject() {\n //\t\treturn ImmutableMap.copyOf(rootContext);\n-\t\treturn Collections.unmodifiableMap(rootObject);\n-\t}\n+    return Collections.unmodifiableMap(rootObject);\n+  }\n \n-\tpublic Map<String, Object> getDataContext() {\n-\t\treturn dataContext;\n-\t}\n+  public Map<String, Object> getDataContext() {\n+    return dataContext;\n+  }\n \t\n \t\n \n",
+            "diff_size": 34
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/111/ETemplateContext.java\nindex 20d2aeb675b..1926769ec32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/111/ETemplateContext.java\n@@ -13,7 +13,7 @@ public class ETemplateContext {\n \tprivate Map<String, Object> dataContext = Maps.newHashMap();\n //\tprivate Object rootObject;\n \t\n-\tpublic ETemplateContext(){\n+\tpublic ETemplateContext() {\n \t\tdataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/111/ETemplateContext.java\nindex 20d2aeb675b..1926769ec32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/111/ETemplateContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/111/ETemplateContext.java\n@@ -13,7 +13,7 @@ public class ETemplateContext {\n \tprivate Map<String, Object> dataContext = Maps.newHashMap();\n //\tprivate Object rootObject;\n \t\n-\tpublic ETemplateContext(){\n+\tpublic ETemplateContext() {\n \t\tdataContext.put(TheFunction.ALIAS_NAME, TheFunction.getInstance());\n \t}\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

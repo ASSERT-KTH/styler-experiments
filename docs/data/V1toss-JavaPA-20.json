@@ -1,0 +1,63 @@
+{
+    "project_name": "V1toss-JavaPA",
+    "violation_id": "20",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "55",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@Repository\npublic interface DriveDAO extends CrudRepository<Drive,Integer> {\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/20/DriveDAO.java\nindex 47b5976eaa7..b613136d128 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/20/DriveDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Drive;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/20/DriveDAO.java\nindex 47b5976eaa7..b613136d128 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/20/DriveDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Drive;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/20/DriveDAO.java\nindex 47b5976eaa7..163c1af2228 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/20/DriveDAO.java\n@@ -12,6 +12,5 @@ import vkaretko.domain.Drive;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n-\n-}\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/20/DriveDAO.java\nindex 47b5976eaa7..f504f56050c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/20/DriveDAO.java\n@@ -11,7 +11,8 @@ import vkaretko.domain.Drive;\n  * @version 1.00.\n  * @since 08.05.2017.\n  */\n-@Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n \n-}\n+\n+@Repository\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/20/DriveDAO.java\nindex 47b5976eaa7..b613136d128 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/20/DriveDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Drive;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/20/DriveDAO.java\nindex 47b5976eaa7..b613136d128 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/20/DriveDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/20/DriveDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Drive;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface DriveDAO extends CrudRepository<Drive,Integer> {\n+public interface DriveDAO extends CrudRepository<Drive, Integer> {\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,90 @@
+{
+    "project_name": "HuygensING-timbuctoo",
+    "violation_id": "37",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "import java.util.stream.Stream;\n\nimport static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n  .getPaginatedList;\n\npublic class CollectionDataFetcher implements CollectionFetcher {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/37/CollectionDataFetcher.java\nindex 62d73136946..0b40744bd59 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/37/CollectionDataFetcher.java\n@@ -17,8 +17,7 @@ import java.io.IOException;\n import java.util.stream.Collectors;\n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class CollectionDataFetcher implements CollectionFetcher {\n   private static final Logger LOG = LoggerFactory.getLogger(CollectionDataFetcher.class);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/naturalize/37/CollectionDataFetcher.java\nindex 62d73136946..d1950de9506 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/naturalize/37/CollectionDataFetcher.java\n@@ -17,8 +17,7 @@ import java.io.IOException;\n import java.util.stream.Collectors;\n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class CollectionDataFetcher implements CollectionFetcher {\n   private static final Logger LOG = LoggerFactory.getLogger(CollectionDataFetcher.class);\n@@ -62,4 +61,4 @@ public class CollectionDataFetcher implements CollectionFetcher {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/codebuff/37/CollectionDataFetcher.java\nindex 62d73136946..6a0f9dd3358 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/codebuff/37/CollectionDataFetcher.java\n@@ -12,17 +12,14 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.PaginationArguments\n import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.IOException;\n import java.util.stream.Collectors;\n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class CollectionDataFetcher implements CollectionFetcher {\n   private static final Logger LOG = LoggerFactory.getLogger(CollectionDataFetcher.class);\n-\n   private final String collectionName;\n   private final ElasticSearch elasticSearch;\n \n@@ -36,30 +33,21 @@ public class CollectionDataFetcher implements CollectionFetcher {\n     String cursor = arguments.getCursor();\n     if (arguments.getSearchQuery().isPresent()) {\n       try {\n-        final PageableResult result = elasticSearch.query(\n-          collectionName,\n-          arguments.getSearchQuery().get(),\n-          cursor,\n-          arguments.getCount()\n-        );\n+        final PageableResult result = elasticSearch.query(collectionName, arguments.getSearchQuery().get(), cursor, arguments.getCount());\n         return PaginatedList.create(\n           null,\n           result.getToken(),\n-          result.getIdList().stream().map(x -> new LazyTypeSubjectReference(x, dataSet)).collect(Collectors.toList())\n+          result.getIdList().stream()\n+                            .map(x -> new LazyTypeSubjectReference(x, dataSet))\n+                            .collect(Collectors.toList())\n         );\n       } catch (IOException e) {\n         throw new RuntimeException(e);\n       }\n     } else {\n       try (Stream<CursorSubject> subjectStream = dataSet.getCollectionIndex().getSubjects(collectionName, cursor)) {\n-        return getPaginatedList(\n-          subjectStream,\n-          cursorSubject -> new LazyTypeSubjectReference(cursorSubject.getSubjectUri(), dataSet),\n-          arguments.getCount(),\n-          !cursor.isEmpty()\n-        );\n+        return getPaginatedList(subjectStream, cursorSubject -> new LazyTypeSubjectReference(cursorSubject.getSubjectUri(), dataSet), arguments.getCount(), !cursor.isEmpty());\n       }\n     }\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/37/CollectionDataFetcher.java\nindex 62d73136946..0b40744bd59 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/37/CollectionDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/37/CollectionDataFetcher.java\n@@ -17,8 +17,7 @@ import java.io.IOException;\n import java.util.stream.Collectors;\n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class CollectionDataFetcher implements CollectionFetcher {\n   private static final Logger LOG = LoggerFactory.getLogger(CollectionDataFetcher.class);\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "124",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "46",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private String msg;\n\n  public SimpleResponse(int code, String msg){\n    this.code = code;\n    this.msg = msg;\n  }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/124/SimpleResponse.java\nindex 4392c9ceafc..0a63623e320 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/124/SimpleResponse.java\n@@ -5,7 +5,7 @@ public class SimpleResponse {\n   private int code;\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/124/SimpleResponse.java\nindex 4392c9ceafc..0a63623e320 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/124/SimpleResponse.java\n@@ -5,7 +5,7 @@ public class SimpleResponse {\n   private int code;\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/124/SimpleResponse.java\nindex 4392c9ceafc..bb08d0db711 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/124/SimpleResponse.java\n@@ -5,7 +5,7 @@ public class SimpleResponse {\n   private int code;\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n@@ -25,4 +25,4 @@ public class SimpleResponse {\n   public void setMsg(String msg) {\n     this.msg = msg;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/124/SimpleResponse.java\nindex 4392c9ceafc..7abd31d11b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/124/SimpleResponse.java\n@@ -1,11 +1,11 @@\n package com.ctrip.apollo.portal.entity;\n \n public class SimpleResponse {\n-\n   private int code;\n+\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n@@ -25,4 +25,4 @@ public class SimpleResponse {\n   public void setMsg(String msg) {\n     this.msg = msg;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/124/SimpleResponse.java\nindex 4392c9ceafc..0a63623e320 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/124/SimpleResponse.java\n@@ -5,7 +5,7 @@ public class SimpleResponse {\n   private int code;\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/124/SimpleResponse.java\nindex 4392c9ceafc..0a63623e320 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/124/SimpleResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/124/SimpleResponse.java\n@@ -5,7 +5,7 @@ public class SimpleResponse {\n   private int code;\n   private String msg;\n \n-  public SimpleResponse(int code, String msg){\n+  public SimpleResponse(int code, String msg) {\n     this.code = code;\n     this.msg = msg;\n   }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

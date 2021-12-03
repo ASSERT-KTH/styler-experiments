@@ -1,0 +1,104 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "50",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *\n */\npackage com.ctrip.framework.apollo.internals;\n\nimport com.ctrip.framework.apollo.core.enums.ConfigFileFormat;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/50/TxtConfigFile.java\nindex 6394abf0d10..3a69c2f5f06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/50/TxtConfigFile.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\n  *\n  */\n+\n package com.ctrip.framework.apollo.internals;\n \n import com.ctrip.framework.apollo.core.enums.ConfigFileFormat;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "warning",
+                    "message": "Block comment has incorrect indentation level 0, expected is 3, indentation should be the same level as line 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/50/TxtConfigFile.java\nindex 6394abf0d10..19e48502212 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/50/TxtConfigFile.java\n@@ -13,8 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  *\n- */\n-package com.ctrip.framework.apollo.internals;\n+ */package com.ctrip.framework.apollo.internals;\n \n import com.ctrip.framework.apollo.core.enums.ConfigFileFormat;\n \n@@ -28,4 +27,4 @@ public class TxtConfigFile extends PlainTextConfigFile {\n   public ConfigFileFormat getConfigFileFormat() {\n     return ConfigFileFormat.TXT;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/50/TxtConfigFile.java\nindex 6394abf0d10..5dffc964e95 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/50/TxtConfigFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/50/TxtConfigFile.java\n@@ -18,6 +18,7 @@ package com.ctrip.framework.apollo.internals;\n \n import com.ctrip.framework.apollo.core.enums.ConfigFileFormat;\n \n+\n public class TxtConfigFile extends PlainTextConfigFile {\n \n   public TxtConfigFile(String namespace, ConfigRepository configRepository) {\n@@ -28,4 +29,4 @@ public class TxtConfigFile extends PlainTextConfigFile {\n   public ConfigFileFormat getConfigFileFormat() {\n     return ConfigFileFormat.TXT;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

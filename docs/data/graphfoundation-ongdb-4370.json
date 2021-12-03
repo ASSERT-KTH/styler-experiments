@@ -1,0 +1,110 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "4370",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "12",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "89",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4370/Bootstrapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/4370/Bootstrapper.java\nindex 14dab6abfd4..beeaedb1979 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4370/Bootstrapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/4370/Bootstrapper.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.server;\n \n import java.io.File;\n@@ -25,7 +26,7 @@ import java.util.Optional;\n \n public interface Bootstrapper\n {\n-    int start( File homeDir, Optional<File> configFile, Map<String, String> configOverrides );\n+  int start(File homeDir, Optional<File> configFile, Map<String, String> configOverrides);\n \n-    int stop();\n+  int stop();\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4370/Bootstrapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/4370/Bootstrapper.java\nindex 14dab6abfd4..8dd69b66bd8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/4370/Bootstrapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/4370/Bootstrapper.java\n@@ -25,7 +25,7 @@ import java.util.Optional;\n \n public interface Bootstrapper\n {\n-    int start( File homeDir, Optional<File> configFile, Map<String, String> configOverrides );\n+    int start( File homeDir, Optional<File> configFile, Map<String,String> configOverrides );\n \n     int stop();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

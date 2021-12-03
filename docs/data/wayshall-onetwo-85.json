@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "85",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "54",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\tpublic static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n\t\n\tpublic static boolean isWechatModulePresent(){\n\t\treturn ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/85/ModuleUtils.java\nindex 1f2bb9de23d..0f5eaff02c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/85/ModuleUtils.java\n@@ -10,7 +10,7 @@ public abstract class ModuleUtils {\n \t\n \tpublic static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n \t\n-\tpublic static boolean isWechatModulePresent(){\n+\tpublic static boolean isWechatModulePresent() {\n \t\treturn ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/85/ModuleUtils.java\nindex 1f2bb9de23d..08b40108abb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/85/ModuleUtils.java\n@@ -7,11 +7,11 @@ import org.springframework.util.ClassUtils;\n  * <br/>\n  */\n public abstract class ModuleUtils {\n-\t\n-\tpublic static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n-\t\n-\tpublic static boolean isWechatModulePresent(){\n-\t\treturn ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n-\t}\n+\n+  public static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n+\n+  public static boolean isWechatModulePresent() {\n+    return ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n+  }\n \n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/85/ModuleUtils.java\nindex 1f2bb9de23d..0f5eaff02c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/85/ModuleUtils.java\n@@ -10,7 +10,7 @@ public abstract class ModuleUtils {\n \t\n \tpublic static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n \t\n-\tpublic static boolean isWechatModulePresent(){\n+\tpublic static boolean isWechatModulePresent() {\n \t\treturn ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/85/ModuleUtils.java\nindex 1f2bb9de23d..0f5eaff02c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/85/ModuleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/85/ModuleUtils.java\n@@ -10,7 +10,7 @@ public abstract class ModuleUtils {\n \t\n \tpublic static final String WECHAT_CLASS_NAME = \"org.onetwo.ext.apiclient.wechat.EnableWechatClient\";\n \t\n-\tpublic static boolean isWechatModulePresent(){\n+\tpublic static boolean isWechatModulePresent() {\n \t\treturn ClassUtils.isPresent(WECHAT_CLASS_NAME, null);\n \t}\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

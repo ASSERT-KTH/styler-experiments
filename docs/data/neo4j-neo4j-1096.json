@@ -1,0 +1,124 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "1096",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "27",
+                    "column": "44",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "27",
+                    "column": "83",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/1096/LoadCsvStatusWrapCypherException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/1096/LoadCsvStatusWrapCypherException.java\nindex 9458a453b3e..ddcd896d178 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/1096/LoadCsvStatusWrapCypherException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/1096/LoadCsvStatusWrapCypherException.java\n@@ -17,15 +17,16 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.exceptions;\n \n import org.neo4j.kernel.api.exceptions.Status;\n \n public class LoadCsvStatusWrapCypherException extends Neo4jException\n {\n-    public LoadCsvStatusWrapCypherException( String extraInfo, Neo4jException cause )\n+    public LoadCsvStatusWrapCypherException(String extraInfo, Neo4jException cause)\n     {\n-        super( String.format( \"%s (%s)\", cause.getMessage(), extraInfo ), cause );\n+        super(String.format(\"%s (%s)\", cause.getMessage(), extraInfo), cause);\n     }\n \n     @Override\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/1096/LoadCsvStatusWrapCypherException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/naturalize/1096/LoadCsvStatusWrapCypherException.java\nindex 9458a453b3e..6efcf95d73a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/1096/LoadCsvStatusWrapCypherException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/naturalize/1096/LoadCsvStatusWrapCypherException.java\n@@ -33,4 +33,4 @@ public class LoadCsvStatusWrapCypherException extends Neo4jException\n     {\n         return ((Neo4jException) getCause()).status();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

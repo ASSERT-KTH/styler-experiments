@@ -1,0 +1,88 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "176",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.sync.sender.recover;\n\nimport org.apache.iotdb.db.sync.conf.SyncConstant;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/176/SyncSenderLogAnalyzer.java\nindex fee6baf70da..b926b44e4cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/176/SyncSenderLogAnalyzer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.sender.recover;\n \n import org.apache.iotdb.db.sync.conf.SyncConstant;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/176/SyncSenderLogAnalyzer.java\nindex fee6baf70da..b926b44e4cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/176/SyncSenderLogAnalyzer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.sender.recover;\n \n import org.apache.iotdb.db.sync.conf.SyncConstant;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "79",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "106",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/176/SyncSenderLogAnalyzer.java\nindex fee6baf70da..f2eb29fe4a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/176/SyncSenderLogAnalyzer.java\n@@ -19,11 +19,9 @@\n package org.apache.iotdb.db.sync.sender.recover;\n \n import org.apache.iotdb.db.sync.conf.SyncConstant;\n-\n import org.apache.commons.io.FileUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.BufferedReader;\n import java.io.BufferedWriter;\n import java.io.File;\n@@ -78,8 +76,7 @@ public class SyncSenderLogAnalyzer implements ISyncSenderLogAnalyzer {\n         lastLocalFiles.add(line);\n       }\n     } catch (IOException e) {\n-      LOGGER.error(\n-          \"Can not load last local file list from file {}\", lastLocalFile.getAbsoluteFile(), e);\n+      LOGGER.error(\"Can not load last local file list from file {}\", lastLocalFile.getAbsoluteFile(), e);\n     }\n   }\n \n@@ -106,8 +103,7 @@ public class SyncSenderLogAnalyzer implements ISyncSenderLogAnalyzer {\n         }\n       }\n     } catch (IOException e) {\n-      LOGGER.error(\n-          \"Can not load last local file list from file {}\", lastLocalFile.getAbsoluteFile(), e);\n+      LOGGER.error(\"Can not load last local file list from file {}\", lastLocalFile.getAbsoluteFile(), e);\n     }\n   }\n \n@@ -125,4 +121,4 @@ public class SyncSenderLogAnalyzer implements ISyncSenderLogAnalyzer {\n     lastLocalFile.delete();\n     FileUtils.moveFile(currentLocalFile, lastLocalFile);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/176/SyncSenderLogAnalyzer.java\nindex fee6baf70da..b926b44e4cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/176/SyncSenderLogAnalyzer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/176/SyncSenderLogAnalyzer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.sender.recover;\n \n import org.apache.iotdb.db.sync.conf.SyncConstant;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

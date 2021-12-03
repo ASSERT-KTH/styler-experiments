@@ -1,0 +1,128 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "481",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/481/SampleNeighborParam.java\nindex 8e91ff3d6d0..48c7234a15c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/481/SampleNeighborParam.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.graph.client.sampleneighbor4;\n \n import com.tencent.angel.PartitionKey;\n@@ -28,68 +29,69 @@ import java.util.List;\n \n public class SampleNeighborParam extends GetParam {\n \n-  private final long[] keys;\n-  private final int numSample;\n-  private final List<PartitionGetParam> params;\n-  private final boolean sampleTypes;\n-\n-  public SampleNeighborParam(int matrixId, long[] keys, int numSample, boolean sampleTypes) {\n-    super(matrixId);\n-    this.keys = keys;\n-    this.numSample = numSample;\n-    this.params = new ArrayList<>();\n-    this.sampleTypes = sampleTypes;\n-  }\n-\n-  public SampleNeighborParam() {\n-    this(-1, null, -1, false);\n-  }\n-\n-  public List<PartitionGetParam> getParams() {\n-    return params;\n-  }\n-\n-  public long[] getKeys() {\n-    return keys;\n-  }\n-\n-  public boolean getSampleTypes() {\n-    return sampleTypes;\n-  }\n-\n-  @Override\n-  public List<PartitionGetParam> split() {\n-    Arrays.sort(keys);\n-    List<PartitionKey> partitions =\n-        PSAgentContext.get().getMatrixMetaManager().getPartitions(matrixId);\n-\n-    if (!RowUpdateSplitUtils.isInRange(keys, partitions)) {\n-      throw new AngelException(\n-          \"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" + partitions\n-              .get(partitions.size() - 1).getEndCol());\n+    private final long[] keys;\n+    private final int numSample;\n+    private final List<PartitionGetParam> params;\n+    private final boolean sampleTypes;\n+\n+    public SampleNeighborParam(int matrixId, long[] keys, int numSample, boolean sampleTypes) {\n+        super(matrixId);\n+        this.keys = keys;\n+        this.numSample = numSample;\n+        this.params = new ArrayList<>();\n+        this.sampleTypes = sampleTypes;\n+    }\n+\n+    public SampleNeighborParam() {\n+        this(-1, null, -1, false);\n+    }\n+\n+    public List<PartitionGetParam> getParams() {\n+        return params;\n+    }\n+\n+    public long[] getKeys() {\n+        return keys;\n     }\n \n-    int nodeIndex = 0;\n-    int partIndex = 0;\n-    while (nodeIndex < keys.length || partIndex < partitions.size()) {\n-      int length = 0;\n-      long endOffset = partitions.get(partIndex).getEndCol();\n-      while (nodeIndex < keys.length && keys[nodeIndex] < endOffset) {\n-        nodeIndex++;\n-        length++;\n-      }\n-\n-      if (length > 0) {\n-        params.add(new SampleNeighborPartParam(matrixId,\n-            partitions.get(partIndex), numSample, keys, sampleTypes,\n-            nodeIndex - length, nodeIndex));\n-      }\n-\n-      partIndex++;\n+    public boolean getSampleTypes() {\n+        return sampleTypes;\n     }\n \n-    return params;\n-  }\n+    @Override\n+    public List<PartitionGetParam> split() {\n+        Arrays.sort(keys);\n+        List<PartitionKey> partitions =\n+                PSAgentContext.get().getMatrixMetaManager().getPartitions(matrixId);\n+\n+        if (!RowUpdateSplitUtils.isInRange(keys, partitions)) {\n+            throw new AngelException(\n+                    \"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" +\n+                            partitions\n+                                    .get(partitions.size() - 1).getEndCol());\n+        }\n+\n+        int nodeIndex = 0;\n+        int partIndex = 0;\n+        while (nodeIndex < keys.length || partIndex < partitions.size()) {\n+            int length = 0;\n+            long endOffset = partitions.get(partIndex).getEndCol();\n+            while (nodeIndex < keys.length && keys[nodeIndex] < endOffset) {\n+                nodeIndex++;\n+                length++;\n+            }\n+\n+            if (length > 0) {\n+                params.add(new SampleNeighborPartParam(matrixId,\n+                        partitions.get(partIndex), numSample, keys, sampleTypes,\n+                        nodeIndex - length, nodeIndex));\n+            }\n+\n+            partIndex++;\n+        }\n+\n+        return params;\n+    }\n \n \n }\n",
+            "diff_size": 91
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "67",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/481/SampleNeighborParam.java\nindex 8e91ff3d6d0..e1cae5344a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/481/SampleNeighborParam.java\n@@ -64,10 +64,9 @@ public class SampleNeighborParam extends GetParam {\n         PSAgentContext.get().getMatrixMetaManager().getPartitions(matrixId);\n \n     if (!RowUpdateSplitUtils.isInRange(keys, partitions)) {\n-      throw new AngelException(\n-          \"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" + partitions\n+      throw new AngelException(\"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" + partitions\n               .get(partitions.size() - 1).getEndCol());\n-    }\n+  }\n \n     int nodeIndex = 0;\n     int partIndex = 0;\n@@ -92,4 +91,4 @@ public class SampleNeighborParam extends GetParam {\n   }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "63",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 153).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "79",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/481/SampleNeighborParam.java\nindex 8e91ff3d6d0..4f28eb29d03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/481/SampleNeighborParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/481/SampleNeighborParam.java\n@@ -60,13 +60,9 @@ public class SampleNeighborParam extends GetParam {\n   @Override\n   public List<PartitionGetParam> split() {\n     Arrays.sort(keys);\n-    List<PartitionKey> partitions =\n-        PSAgentContext.get().getMatrixMetaManager().getPartitions(matrixId);\n-\n+    List<PartitionKey> partitions = PSAgentContext.get().getMatrixMetaManager().getPartitions(matrixId);\n     if (!RowUpdateSplitUtils.isInRange(keys, partitions)) {\n-      throw new AngelException(\n-          \"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" + partitions\n-              .get(partitions.size() - 1).getEndCol());\n+      throw new AngelException(\"node id is not in range [\" + partitions.get(0).getStartCol() + \", \" + partitions.get(partitions.size() - 1).getEndCol());\n     }\n \n     int nodeIndex = 0;\n@@ -80,16 +76,10 @@ public class SampleNeighborParam extends GetParam {\n       }\n \n       if (length > 0) {\n-        params.add(new SampleNeighborPartParam(matrixId,\n-            partitions.get(partIndex), numSample, keys, sampleTypes,\n-            nodeIndex - length, nodeIndex));\n+        params.add(new SampleNeighborPartParam(matrixId, partitions.get(partIndex), numSample, keys, sampleTypes, nodeIndex - length, nodeIndex));\n       }\n-\n       partIndex++;\n     }\n-\n     return params;\n   }\n-\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

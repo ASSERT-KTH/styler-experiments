@@ -1,0 +1,63 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "31",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "column": "71",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@SuppressWarnings(\"serial\")\nabstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n\t\n\tString code;\n\tString message;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/31/BaseDataResult.java\nindex ecb6fbb1f4e..7986569e975 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/31/BaseDataResult.java\n@@ -4,8 +4,8 @@ package org.onetwo.common.data;\n  * <br/>\n  */\n @SuppressWarnings(\"serial\")\n-abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n-\t\n+abstract public class BaseDataResult<DATA> implements DataResult<DATA> {\n+\n \tString code;\n \tString message;\n \t\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/31/BaseDataResult.java\nindex ecb6fbb1f4e..bb0568016d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/31/BaseDataResult.java\n@@ -1,25 +1,29 @@\n package org.onetwo.common.data;\n+\n /**\n  * @author weishao zeng\n  * <br/>\n  */\n @SuppressWarnings(\"serial\")\n-abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n-\t\n-\tString code;\n-\tString message;\n-\t\n-\tpublic String getCode() {\n-\t\treturn code;\n-\t}\n-\tpublic void setCode(String code) {\n-\t\tthis.code = code;\n-\t}\n-\tpublic String getMessage() {\n-\t\treturn message;\n-\t}\n-\tpublic void setMessage(String message) {\n-\t\tthis.message = message;\n-\t}\n+abstract public class BaseDataResult<DATA> implements DataResult<DATA> {\n+\n+  String code;\n+  String message;\n+\n+  public String getCode() {\n+    return code;\n+  }\n+\n+  public void setCode(String code) {\n+    this.code = code;\n+  }\n+\n+  public String getMessage() {\n+    return message;\n+  }\n+\n+  public void setMessage(String message) {\n+    this.message = message;\n+  }\n \n }\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/31/BaseDataResult.java\nindex ecb6fbb1f4e..ba4348b02b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/31/BaseDataResult.java\n@@ -4,7 +4,7 @@ package org.onetwo.common.data;\n  * <br/>\n  */\n @SuppressWarnings(\"serial\")\n-abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n+abstract public class BaseDataResult<DATA> implements DataResult<DATA> {\n \t\n \tString code;\n \tString message;\n@@ -22,4 +22,4 @@ abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n \t\tthis.message = message;\n \t}\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/31/BaseDataResult.java\nindex ecb6fbb1f4e..7986569e975 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/31/BaseDataResult.java\n@@ -4,8 +4,8 @@ package org.onetwo.common.data;\n  * <br/>\n  */\n @SuppressWarnings(\"serial\")\n-abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n-\t\n+abstract public class BaseDataResult<DATA> implements DataResult<DATA> {\n+\n \tString code;\n \tString message;\n \t\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/31/BaseDataResult.java\nindex ecb6fbb1f4e..7986569e975 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/31/BaseDataResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/31/BaseDataResult.java\n@@ -4,8 +4,8 @@ package org.onetwo.common.data;\n  * <br/>\n  */\n @SuppressWarnings(\"serial\")\n-abstract public class BaseDataResult<DATA> implements DataResult<DATA>{\n-\t\n+abstract public class BaseDataResult<DATA> implements DataResult<DATA> {\n+\n \tString code;\n \tString message;\n \t\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "62",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "column": "9",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "\tREQUIRED_VALUE(\"the token is reqired\"),\n\tTOKEN_INVALID(\"invalid token\")\n\t;\n\n\tfinal private String errorMessage;\n\t",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/62/TokenValidatorErrors.java\nindex ab2a39a7b0c..92f6e7059f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/62/TokenValidatorErrors.java\n@@ -8,10 +8,9 @@ import org.onetwo.common.exception.ErrorType;\n  */\n public enum TokenValidatorErrors implements ErrorType {\n \tREQUIRED_VALUE(\"the token is reqired\"),\n-\tTOKEN_INVALID(\"invalid token\")\n-\t;\n+\tTOKEN_INVALID(\"invalid token\");\n \n-\tfinal private String errorMessage;\n+ final private String errorMessage;\n \t\n \tprivate TokenValidatorErrors(String errorMessage) {\n \t\tthis.errorMessage = errorMessage;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/62/TokenValidatorErrors.java\nindex ab2a39a7b0c..787c0b4b428 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/62/TokenValidatorErrors.java\n@@ -7,24 +7,23 @@ import org.onetwo.common.exception.ErrorType;\n  * <br/>\n  */\n public enum TokenValidatorErrors implements ErrorType {\n-\tREQUIRED_VALUE(\"the token is reqired\"),\n-\tTOKEN_INVALID(\"invalid token\")\n-\t;\n+  REQUIRED_VALUE(\"the token is reqired\"),\n+  TOKEN_INVALID(\"invalid token\");\n \n-\tfinal private String errorMessage;\n-\t\n-\tprivate TokenValidatorErrors(String errorMessage) {\n-\t\tthis.errorMessage = errorMessage;\n-\t}\n+  final private String errorMessage;\n \n-\t@Override\n-\tpublic String getErrorCode() {\n-\t\treturn name();\n-\t}\n+  private TokenValidatorErrors(String errorMessage) {\n+    this.errorMessage = errorMessage;\n+  }\n \n-\t@Override\n-\tpublic String getErrorMessage() {\n-\t\treturn errorMessage;\n-\t}\n+  @Override\n+  public String getErrorCode() {\n+    return name();\n+  }\n+\n+  @Override\n+  public String getErrorMessage() {\n+    return errorMessage;\n+  }\n \n }\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/62/TokenValidatorErrors.java\nindex ab2a39a7b0c..1adc88f5f14 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/62/TokenValidatorErrors.java\n@@ -8,8 +8,7 @@ import org.onetwo.common.exception.ErrorType;\n  */\n public enum TokenValidatorErrors implements ErrorType {\n \tREQUIRED_VALUE(\"the token is reqired\"),\n-\tTOKEN_INVALID(\"invalid token\")\n-\t;\n+\tTOKEN_INVALID(\"invalid token\");\n \n \tfinal private String errorMessage;\n \t\n@@ -27,4 +26,4 @@ public enum TokenValidatorErrors implements ErrorType {\n \t\treturn errorMessage;\n \t}\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/62/TokenValidatorErrors.java\nindex ab2a39a7b0c..92f6e7059f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/62/TokenValidatorErrors.java\n@@ -8,10 +8,9 @@ import org.onetwo.common.exception.ErrorType;\n  */\n public enum TokenValidatorErrors implements ErrorType {\n \tREQUIRED_VALUE(\"the token is reqired\"),\n-\tTOKEN_INVALID(\"invalid token\")\n-\t;\n+\tTOKEN_INVALID(\"invalid token\");\n \n-\tfinal private String errorMessage;\n+ final private String errorMessage;\n \t\n \tprivate TokenValidatorErrors(String errorMessage) {\n \t\tthis.errorMessage = errorMessage;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/62/TokenValidatorErrors.java\nindex ab2a39a7b0c..92f6e7059f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/62/TokenValidatorErrors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/62/TokenValidatorErrors.java\n@@ -8,10 +8,9 @@ import org.onetwo.common.exception.ErrorType;\n  */\n public enum TokenValidatorErrors implements ErrorType {\n \tREQUIRED_VALUE(\"the token is reqired\"),\n-\tTOKEN_INVALID(\"invalid token\")\n-\t;\n+\tTOKEN_INVALID(\"invalid token\");\n \n-\tfinal private String errorMessage;\n+ final private String errorMessage;\n \t\n \tprivate TokenValidatorErrors(String errorMessage) {\n \t\tthis.errorMessage = errorMessage;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

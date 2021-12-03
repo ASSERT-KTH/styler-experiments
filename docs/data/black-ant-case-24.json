@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "24",
+    "information": {
+        "violations": [
+            {
+                "line": "56",
+                "column": "45",
+                "severity": "error",
+                "message": "';' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    public boolean supports(AuthenticationToken token) {\n        return token instanceof OAuth2Token;//\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n    }\n\n    @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/24/OAuth2Realm.java\nindex 1b169a23860..a6cde8e6999 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/24/OAuth2Realm.java\n@@ -53,7 +53,8 @@ public class OAuth2Realm extends AuthorizingRealm {\n \n     @Override\n     public boolean supports(AuthenticationToken token) {\n-        return token instanceof OAuth2Token;//\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n+        return token instanceof OAuth2Token;\n+        //\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n     }\n \n     @Override\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "56",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/24/OAuth2Realm.java\nindex 1b169a23860..c318629616b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/24/OAuth2Realm.java\n@@ -69,7 +69,7 @@ public class OAuth2Realm extends AuthorizingRealm {\n         String username = extractUsername(code);\n \n         SimpleAuthenticationInfo authenticationInfo =\n-                new SimpleAuthenticationInfo(username, code, getName());\n+            new SimpleAuthenticationInfo(username, code, getName());\n         return authenticationInfo;\n     }\n \n@@ -79,13 +79,13 @@ public class OAuth2Realm extends AuthorizingRealm {\n             OAuthClient oAuthClient = new OAuthClient(new URLConnectionClient());\n \n             OAuthClientRequest accessTokenRequest = OAuthClientRequest\n-                    .tokenLocation(accessTokenUrl)\n-                    .setGrantType(GrantType.AUTHORIZATION_CODE)\n-                    .setClientId(clientId)\n-                    .setClientSecret(clientSecret)\n-                    .setCode(code)\n-                    .setRedirectURI(redirectUrl)\n-                    .buildQueryMessage();\n+                .tokenLocation(accessTokenUrl)\n+                .setGrantType(GrantType.AUTHORIZATION_CODE)\n+                .setClientId(clientId)\n+                .setClientSecret(clientSecret)\n+                .setCode(code)\n+                .setRedirectURI(redirectUrl)\n+                .buildQueryMessage();\n \n             OAuthAccessTokenResponse oAuthResponse = oAuthClient.accessToken(accessTokenRequest, OAuth.HttpMethod.POST);\n \n@@ -93,7 +93,7 @@ public class OAuth2Realm extends AuthorizingRealm {\n             Long expiresIn = oAuthResponse.getExpiresIn();\n \n             OAuthClientRequest userInfoRequest = new OAuthBearerClientRequest(userInfoUrl)\n-                    .setAccessToken(accessToken).buildQueryMessage();\n+                .setAccessToken(accessToken).buildQueryMessage();\n \n             OAuthResourceResponse resourceResponse = oAuthClient.resource(userInfoRequest, OAuth.HttpMethod.GET, OAuthResourceResponse.class);\n             String username = resourceResponse.getBody();\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/24/OAuth2Realm.java\nindex 1b169a23860..61691e63add 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/24/OAuth2Realm.java\n@@ -53,7 +53,9 @@ public class OAuth2Realm extends AuthorizingRealm {\n \n     @Override\n     public boolean supports(AuthenticationToken token) {\n-        return token instanceof OAuth2Token;//\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n+        return token instanceof OAuth2Token;\n+\n+    //\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n     }\n \n     @Override\n@@ -103,4 +105,4 @@ public class OAuth2Realm extends AuthorizingRealm {\n             throw new OAuth2AuthenticationException(e);\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/24/OAuth2Realm.java\nindex 1b169a23860..194fcacb9b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/24/OAuth2Realm.java\n@@ -53,8 +53,9 @@ public class OAuth2Realm extends AuthorizingRealm {\n \n     @Override\n     public boolean supports(AuthenticationToken token) {\n-        return token instanceof OAuth2Token;//\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n-    }\n+        return token instanceof OAuth2Token; //\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b}\n+\n+        }\n \n     @Override\n     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/24/OAuth2Realm.java\nindex 1b169a23860..a6cde8e6999 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/24/OAuth2Realm.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/24/OAuth2Realm.java\n@@ -53,7 +53,8 @@ public class OAuth2Realm extends AuthorizingRealm {\n \n     @Override\n     public boolean supports(AuthenticationToken token) {\n-        return token instanceof OAuth2Token;//\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n+        return token instanceof OAuth2Token;\n+        //\u8868\u793a\u6b64Realm\u53ea\u652f\u6301OAuth2Token\u7c7b\u578b\n     }\n \n     @Override\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

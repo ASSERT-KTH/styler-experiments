@@ -1,0 +1,67 @@
+{
+    "project_name": "EMResearch-EMB",
+    "violation_id": "57",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 131).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private final String userAgent;\n\n  DatabaseAccessLimitLogEntry(String type, Long server, Long client, Long user, String reason, String referrer, String userAgent) {\n    this.date = Calendar.getInstance();\n    this.type = type;\n    this.server = server;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/57/DatabaseAccessLimitLogEntry.java\nindex 5ea9dbe7143..8264ebac0b4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/57/DatabaseAccessLimitLogEntry.java\n@@ -28,42 +28,43 @@ import java.util.HashMap;\n import java.util.Map;\n \n public class DatabaseAccessLimitLogEntry extends DatabaseLogEntry {\n-  private final Calendar date;\n-  private final String type;\n-  private final Long server;\n-  private final Long client;\n-  private final Long user;\n-  private final String reason;\n-  private final String referrer;\n-  private final String userAgent;\n+    private final Calendar date;\n+    private final String type;\n+    private final Long server;\n+    private final Long client;\n+    private final Long user;\n+    private final String reason;\n+    private final String referrer;\n+    private final String userAgent;\n \n-  DatabaseAccessLimitLogEntry(String type, Long server, Long client, Long user, String reason, String referrer, String userAgent) {\n-    this.date = Calendar.getInstance();\n-    this.type = type;\n-    this.server = server;\n-    this.client = client;\n-    this.user = user;\n-    this.referrer = referrer;\n-    this.userAgent = userAgent;\n-    this.reason = reason;\n-  }\n+    DatabaseAccessLimitLogEntry(String type, Long server, Long client, Long user, String reason, String referrer,\n+                                String userAgent) {\n+        this.date = Calendar.getInstance();\n+        this.type = type;\n+        this.server = server;\n+        this.client = client;\n+        this.user = user;\n+        this.referrer = referrer;\n+        this.userAgent = userAgent;\n+        this.reason = reason;\n+    }\n \n-  @Override\n-  public Map<Object, Object> getMapping() {\n-    HashMap<Object, Object> parameters = new HashMap<>();\n-    parameters.put(\"type\", StringUtils.abbreviate(type, 64));\n-    parameters.put(\"date\", ServerTools.getSQLDatetimeString(date));\n-    parameters.put(\"server\", server);\n-    parameters.put(\"client\", client);\n-    parameters.put(\"user\", user);\n-    parameters.put(\"referrer\", StringUtils.abbreviate(referrer, 128));\n-    parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent,  512));\n-    parameters.put(\"reason\", StringUtils.abbreviate(reason,  512));\n-    return parameters;\n-  }\n+    @Override\n+    public Map<Object, Object> getMapping() {\n+        HashMap<Object, Object> parameters = new HashMap<>();\n+        parameters.put(\"type\", StringUtils.abbreviate(type, 64));\n+        parameters.put(\"date\", ServerTools.getSQLDatetimeString(date));\n+        parameters.put(\"server\", server);\n+        parameters.put(\"client\", client);\n+        parameters.put(\"user\", user);\n+        parameters.put(\"referrer\", StringUtils.abbreviate(referrer, 128));\n+        parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent, 512));\n+        parameters.put(\"reason\", StringUtils.abbreviate(reason, 512));\n+        return parameters;\n+    }\n \n-  @Override\n-  public String getMappingIdentifier() {\n-    return \"org.languagetool.server.LogMapper.accessLimit\";\n-  }\n+    @Override\n+    public String getMappingIdentifier() {\n+        return \"org.languagetool.server.LogMapper.accessLimit\";\n+    }\n }\n",
+            "diff_size": 36
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/57/DatabaseAccessLimitLogEntry.java\nindex 5ea9dbe7143..e7730cb87f9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/57/DatabaseAccessLimitLogEntry.java\n@@ -57,8 +57,8 @@ public class DatabaseAccessLimitLogEntry extends DatabaseLogEntry {\n     parameters.put(\"client\", client);\n     parameters.put(\"user\", user);\n     parameters.put(\"referrer\", StringUtils.abbreviate(referrer, 128));\n-    parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent,  512));\n-    parameters.put(\"reason\", StringUtils.abbreviate(reason,  512));\n+    parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent, 512));\n+    parameters.put(\"reason\", StringUtils.abbreviate(reason, 512));\n     return parameters;\n   }\n \n@@ -66,4 +66,4 @@ public class DatabaseAccessLimitLogEntry extends DatabaseLogEntry {\n   public String getMappingIdentifier() {\n     return \"org.languagetool.server.LogMapper.accessLimit\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/57/DatabaseAccessLimitLogEntry.java\nindex 5ea9dbe7143..b45248aaf7d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/57/DatabaseAccessLimitLogEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/57/DatabaseAccessLimitLogEntry.java\n@@ -22,22 +22,28 @@\n package org.languagetool.server;\n \n import org.apache.commons.lang3.StringUtils;\n-\n import java.util.Calendar;\n import java.util.HashMap;\n import java.util.Map;\n \n+\n public class DatabaseAccessLimitLogEntry extends DatabaseLogEntry {\n-  private final Calendar date;\n-  private final String type;\n-  private final Long server;\n-  private final Long client;\n-  private final Long user;\n-  private final String reason;\n-  private final String referrer;\n-  private final String userAgent;\n \n-  DatabaseAccessLimitLogEntry(String type, Long server, Long client, Long user, String reason, String referrer, String userAgent) {\n+    private final Calendar date;\n+    private final String type;\n+    private final Long server;\n+    private final Long client;\n+    private final Long user;\n+    private final String reason;\n+    private final String referrer;\n+    private final String userAgent;\n+\n+    DatabaseAccessLimitLogEntry(String type,\n+                                Long server,\n+                                Long client,\n+                                Long user,\n+                                String reason,\n+                                String referrer, String userAgent) {\n     this.date = Calendar.getInstance();\n     this.type = type;\n     this.server = server;\n@@ -46,24 +52,25 @@ public class DatabaseAccessLimitLogEntry extends DatabaseLogEntry {\n     this.referrer = referrer;\n     this.userAgent = userAgent;\n     this.reason = reason;\n-  }\n+    }\n+\n+    @Override\n+    public Map<Object, Object> getMapping() {\n+        HashMap<Object, Object> parameters = new HashMap<>();\n+        parameters.put(\"type\", StringUtils.abbreviate(type, 64));\n+        parameters.put(\"date\", ServerTools.getSQLDatetimeString(date));\n+        parameters.put(\"server\", server);\n+        parameters.put(\"client\", client);\n+        parameters.put(\"user\", user);\n+        parameters.put(\"referrer\", StringUtils.abbreviate(referrer, 128));\n+        parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent, 512));\n+        parameters.put(\"reason\", StringUtils.abbreviate(reason, 512));\n+        return parameters;\n+    }\n \n-  @Override\n-  public Map<Object, Object> getMapping() {\n-    HashMap<Object, Object> parameters = new HashMap<>();\n-    parameters.put(\"type\", StringUtils.abbreviate(type, 64));\n-    parameters.put(\"date\", ServerTools.getSQLDatetimeString(date));\n-    parameters.put(\"server\", server);\n-    parameters.put(\"client\", client);\n-    parameters.put(\"user\", user);\n-    parameters.put(\"referrer\", StringUtils.abbreviate(referrer, 128));\n-    parameters.put(\"user_agent\", StringUtils.abbreviate(userAgent,  512));\n-    parameters.put(\"reason\", StringUtils.abbreviate(reason,  512));\n-    return parameters;\n-  }\n+    @Override\n+    public String getMappingIdentifier() {\n+        return \"org.languagetool.server.LogMapper.accessLimit\";\n+    }\n \n-  @Override\n-  public String getMappingIdentifier() {\n-    return \"org.languagetool.server.LogMapper.accessLimit\";\n-  }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 58
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

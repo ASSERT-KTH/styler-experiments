@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "105",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "35",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\tpublic static final String CLAIM_AUTHORITIES = \"authorities\";\n\t\n\tprivate JwtSecurityUtils(){\n\t}\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/105/JwtSecurityUtils.java\nindex 2141db39c97..71756752067 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/105/JwtSecurityUtils.java\n@@ -10,7 +10,7 @@ public abstract class JwtSecurityUtils {\n \tpublic static final String EXT_KEY = \"key_\";\n \tpublic static final String CLAIM_AUTHORITIES = \"authorities\";\n \t\n-\tprivate JwtSecurityUtils(){\n-\t}\n+\tprivate JwtSecurityUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/105/JwtSecurityUtils.java\nindex 2141db39c97..8916722205d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/105/JwtSecurityUtils.java\n@@ -1,16 +1,17 @@\n package org.onetwo.ext.security.jwt;\n+\n /**\n  * @author wayshall\n  * <br/>\n  */\n public abstract class JwtSecurityUtils {\n-\tpublic static final String DEFAULT_HEADER_KEY = \"auth\";\n-\t\n-\tpublic static final String CLAIM_USER_ID = \"userId\";\n-\tpublic static final String EXT_KEY = \"key_\";\n-\tpublic static final String CLAIM_AUTHORITIES = \"authorities\";\n-\t\n-\tprivate JwtSecurityUtils(){\n-\t}\n+  public static final String DEFAULT_HEADER_KEY = \"auth\";\n+\n+  public static final String CLAIM_USER_ID = \"userId\";\n+  public static final String EXT_KEY = \"key_\";\n+  public static final String CLAIM_AUTHORITIES = \"authorities\";\n+\n+  private JwtSecurityUtils() {\n+  }\n \n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/105/JwtSecurityUtils.java\nindex 2141db39c97..71756752067 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/105/JwtSecurityUtils.java\n@@ -10,7 +10,7 @@ public abstract class JwtSecurityUtils {\n \tpublic static final String EXT_KEY = \"key_\";\n \tpublic static final String CLAIM_AUTHORITIES = \"authorities\";\n \t\n-\tprivate JwtSecurityUtils(){\n-\t}\n+\tprivate JwtSecurityUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/105/JwtSecurityUtils.java\nindex 2141db39c97..71756752067 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/105/JwtSecurityUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/105/JwtSecurityUtils.java\n@@ -10,7 +10,7 @@ public abstract class JwtSecurityUtils {\n \tpublic static final String EXT_KEY = \"key_\";\n \tpublic static final String CLAIM_AUTHORITIES = \"authorities\";\n \t\n-\tprivate JwtSecurityUtils(){\n-\t}\n+\tprivate JwtSecurityUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

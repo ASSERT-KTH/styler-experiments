@@ -1,0 +1,70 @@
+{
+    "project_name": "jflex-de-jflex",
+    "violation_id": "47",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage jflex.velocity;\n\nimport static com.google.common.truth.Truth.assertThat;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/jflex-de-jflex/styler/05_predictions/final/files-repaired/47/VelocityTest.java\nindex 2df49e1c20d..2a7518d2904 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/jflex-de-jflex/styler/05_predictions/final/files-repaired/47/VelocityTest.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/checkstyle_idea/47/VelocityTest.java\nindex 2df49e1c20d..2a7518d2904 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/checkstyle_idea/47/VelocityTest.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/naturalize/47/VelocityTest.java\nindex 2df49e1c20d..c272f07daff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/naturalize/47/VelocityTest.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n@@ -37,4 +38,4 @@ public class VelocityTest {\n   static class HelloWordVars extends TemplateVars {\n     public String name = \"World\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/codebuff/47/VelocityTest.java\nindex 2df49e1c20d..53c2eda7cb6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/codebuff/47/VelocityTest.java\n@@ -16,7 +16,6 @@\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n-\n import java.io.IOException;\n import java.io.StringReader;\n import java.io.StringWriter;\n@@ -24,6 +23,7 @@ import java.io.Writer;\n import org.apache.velocity.runtime.parser.ParseException;\n import org.junit.Test;\n \n+\n public class VelocityTest {\n   @Test\n   public void testRendering() throws IOException, ParseException {\n@@ -34,7 +34,8 @@ public class VelocityTest {\n     assertThat(writer.toString()).isEqualTo(\"Hello World!\");\n   }\n \n+\n   static class HelloWordVars extends TemplateVars {\n     public String name = \"World\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/random/files-repaired/47/VelocityTest.java\nindex 2df49e1c20d..2a7518d2904 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/random/files-repaired/47/VelocityTest.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/three_grams/files-repaired/47/VelocityTest.java\nindex 2df49e1c20d..2a7518d2904 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/47/VelocityTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/three_grams/files-repaired/47/VelocityTest.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package jflex.velocity;\n \n import static com.google.common.truth.Truth.assertThat;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

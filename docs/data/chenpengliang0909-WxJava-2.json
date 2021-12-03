@@ -1,0 +1,76 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "2",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 133).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @Override\n  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n    JsonObject o = json.getAsJsonObject();\n    WxMpChangeOpenid changeOpenid = new WxMpChangeOpenid();\n    changeOpenid.setOriOpenid(GsonHelper.getString(o, \"ori_openid\"));",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/2/WxMpChangeOpenidGsonAdapter.java\nindex 430726ca493..536ffd2e1c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/2/WxMpChangeOpenidGsonAdapter.java\n@@ -13,8 +13,9 @@ import java.lang.reflect.Type;\n public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeOpenid> {\n \n   @Override\n-  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n-    JsonObject o = json.getAsJsonObject();\n+  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT,\n+  JsonDeserializationContext context) throws JsonParseException {\n+     JsonObject o = json.getAsJsonObject();\n     WxMpChangeOpenid changeOpenid = new WxMpChangeOpenid();\n     changeOpenid.setOriOpenid(GsonHelper.getString(o, \"ori_openid\"));\n     changeOpenid.setNewOpenid(GsonHelper.getString(o, \"new_openid\"));\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/2/WxMpChangeOpenidGsonAdapter.java\nindex 430726ca493..77978926493 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/2/WxMpChangeOpenidGsonAdapter.java\n@@ -13,7 +13,8 @@ import java.lang.reflect.Type;\n public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeOpenid> {\n \n   @Override\n-  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n+  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)\n+      throws JsonParseException {\n     JsonObject o = json.getAsJsonObject();\n     WxMpChangeOpenid changeOpenid = new WxMpChangeOpenid();\n     changeOpenid.setOriOpenid(GsonHelper.getString(o, \"ori_openid\"));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 133).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/2/WxMpChangeOpenidGsonAdapter.java\nindex 430726ca493..0a6f246cb4c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/2/WxMpChangeOpenidGsonAdapter.java\n@@ -22,4 +22,4 @@ public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeO\n     return changeOpenid;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "15",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 133).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/2/WxMpChangeOpenidGsonAdapter.java\nindex 430726ca493..d701b880546 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/2/WxMpChangeOpenidGsonAdapter.java\n@@ -7,11 +7,10 @@ import com.google.gson.JsonObject;\n import com.google.gson.JsonParseException;\n import me.chanjar.weixin.common.util.json.GsonHelper;\n import me.chanjar.weixin.mp.bean.result.WxMpChangeOpenid;\n-\n import java.lang.reflect.Type;\n \n-public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeOpenid> {\n \n+public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeOpenid> {\n   @Override\n   public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n     JsonObject o = json.getAsJsonObject();\n@@ -22,4 +21,4 @@ public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeO\n     return changeOpenid;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/2/WxMpChangeOpenidGsonAdapter.java\nindex 430726ca493..536ffd2e1c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/2/WxMpChangeOpenidGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/2/WxMpChangeOpenidGsonAdapter.java\n@@ -13,8 +13,9 @@ import java.lang.reflect.Type;\n public class WxMpChangeOpenidGsonAdapter implements JsonDeserializer<WxMpChangeOpenid> {\n \n   @Override\n-  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n-    JsonObject o = json.getAsJsonObject();\n+  public WxMpChangeOpenid deserialize(JsonElement json, Type typeOfT,\n+  JsonDeserializationContext context) throws JsonParseException {\n+     JsonObject o = json.getAsJsonObject();\n     WxMpChangeOpenid changeOpenid = new WxMpChangeOpenid();\n     changeOpenid.setOriOpenid(GsonHelper.getString(o, \"ori_openid\"));\n     changeOpenid.setNewOpenid(GsonHelper.getString(o, \"new_openid\"));\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

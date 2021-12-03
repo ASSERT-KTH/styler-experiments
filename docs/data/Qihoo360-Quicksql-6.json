@@ -1,0 +1,92 @@
+{
+    "project_name": "Qihoo360-Quicksql",
+    "violation_id": "6",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "column": "27",
+                "severity": "error",
+                "message": "'}' at column 27 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "    private Integer integerIdx;\n\n    public ColumnValue() {}\n\n    /**\n     * constructor.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/6/ColumnValue.java\nindex 17ee0a40875..80622913857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/6/ColumnValue.java\n@@ -20,7 +20,8 @@ public class ColumnValue {\n     private String typeName;\n     private Integer integerIdx;\n \n-    public ColumnValue() {}\n+    public ColumnValue() {\n+    }\n \n     /**\n      * constructor.\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/6/ColumnValue.java\nindex 17ee0a40875..0648d4c06d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/6/ColumnValue.java\n@@ -20,13 +20,15 @@ public class ColumnValue {\n     private String typeName;\n     private Integer integerIdx;\n \n-    public ColumnValue() {}\n+    public ColumnValue() {\n+    }\n \n     /**\n      * constructor.\n-     * @param cdId cdId\n+     *\n+     * @param cdId       cdId\n      * @param columnName columnName\n-     * @param typeName typeName\n+     * @param typeName   typeName\n      */\n     public ColumnValue(Long cdId, String columnName, String typeName) {\n         this.cdId = cdId;\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "'ctor def rcurly' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/naturalize/6/ColumnValue.java\nindex 17ee0a40875..86c57e60b86 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/naturalize/6/ColumnValue.java\n@@ -20,7 +20,8 @@ public class ColumnValue {\n     private String typeName;\n     private Integer integerIdx;\n \n-    public ColumnValue() {}\n+    public ColumnValue() {\n+}\n \n     /**\n      * constructor.\n@@ -98,4 +99,4 @@ public class ColumnValue {\n \n         return Objects.hash(cdId, comment, columnName, typeName, integerIdx);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "85",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "100",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/6/ColumnValue.java\nindex 17ee0a40875..d8784ba1a6b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/6/ColumnValue.java\n@@ -12,6 +12,8 @@ import java.util.Objects;\n  * integerIdx, order of columns, begin from 0.\n  * </p>\n  */\n+\n+\n public class ColumnValue {\n \n     private Long cdId;\n@@ -20,7 +22,8 @@ public class ColumnValue {\n     private String typeName;\n     private Integer integerIdx;\n \n-    public ColumnValue() {}\n+    public ColumnValue() {\n+    }\n \n     /**\n      * constructor.\n@@ -28,12 +31,14 @@ public class ColumnValue {\n      * @param columnName columnName\n      * @param typeName typeName\n      */\n+\n     public ColumnValue(Long cdId, String columnName, String typeName) {\n         this.cdId = cdId;\n         this.columnName = columnName;\n         this.typeName = typeName;\n     }\n \n+\n     public Long getCdId() {\n         return cdId;\n     }\n@@ -76,7 +81,8 @@ public class ColumnValue {\n \n     @Override\n     public String toString() {\n-        return \"{\\\"name\\\": \\\"\" + columnName + \":\" + typeName + \"\\\"}\";\n+        return \"{\\\"name\\\": \\\"\" + columnName + \":\"\n+        + typeName + \"\\\"}\";\n     }\n \n     @Override\n@@ -84,18 +90,19 @@ public class ColumnValue {\n         if (this == obj) {\n             return true;\n         }\n+\n         if (obj == null || getClass() != obj.getClass()) {\n             return false;\n         }\n+\n         ColumnValue that = (ColumnValue) obj;\n         return Objects.equals(cdId, that.cdId)\n-            && Objects.equals(columnName, that.columnName)\n-            && Objects.equals(typeName, that.typeName);\n+        && Objects.equals(columnName, that.columnName)\n+               && Objects.equals(typeName, that.typeName);\n     }\n \n     @Override\n     public int hashCode() {\n-\n         return Objects.hash(cdId, comment, columnName, typeName, integerIdx);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "23",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'}' at column 27 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/6/ColumnValue.java\nindex 17ee0a40875..80622913857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/6/ColumnValue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/6/ColumnValue.java\n@@ -20,7 +20,8 @@ public class ColumnValue {\n     private String typeName;\n     private Integer integerIdx;\n \n-    public ColumnValue() {}\n+    public ColumnValue() {\n+    }\n \n     /**\n      * constructor.\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "511",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n   */\n  com.google.protobuf.ByteString getNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/511/GetCompanyRequestOrBuilder.java\nindex 906916f3950..b7aaa570f72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/511/GetCompanyRequestOrBuilder.java\n@@ -37,5 +37,7 @@ public interface GetCompanyRequestOrBuilder\n    *\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/511/GetCompanyRequestOrBuilder.java\nindex 906916f3950..61a32b5bb11 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/511/GetCompanyRequestOrBuilder.java\n@@ -9,8 +9,6 @@ public interface GetCompanyRequestOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * Required. The resource name of the company to be retrieved.\n    * The format is\n@@ -23,9 +21,8 @@ public interface GetCompanyRequestOrBuilder\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n   java.lang.String getName();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * Required. The resource name of the company to be retrieved.\n    * The format is\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/511/GetCompanyRequestOrBuilder.java\nindex 906916f3950..860d89e9d83 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/511/GetCompanyRequestOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.cloud.talent.v4beta1;\n \n-public interface GetCompanyRequestOrBuilder\n-    extends\n+public interface GetCompanyRequestOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.cloud.talent.v4beta1.GetCompanyRequest)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -23,7 +22,8 @@ public interface GetCompanyRequestOrBuilder\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n   java.lang.String getName();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -38,4 +38,4 @@ public interface GetCompanyRequestOrBuilder\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n   com.google.protobuf.ByteString getNameBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/511/GetCompanyRequestOrBuilder.java\nindex 906916f3950..ae12dc1b280 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/511/GetCompanyRequestOrBuilder.java\n@@ -37,5 +37,6 @@ public interface GetCompanyRequestOrBuilder\n    *\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n-  com.google.protobuf.ByteString getNameBytes();\n-}\n+  com.google.protobuf.ByteString getNameBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/511/GetCompanyRequestOrBuilder.java\nindex 906916f3950..b7aaa570f72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/511/GetCompanyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/511/GetCompanyRequestOrBuilder.java\n@@ -37,5 +37,7 @@ public interface GetCompanyRequestOrBuilder\n    *\n    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

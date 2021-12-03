@@ -1,0 +1,173 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "155",
+    "information": {
+        "violations": [
+            {
+                "line": "56",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 109).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n    try (Stream<T> shadowCopies =\n        shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {\n\n      shadowCopies.forEach(shadowCopy -> {\n        shadowCopy.setSuccessorId(MASTER_DELETED_SUCCESSOR_ID);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/155/ShadowCopyHelper.java\nindex 7d656c84c14..ecd676c005b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/155/ShadowCopyHelper.java\n@@ -10,26 +10,26 @@ import lombok.RequiredArgsConstructor;\n \n /**\n  * Create shadow copies of domain objects provided by {@link ShadowCopyDataSource}s.\n- * \n+ *\n  * @param <T> The domain object to be copied.\n  */\n @RequiredArgsConstructor\n public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n \n   private static final String MASTER_DELETED_SUCCESSOR_ID = \"DELETED\";\n-  \n+\n   private final ShadowCopyDataSource<T> shadowCopyDataSource;\n \n   /**\n    * Create shadow copies of the master domain objects of a project returned by\n    * {@link ShadowCopyDataSource}.\n-   * \n+   *\n    * @param dataAcquisitionProjectId id of the project being shadow copied\n-   * @param releaseVersion The version of the shadow copies being created\n-   * @param previousVersion The previous version of the project or {@code null} if this\n+   * @param releaseVersion           The version of the shadow copies being created\n+   * @param previousVersion          The previous version of the project or {@code null} if this\n    */\n   public void createShadowCopies(String dataAcquisitionProjectId, String releaseVersion,\n-      String previousVersion) {\n+                                 String previousVersion) {\n     boolean hasPreviousVersion = StringUtils.hasText(previousVersion);\n \n     // we might release with the same version, therefore delete all existing shadows\n@@ -53,7 +53,8 @@ public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n     }\n \n     try (Stream<T> shadowCopies =\n-        shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {\n+             shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId,\n+                 previousVersion)) {\n \n       shadowCopies.forEach(shadowCopy -> {\n         shadowCopy.setSuccessorId(MASTER_DELETED_SUCCESSOR_ID);\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 6, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "38",
+                    "severity": "error",
+                    "message": "'try' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/155/ShadowCopyHelper.java\nindex 7d656c84c14..e98b569507a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/155/ShadowCopyHelper.java\n@@ -30,12 +30,12 @@ public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n    */\n   public void createShadowCopies(String dataAcquisitionProjectId, String releaseVersion,\n       String previousVersion) {\n-    boolean hasPreviousVersion = StringUtils.hasText(previousVersion);\n+\n+      boolean hasPreviousVersion = StringUtils.hasText(previousVersion);\n \n     // we might release with the same version, therefore delete all existing shadows\n     shadowCopyDataSource.deleteExistingShadowCopies(dataAcquisitionProjectId, releaseVersion);\n-\n-    try (Stream<T> masters = shadowCopyDataSource.getMasters(dataAcquisitionProjectId)) {\n+try (Stream<T> masters = shadowCopyDataSource.getMasters(dataAcquisitionProjectId)) {\n \n       masters.map(master -> shadowCopyDataSource.createShadowCopy(master, releaseVersion))\n           .forEach(shadowCopy -> {\n@@ -61,4 +61,4 @@ public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n       });\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "column": "31",
+                    "severity": "error",
+                    "message": "GenericWhitespace '<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'String' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 106).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 135).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/155/ShadowCopyHelper.java\nindex 7d656c84c14..9ef61004808 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/155/ShadowCopyHelper.java\n@@ -2,9 +2,7 @@ package eu.dzhw.fdz.metadatamanagement.common.service;\n \n import java.util.Optional;\n import java.util.stream.Stream;\n-\n import org.springframework.util.StringUtils;\n-\n import eu.dzhw.fdz.metadatamanagement.common.domain.AbstractShadowableRdcDomainObject;\n import lombok.RequiredArgsConstructor;\n \n@@ -13,11 +11,12 @@ import lombok.RequiredArgsConstructor;\n  * \n  * @param <T> The domain object to be copied.\n  */\n-@RequiredArgsConstructor\n-public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n \n+\n+@RequiredArgsConstructor\n+public class ShadowCopyHelper <T extends AbstractShadowableRdcDomainObject> {\n   private static final String MASTER_DELETED_SUCCESSOR_ID = \"DELETED\";\n-  \n+\n   private final ShadowCopyDataSource<T> shadowCopyDataSource;\n \n   /**\n@@ -29,36 +28,29 @@ public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n    * @param previousVersion The previous version of the project or {@code null} if this\n    */\n   public void createShadowCopies(String dataAcquisitionProjectId, String releaseVersion,\n-      String previousVersion) {\n+    String previousVersion) {\n     boolean hasPreviousVersion = StringUtils.hasText(previousVersion);\n \n     // we might release with the same version, therefore delete all existing shadows\n     shadowCopyDataSource.deleteExistingShadowCopies(dataAcquisitionProjectId, releaseVersion);\n-\n     try (Stream<T> masters = shadowCopyDataSource.getMasters(dataAcquisitionProjectId)) {\n-\n-      masters.map(master -> shadowCopyDataSource.createShadowCopy(master, releaseVersion))\n-          .forEach(shadowCopy -> {\n-            if (hasPreviousVersion) {\n-              Optional<T> opt =\n-                  shadowCopyDataSource.findPredecessorOfShadowCopy(shadowCopy, previousVersion);\n-              if (opt.isPresent()) {\n-                T predecessor = opt.get();\n-                predecessor.setSuccessorId(shadowCopy.getId());\n-                shadowCopyDataSource.updatePredecessor(predecessor);\n-              }\n-            }\n-            shadowCopyDataSource.saveShadowCopy(shadowCopy);\n-          });\n+      masters.map(master -> shadowCopyDataSource.createShadowCopy(master, releaseVersion)).forEach(shadowCopy -> {\n+        if (hasPreviousVersion) {\n+          Optional<T> opt = shadowCopyDataSource.findPredecessorOfShadowCopy(shadowCopy, previousVersion);\n+          if (opt.isPresent()) {\n+            T predecessor = opt.get();\n+            predecessor.setSuccessorId(shadowCopy.getId());\n+            shadowCopyDataSource.updatePredecessor(predecessor);\n+          }\n+        }\n+        shadowCopyDataSource.saveShadowCopy(shadowCopy);\n+      });\n     }\n-\n-    try (Stream<T> shadowCopies =\n-        shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {\n-\n+    try (Stream<T> shadowCopies = shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {\n       shadowCopies.forEach(shadowCopy -> {\n         shadowCopy.setSuccessorId(MASTER_DELETED_SUCCESSOR_ID);\n         shadowCopyDataSource.updatePredecessor(shadowCopy);\n       });\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 29
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "'try' child has incorrect indentation level 8, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 145).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "109",
+                    "severity": "error",
+                    "message": "'{' at column 109 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "109",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "57",
+                    "severity": "error",
+                    "message": "'block' child has incorrect indentation level 8, expected level should be 10.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "error",
+                    "message": "'block' child has incorrect indentation level 8, expected level should be 10.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "59",
+                    "severity": "error",
+                    "message": "'block rcurly' has incorrect indentation level 6, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/155/ShadowCopyHelper.java\nindex 7d656c84c14..74c57a336be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/155/ShadowCopyHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/155/ShadowCopyHelper.java\n@@ -53,9 +53,7 @@ public class ShadowCopyHelper<T extends AbstractShadowableRdcDomainObject> {\n     }\n \n     try (Stream<T> shadowCopies =\n-        shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {\n-\n-      shadowCopies.forEach(shadowCopy -> {\n+        shadowCopyDataSource.findShadowCopiesWithDeletedMasters(dataAcquisitionProjectId, previousVersion)) {shadowCopies.forEach(shadowCopy -> {\n         shadowCopy.setSuccessorId(MASTER_DELETED_SUCCESSOR_ID);\n         shadowCopyDataSource.updatePredecessor(shadowCopy);\n       });\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

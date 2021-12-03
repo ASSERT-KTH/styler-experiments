@@ -1,0 +1,110 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "755",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/755/ResponseType.java\nindex 03b330ea10a..86ebb533d07 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/755/ResponseType.java\n@@ -22,57 +22,57 @@ import java.util.HashMap;\n import java.util.Map;\n \n public enum ResponseType {\n-  SUCCESS(1),\n-  SERVER_NOT_READY(2),\n-  CONNECT_REFUSED(3),\n-  NETWORK_ERROR(4),\n-  TIMEOUT(5),\n-  SERVER_HANDLE_FAILED(6),\n-  SERVER_HANDLE_FATAL(7),\n-  CLOCK_NOTREADY(8),\n-  PARTITION_READ_ONLY(9),\n-  SERVER_IS_BUSY(10),\n-  UNKNOWN_ERROR(11),\n-  OOM(12),\n-  UNSUPPORT_REQUEST(13),\n-  PARSE_HEADER_FAILED(14),\n-  SERIALIZE_RESPONSE_FAILED(15),\n-  DATA_NOT_FOUND(16);\n+    SUCCESS(1),\n+    SERVER_NOT_READY(2),\n+    CONNECT_REFUSED(3),\n+    NETWORK_ERROR(4),\n+    TIMEOUT(5),\n+    SERVER_HANDLE_FAILED(6),\n+    SERVER_HANDLE_FATAL(7),\n+    CLOCK_NOTREADY(8),\n+    PARTITION_READ_ONLY(9),\n+    SERVER_IS_BUSY(10),\n+    UNKNOWN_ERROR(11),\n+    OOM(12),\n+    UNSUPPORT_REQUEST(13),\n+    PARSE_HEADER_FAILED(14),\n+    SERIALIZE_RESPONSE_FAILED(15),\n+    DATA_NOT_FOUND(16);\n \n-  public static Map<Integer, ResponseType> typeIdToTypeMap;\n+    public static Map<Integer, ResponseType> typeIdToTypeMap;\n \n-  static {\n-    typeIdToTypeMap = new HashMap<>();\n-    typeIdToTypeMap.put(SUCCESS.typeId, SUCCESS);\n-    typeIdToTypeMap.put(SERVER_NOT_READY.typeId, SERVER_NOT_READY);\n-    typeIdToTypeMap.put(CONNECT_REFUSED.typeId, CONNECT_REFUSED);\n-    typeIdToTypeMap.put(NETWORK_ERROR.typeId, NETWORK_ERROR);\n-    typeIdToTypeMap.put(TIMEOUT.typeId, TIMEOUT);\n-    typeIdToTypeMap.put(SERVER_HANDLE_FAILED.typeId, SERVER_HANDLE_FAILED);\n-    typeIdToTypeMap.put(SERVER_HANDLE_FATAL.typeId, SERVER_HANDLE_FATAL);\n-    typeIdToTypeMap.put(CLOCK_NOTREADY.typeId, CLOCK_NOTREADY);\n-    typeIdToTypeMap.put(PARTITION_READ_ONLY.typeId, PARTITION_READ_ONLY);\n-    typeIdToTypeMap.put(SERVER_IS_BUSY.typeId, SERVER_IS_BUSY);\n-    typeIdToTypeMap.put(UNKNOWN_ERROR.typeId, UNKNOWN_ERROR);\n-    typeIdToTypeMap.put(OOM.typeId, OOM);\n-    typeIdToTypeMap.put(UNSUPPORT_REQUEST.typeId, UNSUPPORT_REQUEST);\n-    typeIdToTypeMap.put(PARSE_HEADER_FAILED.typeId, PARSE_HEADER_FAILED);\n-    typeIdToTypeMap.put(SERIALIZE_RESPONSE_FAILED.typeId, SERIALIZE_RESPONSE_FAILED);\n-    typeIdToTypeMap.put(DATA_NOT_FOUND.typeId, DATA_NOT_FOUND);\n-  }\n+    static {\n+        typeIdToTypeMap = new HashMap<>();\n+        typeIdToTypeMap.put(SUCCESS.typeId, SUCCESS);\n+        typeIdToTypeMap.put(SERVER_NOT_READY.typeId, SERVER_NOT_READY);\n+        typeIdToTypeMap.put(CONNECT_REFUSED.typeId, CONNECT_REFUSED);\n+        typeIdToTypeMap.put(NETWORK_ERROR.typeId, NETWORK_ERROR);\n+        typeIdToTypeMap.put(TIMEOUT.typeId, TIMEOUT);\n+        typeIdToTypeMap.put(SERVER_HANDLE_FAILED.typeId, SERVER_HANDLE_FAILED);\n+        typeIdToTypeMap.put(SERVER_HANDLE_FATAL.typeId, SERVER_HANDLE_FATAL);\n+        typeIdToTypeMap.put(CLOCK_NOTREADY.typeId, CLOCK_NOTREADY);\n+        typeIdToTypeMap.put(PARTITION_READ_ONLY.typeId, PARTITION_READ_ONLY);\n+        typeIdToTypeMap.put(SERVER_IS_BUSY.typeId, SERVER_IS_BUSY);\n+        typeIdToTypeMap.put(UNKNOWN_ERROR.typeId, UNKNOWN_ERROR);\n+        typeIdToTypeMap.put(OOM.typeId, OOM);\n+        typeIdToTypeMap.put(UNSUPPORT_REQUEST.typeId, UNSUPPORT_REQUEST);\n+        typeIdToTypeMap.put(PARSE_HEADER_FAILED.typeId, PARSE_HEADER_FAILED);\n+        typeIdToTypeMap.put(SERIALIZE_RESPONSE_FAILED.typeId, SERIALIZE_RESPONSE_FAILED);\n+        typeIdToTypeMap.put(DATA_NOT_FOUND.typeId, DATA_NOT_FOUND);\n+    }\n \n \n-  public static ResponseType valueOf(int id) {\n-    return typeIdToTypeMap.get(id);\n-  }\n+    public static ResponseType valueOf(int id) {\n+        return typeIdToTypeMap.get(id);\n+    }\n \n-  private final int typeId;\n+    private final int typeId;\n \n-  ResponseType(int methodId) {\n-    this.typeId = methodId;\n-  }\n+    ResponseType(int methodId) {\n+        this.typeId = methodId;\n+    }\n \n-  public int getTypeId() {\n-    return typeId;\n-  }\n+    public int getTypeId() {\n+        return typeId;\n+    }\n }\n",
+            "diff_size": 46
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/755/ResponseType.java\nindex 03b330ea10a..29c8bcf89da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/755/ResponseType.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.ps.server.data.response;\n \n import java.util.HashMap;\n@@ -75,4 +74,4 @@ public enum ResponseType {\n   public int getTypeId() {\n     return typeId;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 347).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/755/ResponseType.java\nindex 03b330ea10a..fc595e3c414 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/755/ResponseType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/755/ResponseType.java\n@@ -21,23 +21,7 @@ package com.tencent.angel.ps.server.data.response;\n import java.util.HashMap;\n import java.util.Map;\n \n-public enum ResponseType {\n-  SUCCESS(1),\n-  SERVER_NOT_READY(2),\n-  CONNECT_REFUSED(3),\n-  NETWORK_ERROR(4),\n-  TIMEOUT(5),\n-  SERVER_HANDLE_FAILED(6),\n-  SERVER_HANDLE_FATAL(7),\n-  CLOCK_NOTREADY(8),\n-  PARTITION_READ_ONLY(9),\n-  SERVER_IS_BUSY(10),\n-  UNKNOWN_ERROR(11),\n-  OOM(12),\n-  UNSUPPORT_REQUEST(13),\n-  PARSE_HEADER_FAILED(14),\n-  SERIALIZE_RESPONSE_FAILED(15),\n-  DATA_NOT_FOUND(16);\n+public enum ResponseType {SUCCESS(1), SERVER_NOT_READY(2), CONNECT_REFUSED(3), NETWORK_ERROR(4), TIMEOUT(5), SERVER_HANDLE_FAILED(6), SERVER_HANDLE_FATAL(7), CLOCK_NOTREADY(8), PARTITION_READ_ONLY(9), SERVER_IS_BUSY(10), UNKNOWN_ERROR(11), OOM(12), UNSUPPORT_REQUEST(13), PARSE_HEADER_FAILED(14), SERIALIZE_RESPONSE_FAILED(15), DATA_NOT_FOUND(16);\n \n   public static Map<Integer, ResponseType> typeIdToTypeMap;\n \n@@ -61,7 +45,6 @@ public enum ResponseType {\n     typeIdToTypeMap.put(DATA_NOT_FOUND.typeId, DATA_NOT_FOUND);\n   }\n \n-\n   public static ResponseType valueOf(int id) {\n     return typeIdToTypeMap.get(id);\n   }\n@@ -75,4 +58,5 @@ public enum ResponseType {\n   public int getTypeId() {\n     return typeId;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

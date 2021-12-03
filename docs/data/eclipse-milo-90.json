@@ -1,0 +1,124 @@
+{
+    "project_name": "eclipse-milo",
+    "violation_id": "90",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=797\");\n\n    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=799\");\n\n    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=798\");\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/90/SetPublishingModeRequest.java\nindex 65e418f83fa..269884e57a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/90/SetPublishingModeRequest.java\n@@ -31,7 +31,8 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n public class SetPublishingModeRequest extends Structure implements UaRequestMessage {\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=797\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=799\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID =\n+        ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=799\");\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=798\");\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "44",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/90/SetPublishingModeRequest.java\nindex 65e418f83fa..6f14eb04da1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/90/SetPublishingModeRequest.java\n@@ -41,9 +41,8 @@ public class SetPublishingModeRequest extends Structure implements UaRequestMess\n \n     private final UInteger[] subscriptionIds;\n \n-    public SetPublishingModeRequest(RequestHeader requestHeader, Boolean publishingEnabled,\n-                                    UInteger[] subscriptionIds) {\n-        this.requestHeader = requestHeader;\n+    public SetPublishingModeRequest(RequestHeader requestHeader, Boolean publishingEnabled, UInteger[] subscriptionIds) {\n+    this.requestHeader = requestHeader;\n         this.publishingEnabled = publishingEnabled;\n         this.subscriptionIds = subscriptionIds;\n     }\n@@ -97,4 +96,4 @@ public class SetPublishingModeRequest extends Structure implements UaRequestMess\n             encoder.writeUInt32Array(\"SubscriptionIds\", value.getSubscriptionIds());\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/90/SetPublishingModeRequest.java\nindex 65e418f83fa..f38dc645f3e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/90/SetPublishingModeRequest.java\n@@ -29,10 +29,13 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n )\n @ToString\n public class SetPublishingModeRequest extends Structure implements UaRequestMessage {\n+\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=797\");\n \n+\n     public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=799\");\n \n+\n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=798\");\n \n     private final RequestHeader requestHeader;\n@@ -41,8 +44,7 @@ public class SetPublishingModeRequest extends Structure implements UaRequestMess\n \n     private final UInteger[] subscriptionIds;\n \n-    public SetPublishingModeRequest(RequestHeader requestHeader, Boolean publishingEnabled,\n-                                    UInteger[] subscriptionIds) {\n+    public SetPublishingModeRequest(RequestHeader requestHeader, Boolean publishingEnabled, UInteger[] subscriptionIds) {\n         this.requestHeader = requestHeader;\n         this.publishingEnabled = publishingEnabled;\n         this.subscriptionIds = subscriptionIds;\n@@ -84,17 +86,19 @@ public class SetPublishingModeRequest extends Structure implements UaRequestMess\n         @Override\n         public SetPublishingModeRequest decode(SerializationContext context, UaDecoder decoder) {\n             RequestHeader requestHeader = (RequestHeader) decoder.readStruct(\"RequestHeader\", RequestHeader.TYPE_ID);\n+\n             Boolean publishingEnabled = decoder.readBoolean(\"PublishingEnabled\");\n+\n             UInteger[] subscriptionIds = decoder.readUInt32Array(\"SubscriptionIds\");\n             return new SetPublishingModeRequest(requestHeader, publishingEnabled, subscriptionIds);\n         }\n \n         @Override\n-        public void encode(SerializationContext context, UaEncoder encoder,\n-                           SetPublishingModeRequest value) {\n+        public void encode(SerializationContext context, UaEncoder encoder, SetPublishingModeRequest value) {\n             encoder.writeStruct(\"RequestHeader\", value.getRequestHeader(), RequestHeader.TYPE_ID);\n             encoder.writeBoolean(\"PublishingEnabled\", value.getPublishingEnabled());\n             encoder.writeUInt32Array(\"SubscriptionIds\", value.getSubscriptionIds());\n         }\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "76",
+                    "severity": "error",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "15",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/90/SetPublishingModeRequest.java\nindex 65e418f83fa..35354f94a62 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/90/SetPublishingModeRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/90/SetPublishingModeRequest.java\n@@ -31,7 +31,8 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n public class SetPublishingModeRequest extends Structure implements UaRequestMessage {\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=797\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=799\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId .\n+        parse (\"nsu=http://opcfoundation.org/UA/;i=799\");\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=798\");\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

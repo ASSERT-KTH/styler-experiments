@@ -1,0 +1,63 @@
+{
+    "project_name": "h2database-h2database",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "102",
+                "column": "31",
+                "severity": "warning",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "    private boolean canStop(int x) {\n        return (x & 127) == 0\n                && cost >= 0  // don't calculate for simple queries (no rows or so)\n                && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/h2database-h2database/styler/05_predictions/final/files-repaired/9/Optimizer.java\nindex 3c04e015308..5a20d3ffeb2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/h2database-h2database/styler/05_predictions/final/files-repaired/9/Optimizer.java\n@@ -99,8 +99,9 @@ class Optimizer {\n \n     private boolean canStop(int x) {\n         return (x & 127) == 0\n-                && cost >= 0  // don't calculate for simple queries (no rows or so)\n-                && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n+                && cost >= 0\n+                // don't calculate for simple queries (no rows or so)\n+                  && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n     }\n \n     private void calculateBruteForceAll() {\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/checkstyle_idea/9/Optimizer.java\nindex 3c04e015308..eb5814a7e21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/checkstyle_idea/9/Optimizer.java\n@@ -3,6 +3,7 @@\n  * and the EPL 1.0 (https://h2database.com/html/license.html).\n  * Initial Developer: H2 Group\n  */\n+\n package org.h2.command.query;\n \n import java.util.BitSet;\n@@ -99,8 +100,10 @@ class Optimizer {\n \n     private boolean canStop(int x) {\n         return (x & 127) == 0\n-                && cost >= 0  // don't calculate for simple queries (no rows or so)\n-                && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n+                && cost >= 0\n+                // don't calculate for simple queries (no rows or so)\n+                && 10 * (System.nanoTime() - startNs) >\n+                cost * TimeUnit.MILLISECONDS.toNanos(1);\n     }\n \n     private void calculateBruteForceAll() {\n@@ -114,7 +117,8 @@ class Optimizer {\n     private void calculateBruteForceSome() {\n         int bruteForce = getMaxBruteForceFilters(filters.length);\n         TableFilter[] list = new TableFilter[filters.length];\n-        Permutations<TableFilter> p = Permutations.create(filters, list, bruteForce);\n+        Permutations<TableFilter> p =\n+                Permutations.create(filters, list, bruteForce);\n         for (int x = 0; !canStop(x) && p.next(); x++) {\n             // find out what filters are not used yet\n             for (TableFilter f : filters) {\n@@ -134,8 +138,9 @@ class Optimizer {\n                             break;\n                         }\n                         list[i] = filters[j];\n-                        Plan part = new Plan(list, i+1, condition);\n-                        double costNow = part.calculateCost(session, allColumnsSet);\n+                        Plan part = new Plan(list, i + 1, condition);\n+                        double costNow =\n+                                part.calculateCost(session, allColumnsSet);\n                         if (costPart < 0 || costNow < costPart) {\n                             costPart = costNow;\n                             bestPart = j;\n@@ -231,7 +236,7 @@ class Optimizer {\n      * Calculate the best query plan to use.\n      *\n      * @param parse If we do not need to really get the best plan because it is\n-     *            a view parsing stage.\n+     *              a view parsing stage.\n      */\n     void optimize(boolean parse) {\n         if (parse) {\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/naturalize/9/Optimizer.java\nindex 3c04e015308..9e0c0626378 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/naturalize/9/Optimizer.java\n@@ -99,7 +99,8 @@ class Optimizer {\n \n     private boolean canStop(int x) {\n         return (x & 127) == 0\n-                && cost >= 0  // don't calculate for simple queries (no rows or so)\n+                && cost >= 0\n+// don't calculate for simple queries (no rows or so)\n                 && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n     }\n \n@@ -262,4 +263,4 @@ class Optimizer {\n         return cost;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/styler/05_predictions/random/files-repaired/9/Optimizer.java\nindex 3c04e015308..5a20d3ffeb2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/styler/05_predictions/random/files-repaired/9/Optimizer.java\n@@ -99,8 +99,9 @@ class Optimizer {\n \n     private boolean canStop(int x) {\n         return (x & 127) == 0\n-                && cost >= 0  // don't calculate for simple queries (no rows or so)\n-                && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n+                && cost >= 0\n+                // don't calculate for simple queries (no rows or so)\n+                  && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n     }\n \n     private void calculateBruteForceAll() {\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/styler/05_predictions/three_grams/files-repaired/9/Optimizer.java\nindex 3c04e015308..5a20d3ffeb2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/violations/9/Optimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/h2database-h2database/styler/05_predictions/three_grams/files-repaired/9/Optimizer.java\n@@ -99,8 +99,9 @@ class Optimizer {\n \n     private boolean canStop(int x) {\n         return (x & 127) == 0\n-                && cost >= 0  // don't calculate for simple queries (no rows or so)\n-                && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n+                && cost >= 0\n+                // don't calculate for simple queries (no rows or so)\n+                  && 10 * (System.nanoTime() - startNs) > cost * TimeUnit.MILLISECONDS.toNanos(1);\n     }\n \n     private void calculateBruteForceAll() {\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

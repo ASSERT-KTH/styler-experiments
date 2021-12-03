@@ -1,0 +1,63 @@
+{
+    "project_name": "DaGeRe-peass",
+    "violation_id": "5",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "29",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "package de.dagere.peass.config;\n\npublic enum ImplementedTests{\n   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/5/ImplementedTests.java\nindex e9341a5fd88..208db314c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/5/ImplementedTests.java\n@@ -1,5 +1,5 @@\n package de.dagere.peass.config;\n \n-public enum ImplementedTests{\n-   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n+public enum ImplementedTests {\n+\tT_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/5/ImplementedTests.java\nindex e9341a5fd88..a3262066d23 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/5/ImplementedTests.java\n@@ -1,5 +1,5 @@\n package de.dagere.peass.config;\n \n-public enum ImplementedTests{\n-   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n+public enum ImplementedTests {\n+  T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/5/ImplementedTests.java\nindex e9341a5fd88..edfc128e20c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/5/ImplementedTests.java\n@@ -1,5 +1,6 @@\n package de.dagere.peass.config;\n \n-public enum ImplementedTests{\n-   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n+\n+public enum ImplementedTests {\n+ T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/random/files-repaired/5/ImplementedTests.java\nindex e9341a5fd88..208db314c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/random/files-repaired/5/ImplementedTests.java\n@@ -1,5 +1,5 @@\n package de.dagere.peass.config;\n \n-public enum ImplementedTests{\n-   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n+public enum ImplementedTests {\n+\tT_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/5/ImplementedTests.java\nindex e9341a5fd88..208db314c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/5/ImplementedTests.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/5/ImplementedTests.java\n@@ -1,5 +1,5 @@\n package de.dagere.peass.config;\n \n-public enum ImplementedTests{\n-   T_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n+public enum ImplementedTests {\n+\tT_TEST, BIMODAL_T_TEST, AGNOSTIC_T_TEST, MANN_WHITNEY_TEST, CONFIDENCE_INTERVAL, ANY, ANY_NO_AGNOSTIC;\n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "530",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLHeadElement extends HTMLElement {\n\t/**\n\t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n\t * designating a metadata profile. See the profile attribute definition in HTML\n\t * 4.01.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/530/HTMLHeadElement.java\nindex abe0fd0a18b..479142d34b6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/530/HTMLHeadElement.java\n@@ -34,14 +34,14 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLHeadElement extends HTMLElement {\n-\t/**\n+/**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n \t * designating a metadata profile. See the profile attribute definition in HTML\n \t * 4.01.\n \t *\n \t * @return a {@link java.lang.String} object.\n \t */\n-\tString getProfile();\n+ String getProfile();\n \n \t/**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/530/HTMLHeadElement.java\nindex abe0fd0a18b..82682c09d9a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/530/HTMLHeadElement.java\n@@ -34,22 +34,22 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLHeadElement extends HTMLElement {\n-\t/**\n-\t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n-\t * designating a metadata profile. See the profile attribute definition in HTML\n-\t * 4.01.\n-\t *\n-\t * @return a {@link java.lang.String} object.\n-\t */\n-\tString getProfile();\n+    /**\n+     * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n+     * designating a metadata profile. See the profile attribute definition in HTML\n+     * 4.01.\n+     *\n+     * @return a {@link java.lang.String} object.\n+     */\n+    String getProfile();\n \n-\t/**\n-\t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n-\t * designating a metadata profile. See the profile attribute definition in HTML\n-\t * 4.01.\n-\t *\n-\t * @param profile a {@link java.lang.String} object.\n-\t */\n-\tvoid setProfile(String profile);\n+    /**\n+     * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n+     * designating a metadata profile. See the profile attribute definition in HTML\n+     * 4.01.\n+     *\n+     * @param profile a {@link java.lang.String} object.\n+     */\n+    void setProfile(String profile);\n \n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/530/HTMLHeadElement.java\nindex abe0fd0a18b..5c8abd70ced 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/530/HTMLHeadElement.java\n@@ -33,23 +33,28 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLHeadElement extends HTMLElement {\n-\t/**\n-\t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n-\t * designating a metadata profile. See the profile attribute definition in HTML\n-\t * 4.01.\n-\t *\n-\t * @return a {@link java.lang.String} object.\n-\t */\n-\tString getProfile();\n-\n-\t/**\n-\t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n-\t * designating a metadata profile. See the profile attribute definition in HTML\n-\t * 4.01.\n-\t *\n-\t * @param profile a {@link java.lang.String} object.\n-\t */\n-\tvoid setProfile(String profile);\n-\n-}\n+    /**\n+     * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n+     * designating a metadata profile. See the profile attribute definition in HTML\n+     * 4.01.\n+     *\n+     * @return a {@link java.lang.String} object.\n+     */\n+\n+\n+    String getProfile();\n+\n+    /**\n+     * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n+     * designating a metadata profile. See the profile attribute definition in HTML\n+     * 4.01.\n+     *\n+     * @param profile a {@link java.lang.String} object.\n+     */\n+\n+\n+    void setProfile(String profile);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/530/HTMLHeadElement.java\nindex abe0fd0a18b..479142d34b6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/530/HTMLHeadElement.java\n@@ -34,14 +34,14 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLHeadElement extends HTMLElement {\n-\t/**\n+/**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n \t * designating a metadata profile. See the profile attribute definition in HTML\n \t * 4.01.\n \t *\n \t * @return a {@link java.lang.String} object.\n \t */\n-\tString getProfile();\n+ String getProfile();\n \n \t/**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/530/HTMLHeadElement.java\nindex abe0fd0a18b..c69b0eb09f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/530/HTMLHeadElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/530/HTMLHeadElement.java\n@@ -34,14 +34,14 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLHeadElement extends HTMLElement {\n-\t/**\n+    /**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n \t * designating a metadata profile. See the profile attribute definition in HTML\n \t * 4.01.\n \t *\n \t * @return a {@link java.lang.String} object.\n \t */\n-\tString getProfile();\n+ String getProfile();\n \n \t/**\n \t * URI [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

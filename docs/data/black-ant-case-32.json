@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "32",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "86",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Override\n    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n        return new ReturnT<String>(addressList.get(0));\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/32/ExecutorRouteFirst.java\nindex de4d7afb0e0..a0fe0c7ce1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/32/ExecutorRouteFirst.java\n@@ -12,7 +12,7 @@ import java.util.List;\n public class ExecutorRouteFirst extends ExecutorRouter {\n \n     @Override\n-    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n+    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList) {\n         return new ReturnT<String>(addressList.get(0));\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/32/ExecutorRouteFirst.java\nindex de4d7afb0e0..a0fe0c7ce1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/32/ExecutorRouteFirst.java\n@@ -12,7 +12,7 @@ import java.util.List;\n public class ExecutorRouteFirst extends ExecutorRouter {\n \n     @Override\n-    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n+    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList) {\n         return new ReturnT<String>(addressList.get(0));\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/32/ExecutorRouteFirst.java\nindex de4d7afb0e0..cc559ead1ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/32/ExecutorRouteFirst.java\n@@ -12,8 +12,8 @@ import java.util.List;\n public class ExecutorRouteFirst extends ExecutorRouter {\n \n     @Override\n-    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n+    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList) {\n         return new ReturnT<String>(addressList.get(0));\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/32/ExecutorRouteFirst.java\nindex de4d7afb0e0..a0fe0c7ce1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/32/ExecutorRouteFirst.java\n@@ -12,7 +12,7 @@ import java.util.List;\n public class ExecutorRouteFirst extends ExecutorRouter {\n \n     @Override\n-    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n+    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList) {\n         return new ReturnT<String>(addressList.get(0));\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/32/ExecutorRouteFirst.java\nindex de4d7afb0e0..a0fe0c7ce1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/32/ExecutorRouteFirst.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/32/ExecutorRouteFirst.java\n@@ -12,7 +12,7 @@ import java.util.List;\n public class ExecutorRouteFirst extends ExecutorRouter {\n \n     @Override\n-    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList){\n+    public ReturnT<String> route(TriggerParam triggerParam, List<String> addressList) {\n         return new ReturnT<String>(addressList.get(0));\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "public class CompoundInterceptor extends EmptyInterceptor {\n\n    private static final long serialVersionUID = 1L;\n    private List<Interceptor> interceptors;\n    \n    @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/18/CompoundInterceptor.java\nindex ec92c34f16a..4a84813d645 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/18/CompoundInterceptor.java\n@@ -26,9 +26,7 @@ import org.hibernate.type.Type;\n  * Hibernate Interceptor supports invoking multiple Interceptors\n  */\n public class CompoundInterceptor extends EmptyInterceptor {\n-\n-    private static final long serialVersionUID = 1L;\n-    private List<Interceptor> interceptors;\n+private static final long serialVersionUID = 1L;privateListList<Interceptor> interceptors;\n     \n     @Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState,\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/18/CompoundInterceptor.java\nindex ec92c34f16a..01e1da3f108 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/18/CompoundInterceptor.java\n@@ -1,12 +1,12 @@\n /*\n  * Copyright 2006 Open Source Applications Foundation\n- * \n+ *\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- * \n+ *\n  *     http://www.apache.org/licenses/LICENSE-2.0\n- * \n+ *\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n@@ -29,12 +29,12 @@ public class CompoundInterceptor extends EmptyInterceptor {\n \n     private static final long serialVersionUID = 1L;\n     private List<Interceptor> interceptors;\n-    \n+\n     @Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState,\n-                String[] propertyNames, Type[] types) {\n+                                String[] propertyNames, Type[] types) {\n         boolean modified = false;\n-        for(Interceptor i: interceptors){\n+        for (Interceptor i : interceptors) {\n             modified = modified | i.onFlushDirty(object, id, currentState, previousState, propertyNames, types);\n         }\n         return modified;\n@@ -43,16 +43,16 @@ public class CompoundInterceptor extends EmptyInterceptor {\n     @Override\n     public boolean onSave(Object object, Serializable id, Object[] state, String[] propertyNames, Type[] types) {\n         boolean modified = false;\n-        for(Interceptor i: interceptors){\n+        for (Interceptor i : interceptors) {\n             modified = modified | i.onSave(object, id, state, propertyNames, types);\n         }\n         return modified;\n     }\n-    \n+\n     @Override\n     public void onDelete(Object entity, Serializable id, Object[] state,\n-            String[] propertyNames, Type[] types) {\n-        for(Interceptor i: interceptors) {\n+                         String[] propertyNames, Type[] types) {\n+        for (Interceptor i : interceptors) {\n             i.onDelete(entity, id, state, propertyNames, types);\n         }\n     }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/18/CompoundInterceptor.java\nindex ec92c34f16a..57114dd08da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/18/CompoundInterceptor.java\n@@ -31,9 +31,8 @@ public class CompoundInterceptor extends EmptyInterceptor {\n     private List<Interceptor> interceptors;\n     \n     @Override\n-    public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState,\n-                String[] propertyNames, Type[] types) {\n-        boolean modified = false;\n+    public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState, String[] propertyNames, Type[] types) {\n+                           boolean modified = false;\n         for(Interceptor i: interceptors){\n             modified = modified | i.onFlushDirty(object, id, currentState, previousState, propertyNames, types);\n         }\n@@ -61,4 +60,4 @@ public class CompoundInterceptor extends EmptyInterceptor {\n         this.interceptors = interceptors;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/18/CompoundInterceptor.java\nindex ec92c34f16a..f22831b74dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/18/CompoundInterceptor.java\n@@ -17,7 +17,6 @@ package org.unitedinternet.cosmo.hibernate;\n \n import java.io.Serializable;\n import java.util.List;\n-\n import org.hibernate.EmptyInterceptor;\n import org.hibernate.Interceptor;\n import org.hibernate.type.Type;\n@@ -25,34 +24,51 @@ import org.hibernate.type.Type;\n /**\n  * Hibernate Interceptor supports invoking multiple Interceptors\n  */\n+\n+\n public class CompoundInterceptor extends EmptyInterceptor {\n \n     private static final long serialVersionUID = 1L;\n     private List<Interceptor> interceptors;\n-    \n+\n     @Override\n-    public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState,\n-                String[] propertyNames, Type[] types) {\n+    public boolean onFlushDirty(Object object,\n+        Serializable id,\n+            Object[] currentState,\n+                Object[] previousState,\n+                    String[] propertyNames, Type[] types) {\n         boolean modified = false;\n-        for(Interceptor i: interceptors){\n-            modified = modified | i.onFlushDirty(object, id, currentState, previousState, propertyNames, types);\n+        for (Interceptor i : interceptors) {\n+            modified = modified | i.onFlushDirty(object,\n+                                                 id,\n+                                                 currentState,\n+                                                 previousState,\n+                                                 propertyNames,\n+                                                 types);\n         }\n+\n         return modified;\n     }\n \n     @Override\n-    public boolean onSave(Object object, Serializable id, Object[] state, String[] propertyNames, Type[] types) {\n+    public boolean onSave(Object object,\n+        Serializable id,\n+            Object[] state,\n+                String[] propertyNames, Type[] types) {\n         boolean modified = false;\n-        for(Interceptor i: interceptors){\n+        for (Interceptor i : interceptors) {\n             modified = modified | i.onSave(object, id, state, propertyNames, types);\n         }\n+\n         return modified;\n     }\n-    \n+\n     @Override\n-    public void onDelete(Object entity, Serializable id, Object[] state,\n-            String[] propertyNames, Type[] types) {\n-        for(Interceptor i: interceptors) {\n+    public void onDelete(Object entity,\n+        Serializable id,\n+            Object[] state,\n+                String[] propertyNames, Type[] types) {\n+        for (Interceptor i : interceptors) {\n             i.onDelete(entity, id, state, propertyNames, types);\n         }\n     }\n@@ -60,5 +76,4 @@ public class CompoundInterceptor extends EmptyInterceptor {\n     public void setInterceptors(List<Interceptor> interceptors) {\n         this.interceptors = interceptors;\n     }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 31
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/18/CompoundInterceptor.java\nindex ec92c34f16a..4a84813d645 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/18/CompoundInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/18/CompoundInterceptor.java\n@@ -26,9 +26,7 @@ import org.hibernate.type.Type;\n  * Hibernate Interceptor supports invoking multiple Interceptors\n  */\n public class CompoundInterceptor extends EmptyInterceptor {\n-\n-    private static final long serialVersionUID = 1L;\n-    private List<Interceptor> interceptors;\n+private static final long serialVersionUID = 1L;privateListList<Interceptor> interceptors;\n     \n     @Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState, Object[] previousState,\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

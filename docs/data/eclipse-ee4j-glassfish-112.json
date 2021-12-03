@@ -1,0 +1,79 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "112",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "column": "5",
+                "severity": "warning",
+                "message": "'addReference' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\n    protected void\n    addReference(final ResourceConfig rc) {\n        final StandaloneServerConfig server =\n                StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n        assert server != null;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/112/ResourceConfigTestBase.java\nindex 38f36a05b18..d5a33538bb4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/112/ResourceConfigTestBase.java\n@@ -32,7 +32,7 @@ public abstract class ResourceConfigTestBase\n     }\n \n     protected void\n-    addReference(final ResourceConfig rc) {\n+        addReference(final ResourceConfig rc) {\n         final StandaloneServerConfig server =\n                 StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n         assert server != null;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'addReference' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/112/ResourceConfigTestBase.java\nindex 38f36a05b18..f4c53e97415 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/112/ResourceConfigTestBase.java\n@@ -22,9 +22,10 @@ import com.sun.appserv.management.config.StandaloneServerConfig;\n import com.sun.appserv.management.util.misc.ExceptionUtil;\n \n /**\n+ *\n  */\n public abstract class ResourceConfigTestBase\n-        extends ConfigMgrTestBase {\n+    extends ConfigMgrTestBase {\n     protected ResourceConfigTestBase() {\n         super();\n \n@@ -34,7 +35,7 @@ public abstract class ResourceConfigTestBase\n     protected void\n     addReference(final ResourceConfig rc) {\n         final StandaloneServerConfig server =\n-                StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n+            StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n         assert server != null;\n \n         if (server.getResourceRefConfigMap().get(rc.getName()) != null) {\n@@ -42,8 +43,7 @@ public abstract class ResourceConfigTestBase\n         } else {\n             try {\n                 server.createResourceRefConfig(rc.getName(), false);\n-            }\n-            catch (Exception e) {\n+            } catch (Exception e) {\n                 final Throwable rootCause = ExceptionUtil.getRootCause(e);\n \n                 warning(\"Couldn't add RefConfig to: \" + Util.getObjectName(rc));\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/112/ResourceConfigTestBase.java\nindex 38f36a05b18..beb34a08921 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/112/ResourceConfigTestBase.java\n@@ -31,8 +31,7 @@ public abstract class ResourceConfigTestBase\n         StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n     }\n \n-    protected void\n-    addReference(final ResourceConfig rc) {\n+    protected void addReference(final ResourceConfig rc) {\n         final StandaloneServerConfig server =\n                 StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n         assert server != null;\n@@ -54,6 +53,4 @@ public abstract class ResourceConfigTestBase\n     }\n \n \n-}\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'addReference' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/112/ResourceConfigTestBase.java\nindex 38f36a05b18..d5a33538bb4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/112/ResourceConfigTestBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/112/ResourceConfigTestBase.java\n@@ -32,7 +32,7 @@ public abstract class ResourceConfigTestBase\n     }\n \n     protected void\n-    addReference(final ResourceConfig rc) {\n+        addReference(final ResourceConfig rc) {\n         final StandaloneServerConfig server =\n                 StandaloneServerConfigTest.ensureDefaultInstance(getDomainRoot());\n         assert server != null;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random"
+    ]
+}

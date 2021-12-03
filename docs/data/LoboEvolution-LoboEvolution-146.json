@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "146",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n\t\tSVGFilterPrimitiveStandardAttributes {\n\n\t/**\n\t * <p>getPreserveAspectRatio.</p>",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/146/SVGFEImageElement.java\nindex 52ee4c58da4..4d702aac808 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/146/SVGFEImageElement.java\n@@ -29,7 +29,7 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGFilterPrimitiveStandardAttributes {\n+        SVGFilterPrimitiveStandardAttributes {\n \n \t/**\n \t * <p>getPreserveAspectRatio.</p>\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/146/SVGFEImageElement.java\nindex 52ee4c58da4..f63a1d60f69 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/146/SVGFEImageElement.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -29,13 +30,13 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGFilterPrimitiveStandardAttributes {\n+    SVGFilterPrimitiveStandardAttributes {\n \n-\t/**\n-\t * <p>getPreserveAspectRatio.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedPreserveAspectRatio} object.\n-\t */\n-\tSVGAnimatedPreserveAspectRatio getPreserveAspectRatio();\n+    /**\n+     * <p>getPreserveAspectRatio.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedPreserveAspectRatio} object.\n+     */\n+    SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();\n \n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/146/SVGFEImageElement.java\nindex 52ee4c58da4..5a8db773c7d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/146/SVGFEImageElement.java\n@@ -28,14 +28,16 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n-public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGFilterPrimitiveStandardAttributes {\n \n-\t/**\n-\t * <p>getPreserveAspectRatio.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedPreserveAspectRatio} object.\n-\t */\n-\tSVGAnimatedPreserveAspectRatio getPreserveAspectRatio();\n \n-}\n+public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired, SVGFilterPrimitiveStandardAttributes {\n+\n+    /**\n+     * <p>getPreserveAspectRatio.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedPreserveAspectRatio} object.\n+     */\n+\n+\n+    SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 19
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/146/SVGFEImageElement.java\nindex 52ee4c58da4..4d702aac808 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/146/SVGFEImageElement.java\n@@ -29,7 +29,7 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGFilterPrimitiveStandardAttributes {\n+        SVGFilterPrimitiveStandardAttributes {\n \n \t/**\n \t * <p>getPreserveAspectRatio.</p>\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/146/SVGFEImageElement.java\nindex 52ee4c58da4..c0b1fa828f0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/146/SVGFEImageElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/146/SVGFEImageElement.java\n@@ -29,7 +29,7 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGFEImageElement extends SVGElement, SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGFilterPrimitiveStandardAttributes {\n+    SVGFilterPrimitiveStandardAttributes {\n \n \t/**\n \t * <p>getPreserveAspectRatio.</p>\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

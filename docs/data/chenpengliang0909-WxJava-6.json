@@ -1,0 +1,86 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "6",
+    "information": {
+        "violations": [
+            {
+                "line": "83",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 141).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @Override\n  public void update(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete) throws WxErrorException {\n    chatUpdate(chatId, name, owner, usersToAdd, usersToDelete);\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/6/WxCpChatServiceImpl.java\nindex 05d298c9add..f49e83e3e5b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/6/WxCpChatServiceImpl.java\n@@ -58,7 +58,7 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n \n   @Override\n   public void chatUpdate(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete)\n-    throws WxErrorException {\n+      throws WxErrorException {\n     Map<String, Object> data = new HashMap<>(5);\n     if (StringUtils.isNotBlank(chatId)) {\n       data.put(\"chatid\", chatId);\n@@ -80,7 +80,8 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n   }\n \n   @Override\n-  public void update(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete) throws WxErrorException {\n+  public void update(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete)\n+      throws WxErrorException {\n     chatUpdate(chatId, name, owner, usersToAdd, usersToDelete);\n   }\n \n@@ -88,7 +89,7 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n   public WxCpChat chatGet(String chatId) throws WxErrorException {\n     String result = this.cpService.get(APPCHAT_GET_CHATID + chatId, null);\n     return WxCpGsonBuilder.create()\n-      .fromJson(JSON_PARSER.parse(result).getAsJsonObject().getAsJsonObject(\"chat_info\").toString(), WxCpChat.class);\n+        .fromJson(JSON_PARSER.parse(result).getAsJsonObject().getAsJsonObject(\"chat_info\").toString(), WxCpChat.class);\n   }\n \n   @Override\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "83",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/6/WxCpChatServiceImpl.java\nindex 05d298c9add..6aeec3f5f93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/6/WxCpChatServiceImpl.java\n@@ -101,4 +101,4 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n     this.cpService.post(\"https://qyapi.weixin.qq.com/cgi-bin/appchat/send\", message.toJson());\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "66",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 145).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "91",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "98",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 129).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/6/WxCpChatServiceImpl.java\nindex 05d298c9add..ec4627113a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/6/WxCpChatServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/6/WxCpChatServiceImpl.java\n@@ -9,7 +9,6 @@ import me.chanjar.weixin.cp.bean.WxCpAppChatMessage;\n import me.chanjar.weixin.cp.bean.WxCpChat;\n import me.chanjar.weixin.cp.util.json.WxCpGsonBuilder;\n import org.apache.commons.lang3.StringUtils;\n-\n import java.util.HashMap;\n import java.util.List;\n import java.util.Map;\n@@ -19,6 +18,8 @@ import java.util.Map;\n  *\n  * @author gaigeshen\n  */\n+\n+\n public class WxCpChatServiceImpl implements WxCpChatService {\n   private static final JsonParser JSON_PARSER = new JsonParser();\n   private final WxCpService cpService;\n@@ -28,6 +29,7 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n    *\n    * @param cpService \u4f01\u4e1a\u5fae\u4fe1\u7684\u670d\u52a1\n    */\n+\n   WxCpChatServiceImpl(WxCpService cpService) {\n     this.cpService = cpService;\n   }\n@@ -38,15 +40,19 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n     if (StringUtils.isNotBlank(name)) {\n       data.put(\"name\", name);\n     }\n+\n     if (StringUtils.isNotBlank(owner)) {\n       data.put(\"owner\", owner);\n     }\n+\n     if (users != null) {\n       data.put(\"userlist\", users);\n     }\n+\n     if (StringUtils.isNotBlank(chatId)) {\n       data.put(\"chatid\", chatId);\n     }\n+\n     String result = this.cpService.post(APPCHAT_CREATE, WxGsonBuilder.create().toJson(data));\n     return new JsonParser().parse(result).getAsJsonObject().get(\"chatid\").getAsString();\n   }\n@@ -57,25 +63,27 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n   }\n \n   @Override\n-  public void chatUpdate(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete)\n-    throws WxErrorException {\n+  public void chatUpdate(String chatId, String name, String owner, List<String> usersToAdd, List<String> usersToDelete) throws WxErrorException {\n     Map<String, Object> data = new HashMap<>(5);\n     if (StringUtils.isNotBlank(chatId)) {\n       data.put(\"chatid\", chatId);\n     }\n+\n     if (StringUtils.isNotBlank(name)) {\n       data.put(\"name\", name);\n     }\n+\n     if (StringUtils.isNotBlank(owner)) {\n       data.put(\"owner\", owner);\n     }\n+\n     if (usersToAdd != null && !usersToAdd.isEmpty()) {\n       data.put(\"add_user_list\", usersToAdd);\n     }\n+\n     if (usersToDelete != null && !usersToDelete.isEmpty()) {\n       data.put(\"del_user_list\", usersToDelete);\n     }\n-\n     this.cpService.post(APPCHAT_UPDATE, WxGsonBuilder.create().toJson(data));\n   }\n \n@@ -87,8 +95,8 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n   @Override\n   public WxCpChat chatGet(String chatId) throws WxErrorException {\n     String result = this.cpService.get(APPCHAT_GET_CHATID + chatId, null);\n-    return WxCpGsonBuilder.create()\n-      .fromJson(JSON_PARSER.parse(result).getAsJsonObject().getAsJsonObject(\"chat_info\").toString(), WxCpChat.class);\n+    return WxCpGsonBuilder.create().fromJson(JSON_PARSER.parse(result).getAsJsonObject().getAsJsonObject(\"chat_info\").toString(),\n+                                             WxCpChat.class);\n   }\n \n   @Override\n@@ -101,4 +109,4 @@ public class WxCpChatServiceImpl implements WxCpChatService {\n     this.cpService.post(\"https://qyapi.weixin.qq.com/cgi-bin/appchat/send\", message.toJson());\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

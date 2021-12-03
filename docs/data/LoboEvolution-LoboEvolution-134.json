@@ -1,0 +1,63 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "134",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGSymbolElement\n\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/134/SVGSymbolElement.java\nindex 2bda95aaf82..96d7af3c570 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/134/SVGSymbolElement.java\n@@ -29,5 +29,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGSymbolElement\n-\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n+        extends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/134/SVGSymbolElement.java\nindex 2bda95aaf82..e700792b9d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/134/SVGSymbolElement.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -29,5 +30,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGSymbolElement\n-\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n+    extends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/134/SVGSymbolElement.java\nindex 2bda95aaf82..3c10213c68f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/134/SVGSymbolElement.java\n@@ -28,6 +28,7 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n-public interface SVGSymbolElement\n-\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n-}\n+\n+\n+public interface SVGSymbolElement extends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/134/SVGSymbolElement.java\nindex 2bda95aaf82..96d7af3c570 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/134/SVGSymbolElement.java\n@@ -29,5 +29,5 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGSymbolElement\n-\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n+        extends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/134/SVGSymbolElement.java\nindex 2bda95aaf82..54f577b3436 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/134/SVGSymbolElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/134/SVGSymbolElement.java\n@@ -28,6 +28,5 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n-public interface SVGSymbolElement\n-\t\textends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n+public interface SVGSymbolElement extends SVGElement, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGFitToViewBox {\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

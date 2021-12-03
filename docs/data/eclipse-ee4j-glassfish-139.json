@@ -1,0 +1,71 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "139",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "column": "5",
+                "severity": "warning",
+                "message": "'getModuleLogLevelsConfig' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\n    protected ModuleLogLevelsConfig\n    getModuleLogLevelsConfig() {\n        return getConfigConfig().getLogServiceConfig().getModuleLogLevelsConfig();\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/139/ModuleLogLevelsConfigTest.java\nindex 937174cec78..3dee7e9e8e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/139/ModuleLogLevelsConfigTest.java\n@@ -36,7 +36,7 @@ public final class ModuleLogLevelsConfigTest\n     }\n \n     protected ModuleLogLevelsConfig\n-    getModuleLogLevelsConfig() {\n+                 getModuleLogLevelsConfig() {\n         return getConfigConfig().getLogServiceConfig().getModuleLogLevelsConfig();\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "41",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'getModuleLogLevelsConfig' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/139/ModuleLogLevelsConfigTest.java\nindex 937174cec78..d21c4072fd3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/139/ModuleLogLevelsConfigTest.java\n@@ -15,10 +15,11 @@\n  */\n \n /*\n-* $Header: /cvs/glassfish/admin/mbeanapi-impl/tests/org.glassfish.admin.amxtest/config/ModuleLogLevelsConfigTest.java,v 1.6 2007/05/05 05:23:55 tcfujii Exp $\n-* $Revision: 1.6 $\n-* $Date: 2007/05/05 05:23:55 $\n-*/\n+ * $Header: /cvs/glassfish/admin/mbeanapi-impl/tests/org.glassfish.admin.amxtest/config/ModuleLogLevelsConfigTest.java,v 1.6 2007/05/05 05:23:55 tcfujii Exp $\n+ * $Revision: 1.6 $\n+ * $Date: 2007/05/05 05:23:55 $\n+ */\n+\n package org.glassfish.admin.amxtest.config;\n \n import com.sun.appserv.management.config.LogLevelValues;\n@@ -29,9 +30,10 @@ import java.util.Map;\n \n \n /**\n+ *\n  */\n public final class ModuleLogLevelsConfigTest\n-        extends AMXTestBase {\n+    extends AMXTestBase {\n     public ModuleLogLevelsConfigTest() {\n     }\n \n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/139/ModuleLogLevelsConfigTest.java\nindex 937174cec78..ee974b31803 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/139/ModuleLogLevelsConfigTest.java\n@@ -32,11 +32,11 @@ import java.util.Map;\n  */\n public final class ModuleLogLevelsConfigTest\n         extends AMXTestBase {\n+\n     public ModuleLogLevelsConfigTest() {\n     }\n \n-    protected ModuleLogLevelsConfig\n-    getModuleLogLevelsConfig() {\n+    protected ModuleLogLevelsConfig getModuleLogLevelsConfig() {\n         return getConfigConfig().getLogServiceConfig().getModuleLogLevelsConfig();\n     }\n \n@@ -68,6 +68,4 @@ public final class ModuleLogLevelsConfigTest\n         }\n     }\n */\n-}\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/139/ModuleLogLevelsConfigTest.java\nindex 937174cec78..3dee7e9e8e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/139/ModuleLogLevelsConfigTest.java\n@@ -36,7 +36,7 @@ public final class ModuleLogLevelsConfigTest\n     }\n \n     protected ModuleLogLevelsConfig\n-    getModuleLogLevelsConfig() {\n+                 getModuleLogLevelsConfig() {\n         return getConfigConfig().getLogServiceConfig().getModuleLogLevelsConfig();\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/139/ModuleLogLevelsConfigTest.java\nindex 937174cec78..896e3293c32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/139/ModuleLogLevelsConfigTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/139/ModuleLogLevelsConfigTest.java\n@@ -36,7 +36,7 @@ public final class ModuleLogLevelsConfigTest\n     }\n \n     protected ModuleLogLevelsConfig\n-    getModuleLogLevelsConfig() {\n+                    getModuleLogLevelsConfig() {\n         return getConfigConfig().getLogServiceConfig().getModuleLogLevelsConfig();\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

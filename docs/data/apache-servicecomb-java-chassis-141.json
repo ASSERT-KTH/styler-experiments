@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "141",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 122).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  /**\n   * Server list filter should be stateless. Since invocation has state information, you can't use it for next invocation.\n   * Please implement stateful filters very carefully.\n   */\n  default void setInvocation(Invocation invocation) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "38",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/141/ServerListFilterExt.java\nindex 8ff78539fa8..64ec79a095e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/141/ServerListFilterExt.java\n@@ -24,7 +24,6 @@ import com.netflix.loadbalancer.ServerListFilter;\n \n /**\n  * \u901a\u8fc7\u5b9e\u73b0\u8fd9\u4e2a\u63a5\u53e3\u5b9e\u73b0ServerListFilter\u6269\u5c55\n- *\n  */\n public interface ServerListFilterExt extends ServerListFilter<Server> {\n   default void setName(String name) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/141/ServerListFilterExt.java\nindex 8ff78539fa8..eb549b4e181 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/141/ServerListFilterExt.java\n@@ -42,4 +42,4 @@ public interface ServerListFilterExt extends ServerListFilter<Server> {\n   default void setInvocation(Invocation invocation) {\n \n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/141/ServerListFilterExt.java\nindex 8ff78539fa8..720b8a0ff70 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/141/ServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/141/ServerListFilterExt.java\n@@ -18,7 +18,6 @@\n package org.apache.servicecomb.loadbalance;\n \n import org.apache.servicecomb.core.Invocation;\n-\n import com.netflix.loadbalancer.Server;\n import com.netflix.loadbalancer.ServerListFilter;\n \n@@ -26,6 +25,7 @@ import com.netflix.loadbalancer.ServerListFilter;\n  * \u901a\u8fc7\u5b9e\u73b0\u8fd9\u4e2a\u63a5\u53e3\u5b9e\u73b0ServerListFilter\u6269\u5c55\n  *\n  */\n+\n public interface ServerListFilterExt extends ServerListFilter<Server> {\n   default void setName(String name) {\n \n@@ -39,7 +39,8 @@ public interface ServerListFilterExt extends ServerListFilter<Server> {\n    * Server list filter should be stateless. Since invocation has state information, you can't use it for next invocation.\n    * Please implement stateful filters very carefully.\n    */\n+\n   default void setInvocation(Invocation invocation) {\n \n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "970",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/970/LossHelper.java\nindex 1fe87528e54..7d2c258893b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/970/LossHelper.java\n@@ -13,23 +13,24 @@\n  * either express or implied. See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.tencent.angel.ml.algorithm.objective;\n \n /**\n  * Description: interface of loss\n  */\n public interface LossHelper {\n-  float predTransform(float x);\n+    float predTransform(float x);\n \n-  boolean checkLabel(float x);\n+    boolean checkLabel(float x);\n \n-  float firOrderGrad(float pred, float label);\n+    float firOrderGrad(float pred, float label);\n \n-  float secOrderGrad(float pred, float label);\n+    float secOrderGrad(float pred, float label);\n \n-  float prob2Margin(float baseScore);\n+    float prob2Margin(float baseScore);\n \n-  String labelErrorMsg();\n+    String labelErrorMsg();\n \n-  String defaultEvalMetric();\n+    String defaultEvalMetric();\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/970/LossHelper.java\nindex 1fe87528e54..0e3a98584f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/970/LossHelper.java\n@@ -32,4 +32,4 @@ public interface LossHelper {\n   String labelErrorMsg();\n \n   String defaultEvalMetric();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/970/LossHelper.java\nindex 1fe87528e54..42e6531a1a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/970/LossHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/970/LossHelper.java\n@@ -18,6 +18,9 @@ package com.tencent.angel.ml.algorithm.objective;\n /**\n  * Description: interface of loss\n  */\n+\n+\n+\n public interface LossHelper {\n   float predTransform(float x);\n \n@@ -29,7 +32,9 @@ public interface LossHelper {\n \n   float prob2Margin(float baseScore);\n \n+\n   String labelErrorMsg();\n \n+\n   String defaultEvalMetric();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

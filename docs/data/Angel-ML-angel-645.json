@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "645",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/645/PartSampleNeighborResult.java\nindex d07f4452b32..086f46c05b2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/645/PartSampleNeighborResult.java\n@@ -29,66 +29,66 @@ import java.util.Map.Entry;\n  */\n public class PartSampleNeighborResult extends PartitionGetResult {\n \n-  /**\n-   * Node id to neighbors map\n-   */\n-  private Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors;\n+    /**\n+     * Node id to neighbors map\n+     */\n+    private Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors;\n \n-  public PartSampleNeighborResult(Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n-    this.nodeIdToNeighbors = nodeIdToNeighbors;\n-  }\n+    public PartSampleNeighborResult(Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n+        this.nodeIdToNeighbors = nodeIdToNeighbors;\n+    }\n \n-  public PartSampleNeighborResult() {\n-    this(null);\n-  }\n+    public PartSampleNeighborResult() {\n+        this(null);\n+    }\n \n-  public Int2ObjectOpenHashMap<int[]> getNodeIdToNeighbors() {\n-    return nodeIdToNeighbors;\n-  }\n+    public Int2ObjectOpenHashMap<int[]> getNodeIdToNeighbors() {\n+        return nodeIdToNeighbors;\n+    }\n \n-  public void setNodeIdToNeighbors(\n-      Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n-    this.nodeIdToNeighbors = nodeIdToNeighbors;\n-  }\n+    public void setNodeIdToNeighbors(\n+            Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n+        this.nodeIdToNeighbors = nodeIdToNeighbors;\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n-    output.writeInt(nodeIdToNeighbors.size());\n-    ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors\n-        .int2ObjectEntrySet().fastIterator();\n-    Int2ObjectMap.Entry<int[]> entry;\n-    while (iter.hasNext()) {\n-      entry = iter.next();\n-      output.writeInt(entry.getIntKey());\n-      int[] values = entry.getValue();\n-      output.writeInt(values.length);\n-      for (int value : values) {\n-        output.writeInt(value);\n-      }\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        output.writeInt(nodeIdToNeighbors.size());\n+        ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors\n+                .int2ObjectEntrySet().fastIterator();\n+        Int2ObjectMap.Entry<int[]> entry;\n+        while (iter.hasNext()) {\n+            entry = iter.next();\n+            output.writeInt(entry.getIntKey());\n+            int[] values = entry.getValue();\n+            output.writeInt(values.length);\n+            for (int value : values) {\n+                output.writeInt(value);\n+            }\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    int size = input.readInt();\n-    nodeIdToNeighbors = new Int2ObjectOpenHashMap<>(size);\n-    for (int i = 0; i < size; i++) {\n-      int nodeIndex = input.readInt();\n-      int[] neighbors = new int[input.readInt()];\n-      for (int j = 0; j < neighbors.length; j++) {\n-        neighbors[j] = input.readInt();\n-      }\n-      nodeIdToNeighbors.put(nodeIndex, neighbors);\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        int size = input.readInt();\n+        nodeIdToNeighbors = new Int2ObjectOpenHashMap<>(size);\n+        for (int i = 0; i < size; i++) {\n+            int nodeIndex = input.readInt();\n+            int[] neighbors = new int[input.readInt()];\n+            for (int j = 0; j < neighbors.length; j++) {\n+                neighbors[j] = input.readInt();\n+            }\n+            nodeIdToNeighbors.put(nodeIndex, neighbors);\n+        }\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    int len = 4;\n-    for (Entry<Integer, int[]> entry : nodeIdToNeighbors.entrySet()) {\n-      len += 8;\n-      len += entry.getValue().length * 4;\n+    @Override\n+    public int bufferLen() {\n+        int len = 4;\n+        for (Entry<Integer, int[]> entry : nodeIdToNeighbors.entrySet()) {\n+            len += 8;\n+            len += entry.getValue().length * 4;\n+        }\n+        return len;\n     }\n-    return len;\n-  }\n }\n",
+            "diff_size": 56
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 108).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/645/PartSampleNeighborResult.java\nindex d07f4452b32..43443945fb4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/645/PartSampleNeighborResult.java\n@@ -46,16 +46,14 @@ public class PartSampleNeighborResult extends PartitionGetResult {\n     return nodeIdToNeighbors;\n   }\n \n-  public void setNodeIdToNeighbors(\n-      Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n+  public void setNodeIdToNeighbors(Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n     this.nodeIdToNeighbors = nodeIdToNeighbors;\n   }\n \n   @Override\n   public void serialize(ByteBuf output) {\n     output.writeInt(nodeIdToNeighbors.size());\n-    ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors\n-        .int2ObjectEntrySet().fastIterator();\n+    ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors.int2ObjectEntrySet().fastIterator();\n     Int2ObjectMap.Entry<int[]> entry;\n     while (iter.hasNext()) {\n       entry = iter.next();\n@@ -91,4 +89,4 @@ public class PartSampleNeighborResult extends PartitionGetResult {\n     }\n     return len;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 108).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/645/PartSampleNeighborResult.java\nindex d07f4452b32..ee6fd18bad2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/645/PartSampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/645/PartSampleNeighborResult.java\n@@ -27,11 +27,13 @@ import java.util.Map.Entry;\n /**\n  * Result of GetNeighbor\n  */\n+\n public class PartSampleNeighborResult extends PartitionGetResult {\n \n   /**\n    * Node id to neighbors map\n    */\n+\n   private Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors;\n \n   public PartSampleNeighborResult(Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n@@ -46,20 +48,19 @@ public class PartSampleNeighborResult extends PartitionGetResult {\n     return nodeIdToNeighbors;\n   }\n \n-  public void setNodeIdToNeighbors(\n-      Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n+  public void setNodeIdToNeighbors(Int2ObjectOpenHashMap<int[]> nodeIdToNeighbors) {\n     this.nodeIdToNeighbors = nodeIdToNeighbors;\n   }\n \n   @Override\n   public void serialize(ByteBuf output) {\n     output.writeInt(nodeIdToNeighbors.size());\n-    ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors\n-        .int2ObjectEntrySet().fastIterator();\n+    ObjectIterator<Int2ObjectMap.Entry<int[]>> iter = nodeIdToNeighbors.int2ObjectEntrySet().fastIterator();\n     Int2ObjectMap.Entry<int[]> entry;\n     while (iter.hasNext()) {\n       entry = iter.next();\n       output.writeInt(entry.getIntKey());\n+\n       int[] values = entry.getValue();\n       output.writeInt(values.length);\n       for (int value : values) {\n@@ -91,4 +92,4 @@ public class PartSampleNeighborResult extends PartitionGetResult {\n     }\n     return len;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "338",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.logical.sys;\n\nimport org.apache.iotdb.db.metadata.PartialPath;\nimport org.apache.iotdb.db.qp.logical.RootOperator;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/338/AuthorOperator.java\nindex 7fc055e1e80..d931f6fec52 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/338/AuthorOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/338/AuthorOperator.java\nindex 7fc055e1e80..f1471a29562 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/338/AuthorOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n@@ -38,7 +39,7 @@ public class AuthorOperator extends RootOperator {\n    * AuthorOperator Constructor with AuthorType.\n    *\n    * @param tokenIntType token in Int type\n-   * @param type author type\n+   * @param type         author type\n    */\n   public AuthorOperator(int tokenIntType, AuthorType type) {\n     super(tokenIntType);\n@@ -50,7 +51,7 @@ public class AuthorOperator extends RootOperator {\n    * AuthorOperator Constructor with OperatorType.\n    *\n    * @param tokenIntType token in Int type\n-   * @param type operator type\n+   * @param type         operator type\n    */\n   public AuthorOperator(int tokenIntType, OperatorType type) {\n     super(tokenIntType);\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/338/AuthorOperator.java\nindex 7fc055e1e80..90cc6d9217b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/338/AuthorOperator.java\n@@ -24,6 +24,7 @@ import org.apache.iotdb.db.qp.logical.RootOperator;\n /**\n  * this class maintains information in Author statement, including CREATE, DROP, GRANT and REVOKE.\n  */\n+\n public class AuthorOperator extends RootOperator {\n \n   private final AuthorType authorType;\n@@ -40,6 +41,7 @@ public class AuthorOperator extends RootOperator {\n    * @param tokenIntType token in Int type\n    * @param type author type\n    */\n+\n   public AuthorOperator(int tokenIntType, AuthorType type) {\n     super(tokenIntType);\n     authorType = type;\n@@ -52,6 +54,7 @@ public class AuthorOperator extends RootOperator {\n    * @param tokenIntType token in Int type\n    * @param type operator type\n    */\n+\n   public AuthorOperator(int tokenIntType, OperatorType type) {\n     super(tokenIntType);\n     authorType = null;\n@@ -135,6 +138,7 @@ public class AuthorOperator extends RootOperator {\n      * @param i short number\n      * @return NamespaceType\n      */\n+\n     public static AuthorType deserialize(short i) {\n       switch (i) {\n         case 0:\n@@ -181,6 +185,7 @@ public class AuthorOperator extends RootOperator {\n      *\n      * @return short number\n      */\n+\n     public short serialize() {\n       switch (this) {\n         case CREATE_USER:\n@@ -222,4 +227,4 @@ public class AuthorOperator extends RootOperator {\n       }\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/338/AuthorOperator.java\nindex 7fc055e1e80..d931f6fec52 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/338/AuthorOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/338/AuthorOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

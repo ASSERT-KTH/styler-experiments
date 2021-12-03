@@ -1,0 +1,63 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "15",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "68",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "@Configuration\n@EnableWebSecurity\npublic class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http.authorizeRequests()",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/15/WebSecurityConfig.java\nindex e09042e1e06..12ece7b2a09 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/15/WebSecurityConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur\n \n @Configuration\n @EnableWebSecurity\n-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n     @Override\n     protected void configure(HttpSecurity http) throws Exception {\n         http.authorizeRequests()\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/15/WebSecurityConfig.java\nindex e09042e1e06..965cf3f57f9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/15/WebSecurityConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur\n \n @Configuration\n @EnableWebSecurity\n-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n     @Override\n     protected void configure(HttpSecurity http) throws Exception {\n         http.authorizeRequests()\n@@ -30,9 +30,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n     }\n \n     @Autowired\n-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {\n+    public void configureGlobal(AuthenticationManagerBuilder auth)\n+        throws Exception {\n         auth.jdbcAuthentication()\n-                .withUser(\"username\").password(\"password\").roles(\"ROLE_ADMIN\");\n+            .withUser(\"username\").password(\"password\").roles(\"ROLE_ADMIN\");\n     }\n \n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/15/WebSecurityConfig.java\nindex e09042e1e06..d219b05df6c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/15/WebSecurityConfig.java\n@@ -13,27 +13,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur\n \n @Configuration\n @EnableWebSecurity\n-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n     @Override\n     protected void configure(HttpSecurity http) throws Exception {\n-        http.authorizeRequests()\n-            .antMatchers(\"/\").permitAll()\n-            .anyRequest().authenticated()\n-            .and()\n-            .formLogin()\n-            .loginPage(\"/login\")\n-            .defaultSuccessUrl(\"/\")\n-            .permitAll()\n-            .and()\n-            .logout()\n-            .permitAll();\n+        http.authorizeRequests().antMatchers(\"/\").permitAll().anyRequest().authenticated().and().formLogin().loginPage(\"/login\").defaultSuccessUrl(\"/\").permitAll().and().logout().permitAll();\n     }\n \n     @Autowired\n     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {\n-        auth.jdbcAuthentication()\n-                .withUser(\"username\").password(\"password\").roles(\"ROLE_ADMIN\");\n+        auth.jdbcAuthentication().withUser(\"username\").password(\"password\").roles(\"ROLE_ADMIN\");\n     }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/15/WebSecurityConfig.java\nindex e09042e1e06..12ece7b2a09 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/15/WebSecurityConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur\n \n @Configuration\n @EnableWebSecurity\n-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n     @Override\n     protected void configure(HttpSecurity http) throws Exception {\n         http.authorizeRequests()\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/15/WebSecurityConfig.java\nindex e09042e1e06..ac05853eba4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/15/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/15/WebSecurityConfig.java\n@@ -13,8 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur\n \n @Configuration\n @EnableWebSecurity\n-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{\n-    @Override\n+public class WebSecurityConfig extends WebSecurityConfigurerAdapter { @Override\n     protected void configure(HttpSecurity http) throws Exception {\n         http.authorizeRequests()\n             .antMatchers(\"/\").permitAll()\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

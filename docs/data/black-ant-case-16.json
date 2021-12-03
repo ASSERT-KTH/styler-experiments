@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "16",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "column": "70",
+                "severity": "error",
+                "message": "'&&' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "      return idpConfiguration.getUsers().stream()\n        .filter(token ->\n          token.getPrincipal().equals(authentication.getPrincipal()) &&\n            token.getCredentials().equals(authentication.getCredentials()))\n        .findFirst().map(userAuthenticationToken ->\n          //need to copy or else credentials are erased for future logins",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/16/AuthenticationProvider.java\nindex 7cdfce15049..e369af98136 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/16/AuthenticationProvider.java\n@@ -32,8 +32,7 @@ public class AuthenticationProvider implements org.springframework.security.auth\n     } else {\n       return idpConfiguration.getUsers().stream()\n         .filter(token ->\n-          token.getPrincipal().equals(authentication.getPrincipal()) &&\n-            token.getCredentials().equals(authentication.getCredentials()))\n+          token.getPrincipal().equals(authentication.getPrincipal()) && token.getCredentials().equals(authentication.getCredentials()))\n         .findFirst().map(userAuthenticationToken ->\n           //need to copy or else credentials are erased for future logins\n           userAuthenticationToken.clone())\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/16/AuthenticationProvider.java\nindex 7cdfce15049..a5f26ef7296 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/16/AuthenticationProvider.java\n@@ -13,37 +13,37 @@ import static mujina.api.AuthenticationMethod.ALL;\n \n public class AuthenticationProvider implements org.springframework.security.authentication.AuthenticationProvider {\n \n-  private final IdpConfiguration idpConfiguration;\n+    private final IdpConfiguration idpConfiguration;\n \n-  public AuthenticationProvider(IdpConfiguration idpConfiguration) {\n-    this.idpConfiguration = idpConfiguration;\n-  }\n-\n-  @Override\n-  public Authentication authenticate(Authentication authentication) throws AuthenticationException {\n-    if (StringUtils.isEmpty(authentication.getPrincipal())) {\n-      throw new InvalidAuthenticationException(\"Principal may not be empty\");\n+    public AuthenticationProvider(IdpConfiguration idpConfiguration) {\n+        this.idpConfiguration = idpConfiguration;\n     }\n-    if (idpConfiguration.getAuthenticationMethod().equals(ALL)) {\n-      return new FederatedUserAuthenticationToken(\n-        authentication.getPrincipal(),\n-        authentication.getCredentials(),\n-        Arrays.asList(new SimpleGrantedAuthority(\"ROLE_ADMIN\"), new SimpleGrantedAuthority(\"ROLE_USER\")));\n-    } else {\n-      return idpConfiguration.getUsers().stream()\n-        .filter(token ->\n-          token.getPrincipal().equals(authentication.getPrincipal()) &&\n-            token.getCredentials().equals(authentication.getCredentials()))\n-        .findFirst().map(userAuthenticationToken ->\n-          //need to copy or else credentials are erased for future logins\n-          userAuthenticationToken.clone())\n-        .orElseThrow(() -> new InvalidAuthenticationException(\"User not found or bad credentials\") {\n-        });\n+\n+    @Override\n+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {\n+        if (StringUtils.isEmpty(authentication.getPrincipal())) {\n+            throw new InvalidAuthenticationException(\"Principal may not be empty\");\n+        }\n+        if (idpConfiguration.getAuthenticationMethod().equals(ALL)) {\n+            return new FederatedUserAuthenticationToken(\n+                authentication.getPrincipal(),\n+                authentication.getCredentials(),\n+                Arrays.asList(new SimpleGrantedAuthority(\"ROLE_ADMIN\"), new SimpleGrantedAuthority(\"ROLE_USER\")));\n+        } else {\n+            return idpConfiguration.getUsers().stream()\n+                .filter(token ->\n+                    token.getPrincipal().equals(authentication.getPrincipal()) &&\n+                        token.getCredentials().equals(authentication.getCredentials()))\n+                .findFirst().map(userAuthenticationToken ->\n+                    //need to copy or else credentials are erased for future logins\n+                    userAuthenticationToken.clone())\n+                .orElseThrow(() -> new InvalidAuthenticationException(\"User not found or bad credentials\") {\n+                });\n+        }\n     }\n-  }\n \n-  @Override\n-  public boolean supports(Class<?> authentication) {\n-    return UsernamePasswordAuthenticationToken.class.isAssignableFrom(authentication);\n-  }\n+    @Override\n+    public boolean supports(Class<?> authentication) {\n+        return UsernamePasswordAuthenticationToken.class.isAssignableFrom(authentication);\n+    }\n }\n",
+            "diff_size": 36
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/16/AuthenticationProvider.java\nindex 7cdfce15049..9bce03adf17 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/16/AuthenticationProvider.java\n@@ -30,20 +30,16 @@ public class AuthenticationProvider implements org.springframework.security.auth\n         authentication.getCredentials(),\n         Arrays.asList(new SimpleGrantedAuthority(\"ROLE_ADMIN\"), new SimpleGrantedAuthority(\"ROLE_USER\")));\n     } else {\n-      return idpConfiguration.getUsers().stream()\n-        .filter(token ->\n-          token.getPrincipal().equals(authentication.getPrincipal()) &&\n-            token.getCredentials().equals(authentication.getCredentials()))\n-        .findFirst().map(userAuthenticationToken ->\n+    return idpConfiguration.getUsers().stream().filter(token ->\n+          token.getPrincipal().equals(authentication.getPrincipal()) && token.getCredentials().equals(authentication.getCredentials())).findFirst().map(userAuthenticationToken ->\n           //need to copy or else credentials are erased for future logins\n-          userAuthenticationToken.clone())\n-        .orElseThrow(() -> new InvalidAuthenticationException(\"User not found or bad credentials\") {\n+          userAuthenticationToken.clone()).orElseThrow(() -> new InvalidAuthenticationException(\"User not found or bad credentials\") {\n         });\n     }\n-  }\n+    }\n \n   @Override\n   public boolean supports(Class<?> authentication) {\n     return UsernamePasswordAuthenticationToken.class.isAssignableFrom(authentication);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/16/AuthenticationProvider.java\nindex 7cdfce15049..e369af98136 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/16/AuthenticationProvider.java\n@@ -32,8 +32,7 @@ public class AuthenticationProvider implements org.springframework.security.auth\n     } else {\n       return idpConfiguration.getUsers().stream()\n         .filter(token ->\n-          token.getPrincipal().equals(authentication.getPrincipal()) &&\n-            token.getCredentials().equals(authentication.getCredentials()))\n+          token.getPrincipal().equals(authentication.getPrincipal()) && token.getCredentials().equals(authentication.getCredentials()))\n         .findFirst().map(userAuthenticationToken ->\n           //need to copy or else credentials are erased for future logins\n           userAuthenticationToken.clone())\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/16/AuthenticationProvider.java\nindex 7cdfce15049..e369af98136 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/16/AuthenticationProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/16/AuthenticationProvider.java\n@@ -32,8 +32,7 @@ public class AuthenticationProvider implements org.springframework.security.auth\n     } else {\n       return idpConfiguration.getUsers().stream()\n         .filter(token ->\n-          token.getPrincipal().equals(authentication.getPrincipal()) &&\n-            token.getCredentials().equals(authentication.getCredentials()))\n+          token.getPrincipal().equals(authentication.getPrincipal()) && token.getCredentials().equals(authentication.getCredentials()))\n         .findFirst().map(userAuthenticationToken ->\n           //need to copy or else credentials are erased for future logins\n           userAuthenticationToken.clone())\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

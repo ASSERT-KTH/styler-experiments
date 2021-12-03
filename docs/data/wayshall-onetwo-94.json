@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "94",
+    "information": {
+        "violations": [
+            {
+                "line": "22",
+                "column": "28",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n    \n\tprivate ZuulUtils(){\n\t}\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/94/ZuulUtils.java\nindex a73c1463171..dabcc78eda5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/94/ZuulUtils.java\n@@ -19,7 +19,7 @@ final public class ZuulUtils {\n         return Optional.ofNullable(routeLocator.getMatchingRoute(requestURI));\n     }\n     \n-\tprivate ZuulUtils(){\n-\t}\n+\tprivate ZuulUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/94/ZuulUtils.java\nindex a73c1463171..237a81cc12e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/94/ZuulUtils.java\n@@ -14,12 +14,12 @@ import org.springframework.cloud.netflix.zuul.filters.RouteLocator;\n  */\n final public class ZuulUtils {\n \n-    public static Optional<Route> getRoute(RouteLocator routeLocator, HttpServletRequest request) {\n-        String requestURI = RequestUtils.getUrlPathHelper().getPathWithinApplication(request);\n-        return Optional.ofNullable(routeLocator.getMatchingRoute(requestURI));\n-    }\n-    \n-\tprivate ZuulUtils(){\n-\t}\n+  public static Optional<Route> getRoute(RouteLocator routeLocator, HttpServletRequest request) {\n+    String requestURI = RequestUtils.getUrlPathHelper().getPathWithinApplication(request);\n+    return Optional.ofNullable(routeLocator.getMatchingRoute(requestURI));\n+  }\n+\n+  private ZuulUtils() {\n+  }\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/94/ZuulUtils.java\nindex a73c1463171..dabcc78eda5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/94/ZuulUtils.java\n@@ -19,7 +19,7 @@ final public class ZuulUtils {\n         return Optional.ofNullable(routeLocator.getMatchingRoute(requestURI));\n     }\n     \n-\tprivate ZuulUtils(){\n-\t}\n+\tprivate ZuulUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/94/ZuulUtils.java\nindex a73c1463171..dabcc78eda5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/94/ZuulUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/94/ZuulUtils.java\n@@ -19,7 +19,7 @@ final public class ZuulUtils {\n         return Optional.ofNullable(routeLocator.getMatchingRoute(requestURI));\n     }\n     \n-\tprivate ZuulUtils(){\n-\t}\n+\tprivate ZuulUtils() {\n+ }\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

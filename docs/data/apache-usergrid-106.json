@@ -1,0 +1,63 @@
+{
+    "project_name": "apache-usergrid",
+    "violation_id": "106",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "72",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "package org.apache.usergrid.rest.exceptions;\n\npublic class UnsupportedRestOperationException extends RuntimeException{\n\n    public UnsupportedRestOperationException(String message ) {\n        super(message);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-usergrid/styler/05_predictions/final/files-repaired/106/UnsupportedRestOperationException.java\nindex 04d48b97620..6158e4a4440 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-usergrid/styler/05_predictions/final/files-repaired/106/UnsupportedRestOperationException.java\n@@ -16,7 +16,7 @@\n  */\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n     public UnsupportedRestOperationException(String message ) {\n         super(message);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/106/UnsupportedRestOperationException.java\nindex 04d48b97620..e02bff18218 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/106/UnsupportedRestOperationException.java\n@@ -14,11 +14,12 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n-    public UnsupportedRestOperationException(String message ) {\n+    public UnsupportedRestOperationException(String message) {\n         super(message);\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/106/UnsupportedRestOperationException.java\nindex 04d48b97620..1724a5c824b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/106/UnsupportedRestOperationException.java\n@@ -16,10 +16,10 @@\n  */\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n     public UnsupportedRestOperationException(String message ) {\n         super(message);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/106/UnsupportedRestOperationException.java\nindex 04d48b97620..90bd3365ec1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/106/UnsupportedRestOperationException.java\n@@ -16,10 +16,10 @@\n  */\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n \n-    public UnsupportedRestOperationException(String message ) {\n-        super(message);\n-    }\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n-}\n+    public UnsupportedRestOperationException( String message ) {\n+        super( message );\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/random/files-repaired/106/UnsupportedRestOperationException.java\nindex 04d48b97620..6158e4a4440 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/random/files-repaired/106/UnsupportedRestOperationException.java\n@@ -16,7 +16,7 @@\n  */\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n     public UnsupportedRestOperationException(String message ) {\n         super(message);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/three_grams/files-repaired/106/UnsupportedRestOperationException.java\nindex 04d48b97620..6158e4a4440 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/106/UnsupportedRestOperationException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/three_grams/files-repaired/106/UnsupportedRestOperationException.java\n@@ -16,7 +16,7 @@\n  */\n package org.apache.usergrid.rest.exceptions;\n \n-public class UnsupportedRestOperationException extends RuntimeException{\n+public class UnsupportedRestOperationException extends RuntimeException {\n \n     public UnsupportedRestOperationException(String message ) {\n         super(message);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

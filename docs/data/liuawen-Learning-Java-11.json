@@ -1,0 +1,71 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "11",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "package com.itheima.factorybean;\nimport org.springframework.context.ApplicationContext;\nimport \n    org.springframework.context.support.ClassPathXmlApplicationContext;\nimport com.itheima.jdk.UserDao;\n// \u6d4b\u8bd5\u7c7b",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/11/ProxyFactoryBeanTest.java\nindex 39ae3b554ab..069b72a3c6a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/11/ProxyFactoryBeanTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.factorybean;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n import com.itheima.jdk.UserDao;\r\n // \u6d4b\u8bd5\u7c7b\r\n public class ProxyFactoryBeanTest {\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/11/ProxyFactoryBeanTest.java\nindex 39ae3b554ab..ce57c4fe804 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/11/ProxyFactoryBeanTest.java\n@@ -1,19 +1,22 @@\n package com.itheima.factorybean;\r\n+\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n+import\r\n     org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+\r\n import com.itheima.jdk.UserDao;\r\n+\r\n // \u6d4b\u8bd5\u7c7b\r\n public class ProxyFactoryBeanTest {\r\n-\tpublic static void main(String args[]) {\r\n-\t   String xmlPath = \"com/itheima/factorybean/applicationContext.xml\";\r\n-\t   ApplicationContext applicationContext = \r\n-                                 new ClassPathXmlApplicationContext(xmlPath);\r\n-\t   // \u4eceSpring\u5bb9\u5668\u83b7\u5f97\u5185\u5bb9\r\n-\t   UserDao userDao = \r\n-                       (UserDao) applicationContext.getBean(\"userDaoProxy\");\r\n-\t   // \u6267\u884c\u65b9\u6cd5\r\n-\t   userDao.addUser();\r\n-\t   userDao.deleteUser();\r\n-\t}\r\n+    public static void main(String args[]) {\r\n+        String xmlPath = \"com/itheima/factorybean/applicationContext.xml\";\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(xmlPath);\r\n+        // \u4eceSpring\u5bb9\u5668\u83b7\u5f97\u5185\u5bb9\r\n+        UserDao userDao =\r\n+            (UserDao) applicationContext.getBean(\"userDaoProxy\");\r\n+        // \u6267\u884c\u65b9\u6cd5\r\n+        userDao.addUser();\r\n+        userDao.deleteUser();\r\n+    }\r\n }\r\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/11/ProxyFactoryBeanTest.java\nindex 39ae3b554ab..1e899ccb122 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/11/ProxyFactoryBeanTest.java\n@@ -1,19 +1,16 @@\n package com.itheima.factorybean;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\n import com.itheima.jdk.UserDao;\r\n // \u6d4b\u8bd5\u7c7b\r\n public class ProxyFactoryBeanTest {\r\n \tpublic static void main(String args[]) {\r\n \t   String xmlPath = \"com/itheima/factorybean/applicationContext.xml\";\r\n-\t   ApplicationContext applicationContext = \r\n-                                 new ClassPathXmlApplicationContext(xmlPath);\r\n-\t   // \u4eceSpring\u5bb9\u5668\u83b7\u5f97\u5185\u5bb9\r\n-\t   UserDao userDao = \r\n-                       (UserDao) applicationContext.getBean(\"userDaoProxy\");\r\n-\t   // \u6267\u884c\u65b9\u6cd5\r\n+\t   ApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);\n+// \u4eceSpring\u5bb9\u5668\u83b7\u5f97\u5185\u5bb9\r\n+\t   UserDao userDao = (UserDao) applicationContext.getBean(\"userDaoProxy\");\n+// \u6267\u884c\u65b9\u6cd5\r\n \t   userDao.addUser();\r\n-\t   userDao.deleteUser();\r\n+\t   userDao.deleteUser();\n \t}\r\n-}\r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/11/ProxyFactoryBeanTest.java\nindex 39ae3b554ab..069b72a3c6a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/11/ProxyFactoryBeanTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.factorybean;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n import com.itheima.jdk.UserDao;\r\n // \u6d4b\u8bd5\u7c7b\r\n public class ProxyFactoryBeanTest {\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/11/ProxyFactoryBeanTest.java\nindex 39ae3b554ab..069b72a3c6a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/11/ProxyFactoryBeanTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/11/ProxyFactoryBeanTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.factorybean;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n import com.itheima.jdk.UserDao;\r\n // \u6d4b\u8bd5\u7c7b\r\n public class ProxyFactoryBeanTest {\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "79",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 151).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public static class Async {\n        private static final ControlTreeCreatorServiceAsync ourInstance = (ControlTreeCreatorServiceAsync) GWT.create(ControlTreeCreatorService.class);\n\n        public static ControlTreeCreatorServiceAsync getInstance() {\n            return ourInstance;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 151).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/79/ControlTreeCreatorService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/79/ControlTreeCreatorService.java\nindex 930d9804816..7c4936d0683 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/79/ControlTreeCreatorService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/79/ControlTreeCreatorService.java\n@@ -16,7 +16,8 @@ public interface ControlTreeCreatorService extends RemoteService {\n     RootNode getControlTreeForSessions(Set<String> sessionIds, boolean isShowOnlyMatchedTests) throws RuntimeException;\n \n     public static class Async {\n-        private static final ControlTreeCreatorServiceAsync ourInstance = (ControlTreeCreatorServiceAsync) GWT.create(ControlTreeCreatorService.class);\n+        private static final ControlTreeCreatorServiceAsync ourInstance =\n+                (ControlTreeCreatorServiceAsync) GWT.create(ControlTreeCreatorService.class);\n \n         public static ControlTreeCreatorServiceAsync getInstance() {\n             return ourInstance;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 151).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/79/ControlTreeCreatorService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/79/ControlTreeCreatorService.java\nindex 930d9804816..3a420870a7a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/79/ControlTreeCreatorService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/79/ControlTreeCreatorService.java\n@@ -4,7 +4,6 @@ import com.google.gwt.core.client.GWT;\n import com.google.gwt.user.client.rpc.RemoteService;\n import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;\n import com.griddynamics.jagger.dbapi.model.RootNode;\n-\n import java.util.Set;\n \n @RemoteServiceRelativePath(\"rpc/ControlTreeCreatorService\")\n@@ -16,6 +15,7 @@ public interface ControlTreeCreatorService extends RemoteService {\n     RootNode getControlTreeForSessions(Set<String> sessionIds, boolean isShowOnlyMatchedTests) throws RuntimeException;\n \n     public static class Async {\n+\n         private static final ControlTreeCreatorServiceAsync ourInstance = (ControlTreeCreatorServiceAsync) GWT.create(ControlTreeCreatorService.class);\n \n         public static ControlTreeCreatorServiceAsync getInstance() {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 151).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

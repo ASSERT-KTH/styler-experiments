@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "763",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/763/VectorMergeMessage.java\nindex c33aeb99611..9c00b2dffcd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/763/VectorMergeMessage.java\n@@ -23,19 +23,19 @@ import com.tencent.angel.psagent.task.TaskContext;\n \n public class VectorMergeMessage extends OpLogMessage {\n \n-  private final Vector update;\n+    private final Vector update;\n \n-  public VectorMergeMessage(int seqId, TaskContext context, Vector update) {\n-    super(seqId, update.getMatrixId(), OpLogMessageType.VECTOR_MERGE, context);\n-    this.update = update;\n-  }\n+    public VectorMergeMessage(int seqId, TaskContext context, Vector update) {\n+        super(seqId, update.getMatrixId(), OpLogMessageType.VECTOR_MERGE, context);\n+        this.update = update;\n+    }\n \n-  public Vector getUpdate() {\n-    return update;\n-  }\n+    public Vector getUpdate() {\n+        return update;\n+    }\n \n-  @Override\n-  public String toString() {\n-    return \"OpLogMergeMessage [update=\" + update + \", toString()=\" + super.toString() + \"]\";\n-  }\n+    @Override\n+    public String toString() {\n+        return \"OpLogMergeMessage [update=\" + update + \", toString()=\" + super.toString() + \"]\";\n+    }\n }\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/763/VectorMergeMessage.java\nindex c33aeb99611..e14f0eeed33 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/763/VectorMergeMessage.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.psagent.matrix.oplog.cache;\n \n import com.tencent.angel.ml.math2.vector.Vector;\n@@ -38,4 +37,4 @@ public class VectorMergeMessage extends OpLogMessage {\n   public String toString() {\n     return \"OpLogMergeMessage [update=\" + update + \", toString()=\" + super.toString() + \"]\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/763/VectorMergeMessage.java\nindex c33aeb99611..32f0838550a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/763/VectorMergeMessage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/763/VectorMergeMessage.java\n@@ -38,4 +38,5 @@ public class VectorMergeMessage extends OpLogMessage {\n   public String toString() {\n     return \"OpLogMergeMessage [update=\" + update + \", toString()=\" + super.toString() + \"]\";\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

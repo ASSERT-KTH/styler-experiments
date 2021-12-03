@@ -1,0 +1,70 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "40",
+    "information": {
+        "violations": [
+            {
+                "line": "22",
+                "column": "42",
+                "severity": "error",
+                "message": "';' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "                .and()\n                .requestMatchers()\n                .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/40/ResourceServerConfig.java\nindex abb3f0c0b9a..4fc93a04199 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/40/ResourceServerConfig.java\n@@ -19,6 +19,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {\n                 .authenticated()\n                 .and()\n                 .requestMatchers()\n-                .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n-    }\n+                .antMatchers(\"/user/**\"); //\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84}\n+            }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "22",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/40/ResourceServerConfig.java\nindex abb3f0c0b9a..77485502360 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/40/ResourceServerConfig.java\n@@ -15,10 +15,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {\n     @Override\n     public void configure(HttpSecurity http) throws Exception {\n         http.authorizeRequests()\n-                .anyRequest()\n-                .authenticated()\n-                .and()\n-                .requestMatchers()\n-                .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n+            .anyRequest()\n+            .authenticated()\n+            .and()\n+            .requestMatchers()\n+            .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n     }\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/40/ResourceServerConfig.java\nindex abb3f0c0b9a..4fc93a04199 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/40/ResourceServerConfig.java\n@@ -19,6 +19,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {\n                 .authenticated()\n                 .and()\n                 .requestMatchers()\n-                .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n-    }\n+                .antMatchers(\"/user/**\"); //\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84}\n+            }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/40/ResourceServerConfig.java\nindex abb3f0c0b9a..54fb5f43e6b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/40/ResourceServerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/40/ResourceServerConfig.java\n@@ -19,6 +19,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {\n                 .authenticated()\n                 .and()\n                 .requestMatchers()\n-                .antMatchers(\"/user/**\");//\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84\n-    }\n+                .antMatchers(\"/user/**\");\n+                //\u914d\u7f6e\u9700\u8981\u4fdd\u62a4\u7684\u8d44\u6e90\u8def\u5f84}\n+            }\n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

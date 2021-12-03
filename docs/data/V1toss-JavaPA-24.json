@@ -1,0 +1,63 @@
+{
+    "project_name": "V1toss-JavaPA",
+    "violation_id": "24",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "55",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@Repository\npublic interface ModelDAO extends CrudRepository<Model,Integer> {\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/24/ModelDAO.java\nindex fcaf77577e0..c3f3a8ebd89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/24/ModelDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Model;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/24/ModelDAO.java\nindex fcaf77577e0..c3f3a8ebd89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/24/ModelDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Model;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/24/ModelDAO.java\nindex fcaf77577e0..05b03b4a4ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/24/ModelDAO.java\n@@ -12,6 +12,5 @@ import vkaretko.domain.Model;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n-\n-}\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/24/ModelDAO.java\nindex fcaf77577e0..c086b32a41a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/24/ModelDAO.java\n@@ -11,7 +11,8 @@ import vkaretko.domain.Model;\n  * @version 1.00.\n  * @since 08.05.2017.\n  */\n-@Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n \n-}\n+\n+@Repository\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/24/ModelDAO.java\nindex fcaf77577e0..c3f3a8ebd89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/24/ModelDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Model;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/24/ModelDAO.java\nindex fcaf77577e0..c3f3a8ebd89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/24/ModelDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/24/ModelDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.domain.Model;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface ModelDAO extends CrudRepository<Model,Integer> {\n+public interface ModelDAO extends CrudRepository<Model, Integer> {\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

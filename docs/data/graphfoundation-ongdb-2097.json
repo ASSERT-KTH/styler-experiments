@@ -1,0 +1,201 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2097",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "59",
+                    "column": "58",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "61",
+                    "column": "10",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "61",
+                    "column": "61",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "63",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "63",
+                    "column": "103",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "68",
+                    "column": "107",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "72",
+                    "column": "8",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "73",
+                    "column": "64",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "80",
+                    "column": "44",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "80",
+                    "column": "54",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "83",
+                    "column": "8",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "83",
+                    "column": "21",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "86",
+                    "column": "93",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2097/NetworkDiameter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2097/NetworkDiameter.java\nindex e9092c0ad79..f1e78ecc097 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2097/NetworkDiameter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2097/NetworkDiameter.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.graphalgo.impl.centrality;\n \n import java.util.Comparator;\n@@ -28,65 +29,63 @@ import org.neo4j.graphdb.Node;\n /**\n  * This can be used to calculate the diameter of a network, which is defined as\n  * the largest eccentricity of all the nodes in the network.\n- * @complexity The distance comparator is called once for every vertex. The main\n- *             work is the computation of {@link Eccentricity} for all vertices\n- *             which is done in O(n * (A + n)) time.\n+ *\n  * @author Patrik Larsson\n+ * @complexity The distance comparator is called once for every vertex. The main\n+ * work is the computation of {@link Eccentricity} for all vertices\n+ * which is done in O(n * (A + n)) time.\n  */\n public class NetworkDiameter<ShortestPathCostType> extends\n-    ShortestPathBasedCentrality<ShortestPathCostType,ShortestPathCostType>\n+    ShortestPathBasedCentrality<ShortestPathCostType, ShortestPathCostType>\n {\n-    Comparator<ShortestPathCostType> distanceComparator;\n-    // Underlying eccentricity computation\n-    protected Eccentricity<ShortestPathCostType> eccentricity;\n-    protected ShortestPathCostType diameter;\n+  Comparator<ShortestPathCostType> distanceComparator;\n+  // Underlying eccentricity computation\n+  protected Eccentricity<ShortestPathCostType> eccentricity;\n+  protected ShortestPathCostType diameter;\n \n-    /**\n-     * Default constructor.\n-     * @param singleSourceShortestPath\n-     *            Underlying singleSourceShortestPath.\n-     * @param zeroValue\n-     *            Default value.\n-     * @param nodeSet\n-     *            A set containing the nodes for which centrality values should\n-     *            be computed.\n-     * @param distanceComparator\n-     *            Object being able to compare eccentricity values (path\n-     *            distances), in order to sort out the largest.\n-     */\n-    public NetworkDiameter(\n-        SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath,\n-        ShortestPathCostType zeroValue, Set<Node> nodeSet,\n-        Comparator<ShortestPathCostType> distanceComparator )\n-    {\n-        super( singleSourceShortestPath, null, zeroValue, nodeSet );\n-        this.distanceComparator = distanceComparator;\n-        eccentricity = new Eccentricity<>( singleSourceShortestPath, zeroValue, nodeSet, distanceComparator );\n-    }\n+  /**\n+   * Default constructor.\n+   *\n+   * @param singleSourceShortestPath Underlying singleSourceShortestPath.\n+   * @param zeroValue                Default value.\n+   * @param nodeSet                  A set containing the nodes for which centrality values should\n+   *                                 be computed.\n+   * @param distanceComparator       Object being able to compare eccentricity values (path\n+   *                                 distances), in order to sort out the largest.\n+   */\n+  public NetworkDiameter(\n+      SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath,\n+      ShortestPathCostType zeroValue, Set<Node> nodeSet,\n+      Comparator<ShortestPathCostType> distanceComparator)\n+  {\n+    super(singleSourceShortestPath, null, zeroValue, nodeSet);\n+    this.distanceComparator = distanceComparator;\n+    eccentricity = new Eccentricity<>(singleSourceShortestPath, zeroValue, nodeSet, distanceComparator);\n+  }\n \n-    @Override\n-    public void processShortestPaths( Node node,\n-        SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath )\n+  @Override\n+  public void processShortestPaths(Node node,\n+                                   SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath)\n+  {\n+    eccentricity.processShortestPaths(node, singleSourceShortestPath);\n+    ShortestPathCostType centrality = eccentricity.getCentrality(node);\n+    if (diameter == null\n+        || distanceComparator.compare(centrality, diameter) > 0)\n     {\n-        eccentricity.processShortestPaths( node, singleSourceShortestPath );\n-        ShortestPathCostType centrality = eccentricity.getCentrality( node );\n-        if ( diameter == null\n-            || distanceComparator.compare( centrality, diameter ) > 0 )\n-        {\n-            diameter = centrality;\n-        }\n+      diameter = centrality;\n     }\n+  }\n \n-    @Override\n-    public ShortestPathCostType getCentrality( Node node )\n+  @Override\n+  public ShortestPathCostType getCentrality(Node node)\n+  {\n+    // This might be a bit ugly, but good for warnings\n+    if (node != null)\n     {\n-        // This might be a bit ugly, but good for warnings\n-        if ( node != null )\n-        {\n-            throw new RuntimeException(\n-                \"Getting network diameter with a specific node as argument, which means nonsense.\" );\n-        }\n-        calculate();\n-        return diameter;\n+      throw new RuntimeException(\n+          \"Getting network diameter with a specific node as argument, which means nonsense.\");\n     }\n+    calculate();\n+    return diameter;\n+  }\n }\n",
+            "diff_size": 66
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "76",
+                    "severity": "error",
+                    "message": "'{' at column 76 should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2097/NetworkDiameter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2097/NetworkDiameter.java\nindex e9092c0ad79..09939483278 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2097/NetworkDiameter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2097/NetworkDiameter.java\n@@ -34,8 +34,7 @@ import org.neo4j.graphdb.Node;\n  * @author Patrik Larsson\n  */\n public class NetworkDiameter<ShortestPathCostType> extends\n-    ShortestPathBasedCentrality<ShortestPathCostType,ShortestPathCostType>\n-{\n+    ShortestPathBasedCentrality<ShortestPathCostType,ShortestPathCostType> {\n     Comparator<ShortestPathCostType> distanceComparator;\n     // Underlying eccentricity computation\n     protected Eccentricity<ShortestPathCostType> eccentricity;\n@@ -54,25 +53,22 @@ public class NetworkDiameter<ShortestPathCostType> extends\n      *            Object being able to compare eccentricity values (path\n      *            distances), in order to sort out the largest.\n      */\n-    public NetworkDiameter(\n-        SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath,\n-        ShortestPathCostType zeroValue, Set<Node> nodeSet,\n-        Comparator<ShortestPathCostType> distanceComparator )\n-    {\n+    public NetworkDiameter( SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath,\n+        ShortestPathCostType zeroValue, Set<Node> nodeSet, Comparator<ShortestPathCostType> distanceComparator )\n+{\n         super( singleSourceShortestPath, null, zeroValue, nodeSet );\n         this.distanceComparator = distanceComparator;\n         eccentricity = new Eccentricity<>( singleSourceShortestPath, zeroValue, nodeSet, distanceComparator );\n     }\n \n     @Override\n-    public void processShortestPaths( Node node,\n-        SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath )\n-    {\n+    public void processShortestPaths( Node node, SingleSourceShortestPath<ShortestPathCostType> singleSourceShortestPath )\n+{\n         eccentricity.processShortestPaths( node, singleSourceShortestPath );\n         ShortestPathCostType centrality = eccentricity.getCentrality( node );\n         if ( diameter == null\n             || distanceComparator.compare( centrality, diameter ) > 0 )\n-        {\n+{\n             diameter = centrality;\n         }\n     }\n@@ -83,10 +79,9 @@ public class NetworkDiameter<ShortestPathCostType> extends\n         // This might be a bit ugly, but good for warnings\n         if ( node != null )\n         {\n-            throw new RuntimeException(\n-                \"Getting network diameter with a specific node as argument, which means nonsense.\" );\n-        }\n+            throw new RuntimeException( \"Getting network diameter with a specific node as argument, which means nonsense.\" );\n+    }\n         calculate();\n         return diameter;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

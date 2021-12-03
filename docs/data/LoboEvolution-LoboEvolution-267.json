@@ -1,0 +1,95 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "267",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface ItemEditorFactory<T> {\n\n\t/**\n\t * Creates a new ItemEditor object.\n\t *\n\t * @return the abstract item editor",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/267/ItemEditorFactory.java\nindex 3096787e9e1..6133d20fcc8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/267/ItemEditorFactory.java\n@@ -29,10 +29,10 @@ package org.loboevolution.gui;\n  */\n public interface ItemEditorFactory<T> {\n \n-\t/**\n+/**\n \t * Creates a new ItemEditor object.\n \t *\n \t * @return the abstract item editor\n \t */\n-\tAbstractItemEditor<T> createItemEditor();\n+ AbstractItemEditor<T> createItemEditor();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/267/ItemEditorFactory.java\nindex 3096787e9e1..cee8bf9bddf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/267/ItemEditorFactory.java\n@@ -24,15 +24,13 @@ package org.loboevolution.gui;\n  * A factory for creating ItemEditor objects.\n  *\n  * @param <T> the generic type\n- *\n- *\n  */\n public interface ItemEditorFactory<T> {\n \n-\t/**\n-\t * Creates a new ItemEditor object.\n-\t *\n-\t * @return the abstract item editor\n-\t */\n-\tAbstractItemEditor<T> createItemEditor();\n+    /**\n+     * Creates a new ItemEditor object.\n+     *\n+     * @return the abstract item editor\n+     */\n+    AbstractItemEditor<T> createItemEditor();\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "36",
+                    "severity": "error",
+                    "message": "'<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/267/ItemEditorFactory.java\nindex 3096787e9e1..b05eaa7f5fe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/267/ItemEditorFactory.java\n@@ -27,12 +27,16 @@ package org.loboevolution.gui;\n  *\n  *\n  */\n-public interface ItemEditorFactory<T> {\n \n-\t/**\n-\t * Creates a new ItemEditor object.\n-\t *\n-\t * @return the abstract item editor\n-\t */\n-\tAbstractItemEditor<T> createItemEditor();\n-}\n+\n+public interface ItemEditorFactory <T> {\n+\n+    /**\n+     * Creates a new ItemEditor object.\n+     *\n+     * @return the abstract item editor\n+     */\n+\n+\n+    AbstractItemEditor<T> createItemEditor();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/267/ItemEditorFactory.java\nindex 3096787e9e1..6133d20fcc8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/267/ItemEditorFactory.java\n@@ -29,10 +29,10 @@ package org.loboevolution.gui;\n  */\n public interface ItemEditorFactory<T> {\n \n-\t/**\n+/**\n \t * Creates a new ItemEditor object.\n \t *\n \t * @return the abstract item editor\n \t */\n-\tAbstractItemEditor<T> createItemEditor();\n+ AbstractItemEditor<T> createItemEditor();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/267/ItemEditorFactory.java\nindex 3096787e9e1..81de4a80230 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/267/ItemEditorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/267/ItemEditorFactory.java\n@@ -29,10 +29,10 @@ package org.loboevolution.gui;\n  */\n public interface ItemEditorFactory<T> {\n \n-\t/**\n+    /**\n \t * Creates a new ItemEditor object.\n \t *\n \t * @return the abstract item editor\n \t */\n-\tAbstractItemEditor<T> createItemEditor();\n+ AbstractItemEditor<T> createItemEditor();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

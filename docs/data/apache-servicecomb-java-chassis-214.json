@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "214",
+    "information": {
+        "violations": [
+            {
+                "line": "60",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 122).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    try {\n      doGetIpv4AddressFromNetworkInterface();\n      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming\n      InetAddress localHost = InetAddress.getLocalHost();\n      hostName = localHost.getHostName();\n      if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || localHost.isMulticastAddress())",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 174).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/214/NetUtils.java\nindex 3308be18999..ca3d77695f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/214/NetUtils.java\n@@ -57,8 +57,8 @@ public final class NetUtils {\n   static {\n     try {\n       doGetIpv4AddressFromNetworkInterface();\n-      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming\n-      InetAddress localHost = InetAddress.getLocalHost();\n+      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming InetAddress localHost = InetAddress.getLocalHost();\n+      hostName localHost = InetAddress.getLocalHost();\n       hostName = localHost.getHostName();\n       if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || localHost.isMulticastAddress())\n           && !allInterfaceAddresses.isEmpty()) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/214/NetUtils.java\nindex 3308be18999..eb8f9428166 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/214/NetUtils.java\n@@ -107,7 +107,7 @@ public final class NetUtils {\n \n         if (address.isAnyLocalAddress() || address.isLoopbackAddress() || address.isMulticastAddress()\n             || Inet6Address.class.isInstance(address)) {\n-          continue;\n+  continue;\n         }\n \n         if (Inet4Address.class.isInstance(address)) {\n@@ -202,4 +202,4 @@ public final class NetUtils {\n       return false;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/214/NetUtils.java\nindex 3308be18999..69d0223240e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/214/NetUtils.java\n@@ -29,12 +29,10 @@ import java.net.URISyntaxException;\n import java.util.Enumeration;\n import java.util.HashMap;\n import java.util.Map;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n public final class NetUtils {\n-\n   private static final Logger LOGGER = LoggerFactory.getLogger(NetUtils.class);\n \n   // one interface can bind to multiple address\n@@ -48,6 +46,7 @@ public final class NetUtils {\n   //    on interface name conflict, all data saved\n \n   // key is network interface name\n+\n   private static Map<String, InetAddress> allInterfaceAddresses = new HashMap<>();\n \n   private static String hostName;\n@@ -58,28 +57,31 @@ public final class NetUtils {\n     try {\n       doGetIpv4AddressFromNetworkInterface();\n       // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming\n+\n       InetAddress localHost = InetAddress.getLocalHost();\n       hostName = localHost.getHostName();\n-      if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || localHost.isMulticastAddress())\n-          && !allInterfaceAddresses.isEmpty()) {\n-        InetAddress availabelAddress = allInterfaceAddresses.values().iterator().next();\n+      if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress()\n+           || localHost.isMulticastAddress()) && !allInterfaceAddresses.isEmpty()) {\n+        InetAddress availabelAddress = allInterfaceAddresses.values().iterator()\n+                                                                     .next();\n         hostAddress = availabelAddress.getHostAddress();\n-        LOGGER.warn(\"cannot find a proper host address, choose {}, may not be correct.\", hostAddress);\n+        LOGGER.warn(\"cannot find a proper host address, choose {}, may not be correct.\",\n+hostAddress);\n       } else {\n         hostAddress = localHost.getHostAddress();\n       }\n \n-      LOGGER.info(\n-          \"add host name from localhost:\" + hostName + \",host address:\" + hostAddress);\n+      LOGGER.info(\"add host name from localhost:\" + hostName + \",host address:\" + hostAddress);\n     } catch (Exception e) {\n       LOGGER.error(\"got exception when trying to get addresses:\", e);\n       if (allInterfaceAddresses.size() >= 1) {\n-        InetAddress entry = allInterfaceAddresses.entrySet().iterator().next().getValue();\n+        InetAddress entry = allInterfaceAddresses.entrySet().iterator()\n+                                                            .next()\n+                                                            .getValue();\n         // get host name will do a reverse name lookup and is time consuming\n         hostName = entry.getHostName();\n         hostAddress = entry.getHostAddress();\n-        LOGGER.info(\n-            \"add host name from interfaces:\" + hostName + \",host address:\" + hostAddress);\n+        LOGGER.info(\"add host name from interfaces:\" + hostName + \",host address:\" + hostAddress);\n       }\n     }\n   }\n@@ -91,28 +93,27 @@ public final class NetUtils {\n    * docker\u73af\u5883\u4e2d\uff0c\u6709\u65f6\u65e0\u6cd5\u901a\u8fc7InetAddress.getLocalHost()\u83b7\u53d6 \uff0c\u4f1a\u62a5unknown host Exception\uff0c system error\n    * \u6b64\u65f6\uff0c\u901a\u8fc7\u904d\u5386\u7f51\u5361\u63a5\u53e3\u7684\u65b9\u5f0f\u89c4\u907f\uff0c\u51fa\u6765\u7684\u6570\u636e\u4e0d\u4e00\u5b9a\u5bf9\n    */\n+\n   private static void doGetIpv4AddressFromNetworkInterface() throws SocketException {\n     Enumeration<NetworkInterface> iterNetwork = NetworkInterface.getNetworkInterfaces();\n-\n     while (iterNetwork.hasMoreElements()) {\n       NetworkInterface network = iterNetwork.nextElement();\n-\n-      if (!network.isUp() || network.isLoopback() || network.isVirtual()) {\n+      if (!network.isUp() || network.isLoopback()\n+          || network.isVirtual()) {\n         continue;\n       }\n \n       Enumeration<InetAddress> iterAddress = network.getInetAddresses();\n       while (iterAddress.hasMoreElements()) {\n         InetAddress address = iterAddress.nextElement();\n-\n-        if (address.isAnyLocalAddress() || address.isLoopbackAddress() || address.isMulticastAddress()\n+        if (address.isAnyLocalAddress() || address.isLoopbackAddress()\n+            || address.isMulticastAddress()\n             || Inet6Address.class.isInstance(address)) {\n           continue;\n         }\n \n         if (Inet4Address.class.isInstance(address)) {\n-          LOGGER.info(\n-              \"add network interface name:\" + network.getName() + \",host address:\" + address.getHostAddress());\n+          LOGGER.info(\"add network interface name:\" + network.getName() + \",host address:\" + address.getHostAddress());\n           allInterfaceAddresses.put(network.getName(), address);\n         }\n       }\n@@ -122,6 +123,7 @@ public final class NetUtils {\n   /**\n    * address ip:port\u683c\u5f0f\n    */\n+\n   public static IpPort parseIpPort(String address) {\n     if (address == null) {\n       return null;\n@@ -131,9 +133,9 @@ public final class NetUtils {\n     if (idx == -1) {\n       return null;\n     }\n+\n     String hostOrIp = address.substring(0, idx);\n     int port = Integer.parseInt(address.substring(idx + 1));\n-\n     return new IpPort(hostOrIp, port);\n   }\n \n@@ -157,10 +159,12 @@ public final class NetUtils {\n    * adddress, e.g 0.0.0.0:8080\n    * return \u5b9e\u9645\u76d1\u542c\u7684\u5730\u5740\n    */\n+\n   public static String getRealListenAddress(String schema, String address) {\n     if (address == null) {\n       return null;\n     }\n+\n     try {\n       URI originalURI = new URI(schema + \"://\" + address);\n       IpPort ipPort = NetUtils.parseIpPort(originalURI.getAuthority());\n@@ -202,4 +206,4 @@ public final class NetUtils {\n       return false;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 31
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 174).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/214/NetUtils.java\nindex 3308be18999..ca3d77695f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/214/NetUtils.java\n@@ -57,8 +57,8 @@ public final class NetUtils {\n   static {\n     try {\n       doGetIpv4AddressFromNetworkInterface();\n-      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming\n-      InetAddress localHost = InetAddress.getLocalHost();\n+      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming InetAddress localHost = InetAddress.getLocalHost();\n+      hostName localHost = InetAddress.getLocalHost();\n       hostName = localHost.getHostName();\n       if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || localHost.isMulticastAddress())\n           && !allInterfaceAddresses.isEmpty()) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 172).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/214/NetUtils.java\nindex 3308be18999..79beaf9000c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/214/NetUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/214/NetUtils.java\n@@ -57,8 +57,8 @@ public final class NetUtils {\n   static {\n     try {\n       doGetIpv4AddressFromNetworkInterface();\n-      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consuming\n-      InetAddress localHost = InetAddress.getLocalHost();\n+      // getLocalHost will throw exception in some docker image and sometimes will do a hostname lookup and time consumingInetAddresslocalHost = InetAddress.getLocalHost();\n+      hostName localHost = InetAddress.getLocalHost();\n       hostName = localHost.getHostName();\n       if ((localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || localHost.isMulticastAddress())\n           && !allInterfaceAddresses.isEmpty()) {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

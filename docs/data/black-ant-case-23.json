@@ -1,0 +1,95 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "23",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n\n\t// Logger\n\tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n\n\tpublic Object loadUserBySAML(SAMLCredential credential)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/23/SAMLUserDetailsServiceImpl.java\nindex 93e23bdff27..48365308d5a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/23/SAMLUserDetailsServiceImpl.java\n@@ -32,7 +32,8 @@ import java.util.List;\n @Service\n public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \n-\t// Logger\n+// Loggerprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n+\n \tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n \n \tpublic Object loadUserBySAML(SAMLCredential credential)\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/23/SAMLUserDetailsServiceImpl.java\nindex 93e23bdff27..b1a33479845 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/23/SAMLUserDetailsServiceImpl.java\n@@ -32,26 +32,26 @@ import java.util.List;\n @Service\n public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \n-\t// Logger\n-\tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n+    // Logger\n+    private static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n \n-\tpublic Object loadUserBySAML(SAMLCredential credential)\n-\t\t\tthrows UsernameNotFoundException {\n+    public Object loadUserBySAML(SAMLCredential credential)\n+        throws UsernameNotFoundException {\n \n-\t\t// The method is supposed to identify local account of user referenced by\n-\t\t// data in the SAML assertion and return UserDetails object describing the user.\n+        // The method is supposed to identify local account of user referenced by\n+        // data in the SAML assertion and return UserDetails object describing the user.\n \n-\t\tString userID = credential.getNameID().getValue();\n+        String userID = credential.getNameID().getValue();\n \n-\t\tLOG.info(userID + \" is logged in\");\n-\t\tList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();\n-\t\tGrantedAuthority authority = new SimpleGrantedAuthority(\"ROLE_USER\");\n-\t\tauthorities.add(authority);\n+        LOG.info(userID + \" is logged in\");\n+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();\n+        GrantedAuthority authority = new SimpleGrantedAuthority(\"ROLE_USER\");\n+        authorities.add(authority);\n \n-\t\t// In a real scenario, this implementation has to locate user in a arbitrary\n-\t\t// dataStore based on information present in the SAMLCredential and\n-\t\t// returns such a date in a form of application specific UserDetails object.\n-\t\treturn new User(userID, \"<abc123>\", true, true, true, true, authorities);\n-\t}\n+        // In a real scenario, this implementation has to locate user in a arbitrary\n+        // dataStore based on information present in the SAMLCredential and\n+        // returns such a date in a form of application specific UserDetails object.\n+        return new User(userID, \"<abc123>\", true, true, true, true, authorities);\n+    }\n \n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/23/SAMLUserDetailsServiceImpl.java\nindex 93e23bdff27..308181423c5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/23/SAMLUserDetailsServiceImpl.java\n@@ -32,13 +32,12 @@ import java.util.List;\n @Service\n public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \n-\t// Logger\n+    // Logger\n \tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n \n-\tpublic Object loadUserBySAML(SAMLCredential credential)\n-\t\t\tthrows UsernameNotFoundException {\n+\tpublic Object loadUserBySAML(SAMLCredential credential) throws UsernameNotFoundException {\n \n-\t\t// The method is supposed to identify local account of user referenced by\n+    // The method is supposed to identify local account of user referenced by\n \t\t// data in the SAML assertion and return UserDetails object describing the user.\n \n \t\tString userID = credential.getNameID().getValue();\n@@ -52,6 +51,5 @@ public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \t\t// dataStore based on information present in the SAMLCredential and\n \t\t// returns such a date in a form of application specific UserDetails object.\n \t\treturn new User(userID, \"<abc123>\", true, true, true, true, authorities);\n-\t}\n-\n-}\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/23/SAMLUserDetailsServiceImpl.java\nindex 93e23bdff27..48365308d5a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/23/SAMLUserDetailsServiceImpl.java\n@@ -32,7 +32,8 @@ import java.util.List;\n @Service\n public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \n-\t// Logger\n+// Loggerprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n+\n \tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n \n \tpublic Object loadUserBySAML(SAMLCredential credential)\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/23/SAMLUserDetailsServiceImpl.java\nindex 93e23bdff27..cf2c842ff09 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/23/SAMLUserDetailsServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/23/SAMLUserDetailsServiceImpl.java\n@@ -32,8 +32,8 @@ import java.util.List;\n @Service\n public class SAMLUserDetailsServiceImpl implements SAMLUserDetailsService {\n \n-\t// Logger\n-\tprivate static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n+    // Logger\n+ private static final Logger LOG = LoggerFactory.getLogger(SAMLUserDetailsServiceImpl.class);\n \n \tpublic Object loadUserBySAML(SAMLCredential credential)\n \t\t\tthrows UsernameNotFoundException {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "V1toss-JavaPA",
+    "violation_id": "23",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "55",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@Repository\npublic interface OrderDAO extends CrudRepository<Order,Integer> {\n\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/23/OrderDAO.java\nindex 2654ccea953..ead9f29e2ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/23/OrderDAO.java\n@@ -12,7 +12,7 @@ import vkaretko.domain.Order;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n \n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/23/OrderDAO.java\nindex 2654ccea953..ead9f29e2ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/23/OrderDAO.java\n@@ -12,7 +12,7 @@ import vkaretko.domain.Order;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n \n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/23/OrderDAO.java\nindex 2654ccea953..b2516bfeda6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/23/OrderDAO.java\n@@ -12,7 +12,5 @@ import vkaretko.domain.Order;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n-\n-\n-}\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/23/OrderDAO.java\nindex 2654ccea953..9130291618b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/23/OrderDAO.java\n@@ -11,8 +11,8 @@ import vkaretko.domain.Order;\n  * @version 1.00.\n  * @since 08.05.2017.\n  */\n-@Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n \n \n-}\n+@Repository\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/23/OrderDAO.java\nindex 2654ccea953..ead9f29e2ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/23/OrderDAO.java\n@@ -12,7 +12,7 @@ import vkaretko.domain.Order;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n \n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/23/OrderDAO.java\nindex 2654ccea953..ead9f29e2ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/23/OrderDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/23/OrderDAO.java\n@@ -12,7 +12,7 @@ import vkaretko.domain.Order;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface OrderDAO extends CrudRepository<Order,Integer> {\n+public interface OrderDAO extends CrudRepository<Order, Integer> {\n \n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

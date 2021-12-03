@@ -1,0 +1,110 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "675",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/675/IntArrayElementStorage.java\nindex eaed829d1d1..5ee4522e2e8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/675/IntArrayElementStorage.java\n@@ -27,203 +27,204 @@ import java.io.IOException;\n  * Complex object storage which use a array as storage structure\n  */\n public class IntArrayElementStorage extends IntElementStorage {\n-  /**\n-   * Complex object storage\n-   */\n-  private IElement[] data;\n-\n-  public IntArrayElementStorage(Class<? extends IElement> objectClass, int len, long indexOffset) {\n-    this(objectClass, new IElement[len], indexOffset);\n-  }\n-\n-  public IntArrayElementStorage(Class<? extends IElement> objectClass, IElement[] data,\n-      long indexOffset) {\n-    super(objectClass, indexOffset);\n-    this.data = data;\n-  }\n-\n-  public IntArrayElementStorage() {\n-    this(null, 0, 0L);\n-  }\n-\n-  public IElement[] getData() {\n-    return data;\n-  }\n-\n-  public void setData(IElement[] data) {\n-    this.data = data;\n-  }\n-\n-  @Override\n-  public boolean exist(int index) {\n-    return data[index - (int) indexOffset] != null;\n-  }\n-\n-  @Override\n-  public IElement get(int index) {\n-    return data[index - (int) indexOffset];\n-  }\n-\n-  @Override\n-  public void set(int index, IElement value) {\n-    data[index - (int) indexOffset] = value;\n-  }\n-\n-  @Override\n-  public IElement[] get(int[] indices) {\n-    IElement[] result = new IElement[indices.length];\n-    for (int i = 0; i < indices.length; i++) {\n-      result[i] = get(indices[i]);\n-    }\n-    return result;\n-  }\n-\n-  @Override\n-  public void set(int[] indices, IElement[] values) {\n-    assert indices.length == values.length;\n-    for (int i = 0; i < indices.length; i++) {\n-      set(indices[i], values[i]);\n-    }\n-  }\n-\n-  @Override\n-  public void clear() {\n-    for (int i = 0; i < data.length; i++) {\n-      data[i] = null;\n-    }\n-  }\n-\n-  @Override\n-  public IntArrayElementStorage deepClone() {\n-    IElement[] cloneData = new IElement[data.length];\n-    for (int i = 0; i < data.length; i++) {\n-      if (data[i] != null) {\n-        cloneData[i] = (IElement) data[i].deepClone();\n-      }\n-    }\n-    return new IntArrayElementStorage(objectClass, cloneData, indexOffset);\n-  }\n-\n-  @Override\n-  public int size() {\n-    return data.length;\n-  }\n-\n-  @Override\n-  public boolean isDense() {\n-    return true;\n-  }\n-\n-  @Override\n-  public boolean isSparse() {\n-    return false;\n-  }\n-\n-  @Override\n-  public boolean isSorted() {\n-    return false;\n-  }\n-\n-  @Override\n-  public IntArrayElementStorage adaptiveClone() {\n-    return this;\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf buf) {\n-    super.serialize(buf);\n-    // Use sparse storage method, as some elements in the array maybe null\n-    // Array length\n-    buf.writeInt(data.length);\n-\n-    // Valid element number\n-    int writeIndex = buf.writerIndex();\n-    buf.writeInt(0);\n-\n-    // Element data\n-    int writeNum = 0;\n-    for (int i = 0; i < data.length; i++) {\n-      if (data[i] != null) {\n-        buf.writeInt(i);\n-        data[i].serialize(buf);\n-        writeNum++;\n-      }\n-    }\n-    buf.setInt(writeIndex, writeNum);\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf buf) {\n-    super.deserialize(buf);\n-    // Array len\n-    int len = buf.readInt();\n-    data = new IElement[len];\n-\n-    // Valid element number\n-    int elementNum = buf.readInt();\n-\n-    for (int i = 0; i < elementNum; i++) {\n-      IElement element = newElement();\n-      data[buf.readInt()] = element;\n-      element.deserialize(buf);\n-    }\n-  }\n-\n-\n-  @Override\n-  public int bufferLen() {\n-    int dataLen = 0;\n-    for (int i = 0; i < data.length; i++) {\n-      dataLen += (4 + data[i].bufferLen());\n-    }\n-    return super.bufferLen() + 8 + dataLen;\n-  }\n-\n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-    super.serialize(output);\n-    // Use sparse storage method, as some elements in the array maybe null\n-    // Array length\n-    output.writeInt(data.length);\n-\n-    // Valid element number\n-    // Element data\n-    int writeNum = 0;\n-    for (int i = 0; i < data.length; i++) {\n-      if (data[i] != null) {\n-        writeNum++;\n-      }\n-    }\n-    output.writeInt(writeNum);\n-\n-    // Element data\n-    for (int i = 0; i < data.length; i++) {\n-      if (data[i] != null) {\n-        output.writeInt(i);\n-        data[i].serialize(output);\n-      }\n-    }\n-  }\n-\n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-    super.deserialize(input);\n-    // Array len\n-    int len = input.readInt();\n-    data = new IElement[len];\n-\n-    // Valid element number\n-    int elementNum = input.readInt();\n-\n-    for (int i = 0; i < elementNum; i++) {\n-      IElement element = newElement();\n-      data[input.readInt()] = element;\n-      element.deserialize(input);\n-    }\n-  }\n-\n-  @Override\n-  public int dataLen() {\n-    return bufferLen();\n-  }\n+    /**\n+     * Complex object storage\n+     */\n+    private IElement[] data;\n+\n+    public IntArrayElementStorage(Class<? extends IElement> objectClass, int len,\n+                                  long indexOffset) {\n+        this(objectClass, new IElement[len], indexOffset);\n+    }\n+\n+    public IntArrayElementStorage(Class<? extends IElement> objectClass, IElement[] data,\n+                                  long indexOffset) {\n+        super(objectClass, indexOffset);\n+        this.data = data;\n+    }\n+\n+    public IntArrayElementStorage() {\n+        this(null, 0, 0L);\n+    }\n+\n+    public IElement[] getData() {\n+        return data;\n+    }\n+\n+    public void setData(IElement[] data) {\n+        this.data = data;\n+    }\n+\n+    @Override\n+    public boolean exist(int index) {\n+        return data[index - (int) indexOffset] != null;\n+    }\n+\n+    @Override\n+    public IElement get(int index) {\n+        return data[index - (int) indexOffset];\n+    }\n+\n+    @Override\n+    public void set(int index, IElement value) {\n+        data[index - (int) indexOffset] = value;\n+    }\n+\n+    @Override\n+    public IElement[] get(int[] indices) {\n+        IElement[] result = new IElement[indices.length];\n+        for (int i = 0; i < indices.length; i++) {\n+            result[i] = get(indices[i]);\n+        }\n+        return result;\n+    }\n+\n+    @Override\n+    public void set(int[] indices, IElement[] values) {\n+        assert indices.length == values.length;\n+        for (int i = 0; i < indices.length; i++) {\n+            set(indices[i], values[i]);\n+        }\n+    }\n+\n+    @Override\n+    public void clear() {\n+        for (int i = 0; i < data.length; i++) {\n+            data[i] = null;\n+        }\n+    }\n+\n+    @Override\n+    public IntArrayElementStorage deepClone() {\n+        IElement[] cloneData = new IElement[data.length];\n+        for (int i = 0; i < data.length; i++) {\n+            if (data[i] != null) {\n+                cloneData[i] = (IElement) data[i].deepClone();\n+            }\n+        }\n+        return new IntArrayElementStorage(objectClass, cloneData, indexOffset);\n+    }\n+\n+    @Override\n+    public int size() {\n+        return data.length;\n+    }\n+\n+    @Override\n+    public boolean isDense() {\n+        return true;\n+    }\n+\n+    @Override\n+    public boolean isSparse() {\n+        return false;\n+    }\n+\n+    @Override\n+    public boolean isSorted() {\n+        return false;\n+    }\n+\n+    @Override\n+    public IntArrayElementStorage adaptiveClone() {\n+        return this;\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        super.serialize(buf);\n+        // Use sparse storage method, as some elements in the array maybe null\n+        // Array length\n+        buf.writeInt(data.length);\n+\n+        // Valid element number\n+        int writeIndex = buf.writerIndex();\n+        buf.writeInt(0);\n+\n+        // Element data\n+        int writeNum = 0;\n+        for (int i = 0; i < data.length; i++) {\n+            if (data[i] != null) {\n+                buf.writeInt(i);\n+                data[i].serialize(buf);\n+                writeNum++;\n+            }\n+        }\n+        buf.setInt(writeIndex, writeNum);\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        super.deserialize(buf);\n+        // Array len\n+        int len = buf.readInt();\n+        data = new IElement[len];\n+\n+        // Valid element number\n+        int elementNum = buf.readInt();\n+\n+        for (int i = 0; i < elementNum; i++) {\n+            IElement element = newElement();\n+            data[buf.readInt()] = element;\n+            element.deserialize(buf);\n+        }\n+    }\n+\n+\n+    @Override\n+    public int bufferLen() {\n+        int dataLen = 0;\n+        for (int i = 0; i < data.length; i++) {\n+            dataLen += (4 + data[i].bufferLen());\n+        }\n+        return super.bufferLen() + 8 + dataLen;\n+    }\n+\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+        super.serialize(output);\n+        // Use sparse storage method, as some elements in the array maybe null\n+        // Array length\n+        output.writeInt(data.length);\n+\n+        // Valid element number\n+        // Element data\n+        int writeNum = 0;\n+        for (int i = 0; i < data.length; i++) {\n+            if (data[i] != null) {\n+                writeNum++;\n+            }\n+        }\n+        output.writeInt(writeNum);\n+\n+        // Element data\n+        for (int i = 0; i < data.length; i++) {\n+            if (data[i] != null) {\n+                output.writeInt(i);\n+                data[i].serialize(output);\n+            }\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+        super.deserialize(input);\n+        // Array len\n+        int len = input.readInt();\n+        data = new IElement[len];\n+\n+        // Valid element number\n+        int elementNum = input.readInt();\n+\n+        for (int i = 0; i < elementNum; i++) {\n+            IElement element = newElement();\n+            data[input.readInt()] = element;\n+            element.deserialize(input);\n+        }\n+    }\n+\n+    @Override\n+    public int dataLen() {\n+        return bufferLen();\n+    }\n }\n",
+            "diff_size": 200
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/675/IntArrayElementStorage.java\nindex eaed829d1d1..6eab8d3507f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/675/IntArrayElementStorage.java\n@@ -37,7 +37,7 @@ public class IntArrayElementStorage extends IntElementStorage {\n   }\n \n   public IntArrayElementStorage(Class<? extends IElement> objectClass, IElement[] data,\n-      long indexOffset) {\n+long indexOffset) {\n     super(objectClass, indexOffset);\n     this.data = data;\n   }\n@@ -169,8 +169,7 @@ public class IntArrayElementStorage extends IntElementStorage {\n     }\n   }\n \n-\n-  @Override\n+@Override\n   public int bufferLen() {\n     int dataLen = 0;\n     for (int i = 0; i < data.length; i++) {\n@@ -226,4 +225,4 @@ public class IntArrayElementStorage extends IntElementStorage {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/675/IntArrayElementStorage.java\nindex eaed829d1d1..8d064d3ae07 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/675/IntArrayElementStorage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/675/IntArrayElementStorage.java\n@@ -26,18 +26,19 @@ import java.io.IOException;\n /**\n  * Complex object storage which use a array as storage structure\n  */\n+\n public class IntArrayElementStorage extends IntElementStorage {\n   /**\n    * Complex object storage\n    */\n+\n   private IElement[] data;\n \n   public IntArrayElementStorage(Class<? extends IElement> objectClass, int len, long indexOffset) {\n     this(objectClass, new IElement[len], indexOffset);\n   }\n \n-  public IntArrayElementStorage(Class<? extends IElement> objectClass, IElement[] data,\n-      long indexOffset) {\n+  public IntArrayElementStorage(Class<? extends IElement> objectClass, IElement[] data, long indexOffset) {\n     super(objectClass, indexOffset);\n     this.data = data;\n   }\n@@ -137,10 +138,12 @@ public class IntArrayElementStorage extends IntElementStorage {\n     buf.writeInt(data.length);\n \n     // Valid element number\n+\n     int writeIndex = buf.writerIndex();\n     buf.writeInt(0);\n \n     // Element data\n+\n     int writeNum = 0;\n     for (int i = 0; i < data.length; i++) {\n       if (data[i] != null) {\n@@ -156,12 +159,13 @@ public class IntArrayElementStorage extends IntElementStorage {\n   public void deserialize(ByteBuf buf) {\n     super.deserialize(buf);\n     // Array len\n+\n     int len = buf.readInt();\n     data = new IElement[len];\n \n     // Valid element number\n-    int elementNum = buf.readInt();\n \n+    int elementNum = buf.readInt();\n     for (int i = 0; i < elementNum; i++) {\n       IElement element = newElement();\n       data[buf.readInt()] = element;\n@@ -169,7 +173,6 @@ public class IntArrayElementStorage extends IntElementStorage {\n     }\n   }\n \n-\n   @Override\n   public int bufferLen() {\n     int dataLen = 0;\n@@ -188,6 +191,7 @@ public class IntArrayElementStorage extends IntElementStorage {\n \n     // Valid element number\n     // Element data\n+\n     int writeNum = 0;\n     for (int i = 0; i < data.length; i++) {\n       if (data[i] != null) {\n@@ -209,12 +213,13 @@ public class IntArrayElementStorage extends IntElementStorage {\n   public void deserialize(DataInputStream input) throws IOException {\n     super.deserialize(input);\n     // Array len\n+\n     int len = input.readInt();\n     data = new IElement[len];\n \n     // Valid element number\n-    int elementNum = input.readInt();\n \n+    int elementNum = input.readInt();\n     for (int i = 0; i < elementNum; i++) {\n       IElement element = newElement();\n       data[input.readInt()] = element;\n@@ -226,4 +231,5 @@ public class IntArrayElementStorage extends IntElementStorage {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

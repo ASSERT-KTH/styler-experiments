@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "36",
+    "information": {
+        "violations": [
+            {
+                "line": "49",
+                "column": "25",
+                "severity": "error",
+                "message": "'{' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "        UserDelayQueueTO item = (UserDelayQueueTO) o;\n        long diff = this.time - item.time;\n        if (diff <= 0) {// \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n            return -1;\n        } else {\n            return 1;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/36/UserDelayQueueTO.java\nindex 9626a323791..9ae93c820c5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/36/UserDelayQueueTO.java\n@@ -46,7 +46,7 @@ public class UserDelayQueueTO implements Delayed {\n     public int compareTo(Delayed o) {\n         UserDelayQueueTO item = (UserDelayQueueTO) o;\n         long diff = this.time - item.time;\n-        if (diff <= 0) {// \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n+        if (diff <= 0) { // \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n             return -1;\n         } else {\n             return 1;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "49",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/36/UserDelayQueueTO.java\nindex 9626a323791..22d21840bba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/36/UserDelayQueueTO.java\n@@ -46,10 +46,10 @@ public class UserDelayQueueTO implements Delayed {\n     public int compareTo(Delayed o) {\n         UserDelayQueueTO item = (UserDelayQueueTO) o;\n         long diff = this.time - item.time;\n-        if (diff <= 0) {// \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n+        if (diff <= 0) { // \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n             return -1;\n         } else {\n             return 1;\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/36/UserDelayQueueTO.java\nindex 9626a323791..9ae93c820c5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/36/UserDelayQueueTO.java\n@@ -46,7 +46,7 @@ public class UserDelayQueueTO implements Delayed {\n     public int compareTo(Delayed o) {\n         UserDelayQueueTO item = (UserDelayQueueTO) o;\n         long diff = this.time - item.time;\n-        if (diff <= 0) {// \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n+        if (diff <= 0) { // \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n             return -1;\n         } else {\n             return 1;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/36/UserDelayQueueTO.java\nindex 9626a323791..c3031daeb79 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/36/UserDelayQueueTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/36/UserDelayQueueTO.java\n@@ -46,8 +46,9 @@ public class UserDelayQueueTO implements Delayed {\n     public int compareTo(Delayed o) {\n         UserDelayQueueTO item = (UserDelayQueueTO) o;\n         long diff = this.time - item.time;\n-        if (diff <= 0) {// \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n-            return -1;\n+        if (diff <= 0) {\n+            // \u6539\u6210>=\u4f1a\u9020\u6210\u95ee\u9898\n+        return -1;\n         } else {\n             return 1;\n         }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

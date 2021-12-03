@@ -1,0 +1,116 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "2408",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "34",
+                    "column": "30",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "34",
+                    "column": "119",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "40",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2408/AbstractConstraintCreator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2408/AbstractConstraintCreator.java\nindex 1f3f860faf6..d855127b567 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2408/AbstractConstraintCreator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2408/AbstractConstraintCreator.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.impl.coreapi.schema;\n \n import org.neo4j.graphdb.schema.ConstraintDefinition;\n@@ -30,7 +31,7 @@ abstract class AbstractConstraintCreator\n     protected final IndexType indexType;\n     protected final IndexConfig indexConfig;\n \n-    AbstractConstraintCreator( InternalSchemaActions actions, String name, IndexType indexType, IndexConfig indexConfig )\n+    AbstractConstraintCreator(InternalSchemaActions actions, String name, IndexType indexType, IndexConfig indexConfig)\n     {\n         this.actions = actions;\n         this.name = name;\n@@ -41,7 +42,7 @@ abstract class AbstractConstraintCreator\n     public ConstraintDefinition create()\n     {\n         assertInUnterminatedTransaction();\n-        throw new IllegalStateException( \"No constraint assertions specified\" );\n+        throw new IllegalStateException(\"No constraint assertions specified\");\n     }\n \n     protected final void assertInUnterminatedTransaction()\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

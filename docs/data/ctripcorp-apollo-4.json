@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "4",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "25",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private int num;\n\n  public Number(int num){\n    this.num = num;\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/4/Number.java\nindex 8bf6589ee8f..b33f9fca741 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/4/Number.java\nindex 8bf6589ee8f..b33f9fca741 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/4/Number.java\nindex 8bf6589ee8f..b6550f8ec10 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n@@ -14,4 +14,4 @@ public class Number {\n   public void setNum(int num) {\n     this.num = num;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/4/Number.java\nindex 8bf6589ee8f..b6550f8ec10 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n@@ -14,4 +14,4 @@ public class Number {\n   public void setNum(int num) {\n     this.num = num;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/4/Number.java\nindex 8bf6589ee8f..b33f9fca741 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/4/Number.java\nindex 8bf6589ee8f..b33f9fca741 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/4/Number.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/4/Number.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n public class Number {\n   private int num;\n \n-  public Number(int num){\n+  public Number(int num) {\n     this.num = num;\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

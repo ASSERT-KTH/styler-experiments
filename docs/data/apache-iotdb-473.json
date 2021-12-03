@@ -1,0 +1,107 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "473",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.cluster.query.reader.mult;\n\nimport org.apache.iotdb.db.query.reader.universal.Element;\nimport org.apache.iotdb.db.query.reader.universal.PriorityMergeReader;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/473/AssignPathPriorityMergeReader.java\nindex 30c6f701aff..fc260c344a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/473/AssignPathPriorityMergeReader.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.cluster.query.reader.mult;\n \n import org.apache.iotdb.db.query.reader.universal.Element;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/473/AssignPathPriorityMergeReader.java\nindex 30c6f701aff..fc260c344a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/473/AssignPathPriorityMergeReader.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.cluster.query.reader.mult;\n \n import org.apache.iotdb.db.query.reader.universal.Element;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 115).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/473/AssignPathPriorityMergeReader.java\nindex 30c6f701aff..68fa95a797c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/473/AssignPathPriorityMergeReader.java\n@@ -21,13 +21,13 @@ package org.apache.iotdb.cluster.query.reader.mult;\n import org.apache.iotdb.db.query.reader.universal.Element;\n import org.apache.iotdb.db.query.reader.universal.PriorityMergeReader;\n import org.apache.iotdb.tsfile.read.TimeValuePair;\n-\n import java.io.IOException;\n \n /**\n  * This class extends {@link extends PriorityMergeReader} for data sources with different\n  * priorities.\n  */\n+\n public class AssignPathPriorityMergeReader extends PriorityMergeReader {\n \n   private String fullPath;\n@@ -39,17 +39,15 @@ public class AssignPathPriorityMergeReader extends PriorityMergeReader {\n \n   public void addReader(AbstractMultPointReader reader, long priority) throws IOException {\n     if (reader.hasNextTimeValuePair(fullPath)) {\n-      heap.add(\n-          new MultElement(\n-              reader, reader.nextTimeValuePair(fullPath), new MergeReaderPriority(priority, 0)));\n+      heap.add(new MultElement(reader, reader.nextTimeValuePair(fullPath), new MergeReaderPriority(priority, 0)));\n     } else {\n       reader.close();\n     }\n   }\n \n   public class MultElement extends Element {\n-    public MultElement(\n-        AbstractMultPointReader reader, TimeValuePair timeValuePair, MergeReaderPriority priority) {\n+\n+    public MultElement(AbstractMultPointReader reader, TimeValuePair timeValuePair, MergeReaderPriority priority) {\n       super(reader, timeValuePair, priority);\n     }\n \n@@ -63,4 +61,4 @@ public class AssignPathPriorityMergeReader extends PriorityMergeReader {\n       timeValuePair = ((AbstractMultPointReader) reader).nextTimeValuePair(fullPath);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "60",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/473/AssignPathPriorityMergeReader.java\nindex 30c6f701aff..89090c2a1bd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/473/AssignPathPriorityMergeReader.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.cluster.query.reader.mult;\n+package org.apache.iotdb.cluster.query.reader.mult\n \n-import org.apache.iotdb.db.query.reader.universal.Element;\n+; import org.apache.iotdb.db.query.reader.universal.Element;\n import org.apache.iotdb.db.query.reader.universal.PriorityMergeReader;\n import org.apache.iotdb.tsfile.read.TimeValuePair;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/473/AssignPathPriorityMergeReader.java\nindex 30c6f701aff..fc260c344a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/473/AssignPathPriorityMergeReader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/473/AssignPathPriorityMergeReader.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.cluster.query.reader.mult;\n \n import org.apache.iotdb.db.query.reader.universal.Element;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

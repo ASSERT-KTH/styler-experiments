@@ -1,0 +1,110 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "3290",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "22",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "46",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3290/ConfigResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3290/ConfigResult.java\nindex 454c45a553d..2f4d2038666 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3290/ConfigResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3290/ConfigResult.java\n@@ -17,20 +17,21 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.builtinprocs;\n \n import org.neo4j.configuration.ConfigValue;\n \n public class ConfigResult\n {\n-    public final String name;\n-    public final String description;\n-    public final String value;\n+  public final String name;\n+  public final String description;\n+  public final String value;\n \n-    public ConfigResult( ConfigValue configValue )\n-    {\n-        this.name = configValue.name();\n-        this.description = configValue.description().orElse( \"\" );\n-        this.value = configValue.valueAsString().orElse( \"\" );\n-    }\n+  public ConfigResult(ConfigValue configValue)\n+  {\n+    this.name = configValue.name();\n+    this.description = configValue.description().orElse(\"\");\n+    this.value = configValue.valueAsString().orElse(\"\");\n+  }\n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3290/ConfigResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3290/ConfigResult.java\nindex 454c45a553d..6b0285889b4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3290/ConfigResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3290/ConfigResult.java\n@@ -24,8 +24,10 @@ import org.neo4j.configuration.ConfigValue;\n public class ConfigResult\n {\n     public final String name;\n-    public final String description;\n-    public final String value;\n+\n+public final String description;\n+\n+public final String value;\n \n     public ConfigResult( ConfigValue configValue )\n     {\n@@ -33,4 +35,4 @@ public class ConfigResult\n         this.description = configValue.description().orElse( \"\" );\n         this.value = configValue.valueAsString().orElse( \"\" );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-usergrid",
+    "violation_id": "85",
+    "information": {
+        "violations": [
+            {
+                "line": "24",
+                "severity": "warning",
+                "message": "Use of @author javadoc keyword is prohibited.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": " * have the job implementation.  Nodes receiving this message should log it and move on.\n *\n * @author tnine\n */\npublic class JobNotFoundException extends Exception {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/85/JobNotFoundException.java\nindex 4465bfb4fda..d35d4386c5f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/85/JobNotFoundException.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.usergrid.batch;\n \n \n@@ -33,7 +34,7 @@ public class JobNotFoundException extends Exception {\n     private static final String DEF_MSG = \"Unable to find the job with name %s\";\n \n \n-    public JobNotFoundException( String jobName ) {\n-        super( String.format( DEF_MSG, jobName ) );\n+    public JobNotFoundException(String jobName) {\n+        super(String.format(DEF_MSG, jobName));\n     }\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/85/JobNotFoundException.java\nindex 4465bfb4fda..3e7c257e45f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/85/JobNotFoundException.java\n@@ -36,4 +36,4 @@ public class JobNotFoundException extends Exception {\n     public JobNotFoundException( String jobName ) {\n         super( String.format( DEF_MSG, jobName ) );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/85/JobNotFoundException.java\nindex 4465bfb4fda..02579386b17 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/85/JobNotFoundException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/85/JobNotFoundException.java\n@@ -23,17 +23,19 @@ package org.apache.usergrid.batch;\n  *\n  * @author tnine\n  */\n+\n+\n public class JobNotFoundException extends Exception {\n \n     /**\n      *\n      */\n-    private static final long serialVersionUID = -67437852214725320L;\n \n+    private static final long serialVersionUID = -67437852214725320L;\n     private static final String DEF_MSG = \"Unable to find the job with name %s\";\n \n \n     public JobNotFoundException( String jobName ) {\n         super( String.format( DEF_MSG, jobName ) );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

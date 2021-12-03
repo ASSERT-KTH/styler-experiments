@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "339",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface SVGAnimatedTransformList {\n\n\t/**\n\t * <p>getBaseVal.</p>\n\t *\n\t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/339/SVGAnimatedTransformList.java\nindex 6eeea03c9f7..3134431789f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/339/SVGAnimatedTransformList.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGAnimatedTransformList {\n \n-\t/**\n+    /**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n \t */\n-\tSVGTransformList getBaseVal();\n+ SVGTransformList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/339/SVGAnimatedTransformList.java\nindex 6eeea03c9f7..749e4f42899 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/339/SVGAnimatedTransformList.java\n@@ -18,27 +18,25 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGAnimatedTransformList interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGAnimatedTransformList {\n \n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n-\t */\n-\tSVGTransformList getBaseVal();\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n+     */\n+    SVGTransformList getBaseVal();\n \n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n-\t */\n-\tSVGTransformList getAnimVal();\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n+     */\n+    SVGTransformList getAnimVal();\n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/339/SVGAnimatedTransformList.java\nindex 6eeea03c9f7..21544c7755f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/339/SVGAnimatedTransformList.java\n@@ -26,19 +26,25 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n+\n+\n public interface SVGAnimatedTransformList {\n \n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n-\t */\n-\tSVGTransformList getBaseVal();\n-\n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n-\t */\n-\tSVGTransformList getAnimVal();\n-}\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n+     */\n+\n+\n+    SVGTransformList getBaseVal();\n+\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n+     */\n+\n+\n+    SVGTransformList getAnimVal();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/339/SVGAnimatedTransformList.java\nindex 6eeea03c9f7..3134431789f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/339/SVGAnimatedTransformList.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGAnimatedTransformList {\n \n-\t/**\n+    /**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n \t */\n-\tSVGTransformList getBaseVal();\n+ SVGTransformList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/339/SVGAnimatedTransformList.java\nindex 6eeea03c9f7..3134431789f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/339/SVGAnimatedTransformList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/339/SVGAnimatedTransformList.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGAnimatedTransformList {\n \n-\t/**\n+    /**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGTransformList} object.\n \t */\n-\tSVGTransformList getBaseVal();\n+ SVGTransformList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

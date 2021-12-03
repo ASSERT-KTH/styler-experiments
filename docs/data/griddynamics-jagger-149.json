@@ -1,0 +1,131 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "149",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 160).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public interface Calibrator {\n\n    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "',' has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "32",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "',' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/149/Calibrator.java\nindex 5aa9ac75f0f..22b45a54bb9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/149/Calibrator.java\n@@ -28,6 +28,7 @@ import java.util.Map;\n \n public interface Calibrator {\n \n-    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n+    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory\n+        ,Map<NodeId, RemoteExecutor> remotes, long timeout);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/149/Calibrator.java\nindex 5aa9ac75f0f..91d73aeb5c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/149/Calibrator.java\n@@ -28,6 +28,7 @@ import java.util.Map;\n \n public interface Calibrator {\n \n-    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n+    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes,\n+                   long timeout);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 160).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/149/Calibrator.java\nindex 5aa9ac75f0f..0c3d889c95c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/149/Calibrator.java\n@@ -30,4 +30,4 @@ public interface Calibrator {\n \n     void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 160).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/149/Calibrator.java\nindex 5aa9ac75f0f..7d995214459 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/149/Calibrator.java\n@@ -23,11 +23,10 @@ package com.griddynamics.jagger.engine.e1.scenario;\n import com.griddynamics.jagger.coordinator.NodeId;\n import com.griddynamics.jagger.coordinator.RemoteExecutor;\n import com.griddynamics.jagger.invoker.ScenarioFactory;\n-\n import java.util.Map;\n \n+\n public interface Calibrator {\n \n     void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "114",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "'>' has incorrect indentation level 0, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "'remotes' has incorrect indentation level 4, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/149/Calibrator.java\nindex 5aa9ac75f0f..aa0700dccf5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/149/Calibrator.java\n@@ -28,6 +28,8 @@ import java.util.Map;\n \n public interface Calibrator {\n \n-    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n+    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map< NodeId,RemoteExecutor\n+>\n+    remotes, long timeout);\n \n-}\n+ }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "',' has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "32",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "',' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/149/Calibrator.java\nindex 5aa9ac75f0f..22b45a54bb9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/149/Calibrator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/149/Calibrator.java\n@@ -28,6 +28,7 @@ import java.util.Map;\n \n public interface Calibrator {\n \n-    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory, Map<NodeId, RemoteExecutor> remotes, long timeout);\n+    void calibrate(String sessionId, String taskId, ScenarioFactory<Object, Object, Object> scenarioFactory\n+        ,Map<NodeId, RemoteExecutor> remotes, long timeout);\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "V1toss-JavaPA",
+    "violation_id": "3",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "53",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@Repository\npublic interface UserDAO extends CrudRepository<User,Integer> {\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/3/UserDAO.java\nindex 3570f07a237..dfda96a84c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/3/UserDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.models.User;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n+public interface UserDAO extends CrudRepository<User, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/3/UserDAO.java\nindex 3570f07a237..dfda96a84c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/3/UserDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.models.User;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n+public interface UserDAO extends CrudRepository<User, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/3/UserDAO.java\nindex 3570f07a237..3e6d781e290 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/3/UserDAO.java\n@@ -12,6 +12,5 @@ import vkaretko.models.User;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n-\n-}\n+public interface UserDAO extends CrudRepository<User, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/3/UserDAO.java\nindex 3570f07a237..ea40ee1f7e2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/3/UserDAO.java\n@@ -11,7 +11,8 @@ import vkaretko.models.User;\n  * @version 1.00.\n  * @since 08.05.2017.\n  */\n-@Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n \n-}\n+\n+@Repository\n+public interface UserDAO extends CrudRepository<User, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/3/UserDAO.java\nindex 3570f07a237..dfda96a84c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/3/UserDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.models.User;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n+public interface UserDAO extends CrudRepository<User, Integer> {\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/3/UserDAO.java\nindex 3570f07a237..dfda96a84c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/3/UserDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/3/UserDAO.java\n@@ -12,6 +12,6 @@ import vkaretko.models.User;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface UserDAO extends CrudRepository<User,Integer> {\n+public interface UserDAO extends CrudRepository<User, Integer> {\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

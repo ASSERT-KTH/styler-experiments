@@ -1,0 +1,130 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "2521",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "36",
+                    "column": "21",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "36",
+                    "column": "31",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "23",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "107",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "17",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "105",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2521/StorageNodeCursor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2521/StorageNodeCursor.java\nindex 480cf4e290d..96428b98e1c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2521/StorageNodeCursor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2521/StorageNodeCursor.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.storageengine.api;\n \n /**\n@@ -32,24 +33,25 @@ public interface StorageNodeCursor extends StorageEntityScanCursor<AllNodeScan>\n     /**\n      * @return {@code true} if the node this cursor is placed at has the given {@code label}, otherwise {@code false}.\n      */\n-    boolean hasLabel( int label );\n+    boolean hasLabel(int label);\n \n     /**\n      * @return reference for reading all relationships of the node this cursor currently is placed at.\n      */\n     long relationshipsReference();\n \n-    void relationships( StorageRelationshipTraversalCursor traversalCursor, RelationshipSelection selection );\n+    void relationships(StorageRelationshipTraversalCursor traversalCursor, RelationshipSelection selection);\n \n     int[] relationshipTypes();\n \n     /**\n      * Visits degrees, i.e. number of relationships, for relationships of the given {@code selection} and gives those degrees to the {@code mutator}.\n-     * @param selection {@link RelationshipSelection} to get degrees for.\n-     * @param mutator to given the degrees to.\n+     *\n+     * @param selection             {@link RelationshipSelection} to get degrees for.\n+     * @param mutator               to given the degrees to.\n      * @param allowFastDegreeLookup set to false if there's a need to do security checks, which require the lookup to be done with traversal.\n      */\n-    void degrees( RelationshipSelection selection, Degrees.Mutator mutator, boolean allowFastDegreeLookup );\n+    void degrees(RelationshipSelection selection, Degrees.Mutator mutator, boolean allowFastDegreeLookup);\n \n     /**\n      * NOTE the fact that this method is here means physical details about underlying storage leaks into this API.\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

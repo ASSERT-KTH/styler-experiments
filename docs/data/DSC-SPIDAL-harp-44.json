@@ -1,0 +1,90 @@
+{
+    "project_name": "DSC-SPIDAL-harp",
+    "violation_id": "44",
+    "information": {
+        "violations": [
+            {
+                "line": "21",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "public class HarpDAALConstants {\n\n  // system specific \n  public static final String NUM_MAPPERS =\n      \"num_mappers\";\n  public static final String NUM_THREADS =",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/final/files-repaired/44/HarpDAALConstants.java\nindex fe38f688730..4d1fa69d1bd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/final/files-repaired/44/HarpDAALConstants.java\n@@ -16,9 +16,8 @@\n \n package edu.iu.data_aux;\n \n-public class HarpDAALConstants {\n+public class HarpDAALConstants { // system specific \n \n-  // system specific \n   public static final String NUM_MAPPERS =\n       \"num_mappers\";\n   public static final String NUM_THREADS =\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/checkstyle_idea/44/HarpDAALConstants.java\nindex fe38f688730..c24ed310d1f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/checkstyle_idea/44/HarpDAALConstants.java\n@@ -18,54 +18,54 @@ package edu.iu.data_aux;\n \n public class HarpDAALConstants {\n \n-  // system specific \n-  public static final String NUM_MAPPERS =\n-      \"num_mappers\";\n-  public static final String NUM_THREADS =\n-      \"num_threads\";\n-  public static final String NUM_ITERATIONS =\n-      \"num_iterations\";\n-  public static final String WORK_DIR =\n-      \"work_dir\";\n+    // system specific\n+    public static final String NUM_MAPPERS =\n+        \"num_mappers\";\n+    public static final String NUM_THREADS =\n+        \"num_threads\";\n+    public static final String NUM_ITERATIONS =\n+        \"num_iterations\";\n+    public static final String WORK_DIR =\n+        \"work_dir\";\n \n-  // application specific\n-  public static final String FEATURE_DIM =\n-      \"vector_size\";\n-  public static final String FILE_DIM =\n-      \"file_dimension\";\n-  public static final String NUM_FACTOR =\n-      \"nFactors\";\n-  public static final String NUM_CLASS =\n-      \"nClass\";\n-  public static final String MAX_ITERATIONS =\n-      \"max_num_iterations\";\n-  public static final String ACC_THRESHOLD =\n-      \"accuracy_threshold\";\n-  public static final String LEARNING_RATE =\n-      \"learning_rate\";\n-  public static final String NUM_CENTROIDS =\n-      \"centroids\";\n-  public static final String CEN_DIR =\n-      \"centroids_dir\";\n-  public static final String CENTROID_FILE_NAME =\n-      \"centroids_file\";\n+    // application specific\n+    public static final String FEATURE_DIM =\n+        \"vector_size\";\n+    public static final String FILE_DIM =\n+        \"file_dimension\";\n+    public static final String NUM_FACTOR =\n+        \"nFactors\";\n+    public static final String NUM_CLASS =\n+        \"nClass\";\n+    public static final String MAX_ITERATIONS =\n+        \"max_num_iterations\";\n+    public static final String ACC_THRESHOLD =\n+        \"accuracy_threshold\";\n+    public static final String LEARNING_RATE =\n+        \"learning_rate\";\n+    public static final String NUM_CENTROIDS =\n+        \"centroids\";\n+    public static final String CEN_DIR =\n+        \"centroids_dir\";\n+    public static final String CENTROID_FILE_NAME =\n+        \"centroids_file\";\n \n-  public static final String TEST_FILE_PATH =\n-      \"test_file_path\";\n-  public static final String TRAIN_PRUNE_PATH =\n-      \"train_prune_path\";\n-  public static final String TRAIN_TRUTH_PATH =\n-      \"train_truth_path\";\n-  public static final String TEST_TRUTH_PATH =\n-      \"ground_truth_file_path\";\n-  public static final String TEST_PRUNE_PATH =\n-      \"ground_truth_file_path\";\n-  public static final String BATCH_SIZE =\n-      \"batch size\";\n-  public static final String STEP_LENGTH =\n-      \"step_length\";\n-  public static final String NUM_DEPVAR =\n-      \"nDependentVariables\";\n+    public static final String TEST_FILE_PATH =\n+        \"test_file_path\";\n+    public static final String TRAIN_PRUNE_PATH =\n+        \"train_prune_path\";\n+    public static final String TRAIN_TRUTH_PATH =\n+        \"train_truth_path\";\n+    public static final String TEST_TRUTH_PATH =\n+        \"ground_truth_file_path\";\n+    public static final String TEST_PRUNE_PATH =\n+        \"ground_truth_file_path\";\n+    public static final String BATCH_SIZE =\n+        \"batch size\";\n+    public static final String STEP_LENGTH =\n+        \"step_length\";\n+    public static final String NUM_DEPVAR =\n+        \"nDependentVariables\";\n \n-  public static final int ARR_LEN = 1000;\n+    public static final int ARR_LEN = 1000;\n }\n",
+            "diff_size": 47
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/naturalize/44/HarpDAALConstants.java\nindex fe38f688730..9b6e53dc336 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/naturalize/44/HarpDAALConstants.java\n@@ -21,51 +21,70 @@ public class HarpDAALConstants {\n   // system specific \n   public static final String NUM_MAPPERS =\n       \"num_mappers\";\n-  public static final String NUM_THREADS =\n+\n+    public static final String NUM_THREADS =\n       \"num_threads\";\n-  public static final String NUM_ITERATIONS =\n+\n+    public static final String NUM_ITERATIONS =\n       \"num_iterations\";\n-  public static final String WORK_DIR =\n+\n+    public static final String WORK_DIR =\n       \"work_dir\";\n \n   // application specific\n   public static final String FEATURE_DIM =\n       \"vector_size\";\n-  public static final String FILE_DIM =\n+\n+    public static final String FILE_DIM =\n       \"file_dimension\";\n-  public static final String NUM_FACTOR =\n+\n+    public static final String NUM_FACTOR =\n       \"nFactors\";\n-  public static final String NUM_CLASS =\n+\n+    public static final String NUM_CLASS =\n       \"nClass\";\n-  public static final String MAX_ITERATIONS =\n+\n+    public static final String MAX_ITERATIONS =\n       \"max_num_iterations\";\n-  public static final String ACC_THRESHOLD =\n+\n+    public static final String ACC_THRESHOLD =\n       \"accuracy_threshold\";\n-  public static final String LEARNING_RATE =\n+\n+    public static final String LEARNING_RATE =\n       \"learning_rate\";\n-  public static final String NUM_CENTROIDS =\n+\n+    public static final String NUM_CENTROIDS =\n       \"centroids\";\n-  public static final String CEN_DIR =\n+\n+    public static final String CEN_DIR =\n       \"centroids_dir\";\n-  public static final String CENTROID_FILE_NAME =\n+\n+    public static final String CENTROID_FILE_NAME =\n       \"centroids_file\";\n \n   public static final String TEST_FILE_PATH =\n       \"test_file_path\";\n-  public static final String TRAIN_PRUNE_PATH =\n+\n+    public static final String TRAIN_PRUNE_PATH =\n       \"train_prune_path\";\n-  public static final String TRAIN_TRUTH_PATH =\n+\n+    public static final String TRAIN_TRUTH_PATH =\n       \"train_truth_path\";\n-  public static final String TEST_TRUTH_PATH =\n+\n+    public static final String TEST_TRUTH_PATH =\n       \"ground_truth_file_path\";\n-  public static final String TEST_PRUNE_PATH =\n+\n+    public static final String TEST_PRUNE_PATH =\n       \"ground_truth_file_path\";\n-  public static final String BATCH_SIZE =\n+\n+    public static final String BATCH_SIZE =\n       \"batch size\";\n-  public static final String STEP_LENGTH =\n+\n+    public static final String STEP_LENGTH =\n       \"step_length\";\n-  public static final String NUM_DEPVAR =\n+\n+    public static final String NUM_DEPVAR =\n       \"nDependentVariables\";\n \n   public static final int ARR_LEN = 1000;\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 39
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/codebuff/44/HarpDAALConstants.java\nindex fe38f688730..ba44d648c3d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/codebuff/44/HarpDAALConstants.java\n@@ -16,56 +16,55 @@\n \n package edu.iu.data_aux;\n \n+\n public class HarpDAALConstants {\n \n   // system specific \n   public static final String NUM_MAPPERS =\n-      \"num_mappers\";\n+    \"num_mappers\";\n   public static final String NUM_THREADS =\n-      \"num_threads\";\n+    \"num_threads\";\n   public static final String NUM_ITERATIONS =\n-      \"num_iterations\";\n+    \"num_iterations\";\n   public static final String WORK_DIR =\n-      \"work_dir\";\n+    \"work_dir\";\n \n   // application specific\n   public static final String FEATURE_DIM =\n-      \"vector_size\";\n+    \"vector_size\";\n   public static final String FILE_DIM =\n-      \"file_dimension\";\n+    \"file_dimension\";\n   public static final String NUM_FACTOR =\n-      \"nFactors\";\n+    \"nFactors\";\n   public static final String NUM_CLASS =\n-      \"nClass\";\n+    \"nClass\";\n   public static final String MAX_ITERATIONS =\n-      \"max_num_iterations\";\n+    \"max_num_iterations\";\n   public static final String ACC_THRESHOLD =\n-      \"accuracy_threshold\";\n+    \"accuracy_threshold\";\n   public static final String LEARNING_RATE =\n-      \"learning_rate\";\n+    \"learning_rate\";\n   public static final String NUM_CENTROIDS =\n-      \"centroids\";\n+    \"centroids\";\n   public static final String CEN_DIR =\n-      \"centroids_dir\";\n+    \"centroids_dir\";\n   public static final String CENTROID_FILE_NAME =\n-      \"centroids_file\";\n-\n+    \"centroids_file\";\n   public static final String TEST_FILE_PATH =\n-      \"test_file_path\";\n+    \"test_file_path\";\n   public static final String TRAIN_PRUNE_PATH =\n-      \"train_prune_path\";\n+    \"train_prune_path\";\n   public static final String TRAIN_TRUTH_PATH =\n-      \"train_truth_path\";\n+    \"train_truth_path\";\n   public static final String TEST_TRUTH_PATH =\n-      \"ground_truth_file_path\";\n+    \"ground_truth_file_path\";\n   public static final String TEST_PRUNE_PATH =\n-      \"ground_truth_file_path\";\n+    \"ground_truth_file_path\";\n   public static final String BATCH_SIZE =\n-      \"batch size\";\n+    \"batch size\";\n   public static final String STEP_LENGTH =\n-      \"step_length\";\n+    \"step_length\";\n   public static final String NUM_DEPVAR =\n-      \"nDependentVariables\";\n-\n+    \"nDependentVariables\";\n   public static final int ARR_LEN = 1000;\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 26
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/three_grams/files-repaired/44/HarpDAALConstants.java\nindex fe38f688730..4d1fa69d1bd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/44/HarpDAALConstants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/three_grams/files-repaired/44/HarpDAALConstants.java\n@@ -16,9 +16,8 @@\n \n package edu.iu.data_aux;\n \n-public class HarpDAALConstants {\n+public class HarpDAALConstants { // system specific \n \n-  // system specific \n   public static final String NUM_MAPPERS =\n       \"num_mappers\";\n   public static final String NUM_THREADS =\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

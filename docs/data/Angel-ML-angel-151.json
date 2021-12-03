@@ -1,0 +1,85 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "151",
+    "information": {
+        "violations": [
+            {
+                "line": "28",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 116).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    int finished = PathQueue.getProgress(partitionId);\n\n    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n\n    if (row.size() == finished) {\n      return new GetProgressPartitionResult(true, 1.0);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/151/GetProgress.java\nindex d63ae230ff5..4912c049ff0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/151/GetProgress.java\n@@ -25,7 +25,8 @@ public class GetProgress extends GetFunc {\n     int partitionId = partParam.getPartKey().getPartitionId();\n     int finished = PathQueue.getProgress(partitionId);\n \n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n+    ServerLongAnyRow row = (ServerLongAnyRow\n+    ) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n \n     if (row.size() == finished) {\n       return new GetProgressPartitionResult(true, 1.0);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/151/GetProgress.java\nindex d63ae230ff5..25f9ff20d14 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/151/GetProgress.java\n@@ -7,44 +7,45 @@ import com.tencent.angel.ps.storage.vector.ServerLongAnyRow;\n import java.util.List;\n \n public class GetProgress extends GetFunc {\n-  /**\n-   * Create a new DefaultGetFunc.\n-   *\n-   * @param param parameter of get udf\n-   */\n-  public GetProgress(GetParam param) {\n-    super(param);\n-  }\n-\n-  public GetProgress() {\n-    super(null);\n-  }\n-\n-  @Override\n-  public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n-    int partitionId = partParam.getPartKey().getPartitionId();\n-    int finished = PathQueue.getProgress(partitionId);\n-\n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n-\n-    if (row.size() == finished) {\n-      return new GetProgressPartitionResult(true, 1.0);\n-    } else {\n-      return new GetProgressPartitionResult(false, 1.0 * finished / row.size());\n+    /**\n+     * Create a new DefaultGetFunc.\n+     *\n+     * @param param parameter of get udf\n+     */\n+    public GetProgress(GetParam param) {\n+        super(param);\n     }\n-  }\n \n-  @Override\n-  public GetResult merge(List<PartitionGetResult> partResults) {\n-    GetProgressResult result = new GetProgressResult(true, 0.0);\n+    public GetProgress() {\n+        super(null);\n+    }\n+\n+    @Override\n+    public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n+        int partitionId = partParam.getPartKey().getPartitionId();\n+        int finished = PathQueue.getProgress(partitionId);\n+\n+        ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager()\n+                .getRow(partParam.getPartKey(), 0);\n \n-    for (PartitionGetResult partResult : partResults) {\n-      GetProgressPartitionResult part = (GetProgressPartitionResult) partResult;\n-      result.setFinished(result.isFinished() && part.isFinished());\n-      result.setPrecent(result.getPrecent() + part.getPrecent());\n+        if (row.size() == finished) {\n+            return new GetProgressPartitionResult(true, 1.0);\n+        } else {\n+            return new GetProgressPartitionResult(false, 1.0 * finished / row.size());\n+        }\n     }\n \n-    result.setPrecent(result.getPrecent() / partResults.size());\n-    return result;\n-  }\n+    @Override\n+    public GetResult merge(List<PartitionGetResult> partResults) {\n+        GetProgressResult result = new GetProgressResult(true, 0.0);\n+\n+        for (PartitionGetResult partResult : partResults) {\n+            GetProgressPartitionResult part = (GetProgressPartitionResult) partResult;\n+            result.setFinished(result.isFinished() && part.isFinished());\n+            result.setPrecent(result.getPrecent() + part.getPrecent());\n+        }\n+\n+        result.setPrecent(result.getPrecent() / partResults.size());\n+        return result;\n+    }\n }\n",
+            "diff_size": 54
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 116).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/151/GetProgress.java\nindex d63ae230ff5..dbbd07323ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/151/GetProgress.java\n@@ -47,4 +47,4 @@ public class GetProgress extends GetFunc {\n     result.setPrecent(result.getPrecent() / partResults.size());\n     return result;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 116).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/151/GetProgress.java\nindex d63ae230ff5..baf04da2ea3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/151/GetProgress.java\n@@ -3,7 +3,6 @@ package com.tencent.angel.graph.client.node2vec.getfuncs.getprogress;\n import com.tencent.angel.graph.client.node2vec.utils.PathQueue;\n import com.tencent.angel.ml.matrix.psf.get.base.*;\n import com.tencent.angel.ps.storage.vector.ServerLongAnyRow;\n-\n import java.util.List;\n \n public class GetProgress extends GetFunc {\n@@ -12,6 +11,7 @@ public class GetProgress extends GetFunc {\n    *\n    * @param param parameter of get udf\n    */\n+\n   public GetProgress(GetParam param) {\n     super(param);\n   }\n@@ -24,9 +24,7 @@ public class GetProgress extends GetFunc {\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     int partitionId = partParam.getPartKey().getPartitionId();\n     int finished = PathQueue.getProgress(partitionId);\n-\n     ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n-\n     if (row.size() == finished) {\n       return new GetProgressPartitionResult(true, 1.0);\n     } else {\n@@ -37,14 +35,13 @@ public class GetProgress extends GetFunc {\n   @Override\n   public GetResult merge(List<PartitionGetResult> partResults) {\n     GetProgressResult result = new GetProgressResult(true, 0.0);\n-\n     for (PartitionGetResult partResult : partResults) {\n       GetProgressPartitionResult part = (GetProgressPartitionResult) partResult;\n       result.setFinished(result.isFinished() && part.isFinished());\n       result.setPrecent(result.getPrecent() + part.getPrecent());\n     }\n-\n     result.setPrecent(result.getPrecent() / partResults.size());\n     return result;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/151/GetProgress.java\nindex d63ae230ff5..4912c049ff0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/151/GetProgress.java\n@@ -25,7 +25,8 @@ public class GetProgress extends GetFunc {\n     int partitionId = partParam.getPartKey().getPartitionId();\n     int finished = PathQueue.getProgress(partitionId);\n \n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n+    ServerLongAnyRow row = (ServerLongAnyRow\n+    ) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n \n     if (row.size() == finished) {\n       return new GetProgressPartitionResult(true, 1.0);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "column": "74",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/151/GetProgress.java\nindex d63ae230ff5..46152f4383e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/151/GetProgress.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/151/GetProgress.java\n@@ -25,7 +25,9 @@ public class GetProgress extends GetFunc {\n     int partitionId = partParam.getPartKey().getPartitionId();\n     int finished = PathQueue.getProgress(partitionId);\n \n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(partParam.getPartKey(), 0);\n+    ServerLongAnyRow row =(\n+        ServerLongAnyRow )psContext . getMatrixStorageManager( ) .getRow (\n+  partParam .getPartKey(), 0);\n \n     if (row.size() == finished) {\n       return new GetProgressPartitionResult(true, 1.0);\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "47",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "'CTOR_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "    super(message);\n  }\n  public InvalidCreateException(String message, Throwable t) {\n    super(message, t);\n  }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/47/InvalidCreateException.java\nindex be32ceeba8f..957c4f67ca1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/47/InvalidCreateException.java\n@@ -22,6 +22,7 @@ public class InvalidCreateException extends Exception {\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n+\n   public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/47/InvalidCreateException.java\nindex be32ceeba8f..957c4f67ca1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/47/InvalidCreateException.java\n@@ -22,6 +22,7 @@ public class InvalidCreateException extends Exception {\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n+\n   public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "'ctor def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/47/InvalidCreateException.java\nindex be32ceeba8f..a8db6afbf78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/47/InvalidCreateException.java\n@@ -22,7 +22,8 @@ public class InvalidCreateException extends Exception {\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n-  public InvalidCreateException(String message, Throwable t) {\n+\n+public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/47/InvalidCreateException.java\nindex be32ceeba8f..bfac28440f7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/47/InvalidCreateException.java\n@@ -19,10 +19,12 @@\n package org.apache.metron.indexing.dao.search;\n \n public class InvalidCreateException extends Exception {\n+\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n+\n   public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/47/InvalidCreateException.java\nindex be32ceeba8f..957c4f67ca1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/47/InvalidCreateException.java\n@@ -22,6 +22,7 @@ public class InvalidCreateException extends Exception {\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n+\n   public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/47/InvalidCreateException.java\nindex be32ceeba8f..957c4f67ca1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/47/InvalidCreateException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/47/InvalidCreateException.java\n@@ -22,6 +22,7 @@ public class InvalidCreateException extends Exception {\n   public InvalidCreateException(String message) {\n     super(message);\n   }\n+\n   public InvalidCreateException(String message, Throwable t) {\n     super(message, t);\n   }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

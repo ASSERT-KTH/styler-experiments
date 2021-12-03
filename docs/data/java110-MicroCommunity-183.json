@@ -1,0 +1,63 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "183",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "column": "132",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n **/\npublic abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n    protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..b299937479c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,7 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..b299937479c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,7 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..1b3806b4fa6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,8 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n+\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n@@ -91,4 +92,4 @@ public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlo\n     }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..d4474888177 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,10 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+\n+\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n+\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n@@ -17,15 +20,13 @@ public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlo\n     private Date responseTime;\n     private String orderTypeCd;\n     private String businessType;\n-\n     private String code;\n-\n     private String message;\n-\n     private String bId;\n-\n     private String businessTypeCd;\n \n+\n+\n     public String getCode() {\n         return code;\n     }\n@@ -89,6 +90,4 @@ public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlo\n     public void setBusinessTypeCd(String businessTypeCd) {\n         this.businessTypeCd = businessTypeCd;\n     }\n-\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..b299937479c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,7 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\nindex 2d3ca58fbaa..b299937479c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/183/AbstractOrderNotifyDataFlowContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/183/AbstractOrderNotifyDataFlowContext.java\n@@ -7,7 +7,7 @@ import java.util.Date;\n  * @create 2019-02-07 \u4e0b\u53487:01\n  * @desc \u8ba2\u5355\u901a\u77e5\u6570\u636e\u6d41\u4fe1\u606f\n  **/\n-public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext,IOrderResponse {\n+public abstract class AbstractOrderNotifyDataFlowContext extends AbstractDataFlowContextPlus implements IOrderNotifyDataFlowContext, IOrderResponse {\n     protected AbstractOrderNotifyDataFlowContext(Date startDate, String code) {\n \n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

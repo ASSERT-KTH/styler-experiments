@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "138",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "column": "26",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @Transactional\n  void audit(Audit audit){\n    auditRepository.save(audit);\n  }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/138/AuditService.java\nindex 3b698ce686a..7f4f205d66a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/138/AuditService.java\n@@ -35,7 +35,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/138/AuditService.java\nindex 3b698ce686a..7f4f205d66a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/138/AuditService.java\n@@ -35,7 +35,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/138/AuditService.java\nindex 3b698ce686a..000b5cd5178 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/138/AuditService.java\n@@ -35,7 +35,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/138/AuditService.java\nindex 3b698ce686a..495f25834b4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/138/AuditService.java\n@@ -4,12 +4,10 @@ import com.ctrip.framework.apollo.biz.entity.Audit;\n import com.ctrip.framework.apollo.biz.repository.AuditRepository;\n import org.springframework.stereotype.Service;\n import org.springframework.transaction.annotation.Transactional;\n-\n import java.util.List;\n \n @Service\n public class AuditService {\n-\n   private final AuditRepository auditRepository;\n \n   public AuditService(final AuditRepository auditRepository) {\n@@ -35,7 +33,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/138/AuditService.java\nindex 3b698ce686a..7f4f205d66a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/138/AuditService.java\n@@ -35,7 +35,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/138/AuditService.java\nindex 3b698ce686a..7f4f205d66a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/138/AuditService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/138/AuditService.java\n@@ -35,7 +35,7 @@ public class AuditService {\n   }\n \n   @Transactional\n-  void audit(Audit audit){\n+  void audit(Audit audit) {\n     auditRepository.save(audit);\n   }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

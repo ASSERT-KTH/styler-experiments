@@ -1,0 +1,63 @@
+{
+    "project_name": "codefollower-H2-Research",
+    "violation_id": "334",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "5",
+                "severity": "warning",
+                "message": "'{' at column 5 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "\n    interface Factory<D>\n    {\n        DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/codefollower-H2-Research/styler/05_predictions/final/files-repaired/334/StatefulDataType.java\nindex ba46c88f9f6..db389f2191b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/codefollower-H2-Research/styler/05_predictions/final/files-repaired/334/StatefulDataType.java\n@@ -28,8 +28,7 @@ public interface StatefulDataType<D> {\n     @Override\n     int hashCode();\n \n-    interface Factory<D>\n-    {\n+    interface Factory<D> {\n         DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/checkstyle_idea/334/StatefulDataType.java\nindex ba46c88f9f6..e622432ebcb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/checkstyle_idea/334/StatefulDataType.java\n@@ -3,6 +3,7 @@\n  * and the EPL 1.0 (https://h2database.com/html/license.html).\n  * Initial Developer: H2 Group\n  */\n+\n package org.h2.mvstore.type;\n \n import org.h2.mvstore.WriteBuffer;\n@@ -13,23 +14,21 @@ import java.nio.ByteBuffer;\n  * Interface StatefulDataType.\n  *\n  * @param <D> type of opaque parameter passed as an operational context to Factory.create()\n- *\n  * @author <a href='mailto:andrei.tokar@gmail.com'>Andrei Tokar</a>\n  */\n public interface StatefulDataType<D> {\n \n-    void save(WriteBuffer buff, MetaType<D> metaType);\n+  void save(WriteBuffer buff, MetaType<D> metaType);\n \n-    Factory<D> getFactory();\n+  Factory<D> getFactory();\n \n-    @Override\n-    boolean equals(Object obj);\n+  @Override\n+  boolean equals(Object obj);\n \n-    @Override\n-    int hashCode();\n+  @Override\n+  int hashCode();\n \n-    interface Factory<D>\n-    {\n-        DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n-    }\n+  interface Factory<D> {\n+    DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n+  }\n }\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/naturalize/334/StatefulDataType.java\nindex ba46c88f9f6..8c27c49057d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/naturalize/334/StatefulDataType.java\n@@ -28,8 +28,7 @@ public interface StatefulDataType<D> {\n     @Override\n     int hashCode();\n \n-    interface Factory<D>\n-    {\n+    interface Factory<D> {\n         DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/codebuff/334/StatefulDataType.java\nindex ba46c88f9f6..272a7436a57 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/codebuff/334/StatefulDataType.java\n@@ -6,7 +6,6 @@\n package org.h2.mvstore.type;\n \n import org.h2.mvstore.WriteBuffer;\n-\n import java.nio.ByteBuffer;\n \n /**\n@@ -16,20 +15,30 @@ import java.nio.ByteBuffer;\n  *\n  * @author <a href='mailto:andrei.tokar@gmail.com'>Andrei Tokar</a>\n  */\n+\n+\n public interface StatefulDataType<D> {\n \n+\n     void save(WriteBuffer buff, MetaType<D> metaType);\n \n+\n     Factory<D> getFactory();\n \n+\n     @Override\n     boolean equals(Object obj);\n \n+\n     @Override\n     int hashCode();\n \n-    interface Factory<D>\n-    {\n-        DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n+\n+    interface Factory<D> {\n+\n+\n+        DataType<?> create(ByteBuffer buff,\n+            MetaType<D> metaDataType, D database);\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/styler/05_predictions/random/files-repaired/334/StatefulDataType.java\nindex ba46c88f9f6..db389f2191b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/styler/05_predictions/random/files-repaired/334/StatefulDataType.java\n@@ -28,8 +28,7 @@ public interface StatefulDataType<D> {\n     @Override\n     int hashCode();\n \n-    interface Factory<D>\n-    {\n+    interface Factory<D> {\n         DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/styler/05_predictions/three_grams/files-repaired/334/StatefulDataType.java\nindex ba46c88f9f6..18838d97d71 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/violations/334/StatefulDataType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/codefollower-H2-Research/styler/05_predictions/three_grams/files-repaired/334/StatefulDataType.java\n@@ -28,8 +28,6 @@ public interface StatefulDataType<D> {\n     @Override\n     int hashCode();\n \n-    interface Factory<D>\n-    {\n-        DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n+    interface Factory<D> {DataType<?> create(ByteBuffer buff, MetaType<D> metaDataType, D database);\n     }\n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,94 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "319",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 105).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private long[] values;\n\n  public RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n    super(rowId, startPos, endPos);\n    this.keys = keys;\n    this.values = values;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/319/RangeViewIntKeysLongValuesPart.java\nindex 2362353450a..442b5571e12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/319/RangeViewIntKeysLongValuesPart.java\n@@ -17,8 +17,9 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n    */\n   private long[] values;\n \n-  public RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n+  public\n+  RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n+     super(rowId, startPos, endPos);\n     this.keys = keys;\n     this.values = values;\n   }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/319/RangeViewIntKeysLongValuesPart.java\nindex 2362353450a..ba030fc437d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/319/RangeViewIntKeysLongValuesPart.java\n@@ -6,92 +6,93 @@ import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyLongVal\n import io.netty.buffer.ByteBuf;\n \n public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n-    IIntKeyLongValuePartOp {\n-  /**\n-   * Whole key array before serialization, sorted by asc\n-   */\n-  private int[] keys;\n+        IIntKeyLongValuePartOp {\n+    /**\n+     * Whole key array before serialization, sorted by asc\n+     */\n+    private int[] keys;\n \n-  /**\n-   * Whole value array before serialization\n-   */\n-  private long[] values;\n+    /**\n+     * Whole value array before serialization\n+     */\n+    private long[] values;\n \n-  public RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n-    this.keys = keys;\n-    this.values = values;\n-  }\n+    public RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos,\n+                                          int endPos) {\n+        super(rowId, startPos, endPos);\n+        this.keys = keys;\n+        this.values = values;\n+    }\n \n-  public RangeViewIntKeysLongValuesPart(int[] keys, long[] values, int startPos, int endPos) {\n-    this(-1, keys, values, startPos, endPos);\n-  }\n+    public RangeViewIntKeysLongValuesPart(int[] keys, long[] values, int startPos, int endPos) {\n+        this(-1, keys, values, startPos, endPos);\n+    }\n \n-  public RangeViewIntKeysLongValuesPart() {\n-    this(-1, null, null, -1, -1);\n-  }\n+    public RangeViewIntKeysLongValuesPart() {\n+        this(-1, null, null, -1, -1);\n+    }\n \n-  @Override\n-  public int[] getKeys() {\n-    return keys;\n-  }\n+    @Override\n+    public int[] getKeys() {\n+        return keys;\n+    }\n \n-  @Override\n-  public long[] getValues() {\n-    return values;\n-  }\n+    @Override\n+    public long[] getValues() {\n+        return values;\n+    }\n \n-  @Override\n-  public void add(int key, long value) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n+    @Override\n+    public void add(int key, long value) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n \n-  @Override\n-  public void add(int[] keys, long[] values) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n+    @Override\n+    public void add(int[] keys, long[] values) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n \n-  @Override\n-  public int size() {\n-    if(endPos != -1) {\n-      return endPos - startPos;\n-    } else {\n-      return keys.length;\n+    @Override\n+    public int size() {\n+        if (endPos != -1) {\n+            return endPos - startPos;\n+        } else {\n+            return keys.length;\n+        }\n     }\n-  }\n \n-  @Override\n-  public RowType getKeyValueType() {\n-    return RowType.T_LONG_SPARSE;\n-  }\n+    @Override\n+    public RowType getKeyValueType() {\n+        return RowType.T_LONG_SPARSE;\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n-    super.serialize(output);\n-    ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n-      ByteBufSerdeUtils.serializeInt(output, keys[i]);\n-      ByteBufSerdeUtils.serializeLong(output, values[i]);\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        super.serialize(output);\n+        ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n+        for (int i = startPos; i < endPos; i++) {\n+            ByteBufSerdeUtils.serializeInt(output, keys[i]);\n+            ByteBufSerdeUtils.serializeLong(output, values[i]);\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    super.deserialize(input);\n-    int len = ByteBufSerdeUtils.deserializeInt(input);\n-    keys = new int[len];\n-    values = new long[len];\n-    for(int i = 0; i < len; i++) {\n-      keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n-      values[i] = ByteBufSerdeUtils.deserializeLong(input);\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        super.deserialize(input);\n+        int len = ByteBufSerdeUtils.deserializeInt(input);\n+        keys = new int[len];\n+        values = new long[len];\n+        for (int i = 0; i < len; i++) {\n+            keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n+            values[i] = ByteBufSerdeUtils.deserializeLong(input);\n+        }\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    return super.bufferLen()\n-        + ByteBufSerdeUtils.INT_LENGTH\n-        + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n-        + ByteBufSerdeUtils.LONG_LENGTH * (endPos - startPos);\n-  }\n+    @Override\n+    public int bufferLen() {\n+        return super.bufferLen()\n+                + ByteBufSerdeUtils.INT_LENGTH\n+                + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n+                + ByteBufSerdeUtils.LONG_LENGTH * (endPos - startPos);\n+    }\n }\n",
+            "diff_size": 76
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/319/RangeViewIntKeysLongValuesPart.java\nindex 2362353450a..11d8567631c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/319/RangeViewIntKeysLongValuesPart.java\n@@ -5,8 +5,7 @@ import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyLongValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n-    IIntKeyLongValuePartOp {\n+public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements IIntKeyLongValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n@@ -69,7 +68,7 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n+    for (int i = startPos; i < endPos; i++) {\n       ByteBufSerdeUtils.serializeInt(output, keys[i]);\n       ByteBufSerdeUtils.serializeLong(output, values[i]);\n     }\n@@ -81,7 +80,7 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n     keys = new int[len];\n     values = new long[len];\n-    for(int i = 0; i < len; i++) {\n+    for (int i = 0; i < len; i++) {\n       keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n       values[i] = ByteBufSerdeUtils.deserializeLong(input);\n     }\n@@ -94,4 +93,4 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n         + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n         + ByteBufSerdeUtils.LONG_LENGTH * (endPos - startPos);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "93",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 167).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/319/RangeViewIntKeysLongValuesPart.java\nindex 2362353450a..389e08b5be3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/319/RangeViewIntKeysLongValuesPart.java\n@@ -5,11 +5,11 @@ import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyLongValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n-    IIntKeyLongValuePartOp {\n+public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements IIntKeyLongValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n+\n   private int[] keys;\n \n   /**\n@@ -53,7 +53,7 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n \n   @Override\n   public int size() {\n-    if(endPos != -1) {\n+    if (endPos != -1) {\n       return endPos - startPos;\n     } else {\n       return keys.length;\n@@ -69,7 +69,7 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n+    for (int i = startPos; i < endPos; i++) {\n       ByteBufSerdeUtils.serializeInt(output, keys[i]);\n       ByteBufSerdeUtils.serializeLong(output, values[i]);\n     }\n@@ -78,10 +78,11 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n   @Override\n   public void deserialize(ByteBuf input) {\n     super.deserialize(input);\n+\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n     keys = new int[len];\n     values = new long[len];\n-    for(int i = 0; i < len; i++) {\n+    for (int i = 0; i < len; i++) {\n       keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n       values[i] = ByteBufSerdeUtils.deserializeLong(input);\n     }\n@@ -89,9 +90,7 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n \n   @Override\n   public int bufferLen() {\n-    return super.bufferLen()\n-        + ByteBufSerdeUtils.INT_LENGTH\n-        + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n-        + ByteBufSerdeUtils.LONG_LENGTH * (endPos - startPos);\n+    return super.bufferLen() + ByteBufSerdeUtils.INT_LENGTH + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos) + ByteBufSerdeUtils.LONG_LENGTH * (endPos - startPos);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/319/RangeViewIntKeysLongValuesPart.java\nindex 2362353450a..442b5571e12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/319/RangeViewIntKeysLongValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/319/RangeViewIntKeysLongValuesPart.java\n@@ -17,8 +17,9 @@ public class RangeViewIntKeysLongValuesPart extends RangeKeyValuePart implements\n    */\n   private long[] values;\n \n-  public RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n+  public\n+  RangeViewIntKeysLongValuesPart(int rowId, int[] keys, long[] values, int startPos, int endPos) {\n+     super(rowId, startPos, endPos);\n     this.keys = keys;\n     this.values = values;\n   }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

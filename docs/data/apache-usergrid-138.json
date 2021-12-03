@@ -1,0 +1,63 @@
+{
+    "project_name": "apache-usergrid",
+    "violation_id": "138",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "61",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "     * @return\n     */\n    public QueueProcessor getProcessor(QueueMessage message){\n        /**\n         * instantiate specific queue processor according to what type is returned.\n         */",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-usergrid/styler/05_predictions/final/files-repaired/138/QueueProcessorFactory.java\nindex eac5dd80fbc..2335fa56538 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-usergrid/styler/05_predictions/final/files-repaired/138/QueueProcessorFactory.java\n@@ -30,7 +30,7 @@ public class QueueProcessorFactory {\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n+    public QueueProcessor getProcessor(QueueMessage message) {\n         /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/138/QueueProcessorFactory.java\nindex eac5dd80fbc..4ef0ac30f5d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/138/QueueProcessorFactory.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.usergrid.services.queues;\n \n \n@@ -27,10 +28,11 @@ public class QueueProcessorFactory {\n     /**\n      * Takes in a queue message and determines the type of message it is. Then it creates/instantiates\n      * the proper QueueProcessor depending on the type of the message.\n+     *\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n+    public QueueProcessor getProcessor(QueueMessage message) {\n         /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/138/QueueProcessorFactory.java\nindex eac5dd80fbc..bf48ece57ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/138/QueueProcessorFactory.java\n@@ -30,13 +30,12 @@ public class QueueProcessorFactory {\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n+    public QueueProcessor getProcessor( QueueMessage message ) {\n         /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n         String type = message.getType();\n \n         return new ImportQueueProcessor();\n-\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/138/QueueProcessorFactory.java\nindex eac5dd80fbc..3524f1d9b1f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/138/QueueProcessorFactory.java\n@@ -23,6 +23,8 @@ import org.apache.usergrid.persistence.queue.QueueMessage;\n /**\n  * Determines the proper queue processor for the given queue message.\n  */\n+\n+\n public class QueueProcessorFactory {\n     /**\n      * Takes in a queue message and determines the type of message it is. Then it creates/instantiates\n@@ -30,13 +32,12 @@ public class QueueProcessorFactory {\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n+\n+    public QueueProcessor getProcessor( QueueMessage message ) {\n         /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n         String type = message.getType();\n-\n         return new ImportQueueProcessor();\n-\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/random/files-repaired/138/QueueProcessorFactory.java\nindex eac5dd80fbc..2335fa56538 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/random/files-repaired/138/QueueProcessorFactory.java\n@@ -30,7 +30,7 @@ public class QueueProcessorFactory {\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n+    public QueueProcessor getProcessor(QueueMessage message) {\n         /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/three_grams/files-repaired/138/QueueProcessorFactory.java\nindex eac5dd80fbc..428e7352c53 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/138/QueueProcessorFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/styler/05_predictions/three_grams/files-repaired/138/QueueProcessorFactory.java\n@@ -30,8 +30,8 @@ public class QueueProcessorFactory {\n      * @param message\n      * @return\n      */\n-    public QueueProcessor getProcessor(QueueMessage message){\n-        /**\n+    public QueueProcessor getProcessor(QueueMessage message) {\n+    /**\n          * instantiate specific queue processor according to what type is returned.\n          */\n         String type = message.getType();\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

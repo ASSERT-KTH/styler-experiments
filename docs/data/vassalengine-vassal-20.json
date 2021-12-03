@@ -1,0 +1,63 @@
+{
+    "project_name": "vassalengine-vassal",
+    "violation_id": "20",
+    "information": {
+        "violations": [
+            {
+                "line": "65",
+                "column": "60",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "  public PeerWriter(OutputStream pOs) {\n    IllegalArgument.ifNull(\"Os\", pOs);\n    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n    setName(\"Peer Writer Thread\");\n    start();\n  }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/vassalengine-vassal/styler/05_predictions/final/files-repaired/20/PeerWriter.java\nindex 62bf1337869..b2cc70e25f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/vassalengine-vassal/styler/05_predictions/final/files-repaired/20/PeerWriter.java\n@@ -62,7 +62,7 @@ public class PeerWriter extends Thread {\n \n   public PeerWriter(OutputStream pOs) {\n     IllegalArgument.ifNull(\"Os\", pOs);\n-    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n+    zWriter = new BufferedWriter(new OutputStreamWriter(pOs, Charset.forName(\"UTF-8\")));\n     setName(\"Peer Writer Thread\");\n     start();\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/checkstyle_idea/20/PeerWriter.java\nindex 62bf1337869..396b6068858 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/checkstyle_idea/20/PeerWriter.java\n@@ -47,22 +47,18 @@ import java.util.Vector;\n //\n \n /**\n- * @author  Devin Smith and George Smith\n- * @version 0.5 05/17/13 Specify UTF-8 charset\n- * @version 0.4 04/07/13 Added name for thread, general clean up\n- * @version 0.3 02/02/02 Added IllegalArgument.ifNull for all public params that may not be null\n- * @version 0.2 01/28/02 Refactored and Added Licence\n+ * @author Devin Smith and George Smith\n  * @version 0.1 12/27/01 Initial Version\n  */\n public class PeerWriter extends Thread {\n   private Vector<String> zLines = new Vector<String>();\n   private boolean isOpen = true;\n   private BufferedWriter zWriter;\n-  private long pingInterval = 15L*60L*1000L;\n+  private long pingInterval = 15L * 60L * 1000L;\n \n   public PeerWriter(OutputStream pOs) {\n     IllegalArgument.ifNull(\"Os\", pOs);\n-    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n+    zWriter = new BufferedWriter(new OutputStreamWriter(pOs, Charset.forName(\"UTF-8\")));\n     setName(\"Peer Writer Thread\");\n     start();\n   }\n@@ -88,8 +84,7 @@ public class PeerWriter extends Thread {\n     while (isOpen && zLines.isEmpty()) {\n       try {\n         wait(pingInterval);\n-      }\n-      catch (InterruptedException e) {\n+      } catch (InterruptedException e) {\n       }\n     }\n     String message = isOpen ? \"\" : null;\n@@ -111,15 +106,13 @@ public class PeerWriter extends Thread {\n       zWriter.write(\"BYE\");\n       zWriter.newLine();\n       zWriter.flush();\n-    }\n-    catch (IOException e) {\n+    } catch (IOException e) {\n       // Presume socket has been closed.  Fail silently and stop thread\n     }\n     try {\n       isOpen = false;\n       zWriter.close();\n-    }\n-    catch (IOException ignore) {\n+    } catch (IOException ignore) {\n     }\n   }\n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/naturalize/20/PeerWriter.java\nindex 62bf1337869..71f59c1a85e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/naturalize/20/PeerWriter.java\n@@ -62,7 +62,7 @@ public class PeerWriter extends Thread {\n \n   public PeerWriter(OutputStream pOs) {\n     IllegalArgument.ifNull(\"Os\", pOs);\n-    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n+    zWriter = new BufferedWriter(new OutputStreamWriter(pOs, Charset.forName(\"UTF-8\")));\n     setName(\"Peer Writer Thread\");\n     start();\n   }\n@@ -122,4 +122,4 @@ public class PeerWriter extends Thread {\n     catch (IOException ignore) {\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/random/files-repaired/20/PeerWriter.java\nindex 62bf1337869..b2cc70e25f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/random/files-repaired/20/PeerWriter.java\n@@ -62,7 +62,7 @@ public class PeerWriter extends Thread {\n \n   public PeerWriter(OutputStream pOs) {\n     IllegalArgument.ifNull(\"Os\", pOs);\n-    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n+    zWriter = new BufferedWriter(new OutputStreamWriter(pOs, Charset.forName(\"UTF-8\")));\n     setName(\"Peer Writer Thread\");\n     start();\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/three_grams/files-repaired/20/PeerWriter.java\nindex 62bf1337869..b2cc70e25f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/20/PeerWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/three_grams/files-repaired/20/PeerWriter.java\n@@ -62,7 +62,7 @@ public class PeerWriter extends Thread {\n \n   public PeerWriter(OutputStream pOs) {\n     IllegalArgument.ifNull(\"Os\", pOs);\n-    zWriter = new BufferedWriter(new OutputStreamWriter(pOs,Charset.forName(\"UTF-8\")));\n+    zWriter = new BufferedWriter(new OutputStreamWriter(pOs, Charset.forName(\"UTF-8\")));\n     setName(\"Peer Writer Thread\");\n     start();\n   }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

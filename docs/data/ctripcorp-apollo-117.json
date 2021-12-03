@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "117",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "column": "38",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n@Entity\npublic class Group extends BaseEntity{\n\n  @Id\n  @GeneratedValue",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/117/Group.java\nindex a44ec7b0597..3be5bcf7c74 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/117/Group.java\nindex a44ec7b0597..3be5bcf7c74 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/117/Group.java\nindex a44ec7b0597..273a2420380 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n@@ -42,4 +42,4 @@ public class Group extends BaseEntity{\n     this.namespaceId = namespaceId;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/117/Group.java\nindex a44ec7b0597..c748a858102 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n@@ -41,5 +41,4 @@ public class Group extends BaseEntity{\n   public void setNamespaceId(long namespaceId) {\n     this.namespaceId = namespaceId;\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/117/Group.java\nindex a44ec7b0597..3be5bcf7c74 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/117/Group.java\nindex a44ec7b0597..3be5bcf7c74 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/117/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/117/Group.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Group extends BaseEntity{\n+public class Group extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

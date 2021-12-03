@@ -1,0 +1,224 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "11",
+    "information": {
+        "violations": [
+            {
+                "line": "118",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 122).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @SuppressWarnings(\"unchecked\")\n  public static <SWAGGER_PARAMETER, ANNOTATION> ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION> findParameterProcessors(\n      Type type) {\n    type = TypeFactory.defaultInstance().constructType(type);\n    return (ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION>) parameterProcessors.get(type);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "118",
+                    "column": "18",
+                    "severity": "warning",
+                    "message": "'<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "118",
+                    "column": "36",
+                    "severity": "warning",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "25",
+                    "severity": "warning",
+                    "message": "'<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "45",
+                    "severity": "warning",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "58",
+                    "severity": "warning",
+                    "message": "'>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "60",
+                    "severity": "warning",
+                    "message": "'>' is followed by an illegal character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/11/SwaggerGeneratorUtils.java\nindex 9d9a3b0bf9f..a666eec6643 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/11/SwaggerGeneratorUtils.java\n@@ -115,8 +115,9 @@ public final class SwaggerGeneratorUtils {\n   }\n \n   @SuppressWarnings(\"unchecked\")\n-  public static <SWAGGER_PARAMETER, ANNOTATION> ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION> findParameterProcessors(\n-      Type type) {\n+  public static < SWAGGER_PARAMETER , ANNOTATION\n+    > ParameterProcessor < SWAGGER_PARAMETER , ANNOTATION >findParameterProcessors(Type\n+  type) {\n     type = TypeFactory.defaultInstance().constructType(type);\n     return (ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION>) parameterProcessors.get(type);\n   }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "119",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/11/SwaggerGeneratorUtils.java\nindex 9d9a3b0bf9f..30add51c69b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/11/SwaggerGeneratorUtils.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.swagger.generator;\n \n import java.lang.annotation.Annotation;\n@@ -216,7 +217,8 @@ public final class SwaggerGeneratorUtils {\n   }\n \n   public static List<Annotation> collectParameterAnnotations(Annotation[] parameterAnnotations,\n-      Map<String, List<Annotation>> methodAnnotationMap, String parameterName) {\n+                                                             Map<String, List<Annotation>> methodAnnotationMap,\n+                                                             String parameterName) {\n     List<Annotation> methodAnnotations = methodAnnotationMap.remove(parameterName);\n     if (methodAnnotations == null) {\n       methodAnnotations = Collections.emptyList();\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "118",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/11/SwaggerGeneratorUtils.java\nindex 9d9a3b0bf9f..065614ac74c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/11/SwaggerGeneratorUtils.java\n@@ -185,7 +185,7 @@ public final class SwaggerGeneratorUtils {\n     }\n \n     String msg = String.format(\"parameter name is not present, method=%s:%s\\n\"\n-            + \"solution:\\n\"\n+    + \"solution:\\n\"\n             + \"  change pom.xml, add compiler argument: -parameters, for example:\\n\"\n             + \"    <plugin>\\n\"\n             + \"      <groupId>org.apache.maven.plugins</groupId>\\n\"\n@@ -251,4 +251,4 @@ public final class SwaggerGeneratorUtils {\n \n     return processor.getHttpParameterType(parameterAnnotation);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "49",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 230).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "51",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "65",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "73",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "116",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 134).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "190",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 505).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "210",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 170).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/11/SwaggerGeneratorUtils.java\nindex 9d9a3b0bf9f..f06b280eca6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/11/SwaggerGeneratorUtils.java\n@@ -28,19 +28,16 @@ import java.util.List;\n import java.util.Map;\n import java.util.Set;\n import java.util.stream.Collectors;\n-\n import org.apache.commons.lang3.StringUtils;\n import org.apache.servicecomb.foundation.common.utils.SPIServiceUtils;\n import org.apache.servicecomb.swagger.generator.core.model.HttpParameterType;\n import org.apache.servicecomb.swagger.generator.core.processor.response.DefaultResponseTypeProcessor;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.fasterxml.jackson.databind.JavaType;\n import com.fasterxml.jackson.databind.Module;\n import com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition;\n import com.fasterxml.jackson.databind.type.TypeFactory;\n-\n import io.swagger.models.parameters.Parameter;\n import io.swagger.util.Json;\n \n@@ -48,11 +45,10 @@ public final class SwaggerGeneratorUtils {\n   private static final Logger LOGGER = LoggerFactory.getLogger(SwaggerGeneratorUtils.class);\n \n   // all static fields load from SPI and stateless\n-  private static Set<JavaType> contextTypes = SPIServiceUtils.getOrLoadSortedService(SwaggerContextRegister.class)\n-      .stream()\n-      .map(swaggerContextRegister -> TypeFactory.defaultInstance()\n-          .constructType(swaggerContextRegister.getContextType()))\n-      .collect(Collectors.toSet());\n+\n+  private static Set<JavaType> contextTypes = SPIServiceUtils.getOrLoadSortedService(SwaggerContextRegister.class).stream()\n+                                                                                                                  .map(swaggerContextRegister -> TypeFactory.defaultInstance().constructType(swaggerContextRegister.getContextType()))\n+                                                                                                                  .collect(Collectors.toSet());\n \n   private static Map<Type, ClassAnnotationProcessor<?>> classAnnotationProcessors = new HashMap<>();\n \n@@ -66,19 +62,19 @@ public final class SwaggerGeneratorUtils {\n \n   static {\n     // low order value has high priority\n-    for (ClassAnnotationProcessor<?> processor : SPIServiceUtils\n-        .getOrLoadSortedService(ClassAnnotationProcessor.class)) {\n+    for (ClassAnnotationProcessor<?> processor : SPIServiceUtils.getOrLoadSortedService(ClassAnnotationProcessor.class)) {\n       if (classAnnotationProcessors.putIfAbsent(processor.getProcessType(), processor) != null) {\n         LOGGER.info(\"ignore duplicated ClassAnnotationProcessor, type={}, processor={}.\",\n-            processor.getProcessType().getTypeName(), processor.getClass().getName());\n+processor.getProcessType().getTypeName(),\n+processor.getClass().getName());\n       }\n     }\n \n-    for (MethodAnnotationProcessor<?> processor : SPIServiceUtils\n-        .getOrLoadSortedService(MethodAnnotationProcessor.class)) {\n+    for (MethodAnnotationProcessor<?> processor : SPIServiceUtils.getOrLoadSortedService(MethodAnnotationProcessor.class)) {\n       if (methodAnnotationProcessors.putIfAbsent(processor.getProcessType(), processor) != null) {\n         LOGGER.info(\"ignore duplicated MethodAnnotationProcessor, type={}, processor={}.\",\n-            processor.getProcessType().getTypeName(), processor.getClass().getName());\n+processor.getProcessType().getTypeName(),\n+processor.getClass().getName());\n       }\n     }\n \n@@ -86,14 +82,16 @@ public final class SwaggerGeneratorUtils {\n       JavaType javaType = processor.getProcessJavaType();\n       if (parameterProcessors.putIfAbsent(javaType, processor) != null) {\n         LOGGER.info(\"ignore duplicated ParameterProcessor, type={}, processor={}.\",\n-            javaType.toCanonical(), processor.getClass().getName());\n+javaType.toCanonical(),\n+processor.getClass().getName());\n       }\n     }\n \n     for (ResponseTypeProcessor processor : SPIServiceUtils.getOrLoadSortedService(ResponseTypeProcessor.class)) {\n       if (responseTypeProcessors.putIfAbsent(processor.getProcessType(), processor) != null) {\n         LOGGER.info(\"ignore duplicated ResponseTypeProcessor, type={}, processor={}.\",\n-            processor.getProcessType().getTypeName(), processor.getClass().getName());\n+processor.getProcessType().getTypeName(),\n+processor.getClass().getName());\n       }\n     }\n \n@@ -115,8 +113,7 @@ public final class SwaggerGeneratorUtils {\n   }\n \n   @SuppressWarnings(\"unchecked\")\n-  public static <SWAGGER_PARAMETER, ANNOTATION> ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION> findParameterProcessors(\n-      Type type) {\n+  public static <SWAGGER_PARAMETER, ANNOTATION> ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION> findParameterProcessors(Type type) {\n     type = TypeFactory.defaultInstance().constructType(type);\n     return (ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION>) parameterProcessors.get(type);\n   }\n@@ -130,7 +127,6 @@ public final class SwaggerGeneratorUtils {\n     if (type instanceof ParameterizedType) {\n       return responseTypeProcessors.getOrDefault(((ParameterizedType) type).getRawType(), defaultResponseTypeProcessor);\n     }\n-\n     return defaultResponseTypeProcessor;\n   }\n \n@@ -141,20 +137,26 @@ public final class SwaggerGeneratorUtils {\n   public static Annotation[] collectAnnotations(BeanPropertyDefinition propertyDefinition) {\n     List<Annotation> annotations = new ArrayList<>();\n     if (propertyDefinition.getField() != null) {\n-      Collections.addAll(annotations, propertyDefinition.getField().getAnnotated().getAnnotations());\n+      Collections.addAll(annotations, propertyDefinition.getField().getAnnotated()\n+                                                                   .getAnnotations());\n     }\n+\n     if (propertyDefinition.getGetter() != null) {\n-      Collections.addAll(annotations, propertyDefinition.getGetter().getAnnotated().getAnnotations());\n+      Collections.addAll(annotations, propertyDefinition.getGetter().getAnnotated()\n+                                                                    .getAnnotations());\n     }\n+\n     if (propertyDefinition.getSetter() != null) {\n-      Collections.addAll(annotations, propertyDefinition.getSetter().getAnnotated().getAnnotations());\n+      Collections.addAll(annotations, propertyDefinition.getSetter().getAnnotated()\n+                                                                    .getAnnotations());\n     }\n     return annotations.toArray(new Annotation[annotations.size()]);\n   }\n \n   public static String collectParameterName(java.lang.reflect.Parameter methodParameter) {\n-    return collectParameterName(methodParameter.getDeclaringExecutable(), methodParameter.getAnnotations(),\n-        methodParameter.isNamePresent() ? methodParameter.getName() : null);\n+    return collectParameterName(methodParameter.getDeclaringExecutable(),\n+methodParameter.getAnnotations(),\n+methodParameter.isNamePresent() ? methodParameter.getName() : null);\n   }\n \n   public static String collectParameterName(Method method, BeanPropertyDefinition propertyDefinition) {\n@@ -180,21 +182,12 @@ public final class SwaggerGeneratorUtils {\n \n     // 2.use signature name\n     // ensure present parameter name\n+\n     if (StringUtils.isNotEmpty(defaultName)) {\n       return defaultName;\n     }\n \n-    String msg = String.format(\"parameter name is not present, method=%s:%s\\n\"\n-            + \"solution:\\n\"\n-            + \"  change pom.xml, add compiler argument: -parameters, for example:\\n\"\n-            + \"    <plugin>\\n\"\n-            + \"      <groupId>org.apache.maven.plugins</groupId>\\n\"\n-            + \"      <artifactId>maven-compiler-plugin</artifactId>\\n\"\n-            + \"      <configuration>\\n\"\n-            + \"        <compilerArgument>-parameters</compilerArgument>\\n\"\n-            + \"      </configuration>\\n\"\n-            + \"    </plugin>\",\n-        executable.getDeclaringClass().getName(), executable.getName());\n+    String msg = String.format(\"parameter name is not present, method=%s:%s\\n\" + \"solution:\\n\" + \"  change pom.xml, add compiler argument: -parameters, for example:\\n\" + \"    <plugin>\\n\" + \"      <groupId>org.apache.maven.plugins</groupId>\\n\" + \"      <artifactId>maven-compiler-plugin</artifactId>\\n\" + \"      <configuration>\\n\" + \"        <compilerArgument>-parameters</compilerArgument>\\n\" + \"      </configuration>\\n\" + \"    </plugin>\", executable.getDeclaringClass().getName(), executable.getName());\n     throw new IllegalStateException(msg);\n   }\n \n@@ -211,12 +204,10 @@ public final class SwaggerGeneratorUtils {\n         genericType = type;\n       }\n     }\n-\n     return genericType != null ? genericType : defaultType;\n   }\n \n-  public static List<Annotation> collectParameterAnnotations(Annotation[] parameterAnnotations,\n-      Map<String, List<Annotation>> methodAnnotationMap, String parameterName) {\n+  public static List<Annotation> collectParameterAnnotations(Annotation[] parameterAnnotations, Map<String, List<Annotation>> methodAnnotationMap, String parameterName) {\n     List<Annotation> methodAnnotations = methodAnnotationMap.remove(parameterName);\n     if (methodAnnotations == null) {\n       methodAnnotations = Collections.emptyList();\n@@ -225,7 +216,6 @@ public final class SwaggerGeneratorUtils {\n     List<Annotation> annotations = new ArrayList<>();\n     Collections.addAll(annotations, parameterAnnotations);\n     annotations.addAll(methodAnnotations);\n-\n     return annotations;\n   }\n \n@@ -248,7 +238,6 @@ public final class SwaggerGeneratorUtils {\n     if (processor == null) {\n       return null;\n     }\n-\n     return processor.getHttpParameterType(parameterAnnotation);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 52
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "118",
+                    "column": "18",
+                    "severity": "warning",
+                    "message": "'<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "118",
+                    "column": "36",
+                    "severity": "warning",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "25",
+                    "severity": "warning",
+                    "message": "'<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "45",
+                    "severity": "warning",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "58",
+                    "severity": "warning",
+                    "message": "'>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "119",
+                    "column": "60",
+                    "severity": "warning",
+                    "message": "'>' is followed by an illegal character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/11/SwaggerGeneratorUtils.java\nindex 9d9a3b0bf9f..a666eec6643 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/11/SwaggerGeneratorUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/11/SwaggerGeneratorUtils.java\n@@ -115,8 +115,9 @@ public final class SwaggerGeneratorUtils {\n   }\n \n   @SuppressWarnings(\"unchecked\")\n-  public static <SWAGGER_PARAMETER, ANNOTATION> ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION> findParameterProcessors(\n-      Type type) {\n+  public static < SWAGGER_PARAMETER , ANNOTATION\n+    > ParameterProcessor < SWAGGER_PARAMETER , ANNOTATION >findParameterProcessors(Type\n+  type) {\n     type = TypeFactory.defaultInstance().constructType(type);\n     return (ParameterProcessor<SWAGGER_PARAMETER, ANNOTATION>) parameterProcessors.get(type);\n   }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

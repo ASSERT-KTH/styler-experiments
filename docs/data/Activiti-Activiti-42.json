@@ -1,0 +1,77 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "42",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "severity": "error",
+                "message": "Line is longer than 240 characters (found 244).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    public String getDValue() {\n        return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/42/BusinessRuleTaskIconType.java\nindex 14f0ff1fcba..eeb3e3cb07c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/42/BusinessRuleTaskIconType.java\n@@ -9,6 +9,8 @@ public class BusinessRuleTaskIconType extends TaskIconType {\n \n     @Override\n     public String getDValue() {\n-        return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n-    }\n-}\n+\n+    return\n+    \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n+     }\n+ }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Line is longer than 240 characters (found 244).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/42/BusinessRuleTaskIconType.java\nindex 14f0ff1fcba..7dea5579e77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/42/BusinessRuleTaskIconType.java\n@@ -2,13 +2,13 @@ package org.activiti.image.impl.icon;\n \n public class BusinessRuleTaskIconType extends TaskIconType {\n \n-    @Override\n-    public String getStyleValue() {\n-        return \"fill:#72a7d0;stroke:none\";\n-    }\n+  @Override\n+  public String getStyleValue() {\n+    return \"fill:#72a7d0;stroke:none\";\n+  }\n \n-    @Override\n-    public String getDValue() {\n-        return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n-    }\n-}\n+  @Override\n+  public String getDValue() {\n+    return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/42/BusinessRuleTaskIconType.java\nindex 14f0ff1fcba..eeb3e3cb07c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/42/BusinessRuleTaskIconType.java\n@@ -9,6 +9,8 @@ public class BusinessRuleTaskIconType extends TaskIconType {\n \n     @Override\n     public String getDValue() {\n-        return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n-    }\n-}\n+\n+    return\n+    \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n+     }\n+ }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "31",
+                    "severity": "error",
+                    "message": "'{' at column 31 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/42/BusinessRuleTaskIconType.java\nindex 14f0ff1fcba..93611933bbd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/42/BusinessRuleTaskIconType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/42/BusinessRuleTaskIconType.java\n@@ -8,7 +8,7 @@ public class BusinessRuleTaskIconType extends TaskIconType {\n     }\n \n     @Override\n-    public String getDValue() {\n-        return \"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n-    }\n+    public String getDValue() { return\n+\"m 1,2 0,14 16,0 0,-14 z m 1.45458,5.6000386 2.90906,0 0,2.7999224 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.7999224 -8.72718,0 z m -4.36364,4.1998844 2.90906,0 0,2.800116 -2.90906,0 z m 4.36364,0 8.72718,0 0,2.800116 -8.72718,0 z\";\n+ }\n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "codebuff",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ]
+}

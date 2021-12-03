@@ -1,0 +1,101 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "42",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.strategy.optimizer;\n\nimport org.apache.iotdb.db.exception.query.LogicalOptimizeException;\nimport org.apache.iotdb.db.exception.query.PathNumOverLimitException;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/42/ILogicalOptimizer.java\nindex d851f7efce4..95decbcf8e4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/42/ILogicalOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/42/ILogicalOptimizer.java\nindex d851f7efce4..45ca44b7e56 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/42/ILogicalOptimizer.java\n@@ -16,13 +16,16 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n import org.apache.iotdb.db.exception.query.PathNumOverLimitException;\n import org.apache.iotdb.db.qp.logical.Operator;\n \n-/** provide a context, transform it for optimization. */\n+/**\n+ * provide a context, transform it for optimization.\n+ */\n @FunctionalInterface\n public interface ILogicalOptimizer {\n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/42/ILogicalOptimizer.java\nindex d851f7efce4..5d219c395b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/42/ILogicalOptimizer.java\n@@ -23,9 +23,9 @@ import org.apache.iotdb.db.exception.query.PathNumOverLimitException;\n import org.apache.iotdb.db.qp.logical.Operator;\n \n /** provide a context, transform it for optimization. */\n+\n @FunctionalInterface\n public interface ILogicalOptimizer {\n \n-  Operator transform(Operator operator, int fetchSize)\n-      throws LogicalOptimizeException, PathNumOverLimitException;\n-}\n+  Operator transform(Operator operator, int fetchSize) throws LogicalOptimizeException, PathNumOverLimitException;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "70",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/42/ILogicalOptimizer.java\nindex d851f7efce4..b7af2d0494b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/42/ILogicalOptimizer.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.strategy.optimizer;\n+package org.apache.iotdb.db.qp.strategy.optimizer\n \n-import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n+; import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n import org.apache.iotdb.db.exception.query.PathNumOverLimitException;\n import org.apache.iotdb.db.qp.logical.Operator;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/42/ILogicalOptimizer.java\nindex d851f7efce4..95decbcf8e4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/42/ILogicalOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/42/ILogicalOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "57",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "'CTOR_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "    super(reason);\n  }\n  public ParseException(String reason, Throwable t) {\n    super(reason, t);\n  }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/57/ParseException.java\nindex 0fd8af0f68f..1812c612c72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/57/ParseException.java\n@@ -22,6 +22,7 @@ public class ParseException extends RuntimeException {\n   public ParseException(String reason) {\n     super(reason);\n   }\n+\n   public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/57/ParseException.java\nindex 0fd8af0f68f..06e40be9fa2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/57/ParseException.java\n@@ -6,9 +6,9 @@\n  * to you under the Apache License, Version 2.0 (the\n  * \"License\"); you may not use this file except in compliance\n  * with the License.  You may obtain a copy of the License at\n- *\n- *     http://www.apache.org/licenses/LICENSE-2.0\n- *\n+ * <p>\n+ * http://www.apache.org/licenses/LICENSE-2.0\n+ * <p>\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n@@ -22,6 +22,7 @@ public class ParseException extends RuntimeException {\n   public ParseException(String reason) {\n     super(reason);\n   }\n+\n   public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "'ctor def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/57/ParseException.java\nindex 0fd8af0f68f..cfdf7802074 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/57/ParseException.java\n@@ -22,7 +22,8 @@ public class ParseException extends RuntimeException {\n   public ParseException(String reason) {\n     super(reason);\n   }\n-  public ParseException(String reason, Throwable t) {\n+\n+public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/57/ParseException.java\nindex 0fd8af0f68f..83bead7f507 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/57/ParseException.java\n@@ -19,10 +19,12 @@\n package org.apache.metron.stellar.dsl;\n \n public class ParseException extends RuntimeException {\n+\n   public ParseException(String reason) {\n     super(reason);\n   }\n+\n   public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/57/ParseException.java\nindex 0fd8af0f68f..1812c612c72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/57/ParseException.java\n@@ -22,6 +22,7 @@ public class ParseException extends RuntimeException {\n   public ParseException(String reason) {\n     super(reason);\n   }\n+\n   public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/57/ParseException.java\nindex 0fd8af0f68f..1812c612c72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/57/ParseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/57/ParseException.java\n@@ -22,6 +22,7 @@ public class ParseException extends RuntimeException {\n   public ParseException(String reason) {\n     super(reason);\n   }\n+\n   public ParseException(String reason, Throwable t) {\n     super(reason, t);\n   }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

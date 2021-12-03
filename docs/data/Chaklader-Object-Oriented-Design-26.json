@@ -1,0 +1,71 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "26",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "column": "1",
+                "severity": "error",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public enum RequestStatus {\n\n\tUnread, Read, Accepted, Rejected\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/26/RequestStatus.java\nindex cf0fb8303f6..64307f5e3d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/26/RequestStatus.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum RequestStatus {\r\n \r\n-\tUnread, Read, Accepted, Rejected\r\n+Unread, Read, Accepted, Rejected\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/26/RequestStatus.java\nindex cf0fb8303f6..2abfc9760eb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/26/RequestStatus.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum RequestStatus {\r\n \r\n-\tUnread, Read, Accepted, Rejected\r\n+  Unread, Read, Accepted, Rejected\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "'enum def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/26/RequestStatus.java\nindex cf0fb8303f6..b43022428a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/26/RequestStatus.java\n@@ -1,6 +1,6 @@\n package design.practice.chatServer;\r\n \r\n-public enum RequestStatus {\r\n-\r\n-\tUnread, Read, Accepted, Rejected\r\n-}\r\n+public enum RequestStatus {\n+\n+  Unread, Read, Accepted, Rejected\n+  }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/26/RequestStatus.java\nindex cf0fb8303f6..d17dd8899e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/26/RequestStatus.java\n@@ -1,6 +1,7 @@\n-package design.practice.chatServer;\r\n-\r\n-public enum RequestStatus {\r\n-\r\n-\tUnread, Read, Accepted, Rejected\r\n-}\r\n+package design.practice.chatServer;\n+\n+\n+public enum RequestStatus {\n+\n+  Unread, Read, Accepted, Rejected\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/26/RequestStatus.java\nindex cf0fb8303f6..64307f5e3d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/26/RequestStatus.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum RequestStatus {\r\n \r\n-\tUnread, Read, Accepted, Rejected\r\n+Unread, Read, Accepted, Rejected\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/26/RequestStatus.java\nindex cf0fb8303f6..2abfc9760eb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/26/RequestStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/26/RequestStatus.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum RequestStatus {\r\n \r\n-\tUnread, Read, Accepted, Rejected\r\n+  Unread, Read, Accepted, Rejected\r\n }\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

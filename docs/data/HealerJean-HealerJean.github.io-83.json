@@ -1,0 +1,95 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "83",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic enum Gender {\n\tMAN,\n\tWOMEN;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/83/Gender.java\nindex edead847563..1fb5b551d00 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/83/Gender.java\n@@ -1,8 +1,8 @@\n package cn.itcast.bean;\r\n /**\r\n- * \u00d0\u00d4\u00b1\u00f0\r\n+ * \u00c3\u0090\u00c3\u0094\u00c2\u00b1\u00c3\u00b0\r\n  */\r\n public enum Gender {\r\n-\tMAN,\r\n+MAN,\r\n \tWOMEN;\r\n }\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/83/Gender.java\nindex edead847563..f7c407d92e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/83/Gender.java\n@@ -1,8 +1,9 @@\n package cn.itcast.bean;\r\n+\r\n /**\r\n- * \u00d0\u00d4\u00b1\u00f0\r\n+ * \u00ef\u00bf\u00bd\u00d4\u00b1\u00ef\u00bf\u00bd\r\n  */\r\n public enum Gender {\r\n-\tMAN,\r\n-\tWOMEN;\r\n+    MAN,\r\n+    WOMEN;\r\n }\r\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/83/Gender.java\nindex edead847563..4baa0e8bc7c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/83/Gender.java\n@@ -1,8 +1,11 @@\n package cn.itcast.bean;\r\n /**\r\n- * \u00d0\u00d4\u00b1\u00f0\r\n+ * \u00ef\u00bf\u00bd\u00d4\u00b1\u00ef\u00bf\u00bd\r\n  */\r\n-public enum Gender {\r\n-\tMAN,\r\n-\tWOMEN;\r\n-}\r\n+public enum Gender {\n+        MAN,\r\n+\tWOMEN;\n+\n+\n+\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/83/Gender.java\nindex edead847563..1fb5b551d00 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/83/Gender.java\n@@ -1,8 +1,8 @@\n package cn.itcast.bean;\r\n /**\r\n- * \u00d0\u00d4\u00b1\u00f0\r\n+ * \u00c3\u0090\u00c3\u0094\u00c2\u00b1\u00c3\u00b0\r\n  */\r\n public enum Gender {\r\n-\tMAN,\r\n+MAN,\r\n \tWOMEN;\r\n }\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/83/Gender.java\nindex edead847563..8053b694d82 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/83/Gender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/83/Gender.java\n@@ -1,8 +1,8 @@\n package cn.itcast.bean;\r\n /**\r\n- * \u00d0\u00d4\u00b1\u00f0\r\n+ * \u00c3\u0090\u00c3\u0094\u00c2\u00b1\u00c3\u00b0\r\n  */\r\n public enum Gender {\r\n-\tMAN,\r\n+    MAN,\r\n \tWOMEN;\r\n }\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

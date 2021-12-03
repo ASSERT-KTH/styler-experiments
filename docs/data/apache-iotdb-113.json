@@ -1,0 +1,95 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "113",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.write.record.datapoint;\n\nimport org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\nimport org.apache.iotdb.tsfile.write.chunk.IChunkWriter;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/113/LongDataPoint.java\nindex 4bc2e9f1535..5076088b033 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/113/LongDataPoint.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.record.datapoint;\n \n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/113/LongDataPoint.java\nindex 4bc2e9f1535..6fceaa57472 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/113/LongDataPoint.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.record.datapoint;\n \n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n@@ -32,10 +33,14 @@ import org.slf4j.LoggerFactory;\n public class LongDataPoint extends DataPoint {\n \n   private static final Logger LOG = LoggerFactory.getLogger(LongDataPoint.class);\n-  /** actual value. */\n+  /**\n+   * actual value.\n+   */\n   private long value;\n \n-  /** constructor of LongDataPoint, the value type will be set automatically. */\n+  /**\n+   * constructor of LongDataPoint, the value type will be set automatically.\n+   */\n   public LongDataPoint(String measurementId, long v) {\n     super(TSDataType.INT64, measurementId);\n     this.value = v;\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/113/LongDataPoint.java\nindex 4bc2e9f1535..f644b147373 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/113/LongDataPoint.java\n@@ -20,7 +20,6 @@ package org.apache.iotdb.tsfile.write.record.datapoint;\n \n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n import org.apache.iotdb.tsfile.write.chunk.IChunkWriter;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n@@ -29,6 +28,7 @@ import org.slf4j.LoggerFactory;\n  *\n  * @see DataPoint DataPoint\n  */\n+\n public class LongDataPoint extends DataPoint {\n \n   private static final Logger LOG = LoggerFactory.getLogger(LongDataPoint.class);\n@@ -36,6 +36,7 @@ public class LongDataPoint extends DataPoint {\n   private long value;\n \n   /** constructor of LongDataPoint, the value type will be set automatically. */\n+\n   public LongDataPoint(String measurementId, long v) {\n     super(TSDataType.INT64, measurementId);\n     this.value = v;\n@@ -59,4 +60,4 @@ public class LongDataPoint extends DataPoint {\n   public void setLong(long value) {\n     this.value = value;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "64",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/113/LongDataPoint.java\nindex 4bc2e9f1535..7ed090170f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/113/LongDataPoint.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.tsfile.write.record.datapoint;\n+package org.apache.iotdb.tsfile.write.record.datapoint\n \n-import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n+; import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n import org.apache.iotdb.tsfile.write.chunk.IChunkWriter;\n \n import org.slf4j.Logger;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/113/LongDataPoint.java\nindex 4bc2e9f1535..5076088b033 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/113/LongDataPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/113/LongDataPoint.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.record.datapoint;\n \n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

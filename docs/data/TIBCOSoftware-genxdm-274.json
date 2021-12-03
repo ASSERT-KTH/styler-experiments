@@ -1,0 +1,96 @@
+{
+    "project_name": "TIBCOSoftware-genxdm",
+    "violation_id": "274",
+    "information": {
+        "violations": [
+            {
+                "line": "28",
+                "column": "1",
+                "severity": "warning",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public final class StringVariant<N> extends VariantBase<N>\n{\n\tprivate final String str;\n\n\tpublic StringVariant(final String str)\n\t{",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/final/files-repaired/274/StringVariant.java\nindex d448d64d0b7..52f75c2de2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/final/files-repaired/274/StringVariant.java\n@@ -25,7 +25,7 @@ import org.genxdm.xpath.v10.Converter;\n \r\n public final class StringVariant<N> extends VariantBase<N>\r\n {\r\n-\tprivate final String str;\r\n+private final String str;\r\n \r\n \tpublic StringVariant(final String str)\r\n \t{\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/checkstyle_idea/274/StringVariant.java\nindex d448d64d0b7..e5afb3ed710 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/checkstyle_idea/274/StringVariant.java\n@@ -3,7 +3,7 @@\n  * license details\r\n  * Portions copyright (c) 2002, Bill Lindsey : see copying.txt for license\r\n  * details\r\n- * \r\n+ *\r\n  * Portions copyright (c) 2009-2011 TIBCO Software Inc.\r\n  *\r\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n@@ -18,39 +18,34 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n+\r\n package org.genxdm.processor.xpath.v10.variants;\r\n \r\n import org.genxdm.exceptions.IllegalNullArgumentException;\r\n import org.genxdm.xpath.v10.Converter;\r\n \r\n-public final class StringVariant<N> extends VariantBase<N>\r\n-{\r\n-\tprivate final String str;\r\n-\r\n-\tpublic StringVariant(final String str)\r\n-\t{\r\n-\t\tthis.str = IllegalNullArgumentException.check(str, \"str\");\r\n-\t}\r\n-\r\n-\tpublic String convertToString()\r\n-\t{\r\n-\t\treturn str;\r\n-\t}\r\n-\r\n-\tpublic boolean convertToBoolean()\r\n-\t{\r\n-\t\treturn Converter.toBoolean(str);\r\n-\t}\r\n-\r\n-\t@Override\r\n-\tpublic double convertToNumber()\r\n-\t{\r\n-\t\treturn Converter.toNumber(str);\r\n-\t}\r\n-\r\n-\t@Override\r\n-\tpublic boolean isString()\r\n-\t{\r\n-\t\treturn true;\r\n-\t}\r\n+public final class StringVariant<N> extends VariantBase<N> {\r\n+    private final String str;\r\n+\r\n+    public StringVariant(final String str) {\r\n+        this.str = IllegalNullArgumentException.check(str, \"str\");\r\n+    }\r\n+\r\n+    public String convertToString() {\r\n+        return str;\r\n+    }\r\n+\r\n+    public boolean convertToBoolean() {\r\n+        return Converter.toBoolean(str);\r\n+    }\r\n+\r\n+    @Override\r\n+    public double convertToNumber() {\r\n+        return Converter.toNumber(str);\r\n+    }\r\n+\r\n+    @Override\r\n+    public boolean isString() {\r\n+        return true;\r\n+    }\r\n }\r\n",
+            "diff_size": 32
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/naturalize/274/StringVariant.java\nindex d448d64d0b7..c4dc9066d52 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/naturalize/274/StringVariant.java\n@@ -24,33 +24,33 @@ import org.genxdm.exceptions.IllegalNullArgumentException;\n import org.genxdm.xpath.v10.Converter;\r\n \r\n public final class StringVariant<N> extends VariantBase<N>\r\n-{\r\n-\tprivate final String str;\r\n+{\n+    private final String str;\r\n \r\n \tpublic StringVariant(final String str)\r\n-\t{\r\n-\t\tthis.str = IllegalNullArgumentException.check(str, \"str\");\r\n-\t}\r\n+\t{\n+    this.str = IllegalNullArgumentException.check(str, \"str\");\n+    }\r\n \r\n \tpublic String convertToString()\r\n-\t{\r\n-\t\treturn str;\r\n-\t}\r\n+\t{\n+    return str;\n+    }\r\n \r\n \tpublic boolean convertToBoolean()\r\n-\t{\r\n-\t\treturn Converter.toBoolean(str);\r\n-\t}\r\n+\t{\n+    return Converter.toBoolean(str);\n+    }\r\n \r\n \t@Override\r\n \tpublic double convertToNumber()\r\n-\t{\r\n-\t\treturn Converter.toNumber(str);\r\n-\t}\r\n+\t{\n+    return Converter.toNumber(str);\n+    }\r\n \r\n \t@Override\r\n \tpublic boolean isString()\r\n-\t{\r\n-\t\treturn true;\r\n-\t}\r\n-}\r\n+\t{\n+    return true;\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/codebuff/274/StringVariant.java\nindex d448d64d0b7..636b1d2f127 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/codebuff/274/StringVariant.java\n@@ -18,39 +18,40 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n-package org.genxdm.processor.xpath.v10.variants;\r\n-\r\n-import org.genxdm.exceptions.IllegalNullArgumentException;\r\n-import org.genxdm.xpath.v10.Converter;\r\n-\r\n-public final class StringVariant<N> extends VariantBase<N>\r\n-{\r\n-\tprivate final String str;\r\n-\r\n-\tpublic StringVariant(final String str)\r\n-\t{\r\n-\t\tthis.str = IllegalNullArgumentException.check(str, \"str\");\r\n-\t}\r\n-\r\n-\tpublic String convertToString()\r\n-\t{\r\n-\t\treturn str;\r\n-\t}\r\n-\r\n-\tpublic boolean convertToBoolean()\r\n-\t{\r\n-\t\treturn Converter.toBoolean(str);\r\n-\t}\r\n-\r\n-\t@Override\r\n-\tpublic double convertToNumber()\r\n-\t{\r\n-\t\treturn Converter.toNumber(str);\r\n-\t}\r\n-\r\n-\t@Override\r\n-\tpublic boolean isString()\r\n-\t{\r\n-\t\treturn true;\r\n-\t}\r\n-}\r\n+package org.genxdm.processor.xpath.v10.variants;\n+\n+import org.genxdm.exceptions.IllegalNullArgumentException;\n+import org.genxdm.xpath.v10.Converter;\n+\n+public final class StringVariant<N>\n+    extends VariantBase<N>\n+{\n+    private final String str;\n+\n+    public StringVariant(final String str)\n+    {\n+        this.str = IllegalNullArgumentException.check(str, \"str\");\n+    }\n+\n+    public String convertToString()\n+    {\n+        return str;\n+    }\n+\n+    public boolean convertToBoolean()\n+    {\n+        return Converter.toBoolean(str);\n+    }\n+\n+    @Override\n+    public double convertToNumber()\n+    {\n+        return Converter.toNumber(str);\n+    }\n+\n+    @Override\n+    public boolean isString()\n+    {\n+        return true;\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/random/files-repaired/274/StringVariant.java\nindex d448d64d0b7..52f75c2de2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/random/files-repaired/274/StringVariant.java\n@@ -25,7 +25,7 @@ import org.genxdm.xpath.v10.Converter;\n \r\n public final class StringVariant<N> extends VariantBase<N>\r\n {\r\n-\tprivate final String str;\r\n+private final String str;\r\n \r\n \tpublic StringVariant(final String str)\r\n \t{\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/three_grams/files-repaired/274/StringVariant.java\nindex d448d64d0b7..0bb5a4c411a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/274/StringVariant.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/three_grams/files-repaired/274/StringVariant.java\n@@ -25,7 +25,7 @@ import org.genxdm.xpath.v10.Converter;\n \r\n public final class StringVariant<N> extends VariantBase<N>\r\n {\r\n-\tprivate final String str;\r\n+    private final String str;\r\n \r\n \tpublic StringVariant(final String str)\r\n \t{\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

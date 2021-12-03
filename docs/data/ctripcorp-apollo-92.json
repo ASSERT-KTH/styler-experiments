@@ -1,0 +1,71 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "92",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "column": "73",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n\n  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n    changes.add(new EntityPair<>(firstEntity, secondEntity));\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/92/ReleaseCompareResult.java\nindex 5d3f12e354c..ae9a2c06936 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/92/ReleaseCompareResult.java\n@@ -7,7 +7,7 @@ public class ReleaseCompareResult {\n \n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/92/ReleaseCompareResult.java\nindex 5d3f12e354c..ae9a2c06936 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/92/ReleaseCompareResult.java\n@@ -7,7 +7,7 @@ public class ReleaseCompareResult {\n \n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/92/ReleaseCompareResult.java\nindex 5d3f12e354c..0fbf18109e1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/92/ReleaseCompareResult.java\n@@ -7,7 +7,7 @@ public class ReleaseCompareResult {\n \n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n@@ -17,6 +17,6 @@ public class ReleaseCompareResult {\n \n   public void setChanges(\n       List<EntityPair<KVEntity>> changes) {\n-    this.changes = changes;\n+  this.changes = changes;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/92/ReleaseCompareResult.java\nindex 5d3f12e354c..05b92021244 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/92/ReleaseCompareResult.java\n@@ -3,11 +3,11 @@ package com.ctrip.framework.apollo.portal.entity.vo;\n import java.util.LinkedList;\n import java.util.List;\n \n-public class ReleaseCompareResult {\n \n+public class ReleaseCompareResult {\n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n@@ -15,8 +15,7 @@ public class ReleaseCompareResult {\n     return changes;\n   }\n \n-  public void setChanges(\n-      List<EntityPair<KVEntity>> changes) {\n+  public void setChanges(List<EntityPair<KVEntity>> changes) {\n     this.changes = changes;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/92/ReleaseCompareResult.java\nindex 5d3f12e354c..ae9a2c06936 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/92/ReleaseCompareResult.java\n@@ -7,7 +7,7 @@ public class ReleaseCompareResult {\n \n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/92/ReleaseCompareResult.java\nindex 5d3f12e354c..ae9a2c06936 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/92/ReleaseCompareResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/92/ReleaseCompareResult.java\n@@ -7,7 +7,7 @@ public class ReleaseCompareResult {\n \n   private List<EntityPair<KVEntity>> changes = new LinkedList<>();\n \n-  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity){\n+  public void addEntityPair(KVEntity firstEntity, KVEntity secondEntity) {\n     changes.add(new EntityPair<>(firstEntity, secondEntity));\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "222",
+    "information": {
+        "violations": [
+            {
+                "line": "153",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 122).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    microserviceInstance.setStage(DEFAULT_STAGE);\n    microserviceInstance\n        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n    HealthCheck healthCheck = new HealthCheck();\n    healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n    microserviceInstance.setHealthCheck(healthCheck);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/222/MicroserviceInstance.java\nindex 0af27f923ff..b4ef80965c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/222/MicroserviceInstance.java\n@@ -150,7 +150,7 @@ public class MicroserviceInstance {\n     // default hard coded values\n     microserviceInstance.setStage(DEFAULT_STAGE);\n     microserviceInstance\n-        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+    .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n     HealthCheck healthCheck = new HealthCheck();\n     healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n     microserviceInstance.setHealthCheck(healthCheck);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/222/MicroserviceInstance.java\nindex 0af27f923ff..cc06ae0a186 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/222/MicroserviceInstance.java\n@@ -150,7 +150,8 @@ public class MicroserviceInstance {\n     // default hard coded values\n     microserviceInstance.setStage(DEFAULT_STAGE);\n     microserviceInstance\n-        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+        .setEnvironment(\n+            configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n     HealthCheck healthCheck = new HealthCheck();\n     healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n     microserviceInstance.setHealthCheck(healthCheck);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "154",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/222/MicroserviceInstance.java\nindex 0af27f923ff..8c6a74bca25 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/222/MicroserviceInstance.java\n@@ -52,7 +52,8 @@ public class MicroserviceInstance {\n \n   private MicroserviceInstanceStatus status = MicroserviceInstanceStatus.UP;\n \n-  private Map<String, String> properties = new HashMap<>(); // reserved key list: region|az|stage|group\n+  private Map<String, String> properties = new HashMap<>();\n+// reserved key list: region|az|stage|group\n \n   private HealthCheck healthCheck;\n \n@@ -178,4 +179,4 @@ public class MicroserviceInstance {\n       microserviceInstance.setDataCenterInfo(dataCenterInfo);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "151",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "175",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 130).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/222/MicroserviceInstance.java\nindex 0af27f923ff..7d90ad62582 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/222/MicroserviceInstance.java\n@@ -25,18 +25,16 @@ import java.util.ArrayList;\n import java.util.HashMap;\n import java.util.List;\n import java.util.Map;\n-\n import org.apache.commons.configuration.Configuration;\n import org.apache.commons.lang.StringUtils;\n-\n import com.fasterxml.jackson.annotation.JsonIgnoreProperties;\n import com.netflix.config.DynamicPropertyFactory;\n-\n import io.servicecomb.serviceregistry.config.InstancePropertiesLoader;\n \n /**\n  * Created by   on 2016/12/5.\n  */\n+\n @JsonIgnoreProperties(ignoreUnknown = true)\n public class MicroserviceInstance {\n   // even disconnected from service center\n@@ -145,17 +143,19 @@ public class MicroserviceInstance {\n   }\n \n   // Some properties of microservice instance are dynamic changed, not cover them all now.\n+\n   public static MicroserviceInstance createFromDefinition(Configuration configuration) {\n     MicroserviceInstance microserviceInstance = new MicroserviceInstance();\n     // default hard coded values\n     microserviceInstance.setStage(DEFAULT_STAGE);\n-    microserviceInstance\n-        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+    microserviceInstance.setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+\n     HealthCheck healthCheck = new HealthCheck();\n     healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n     microserviceInstance.setHealthCheck(healthCheck);\n \n     // load properties\n+\n     Map<String, String> propertiesMap = InstancePropertiesLoader.INSTANCE.loadProperties(configuration);\n     microserviceInstance.setProperties(propertiesMap);\n \n@@ -165,17 +165,16 @@ public class MicroserviceInstance {\n   }\n \n   private static void loadDataCenterInfo(MicroserviceInstance microserviceInstance) {\n-    String dataCenterName = DynamicPropertyFactory.getInstance()\n-        .getStringProperty(\"cse.datacenter.name\", null)\n-        .get();\n+    String dataCenterName = DynamicPropertyFactory.getInstance().getStringProperty(\"cse.datacenter.name\", null)\n+                                                                .get();\n     if (StringUtils.isNotEmpty(dataCenterName)) {\n       DataCenterInfo dataCenterInfo = new DataCenterInfo();\n       dataCenterInfo.setName(dataCenterName);\n-      dataCenterInfo\n-          .setRegion(DynamicPropertyFactory.getInstance().getStringProperty(\"cse.datacenter.region\", null).get());\n-      dataCenterInfo.setAvailableZone(\n-          DynamicPropertyFactory.getInstance().getStringProperty(\"cse.datacenter.availableZone\", null).get());\n+      dataCenterInfo.setRegion(DynamicPropertyFactory.getInstance().getStringProperty(\"cse.datacenter.region\", null)\n+                                                                   .get());\n+      dataCenterInfo.setAvailableZone(DynamicPropertyFactory.getInstance().getStringProperty(\"cse.datacenter.availableZone\", null)\n+                                                                          .get());\n       microserviceInstance.setDataCenterInfo(dataCenterInfo);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "152",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/222/MicroserviceInstance.java\nindex 0af27f923ff..32bd3eafaae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/222/MicroserviceInstance.java\n@@ -149,9 +149,8 @@ public class MicroserviceInstance {\n     MicroserviceInstance microserviceInstance = new MicroserviceInstance();\n     // default hard coded values\n     microserviceInstance.setStage(DEFAULT_STAGE);\n-    microserviceInstance\n-        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n-    HealthCheck healthCheck = new HealthCheck();\n+    microserviceInstance.setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+HealthCheck healthCheck = new HealthCheck();\n     healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n     microserviceInstance.setHealthCheck(healthCheck);\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/222/MicroserviceInstance.java\nindex 0af27f923ff..b4ef80965c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/222/MicroserviceInstance.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/222/MicroserviceInstance.java\n@@ -150,7 +150,7 @@ public class MicroserviceInstance {\n     // default hard coded values\n     microserviceInstance.setStage(DEFAULT_STAGE);\n     microserviceInstance\n-        .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n+    .setEnvironment(configuration.getString(CONFIG_QUALIFIED_INSTANCE_ENVIRONMENT_KEY, DEFAULT_INSTANCE_ENVIRONMENT));\n     HealthCheck healthCheck = new HealthCheck();\n     healthCheck.setMode(HealthCheckMode.HEARTBEAT);\n     microserviceInstance.setHealthCheck(healthCheck);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

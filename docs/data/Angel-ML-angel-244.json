@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "244",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/244/InitNodeFeats.java\nindex 037ba63e9c9..4a96f053a2c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/244/InitNodeFeats.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.graph.client.initnodefeats;\n \n import com.tencent.angel.graph.data.Node;\n@@ -26,35 +27,36 @@ import com.tencent.angel.ps.storage.vector.ServerIntAnyRow;\n \n public class InitNodeFeats extends UpdateFunc {\n \n-  /**\n-   * Create a new UpdateParam\n-   */\n-  public InitNodeFeats(InitNodeFeatsParam param) {\n-    super(param);\n-  }\n-\n-  public InitNodeFeats() {\n-    this(null);\n-  }\n-\n-  @Override\n-  public void partitionUpdate(PartitionUpdateParam partParam) {\n-    PartInitNodeFeatsParam param = (PartInitNodeFeatsParam) partParam;\n-    ServerMatrix matrix = psContext.getMatrixStorageManager().getMatrix(partParam.getMatrixId());\n-    RowBasedPartition part = (RowBasedPartition) matrix\n-        .getPartition(partParam.getPartKey().getPartitionId());\n-    ServerIntAnyRow row = (ServerIntAnyRow) part.getRow(0);\n-\n-    int[] nodeIds = param.getNodeIds();\n-    IntFloatVector[] feats = param.getFeats();\n-\n-    for (int i = 0; i < nodeIds.length; i++) {\n-      Node node = (Node)row.get(nodeIds[i]);\n-      if(node == null) {\n-        node = new Node();\n-        row.set(nodeIds[i], node);\n-      }\n-      node.setFeats(feats[i]);\n+    /**\n+     * Create a new UpdateParam\n+     */\n+    public InitNodeFeats(InitNodeFeatsParam param) {\n+        super(param);\n+    }\n+\n+    public InitNodeFeats() {\n+        this(null);\n+    }\n+\n+    @Override\n+    public void partitionUpdate(PartitionUpdateParam partParam) {\n+        PartInitNodeFeatsParam param = (PartInitNodeFeatsParam) partParam;\n+        ServerMatrix matrix =\n+                psContext.getMatrixStorageManager().getMatrix(partParam.getMatrixId());\n+        RowBasedPartition part = (RowBasedPartition) matrix\n+                .getPartition(partParam.getPartKey().getPartitionId());\n+        ServerIntAnyRow row = (ServerIntAnyRow) part.getRow(0);\n+\n+        int[] nodeIds = param.getNodeIds();\n+        IntFloatVector[] feats = param.getFeats();\n+\n+        for (int i = 0; i < nodeIds.length; i++) {\n+            Node node = (Node) row.get(nodeIds[i]);\n+            if (node == null) {\n+                node = new Node();\n+                row.set(nodeIds[i], node);\n+            }\n+            node.setFeats(feats[i]);\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 33
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "44",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/244/InitNodeFeats.java\nindex 037ba63e9c9..5a6541d5943 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/244/InitNodeFeats.java\n@@ -41,8 +41,7 @@ public class InitNodeFeats extends UpdateFunc {\n   public void partitionUpdate(PartitionUpdateParam partParam) {\n     PartInitNodeFeatsParam param = (PartInitNodeFeatsParam) partParam;\n     ServerMatrix matrix = psContext.getMatrixStorageManager().getMatrix(partParam.getMatrixId());\n-    RowBasedPartition part = (RowBasedPartition) matrix\n-        .getPartition(partParam.getPartKey().getPartitionId());\n+    RowBasedPartition part = (RowBasedPartition) matrix.getPartition(partParam.getPartKey().getPartitionId());\n     ServerIntAnyRow row = (ServerIntAnyRow) part.getRow(0);\n \n     int[] nodeIds = param.getNodeIds();\n@@ -50,11 +49,11 @@ public class InitNodeFeats extends UpdateFunc {\n \n     for (int i = 0; i < nodeIds.length; i++) {\n       Node node = (Node)row.get(nodeIds[i]);\n-      if(node == null) {\n+      if (node == null) {\n         node = new Node();\n         row.set(nodeIds[i], node);\n       }\n       node.setFeats(feats[i]);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/244/InitNodeFeats.java\nindex 037ba63e9c9..36434053d45 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/244/InitNodeFeats.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/244/InitNodeFeats.java\n@@ -29,6 +29,7 @@ public class InitNodeFeats extends UpdateFunc {\n   /**\n    * Create a new UpdateParam\n    */\n+\n   public InitNodeFeats(InitNodeFeatsParam param) {\n     super(param);\n   }\n@@ -41,20 +42,18 @@ public class InitNodeFeats extends UpdateFunc {\n   public void partitionUpdate(PartitionUpdateParam partParam) {\n     PartInitNodeFeatsParam param = (PartInitNodeFeatsParam) partParam;\n     ServerMatrix matrix = psContext.getMatrixStorageManager().getMatrix(partParam.getMatrixId());\n-    RowBasedPartition part = (RowBasedPartition) matrix\n-        .getPartition(partParam.getPartKey().getPartitionId());\n+    RowBasedPartition part = (RowBasedPartition) matrix.getPartition(partParam.getPartKey().getPartitionId());\n     ServerIntAnyRow row = (ServerIntAnyRow) part.getRow(0);\n-\n     int[] nodeIds = param.getNodeIds();\n     IntFloatVector[] feats = param.getFeats();\n-\n     for (int i = 0; i < nodeIds.length; i++) {\n-      Node node = (Node)row.get(nodeIds[i]);\n-      if(node == null) {\n+      Node node = (Node) row.get(nodeIds[i]);\n+      if (node == null) {\n         node = new Node();\n         row.set(nodeIds[i], node);\n       }\n       node.setFeats(feats[i]);\n     }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

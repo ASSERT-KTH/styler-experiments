@@ -1,0 +1,63 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "2",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "column": "1",
+                "severity": "error",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Bean\n    public HttpFirewall httpFirewall() {\n\treturn new DefaultHttpFirewall();\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/2/HttpConfig.java\nindex d391b581912..df76934b989 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/2/HttpConfig.java\n@@ -20,6 +20,6 @@ public class HttpConfig {\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+return new DefaultHttpFirewall();\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/2/HttpConfig.java\nindex d391b581912..b1f52fe53a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/2/HttpConfig.java\n@@ -6,20 +6,18 @@ import org.springframework.security.web.firewall.DefaultHttpFirewall;\n import org.springframework.security.web.firewall.HttpFirewall;\n \n /**\n- * \n  * @author daniel grigore\n- *\n  */\n @Configuration\n public class HttpConfig {\n \n     /**\n      * Provide a less restrictive firewall by default and allow applications to overwrite it.\n-     * \n+     *\n      * @return <code>HttpFirewall</code> instance.\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+        return new DefaultHttpFirewall();\n     }\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/2/HttpConfig.java\nindex d391b581912..e96a884b811 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/2/HttpConfig.java\n@@ -20,6 +20,6 @@ public class HttpConfig {\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+    return new DefaultHttpFirewall();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/2/HttpConfig.java\nindex d391b581912..b74ba5b9062 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/2/HttpConfig.java\n@@ -10,6 +10,8 @@ import org.springframework.security.web.firewall.HttpFirewall;\n  * @author daniel grigore\n  *\n  */\n+\n+\n @Configuration\n public class HttpConfig {\n \n@@ -20,6 +22,6 @@ public class HttpConfig {\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+        return new DefaultHttpFirewall();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/2/HttpConfig.java\nindex d391b581912..df76934b989 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/2/HttpConfig.java\n@@ -20,6 +20,6 @@ public class HttpConfig {\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+return new DefaultHttpFirewall();\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/2/HttpConfig.java\nindex d391b581912..840e316f54e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/2/HttpConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/2/HttpConfig.java\n@@ -20,6 +20,6 @@ public class HttpConfig {\n      */\n     @Bean\n     public HttpFirewall httpFirewall() {\n-\treturn new DefaultHttpFirewall();\n+        return new DefaultHttpFirewall();\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

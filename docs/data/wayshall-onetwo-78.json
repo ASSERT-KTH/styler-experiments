@@ -1,0 +1,63 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "78",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "42",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\tprotected int rows = Page.getDefaultPageSize();\n\t\n\tpublic <E> Page<E> toPageObject(){\n\t\treturn Page.create(page, rows);\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/78/PageRequest.java\nindex 1929a5e92f6..7a7c192b88c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/78/PageRequest.java\n@@ -13,7 +13,7 @@ public class PageRequest {\n \tprotected int page = 1;\n \tprotected int rows = Page.getDefaultPageSize();\n \t\n-\tpublic <E> Page<E> toPageObject(){\n+\tpublic <E> Page<E> toPageObject() {\n \t\treturn Page.create(page, rows);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/78/PageRequest.java\nindex 1929a5e92f6..7b1b58f215e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/78/PageRequest.java\n@@ -10,11 +10,11 @@ import org.onetwo.common.utils.Page;\n  */\n @Data\n public class PageRequest {\n-\tprotected int page = 1;\n-\tprotected int rows = Page.getDefaultPageSize();\n-\t\n-\tpublic <E> Page<E> toPageObject(){\n-\t\treturn Page.create(page, rows);\n-\t}\n+  protected int page = 1;\n+  protected int rows = Page.getDefaultPageSize();\n+\n+  public <E> Page<E> toPageObject() {\n+    return Page.create(page, rows);\n+  }\n \n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/78/PageRequest.java\nindex 1929a5e92f6..85c76f7cf2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/naturalize/78/PageRequest.java\n@@ -10,11 +10,12 @@ import org.onetwo.common.utils.Page;\n  */\n @Data\n public class PageRequest {\n+\n \tprotected int page = 1;\n \tprotected int rows = Page.getDefaultPageSize();\n \t\n-\tpublic <E> Page<E> toPageObject(){\n+\tpublic <E> Page<E> toPageObject() {\n \t\treturn Page.create(page, rows);\n \t}\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/78/PageRequest.java\nindex 1929a5e92f6..7a7c192b88c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/78/PageRequest.java\n@@ -13,7 +13,7 @@ public class PageRequest {\n \tprotected int page = 1;\n \tprotected int rows = Page.getDefaultPageSize();\n \t\n-\tpublic <E> Page<E> toPageObject(){\n+\tpublic <E> Page<E> toPageObject() {\n \t\treturn Page.create(page, rows);\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/78/PageRequest.java\nindex 1929a5e92f6..7a7c192b88c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/78/PageRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/78/PageRequest.java\n@@ -13,7 +13,7 @@ public class PageRequest {\n \tprotected int page = 1;\n \tprotected int rows = Page.getDefaultPageSize();\n \t\n-\tpublic <E> Page<E> toPageObject(){\n+\tpublic <E> Page<E> toPageObject() {\n \t\treturn Page.create(page, rows);\n \t}\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

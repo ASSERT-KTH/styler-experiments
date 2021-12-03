@@ -1,0 +1,111 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "407",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.core.common.spring.security.policies;\n\nimport java.util.Map;\nimport java.util.Set;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/407/SecurityPoliciesManager.java\nindex d7b54f22308..14a069ec146 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/407/SecurityPoliciesManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.core.common.spring.security.policies;\n \n import java.util.Map;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/407/SecurityPoliciesManager.java\nindex d7b54f22308..14a069ec146 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/407/SecurityPoliciesManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.core.common.spring.security.policies;\n \n import java.util.Map;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "'INTERFACE_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/407/SecurityPoliciesManager.java\nindex d7b54f22308..dc84abdc75b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/407/SecurityPoliciesManager.java\n@@ -18,20 +18,24 @@ package org.activiti.core.common.spring.security.policies;\n import java.util.Map;\n import java.util.Set;\n \n+\n public interface SecurityPoliciesManager {\n \n-    boolean canRead(String processDefinitionKey,\n-                    String serviceName);\n \n-    boolean canWrite(String processDefinitionKey,\n-                     String serviceName);\n+  boolean canRead(String processDefinitionKey, String serviceName);\n+\n+\n+  boolean canWrite(String processDefinitionKey, String serviceName);\n+\n+\n+  boolean canRead(String processDefinitionKey);\n+\n \n-    boolean canRead(String processDefinitionKey);\n+  boolean canWrite(String processDefinitionKey);\n \n-    boolean canWrite(String processDefinitionKey);\n \n-    boolean arePoliciesDefined();\n+  boolean arePoliciesDefined();\n \n-    Map<String, Set<String>> getAllowedKeys(SecurityPolicyAccess... securityPolicyAccess);\n \n-}\n+  Map<String, Set<String>> getAllowedKeys(SecurityPolicyAccess... securityPolicyAccess);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/407/SecurityPoliciesManager.java\nindex d7b54f22308..14a069ec146 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/407/SecurityPoliciesManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.core.common.spring.security.policies;\n \n import java.util.Map;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/407/SecurityPoliciesManager.java\nindex d7b54f22308..14a069ec146 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/407/SecurityPoliciesManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/407/SecurityPoliciesManager.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.core.common.spring.security.policies;\n \n import java.util.Map;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

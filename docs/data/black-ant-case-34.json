@@ -1,0 +1,95 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "34",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public abstract class DirectoryObject {\n\n\tpublic DirectoryObject() {\n\t\tsuper();\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/34/DirectoryObject.java\nindex 39e4ee272ee..af6f62a348d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/34/DirectoryObject.java\n@@ -30,7 +30,7 @@ package com.gang.azuread.web.demo.common;\n  */\n public abstract class DirectoryObject {\n \n-\tpublic DirectoryObject() {\n+public DirectoryObject() {\n \t\tsuper();\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/34/DirectoryObject.java\nindex 39e4ee272ee..69de627afcb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/34/DirectoryObject.java\n@@ -22,51 +22,46 @@\n  // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  // THE SOFTWARE.\n  ******************************************************************************/\n+\n package com.gang.azuread.web.demo.common;\n \n /**\n  * @author Azure Active Directory Contributor\n- *\n  */\n public abstract class DirectoryObject {\n \n-\tpublic DirectoryObject() {\n-\t\tsuper();\n-\t}\n+    public DirectoryObject() {\n+        super();\n+    }\n \n-\t/**\n-\t *\n-\t * @return\n-\t */\n-\tpublic abstract String getObjectId();\n+    /**\n+     * @return\n+     */\n+    public abstract String getObjectId();\n \n-\t/**\n-\t * @param objectId\n-\t */\n-\tpublic abstract void setObjectId(String objectId);\n+    /**\n+     * @param objectId\n+     */\n+    public abstract void setObjectId(String objectId);\n \n-\t/**\n-\t *\n-\t * @return\n-\t */\n-\tpublic abstract String getObjectType();\n+    /**\n+     * @return\n+     */\n+    public abstract String getObjectType();\n \n-\t/**\n-\t *\n-\t * @param objectType\n-\t */\n-\tpublic abstract void setObjectType(String objectType);\n+    /**\n+     * @param objectType\n+     */\n+    public abstract void setObjectType(String objectType);\n \n-\t/**\n-\t *\n-\t * @return\n-\t */\n-\tpublic abstract String getDisplayName();\n+    /**\n+     * @return\n+     */\n+    public abstract String getDisplayName();\n \n-\t/**\n-\t *\n-\t * @param displayName\n-\t */\n-\tpublic abstract void setDisplayName(String displayName);\n+    /**\n+     * @param displayName\n+     */\n+    public abstract void setDisplayName(String displayName);\n \n }\n",
+            "diff_size": 34
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/34/DirectoryObject.java\nindex 39e4ee272ee..598724880f7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/34/DirectoryObject.java\n@@ -30,9 +30,9 @@ package com.gang.azuread.web.demo.common;\n  */\n public abstract class DirectoryObject {\n \n-\tpublic DirectoryObject() {\n-\t\tsuper();\n-\t}\n+    public DirectoryObject() {\n+    super();\n+    }\n \n \t/**\n \t *\n@@ -68,5 +68,4 @@ public abstract class DirectoryObject {\n \t * @param displayName\n \t */\n \tpublic abstract void setDisplayName(String displayName);\n-\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/34/DirectoryObject.java\nindex 39e4ee272ee..af6f62a348d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/34/DirectoryObject.java\n@@ -30,7 +30,7 @@ package com.gang.azuread.web.demo.common;\n  */\n public abstract class DirectoryObject {\n \n-\tpublic DirectoryObject() {\n+public DirectoryObject() {\n \t\tsuper();\n \t}\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/34/DirectoryObject.java\nindex 39e4ee272ee..32788121a8b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/34/DirectoryObject.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/34/DirectoryObject.java\n@@ -30,7 +30,7 @@ package com.gang.azuread.web.demo.common;\n  */\n public abstract class DirectoryObject {\n \n-\tpublic DirectoryObject() {\n+    public DirectoryObject() {\n \t\tsuper();\n \t}\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

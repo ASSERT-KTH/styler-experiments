@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "156",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "column": "46",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\t}\n\t\n\tpublic ExtEurekaServerConfiguration(){\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/156/ExtEurekaServerConfiguration.java\nindex bc1778a8d01..b2bf7c63ccb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/156/ExtEurekaServerConfiguration.java\n@@ -31,6 +31,6 @@ public class ExtEurekaServerConfiguration {\n \t\treturn new ExtEurekaController(this.applicationInfoManager);\n \t}\n \t\n-\tpublic ExtEurekaServerConfiguration(){\n-\t}\n+\tpublic ExtEurekaServerConfiguration() {\n+ }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/156/ExtEurekaServerConfiguration.java\nindex bc1778a8d01..5c7b07d61ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/156/ExtEurekaServerConfiguration.java\n@@ -21,16 +21,16 @@ import com.netflix.appinfo.ApplicationInfoManager;\n @ConditionalOnBean(EurekaServerBootstrap.class)\n public class ExtEurekaServerConfiguration {\n \n-\t@Autowired\n-\tprivate ApplicationInfoManager applicationInfoManager;\n+  @Autowired\n+  private ApplicationInfoManager applicationInfoManager;\n \n-\t@Bean\n+  @Bean\n //\t@ConditionalOnProperty(prefix = \"eureka.dashboard\", name = \"admin\", matchIfMissing=true)\n-\t@ConditionalOnMissingBean(EurekaController.class)\n-\tpublic ExtEurekaController eurekaController() {\n-\t\treturn new ExtEurekaController(this.applicationInfoManager);\n-\t}\n-\t\n-\tpublic ExtEurekaServerConfiguration(){\n-\t}\n+  @ConditionalOnMissingBean(EurekaController.class)\n+  public ExtEurekaController eurekaController() {\n+    return new ExtEurekaController(this.applicationInfoManager);\n+  }\n+\n+  public ExtEurekaServerConfiguration() {\n+  }\n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/156/ExtEurekaServerConfiguration.java\nindex bc1778a8d01..b2bf7c63ccb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/156/ExtEurekaServerConfiguration.java\n@@ -31,6 +31,6 @@ public class ExtEurekaServerConfiguration {\n \t\treturn new ExtEurekaController(this.applicationInfoManager);\n \t}\n \t\n-\tpublic ExtEurekaServerConfiguration(){\n-\t}\n+\tpublic ExtEurekaServerConfiguration() {\n+ }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/156/ExtEurekaServerConfiguration.java\nindex bc1778a8d01..b2bf7c63ccb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/156/ExtEurekaServerConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/156/ExtEurekaServerConfiguration.java\n@@ -31,6 +31,6 @@ public class ExtEurekaServerConfiguration {\n \t\treturn new ExtEurekaController(this.applicationInfoManager);\n \t}\n \t\n-\tpublic ExtEurekaServerConfiguration(){\n-\t}\n+\tpublic ExtEurekaServerConfiguration() {\n+ }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

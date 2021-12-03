@@ -1,0 +1,96 @@
+{
+    "project_name": "TIBCOSoftware-genxdm",
+    "violation_id": "358",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "1",
+                "severity": "warning",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "{\n\n\tpublic NodeKind getPrincipalNodeKind()\n\t{\n\t\treturn NodeKind.ELEMENT;\n\t}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/final/files-repaired/358/FollowingAxisExpr.java\nindex b80118523bf..ef2878714c1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/final/files-repaired/358/FollowingAxisExpr.java\n@@ -30,7 +30,7 @@ public final class FollowingAxisExpr\n     extends AxisExpr\r\n {\r\n \r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n+public NodeKind getPrincipalNodeKind()\r\n \t{\r\n \t\treturn NodeKind.ELEMENT;\r\n \t}\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/checkstyle_idea/358/FollowingAxisExpr.java\nindex b80118523bf..46b2ec63cfc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/checkstyle_idea/358/FollowingAxisExpr.java\n@@ -3,7 +3,7 @@\n  * license details\r\n  * Portions copyright (c) 2002, Bill Lindsey : see copying.txt for license\r\n  * details\r\n- * \r\n+ *\r\n  * Portions copyright (c) 2009-2011 TIBCO Software Inc.\r\n  *\r\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n@@ -18,6 +18,7 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n+\r\n package org.genxdm.processor.xpath.v10.expressions;\r\n \r\n import org.genxdm.Model;\r\n@@ -26,17 +27,15 @@ import org.genxdm.processor.xpath.v10.iterators.NodeIteratorOnIterator;\n import org.genxdm.xpath.v10.ExprContextDynamic;\r\n import org.genxdm.xpath.v10.NodeIterator;\r\n \r\n-public final class FollowingAxisExpr \r\n-    extends AxisExpr\r\n-{\r\n+public final class FollowingAxisExpr\r\n+    extends AxisExpr {\r\n \r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n-\t{\r\n-\t\treturn NodeKind.ELEMENT;\r\n-\t}\r\n+    public NodeKind getPrincipalNodeKind() {\r\n+        return NodeKind.ELEMENT;\r\n+    }\r\n \r\n-\tpublic <N> NodeIterator<N> nodeIterator(final Model<N> model, final N contextNode, final ExprContextDynamic<N> dynEnv)\r\n-\t{\r\n-\t\treturn new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\r\n-\t}\r\n+    public <N> NodeIterator<N> nodeIterator(final Model<N> model, final N contextNode,\r\n+                                            final ExprContextDynamic<N> dynEnv) {\r\n+        return new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\r\n+    }\r\n }\r\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/naturalize/358/FollowingAxisExpr.java\nindex b80118523bf..74d5d092ebd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/naturalize/358/FollowingAxisExpr.java\n@@ -27,16 +27,15 @@ import org.genxdm.xpath.v10.ExprContextDynamic;\n import org.genxdm.xpath.v10.NodeIterator;\r\n \r\n public final class FollowingAxisExpr \r\n-    extends AxisExpr\r\n-{\r\n-\r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n-\t{\r\n-\t\treturn NodeKind.ELEMENT;\r\n-\t}\r\n+    extends AxisExpr\n+{\n+    public NodeKind getPrincipalNodeKind()\r\n+\t{\n+    return NodeKind.ELEMENT;\n+    }\r\n \r\n \tpublic <N> NodeIterator<N> nodeIterator(final Model<N> model, final N contextNode, final ExprContextDynamic<N> dynEnv)\r\n-\t{\r\n-\t\treturn new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\r\n-\t}\r\n-}\r\n+\t{\n+    return new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/codebuff/358/FollowingAxisExpr.java\nindex b80118523bf..70fffdb1dff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/codebuff/358/FollowingAxisExpr.java\n@@ -18,25 +18,23 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n-package org.genxdm.processor.xpath.v10.expressions;\r\n-\r\n-import org.genxdm.Model;\r\n-import org.genxdm.NodeKind;\r\n-import org.genxdm.processor.xpath.v10.iterators.NodeIteratorOnIterator;\r\n-import org.genxdm.xpath.v10.ExprContextDynamic;\r\n-import org.genxdm.xpath.v10.NodeIterator;\r\n-\r\n-public final class FollowingAxisExpr \r\n-    extends AxisExpr\r\n-{\r\n-\r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n-\t{\r\n-\t\treturn NodeKind.ELEMENT;\r\n-\t}\r\n-\r\n-\tpublic <N> NodeIterator<N> nodeIterator(final Model<N> model, final N contextNode, final ExprContextDynamic<N> dynEnv)\r\n-\t{\r\n-\t\treturn new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\r\n-\t}\r\n-}\r\n+package org.genxdm.processor.xpath.v10.expressions;\n+\n+import org.genxdm.Model;\n+import org.genxdm.NodeKind;\n+import org.genxdm.processor.xpath.v10.iterators.NodeIteratorOnIterator;\n+import org.genxdm.xpath.v10.ExprContextDynamic;\n+import org.genxdm.xpath.v10.NodeIterator;\n+\n+public final class FollowingAxisExpr extends AxisExpr\n+{\n+    public NodeKind getPrincipalNodeKind()\n+    {\n+        return NodeKind.ELEMENT;\n+    }\n+\n+    public <N> NodeIterator<N> nodeIterator(final Model<N> model, final N contextNode, final ExprContextDynamic<N> dynEnv)\n+    {\n+        return new NodeIteratorOnIterator<N>(model.getFollowingAxis(contextNode).iterator());\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/random/files-repaired/358/FollowingAxisExpr.java\nindex b80118523bf..ef2878714c1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/random/files-repaired/358/FollowingAxisExpr.java\n@@ -30,7 +30,7 @@ public final class FollowingAxisExpr\n     extends AxisExpr\r\n {\r\n \r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n+public NodeKind getPrincipalNodeKind()\r\n \t{\r\n \t\treturn NodeKind.ELEMENT;\r\n \t}\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/three_grams/files-repaired/358/FollowingAxisExpr.java\nindex b80118523bf..6713e5e79e1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/violations/358/FollowingAxisExpr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/TIBCOSoftware-genxdm/styler/05_predictions/three_grams/files-repaired/358/FollowingAxisExpr.java\n@@ -30,7 +30,7 @@ public final class FollowingAxisExpr\n     extends AxisExpr\r\n {\r\n \r\n-\tpublic NodeKind getPrincipalNodeKind()\r\n+    public NodeKind getPrincipalNodeKind()\r\n \t{\r\n \t\treturn NodeKind.ELEMENT;\r\n \t}\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

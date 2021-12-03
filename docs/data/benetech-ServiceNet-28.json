@@ -1,0 +1,63 @@
+{
+    "project_name": "benetech-ServiceNet",
+    "violation_id": "28",
+    "information": {
+        "violations": [
+            {
+                "line": "344",
+                "column": "5",
+                "severity": "error",
+                "message": "'METHOD_DEF' should be separated from previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "        return dailyUpdates;\n    }\n    public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n        this.dailyUpdates = dailyUpdates;\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/28/Organization.java\nindex 2bf14b0750a..0228f317e77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/28/Organization.java\n@@ -341,6 +341,7 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public Set<DailyUpdate> getDailyUpdates() {\n         return dailyUpdates;\n     }\n+\n     public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n         this.dailyUpdates = dailyUpdates;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/28/Organization.java\nindex 2bf14b0750a..0228f317e77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/28/Organization.java\n@@ -341,6 +341,7 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public Set<DailyUpdate> getDailyUpdates() {\n         return dailyUpdates;\n     }\n+\n     public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n         this.dailyUpdates = dailyUpdates;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/28/Organization.java\nindex 2bf14b0750a..54c9aefea1d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/28/Organization.java\n@@ -341,7 +341,8 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public Set<DailyUpdate> getDailyUpdates() {\n         return dailyUpdates;\n     }\n-    public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n+\n+public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n         this.dailyUpdates = dailyUpdates;\n     }\n \n@@ -411,4 +412,4 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public int hashCode() {\n         return Objects.hashCode(getId());\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/random/files-repaired/28/Organization.java\nindex 2bf14b0750a..0228f317e77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/random/files-repaired/28/Organization.java\n@@ -341,6 +341,7 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public Set<DailyUpdate> getDailyUpdates() {\n         return dailyUpdates;\n     }\n+\n     public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n         this.dailyUpdates = dailyUpdates;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/28/Organization.java\nindex 2bf14b0750a..0228f317e77 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/28/Organization.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/28/Organization.java\n@@ -341,6 +341,7 @@ public class Organization extends AbstractEntity implements Serializable, DeepCo\n     public Set<DailyUpdate> getDailyUpdates() {\n         return dailyUpdates;\n     }\n+\n     public void setDailyUpdates(Set<DailyUpdate> dailyUpdates) {\n         this.dailyUpdates = dailyUpdates;\n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

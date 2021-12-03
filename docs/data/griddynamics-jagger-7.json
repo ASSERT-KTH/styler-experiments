@@ -1,0 +1,599 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "7",
+    "information": {
+        "violations": [
+            {
+                "line": "425",
+                "severity": "warning",
+                "message": "'enumeration' has incorrect indentation level 13, expected level should be 16.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "        Properties properties = System.getProperties();\n        for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n             enumeration.hasMoreElements(); ) {\n            String key = enumeration.nextElement();\n            // overwrite due to higher priority\n            environmentProperties.put(key, properties.get(key));",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/7/JaggerLauncher.java\nindex 8dc2af0750e..740f24b2159 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/7/JaggerLauncher.java\n@@ -422,7 +422,7 @@ public final class JaggerLauncher {\n         \n         Properties properties = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n-             enumeration.hasMoreElements(); ) {\n+                enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n             // overwrite due to higher priority\n             environmentProperties.put(key, properties.get(key));\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "425",
+                    "severity": "warning",
+                    "message": "'enumeration' has incorrect indentation level 13, expected level should be 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/7/JaggerLauncher.java\nindex 8dc2af0750e..f6a1a4ec72d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/7/JaggerLauncher.java\n@@ -80,11 +80,11 @@ public final class JaggerLauncher {\n             \"./configuration/basic/default.environment.properties\";\n     private static final String DEFAULT_USER_ENVIRONMENT_PROPERTIES_LOCATION =\n             \"./configuration/basic/default.user.properties\";\n-    \n+\n     private static final Properties environmentProperties = new Properties();\n-    \n+\n     private static final Launches.LaunchManagerBuilder builder = Launches.builder();\n-    \n+\n     public static void main(String[] args) throws Exception {\n         Thread memoryMonitorThread = new Thread(\"memory-monitor\") {\n             @Override\n@@ -95,7 +95,7 @@ public final class JaggerLauncher {\n                                 \"Memory info: totalMemory={}, freeMemory={}\", Runtime.getRuntime().totalMemory(),\n                                 Runtime.getRuntime().freeMemory()\n                         );\n-                        \n+\n                         Thread.sleep(60000);\n                     } catch (InterruptedException e) {\n                         throw new RuntimeException(e);\n@@ -105,27 +105,27 @@ public final class JaggerLauncher {\n         };\n         memoryMonitorThread.setDaemon(true);\n         memoryMonitorThread.start();\n-        \n+\n         String pid = ManagementFactory.getRuntimeMXBean().getName();\n         System.out.println(String.format(\"PID:%s\", pid));\n-        \n+\n         Properties props = System.getProperties();\n         for (Map.Entry<Object, Object> prop : props.entrySet()) {\n             log.info(\"{}: '{}'\", prop.getKey(), prop.getValue());\n         }\n         log.info(\"\");\n-        \n+\n         URL directory = new URL(\"file:\" + System.getProperty(\"user.dir\") + \"/\");\n         loadBootProperties(directory, args[0], environmentProperties);\n-        \n+\n         log.debug(\"Bootstrap properties:\");\n         for (String propName : environmentProperties.stringPropertyNames()) {\n             log.debug(\"   {}={}\", propName, environmentProperties.getProperty(propName));\n         }\n-        \n+\n         String[] roles = environmentProperties.getProperty(ROLES).split(\",\");\n         Set<String> rolesSet = Sets.newHashSet(roles);\n-        \n+\n         if (rolesSet.contains(Role.COORDINATION_SERVER.toString())) {\n             launchCoordinationServer(directory);\n         }\n@@ -141,36 +141,36 @@ public final class JaggerLauncher {\n         if (rolesSet.contains(Role.KERNEL.toString())) {\n             launchKernel(directory);\n         }\n-        \n+\n         if (rolesSet.contains(Role.REPORTER.toString())) {\n             launchReporter(directory);\n         }\n-        \n+\n         LaunchManager launchManager = builder.build();\n         int result = launchManager.launch();\n         System.exit(result);\n     }\n-    \n+\n     private static void initCoordinator(ApplicationContext applicationContext) {\n         final Coordinator coordinator = (Coordinator) applicationContext.getBean(\"coordinator\");\n         coordinator.waitForReady();\n         coordinator.initialize();\n     }\n-    \n+\n     private static void launchMaster(final URL directory) {\n-    \n+\n         // pass this property value for Spring's context:component-scan\n         System.setProperty(USER_CONFIGS_PACKAGE, environmentProperties.getProperty(USER_CONFIGS_PACKAGE));\n-        \n+\n         LaunchTask masterTask = new LaunchTask() {\n             @Override\n             public void run() {\n                 boolean isStandByMode = Boolean.parseBoolean(\n                         environmentProperties.getProperty(\"realtime.enable.standby.mode\", \"false\"));\n-    \n+\n                 if (isStandByMode) {\n                     log.info(\"Starting Master in stand by mode...\");\n-        \n+\n                     try (MasterToJaasCoordinator masterToJaasCoordinator = new MasterToJaasCoordinator(\n                             environmentProperties.getProperty(\"realtime.environment.id\"),\n                             environmentProperties.getProperty(\"realtime.jaas.endpoint\"), Integer.parseInt(\n@@ -194,7 +194,7 @@ public final class JaggerLauncher {\n         };\n         builder.addMainTask(masterTask);\n     }\n-    \n+\n     private static Set<String> getAvailableConfigurations(final URL directory) {\n         AbstractXmlApplicationContext context = loadContext(directory, MASTER_CONFIGURATION, environmentProperties);\n         ConfigurationGenerator configurationGenerator = context.getBean(ConfigurationGenerator.class);\n@@ -202,7 +202,7 @@ public final class JaggerLauncher {\n         context.destroy();\n         return availableConfigs;\n     }\n-    \n+\n     private static void doLaunchMaster(final URL directory) {\n         AbstractXmlApplicationContext context = loadContext(directory, MASTER_CONFIGURATION, environmentProperties);\n         initCoordinator(context);\n@@ -213,10 +213,10 @@ public final class JaggerLauncher {\n         master.run();\n         context.destroy();\n     }\n-    \n+\n     private static void launchReporter(final URL directory) {\n         LaunchTask launchReporter = new LaunchTask() {\n-            \n+\n             @Override\n             public void run() {\n                 ApplicationContext context = loadContext(directory, REPORTER_CONFIGURATION, environmentProperties);\n@@ -224,28 +224,28 @@ public final class JaggerLauncher {\n                 reportingService.renderReport(true);\n             }\n         };\n-        \n+\n         builder.addMainTask(launchReporter);\n     }\n-    \n+\n     private static void launchKernel(final URL directory) {\n-        \n+\n         LaunchTask runKernel = new LaunchTask() {\n             private Kernel kernel;\n-            \n+\n             @Override\n             public void run() {\n                 log.info(\"Starting Kernel\");\n-                \n+\n                 ApplicationContext context = loadContext(directory, KERNEL_CONFIGURATION, environmentProperties);\n-                \n+\n                 final CountDownLatch latch = new CountDownLatch(1);\n                 final Coordinator coordinator = (Coordinator) context.getBean(\"coordinator\");\n-                \n+\n                 kernel = (Kernel) context.getBean(\"kernel\");\n-                \n+\n                 toTerminate(kernel);\n-                \n+\n                 Runnable kernelRunner = () -> {\n                     try {\n                         latch.await();\n@@ -254,46 +254,46 @@ public final class JaggerLauncher {\n                     }\n                     kernel.run();\n                 };\n-                \n+\n                 getExecutor().execute(kernelRunner);\n-                \n+\n                 coordinator.waitForReady();\n                 coordinator.waitForInitialization();\n-                \n+\n                 latch.countDown();\n             }\n         };\n-        \n+\n         builder.addBackgroundTask(runKernel);\n     }\n-    \n+\n     private static void launchRdbServer(final URL directory) {\n         log.info(\"Starting RDB Server\");\n-        \n-        \n+\n+\n         LaunchTask rdbRunner = new LaunchTask() {\n             @Override\n             public void run() {\n                 ApplicationContext context = loadContext(directory, RDB_CONFIGURATION, environmentProperties);\n-                \n+\n                 H2DatabaseServer dbServer = (H2DatabaseServer) context.getBean(\"databaseServer\");\n-                \n+\n                 dbServer.run();\n             }\n         };\n-        \n+\n         builder.addBackgroundTask(rdbRunner);\n     }\n-    \n+\n     private static void launchCoordinationServer(final URL directory) {\n         LaunchTask zookeeperInitializer = new LaunchTask() {\n-            \n+\n             //            private ZooKeeperServer zooKeeper;\n             private AttendantServer server;\n-            \n+\n             public void run() {\n                 log.info(\"Starting Coordination Server\");\n-                \n+\n                 ApplicationContext context = loadContext(directory, COORDINATION_CONFIGURATION, environmentProperties);\n                 server = (AttendantServer) context.getBean(\"coordinatorServer\");\n                 toTerminate(server);\n@@ -301,21 +301,21 @@ public final class JaggerLauncher {\n                 server.initialize();\n             }\n         };\n-        \n+\n         builder.addMainTask(zookeeperInitializer);\n     }\n-    \n+\n     private static void launchCometdCoordinationServer(final URL directory) {\n-        \n+\n         LaunchTask jettyRunner = new LaunchTask() {\n             public void run() {\n                 log.info(\"Starting Cometd Coordination Server\");\n-                \n+\n                 ApplicationContext context =\n                         loadContext(directory, COORDINATION_HTTP_CONFIGURATION, environmentProperties);\n-                \n+\n                 initCoordinator(context);\n-                \n+\n                 Server jettyServer = (Server) context.getBean(\"jettyServer\");\n                 try {\n                     jettyServer.start();\n@@ -326,21 +326,21 @@ public final class JaggerLauncher {\n         };\n         builder.addMainTask(jettyRunner);\n     }\n-    \n+\n     public static AbstractXmlApplicationContext loadContext(URL directory, String role, Properties environmentProperties) {\n         String[] includePatterns = StringUtils.split(environmentProperties.getProperty(role + INCLUDE_SUFFIX), \", \");\n         String[] excludePatterns = StringUtils.split(environmentProperties.getProperty(role + EXCLUDE_SUFFIX), \", \");\n-        \n+\n         List<String> descriptors = discoverResources(directory, includePatterns, excludePatterns);\n         log.info(\"Discovered descriptors:\");\n         for (String descriptor : descriptors) {\n             log.info(\"   \" + descriptor);\n         }\n-        \n+\n         return new JaggerXmlApplicationContext(\n                 directory, environmentProperties, descriptors.toArray(new String[descriptors.size()]));\n     }\n-    \n+\n     private static List<String> discoverResources(URL directory, String[] includePatterns, String[] excludePatterns) {\n         PathMatchingResourcePatternResolver resolver =\n                 new PathMatchingResourcePatternResolver(new FileSystemResourceLoader());\n@@ -365,22 +365,22 @@ public final class JaggerLauncher {\n         } catch (IOException e) {\n             throw new TechnicalException(e);\n         }\n-        \n+\n         return resourceNames;\n     }\n-    \n+\n     public static void loadBootProperties(URL directory, String environmentPropertiesLocation,\n                                           Properties environmentProperties\n     ) throws IOException {\n-        \n+\n         // priorities\n         // low priority (default properties - environment props - user props - system properties) high priority\n-        \n+\n         // properties from command line - environment properties\n         URL bootPropertiesFile = new URL(directory, environmentPropertiesLocation);\n         System.setProperty(ENVIRONMENT_PROPERTIES, environmentPropertiesLocation);\n         environmentProperties.load(bootPropertiesFile.openStream());\n-        \n+\n         // user properties\n         String userBootPropertiesLocationsString = System.getProperty(USER_ENVIRONMENT_PROPERTIES);\n         if (userBootPropertiesLocationsString == null) {\n@@ -390,18 +390,18 @@ public final class JaggerLauncher {\n             userBootPropertiesLocationsString = DEFAULT_USER_ENVIRONMENT_PROPERTIES_LOCATION;\n         }\n         String[] userBootPropertiesSingleLocations = userBootPropertiesLocationsString.split(\",\");\n-        \n+\n         for (String location : userBootPropertiesSingleLocations) {\n             URL userBootPropertiesFile = new URL(directory, location);\n             Properties userBootProperties = new Properties();\n             userBootProperties.load(userBootPropertiesFile.openStream());\n-            \n+\n             for (String name : userBootProperties.stringPropertyNames()) {\n                 // overwrite due to higher priority\n                 environmentProperties.setProperty(name, userBootProperties.getProperty(name));\n             }\n         }\n-        \n+\n         // default properties\n         String defaultBootPropertiesLocation = System.getProperty(DEFAULT_ENVIRONMENT_PROPERTIES);\n         if (defaultBootPropertiesLocation == null) {\n@@ -419,7 +419,7 @@ public final class JaggerLauncher {\n                 environmentProperties.setProperty(name, defaultBootProperties.getProperty(name));\n             }\n         }\n-        \n+\n         Properties properties = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n              enumeration.hasMoreElements(); ) {\n@@ -427,7 +427,7 @@ public final class JaggerLauncher {\n             // overwrite due to higher priority\n             environmentProperties.put(key, properties.get(key));\n         }\n-        \n+\n         System.setProperty(ENVIRONMENT_PROPERTIES, environmentPropertiesLocation);\n         System.setProperty(USER_ENVIRONMENT_PROPERTIES, userBootPropertiesLocationsString);\n         System.setProperty(DEFAULT_ENVIRONMENT_PROPERTIES, defaultBootPropertiesLocation);\n",
+            "diff_size": 65
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "99",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 19, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "101",
+                    "severity": "warning",
+                    "message": "'for' has incorrect indentation level 23, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "102",
+                    "severity": "warning",
+                    "message": "'try' has incorrect indentation level 27, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "103",
+                    "severity": "warning",
+                    "message": "'try' child has incorrect indentation level 31, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "106",
+                    "severity": "warning",
+                    "message": "'try' child has incorrect indentation level 31, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "107",
+                    "severity": "warning",
+                    "message": "'try rcurly' has incorrect indentation level 27, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "108",
+                    "severity": "warning",
+                    "message": "'catch' child has incorrect indentation level 31, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "109",
+                    "severity": "warning",
+                    "message": "'catch rcurly' has incorrect indentation level 27, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "110",
+                    "severity": "warning",
+                    "message": "'for rcurly' has incorrect indentation level 23, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "111",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 19, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "126",
+                    "severity": "warning",
+                    "message": "'\"/\"' has incorrect indentation level 8, expected level should be 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "172",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "174",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "175",
+                    "severity": "warning",
+                    "message": "'if' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "176",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "177",
+                    "severity": "warning",
+                    "message": "'try' has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "177",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 374).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "178",
+                    "severity": "warning",
+                    "message": "'try' child has incorrect indentation level 35, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "179",
+                    "severity": "warning",
+                    "message": "'while' has incorrect indentation level 35, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "180",
+                    "severity": "warning",
+                    "message": "'while' child has incorrect indentation level 39, expected level should be one of the following: 28, 32, 36.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "181",
+                    "severity": "warning",
+                    "message": "'while' child has incorrect indentation level 39, expected level should be one of the following: 28, 32, 36.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "182",
+                    "severity": "warning",
+                    "message": "'while rcurly' has incorrect indentation level 35, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "183",
+                    "severity": "warning",
+                    "message": "'try rcurly' has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "183",
+                    "column": "59",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '|' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "184",
+                    "severity": "warning",
+                    "message": "'catch' child has incorrect indentation level 35, expected level should be one of the following: 24, 28, 32.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "185",
+                    "severity": "warning",
+                    "message": "'catch rcurly' has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "186",
+                    "severity": "warning",
+                    "message": "'if rcurly' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "187",
+                    "severity": "warning",
+                    "message": "'else' child has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "188",
+                    "severity": "warning",
+                    "message": "'else' child has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "189",
+                    "severity": "warning",
+                    "message": "'else rcurly' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "190",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "191",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "220",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "222",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "223",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "224",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "225",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "226",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "233",
+                    "severity": "warning",
+                    "message": "'object def' child has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "235",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "237",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "239",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "240",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "241",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "242",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "243",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "245",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "246",
+                    "severity": "warning",
+                    "message": "'try' has incorrect indentation level 40, expected level should be 31.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "247",
+                    "severity": "warning",
+                    "message": "'try' child has incorrect indentation level 44, expected level should be 35.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "248",
+                    "severity": "warning",
+                    "message": "'try rcurly' has incorrect indentation level 40, expected level should be 31.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "249",
+                    "severity": "warning",
+                    "message": "'catch' child has incorrect indentation level 44, expected level should be 35.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "250",
+                    "severity": "warning",
+                    "message": "'catch rcurly' has incorrect indentation level 40, expected level should be 31.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "251",
+                    "severity": "warning",
+                    "message": "'block' child has incorrect indentation level 40, expected level should be 31.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "253",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "254",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "255",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "256",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "257",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "258",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "266",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "268",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "270",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "271",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "272",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "273",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "280",
+                    "severity": "warning",
+                    "message": "Comment has incorrect indentation level 12, expected is 23, indentation should be the same level as line 282.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "282",
+                    "severity": "warning",
+                    "message": "'object def' child has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "284",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "285",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "287",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "288",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "289",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "290",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "291",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "292",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "293",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "300",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "301",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "303",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "304",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "306",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "307",
+                    "severity": "warning",
+                    "message": "'try' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "308",
+                    "severity": "warning",
+                    "message": "'try' child has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "309",
+                    "severity": "warning",
+                    "message": "'try rcurly' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "310",
+                    "severity": "warning",
+                    "message": "'catch' child has incorrect indentation level 31, expected level should be one of the following: 20, 24, 28.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "311",
+                    "severity": "warning",
+                    "message": "'catch rcurly' has incorrect indentation level 27, expected level should be one of the following: 16, 20, 24.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "312",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 23, expected level should be one of the following: 12, 16, 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "313",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 19, expected level should be one of the following: 8, 12, 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/7/JaggerLauncher.java\nindex 8dc2af0750e..f15393b9b42 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/7/JaggerLauncher.java\n@@ -45,9 +45,7 @@ import org.springframework.core.io.Resource;\n import org.springframework.core.io.support.PathMatchingResourcePatternResolver;\n import org.springframework.util.AntPathMatcher;\n import org.springframework.util.PathMatcher;\n-\n import com.google.common.collect.Sets;\n-\n import java.io.IOException;\n import java.lang.management.ManagementFactory;\n import java.net.URL;\n@@ -60,72 +58,81 @@ import java.util.Properties;\n import java.util.Set;\n import java.util.concurrent.CountDownLatch;\n \n+\n public final class JaggerLauncher {\n+\n     public static final String ROLES = \"chassis.roles\";\n+\n     public static final String MASTER_CONFIGURATION = \"chassis.master.configuration\";\n+\n     public static final String REPORTER_CONFIGURATION = \"chassis.reporter.configuration\";\n+\n     public static final String KERNEL_CONFIGURATION = \"chassis.kernel.configuration\";\n+\n     public static final String COORDINATION_CONFIGURATION = \"chassis.coordination.configuration\";\n+\n     public static final String COORDINATION_HTTP_CONFIGURATION = \"chassis.coordination.http.configuration\";\n+\n     public static final String RDB_CONFIGURATION = \"chassis.rdb.configuration\";\n+\n     public static final String INCLUDE_SUFFIX = \".include\";\n+\n     public static final String EXCLUDE_SUFFIX = \".exclude\";\n+\n     public static final String TEST_CONFIG_NAME_PROP = \"jagger.load.scenario.id.to.execute\";\n+\n     public static final String DEFAULT_ENVIRONMENT_PROPERTIES = \"jagger.default.environment.properties\";\n+\n     public static final String USER_ENVIRONMENT_PROPERTIES = \"jagger.user.environment.properties\";\n+\n     public static final String ENVIRONMENT_PROPERTIES = \"jagger.environment.properties\";\n+\n     public static final String USER_CONFIGS_PACKAGE = \"chassis.master.package.to.scan\";\n     private static final Logger log = LoggerFactory.getLogger(JaggerLauncher.class);\n-    private static final String DEFAULT_ENVIRONMENT_PROPERTIES_LOCATION =\n-            \"./configuration/basic/default.environment.properties\";\n-    private static final String DEFAULT_USER_ENVIRONMENT_PROPERTIES_LOCATION =\n-            \"./configuration/basic/default.user.properties\";\n-    \n+    private static final String DEFAULT_ENVIRONMENT_PROPERTIES_LOCATION = \"./configuration/basic/default.environment.properties\";\n+    private static final String DEFAULT_USER_ENVIRONMENT_PROPERTIES_LOCATION = \"./configuration/basic/default.user.properties\";\n     private static final Properties environmentProperties = new Properties();\n-    \n     private static final Launches.LaunchManagerBuilder builder = Launches.builder();\n-    \n+\n     public static void main(String[] args) throws Exception {\n         Thread memoryMonitorThread = new Thread(\"memory-monitor\") {\n-            @Override\n-            public void run() {\n-                for (; ; ) {\n-                    try {\n-                        log.info(\n-                                \"Memory info: totalMemory={}, freeMemory={}\", Runtime.getRuntime().totalMemory(),\n-                                Runtime.getRuntime().freeMemory()\n-                        );\n-                        \n-                        Thread.sleep(60000);\n-                    } catch (InterruptedException e) {\n-                        throw new RuntimeException(e);\n-                    }\n-                }\n-            }\n+                   @Override\n+                   public void run() {\n+                       for (; ; ) {\n+                           try {\n+                               log.info(\"Memory info: totalMemory={}, freeMemory={}\",\n+                                        Runtime.getRuntime().totalMemory(),\n+                                        Runtime.getRuntime().freeMemory());\n+                               Thread.sleep(60000);\n+                           } catch (InterruptedException e) {\n+                               throw new RuntimeException(e);\n+                           }\n+                       }\n+                   }\n         };\n         memoryMonitorThread.setDaemon(true);\n         memoryMonitorThread.start();\n-        \n+\n         String pid = ManagementFactory.getRuntimeMXBean().getName();\n         System.out.println(String.format(\"PID:%s\", pid));\n-        \n+\n         Properties props = System.getProperties();\n         for (Map.Entry<Object, Object> prop : props.entrySet()) {\n             log.info(\"{}: '{}'\", prop.getKey(), prop.getValue());\n         }\n         log.info(\"\");\n-        \n-        URL directory = new URL(\"file:\" + System.getProperty(\"user.dir\") + \"/\");\n+\n+        URL directory = new URL(\"file:\" + System.getProperty(\"user.dir\") +\n+        \"/\");\n         loadBootProperties(directory, args[0], environmentProperties);\n-        \n         log.debug(\"Bootstrap properties:\");\n         for (String propName : environmentProperties.stringPropertyNames()) {\n             log.debug(\"   {}={}\", propName, environmentProperties.getProperty(propName));\n         }\n-        \n+\n         String[] roles = environmentProperties.getProperty(ROLES).split(\",\");\n+\n         Set<String> rolesSet = Sets.newHashSet(roles);\n-        \n         if (rolesSet.contains(Role.COORDINATION_SERVER.toString())) {\n             launchCoordinationServer(directory);\n         }\n@@ -141,210 +148,190 @@ public final class JaggerLauncher {\n         if (rolesSet.contains(Role.KERNEL.toString())) {\n             launchKernel(directory);\n         }\n-        \n         if (rolesSet.contains(Role.REPORTER.toString())) {\n             launchReporter(directory);\n         }\n-        \n+\n         LaunchManager launchManager = builder.build();\n         int result = launchManager.launch();\n         System.exit(result);\n     }\n-    \n+\n     private static void initCoordinator(ApplicationContext applicationContext) {\n         final Coordinator coordinator = (Coordinator) applicationContext.getBean(\"coordinator\");\n         coordinator.waitForReady();\n         coordinator.initialize();\n     }\n-    \n+\n     private static void launchMaster(final URL directory) {\n     \n         // pass this property value for Spring's context:component-scan\n         System.setProperty(USER_CONFIGS_PACKAGE, environmentProperties.getProperty(USER_CONFIGS_PACKAGE));\n-        \n+\n         LaunchTask masterTask = new LaunchTask() {\n-            @Override\n-            public void run() {\n-                boolean isStandByMode = Boolean.parseBoolean(\n-                        environmentProperties.getProperty(\"realtime.enable.standby.mode\", \"false\"));\n-    \n-                if (isStandByMode) {\n-                    log.info(\"Starting Master in stand by mode...\");\n-        \n-                    try (MasterToJaasCoordinator masterToJaasCoordinator = new MasterToJaasCoordinator(\n-                            environmentProperties.getProperty(\"realtime.environment.id\"),\n-                            environmentProperties.getProperty(\"realtime.jaas.endpoint\"), Integer.parseInt(\n-                            environmentProperties.getProperty(\"realtime.status.report.interval.seconds\")),\n-                            getAvailableConfigurations(directory)\n-                    )) {\n-                        masterToJaasCoordinator.register();\n-                        while (masterToJaasCoordinator.isStandBy()) {\n-                            environmentProperties\n-                                    .setProperty(TEST_CONFIG_NAME_PROP, masterToJaasCoordinator.awaitConfigToExecute());\n-                            doLaunchMaster(directory);\n-                        }\n-                    } catch (TerminateException | InterruptedException e) {\n-                        log.error(\"Master has been terminated.\");\n-                    }\n-                } else {\n-                    log.info(\"Starting Master in right away mode...\");\n-                    doLaunchMaster(directory);\n-                }\n-            }\n-        };\n+                       @Override\n+                       public void run() {\n+                           boolean isStandByMode = Boolean.parseBoolean(environmentProperties.getProperty(\"realtime.enable.standby.mode\", \"false\"));\n+                           if (isStandByMode) {\n+                               log.info(\"Starting Master in stand by mode...\");\n+                               try (MasterToJaasCoordinator masterToJaasCoordinator = new MasterToJaasCoordinator(environmentProperties.getProperty(\"realtime.environment.id\"), environmentProperties.getProperty(\"realtime.jaas.endpoint\"), Integer.parseInt(environmentProperties.getProperty(\"realtime.status.report.interval.seconds\")), getAvailableConfigurations(directory))) {\n+                                   masterToJaasCoordinator.register();\n+                                   while (masterToJaasCoordinator.isStandBy()) {\n+                                       environmentProperties.setProperty(TEST_CONFIG_NAME_PROP, masterToJaasCoordinator.awaitConfigToExecute());\n+                                       doLaunchMaster(directory);\n+                                   }\n+                               } catch (TerminateException| InterruptedException e) {\n+                                   log.error(\"Master has been terminated.\");\n+                               }\n+                           } else {\n+                               log.info(\"Starting Master in right away mode...\");\n+                               doLaunchMaster(directory);\n+                           }\n+                       }\n+                   };\n         builder.addMainTask(masterTask);\n     }\n-    \n+\n     private static Set<String> getAvailableConfigurations(final URL directory) {\n         AbstractXmlApplicationContext context = loadContext(directory, MASTER_CONFIGURATION, environmentProperties);\n+\n         ConfigurationGenerator configurationGenerator = context.getBean(ConfigurationGenerator.class);\n+\n         Set<String> availableConfigs = new HashSet<>(configurationGenerator.getJaggerLoadScenarioNames());\n         context.destroy();\n         return availableConfigs;\n     }\n-    \n+\n     private static void doLaunchMaster(final URL directory) {\n         AbstractXmlApplicationContext context = loadContext(directory, MASTER_CONFIGURATION, environmentProperties);\n         initCoordinator(context);\n         context.getBean(StorageServerLauncher.class); // to trigger lazy initialization\n+\n         ConfigurationGenerator configurationGenerator = context.getBean(ConfigurationGenerator.class);\n         configurationGenerator.setJLoadScenarioIdToExecute(environmentProperties.getProperty(TEST_CONFIG_NAME_PROP));\n+\n         Master master = context.getBean(Master.class);\n         master.run();\n         context.destroy();\n     }\n-    \n+\n     private static void launchReporter(final URL directory) {\n         LaunchTask launchReporter = new LaunchTask() {\n-            \n-            @Override\n-            public void run() {\n-                ApplicationContext context = loadContext(directory, REPORTER_CONFIGURATION, environmentProperties);\n-                final ReportingService reportingService = (ReportingService) context.getBean(\"reportingService\");\n-                reportingService.renderReport(true);\n-            }\n-        };\n-        \n+                       @Override\n+                       public void run() {\n+                           ApplicationContext context = loadContext(directory, REPORTER_CONFIGURATION, environmentProperties);\n+                           final ReportingService reportingService = (ReportingService) context.getBean(\"reportingService\");\n+                           reportingService.renderReport(true);\n+                       }\n+                   };\n         builder.addMainTask(launchReporter);\n     }\n-    \n+\n     private static void launchKernel(final URL directory) {\n-        \n         LaunchTask runKernel = new LaunchTask() {\n-            private Kernel kernel;\n-            \n-            @Override\n-            public void run() {\n-                log.info(\"Starting Kernel\");\n-                \n-                ApplicationContext context = loadContext(directory, KERNEL_CONFIGURATION, environmentProperties);\n-                \n-                final CountDownLatch latch = new CountDownLatch(1);\n-                final Coordinator coordinator = (Coordinator) context.getBean(\"coordinator\");\n-                \n-                kernel = (Kernel) context.getBean(\"kernel\");\n-                \n-                toTerminate(kernel);\n-                \n-                Runnable kernelRunner = () -> {\n-                    try {\n-                        latch.await();\n-                    } catch (InterruptedException e) {\n-                        throw new RuntimeException(e);\n-                    }\n-                    kernel.run();\n-                };\n-                \n-                getExecutor().execute(kernelRunner);\n-                \n-                coordinator.waitForReady();\n-                coordinator.waitForInitialization();\n-                \n-                latch.countDown();\n-            }\n-        };\n-        \n+\n+                       private Kernel kernel;\n+\n+                       @Override\n+                       public void run() {\n+                           log.info(\"Starting Kernel\");\n+\n+                           ApplicationContext context = loadContext(directory, KERNEL_CONFIGURATION, environmentProperties);\n+                           final CountDownLatch latch = new CountDownLatch(1);\n+                           final Coordinator coordinator = (Coordinator) context.getBean(\"coordinator\");\n+                           kernel = (Kernel) context.getBean(\"kernel\");\n+                           toTerminate(kernel);\n+\n+                           Runnable kernelRunner = () -> {\n+                                        try {\n+                                            latch.await();\n+                                        } catch (InterruptedException e) {\n+                                            throw new RuntimeException(e);\n+                                        }\n+                                        kernel.run();\n+                           };\n+                           getExecutor().execute(kernelRunner);\n+                           coordinator.waitForReady();\n+                           coordinator.waitForInitialization();\n+                           latch.countDown();\n+                       }\n+                   };\n         builder.addBackgroundTask(runKernel);\n     }\n-    \n+\n     private static void launchRdbServer(final URL directory) {\n         log.info(\"Starting RDB Server\");\n-        \n-        \n+\n         LaunchTask rdbRunner = new LaunchTask() {\n-            @Override\n-            public void run() {\n-                ApplicationContext context = loadContext(directory, RDB_CONFIGURATION, environmentProperties);\n-                \n-                H2DatabaseServer dbServer = (H2DatabaseServer) context.getBean(\"databaseServer\");\n-                \n-                dbServer.run();\n-            }\n-        };\n-        \n+                       @Override\n+                       public void run() {\n+                           ApplicationContext context = loadContext(directory, RDB_CONFIGURATION, environmentProperties);\n+\n+                           H2DatabaseServer dbServer = (H2DatabaseServer) context.getBean(\"databaseServer\");\n+                           dbServer.run();\n+                       }\n+                   };\n         builder.addBackgroundTask(rdbRunner);\n     }\n-    \n+\n     private static void launchCoordinationServer(final URL directory) {\n         LaunchTask zookeeperInitializer = new LaunchTask() {\n             \n             //            private ZooKeeperServer zooKeeper;\n-            private AttendantServer server;\n-            \n-            public void run() {\n-                log.info(\"Starting Coordination Server\");\n-                \n-                ApplicationContext context = loadContext(directory, COORDINATION_CONFIGURATION, environmentProperties);\n-                server = (AttendantServer) context.getBean(\"coordinatorServer\");\n-                toTerminate(server);\n-                getExecutor().execute(server);\n-                server.initialize();\n-            }\n-        };\n-        \n+\n+                       private AttendantServer server;\n+\n+                       public void run() {\n+                           log.info(\"Starting Coordination Server\");\n+\n+                           ApplicationContext context = loadContext(directory, COORDINATION_CONFIGURATION, environmentProperties);\n+                           server = (AttendantServer) context.getBean(\"coordinatorServer\");\n+                           toTerminate(server);\n+                           getExecutor().execute(server);\n+                           server.initialize();\n+                       }\n+                   };\n         builder.addMainTask(zookeeperInitializer);\n     }\n-    \n+\n     private static void launchCometdCoordinationServer(final URL directory) {\n-        \n         LaunchTask jettyRunner = new LaunchTask() {\n-            public void run() {\n-                log.info(\"Starting Cometd Coordination Server\");\n-                \n-                ApplicationContext context =\n-                        loadContext(directory, COORDINATION_HTTP_CONFIGURATION, environmentProperties);\n-                \n-                initCoordinator(context);\n-                \n-                Server jettyServer = (Server) context.getBean(\"jettyServer\");\n-                try {\n-                    jettyServer.start();\n-                } catch (Exception e) {\n-                    throw new RuntimeException(e);\n-                }\n-            }\n-        };\n+\n+                       public void run() {\n+                           log.info(\"Starting Cometd Coordination Server\");\n+\n+                           ApplicationContext context = loadContext(directory, COORDINATION_HTTP_CONFIGURATION, environmentProperties);\n+                           initCoordinator(context);\n+\n+                           Server jettyServer = (Server) context.getBean(\"jettyServer\");\n+                           try {\n+                               jettyServer.start();\n+                           } catch (Exception e) {\n+                               throw new RuntimeException(e);\n+                           }\n+                       }\n+                   };\n         builder.addMainTask(jettyRunner);\n     }\n-    \n+\n     public static AbstractXmlApplicationContext loadContext(URL directory, String role, Properties environmentProperties) {\n         String[] includePatterns = StringUtils.split(environmentProperties.getProperty(role + INCLUDE_SUFFIX), \", \");\n+\n         String[] excludePatterns = StringUtils.split(environmentProperties.getProperty(role + EXCLUDE_SUFFIX), \", \");\n-        \n+\n         List<String> descriptors = discoverResources(directory, includePatterns, excludePatterns);\n         log.info(\"Discovered descriptors:\");\n         for (String descriptor : descriptors) {\n             log.info(\"   \" + descriptor);\n         }\n-        \n-        return new JaggerXmlApplicationContext(\n-                directory, environmentProperties, descriptors.toArray(new String[descriptors.size()]));\n+        return new JaggerXmlApplicationContext(directory, environmentProperties, descriptors.toArray(new String[descriptors.size()]));\n     }\n-    \n+\n     private static List<String> discoverResources(URL directory, String[] includePatterns, String[] excludePatterns) {\n-        PathMatchingResourcePatternResolver resolver =\n-                new PathMatchingResourcePatternResolver(new FileSystemResourceLoader());\n+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(new FileSystemResourceLoader());\n+\n         List<String> resourceNames = new ArrayList<>();\n+\n         PathMatcher matcher = new AntPathMatcher();\n         try {\n             for (String pattern : includePatterns) {\n@@ -365,13 +352,10 @@ public final class JaggerLauncher {\n         } catch (IOException e) {\n             throw new TechnicalException(e);\n         }\n-        \n         return resourceNames;\n     }\n-    \n-    public static void loadBootProperties(URL directory, String environmentPropertiesLocation,\n-                                          Properties environmentProperties\n-    ) throws IOException {\n+\n+    public static void loadBootProperties(URL directory, String environmentPropertiesLocation, Properties environmentProperties) throws IOException {\n         \n         // priorities\n         // low priority (default properties - environment props - user props - system properties) high priority\n@@ -382,6 +366,7 @@ public final class JaggerLauncher {\n         environmentProperties.load(bootPropertiesFile.openStream());\n         \n         // user properties\n+\n         String userBootPropertiesLocationsString = System.getProperty(USER_ENVIRONMENT_PROPERTIES);\n         if (userBootPropertiesLocationsString == null) {\n             userBootPropertiesLocationsString = environmentProperties.getProperty(USER_ENVIRONMENT_PROPERTIES);\n@@ -389,13 +374,13 @@ public final class JaggerLauncher {\n         if (userBootPropertiesLocationsString == null) {\n             userBootPropertiesLocationsString = DEFAULT_USER_ENVIRONMENT_PROPERTIES_LOCATION;\n         }\n+\n         String[] userBootPropertiesSingleLocations = userBootPropertiesLocationsString.split(\",\");\n-        \n         for (String location : userBootPropertiesSingleLocations) {\n             URL userBootPropertiesFile = new URL(directory, location);\n+\n             Properties userBootProperties = new Properties();\n             userBootProperties.load(userBootPropertiesFile.openStream());\n-            \n             for (String name : userBootProperties.stringPropertyNames()) {\n                 // overwrite due to higher priority\n                 environmentProperties.setProperty(name, userBootProperties.getProperty(name));\n@@ -403,6 +388,7 @@ public final class JaggerLauncher {\n         }\n         \n         // default properties\n+\n         String defaultBootPropertiesLocation = System.getProperty(DEFAULT_ENVIRONMENT_PROPERTIES);\n         if (defaultBootPropertiesLocation == null) {\n             defaultBootPropertiesLocation = environmentProperties.getProperty(DEFAULT_ENVIRONMENT_PROPERTIES);\n@@ -410,7 +396,9 @@ public final class JaggerLauncher {\n         if (defaultBootPropertiesLocation == null) {\n             defaultBootPropertiesLocation = DEFAULT_ENVIRONMENT_PROPERTIES_LOCATION;\n         }\n+\n         URL defaultBootPropertiesFile = new URL(directory, defaultBootPropertiesLocation);\n+\n         Properties defaultBootProperties = new Properties();\n         defaultBootProperties.load(defaultBootPropertiesFile.openStream());\n         for (String name : defaultBootProperties.stringPropertyNames()) {\n@@ -419,17 +407,15 @@ public final class JaggerLauncher {\n                 environmentProperties.setProperty(name, defaultBootProperties.getProperty(name));\n             }\n         }\n-        \n+\n         Properties properties = System.getProperties();\n-        for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n-             enumeration.hasMoreElements(); ) {\n+        for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n             // overwrite due to higher priority\n             environmentProperties.put(key, properties.get(key));\n         }\n-        \n         System.setProperty(ENVIRONMENT_PROPERTIES, environmentPropertiesLocation);\n         System.setProperty(USER_ENVIRONMENT_PROPERTIES, userBootPropertiesLocationsString);\n         System.setProperty(DEFAULT_ENVIRONMENT_PROPERTIES, defaultBootPropertiesLocation);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 206
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/7/JaggerLauncher.java\nindex 8dc2af0750e..740f24b2159 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/7/JaggerLauncher.java\n@@ -422,7 +422,7 @@ public final class JaggerLauncher {\n         \n         Properties properties = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n-             enumeration.hasMoreElements(); ) {\n+                enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n             // overwrite due to higher priority\n             environmentProperties.put(key, properties.get(key));\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/7/JaggerLauncher.java\nindex 8dc2af0750e..740f24b2159 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/7/JaggerLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/7/JaggerLauncher.java\n@@ -422,7 +422,7 @@ public final class JaggerLauncher {\n         \n         Properties properties = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) properties.propertyNames();\n-             enumeration.hasMoreElements(); ) {\n+                enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n             // overwrite due to higher priority\n             environmentProperties.put(key, properties.get(key));\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

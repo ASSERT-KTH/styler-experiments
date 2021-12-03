@@ -1,0 +1,122 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "10",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "        implements ServiceRegistryAwareService, Stoppable {\n    \n    private static final long serialVersionUID = 6613844123097178607L;\n    private Map<String, DataSource> dataSourceMap;\n    public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\n    private String tenantIdentifierForAny;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/10/MultiTenantConnectionProvider.java\nindex 083026559a8..ad2f89c34ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/10/MultiTenantConnectionProvider.java\n@@ -19,9 +19,8 @@ import org.hibernate.service.spi.Stoppable;\n \r\n public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n         implements ServiceRegistryAwareService, Stoppable {\r\n-    \r\n-    private static final long serialVersionUID = 6613844123097178607L;\r\n-    private Map<String, DataSource> dataSourceMap;\r\n+        private static final long serialVersionUID = 6613844123097178607L ;\r\n+            private Map<String, DataSource> dataSourceMap;\r\n     public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\r\n     private String tenantIdentifierForAny;\r\n \r\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/10/MultiTenantConnectionProvider.java\nindex 083026559a8..0c0f48ff4ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/10/MultiTenantConnectionProvider.java\n@@ -19,7 +19,7 @@ import org.hibernate.service.spi.Stoppable;\n \r\n public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n         implements ServiceRegistryAwareService, Stoppable {\r\n-    \r\n+\r\n     private static final long serialVersionUID = 6613844123097178607L;\r\n     private Map<String, DataSource> dataSourceMap;\r\n     public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/10/MultiTenantConnectionProvider.java\nindex 083026559a8..5908d3e4b0d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/10/MultiTenantConnectionProvider.java\n@@ -17,8 +17,8 @@ import org.hibernate.service.spi.Stoppable;\n  * @author Iulia\r\n  */\r\n \r\n-public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n-        implements ServiceRegistryAwareService, Stoppable {\r\n+public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\n+    implements ServiceRegistryAwareService, Stoppable {\r\n     \r\n     private static final long serialVersionUID = 6613844123097178607L;\r\n     private Map<String, DataSource> dataSourceMap;\r\n@@ -56,4 +56,4 @@ public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiT\n         return dataSourceMap.get(tenantIdentifier);\r\n     }\r\n \r\n-}\r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 169).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/10/MultiTenantConnectionProvider.java\nindex 083026559a8..0c7e4d2e62b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/10/MultiTenantConnectionProvider.java\n@@ -1,59 +1,51 @@\n-package org.unitedinternet.cosmo.hibernate;\r\n-\r\n-import java.util.Map;\r\n-\r\n-import javax.sql.DataSource;\r\n-\r\n-import org.hibernate.HibernateException;\r\n-import org.hibernate.engine.config.spi.ConfigurationService;\r\n-import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;\r\n-import org.hibernate.service.spi.ServiceRegistryAwareService;\r\n-import org.hibernate.service.spi.ServiceRegistryImplementor;\r\n+package org.unitedinternet.cosmo.hibernate;\n+\n+import java.util.Map;\n+import javax.sql.DataSource;\n+import org.hibernate.HibernateException;\n+import org.hibernate.engine.config.spi.ConfigurationService;\n+import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;\n+import org.hibernate.service.spi.ServiceRegistryAwareService;\n+import org.hibernate.service.spi.ServiceRegistryImplementor;\n import org.hibernate.service.spi.Stoppable;\r\n \r\n /**\r\n  * Resolves the datasource to be used.\r\n  *\r\n  * @author Iulia\r\n- */\r\n-\r\n-public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n-        implements ServiceRegistryAwareService, Stoppable {\r\n-    \r\n-    private static final long serialVersionUID = 6613844123097178607L;\r\n-    private Map<String, DataSource> dataSourceMap;\r\n-    public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\r\n-    private String tenantIdentifierForAny;\r\n-\r\n-    @Override\r\n-    public void stop() {\r\n-\r\n-    }\r\n-\r\n-    @SuppressWarnings(\"unchecked\")\r\n-    @Override\r\n-    public void injectServices(ServiceRegistryImplementor serviceRegistry) {\r\n-        final Object dataSourceConfigValue = serviceRegistry.getService(ConfigurationService.class)\r\n-                .getSettings()\r\n-                .get(MultiDataSourceSessionFactoryBean.DATA_SOURCE_MAP);\r\n-        dataSourceMap = (Map<String, DataSource>) dataSourceConfigValue;\r\n-        this.tenantIdentifierForAny = (String) serviceRegistry.getService(ConfigurationService.class)\r\n-                .getSettings()\r\n-                .get(TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY);\r\n-        if (tenantIdentifierForAny == null) {\r\n-            throw new HibernateException(\"JNDI name named a Context, but tenant identifier to use for ANY was not specified\");\r\n-        }\r\n-\r\n-    }\r\n-\r\n-    @Override\r\n-    protected DataSource selectAnyDataSource() {\r\n-        return dataSourceMap.get(tenantIdentifierForAny);\r\n-    }\r\n-\r\n-    @Override\r\n-    protected DataSource selectDataSource(String tenantIdentifier) {\r\n-        return dataSourceMap.get(tenantIdentifier);\r\n-    }\r\n-\r\n-}\r\n+ */\n+\n+\n+public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\n+    implements ServiceRegistryAwareService, Stoppable {\n+\n+    private static final long serialVersionUID = 6613844123097178607L;\n+    private Map<String, DataSource> dataSourceMap;\n+\n+    public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\n+    private String tenantIdentifierForAny;\n+\n+    @Override\n+    public void stop() {}\n+\n+    @SuppressWarnings(\"unchecked\")\n+    @Override\n+    public void injectServices(ServiceRegistryImplementor serviceRegistry) {\n+        final Object dataSourceConfigValue = serviceRegistry.getService(ConfigurationService.class).getSettings().get(MultiDataSourceSessionFactoryBean.DATA_SOURCE_MAP);\n+        dataSourceMap = (Map<String, DataSource>) dataSourceConfigValue;\n+        this.tenantIdentifierForAny = (String) serviceRegistry.getService(ConfigurationService.class).getSettings().get(TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY);\n+        if (tenantIdentifierForAny == null) {\n+            throw new HibernateException(\"JNDI name named a Context, but tenant identifier to use for ANY was not specified\");\n+        }\n+    }\n+\n+    @Override\n+    protected DataSource selectAnyDataSource() {\n+        return dataSourceMap.get(tenantIdentifierForAny);\n+    }\n+\n+    @Override\n+    protected DataSource selectDataSource(String tenantIdentifier) {\n+        return dataSourceMap.get(tenantIdentifier);\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 53
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/10/MultiTenantConnectionProvider.java\nindex 083026559a8..ad2f89c34ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/10/MultiTenantConnectionProvider.java\n@@ -19,9 +19,8 @@ import org.hibernate.service.spi.Stoppable;\n \r\n public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n         implements ServiceRegistryAwareService, Stoppable {\r\n-    \r\n-    private static final long serialVersionUID = 6613844123097178607L;\r\n-    private Map<String, DataSource> dataSourceMap;\r\n+        private static final long serialVersionUID = 6613844123097178607L ;\r\n+            private Map<String, DataSource> dataSourceMap;\r\n     public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\r\n     private String tenantIdentifierForAny;\r\n \r\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 130 characters (found 171).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/10/MultiTenantConnectionProvider.java\nindex 083026559a8..c722856b6f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/10/MultiTenantConnectionProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/10/MultiTenantConnectionProvider.java\n@@ -18,10 +18,7 @@ import org.hibernate.service.spi.Stoppable;\n  */\r\n \r\n public class MultiTenantConnectionProvider extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl\r\n-        implements ServiceRegistryAwareService, Stoppable {\r\n-    \r\n-    private static final long serialVersionUID = 6613844123097178607L;\r\n-    private Map<String, DataSource> dataSourceMap;\r\n+        implements ServiceRegistryAwareService, Stoppable {private static final long serialVersionUID = 6613844123097178607L;private Map<String, DataSource> dataSourceMap;\r\n     public static final String TENANT_IDENTIFIER_TO_USE_FOR_ANY_KEY = \"hibernate.multi_tenant.datasource.identifier_for_any\";\r\n     private String tenantIdentifierForAny;\r\n \r\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

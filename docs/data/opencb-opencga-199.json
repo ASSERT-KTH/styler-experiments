@@ -1,0 +1,97 @@
+{
+    "project_name": "opencb-opencga",
+    "violation_id": "199",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "error",
+                "message": "Line is longer than 140 characters (found 152).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n                                                List<GeneCoverageStats> geneCoverageStats) {\n        this.bamFileId = bamFileId;\n        this.fastQcMetrics = fastQcMetrics;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/199/SampleAlignmentQualityControlMetrics.java\nindex a3d613c8aed..eb734d646d9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/199/SampleAlignmentQualityControlMetrics.java\n@@ -19,9 +19,9 @@ public class SampleAlignmentQualityControlMetrics {\n     public SampleAlignmentQualityControlMetrics() {\n         this(null, null, null, null, new ArrayList<>());\n     }\n-\n-    public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n-                                                List<GeneCoverageStats> geneCoverageStats) {\n+    public\n+SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n+                                                 List<GeneCoverageStats> geneCoverageStats) {\n         this.bamFileId = bamFileId;\n         this.fastQcMetrics = fastQcMetrics;\n         this.samtoolsFlagstats = samtoolsFlagstats;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/199/SampleAlignmentQualityControlMetrics.java\nindex a3d613c8aed..40e3db699ba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/199/SampleAlignmentQualityControlMetrics.java\n@@ -10,79 +10,80 @@ import java.util.List;\n \n public class SampleAlignmentQualityControlMetrics {\n \n-    private String bamFileId;\n-    private FastQcMetrics fastQcMetrics;\n-    private SamtoolsFlagstats samtoolsFlagstats;\n-    private HsMetrics hsMetrics;\n-    private List<GeneCoverageStats> geneCoverageStats;\n-\n-    public SampleAlignmentQualityControlMetrics() {\n-        this(null, null, null, null, new ArrayList<>());\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n-                                                List<GeneCoverageStats> geneCoverageStats) {\n-        this.bamFileId = bamFileId;\n-        this.fastQcMetrics = fastQcMetrics;\n-        this.samtoolsFlagstats = samtoolsFlagstats;\n-        this.hsMetrics = hsMetrics;\n-        this.geneCoverageStats = geneCoverageStats;\n-    }\n-\n-    @Override\n-    public String toString() {\n-        final StringBuilder sb = new StringBuilder(\"SampleAlignmentQualityControlMetrics{\");\n-        sb.append(\"bamFileId='\").append(bamFileId).append('\\'');\n-        sb.append(\", fastQcMetrics=\").append(fastQcMetrics);\n-        sb.append(\", samtoolsFlagstats=\").append(samtoolsFlagstats);\n-        sb.append(\", hsMetrics=\").append(hsMetrics);\n-        sb.append(\", geneCoverageStats=\").append(geneCoverageStats);\n-        sb.append('}');\n-        return sb.toString();\n-    }\n-\n-    public String getBamFileId() {\n-        return bamFileId;\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics setBamFileId(String bamFileId) {\n-        this.bamFileId = bamFileId;\n-        return this;\n-    }\n-\n-    public FastQcMetrics getFastQc() {\n-        return fastQcMetrics;\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics setFastQc(FastQcMetrics fastQcMetrics) {\n-        this.fastQcMetrics = fastQcMetrics;\n-        return this;\n-    }\n-\n-    public SamtoolsFlagstats getSamtoolsFlagstats() {\n-        return samtoolsFlagstats;\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics setSamtoolsFlagstats(SamtoolsFlagstats samtoolsFlagstats) {\n-        this.samtoolsFlagstats = samtoolsFlagstats;\n-        return this;\n-    }\n-\n-    public HsMetrics getHsMetrics() {\n-        return hsMetrics;\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics setHsMetrics(HsMetrics hsMetrics) {\n-        this.hsMetrics = hsMetrics;\n-        return this;\n-    }\n-\n-    public List<GeneCoverageStats> getGeneCoverageStats() {\n-        return geneCoverageStats;\n-    }\n-\n-    public SampleAlignmentQualityControlMetrics setGeneCoverageStats(List<GeneCoverageStats> geneCoverageStats) {\n-        this.geneCoverageStats = geneCoverageStats;\n-        return this;\n-    }\n+  private String bamFileId;\n+  private FastQcMetrics fastQcMetrics;\n+  private SamtoolsFlagstats samtoolsFlagstats;\n+  private HsMetrics hsMetrics;\n+  private List<GeneCoverageStats> geneCoverageStats;\n+\n+  public SampleAlignmentQualityControlMetrics() {\n+    this(null, null, null, null, new ArrayList<>());\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats,\n+                                              HsMetrics hsMetrics,\n+                                              List<GeneCoverageStats> geneCoverageStats) {\n+    this.bamFileId = bamFileId;\n+    this.fastQcMetrics = fastQcMetrics;\n+    this.samtoolsFlagstats = samtoolsFlagstats;\n+    this.hsMetrics = hsMetrics;\n+    this.geneCoverageStats = geneCoverageStats;\n+  }\n+\n+  @Override\n+  public String toString() {\n+    final StringBuilder sb = new StringBuilder(\"SampleAlignmentQualityControlMetrics{\");\n+    sb.append(\"bamFileId='\").append(bamFileId).append('\\'');\n+    sb.append(\", fastQcMetrics=\").append(fastQcMetrics);\n+    sb.append(\", samtoolsFlagstats=\").append(samtoolsFlagstats);\n+    sb.append(\", hsMetrics=\").append(hsMetrics);\n+    sb.append(\", geneCoverageStats=\").append(geneCoverageStats);\n+    sb.append('}');\n+    return sb.toString();\n+  }\n+\n+  public String getBamFileId() {\n+    return bamFileId;\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics setBamFileId(String bamFileId) {\n+    this.bamFileId = bamFileId;\n+    return this;\n+  }\n+\n+  public FastQcMetrics getFastQc() {\n+    return fastQcMetrics;\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics setFastQc(FastQcMetrics fastQcMetrics) {\n+    this.fastQcMetrics = fastQcMetrics;\n+    return this;\n+  }\n+\n+  public SamtoolsFlagstats getSamtoolsFlagstats() {\n+    return samtoolsFlagstats;\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics setSamtoolsFlagstats(SamtoolsFlagstats samtoolsFlagstats) {\n+    this.samtoolsFlagstats = samtoolsFlagstats;\n+    return this;\n+  }\n+\n+  public HsMetrics getHsMetrics() {\n+    return hsMetrics;\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics setHsMetrics(HsMetrics hsMetrics) {\n+    this.hsMetrics = hsMetrics;\n+    return this;\n+  }\n+\n+  public List<GeneCoverageStats> getGeneCoverageStats() {\n+    return geneCoverageStats;\n+  }\n+\n+  public SampleAlignmentQualityControlMetrics setGeneCoverageStats(List<GeneCoverageStats> geneCoverageStats) {\n+    this.geneCoverageStats = geneCoverageStats;\n+    return this;\n+  }\n }\n",
+            "diff_size": 76
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/199/SampleAlignmentQualityControlMetrics.java\nindex a3d613c8aed..73fdebc13cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/199/SampleAlignmentQualityControlMetrics.java\n@@ -22,7 +22,7 @@ public class SampleAlignmentQualityControlMetrics {\n \n     public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n                                                 List<GeneCoverageStats> geneCoverageStats) {\n-        this.bamFileId = bamFileId;\n+    this.bamFileId = bamFileId;\n         this.fastQcMetrics = fastQcMetrics;\n         this.samtoolsFlagstats = samtoolsFlagstats;\n         this.hsMetrics = hsMetrics;\n@@ -85,4 +85,4 @@ public class SampleAlignmentQualityControlMetrics {\n         this.geneCoverageStats = geneCoverageStats;\n         return this;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "24",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/199/SampleAlignmentQualityControlMetrics.java\nindex a3d613c8aed..972972e9301 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/199/SampleAlignmentQualityControlMetrics.java\n@@ -21,7 +21,7 @@ public class SampleAlignmentQualityControlMetrics {\n     }\n \n     public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n-                                                List<GeneCoverageStats> geneCoverageStats) {\n+                      List <GeneCoverageStats> geneCoverageStats) {\n         this.bamFileId = bamFileId;\n         this.fastQcMetrics = fastQcMetrics;\n         this.samtoolsFlagstats = samtoolsFlagstats;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/199/SampleAlignmentQualityControlMetrics.java\nindex a3d613c8aed..eb734d646d9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/199/SampleAlignmentQualityControlMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/199/SampleAlignmentQualityControlMetrics.java\n@@ -19,9 +19,9 @@ public class SampleAlignmentQualityControlMetrics {\n     public SampleAlignmentQualityControlMetrics() {\n         this(null, null, null, null, new ArrayList<>());\n     }\n-\n-    public SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n-                                                List<GeneCoverageStats> geneCoverageStats) {\n+    public\n+SampleAlignmentQualityControlMetrics(String bamFileId, FastQcMetrics fastQcMetrics, SamtoolsFlagstats samtoolsFlagstats, HsMetrics hsMetrics,\n+                                                 List<GeneCoverageStats> geneCoverageStats) {\n         this.bamFileId = bamFileId;\n         this.fastQcMetrics = fastQcMetrics;\n         this.samtoolsFlagstats = samtoolsFlagstats;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

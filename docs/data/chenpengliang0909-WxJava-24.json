@@ -1,0 +1,77 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "24",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage me.chanjar.weixin.common.session;\n\n/**\n * An exception that indicates the maximum number of active sessions has been",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/24/TooManyActiveSessionsException.java\nindex 114dd1c4ed5..912bfc44778 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/24/TooManyActiveSessionsException.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package me.chanjar.weixin.common.session;\n \n /**\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/24/TooManyActiveSessionsException.java\nindex 114dd1c4ed5..4866dbf6994 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/24/TooManyActiveSessionsException.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package me.chanjar.weixin.common.session;\n \n /**\n@@ -23,7 +24,7 @@ package me.chanjar.weixin.common.session;\n  * @author Daniel Qian\n  */\n public class TooManyActiveSessionsException\n-  extends IllegalStateException {\n+    extends IllegalStateException {\n   private static final long serialVersionUID = 1L;\n \n   /**\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/24/TooManyActiveSessionsException.java\nindex 114dd1c4ed5..cd73166d854 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/24/TooManyActiveSessionsException.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package me.chanjar.weixin.common.session;\n \n /**\n@@ -38,9 +39,8 @@ public class TooManyActiveSessionsException\n    * @param maxActive The maximum number of active sessions allowed by the\n    *                  session manager.\n    */\n-  public TooManyActiveSessionsException(String message,\n-                                        int maxActive) {\n-    super(message);\n+  public TooManyActiveSessionsException(String message, int maxActive) {\n+  super(message);\n \n     this.maxActiveSessions = maxActive;\n   }\n@@ -53,4 +53,4 @@ public class TooManyActiveSessionsException\n   public int getMaxActiveSessions() {\n     return this.maxActiveSessions;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/24/TooManyActiveSessionsException.java\nindex 114dd1c4ed5..ec2be9d53df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/24/TooManyActiveSessionsException.java\n@@ -22,8 +22,9 @@ package me.chanjar.weixin.common.session;\n  *\n  * @author Daniel Qian\n  */\n-public class TooManyActiveSessionsException\n-  extends IllegalStateException {\n+\n+\n+public class TooManyActiveSessionsException extends IllegalStateException {\n   private static final long serialVersionUID = 1L;\n \n   /**\n@@ -38,10 +39,9 @@ public class TooManyActiveSessionsException\n    * @param maxActive The maximum number of active sessions allowed by the\n    *                  session manager.\n    */\n-  public TooManyActiveSessionsException(String message,\n-                                        int maxActive) {\n-    super(message);\n \n+  public TooManyActiveSessionsException(String message, int maxActive) {\n+    super(message);\n     this.maxActiveSessions = maxActive;\n   }\n \n@@ -50,7 +50,9 @@ public class TooManyActiveSessionsException\n    *\n    * @return The maximum number of sessions allowed by the session manager.\n    */\n+\n   public int getMaxActiveSessions() {\n     return this.maxActiveSessions;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/24/TooManyActiveSessionsException.java\nindex 114dd1c4ed5..912bfc44778 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/24/TooManyActiveSessionsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/24/TooManyActiveSessionsException.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package me.chanjar.weixin.common.session;\n \n /**\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

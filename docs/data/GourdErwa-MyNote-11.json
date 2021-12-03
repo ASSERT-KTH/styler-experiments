@@ -1,0 +1,114 @@
+{
+    "project_name": "GourdErwa-MyNote",
+    "violation_id": "11",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "public interface DragonSlayingStrategy {\n\n    void execute();\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'execute' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/11/DragonSlayingStrategy.java\nindex a0bf1490d61..7d652a944a4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/11/DragonSlayingStrategy.java\n@@ -30,6 +30,7 @@ package com.iluwatar.strategy;\n @FunctionalInterface\n public interface DragonSlayingStrategy {\n \n-    void execute();\n+void\n+execute();\n \n-}\n+ }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/11/DragonSlayingStrategy.java\nindex a0bf1490d61..940204f2242 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/11/DragonSlayingStrategy.java\n@@ -20,16 +20,15 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package com.iluwatar.strategy;\n \n /**\n- *\n  * Strategy interface.\n- *\n  */\n @FunctionalInterface\n public interface DragonSlayingStrategy {\n \n-    void execute();\n+  void execute();\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/11/DragonSlayingStrategy.java\nindex a0bf1490d61..02bbdf9479f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/11/DragonSlayingStrategy.java\n@@ -32,4 +32,4 @@ public interface DragonSlayingStrategy {\n \n     void execute();\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/11/DragonSlayingStrategy.java\nindex a0bf1490d61..0098a19f6ee 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/11/DragonSlayingStrategy.java\n@@ -27,9 +27,13 @@ package com.iluwatar.strategy;\n  * Strategy interface.\n  *\n  */\n+\n+\n @FunctionalInterface\n public interface DragonSlayingStrategy {\n \n-    void execute();\n \n-}\n+    void execute()\n+;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'execute' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/11/DragonSlayingStrategy.java\nindex a0bf1490d61..7d652a944a4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/11/DragonSlayingStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/11/DragonSlayingStrategy.java\n@@ -30,6 +30,7 @@ package com.iluwatar.strategy;\n @FunctionalInterface\n public interface DragonSlayingStrategy {\n \n-    void execute();\n+void\n+execute();\n \n-}\n+ }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

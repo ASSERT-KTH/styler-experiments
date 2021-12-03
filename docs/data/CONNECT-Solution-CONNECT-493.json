@@ -1,0 +1,98 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "493",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 131).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class AdapterComponentDocSubmissionServicePortDescriptor extends\n        SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n    private static final String WS_ADDRESSING_ACTION = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n\n    /*\n     * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/493/AdapterComponentDocSubmissionServicePortDescriptor.java\nindex 48ad664b679..b914f4454d1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n@@ -32,29 +32,29 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n \n /**\n  * @author akong\n- *\n  */\n public class AdapterComponentDocSubmissionServicePortDescriptor extends\n-        SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n-    private static final String WS_ADDRESSING_ACTION = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n+    SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n+  private static final String WS_ADDRESSING_ACTION =\n+      \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n \n-    /*\n-     * (non-Javadoc)\n-     *\n-     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n-     */\n-    @Override\n-    public String getWSAddressingAction() {\n-        return WS_ADDRESSING_ACTION;\n-    }\n+  /*\n+   * (non-Javadoc)\n+   *\n+   * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n+   */\n+  @Override\n+  public String getWSAddressingAction() {\n+    return WS_ADDRESSING_ACTION;\n+  }\n \n-    /*\n-     * (non-Javadoc)\n-     *\n-     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n-     */\n-    @Override\n-    public Class<AdapterComponentXDRPortType> getPortClass() {\n-        return AdapterComponentXDRPortType.class;\n-    }\n+  /*\n+   * (non-Javadoc)\n+   *\n+   * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n+   */\n+  @Override\n+  public Class<AdapterComponentXDRPortType> getPortClass() {\n+    return AdapterComponentXDRPortType.class;\n+  }\n }\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/493/AdapterComponentDocSubmissionServicePortDescriptor.java\nindex 48ad664b679..694d6d964f9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n@@ -36,6 +36,7 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  */\n public class AdapterComponentDocSubmissionServicePortDescriptor extends\n         SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n+\n     private static final String WS_ADDRESSING_ACTION = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n \n     /*\n@@ -57,4 +58,4 @@ public class AdapterComponentDocSubmissionServicePortDescriptor extends\n     public Class<AdapterComponentXDRPortType> getPortClass() {\n         return AdapterComponentXDRPortType.class;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/493/AdapterComponentDocSubmissionServicePortDescriptor.java\nindex 48ad664b679..96aa2439d14 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n@@ -34,8 +34,11 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  * @author akong\n  *\n  */\n+\n+\n public class AdapterComponentDocSubmissionServicePortDescriptor extends\n-        SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n+    SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n+\n     private static final String WS_ADDRESSING_ACTION = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n \n     /*\n@@ -43,6 +46,8 @@ public class AdapterComponentDocSubmissionServicePortDescriptor extends\n      *\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n      */\n+\n+\n     @Override\n     public String getWSAddressingAction() {\n         return WS_ADDRESSING_ACTION;\n@@ -53,8 +58,11 @@ public class AdapterComponentDocSubmissionServicePortDescriptor extends\n      *\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n      */\n+\n+\n     @Override\n     public Class<AdapterComponentXDRPortType> getPortClass() {\n         return AdapterComponentXDRPortType.class;\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/493/AdapterComponentDocSubmissionServicePortDescriptor.java\nindex 48ad664b679..a7d87966f69 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/493/AdapterComponentDocSubmissionServicePortDescriptor.java\n@@ -36,6 +36,7 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  */\n public class AdapterComponentDocSubmissionServicePortDescriptor extends\n         SOAP12ServicePortDescriptor<AdapterComponentXDRPortType> {\n+\n     private static final String WS_ADDRESSING_ACTION = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdr:ProvideAndRegisterDocumentSet-b\";\n \n     /*\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

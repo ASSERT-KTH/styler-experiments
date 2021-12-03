@@ -1,0 +1,85 @@
+{
+    "project_name": "bakdata-conquery",
+    "violation_id": "571",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "severity": "error",
+                "message": "Indent must use tab characters",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface PrintIdMapper {\n    String[] map(EntityResult entityResult);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/571/PrintIdMapper.java\nindex 1d274200564..0ca7c553001 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/571/PrintIdMapper.java\n@@ -7,5 +7,5 @@ import com.bakdata.conquery.models.query.results.EntityResult;\n  * Maps an internalId to an external representation.\n  */\n public interface PrintIdMapper {\n-    String[] map(EntityResult entityResult);\n+\tString[]map ( EntityResult entityResult);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/571/PrintIdMapper.java\nindex 1d274200564..34cdef50abe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/571/PrintIdMapper.java\n@@ -7,5 +7,5 @@ import com.bakdata.conquery.models.query.results.EntityResult;\n  * Maps an internalId to an external representation.\n  */\n public interface PrintIdMapper {\n-    String[] map(EntityResult entityResult);\n-}\n+\tString[] map(EntityResult entityResult);\n+\t}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/571/PrintIdMapper.java\nindex 1d274200564..d8576cdc436 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/571/PrintIdMapper.java\n@@ -2,10 +2,12 @@ package com.bakdata.conquery.models.identifiable.mapping;\n \n import com.bakdata.conquery.models.query.results.EntityResult;\n \n+\n @FunctionalInterface\n /**\n  * Maps an internalId to an external representation.\n  */\n public interface PrintIdMapper {\n-    String[] map(EntityResult entityResult);\n-}\n+\n+ String[] map(EntityResult entityResult);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/571/PrintIdMapper.java\nindex 1d274200564..0ca7c553001 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/571/PrintIdMapper.java\n@@ -7,5 +7,5 @@ import com.bakdata.conquery.models.query.results.EntityResult;\n  * Maps an internalId to an external representation.\n  */\n public interface PrintIdMapper {\n-    String[] map(EntityResult entityResult);\n+\tString[]map ( EntityResult entityResult);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/571/PrintIdMapper.java\nindex 1d274200564..575ff5bfe06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/571/PrintIdMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/571/PrintIdMapper.java\n@@ -7,5 +7,5 @@ import com.bakdata.conquery.models.query.results.EntityResult;\n  * Maps an internalId to an external representation.\n  */\n public interface PrintIdMapper {\n-    String[] map(EntityResult entityResult);\n+\tString[] map(EntityResult entityResult);\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

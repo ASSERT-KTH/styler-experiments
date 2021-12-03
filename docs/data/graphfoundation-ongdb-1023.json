@@ -1,0 +1,110 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "1023",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "20",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "79",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1023/FieldError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/1023/FieldError.java\nindex 2b80ded155c..31c0847e51d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1023/FieldError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/1023/FieldError.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.tooling.procedure.messages;\n \n import javax.lang.model.element.VariableElement;\n@@ -24,25 +25,25 @@ import javax.lang.model.element.VariableElement;\n public class FieldError implements CompilationMessage\n {\n \n-    private final VariableElement field;\n-    private final String errorMessage;\n+  private final VariableElement field;\n+  private final String errorMessage;\n \n-    public FieldError( VariableElement field, String errorMessage, Object... args )\n-    {\n+  public FieldError(VariableElement field, String errorMessage, Object... args)\n+  {\n \n-        this.field = field;\n-        this.errorMessage = String.format( errorMessage, args );\n-    }\n+    this.field = field;\n+    this.errorMessage = String.format(errorMessage, args);\n+  }\n \n-    @Override\n-    public VariableElement getElement()\n-    {\n-        return field;\n-    }\n+  @Override\n+  public VariableElement getElement()\n+  {\n+    return field;\n+  }\n \n-    @Override\n-    public String getContents()\n-    {\n-        return errorMessage;\n-    }\n+  @Override\n+  public String getContents()\n+  {\n+    return errorMessage;\n+  }\n }\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1023/FieldError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/1023/FieldError.java\nindex 2b80ded155c..d2d8c54a358 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1023/FieldError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/1023/FieldError.java\n@@ -23,14 +23,12 @@ import javax.lang.model.element.VariableElement;\n \n public class FieldError implements CompilationMessage\n {\n-\n     private final VariableElement field;\n     private final String errorMessage;\n \n     public FieldError( VariableElement field, String errorMessage, Object... args )\n     {\n-\n-        this.field = field;\n+    this.field = field;\n         this.errorMessage = String.format( errorMessage, args );\n     }\n \n@@ -45,4 +43,4 @@ public class FieldError implements CompilationMessage\n     {\n         return errorMessage;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

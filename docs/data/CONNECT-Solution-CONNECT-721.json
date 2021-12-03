@@ -1,0 +1,83 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "721",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.patientdiscovery.adapter;\n\nimport gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\nimport org.hl7.v3.PRPAIN201306UV02;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..bd297a21977 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.patientdiscovery.adapter;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..aa9708fc845 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.patientdiscovery.adapter;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n@@ -38,20 +39,20 @@ import org.slf4j.LoggerFactory;\n  * @author westberg\n  */\n public class AdapterPatientDiscoveryOrchImpl {\n-    private static final Logger LOG = LoggerFactory.getLogger(AdapterPatientDiscoveryOrchImpl.class);\n+  private static final Logger LOG = LoggerFactory.getLogger(AdapterPatientDiscoveryOrchImpl.class);\n \n-    /**\n-     * Since this method is for pass through mode. There is nothing we do with it. It is intended that this class and\n-     * the web services are completely overridden by the customer. We are just returning an empty result.\n-     *\n-     * @param request The patient discovery message that came into the gateway.\n-     * @param assertion The assertion information.\n-     * @return An emtpy response\n-     */\n-    public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request,\n-            AssertionType assertion) {\n-        LOG.debug(\"Entering AdapterPatientDiscoveryOrchImpl.respondingGatewayPRPAIN201305UV02\");\n-        return new PRPAIN201306UV02();\n-    }\n+  /**\n+   * Since this method is for pass through mode. There is nothing we do with it. It is intended that this class and\n+   * the web services are completely overridden by the customer. We are just returning an empty result.\n+   *\n+   * @param request   The patient discovery message that came into the gateway.\n+   * @param assertion The assertion information.\n+   * @return An emtpy response\n+   */\n+  public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request,\n+                                                            AssertionType assertion) {\n+    LOG.debug(\"Entering AdapterPatientDiscoveryOrchImpl.respondingGatewayPRPAIN201305UV02\");\n+    return new PRPAIN201306UV02();\n+  }\n \n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "52",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..3517f10a7fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.patientdiscovery.adapter;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n@@ -48,10 +49,10 @@ public class AdapterPatientDiscoveryOrchImpl {\n      * @param assertion The assertion information.\n      * @return An emtpy response\n      */\n-    public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request,\n-            AssertionType assertion) {\n+    public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request, AssertionType assertion) {\n         LOG.debug(\"Entering AdapterPatientDiscoveryOrchImpl.respondingGatewayPRPAIN201305UV02\");\n-        return new PRPAIN201306UV02();\n+\n+return new PRPAIN201306UV02();\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..bba68f2e85b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -37,7 +37,10 @@ import org.slf4j.LoggerFactory;\n  *\n  * @author westberg\n  */\n+\n+\n public class AdapterPatientDiscoveryOrchImpl {\n+\n     private static final Logger LOG = LoggerFactory.getLogger(AdapterPatientDiscoveryOrchImpl.class);\n \n     /**\n@@ -48,10 +51,11 @@ public class AdapterPatientDiscoveryOrchImpl {\n      * @param assertion The assertion information.\n      * @return An emtpy response\n      */\n-    public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request,\n-            AssertionType assertion) {\n+\n+\n+    public PRPAIN201306UV02 respondingGatewayPRPAIN201305UV02(RespondingGatewayPRPAIN201305UV02RequestType request, AssertionType assertion) {\n         LOG.debug(\"Entering AdapterPatientDiscoveryOrchImpl.respondingGatewayPRPAIN201305UV02\");\n         return new PRPAIN201306UV02();\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..bd297a21977 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.patientdiscovery.adapter;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\nindex 9894043173f..bd297a21977 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/721/AdapterPatientDiscoveryOrchImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/721/AdapterPatientDiscoveryOrchImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.patientdiscovery.adapter;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

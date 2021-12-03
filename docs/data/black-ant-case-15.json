@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "15",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "column": "56",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n\n    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n\n    int insertone(MyOrder order);\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/15/MyOrderMapper.java\nindex 175cbe0cd71..9a22e1d0f60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/15/MyOrderMapper.java\n@@ -28,7 +28,7 @@ public interface MyOrderMapper {\n \n     List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n \n-    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n+    List<MyOrder> findNoParam(@Param(\"key\") String key, @Param(\"value\") String value);\n \n     int insertone(MyOrder order);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/15/MyOrderMapper.java\nindex 175cbe0cd71..9a22e1d0f60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/15/MyOrderMapper.java\n@@ -28,7 +28,7 @@ public interface MyOrderMapper {\n \n     List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n \n-    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n+    List<MyOrder> findNoParam(@Param(\"key\") String key, @Param(\"value\") String value);\n \n     int insertone(MyOrder order);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/15/MyOrderMapper.java\nindex 175cbe0cd71..b512e492ced 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/15/MyOrderMapper.java\n@@ -28,7 +28,7 @@ public interface MyOrderMapper {\n \n     List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n \n-    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n+    List<MyOrder> findNoParam(@Param(\"key\") String key, @Param(\"value\") String value);\n \n     int insertone(MyOrder order);\n \n@@ -45,4 +45,4 @@ public interface MyOrderMapper {\n     int updateMany(MyOrder order);\n \n     int deleteByPrimaryKey(int id);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/15/MyOrderMapper.java\nindex 175cbe0cd71..9a22e1d0f60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/15/MyOrderMapper.java\n@@ -28,7 +28,7 @@ public interface MyOrderMapper {\n \n     List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n \n-    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n+    List<MyOrder> findNoParam(@Param(\"key\") String key, @Param(\"value\") String value);\n \n     int insertone(MyOrder order);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/15/MyOrderMapper.java\nindex 175cbe0cd71..9a22e1d0f60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/15/MyOrderMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/15/MyOrderMapper.java\n@@ -28,7 +28,7 @@ public interface MyOrderMapper {\n \n     List<MyOrder> findInclude(@Param(\"startdate\") Date start);\n \n-    List<MyOrder> findNoParam(@Param(\"key\") String key,@Param(\"value\") String value);\n+    List<MyOrder> findNoParam(@Param(\"key\") String key, @Param(\"value\") String value);\n \n     int insertone(MyOrder order);\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

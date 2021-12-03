@@ -1,0 +1,79 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "26",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "54",
+                "severity": "warning",
+                "message": "'+' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "\n    throw new IllegalArgumentException(\n        \"only support String or TagFinder, but got \" +\n            (obj == null ? \"null\" : obj.getClass().getName()));\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/26/TagFinder.java\nindex 40c26bb6d2b..e64b688b197 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/26/TagFinder.java\n@@ -29,8 +29,7 @@ public interface TagFinder {\n     }\n \n     throw new IllegalArgumentException(\n-        \"only support String or TagFinder, but got \" +\n-            (obj == null ? \"null\" : obj.getClass().getName()));\n+        \"only support String or TagFinder, but got \" + (obj == null ? \"null\" : obj.getClass().getName()));\n   }\n \n   String getTagKey();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "54",
+                    "severity": "warning",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/26/TagFinder.java\nindex 40c26bb6d2b..43fd873094e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/26/TagFinder.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.foundation.metrics.publish.spectator;\n \n import com.netflix.spectator.api.Tag;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/26/TagFinder.java\nindex 40c26bb6d2b..ad6bb47c500 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/26/TagFinder.java\n@@ -29,8 +29,7 @@ public interface TagFinder {\n     }\n \n     throw new IllegalArgumentException(\n-        \"only support String or TagFinder, but got \" +\n-            (obj == null ? \"null\" : obj.getClass().getName()));\n+        \"only support String or TagFinder, but got \" + (obj == null ? \"null\" : obj.getClass().getName()));\n   }\n \n   String getTagKey();\n@@ -38,4 +37,4 @@ public interface TagFinder {\n   // read target tag from tags\n   // return directly or do some change and then return\n   Tag find(Iterable<Tag> tags);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 137).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/26/TagFinder.java\nindex 40c26bb6d2b..8c745a1bc81 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/26/TagFinder.java\n@@ -28,14 +28,13 @@ public interface TagFinder {\n       return (TagFinder) obj;\n     }\n \n-    throw new IllegalArgumentException(\n-        \"only support String or TagFinder, but got \" +\n-            (obj == null ? \"null\" : obj.getClass().getName()));\n+    throw new IllegalArgumentException(\"only support String or TagFinder, but got \" + (obj == null ? \"null\" : obj.getClass().getName()));\n   }\n \n   String getTagKey();\n \n   // read target tag from tags\n   // return directly or do some change and then return\n+\n   Tag find(Iterable<Tag> tags);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/26/TagFinder.java\nindex 40c26bb6d2b..e64b688b197 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/26/TagFinder.java\n@@ -29,8 +29,7 @@ public interface TagFinder {\n     }\n \n     throw new IllegalArgumentException(\n-        \"only support String or TagFinder, but got \" +\n-            (obj == null ? \"null\" : obj.getClass().getName()));\n+        \"only support String or TagFinder, but got \" + (obj == null ? \"null\" : obj.getClass().getName()));\n   }\n \n   String getTagKey();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/26/TagFinder.java\nindex 40c26bb6d2b..e64b688b197 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/26/TagFinder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/26/TagFinder.java\n@@ -29,8 +29,7 @@ public interface TagFinder {\n     }\n \n     throw new IllegalArgumentException(\n-        \"only support String or TagFinder, but got \" +\n-            (obj == null ? \"null\" : obj.getClass().getName()));\n+        \"only support String or TagFinder, but got \" + (obj == null ? \"null\" : obj.getClass().getName()));\n   }\n \n   String getTagKey();\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

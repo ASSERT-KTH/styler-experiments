@@ -1,0 +1,63 @@
+{
+    "project_name": "findbugsproject-findbugs",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "@Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\npublic @interface NonNullByDefault {\n\tboolean value() default true;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/findbugsproject-findbugs/styler/05_predictions/final/files-repaired/21/NonNullByDefault.java\nindex 30bb7c19a2c..cf603fc20cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/findbugsproject-findbugs/styler/05_predictions/final/files-repaired/21/NonNullByDefault.java\n@@ -10,5 +10,5 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.CLASS)\n @Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n+boolean value() default true;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/checkstyle_idea/21/NonNullByDefault.java\nindex 30bb7c19a2c..66ba43a1cc3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/checkstyle_idea/21/NonNullByDefault.java\n@@ -8,7 +8,7 @@ import java.lang.annotation.Target;\n \n @Documented\n @Retention(RetentionPolicy.CLASS)\n-@Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n+@Target({PACKAGE, TYPE, METHOD, CONSTRUCTOR})\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n+    boolean value() default true;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/naturalize/21/NonNullByDefault.java\nindex 30bb7c19a2c..2b517ca9d29 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/naturalize/21/NonNullByDefault.java\n@@ -10,5 +10,5 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.CLASS)\n @Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n-}\n+    boolean value() default true;\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/codebuff/21/NonNullByDefault.java\nindex 30bb7c19a2c..554e31b93e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/codebuff/21/NonNullByDefault.java\n@@ -6,9 +6,10 @@ import java.lang.annotation.Retention;\n import java.lang.annotation.RetentionPolicy;\n import java.lang.annotation.Target;\n \n+\n @Documented\n @Retention(RetentionPolicy.CLASS)\n @Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n-}\n+    boolean value() default true;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/styler/05_predictions/random/files-repaired/21/NonNullByDefault.java\nindex 30bb7c19a2c..cf603fc20cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/styler/05_predictions/random/files-repaired/21/NonNullByDefault.java\n@@ -10,5 +10,5 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.CLASS)\n @Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n+boolean value() default true;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/styler/05_predictions/three_grams/files-repaired/21/NonNullByDefault.java\nindex 30bb7c19a2c..55d13f3a215 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/violations/21/NonNullByDefault.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/findbugsproject-findbugs/styler/05_predictions/three_grams/files-repaired/21/NonNullByDefault.java\n@@ -10,5 +10,5 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.CLASS)\n @Target({ PACKAGE, TYPE, METHOD, CONSTRUCTOR })\n public @interface NonNullByDefault {\n-\tboolean value() default true;\n+    boolean value() default true;\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,96 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "3069",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2018 \"Neo Technology,\"\n * Network Engine for Objects in Lund AB [http://neotechnology.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3069/State.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3069/State.java\nindex 8fd82cc7d77..bc9717a144b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3069/State.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3069/State.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU Affero General Public License\n  * along with this program. If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.causalclustering.core.consensus.log.segmented;\n \n /**\n@@ -24,20 +25,20 @@ package org.neo4j.causalclustering.core.consensus.log.segmented;\n  */\n public class State\n {\n-    Segments segments;\n-    Terms terms;\n+  Segments segments;\n+  Terms terms;\n \n-    long prevIndex = -1;\n-    long prevTerm = -1;\n-    long appendIndex = -1;\n+  long prevIndex = -1;\n+  long prevTerm = -1;\n+  long appendIndex = -1;\n \n-    @Override\n-    public String toString()\n-    {\n-        return \"State{\" +\n-               \"prevIndex=\" + prevIndex +\n-               \", prevTerm=\" + prevTerm +\n-               \", appendIndex=\" + appendIndex +\n-               '}';\n-    }\n+  @Override\n+  public String toString()\n+  {\n+    return \"State{\" +\n+        \"prevIndex=\" + prevIndex +\n+        \", prevTerm=\" + prevTerm +\n+        \", appendIndex=\" + appendIndex +\n+        '}';\n+  }\n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3069/State.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3069/State.java\nindex 8fd82cc7d77..79a257a0979 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3069/State.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3069/State.java\n@@ -34,10 +34,6 @@ public class State\n     @Override\n     public String toString()\n     {\n-        return \"State{\" +\n-               \"prevIndex=\" + prevIndex +\n-               \", prevTerm=\" + prevTerm +\n-               \", appendIndex=\" + appendIndex +\n-               '}';\n+        return \"State{\" + \"prevIndex=\" + prevIndex + \", prevTerm=\" + prevTerm + \", appendIndex=\" + appendIndex + '}';\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

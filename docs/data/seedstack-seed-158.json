@@ -1,0 +1,178 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "158",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.core.internal.scan;\n\nimport com.google.common.collect.Lists;\nimport java.util.List;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/158/BaseClasspathScanHandler.java\nindex d234fbefeb8..ece193170e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/158/BaseClasspathScanHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.scan;\n \n import com.google.common.collect.Lists;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/158/BaseClasspathScanHandler.java\nindex d234fbefeb8..ece193170e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/158/BaseClasspathScanHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.scan;\n \n import com.google.common.collect.Lists;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "85",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "107",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "138",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "warning",
+                    "message": "Block comment has incorrect indentation level 0, expected is 3, indentation should be the same level as line 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "12",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 267).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "73",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "73",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "107",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' should followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "'{' at column 118 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "119",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: 'return' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "266",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "266",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "267",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/158/BaseClasspathScanHandler.java\nindex d234fbefeb8..33847576483 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/158/BaseClasspathScanHandler.java\n@@ -5,23 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n-package org.seedstack.seed.core.internal.scan;\n-\n-import com.google.common.collect.Lists;\n-import java.util.List;\n-import org.reflections.vfs.Vfs;\n+package org.seedstack.seed.core.internal.scan;import com.google.common.collect.Lists;import java.util.List;import org.reflections.vfs.Vfs;\n \n /**\n  * Provides classpath scan capabilities for Java base environment.\n- */\n-public class BaseClasspathScanHandler implements ClasspathScanHandler {\n-    @Override\n-    public List<Vfs.UrlType> urlTypes() {\n-        return Lists.newArrayList(\n-                Vfs.DefaultUrlTypes.jarFile,\n-                Vfs.DefaultUrlTypes.jarUrl,\n-                Vfs.DefaultUrlTypes.directory,\n-                Vfs.DefaultUrlTypes.jarInputStream\n-        );\n-    }\n-}\n+ */public class BaseClasspathScanHandler implements ClasspathScanHandler{@Override public List<Vfs.UrlType>urlTypes(){return Lists.newArrayList(Vfs.DefaultUrlTypes.jarFile,Vfs.DefaultUrlTypes.jarUrl,Vfs.DefaultUrlTypes.directory,Vfs.DefaultUrlTypes.jarInputStream);}}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/158/BaseClasspathScanHandler.java\nindex d234fbefeb8..ece193170e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/158/BaseClasspathScanHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.scan;\n \n import com.google.common.collect.Lists;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/158/BaseClasspathScanHandler.java\nindex d234fbefeb8..c5edae6c1a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/158/BaseClasspathScanHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/158/BaseClasspathScanHandler.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.core.internal.scan;\n \n import com.google.common.collect.Lists;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "164",
+    "information": {
+        "violations": [
+            {
+                "line": "4",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * package for test definition of http load tests\n */\npackage com.griddynamics.jagger.invoker.v2;\n\nimport com.griddynamics.jagger.invoker.InvocationException;\nimport com.griddynamics.jagger.invoker.Invoker;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/164/AbstractHttpInvoker.java\nindex be74ca85238..8dc2a8873ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/164/AbstractHttpInvoker.java\n@@ -1,6 +1,7 @@\n /** @package com.griddynamics.jagger.invoker.v2\n  * package for test definition of http load tests\n  */\n+\n package com.griddynamics.jagger.invoker.v2;\n \n import com.griddynamics.jagger.invoker.InvocationException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/164/AbstractHttpInvoker.java\nindex be74ca85238..9506e8a58d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/164/AbstractHttpInvoker.java\n@@ -1,6 +1,8 @@\n-/** @package com.griddynamics.jagger.invoker.v2\n+/**\n+ * @package com.griddynamics.jagger.invoker.v2\n  * package for test definition of http load tests\n  */\n+\n package com.griddynamics.jagger.invoker.v2;\n \n import com.griddynamics.jagger.invoker.InvocationException;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "4",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/164/AbstractHttpInvoker.java\nindex be74ca85238..ecf2503dac6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/164/AbstractHttpInvoker.java\n@@ -19,12 +19,14 @@ import com.griddynamics.jagger.invoker.Invoker;\n  *\n  * @ingroup Main_Http_group\n  */\n+\n @SuppressWarnings(\"unused\")\n public abstract class AbstractHttpInvoker<HTTP_CLIENT extends JHttpClient> implements Invoker<JHttpQuery, JHttpResponse, JHttpEndpoint> {\n \n     /**\n      * {@link JHttpClient} implementation to be used by invoker\n      */\n+\n     protected HTTP_CLIENT httpClient;\n \n     public AbstractHttpInvoker(HTTP_CLIENT httpClient) {\n@@ -40,6 +42,7 @@ public abstract class AbstractHttpInvoker<HTTP_CLIENT extends JHttpClient> imple\n      * @return {@link JHttpResponse} - the result of the query\n      * @throws InvocationException thrown if invocation failed\n      */\n+\n     @Override\n     public abstract JHttpResponse invoke(JHttpQuery query, JHttpEndpoint endpoint) throws InvocationException;\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/164/AbstractHttpInvoker.java\nindex be74ca85238..8dc2a8873ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/164/AbstractHttpInvoker.java\n@@ -1,6 +1,7 @@\n /** @package com.griddynamics.jagger.invoker.v2\n  * package for test definition of http load tests\n  */\n+\n package com.griddynamics.jagger.invoker.v2;\n \n import com.griddynamics.jagger.invoker.InvocationException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/164/AbstractHttpInvoker.java\nindex be74ca85238..8dc2a8873ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/164/AbstractHttpInvoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/164/AbstractHttpInvoker.java\n@@ -1,6 +1,7 @@\n /** @package com.griddynamics.jagger.invoker.v2\n  * package for test definition of http load tests\n  */\n+\n package com.griddynamics.jagger.invoker.v2;\n \n import com.griddynamics.jagger.invoker.InvocationException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

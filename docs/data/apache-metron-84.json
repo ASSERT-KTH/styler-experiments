@@ -1,0 +1,58 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "84",
+    "information": {
+        "violations": [
+            {
+                "line": "124",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 115).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    request.source(builder);\n\n    org.elasticsearch.action.search.SearchResponse response = transportClient.getHighLevelClient().search(request);\n    SearchHits hits = response.getHits();\n    List<T> results = new ArrayList<>();\n    for (SearchHit hit : hits) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/84/ElasticsearchRetrieveLatestDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/84/ElasticsearchRetrieveLatestDao.java\nindex 0c910079439..bb2dee3223b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/84/ElasticsearchRetrieveLatestDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/84/ElasticsearchRetrieveLatestDao.java\n@@ -82,7 +82,7 @@ public class ElasticsearchRetrieveLatestDao implements RetrieveLatestDao {\n   }\n \n   <T> Optional<T> searchByGuid(String guid, String sensorType,\n-      Function<SearchHit, Optional<T>> callback) throws IOException {\n+                               Function<SearchHit, Optional<T>> callback) throws IOException {\n     Collection<String> sensorTypes = sensorType != null ? Collections.singleton(sensorType) : null;\n     List<T> results = searchByGuids(Collections.singleton(guid), sensorTypes, callback);\n     if (results.size() > 0) {\n@@ -98,7 +98,7 @@ public class ElasticsearchRetrieveLatestDao implements RetrieveLatestDao {\n    * If more than one hit happens, the first one will be returned.\n    */\n   <T> List<T> searchByGuids(Collection<String> guids, Collection<String> sensorTypes,\n-      Function<SearchHit, Optional<T>> callback) throws IOException {\n+                            Function<SearchHit, Optional<T>> callback) throws IOException {\n     if (guids == null || guids.isEmpty()) {\n       return Collections.emptyList();\n     }\n@@ -121,7 +121,8 @@ public class ElasticsearchRetrieveLatestDao implements RetrieveLatestDao {\n     builder.size(guids.size());\n     request.source(builder);\n \n-    org.elasticsearch.action.search.SearchResponse response = transportClient.getHighLevelClient().search(request);\n+    org.elasticsearch.action.search.SearchResponse response =\n+        transportClient.getHighLevelClient().search(request);\n     SearchHits hits = response.getHits();\n     List<T> results = new ArrayList<>();\n     for (SearchHit hit : hits) {\n@@ -146,6 +147,7 @@ public class ElasticsearchRetrieveLatestDao implements RetrieveLatestDao {\n \n   /**\n    * Returns the source type based on a given doc type.\n+   *\n    * @param docType The document type.\n    * @return The source type.\n    */\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

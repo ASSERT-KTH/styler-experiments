@@ -1,0 +1,98 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "197",
+    "information": {
+        "violations": [
+            {
+                "line": "65",
+                "severity": "error",
+                "message": "Line is longer than 150 characters (found 190).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        }\n\n        List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n\n        return productAttrs;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 191).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..acbd8434561 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\n@@ -62,7 +62,7 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n             productAttrDto.setPage((page - 1) * productAttrDto.getRow());\n         }\n \n-        List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n+        List <ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n \n         return productAttrs;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..e24b0a0ac3e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/197/ProductAttrInnerServiceSMOImpl.java\n@@ -62,7 +62,9 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n             productAttrDto.setPage((page - 1) * productAttrDto.getRow());\n         }\n \n-        List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n+        List<ProductAttrDto> productAttrs =\n+            BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)),\n+                ProductAttrDto.class);\n \n         return productAttrs;\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..3e7bb0dfad3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/197/ProductAttrInnerServiceSMOImpl.java\n@@ -80,4 +80,4 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n     public void setProductAttrServiceDaoImpl(IProductAttrServiceDao productAttrServiceDaoImpl) {\n         this.productAttrServiceDaoImpl = productAttrServiceDaoImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "74",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..bb43022a696 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/197/ProductAttrInnerServiceSMOImpl.java\n@@ -1,6 +1,5 @@\n package com.java110.goods.smo.impl;\n \n-\n import com.java110.core.base.smo.BaseServiceSMO;\n import com.java110.dto.PageDto;\n import com.java110.dto.productAttr.ProductAttrDto;\n@@ -11,7 +10,6 @@ import com.java110.utils.util.BeanConvertUtil;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.web.bind.annotation.RequestBody;\n import org.springframework.web.bind.annotation.RestController;\n-\n import java.util.List;\n \n /**\n@@ -22,15 +20,19 @@ import java.util.List;\n  * @Version 1.0\n  * add by wuxw 2019/4/24\n  **/\n+\n+\n @RestController\n public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IProductAttrInnerServiceSMO {\n \n     @Autowired\n     private IProductAttrServiceDao productAttrServiceDaoImpl;\n \n-\n     @Override\n     public int saveProductAttr(@RequestBody ProductAttrPo productAttrPo) {\n+\n+\n+\n         int saveFlag = 1;\n         productAttrServiceDaoImpl.saveProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrPo));\n         return saveFlag;\n@@ -38,6 +40,9 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n \n     @Override\n     public int updateProductAttr(@RequestBody ProductAttrPo productAttrPo) {\n+\n+\n+\n         int saveFlag = 1;\n         productAttrServiceDaoImpl.updateProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrPo));\n         return saveFlag;\n@@ -45,6 +50,9 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n \n     @Override\n     public int deleteProductAttr(@RequestBody ProductAttrPo productAttrPo) {\n+\n+\n+\n         int saveFlag = 1;\n         productAttrPo.setStatusCd(\"1\");\n         productAttrServiceDaoImpl.updateProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrPo));\n@@ -56,18 +64,17 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n \n         //\u6821\u9a8c\u662f\u5426\u4f20\u4e86 \u5206\u9875\u4fe1\u606f\n \n-        int page = productAttrDto.getPage();\n \n+\n+        int page = productAttrDto.getPage();\n         if (page != PageDto.DEFAULT_PAGE) {\n             productAttrDto.setPage((page - 1) * productAttrDto.getRow());\n         }\n \n         List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n-\n         return productAttrs;\n     }\n \n-\n     @Override\n     public int queryProductAttrsCount(@RequestBody ProductAttrDto productAttrDto) {\n         return productAttrServiceDaoImpl.queryProductAttrsCount(BeanConvertUtil.beanCovertMap(productAttrDto));\n@@ -80,4 +87,4 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n     public void setProductAttrServiceDaoImpl(IProductAttrServiceDao productAttrServiceDaoImpl) {\n         this.productAttrServiceDaoImpl = productAttrServiceDaoImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 191).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..acbd8434561 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\n@@ -62,7 +62,7 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n             productAttrDto.setPage((page - 1) * productAttrDto.getRow());\n         }\n \n-        List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n+        List <ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n \n         return productAttrs;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\nindex 81a35daa46a..1d538d91928 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/197/ProductAttrInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/197/ProductAttrInnerServiceSMOImpl.java\n@@ -61,7 +61,6 @@ public class ProductAttrInnerServiceSMOImpl extends BaseServiceSMO implements IP\n         if (page != PageDto.DEFAULT_PAGE) {\n             productAttrDto.setPage((page - 1) * productAttrDto.getRow());\n         }\n-\n         List<ProductAttrDto> productAttrs = BeanConvertUtil.covertBeanList(productAttrServiceDaoImpl.getProductAttrInfo(BeanConvertUtil.beanCovertMap(productAttrDto)), ProductAttrDto.class);\n \n         return productAttrs;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

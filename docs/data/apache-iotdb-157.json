@@ -1,0 +1,94 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "157",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.read;\n\nimport org.apache.iotdb.tsfile.read.controller.CachedChunkLoaderImpl;\nimport org.apache.iotdb.tsfile.read.controller.IChunkLoader;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/157/ReadOnlyTsFile.java\nindex ec6d1057d2f..fe5f3c27b8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/157/ReadOnlyTsFile.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read;\n \n import org.apache.iotdb.tsfile.read.controller.CachedChunkLoaderImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/157/ReadOnlyTsFile.java\nindex ec6d1057d2f..76eb9408787 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/157/ReadOnlyTsFile.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read;\n \n import org.apache.iotdb.tsfile.read.controller.CachedChunkLoaderImpl;\n@@ -35,7 +36,9 @@ public class ReadOnlyTsFile implements AutoCloseable {\n   private IChunkLoader chunkLoader;\n   private TsFileExecutor tsFileExecutor;\n \n-  /** constructor, create ReadOnlyTsFile with TsFileSequenceReader. */\n+  /**\n+   * constructor, create ReadOnlyTsFile with TsFileSequenceReader.\n+   */\n   public ReadOnlyTsFile(TsFileSequenceReader fileReader) throws IOException {\n     this.fileReader = fileReader;\n     this.metadataQuerier = new MetadataQuerierByFileImpl(fileReader);\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "'throws' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "'QueryExpression' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/157/ReadOnlyTsFile.java\nindex ec6d1057d2f..b6c894398bb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/157/ReadOnlyTsFile.java\n@@ -25,7 +25,6 @@ import org.apache.iotdb.tsfile.read.controller.MetadataQuerierByFileImpl;\n import org.apache.iotdb.tsfile.read.expression.QueryExpression;\n import org.apache.iotdb.tsfile.read.query.dataset.QueryDataSet;\n import org.apache.iotdb.tsfile.read.query.executor.TsFileExecutor;\n-\n import java.io.IOException;\n \n public class ReadOnlyTsFile implements AutoCloseable {\n@@ -36,7 +35,9 @@ public class ReadOnlyTsFile implements AutoCloseable {\n   private TsFileExecutor tsFileExecutor;\n \n   /** constructor, create ReadOnlyTsFile with TsFileSequenceReader. */\n-  public ReadOnlyTsFile(TsFileSequenceReader fileReader) throws IOException {\n+\n+  public ReadOnlyTsFile(TsFileSequenceReader fileReader)\n+    throws IOException {\n     this.fileReader = fileReader;\n     this.metadataQuerier = new MetadataQuerierByFileImpl(fileReader);\n     this.chunkLoader = new CachedChunkLoaderImpl(fileReader);\n@@ -48,8 +49,7 @@ public class ReadOnlyTsFile implements AutoCloseable {\n   }\n \n   public QueryDataSet query(\n-      QueryExpression queryExpression, long partitionStartOffset, long partitionEndOffset)\n-      throws IOException {\n+    QueryExpression queryExpression, long partitionStartOffset, long partitionEndOffset) throws IOException {\n     return tsFileExecutor.execute(queryExpression, partitionStartOffset, partitionEndOffset);\n   }\n \n@@ -57,4 +57,4 @@ public class ReadOnlyTsFile implements AutoCloseable {\n   public void close() throws IOException {\n     fileReader.close();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/157/ReadOnlyTsFile.java\nindex ec6d1057d2f..fe5f3c27b8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/157/ReadOnlyTsFile.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/157/ReadOnlyTsFile.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read;\n \n import org.apache.iotdb.tsfile.read.controller.CachedChunkLoaderImpl;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "EMResearch-EMB",
+    "violation_id": "46",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "column": "69",
+                "severity": "warning",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " * Created by daniel on 13-05-2016.\n */\npublic interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/46/DocumentSpecDAO.java\nindex e4846909ae6..d97d06c75f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/46/DocumentSpecDAO.java\n@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;\n /**\n  * Created by daniel on 13-05-2016.\n  */\n-public interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {\n+public interface DocumentSpecDAO extends CrudRepository<DocumentSpec, Long> {\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/46/DocumentSpecDAO.java\nindex e4846909ae6..d97d06c75f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/46/DocumentSpecDAO.java\n@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;\n /**\n  * Created by daniel on 13-05-2016.\n  */\n-public interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {\n+public interface DocumentSpecDAO extends CrudRepository<DocumentSpec, Long> {\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/46/DocumentSpecDAO.java\nindex e4846909ae6..eb02c1c8eb0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/46/DocumentSpecDAO.java\n@@ -6,5 +6,8 @@ import org.springframework.data.repository.CrudRepository;\n /**\n  * Created by daniel on 13-05-2016.\n  */\n-public interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {\n+\n+\n+public interface DocumentSpecDAO extends CrudRepository<DocumentSpec, Long> {\n+\n }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/46/DocumentSpecDAO.java\nindex e4846909ae6..d97d06c75f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/46/DocumentSpecDAO.java\n@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;\n /**\n  * Created by daniel on 13-05-2016.\n  */\n-public interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {\n+public interface DocumentSpecDAO extends CrudRepository<DocumentSpec, Long> {\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/46/DocumentSpecDAO.java\nindex e4846909ae6..d97d06c75f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/46/DocumentSpecDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/46/DocumentSpecDAO.java\n@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;\n /**\n  * Created by daniel on 13-05-2016.\n  */\n-public interface DocumentSpecDAO extends CrudRepository<DocumentSpec,Long> {\n+public interface DocumentSpecDAO extends CrudRepository<DocumentSpec, Long> {\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "@Component\npublic class CurrentUserHandlerMethodArgumentResolver implements\n\t\tHandlerMethodArgumentResolver {\n\n\tpublic boolean supportsParameter(MethodParameter methodParameter) {\n\t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\nindex b7521b46a34..e8ac3056100 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\n@@ -31,7 +31,7 @@ import java.security.Principal;\n \n @Component\n public class CurrentUserHandlerMethodArgumentResolver implements\n-\t\tHandlerMethodArgumentResolver {\n+  HandlerMethodArgumentResolver {\n \n \tpublic boolean supportsParameter(MethodParameter methodParameter) {\n \t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/13/CurrentUserHandlerMethodArgumentResolver.java\nindex b7521b46a34..436e404d383 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/13/CurrentUserHandlerMethodArgumentResolver.java\n@@ -31,21 +31,21 @@ import java.security.Principal;\n \n @Component\n public class CurrentUserHandlerMethodArgumentResolver implements\n-\t\tHandlerMethodArgumentResolver {\n+    HandlerMethodArgumentResolver {\n \n-\tpublic boolean supportsParameter(MethodParameter methodParameter) {\n-\t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null\n-\t\t\t\t&& methodParameter.getParameterType().equals(User.class);\n-\t}\n+    public boolean supportsParameter(MethodParameter methodParameter) {\n+        return methodParameter.getParameterAnnotation(CurrentUser.class) != null\n+            && methodParameter.getParameterType().equals(User.class);\n+    }\n \n-\tpublic Object resolveArgument(MethodParameter methodParameter,\n+    public Object resolveArgument(MethodParameter methodParameter,\n                                   ModelAndViewContainer mavContainer, NativeWebRequest webRequest,\n                                   WebDataBinderFactory binderFactory) throws Exception {\n-\t\tif (this.supportsParameter(methodParameter)) {\n-\t\t\tPrincipal principal = (Principal) webRequest.getUserPrincipal();\n-\t\t\treturn (User) ((Authentication) principal).getPrincipal();\n-\t\t} else {\n-\t\t\treturn WebArgumentResolver.UNRESOLVED;\n-\t\t}\n-\t}\n+        if (this.supportsParameter(methodParameter)) {\n+            Principal principal = (Principal) webRequest.getUserPrincipal();\n+            return (User) ((Authentication) principal).getPrincipal();\n+        } else {\n+            return WebArgumentResolver.UNRESOLVED;\n+        }\n+    }\n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/13/CurrentUserHandlerMethodArgumentResolver.java\nindex b7521b46a34..2d162c5b9a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/13/CurrentUserHandlerMethodArgumentResolver.java\n@@ -30,22 +30,19 @@ import org.springframework.web.method.support.ModelAndViewContainer;\n import java.security.Principal;\n \n @Component\n-public class CurrentUserHandlerMethodArgumentResolver implements\n-\t\tHandlerMethodArgumentResolver {\n+public class CurrentUserHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {\n \n-\tpublic boolean supportsParameter(MethodParameter methodParameter) {\n-\t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null\n-\t\t\t\t&& methodParameter.getParameterType().equals(User.class);\n-\t}\n+    public boolean supportsParameter(MethodParameter methodParameter) {\n+    return methodParameter.getParameterAnnotation(CurrentUser.class) != null && methodParameter.getParameterType().equals(User.class);\n+    }\n \n-\tpublic Object resolveArgument(MethodParameter methodParameter,\n-                                  ModelAndViewContainer mavContainer, NativeWebRequest webRequest,\n+\tpublic Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest,\n                                   WebDataBinderFactory binderFactory) throws Exception {\n-\t\tif (this.supportsParameter(methodParameter)) {\n-\t\t\tPrincipal principal = (Principal) webRequest.getUserPrincipal();\n+    if (this.supportsParameter(methodParameter)) {\n+    Principal principal = (Principal) webRequest.getUserPrincipal();\n \t\t\treturn (User) ((Authentication) principal).getPrincipal();\n-\t\t} else {\n-\t\t\treturn WebArgumentResolver.UNRESOLVED;\n-\t\t}\n-\t}\n-}\n+    } else {\n+    return WebArgumentResolver.UNRESOLVED;\n+    }\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\nindex b7521b46a34..e8ac3056100 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\n@@ -31,7 +31,7 @@ import java.security.Principal;\n \n @Component\n public class CurrentUserHandlerMethodArgumentResolver implements\n-\t\tHandlerMethodArgumentResolver {\n+  HandlerMethodArgumentResolver {\n \n \tpublic boolean supportsParameter(MethodParameter methodParameter) {\n \t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\nindex b7521b46a34..6eca8b469e6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/13/CurrentUserHandlerMethodArgumentResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/13/CurrentUserHandlerMethodArgumentResolver.java\n@@ -31,7 +31,7 @@ import java.security.Principal;\n \n @Component\n public class CurrentUserHandlerMethodArgumentResolver implements\n-\t\tHandlerMethodArgumentResolver {\n+        HandlerMethodArgumentResolver {\n \n \tpublic boolean supportsParameter(MethodParameter methodParameter) {\n \t\treturn methodParameter.getParameterAnnotation(CurrentUser.class) != null\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

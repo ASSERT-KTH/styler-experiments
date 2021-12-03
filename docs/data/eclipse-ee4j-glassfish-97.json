@@ -1,0 +1,95 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "97",
+    "information": {
+        "violations": [
+            {
+                "line": "95",
+                "column": "30",
+                "severity": "warning",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "            return type.cast(tracker.waitForService(0));\n        } finally {\n            tracker.close(); // no need to track further\n        }\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "95",
+                    "column": "29",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/97/OSGiFrameworkLauncher.java\nindex e919fd97a06..c648964ae8b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/97/OSGiFrameworkLauncher.java\n@@ -92,7 +92,7 @@ public class OSGiFrameworkLauncher {\n             tracker.open(true);\n             return type.cast(tracker.waitForService(0));\n         } finally {\n-            tracker.close(); // no need to track further\n+            tracker.close();// no need to track further\n         }\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "95",
+                    "column": "30",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/97/OSGiFrameworkLauncher.java\nindex e919fd97a06..e4ab9b6942f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/97/OSGiFrameworkLauncher.java\n@@ -32,7 +32,7 @@ import java.util.ServiceLoader;\n  * Utility class which takes care of launching OSGi framework.\n  * It lauches the framework in a daemon thread, because typically framework spawned threads inherit\n  * parent thread's daemon status.\n- *\n+ * <p>\n  * It also provides a utility method to get hold of OSGi services registered in the system.\n  *\n  * @author Sanjeeb.Sahoo@Sun.COM\n@@ -50,10 +50,10 @@ public class OSGiFrameworkLauncher {\n         if (!isOSGiEnv()) {\n             // Locate an OSGi framework and initialize it\n             ServiceLoader<FrameworkFactory> frameworkFactories =\n-                    ServiceLoader.load(FrameworkFactory.class, getClass().getClassLoader());\n+                ServiceLoader.load(FrameworkFactory.class, getClass().getClassLoader());\n             Map<String, String> mm = new HashMap<String, String>();\n-            for (Map.Entry<Object, Object> e: properties.entrySet()) {\n-                mm.put((String)e.getKey(), (String)e.getValue());\n+            for (Map.Entry<Object, Object> e : properties.entrySet()) {\n+                mm.put((String) e.getKey(), (String) e.getValue());\n             }\n             for (FrameworkFactory ff : frameworkFactories) {\n                 framework = ff.newFramework(mm);\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/97/OSGiFrameworkLauncher.java\nindex e919fd97a06..48674c50245 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/97/OSGiFrameworkLauncher.java\n@@ -92,7 +92,8 @@ public class OSGiFrameworkLauncher {\n             tracker.open(true);\n             return type.cast(tracker.waitForService(0));\n         } finally {\n-            tracker.close(); // no need to track further\n+            tracker.close();\n+// no need to track further\n         }\n     }\n \n@@ -108,4 +109,4 @@ public class OSGiFrameworkLauncher {\n     }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "97",
+                    "column": "10",
+                    "severity": "warning",
+                    "message": "'finally rcurly' has incorrect indentation level 9, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/97/OSGiFrameworkLauncher.java\nindex e919fd97a06..55931385785 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/97/OSGiFrameworkLauncher.java\n@@ -92,8 +92,9 @@ public class OSGiFrameworkLauncher {\n             tracker.open(true);\n             return type.cast(tracker.waitForService(0));\n         } finally {\n-            tracker.close(); // no need to track further\n-        }\n+            tracker.close();\n+                // no need to track further }\n+         }\n     }\n \n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "95",
+                    "column": "29",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/97/OSGiFrameworkLauncher.java\nindex e919fd97a06..c648964ae8b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/97/OSGiFrameworkLauncher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/97/OSGiFrameworkLauncher.java\n@@ -92,7 +92,7 @@ public class OSGiFrameworkLauncher {\n             tracker.open(true);\n             return type.cast(tracker.waitForService(0));\n         } finally {\n-            tracker.close(); // no need to track further\n+            tracker.close();// no need to track further\n         }\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

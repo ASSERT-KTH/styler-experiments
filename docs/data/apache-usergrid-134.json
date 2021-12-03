@@ -1,0 +1,90 @@
+{
+    "project_name": "apache-usergrid",
+    "violation_id": "134",
+    "information": {
+        "violations": [
+            {
+                "line": "41",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 127).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n\n    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType,\n                             final String connectionName, final int limit, final Optional<String> query, final\n                             Optional<String> cursor ) {\n        this.applicationScope = applicationScope;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/134/ConnectionSearch.java\nindex 51f6768ff7c..67891670e57 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/134/ConnectionSearch.java\n@@ -30,17 +30,24 @@ import com.google.common.base.Optional;\n public class ConnectionSearch {\n \n     private final ApplicationScope applicationScope;\n+\n     private final Id sourceNodeId;\n+\n     private final Optional<String> entityType;\n+\n     private final String connectionName;\n+\n     private final int limit;\n+\n     private final Optional<String> query;\n+\n     private final Optional<String> cursor;\n \n \n-    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType,\n-                             final String connectionName, final int limit, final Optional<String> query, final\n-                             Optional<String> cursor ) {\n+    public ConnectionSearch(final ApplicationScope applicationScope, final Id sourceNodeId,\n+                            final Optional<String> entityType,\n+                            final String connectionName, final int limit, final Optional<String> query, final\n+                            Optional<String> cursor) {\n         this.applicationScope = applicationScope;\n         this.sourceNodeId = sourceNodeId;\n         this.entityType = entityType;\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 237).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/134/ConnectionSearch.java\nindex 51f6768ff7c..8d8e8100162 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/134/ConnectionSearch.java\n@@ -14,7 +14,6 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-\n package org.apache.usergrid.corepersistence.service;\n \n \n@@ -38,9 +37,7 @@ public class ConnectionSearch {\n     private final Optional<String> cursor;\n \n \n-    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType,\n-                             final String connectionName, final int limit, final Optional<String> query, final\n-                             Optional<String> cursor ) {\n+    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType, final String connectionName, final int limit, final Optional<String> query, final Optional<String> cursor ) {\n         this.applicationScope = applicationScope;\n         this.sourceNodeId = sourceNodeId;\n         this.entityType = entityType;\n@@ -84,4 +81,4 @@ public class ConnectionSearch {\n     public Optional<String> getEntityType() {\n         return entityType;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 237).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/134/ConnectionSearch.java\nindex 51f6768ff7c..efa9aa7e695 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/134/ConnectionSearch.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/134/ConnectionSearch.java\n@@ -20,13 +20,14 @@ package org.apache.usergrid.corepersistence.service;\n \n import org.apache.usergrid.persistence.core.scope.ApplicationScope;\n import org.apache.usergrid.persistence.model.entity.Id;\n-\n import com.google.common.base.Optional;\n \n \n /**\n  * Bean for input on searching a connection\n  */\n+\n+\n public class ConnectionSearch {\n \n     private final ApplicationScope applicationScope;\n@@ -38,9 +39,7 @@ public class ConnectionSearch {\n     private final Optional<String> cursor;\n \n \n-    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType,\n-                             final String connectionName, final int limit, final Optional<String> query, final\n-                             Optional<String> cursor ) {\n+    public ConnectionSearch( final ApplicationScope applicationScope, final Id sourceNodeId, final Optional<String> entityType, final String connectionName, final int limit, final Optional<String> query, final Optional<String> cursor ) {\n         this.applicationScope = applicationScope;\n         this.sourceNodeId = sourceNodeId;\n         this.entityType = entityType;\n@@ -84,4 +83,4 @@ public class ConnectionSearch {\n     public Optional<String> getEntityType() {\n         return entityType;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

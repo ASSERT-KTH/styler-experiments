@@ -1,0 +1,106 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "292",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.sync.receiver.load;\n\nimport org.apache.iotdb.db.concurrent.IoTDBThreadPoolFactory;\nimport org.apache.iotdb.db.concurrent.ThreadName;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/292/FileLoaderManager.java\nindex 82d24ad417a..c54dd7930f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/292/FileLoaderManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver.load;\n \n import org.apache.iotdb.db.concurrent.IoTDBThreadPoolFactory;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/292/FileLoaderManager.java\nindex 82d24ad417a..c9a78928546 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/292/FileLoaderManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver.load;\n \n import org.apache.iotdb.db.concurrent.IoTDBThreadPoolFactory;\n@@ -42,7 +43,9 @@ import java.util.concurrent.ConcurrentHashMap;\n import java.util.concurrent.ExecutorService;\n import java.util.concurrent.TimeUnit;\n \n-/** This class is to manage all FileLoader. */\n+/**\n+ * This class is to manage all FileLoader.\n+ */\n public class FileLoaderManager {\n \n   private static final Logger LOGGER = LoggerFactory.getLogger(FileLoaderManager.class);\n@@ -104,7 +107,7 @@ public class FileLoaderManager {\n   /**\n    * Check whether there have conflicts about the device owner.\n    *\n-   * @param curOwner sender name that want to be owner.\n+   * @param curOwner  sender name that want to be owner.\n    * @param deviceSet device set\n    */\n   private void checkDeviceConflict(String curOwner, Set<String> deviceSet)\n@@ -119,7 +122,7 @@ public class FileLoaderManager {\n   /**\n    * Update the device owners and deserialize.\n    *\n-   * @param curOwner sender name that want to be owner.\n+   * @param curOwner  sender name that want to be owner.\n    * @param deviceSet device set.\n    */\n   private void updateDeviceOwner(String curOwner, Set<String> deviceSet) throws IOException {\n@@ -140,7 +143,7 @@ public class FileLoaderManager {\n   private void deSerializeDeviceOwnerMap(File deviceOwnerFile)\n       throws IOException, ClassNotFoundException {\n     try (FileInputStream fis = new FileInputStream(deviceOwnerFile);\n-        ObjectInputStream deviceOwnerInput = new ObjectInputStream(fis)) {\n+         ObjectInputStream deviceOwnerInput = new ObjectInputStream(fis)) {\n       deviceOwnerMap = (Map<String, String>) deviceOwnerInput.readObject();\n     }\n   }\n@@ -153,7 +156,7 @@ public class FileLoaderManager {\n       deviceOwnerFile.createNewFile();\n     }\n     try (FileOutputStream fos = new FileOutputStream(deviceOwnerFile, false);\n-        ObjectOutputStream deviceOwnerOutput = new ObjectOutputStream(fos)) {\n+         ObjectOutputStream deviceOwnerOutput = new ObjectOutputStream(fos)) {\n       deviceOwnerOutput.writeObject(deviceOwnerMap);\n     }\n   }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "89",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "90",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "103",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 116).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "133",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "178",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/292/FileLoaderManager.java\nindex 82d24ad417a..e1ca9f07cdd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/292/FileLoaderManager.java\n@@ -24,11 +24,9 @@ import org.apache.iotdb.db.conf.IoTDBDescriptor;\n import org.apache.iotdb.db.engine.storagegroup.TsFileResource;\n import org.apache.iotdb.db.exception.SyncDeviceOwnerConflictException;\n import org.apache.iotdb.db.sync.conf.SyncConstant;\n-\n import org.apache.commons.io.FileUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.File;\n import java.io.FileInputStream;\n import java.io.FileOutputStream;\n@@ -43,20 +41,15 @@ import java.util.concurrent.ExecutorService;\n import java.util.concurrent.TimeUnit;\n \n /** This class is to manage all FileLoader. */\n+\n public class FileLoaderManager {\n \n   private static final Logger LOGGER = LoggerFactory.getLogger(FileLoaderManager.class);\n-\n   private static final int WAIT_TIMEOUT = 2000;\n-\n   private ConcurrentHashMap<String, IFileLoader> fileLoaderMap;\n-\n   private ExecutorService loadTaskRunnerPool;\n-\n   private Map<String, String> deviceOwnerMap = new HashMap<>();\n-\n   private File deviceOwnerFile;\n-\n   private File deviceOwnerTmpFile;\n \n   private FileLoaderManager() {\n@@ -92,10 +85,9 @@ public class FileLoaderManager {\n    *\n    * @param tsFileResource tsfile resource\n    */\n-  public synchronized void checkAndUpdateDeviceOwner(TsFileResource tsFileResource)\n-      throws SyncDeviceOwnerConflictException, IOException {\n-    String curOwner =\n-        tsFileResource.getTsFile().getParentFile().getParentFile().getParentFile().getName();\n+\n+  public synchronized void checkAndUpdateDeviceOwner(TsFileResource tsFileResource) throws SyncDeviceOwnerConflictException, IOException {\n+    String curOwner = tsFileResource.getTsFile().getParentFile().getParentFile().getParentFile().getName();\n     Set<String> deviceSet = tsFileResource.getDevices();\n     checkDeviceConflict(curOwner, deviceSet);\n     updateDeviceOwner(curOwner, deviceSet);\n@@ -107,8 +99,8 @@ public class FileLoaderManager {\n    * @param curOwner sender name that want to be owner.\n    * @param deviceSet device set\n    */\n-  private void checkDeviceConflict(String curOwner, Set<String> deviceSet)\n-      throws SyncDeviceOwnerConflictException {\n+\n+  private void checkDeviceConflict(String curOwner, Set<String> deviceSet) throws SyncDeviceOwnerConflictException {\n     for (String device : deviceSet) {\n       if (deviceOwnerMap.containsKey(device) && !deviceOwnerMap.get(device).equals(curOwner)) {\n         throw new SyncDeviceOwnerConflictException(device, deviceOwnerMap.get(device), curOwner);\n@@ -122,6 +114,7 @@ public class FileLoaderManager {\n    * @param curOwner sender name that want to be owner.\n    * @param deviceSet device set.\n    */\n+\n   private void updateDeviceOwner(String curOwner, Set<String> deviceSet) throws IOException {\n     boolean modify = false;\n     for (String device : deviceSet) {\n@@ -137,8 +130,7 @@ public class FileLoaderManager {\n     }\n   }\n \n-  private void deSerializeDeviceOwnerMap(File deviceOwnerFile)\n-      throws IOException, ClassNotFoundException {\n+  private void deSerializeDeviceOwnerMap(File deviceOwnerFile) throws IOException, ClassNotFoundException {\n     try (FileInputStream fis = new FileInputStream(deviceOwnerFile);\n         ObjectInputStream deviceOwnerInput = new ObjectInputStream(fis)) {\n       deviceOwnerMap = (Map<String, String>) deviceOwnerInput.readObject();\n@@ -183,8 +175,7 @@ public class FileLoaderManager {\n       fileLoaderMap = new ConcurrentHashMap<>();\n     }\n     if (loadTaskRunnerPool == null) {\n-      loadTaskRunnerPool =\n-          IoTDBThreadPoolFactory.newCachedThreadPool(ThreadName.LOAD_TSFILE.getName());\n+      loadTaskRunnerPool = IoTDBThreadPoolFactory.newCachedThreadPool(ThreadName.LOAD_TSFILE.getName());\n     }\n   }\n \n@@ -210,4 +201,4 @@ public class FileLoaderManager {\n \n     private static final FileLoaderManager INSTANCE = new FileLoaderManager();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/292/FileLoaderManager.java\nindex 82d24ad417a..c54dd7930f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/292/FileLoaderManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/292/FileLoaderManager.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.sync.receiver.load;\n \n import org.apache.iotdb.db.concurrent.IoTDBThreadPoolFactory;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "118",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "column": "42",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n@Entity\npublic class Namespace extends BaseEntity{\n\n  @Id\n  @GeneratedValue",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/118/Namespace.java\nindex 760d2bcfe4e..ba7a7d15ca4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/118/Namespace.java\nindex 760d2bcfe4e..ba7a7d15ca4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/118/Namespace.java\nindex 760d2bcfe4e..b54df38be72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n@@ -53,4 +53,4 @@ public class Namespace extends BaseEntity{\n     this.name = name;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/118/Namespace.java\nindex 760d2bcfe4e..8acc1274c92 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n@@ -52,5 +52,4 @@ public class Namespace extends BaseEntity{\n   public void setName(String name) {\n     this.name = name;\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/118/Namespace.java\nindex 760d2bcfe4e..ba7a7d15ca4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/118/Namespace.java\nindex 760d2bcfe4e..ba7a7d15ca4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/118/Namespace.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/118/Namespace.java\n@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;\n import javax.persistence.Id;\n \n @Entity\n-public class Namespace extends BaseEntity{\n+public class Namespace extends BaseEntity {\n \n   @Id\n   @GeneratedValue\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

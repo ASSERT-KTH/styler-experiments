@@ -1,0 +1,83 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * is not permitted without written permission of the KINGSTAR MEDIA SOLUTIONS LTD.\n */\npackage me.chanjar.weixin.cp.util.json;\n\nimport java.lang.reflect.Type;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/9/WxCpDepartGsonAdapter.java\nindex a999d7b2e02..54a80c8b44a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/9/WxCpDepartGsonAdapter.java\n@@ -6,6 +6,7 @@\n  * arose from modification of the original source, or other redistribution of this source\n  * is not permitted without written permission of the KINGSTAR MEDIA SOLUTIONS LTD.\n  */\n+\n package me.chanjar.weixin.cp.util.json;\n \n import java.lang.reflect.Type;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/9/WxCpDepartGsonAdapter.java\nindex a999d7b2e02..eda8817e469 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/9/WxCpDepartGsonAdapter.java\n@@ -6,6 +6,7 @@\n  * arose from modification of the original source, or other redistribution of this source\n  * is not permitted without written permission of the KINGSTAR MEDIA SOLUTIONS LTD.\n  */\n+\n package me.chanjar.weixin.cp.util.json;\n \n import java.lang.reflect.Type;\n@@ -51,7 +52,7 @@ public class WxCpDepartGsonAdapter implements JsonSerializer<WxCpDepart>, JsonDe\n \n   @Override\n   public WxCpDepart deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)\n-    throws JsonParseException {\n+      throws JsonParseException {\n     WxCpDepart depart = new WxCpDepart();\n     JsonObject departJson = json.getAsJsonObject();\n     if (departJson.get(ID) != null && !departJson.get(ID).isJsonNull()) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/9/WxCpDepartGsonAdapter.java\nindex a999d7b2e02..58ac67f205f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/9/WxCpDepartGsonAdapter.java\n@@ -6,6 +6,7 @@\n  * arose from modification of the original source, or other redistribution of this source\n  * is not permitted without written permission of the KINGSTAR MEDIA SOLUTIONS LTD.\n  */\n+\n package me.chanjar.weixin.cp.util.json;\n \n import java.lang.reflect.Type;\n@@ -69,4 +70,4 @@ public class WxCpDepartGsonAdapter implements JsonSerializer<WxCpDepart>, JsonDe\n     return depart;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/9/WxCpDepartGsonAdapter.java\nindex a999d7b2e02..552507f6cba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/9/WxCpDepartGsonAdapter.java\n@@ -9,7 +9,6 @@\n package me.chanjar.weixin.cp.util.json;\n \n import java.lang.reflect.Type;\n-\n import com.google.gson.JsonDeserializationContext;\n import com.google.gson.JsonDeserializer;\n import com.google.gson.JsonElement;\n@@ -25,6 +24,8 @@ import me.chanjar.weixin.cp.bean.WxCpDepart;\n  *\n  * @author Daniel Qian\n  */\n+\n+\n public class WxCpDepartGsonAdapter implements JsonSerializer<WxCpDepart>, JsonDeserializer<WxCpDepart> {\n   private static final String ID = \"id\";\n   private static final String NAME = \"name\";\n@@ -37,36 +38,43 @@ public class WxCpDepartGsonAdapter implements JsonSerializer<WxCpDepart>, JsonDe\n     if (group.getId() != null) {\n       json.addProperty(ID, group.getId());\n     }\n+\n     if (group.getName() != null) {\n       json.addProperty(NAME, group.getName());\n     }\n+\n     if (group.getParentId() != null) {\n       json.addProperty(PARENT_ID, group.getParentId());\n     }\n+\n     if (group.getOrder() != null) {\n       json.addProperty(ORDER, String.valueOf(group.getOrder()));\n     }\n+\n     return json;\n   }\n \n   @Override\n-  public WxCpDepart deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)\n-    throws JsonParseException {\n+  public WxCpDepart deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {\n     WxCpDepart depart = new WxCpDepart();\n     JsonObject departJson = json.getAsJsonObject();\n     if (departJson.get(ID) != null && !departJson.get(ID).isJsonNull()) {\n       depart.setId(GsonHelper.getAsLong(departJson.get(ID)));\n     }\n+\n     if (departJson.get(NAME) != null && !departJson.get(NAME).isJsonNull()) {\n       depart.setName(GsonHelper.getAsString(departJson.get(NAME)));\n     }\n+\n     if (departJson.get(ORDER) != null && !departJson.get(ORDER).isJsonNull()) {\n       depart.setOrder(GsonHelper.getAsLong(departJson.get(ORDER)));\n     }\n+\n     if (departJson.get(PARENT_ID) != null && !departJson.get(PARENT_ID).isJsonNull()) {\n       depart.setParentId(GsonHelper.getAsLong(departJson.get(PARENT_ID)));\n     }\n+\n     return depart;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/9/WxCpDepartGsonAdapter.java\nindex a999d7b2e02..54a80c8b44a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/9/WxCpDepartGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/9/WxCpDepartGsonAdapter.java\n@@ -6,6 +6,7 @@\n  * arose from modification of the original source, or other redistribution of this source\n  * is not permitted without written permission of the KINGSTAR MEDIA SOLUTIONS LTD.\n  */\n+\n package me.chanjar.weixin.cp.util.json;\n \n import java.lang.reflect.Type;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

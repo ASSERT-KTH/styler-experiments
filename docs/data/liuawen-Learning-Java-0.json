@@ -1,0 +1,95 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "0",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "import javax.validation.constraints.Min;\n\nimport org.springframework.boot.context.properties.\n                                        ConfigurationProperties;\nimport org.springframework.stereotype.Component;\nimport org.springframework.validation.annotation.Validated;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "5",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/0/OrderProps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/0/OrderProps.java\nindex 6b03fa1acf6..26e61e6b355 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/0/OrderProps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/0/OrderProps.java\n@@ -1,22 +1,23 @@\n package tacos.web;\n+\n import javax.validation.constraints.Max;\n import javax.validation.constraints.Min;\n \n import org.springframework.boot.context.properties.\n-                                        ConfigurationProperties;\n+    ConfigurationProperties;\n import org.springframework.stereotype.Component;\n import org.springframework.validation.annotation.Validated;\n \n import lombok.Data;\n \n @Component\n-@ConfigurationProperties(prefix=\"taco.orders\")\n+@ConfigurationProperties(prefix = \"taco.orders\")\n @Data\n @Validated\n public class OrderProps {\n-  \n-  @Min(value=5, message=\"must be between 5 and 25\")\n-  @Max(value=25, message=\"must be between 5 and 25\")\n-  private int pageSize = 20;\n+\n+    @Min(value = 5, message = \"must be between 5 and 25\")\n+    @Max(value = 25, message = \"must be between 5 and 25\")\n+    private int pageSize = 20;\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/0/OrderProps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/0/OrderProps.java\nindex 6b03fa1acf6..d00bbc9a90a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/0/OrderProps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/0/OrderProps.java\n@@ -2,8 +2,7 @@ package tacos.web;\n import javax.validation.constraints.Max;\n import javax.validation.constraints.Min;\n \n-import org.springframework.boot.context.properties.\n-                                        ConfigurationProperties;\n+import org.springframework.boot.context.properties.ConfigurationProperties;\n import org.springframework.stereotype.Component;\n import org.springframework.validation.annotation.Validated;\n \n@@ -19,4 +18,4 @@ public class OrderProps {\n   @Max(value=25, message=\"must be between 5 and 25\")\n   private int pageSize = 20;\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "5",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "5",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

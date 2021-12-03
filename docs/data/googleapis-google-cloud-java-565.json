@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "565",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string name = 1;</code>\n   */\n  com.google.protobuf.ByteString getNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/565/GetNoteRequestOrBuilder.java\nindex b309b243f4f..0c67fa3c606 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/565/GetNoteRequestOrBuilder.java\n@@ -29,5 +29,7 @@ public interface GetNoteRequestOrBuilder\n    *\n    * <code>string name = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/565/GetNoteRequestOrBuilder.java\nindex b309b243f4f..ade3712ff76 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/565/GetNoteRequestOrBuilder.java\n@@ -9,8 +9,6 @@ public interface GetNoteRequestOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The name of the note in the form of\n    * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.\n@@ -19,9 +17,8 @@ public interface GetNoteRequestOrBuilder\n    * <code>string name = 1;</code>\n    */\n   java.lang.String getName();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * The name of the note in the form of\n    * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/565/GetNoteRequestOrBuilder.java\nindex b309b243f4f..309936b48b5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/565/GetNoteRequestOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package io.grafeas.v1beta1;\n \n-public interface GetNoteRequestOrBuilder\n-    extends\n+public interface GetNoteRequestOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:grafeas.v1beta1.GetNoteRequest)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -19,7 +18,8 @@ public interface GetNoteRequestOrBuilder\n    * <code>string name = 1;</code>\n    */\n   java.lang.String getName();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -30,4 +30,4 @@ public interface GetNoteRequestOrBuilder\n    * <code>string name = 1;</code>\n    */\n   com.google.protobuf.ByteString getNameBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/565/GetNoteRequestOrBuilder.java\nindex b309b243f4f..34d7977378f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/565/GetNoteRequestOrBuilder.java\n@@ -29,5 +29,6 @@ public interface GetNoteRequestOrBuilder\n    *\n    * <code>string name = 1;</code>\n    */\n-  com.google.protobuf.ByteString getNameBytes();\n-}\n+  com.google.protobuf.ByteString getNameBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/565/GetNoteRequestOrBuilder.java\nindex b309b243f4f..0c67fa3c606 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/565/GetNoteRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/565/GetNoteRequestOrBuilder.java\n@@ -29,5 +29,7 @@ public interface GetNoteRequestOrBuilder\n    *\n    * <code>string name = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

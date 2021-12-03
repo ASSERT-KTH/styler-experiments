@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "22",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "column": "29",
+                "severity": "error",
+                "message": "';' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    private String jobGroup; //\u4efb\u52a1\u5206\u7ec4\n    private String jobStatus; //\u4efb\u52a1\u72b6\u6001\n    private String jobClass;//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n    private String cronExpression; // cron \u8868\u8fbe\u5f0f\n    private String jobDescription; //\u4efb\u52a1\u63cf\u8ff0\n    private String timeZoneId; // \u65f6\u533a",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/22/TaskEntity.java\nindex 133c0ec3f10..e4c9a8b2bfe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/22/TaskEntity.java\n@@ -15,7 +15,7 @@ public class TaskEntity implements Serializable {\n     private String jobName; //\u4efb\u52a1\u540d\u79f0\n     private String jobGroup; //\u4efb\u52a1\u5206\u7ec4\n     private String jobStatus; //\u4efb\u52a1\u72b6\u6001\n-    private String jobClass;//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n+    private String jobClass; //\u4efb\u52a1\u6267\u884c\u65b9\u6cd5private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String jobDescription; //\u4efb\u52a1\u63cf\u8ff0\n     private String timeZoneId; // \u65f6\u533a\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "18",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/22/TaskEntity.java\nindex 133c0ec3f10..49d05b26022 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/22/TaskEntity.java\n@@ -15,7 +15,10 @@ public class TaskEntity implements Serializable {\n     private String jobName; //\u4efb\u52a1\u540d\u79f0\n     private String jobGroup; //\u4efb\u52a1\u5206\u7ec4\n     private String jobStatus; //\u4efb\u52a1\u72b6\u6001\n-    private String jobClass;//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n+    private String jobClass;\n+\n+\n+//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n     private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String jobDescription; //\u4efb\u52a1\u63cf\u8ff0\n     private String timeZoneId; // \u65f6\u533a\n@@ -111,4 +114,4 @@ public class TaskEntity implements Serializable {\n     public void setState(String state) {\n         this.state = state;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/22/TaskEntity.java\nindex 133c0ec3f10..e4c9a8b2bfe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/22/TaskEntity.java\n@@ -15,7 +15,7 @@ public class TaskEntity implements Serializable {\n     private String jobName; //\u4efb\u52a1\u540d\u79f0\n     private String jobGroup; //\u4efb\u52a1\u5206\u7ec4\n     private String jobStatus; //\u4efb\u52a1\u72b6\u6001\n-    private String jobClass;//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n+    private String jobClass; //\u4efb\u52a1\u6267\u884c\u65b9\u6cd5private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String jobDescription; //\u4efb\u52a1\u63cf\u8ff0\n     private String timeZoneId; // \u65f6\u533a\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/22/TaskEntity.java\nindex 133c0ec3f10..c8352e9ad70 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/22/TaskEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/22/TaskEntity.java\n@@ -15,7 +15,8 @@ public class TaskEntity implements Serializable {\n     private String jobName; //\u4efb\u52a1\u540d\u79f0\n     private String jobGroup; //\u4efb\u52a1\u5206\u7ec4\n     private String jobStatus; //\u4efb\u52a1\u72b6\u6001\n-    private String jobClass;//\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n+    private String jobClass;\n+    //\u4efb\u52a1\u6267\u884c\u65b9\u6cd5\n     private String cronExpression; // cron \u8868\u8fbe\u5f0f\n     private String jobDescription; //\u4efb\u52a1\u63cf\u8ff0\n     private String timeZoneId; // \u65f6\u533a\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

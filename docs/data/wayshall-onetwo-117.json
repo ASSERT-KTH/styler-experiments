@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "117",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "column": "56",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tpublic ConsumerMeta getConsumerMeta();\n\tdefault public T convertMessage(MessageExt msg){\n\t\treturn SerializationUtils.deserialize(msg.getBody());\n\t}\n\tpublic void doConsume(T body);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/117/AppMQConsumer.java\nindex 333188afc8a..7e05388bb89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/117/AppMQConsumer.java\n@@ -7,7 +7,7 @@ import com.alibaba.rocketmq.common.message.MessageExt;\n public interface AppMQConsumer<T> {\n \n \tpublic ConsumerMeta getConsumerMeta();\n-\tdefault public T convertMessage(MessageExt msg){\n+\tdefault public T convertMessage(MessageExt msg) {\n \t\treturn SerializationUtils.deserialize(msg.getBody());\n \t}\n \tpublic void doConsume(T body);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/117/AppMQConsumer.java\nindex 333188afc8a..b488d6819a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/117/AppMQConsumer.java\n@@ -6,10 +6,12 @@ import com.alibaba.rocketmq.common.message.MessageExt;\n \n public interface AppMQConsumer<T> {\n \n-\tpublic ConsumerMeta getConsumerMeta();\n-\tdefault public T convertMessage(MessageExt msg){\n-\t\treturn SerializationUtils.deserialize(msg.getBody());\n-\t}\n-\tpublic void doConsume(T body);\n+  public ConsumerMeta getConsumerMeta();\n+\n+  default public T convertMessage(MessageExt msg) {\n+    return SerializationUtils.deserialize(msg.getBody());\n+  }\n+\n+  public void doConsume(T body);\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/117/AppMQConsumer.java\nindex 333188afc8a..7e05388bb89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/117/AppMQConsumer.java\n@@ -7,7 +7,7 @@ import com.alibaba.rocketmq.common.message.MessageExt;\n public interface AppMQConsumer<T> {\n \n \tpublic ConsumerMeta getConsumerMeta();\n-\tdefault public T convertMessage(MessageExt msg){\n+\tdefault public T convertMessage(MessageExt msg) {\n \t\treturn SerializationUtils.deserialize(msg.getBody());\n \t}\n \tpublic void doConsume(T body);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/117/AppMQConsumer.java\nindex 333188afc8a..7e05388bb89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/117/AppMQConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/117/AppMQConsumer.java\n@@ -7,7 +7,7 @@ import com.alibaba.rocketmq.common.message.MessageExt;\n public interface AppMQConsumer<T> {\n \n \tpublic ConsumerMeta getConsumerMeta();\n-\tdefault public T convertMessage(MessageExt msg){\n+\tdefault public T convertMessage(MessageExt msg) {\n \t\treturn SerializationUtils.deserialize(msg.getBody());\n \t}\n \tpublic void doConsume(T body);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "482",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n\t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n\t\t\n\t\t//Testing if some ssh key contains new line character\n\t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n\t\tfor(String sshKey: sshKeys) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\nindex 65c8ab9d6b9..1bb80496377 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n@@ -22,8 +22,8 @@ public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttr\n \n \tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n \t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n-\t\t\n-\t\t//Testing if some ssh key contains new line character\n+\n+\t\t\t//Testing if some ssh key contains new line character\n \t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n \t\tfor(String sshKey: sshKeys) {\n \t\t\tif(sshKey != null) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\nindex 65c8ab9d6b9..934ce2fd4ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n@@ -18,27 +18,35 @@ import cz.metacentrum.perun.core.implApi.modules.attributes.UserAttributesModule\n /**\n  * @author Michal \u0160\u0165ava <stavamichal@gmail.com>\n  */\n-public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttributesModuleAbstract implements UserAttributesModuleImplApi {\n+public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttributesModuleAbstract\n+    implements UserAttributesModuleImplApi {\n \n-\tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n-\t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n-\t\t\n-\t\t//Testing if some ssh key contains new line character\n-\t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n-\t\tfor(String sshKey: sshKeys) {\n-\t\t\tif(sshKey != null) {\n-\t\t\t\tif(sshKey.contains(\"\\n\")) throw new WrongAttributeValueException(attribute, user, \"One of keys in attribute contains new line character. New line character is not allowed here.\");\n-\t\t\t}\n-\t\t}\n-\t}\n+    public void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute)\n+        throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException,\n+        WrongReferenceAttributeValueException {\n+        if (attribute.getValue() == null) {\n+            throw new WrongAttributeValueException(attribute, user, \"Cant be null.\");\n+        }\n \n-\tpublic AttributeDefinition getAttributeDefinition() {\n-\t\tAttributeDefinition attr = new AttributeDefinition();\n-\t\tattr.setNamespace(AttributesManager.NS_USER_ATTR_DEF);\n-\t\tattr.setFriendlyName(\"sshPublicAdminKey\");\n-\t\tattr.setDisplayName(\"Public ssh admin key\");\n-\t\tattr.setType(ArrayList.class.getName());\n-\t\tattr.setDescription(\"User's SSH public keys used from root access.\");\n-\t\treturn attr;\n-\t}\n+        //Testing if some ssh key contains new line character\n+        List<String> sshKeys = (ArrayList<String>) attribute.getValue();\n+        for (String sshKey : sshKeys) {\n+            if (sshKey != null) {\n+                if (sshKey.contains(\"\\n\")) {\n+                    throw new WrongAttributeValueException(attribute, user,\n+                        \"One of keys in attribute contains new line character. New line character is not allowed here.\");\n+                }\n+            }\n+        }\n+    }\n+\n+    public AttributeDefinition getAttributeDefinition() {\n+        AttributeDefinition attr = new AttributeDefinition();\n+        attr.setNamespace(AttributesManager.NS_USER_ATTR_DEF);\n+        attr.setFriendlyName(\"sshPublicAdminKey\");\n+        attr.setDisplayName(\"Public ssh admin key\");\n+        attr.setType(ArrayList.class.getName());\n+        attr.setDescription(\"User's SSH public keys used from root access.\");\n+        return attr;\n+    }\n }\n",
+            "diff_size": 34
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\nindex 65c8ab9d6b9..0a44106d02d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n@@ -2,7 +2,6 @@ package cz.metacentrum.perun.core.impl.modules.attributes;\n \n import java.util.ArrayList;\n import java.util.List;\n-\n import cz.metacentrum.perun.core.api.Attribute;\n import cz.metacentrum.perun.core.api.AttributeDefinition;\n import cz.metacentrum.perun.core.api.AttributesManager;\n@@ -18,27 +17,30 @@ import cz.metacentrum.perun.core.implApi.modules.attributes.UserAttributesModule\n /**\n  * @author Michal \u0160\u0165ava <stavamichal@gmail.com>\n  */\n-public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttributesModuleAbstract implements UserAttributesModuleImplApi {\n \n-\tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n-\t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n-\t\t\n-\t\t//Testing if some ssh key contains new line character\n-\t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n-\t\tfor(String sshKey: sshKeys) {\n-\t\t\tif(sshKey != null) {\n-\t\t\t\tif(sshKey.contains(\"\\n\")) throw new WrongAttributeValueException(attribute, user, \"One of keys in attribute contains new line character. New line character is not allowed here.\");\n-\t\t\t}\n-\t\t}\n-\t}\n \n-\tpublic AttributeDefinition getAttributeDefinition() {\n-\t\tAttributeDefinition attr = new AttributeDefinition();\n-\t\tattr.setNamespace(AttributesManager.NS_USER_ATTR_DEF);\n-\t\tattr.setFriendlyName(\"sshPublicAdminKey\");\n-\t\tattr.setDisplayName(\"Public ssh admin key\");\n-\t\tattr.setType(ArrayList.class.getName());\n-\t\tattr.setDescription(\"User's SSH public keys used from root access.\");\n-\t\treturn attr;\n-\t}\n-}\n+public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttributesModuleAbstract implements UserAttributesModuleImplApi {\n+ public void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n+  if (attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user, \"Cant be null.\");\n+  \n+  //Testing if some ssh key contains new line character\n+  List<String> sshKeys = (ArrayList<String>) attribute.getValue();\n+  for (String sshKey : sshKeys) {\n+   if (sshKey != null) {\n+    if (sshKey.contains(\"\\n\")) throw new WrongAttributeValueException(attribute,\n+user,\n+\"One of keys in attribute contains new line character. New line character is not allowed here.\");\n+   }\n+  }\n+ }\n+\n+ public AttributeDefinition getAttributeDefinition() {\n+  AttributeDefinition attr = new AttributeDefinition();\n+  attr.setNamespace(AttributesManager.NS_USER_ATTR_DEF);\n+  attr.setFriendlyName(\"sshPublicAdminKey\");\n+  attr.setDisplayName(\"Public ssh admin key\");\n+  attr.setType(ArrayList.class.getName());\n+  attr.setDescription(\"User's SSH public keys used from root access.\");\n+  return attr;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\nindex 65c8ab9d6b9..1bb80496377 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n@@ -22,8 +22,8 @@ public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttr\n \n \tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n \t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n-\t\t\n-\t\t//Testing if some ssh key contains new line character\n+\n+\t\t\t//Testing if some ssh key contains new line character\n \t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n \t\tfor(String sshKey: sshKeys) {\n \t\t\tif(sshKey != null) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line matches the illegal pattern 'Wrong number of tabs before space on next line. Indent must use tab characters.'.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\nindex 65c8ab9d6b9..79ab920e088 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/482/urn_perun_user_attribute_def_def_sshPublicAdminKey.java\n@@ -21,9 +21,9 @@ import cz.metacentrum.perun.core.implApi.modules.attributes.UserAttributesModule\n public class urn_perun_user_attribute_def_def_sshPublicAdminKey extends UserAttributesModuleAbstract implements UserAttributesModuleImplApi {\n \n \tpublic void checkAttributeValue(PerunSessionImpl sess, User user, Attribute attribute) throws InternalErrorException, WrongAttributeValueException, WrongAttributeAssignmentException, WrongReferenceAttributeValueException {\n-\t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\");\n-\t\t\n-\t\t//Testing if some ssh key contains new line character\n+\t\tif(attribute.getValue() == null) throw new WrongAttributeValueException(attribute, user,\"Cant be null.\")\n+\n+  ;//Testing if some ssh key contains new line character\n \t\tList<String> sshKeys = (ArrayList<String>) attribute.getValue();\n \t\tfor(String sshKey: sshKeys) {\n \t\t\tif(sshKey != null) {\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

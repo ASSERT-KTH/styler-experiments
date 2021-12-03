@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "24",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 136).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n/**\n * Sparse double matrix that is represented by a group of component sparse double long key vector  {@link CompSparseDoubleLongKeyVector}\n */\npublic class CompSparseDoubleLongKeyMatrix extends DoubleLongKeyMatrix {\n  /**",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/27/CompSparseDoubleLongKeyMatrix.java\nindex d7cbbc7e720..0a9a9e13716 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/27/CompSparseDoubleLongKeyMatrix.java\n@@ -24,17 +24,18 @@ import com.tencent.angel.ml.math.vector.CompSparseDoubleLongKeyVector;\n  * Sparse double matrix that is represented by a group of component sparse double long key vector  {@link CompSparseDoubleLongKeyVector}\n  */\n public class CompSparseDoubleLongKeyMatrix extends DoubleLongKeyMatrix {\n-  /**\n-   * Create a CompSparseDoubleLongKeyMatrix\n-   *\n-   * @param row row number\n-   * @param col row vector dimension\n-   */\n-  public CompSparseDoubleLongKeyMatrix(int row, long col) {\n-    super(row, col);\n-  }\n+    /**\n+     * Create a CompSparseDoubleLongKeyMatrix\n+     *\n+     * @param row row number\n+     * @param col row vector dimension\n+     */\n+    public CompSparseDoubleLongKeyMatrix(int row, long col) {\n+        super(row, col);\n+    }\n \n-  @Override public TVector initVector(int rowIndex) {\n-    return new CompSparseDoubleLongKeyVector(matrixId, rowIndex, col);\n-  }\n+    @Override\n+    public TVector initVector(int rowIndex) {\n+        return new CompSparseDoubleLongKeyVector(matrixId, rowIndex, col);\n+    }\n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/27/CompSparseDoubleLongKeyMatrix.java\nindex d7cbbc7e720..3d02022640d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/27/CompSparseDoubleLongKeyMatrix.java\n@@ -34,7 +34,8 @@ public class CompSparseDoubleLongKeyMatrix extends DoubleLongKeyMatrix {\n     super(row, col);\n   }\n \n-  @Override public TVector initVector(int rowIndex) {\n+  @Override\n+public TVector initVector(int rowIndex) {\n     return new CompSparseDoubleLongKeyVector(matrixId, rowIndex, col);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/27/CompSparseDoubleLongKeyMatrix.java\nindex d7cbbc7e720..dbefe655d79 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/27/CompSparseDoubleLongKeyMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/27/CompSparseDoubleLongKeyMatrix.java\n@@ -23,6 +23,7 @@ import com.tencent.angel.ml.math.vector.CompSparseDoubleLongKeyVector;\n /**\n  * Sparse double matrix that is represented by a group of component sparse double long key vector  {@link CompSparseDoubleLongKeyVector}\n  */\n+\n public class CompSparseDoubleLongKeyMatrix extends DoubleLongKeyMatrix {\n   /**\n    * Create a CompSparseDoubleLongKeyMatrix\n@@ -30,11 +31,13 @@ public class CompSparseDoubleLongKeyMatrix extends DoubleLongKeyMatrix {\n    * @param row row number\n    * @param col row vector dimension\n    */\n+\n   public CompSparseDoubleLongKeyMatrix(int row, long col) {\n     super(row, col);\n   }\n \n-  @Override public TVector initVector(int rowIndex) {\n+  @Override\n+  public TVector initVector(int rowIndex) {\n     return new CompSparseDoubleLongKeyVector(matrixId, rowIndex, col);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

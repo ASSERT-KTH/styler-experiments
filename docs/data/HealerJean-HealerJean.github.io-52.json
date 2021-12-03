@@ -1,0 +1,63 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "52",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "58",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "@Entity\n@Table(name = \"sys_auth_role_admin_user\")\npublic class SysAuthRoleAdminUser implements Serializable{\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/52/SysAuthRoleAdminUser.java\nindex 9409ebbe000..9bd2377180e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/52/SysAuthRoleAdminUser.java\n@@ -1,6 +1,6 @@\n @Entity\n @Table(name = \"sys_auth_role_admin_user\")\n-public class SysAuthRoleAdminUser implements Serializable{\n+public class SysAuthRoleAdminUser implements Serializable {\n \n     @Id\n     @GeneratedValue(strategy = GenerationType.IDENTITY)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/52/SysAuthRoleAdminUser.java\nindex 9409ebbe000..9bd2377180e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/52/SysAuthRoleAdminUser.java\n@@ -1,6 +1,6 @@\n @Entity\n @Table(name = \"sys_auth_role_admin_user\")\n-public class SysAuthRoleAdminUser implements Serializable{\n+public class SysAuthRoleAdminUser implements Serializable {\n \n     @Id\n     @GeneratedValue(strategy = GenerationType.IDENTITY)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/52/SysAuthRoleAdminUser.java\nindex 9409ebbe000..91b37bd70a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/52/SysAuthRoleAdminUser.java\n@@ -1,6 +1,6 @@\n @Entity\n @Table(name = \"sys_auth_role_admin_user\")\n-public class SysAuthRoleAdminUser implements Serializable{\n+public class SysAuthRoleAdminUser implements Serializable {\n \n     @Id\n     @GeneratedValue(strategy = GenerationType.IDENTITY)\n@@ -39,4 +39,4 @@ public class SysAuthRoleAdminUser implements Serializable{\n     public void setAdmId(Long admId) {\n         this.admId = admId;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/52/SysAuthRoleAdminUser.java\nindex 9409ebbe000..9bd2377180e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/52/SysAuthRoleAdminUser.java\n@@ -1,6 +1,6 @@\n @Entity\n @Table(name = \"sys_auth_role_admin_user\")\n-public class SysAuthRoleAdminUser implements Serializable{\n+public class SysAuthRoleAdminUser implements Serializable {\n \n     @Id\n     @GeneratedValue(strategy = GenerationType.IDENTITY)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/52/SysAuthRoleAdminUser.java\nindex 9409ebbe000..9bd2377180e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/52/SysAuthRoleAdminUser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/52/SysAuthRoleAdminUser.java\n@@ -1,6 +1,6 @@\n @Entity\n @Table(name = \"sys_auth_role_admin_user\")\n-public class SysAuthRoleAdminUser implements Serializable{\n+public class SysAuthRoleAdminUser implements Serializable {\n \n     @Id\n     @GeneratedValue(strategy = GenerationType.IDENTITY)\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

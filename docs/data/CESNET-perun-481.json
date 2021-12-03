@@ -1,0 +1,82 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "481",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/**\n * Checked version of InvalidEventMessageException.\n * \n * @author Michal Karm Babacek\n */\npublic class InvalidEventMessageException extends EngineException {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "5",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/481/InvalidEventMessageException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/481/InvalidEventMessageException.java\nindex 5c5b1c3171e..ab11e1e8201 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/481/InvalidEventMessageException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/481/InvalidEventMessageException.java\n@@ -2,22 +2,22 @@ package cz.metacentrum.perun.engine.exceptions;\n \n /**\n  * Checked version of InvalidEventMessageException.\n- * \n+ *\n  * @author Michal Karm Babacek\n  */\n public class InvalidEventMessageException extends EngineException {\n \n-\tprivate static final long serialVersionUID = 1L;\n+    private static final long serialVersionUID = 1L;\n \n-\tpublic InvalidEventMessageException(String message) {\n-\t\tsuper(message);\n-\t}\n+    public InvalidEventMessageException(String message) {\n+        super(message);\n+    }\n \n-\tpublic InvalidEventMessageException(String message, Throwable cause) {\n-\t\tsuper(message, cause);\n-\t}\n+    public InvalidEventMessageException(String message, Throwable cause) {\n+        super(message, cause);\n+    }\n \n-\tpublic InvalidEventMessageException(Throwable cause) {\n-\t\tsuper(cause);\n-\t}\n+    public InvalidEventMessageException(Throwable cause) {\n+        super(cause);\n+    }\n }\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "5",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/481/InvalidEventMessageException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/481/InvalidEventMessageException.java\nindex 5c5b1c3171e..77af68bc314 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/481/InvalidEventMessageException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/481/InvalidEventMessageException.java\n@@ -5,19 +5,23 @@ package cz.metacentrum.perun.engine.exceptions;\n  * \n  * @author Michal Karm Babacek\n  */\n+\n+\n public class InvalidEventMessageException extends EngineException {\n \n-\tprivate static final long serialVersionUID = 1L;\n \n-\tpublic InvalidEventMessageException(String message) {\n-\t\tsuper(message);\n-\t}\n+ private static final long serialVersionUID = 1L;\n+\n+\n+ public InvalidEventMessageException(String message) {\n+  super(message);\n+ }\n \n-\tpublic InvalidEventMessageException(String message, Throwable cause) {\n-\t\tsuper(message, cause);\n-\t}\n+ public InvalidEventMessageException(String message, Throwable cause) {\n+  super(message, cause);\n+ }\n \n-\tpublic InvalidEventMessageException(Throwable cause) {\n-\t\tsuper(cause);\n-\t}\n-}\n+ public InvalidEventMessageException(Throwable cause) {\n+  super(cause);\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "5",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

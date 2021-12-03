@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "455",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SelectionChangeListener extends EventListener {\n\t/**\n\t * Receives a selection change event. This method may be assumed to execute in\n\t * the GUI thread.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/455/SelectionChangeListener.java\nindex 64402b77cd0..59e7288437c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/455/SelectionChangeListener.java\n@@ -33,11 +33,11 @@ import java.util.EventListener;\n  * @version $Id: $Id\n  */\n public interface SelectionChangeListener extends EventListener {\n-\t/**\n+/**\n \t * Receives a selection change event. This method may be assumed to execute in\n \t * the GUI thread.\n \t *\n \t * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n \t */\n-\tvoid selectionChanged(SelectionChangeEvent event);\n+ void selectionChanged(SelectionChangeEvent event);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/455/SelectionChangeListener.java\nindex 64402b77cd0..942f0aa745c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/455/SelectionChangeListener.java\n@@ -29,15 +29,15 @@ import java.util.EventListener;\n  * Receives selection change events.\n  *\n  * @author J. H. S.\n- * @see org.loboevolution.html.gui.HtmlPanel#addSelectionChangeListener(SelectionChangeListener)\n  * @version $Id: $Id\n+ * @see org.loboevolution.html.gui.HtmlPanel#addSelectionChangeListener(SelectionChangeListener)\n  */\n public interface SelectionChangeListener extends EventListener {\n-\t/**\n-\t * Receives a selection change event. This method may be assumed to execute in\n-\t * the GUI thread.\n-\t *\n-\t * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n-\t */\n-\tvoid selectionChanged(SelectionChangeEvent event);\n+    /**\n+     * Receives a selection change event. This method may be assumed to execute in\n+     * the GUI thread.\n+     *\n+     * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n+     */\n+    void selectionChanged(SelectionChangeEvent event);\n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/455/SelectionChangeListener.java\nindex 64402b77cd0..9bbd93d830b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/455/SelectionChangeListener.java\n@@ -32,12 +32,16 @@ import java.util.EventListener;\n  * @see org.loboevolution.html.gui.HtmlPanel#addSelectionChangeListener(SelectionChangeListener)\n  * @version $Id: $Id\n  */\n+\n+\n public interface SelectionChangeListener extends EventListener {\n-\t/**\n-\t * Receives a selection change event. This method may be assumed to execute in\n-\t * the GUI thread.\n-\t *\n-\t * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n-\t */\n-\tvoid selectionChanged(SelectionChangeEvent event);\n-}\n+    /**\n+     * Receives a selection change event. This method may be assumed to execute in\n+     * the GUI thread.\n+     *\n+     * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n+     */\n+\n+\n+    void selectionChanged(SelectionChangeEvent event);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/455/SelectionChangeListener.java\nindex 64402b77cd0..59e7288437c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/455/SelectionChangeListener.java\n@@ -33,11 +33,11 @@ import java.util.EventListener;\n  * @version $Id: $Id\n  */\n public interface SelectionChangeListener extends EventListener {\n-\t/**\n+/**\n \t * Receives a selection change event. This method may be assumed to execute in\n \t * the GUI thread.\n \t *\n \t * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n \t */\n-\tvoid selectionChanged(SelectionChangeEvent event);\n+ void selectionChanged(SelectionChangeEvent event);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/455/SelectionChangeListener.java\nindex 64402b77cd0..129b4eaf5ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/455/SelectionChangeListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/455/SelectionChangeListener.java\n@@ -33,11 +33,11 @@ import java.util.EventListener;\n  * @version $Id: $Id\n  */\n public interface SelectionChangeListener extends EventListener {\n-\t/**\n+    /**\n \t * Receives a selection change event. This method may be assumed to execute in\n \t * the GUI thread.\n \t *\n \t * @param event A {@link org.loboevolution.html.gui.SelectionChangeEvent} instance.\n \t */\n-\tvoid selectionChanged(SelectionChangeEvent event);\n+ void selectionChanged(SelectionChangeEvent event);\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "413",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGFEDistantLightElement extends SVGElement {\n\t/**\n\t * <p>getAzimuth.</p>\n\t *\n\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/413/SVGFEDistantLightElement.java\nindex d907138b17a..3f0c6556f93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/413/SVGFEDistantLightElement.java\n@@ -26,12 +26,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGFEDistantLightElement extends SVGElement {\n-\t/**\n+/**\n \t * <p>getAzimuth.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n \t */\n-\tSVGAnimatedNumber getAzimuth();\n+ SVGAnimatedNumber getAzimuth();\n \n \t/**\n \t * <p>getElevation.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/413/SVGFEDistantLightElement.java\nindex d907138b17a..c4c45b46a91 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/413/SVGFEDistantLightElement.java\n@@ -17,26 +17,24 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGFEDistantLightElement interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGFEDistantLightElement extends SVGElement {\n-\t/**\n-\t * <p>getAzimuth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n-\t */\n-\tSVGAnimatedNumber getAzimuth();\n+    /**\n+     * <p>getAzimuth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n+     */\n+    SVGAnimatedNumber getAzimuth();\n \n-\t/**\n-\t * <p>getElevation.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n-\t */\n-\tSVGAnimatedNumber getElevation();\n+    /**\n+     * <p>getElevation.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n+     */\n+    SVGAnimatedNumber getElevation();\n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/413/SVGFEDistantLightElement.java\nindex d907138b17a..30ed25f01f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/413/SVGFEDistantLightElement.java\n@@ -25,18 +25,24 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n+\n+\n public interface SVGFEDistantLightElement extends SVGElement {\n-\t/**\n-\t * <p>getAzimuth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n-\t */\n-\tSVGAnimatedNumber getAzimuth();\n-\n-\t/**\n-\t * <p>getElevation.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n-\t */\n-\tSVGAnimatedNumber getElevation();\n-}\n+    /**\n+     * <p>getAzimuth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n+     */\n+\n+\n+    SVGAnimatedNumber getAzimuth();\n+\n+    /**\n+     * <p>getElevation.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n+     */\n+\n+\n+    SVGAnimatedNumber getElevation();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/413/SVGFEDistantLightElement.java\nindex d907138b17a..3f0c6556f93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/413/SVGFEDistantLightElement.java\n@@ -26,12 +26,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGFEDistantLightElement extends SVGElement {\n-\t/**\n+/**\n \t * <p>getAzimuth.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n \t */\n-\tSVGAnimatedNumber getAzimuth();\n+ SVGAnimatedNumber getAzimuth();\n \n \t/**\n \t * <p>getElevation.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/413/SVGFEDistantLightElement.java\nindex d907138b17a..36883b7c083 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/413/SVGFEDistantLightElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/413/SVGFEDistantLightElement.java\n@@ -26,12 +26,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGFEDistantLightElement extends SVGElement {\n-\t/**\n+    /**\n \t * <p>getAzimuth.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedNumber} object.\n \t */\n-\tSVGAnimatedNumber getAzimuth();\n+ SVGAnimatedNumber getAzimuth();\n \n \t/**\n \t * <p>getElevation.</p>\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

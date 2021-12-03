@@ -1,0 +1,107 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "46",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.strategy.optimizer;\n\nimport org.apache.iotdb.db.exception.query.LogicalOperatorException;\nimport org.apache.iotdb.db.exception.query.LogicalOptimizeException;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/46/RemoveNotOptimizer.java\nindex 099bcd9af33..6c822bc4833 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/46/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/46/RemoveNotOptimizer.java\nindex 099bcd9af33..6c822bc4833 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/46/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "63",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 118).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 118).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/46/RemoveNotOptimizer.java\nindex 099bcd9af33..1d989107a60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/46/RemoveNotOptimizer.java\n@@ -24,7 +24,6 @@ import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.constant.SQLConstant;\n import org.apache.iotdb.db.qp.logical.crud.FilterOperator;\n import org.apache.iotdb.db.qp.logical.crud.FunctionOperator;\n-\n import java.util.List;\n import java.util.Set;\n \n@@ -41,6 +40,7 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n    * @return optimized operator\n    * @throws LogicalOperatorException exception in RemoveNot optimizing\n    */\n+\n   @Override\n   public FilterOperator optimize(FilterOperator filter) throws LogicalOperatorException {\n     Set<PartialPath> pathSet = filter.getPathSet();\n@@ -60,20 +60,19 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n         // replace children in-place for efficiency\n         List<FilterOperator> children = filter.getChildren();\n         if (children.size() < 2) {\n-          throw new LogicalOptimizeException(\n-              \"Filter has some time series don't correspond to any known time series\");\n+          throw new LogicalOptimizeException(\"Filter has some time series don't correspond to any known time series\");\n         }\n         children.set(0, removeNot(children.get(0)));\n         children.set(1, removeNot(children.get(1)));\n         return filter;\n       case KW_NOT:\n         if (filter.getChildren().size() < 1) {\n-          throw new LogicalOptimizeException(\n-              \"Filter has some time series don't correspond to any known time series\");\n+          throw new LogicalOptimizeException(\"Filter has some time series don't correspond to any known time series\");\n         }\n         return reverseFilter(filter.getChildren().get(0));\n       default:\n-        throw new LogicalOptimizeException(\"removeNot\", tokenInt);\n+        throw new LogicalOptimizeException(\n+\"removeNot\", tokenInt);\n     }\n   }\n \n@@ -84,12 +83,14 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n    * @return FilterOperator reversed BasicFunctionOperator\n    * @throws LogicalOptimizeException exception in reverse filter\n    */\n+\n   private FilterOperator reverseFilter(FilterOperator filter) throws LogicalOperatorException {\n     int tokenInt = filter.getTokenIntType();\n     if (filter.isLeaf()) {\n       ((FunctionOperator) filter).reverseFunc();\n       return filter;\n     }\n+\n     switch (tokenInt) {\n       case KW_AND:\n       case KW_OR:\n@@ -101,7 +102,8 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n       case KW_NOT:\n         return removeNot(filter.getChildren().get(0));\n       default:\n-        throw new LogicalOptimizeException(\"reverseFilter\", tokenInt);\n+        throw new LogicalOptimizeException(\n+\"reverseFilter\", tokenInt);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "70",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/46/RemoveNotOptimizer.java\nindex 099bcd9af33..1b271ba2fc5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/46/RemoveNotOptimizer.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.strategy.optimizer;\n+package org.apache.iotdb.db.qp.strategy.optimizer\n \n-import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n+; import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.constant.SQLConstant;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/46/RemoveNotOptimizer.java\nindex 099bcd9af33..6c822bc4833 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/46/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/46/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

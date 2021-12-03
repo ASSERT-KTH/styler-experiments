@@ -1,0 +1,71 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "package com.itheima.annotation;\nimport org.springframework.context.ApplicationContext;\nimport \n   org.springframework.context.support.ClassPathXmlApplicationContext;\npublic class AnnotationAssembleTest {\n\tpublic static void main(String[] args) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/13/AnnotationAssembleTest.java\nindex c0d8ec76662..55358d6e3dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/13/AnnotationAssembleTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.annotation;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-   org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class AnnotationAssembleTest {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/13/AnnotationAssembleTest.java\nindex c0d8ec76662..18fbbc12f04 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/13/AnnotationAssembleTest.java\n@@ -1,18 +1,20 @@\n package com.itheima.annotation;\r\n+\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-   org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import\r\n+    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+\r\n public class AnnotationAssembleTest {\r\n-\tpublic static void main(String[] args) {\r\n-\t\t// \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n-\t\tString xmlPath = \"com/itheima/annotation/beans6.xml\";\r\n-\t\t// \u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n-\t\tApplicationContext applicationContext = \r\n-\t\t\t\tnew ClassPathXmlApplicationContext(xmlPath);\r\n-\t\t// \u83b7\u53d6UserController\u5b9e\u4f8b\r\n-\t\tUserController userController = \r\n-\t\t  (UserController) applicationContext.getBean(\"userController\");\r\n-\t\t// \u8c03\u7528UserController\u4e2d\u7684save()\u65b9\u6cd5\r\n-\t\tuserController.save();\r\n-\t}\r\n+    public static void main(String[] args) {\r\n+        // \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n+        String xmlPath = \"com/itheima/annotation/beans6.xml\";\r\n+        // \u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(xmlPath);\r\n+        // \u83b7\u53d6UserController\u5b9e\u4f8b\r\n+        UserController userController =\r\n+            (UserController) applicationContext.getBean(\"userController\");\r\n+        // \u8c03\u7528UserController\u4e2d\u7684save()\u65b9\u6cd5\r\n+        userController.save();\r\n+    }\r\n }  \r\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/13/AnnotationAssembleTest.java\nindex c0d8ec76662..beb32126a04 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/13/AnnotationAssembleTest.java\n@@ -1,18 +1,17 @@\n package com.itheima.annotation;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-   org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\n+\n public class AnnotationAssembleTest {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n \t\tString xmlPath = \"com/itheima/annotation/beans6.xml\";\r\n \t\t// \u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n-\t\tApplicationContext applicationContext = \r\n-\t\t\t\tnew ClassPathXmlApplicationContext(xmlPath);\r\n+\t\tApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);\r\n \t\t// \u83b7\u53d6UserController\u5b9e\u4f8b\r\n \t\tUserController userController = \r\n-\t\t  (UserController) applicationContext.getBean(\"userController\");\r\n-\t\t// \u8c03\u7528UserController\u4e2d\u7684save()\u65b9\u6cd5\r\n+\t\t  (UserController) applicationContext.getBean(\"userController\");\n+// \u8c03\u7528UserController\u4e2d\u7684save()\u65b9\u6cd5\r\n \t\tuserController.save();\r\n \t}\r\n-}  \r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/13/AnnotationAssembleTest.java\nindex c0d8ec76662..55358d6e3dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/13/AnnotationAssembleTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.annotation;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-   org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class AnnotationAssembleTest {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/13/AnnotationAssembleTest.java\nindex c0d8ec76662..55358d6e3dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/13/AnnotationAssembleTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/13/AnnotationAssembleTest.java\n@@ -1,7 +1,6 @@\n package com.itheima.annotation;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-   org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class AnnotationAssembleTest {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u5b9a\u4e49\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

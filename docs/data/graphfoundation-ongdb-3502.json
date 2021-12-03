@@ -1,0 +1,110 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "3502",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "40",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "40",
+                    "column": "64",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3502/ManagementApiModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3502/ManagementApiModule.java\nindex 46f1c5c218b..910a81f705c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3502/ManagementApiModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/3502/ManagementApiModule.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.server.modules;\n \n import java.net.URI;\n@@ -33,39 +34,39 @@ import static java.util.Arrays.asList;\n \n public class ManagementApiModule implements ServerModule\n {\n-    private final Config config;\n-    private final WebServer webServer;\n+  private final Config config;\n+  private final WebServer webServer;\n \n-    public ManagementApiModule( WebServer webServer, Config config )\n-    {\n-        this.webServer = webServer;\n-        this.config = config;\n-    }\n+  public ManagementApiModule(WebServer webServer, Config config)\n+  {\n+    this.webServer = webServer;\n+    this.config = config;\n+  }\n \n-    @Override\n-    public void start()\n-    {\n-        String serverMountPoint = managementApiUri().toString();\n-        webServer.addJAXRSClasses( getClassNames(), serverMountPoint, null );\n-    }\n+  @Override\n+  public void start()\n+  {\n+    String serverMountPoint = managementApiUri().toString();\n+    webServer.addJAXRSClasses(getClassNames(), serverMountPoint, null);\n+  }\n \n-    private List<String> getClassNames()\n-    {\n-        return asList(\n-                JmxService.class.getName(),\n-                RootService.class.getName(),\n-                VersionAndEditionService.class.getName() );\n-    }\n+  private List<String> getClassNames()\n+  {\n+    return asList(\n+        JmxService.class.getName(),\n+        RootService.class.getName(),\n+        VersionAndEditionService.class.getName());\n+  }\n \n-    @Override\n-    public void stop()\n-    {\n-        webServer.removeJAXRSClasses( getClassNames(),\n-                managementApiUri(  ).toString() );\n-    }\n+  @Override\n+  public void stop()\n+  {\n+    webServer.removeJAXRSClasses(getClassNames(),\n+        managementApiUri().toString());\n+  }\n \n-    private URI managementApiUri( )\n-    {\n-        return config.get( ServerSettings.management_api_path );\n-    }\n+  private URI managementApiUri()\n+  {\n+    return config.get(ServerSettings.management_api_path);\n+  }\n }\n",
+            "diff_size": 31
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3502/ManagementApiModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3502/ManagementApiModule.java\nindex 46f1c5c218b..dbbbca7163a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/3502/ManagementApiModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/3502/ManagementApiModule.java\n@@ -51,21 +51,18 @@ public class ManagementApiModule implements ServerModule\n \n     private List<String> getClassNames()\n     {\n-        return asList(\n-                JmxService.class.getName(),\n-                RootService.class.getName(),\n-                VersionAndEditionService.class.getName() );\n+        return asList( JmxService.class.getName(), RootService.class.getName(), VersionAndEditionService.class.getName() );\n     }\n \n     @Override\n     public void stop()\n     {\n         webServer.removeJAXRSClasses( getClassNames(),\n-                managementApiUri(  ).toString() );\n+                managementApiUri().toString() );\n     }\n \n     private URI managementApiUri( )\n     {\n         return config.get( ServerSettings.management_api_path );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

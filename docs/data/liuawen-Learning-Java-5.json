@@ -1,0 +1,95 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "5",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "\nimport org.springframework.security.core.GrantedAuthority;\nimport org.springframework.security.core.authority.\n                                          SimpleGrantedAuthority;\nimport org.springframework.security.core.userdetails.UserDetails;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/5/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/5/User.java\nindex 20e6d17b113..9ae9ab5343d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/5/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/5/User.java\n@@ -1,4 +1,5 @@\n package tacos;\n+\n import java.util.Arrays;\n import java.util.Collection;\n \n@@ -9,7 +10,7 @@ import javax.persistence.Id;\n \n import org.springframework.security.core.GrantedAuthority;\n import org.springframework.security.core.authority.\n-                                          SimpleGrantedAuthority;\n+    SimpleGrantedAuthority;\n import org.springframework.security.core.userdetails.UserDetails;\n \n import lombok.AccessLevel;\n@@ -19,50 +20,50 @@ import lombok.RequiredArgsConstructor;\n \n @Entity\n @Data\n-@NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)\n+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)\n @RequiredArgsConstructor\n public class User implements UserDetails {\n \n-  private static final long serialVersionUID = 1L;\n+    private static final long serialVersionUID = 1L;\n+\n+    @Id\n+    @GeneratedValue(strategy = GenerationType.AUTO)\n+    private Long id;\n+\n+    private final String username;\n+\n+    private final String password;\n+    private final String fullname;\n+    private final String street;\n+    private final String city;\n+    private final String state;\n+    private final String zip;\n+    private final String phoneNumber;\n+    private final String email;\n \n-  @Id\n-  @GeneratedValue(strategy=GenerationType.AUTO)\n-  private Long id;\n-  \n-  private final String username;\n-  \n-  private final String password;\n-  private final String fullname;\n-  private final String street;\n-  private final String city;\n-  private final String state;\n-  private final String zip;\n-  private final String phoneNumber;\n-  private final String email;\n-  \n-  @Override\n-  public Collection<? extends GrantedAuthority> getAuthorities() {\n-    return Arrays.asList(new SimpleGrantedAuthority(\"ROLE_USER\"));\n-  }\n+    @Override\n+    public Collection<? extends GrantedAuthority> getAuthorities() {\n+        return Arrays.asList(new SimpleGrantedAuthority(\"ROLE_USER\"));\n+    }\n \n-  @Override\n-  public boolean isAccountNonExpired() {\n-    return true;\n-  }\n+    @Override\n+    public boolean isAccountNonExpired() {\n+        return true;\n+    }\n \n-  @Override\n-  public boolean isAccountNonLocked() {\n-    return true;\n-  }\n+    @Override\n+    public boolean isAccountNonLocked() {\n+        return true;\n+    }\n \n-  @Override\n-  public boolean isCredentialsNonExpired() {\n-    return true;\n-  }\n+    @Override\n+    public boolean isCredentialsNonExpired() {\n+        return true;\n+    }\n \n-  @Override\n-  public boolean isEnabled() {\n-    return true;\n-  }\n+    @Override\n+    public boolean isEnabled() {\n+        return true;\n+    }\n \n }\n",
+            "diff_size": 54
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/5/User.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/5/User.java\nindex 20e6d17b113..4e9ac7cab81 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/5/User.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/5/User.java\n@@ -8,8 +8,7 @@ import javax.persistence.GenerationType;\n import javax.persistence.Id;\n \n import org.springframework.security.core.GrantedAuthority;\n-import org.springframework.security.core.authority.\n-                                          SimpleGrantedAuthority;\n+import org.springframework.security.core.authority.SimpleGrantedAuthority;\n import org.springframework.security.core.userdetails.UserDetails;\n \n import lombok.AccessLevel;\n@@ -65,4 +64,4 @@ public class User implements UserDetails {\n     return true;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

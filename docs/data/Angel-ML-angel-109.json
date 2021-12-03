@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "109",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/109/MultiGradPair.java\nindex 80216c34344..c1d16b9001e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/109/MultiGradPair.java\n@@ -26,181 +26,181 @@ import java.util.Arrays;\n \n public class MultiGradPair implements GradPair, Serializable {\n \n-  private double[] grad;\n-  private double[] hess;\n-\n-  public MultiGradPair(int numClass, boolean fullHessian) {\n-    this.grad = new double[numClass];\n-    if (fullHessian) {\n-      this.hess = new double[(numClass * (numClass + 1)) >> 1];\n-    } else {\n-      this.hess = new double[numClass];\n-    }\n-  }\n-\n-  public MultiGradPair(double[] grad, double[] hess) {\n-    this.grad = grad;\n-    this.hess = hess;\n-  }\n-\n-  @Override\n-  public void plusBy(GradPair gradPair) {\n-    double[] grad = ((MultiGradPair) gradPair).grad;\n-    double[] hess = ((MultiGradPair) gradPair).hess;\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] += grad[i];\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] += hess[i];\n-    }\n-  }\n-\n-  public void plusBy(double[] grad, double[] hess) {\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] += grad[i];\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] += hess[i];\n-    }\n-  }\n-\n-  @Override\n-  public void subtractBy(GradPair gradPair) {\n-    double[] grad = ((MultiGradPair) gradPair).grad;\n-    double[] hess = ((MultiGradPair) gradPair).hess;\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] -= grad[i];\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] -= hess[i];\n-    }\n-  }\n-\n-  public void subtractBy(double[] grad, double[] hess) {\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] -= grad[i];\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] -= hess[i];\n-    }\n-  }\n-\n-  @Override\n-  public GradPair plus(GradPair gradPair) {\n-    GradPair res = this.copy();\n-    res.plusBy(gradPair);\n-    return res;\n-  }\n-\n-  public GradPair plus(double[] grad, double[] hess) {\n-    MultiGradPair res = this.copy();\n-    res.plusBy(grad, hess);\n-    return res;\n-  }\n-\n-  @Override\n-  public GradPair subtract(GradPair gradPair) {\n-    GradPair res = this.copy();\n-    res.subtractBy(gradPair);\n-    return res;\n-  }\n-\n-  public GradPair subtract(double[] grad, double[] hess) {\n-    MultiGradPair res = this.copy();\n-    res.plusBy(grad, hess);\n-    return res;\n-  }\n-\n-  @Override\n-  public void timesBy(double x) {\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] *= x;\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] *= x;\n-    }\n-  }\n-\n-  @Override\n-  public float calcGain(GBDTParam param) {\n-    return (float) param.calcGain(grad, hess);\n-  }\n-\n-  public float[] calcWeights(GBDTParam param) {\n-    //return param.calcWeights(grad, hess);\n-    return Maths.doubleArrayToFloatArray(param.calcWeights(grad, hess));\n-  }\n-\n-  @Override\n-  public boolean satisfyWeight(GBDTParam param) {\n-    return param.satisfyWeight(hess);\n-  }\n-\n-  @Override\n-  public MultiGradPair copy() {\n-    return new MultiGradPair(grad.clone(), hess.clone());\n-  }\n-\n-  public double[] getGrad() {\n-    return grad;\n-  }\n-\n-  public double[] getHess() {\n-    return hess;\n-  }\n-\n-  public void setGrad(double[] grad) {\n-    this.grad = grad;\n-  }\n-\n-  public void setHess(double[] hess) {\n-    this.hess = hess;\n-  }\n-\n-  public void set(double[] grad, double[] hess) {\n-    this.grad = grad;\n-    this.hess = hess;\n-  }\n-\n-  public void set(double[] grad, double[] hess, int offset) {\n-    // numClass is usually small, so we do not use arraycopy here\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] = grad[i + offset];\n-      this.hess[i] = hess[i + offset];\n-    }\n-  }\n-\n-  public void set(double[] grad, int gradOffset, double[] hess, int hessOffset) {\n-    // numClass is usually small, so we do not use arraycopy here\n-    for (int i = 0; i < this.grad.length; i++) {\n-      this.grad[i] = grad[i + gradOffset];\n-    }\n-    for (int i = 0; i < this.hess.length; i++) {\n-      this.hess[i] = hess[i + hessOffset];\n-    }\n-  }\n-\n-  @Override\n-  public String toString() {\n-    String gradStr = Arrays.toString(grad);\n-    if (grad.length == hess.length) {\n-      return \"(\" + gradStr + \", diag{\" + Arrays.toString(hess) + \"})\";\n-    } else {\n-      int rowSize = 1, offset = 0;\n-      StringBuilder hessSB = new StringBuilder(\"[\");\n-      while (rowSize <= grad.length) {\n-        hessSB.append(\"[\");\n-        hessSB.append(hess[offset]);\n-        for (int i = 1; i < rowSize; i++) {\n-          hessSB.append(\", \");\n-          hessSB.append(hess[offset + i]);\n+    private double[] grad;\n+    private double[] hess;\n+\n+    public MultiGradPair(int numClass, boolean fullHessian) {\n+        this.grad = new double[numClass];\n+        if (fullHessian) {\n+            this.hess = new double[(numClass * (numClass + 1)) >> 1];\n+        } else {\n+            this.hess = new double[numClass];\n         }\n-        hessSB.append(\"]\");\n-        offset += rowSize;\n-        rowSize++;\n-      }\n-      hessSB.append(\"]\");\n-      return \"(\" + gradStr + \", \" + hessSB.toString() + \")\";\n-    }\n-  }\n+    }\n+\n+    public MultiGradPair(double[] grad, double[] hess) {\n+        this.grad = grad;\n+        this.hess = hess;\n+    }\n+\n+    @Override\n+    public void plusBy(GradPair gradPair) {\n+        double[] grad = ((MultiGradPair) gradPair).grad;\n+        double[] hess = ((MultiGradPair) gradPair).hess;\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] += grad[i];\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] += hess[i];\n+        }\n+    }\n+\n+    public void plusBy(double[] grad, double[] hess) {\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] += grad[i];\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] += hess[i];\n+        }\n+    }\n+\n+    @Override\n+    public void subtractBy(GradPair gradPair) {\n+        double[] grad = ((MultiGradPair) gradPair).grad;\n+        double[] hess = ((MultiGradPair) gradPair).hess;\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] -= grad[i];\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] -= hess[i];\n+        }\n+    }\n+\n+    public void subtractBy(double[] grad, double[] hess) {\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] -= grad[i];\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] -= hess[i];\n+        }\n+    }\n+\n+    @Override\n+    public GradPair plus(GradPair gradPair) {\n+        GradPair res = this.copy();\n+        res.plusBy(gradPair);\n+        return res;\n+    }\n+\n+    public GradPair plus(double[] grad, double[] hess) {\n+        MultiGradPair res = this.copy();\n+        res.plusBy(grad, hess);\n+        return res;\n+    }\n+\n+    @Override\n+    public GradPair subtract(GradPair gradPair) {\n+        GradPair res = this.copy();\n+        res.subtractBy(gradPair);\n+        return res;\n+    }\n+\n+    public GradPair subtract(double[] grad, double[] hess) {\n+        MultiGradPair res = this.copy();\n+        res.plusBy(grad, hess);\n+        return res;\n+    }\n+\n+    @Override\n+    public void timesBy(double x) {\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] *= x;\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] *= x;\n+        }\n+    }\n+\n+    @Override\n+    public float calcGain(GBDTParam param) {\n+        return (float) param.calcGain(grad, hess);\n+    }\n+\n+    public float[] calcWeights(GBDTParam param) {\n+        //return param.calcWeights(grad, hess);\n+        return Maths.doubleArrayToFloatArray(param.calcWeights(grad, hess));\n+    }\n+\n+    @Override\n+    public boolean satisfyWeight(GBDTParam param) {\n+        return param.satisfyWeight(hess);\n+    }\n+\n+    @Override\n+    public MultiGradPair copy() {\n+        return new MultiGradPair(grad.clone(), hess.clone());\n+    }\n+\n+    public double[] getGrad() {\n+        return grad;\n+    }\n+\n+    public double[] getHess() {\n+        return hess;\n+    }\n+\n+    public void setGrad(double[] grad) {\n+        this.grad = grad;\n+    }\n+\n+    public void setHess(double[] hess) {\n+        this.hess = hess;\n+    }\n+\n+    public void set(double[] grad, double[] hess) {\n+        this.grad = grad;\n+        this.hess = hess;\n+    }\n+\n+    public void set(double[] grad, double[] hess, int offset) {\n+        // numClass is usually small, so we do not use arraycopy here\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] = grad[i + offset];\n+            this.hess[i] = hess[i + offset];\n+        }\n+    }\n+\n+    public void set(double[] grad, int gradOffset, double[] hess, int hessOffset) {\n+        // numClass is usually small, so we do not use arraycopy here\n+        for (int i = 0; i < this.grad.length; i++) {\n+            this.grad[i] = grad[i + gradOffset];\n+        }\n+        for (int i = 0; i < this.hess.length; i++) {\n+            this.hess[i] = hess[i + hessOffset];\n+        }\n+    }\n+\n+    @Override\n+    public String toString() {\n+        String gradStr = Arrays.toString(grad);\n+        if (grad.length == hess.length) {\n+            return \"(\" + gradStr + \", diag{\" + Arrays.toString(hess) + \"})\";\n+        } else {\n+            int rowSize = 1, offset = 0;\n+            StringBuilder hessSB = new StringBuilder(\"[\");\n+            while (rowSize <= grad.length) {\n+                hessSB.append(\"[\");\n+                hessSB.append(hess[offset]);\n+                for (int i = 1; i < rowSize; i++) {\n+                    hessSB.append(\", \");\n+                    hessSB.append(hess[offset + i]);\n+                }\n+                hessSB.append(\"]\");\n+                offset += rowSize;\n+                rowSize++;\n+            }\n+            hessSB.append(\"]\");\n+            return \"(\" + gradStr + \", \" + hessSB.toString() + \")\";\n+        }\n+    }\n }\n",
+            "diff_size": 335
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/109/MultiGradPair.java\nindex 80216c34344..3461219e87c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/109/MultiGradPair.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.spark.ml.tree.gbdt.histogram;\n \n import com.tencent.angel.spark.ml.tree.tree.param.GBDTParam;\n@@ -203,4 +202,4 @@ public class MultiGradPair implements GradPair, Serializable {\n       return \"(\" + gradStr + \", \" + hessSB.toString() + \")\";\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/109/MultiGradPair.java\nindex 80216c34344..d9287827d12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/109/MultiGradPair.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/109/MultiGradPair.java\n@@ -23,7 +23,6 @@ import com.tencent.angel.spark.ml.tree.util.Maths;\n import java.io.Serializable;\n import java.util.Arrays;\n \n-\n public class MultiGradPair implements GradPair, Serializable {\n \n   private double[] grad;\n@@ -50,6 +49,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] += grad[i];\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] += hess[i];\n     }\n@@ -59,6 +59,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] += grad[i];\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] += hess[i];\n     }\n@@ -71,6 +72,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] -= grad[i];\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] -= hess[i];\n     }\n@@ -80,6 +82,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] -= grad[i];\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] -= hess[i];\n     }\n@@ -116,6 +119,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] *= x;\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] *= x;\n     }\n@@ -175,6 +179,7 @@ public class MultiGradPair implements GradPair, Serializable {\n     for (int i = 0; i < this.grad.length; i++) {\n       this.grad[i] = grad[i + gradOffset];\n     }\n+\n     for (int i = 0; i < this.hess.length; i++) {\n       this.hess[i] = hess[i + hessOffset];\n     }\n@@ -203,4 +208,5 @@ public class MultiGradPair implements GradPair, Serializable {\n       return \"(\" + gradStr + \", \" + hessSB.toString() + \")\";\n     }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

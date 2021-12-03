@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "350",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/350/InitNeighbors.java\nindex 8e7e71e6613..e777b66c904 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/350/InitNeighbors.java\n@@ -31,34 +31,34 @@ import com.tencent.angel.psagent.matrix.transport.router.operator.ILongKeyAnyVal\n  */\n public class InitNeighbors extends UpdateFunc {\n \n-  /**\n-   * Create a new UpdateParam\n-   */\n-  public InitNeighbors(LongKeysUpdateParam param) {\n-    super(param);\n-  }\n+    /**\n+     * Create a new UpdateParam\n+     */\n+    public InitNeighbors(LongKeysUpdateParam param) {\n+        super(param);\n+    }\n \n-  public InitNeighbors() {\n-    this(null);\n-  }\n+    public InitNeighbors() {\n+        this(null);\n+    }\n \n-  @Override\n-  public void partitionUpdate(PartitionUpdateParam partParam) {\n-    GeneralPartUpdateParam initParam = (GeneralPartUpdateParam) partParam;\n-    ServerLongAnyRow row = GraphMatrixUtils.getPSLongKeyRow(psContext, initParam);\n+    @Override\n+    public void partitionUpdate(PartitionUpdateParam partParam) {\n+        GeneralPartUpdateParam initParam = (GeneralPartUpdateParam) partParam;\n+        ServerLongAnyRow row = GraphMatrixUtils.getPSLongKeyRow(psContext, initParam);\n \n-    // Get nodes and features\n-    ILongKeyAnyValuePartOp split = (ILongKeyAnyValuePartOp) initParam.getKeyValuePart();\n-    long[] nodeIds = split.getKeys();\n-    IElement[] neighbors = split.getValues();\n+        // Get nodes and features\n+        ILongKeyAnyValuePartOp split = (ILongKeyAnyValuePartOp) initParam.getKeyValuePart();\n+        long[] nodeIds = split.getKeys();\n+        IElement[] neighbors = split.getValues();\n \n-    row.startWrite();\n-    try {\n-      for(int i = 0; i < nodeIds.length; i++) {\n-        row.set(nodeIds[i], neighbors[i]);\n-      }\n-    } finally {\n-      row.endWrite();\n+        row.startWrite();\n+        try {\n+            for (int i = 0; i < nodeIds.length; i++) {\n+                row.set(nodeIds[i], neighbors[i]);\n+            }\n+        } finally {\n+            row.endWrite();\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 26
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/350/InitNeighbors.java\nindex 8e7e71e6613..f62c07c9f27 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/350/InitNeighbors.java\n@@ -54,11 +54,11 @@ public class InitNeighbors extends UpdateFunc {\n \n     row.startWrite();\n     try {\n-      for(int i = 0; i < nodeIds.length; i++) {\n+      for (int i = 0; i < nodeIds.length; i++) {\n         row.set(nodeIds[i], neighbors[i]);\n       }\n     } finally {\n       row.endWrite();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/350/InitNeighbors.java\nindex 8e7e71e6613..ad8b6bc42cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/350/InitNeighbors.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/350/InitNeighbors.java\n@@ -29,11 +29,13 @@ import com.tencent.angel.psagent.matrix.transport.router.operator.ILongKeyAnyVal\n /**\n  * Init node neighbors for long type node id\n  */\n+\n public class InitNeighbors extends UpdateFunc {\n \n   /**\n    * Create a new UpdateParam\n    */\n+\n   public InitNeighbors(LongKeysUpdateParam param) {\n     super(param);\n   }\n@@ -51,14 +53,14 @@ public class InitNeighbors extends UpdateFunc {\n     ILongKeyAnyValuePartOp split = (ILongKeyAnyValuePartOp) initParam.getKeyValuePart();\n     long[] nodeIds = split.getKeys();\n     IElement[] neighbors = split.getValues();\n-\n     row.startWrite();\n     try {\n-      for(int i = 0; i < nodeIds.length; i++) {\n+      for (int i = 0; i < nodeIds.length; i++) {\n         row.set(nodeIds[i], neighbors[i]);\n       }\n     } finally {\n       row.endWrite();\n     }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

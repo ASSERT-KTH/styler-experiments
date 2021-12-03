@@ -1,0 +1,123 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "91",
+    "information": {
+        "violations": [
+            {
+                "line": "53",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 154).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        for (int i = 0; i < attributes.length; ++i) {\n            metrics.add(new JmxMetric(\n                    new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT, false),\n                    objectName,\n                    attributes[i]));\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/91/JmxMetricGroup.java\nindex 035a1b2b2f3..f6f68d40aaa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/91/JmxMetricGroup.java\n@@ -29,7 +29,7 @@ import java.util.ArrayList;\n \n /**\n  * @author Nikolay Musienko\n- *         Date: 15.07.13\n+ * Date: 15.07.13\n  */\n \n public class JmxMetricGroup {\n@@ -50,7 +50,8 @@ public class JmxMetricGroup {\n \n         for (int i = 0; i < attributes.length; ++i) {\n             metrics.add(new JmxMetric(\n-                    new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT, false),\n+                    new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT,\n+                            false),\n                     objectName,\n                     attributes[i]));\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "'for rcurly' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/91/JmxMetricGroup.java\nindex 035a1b2b2f3..dfb0aa72185 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/91/JmxMetricGroup.java\n@@ -53,7 +53,7 @@ public class JmxMetricGroup {\n                     new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT, false),\n                     objectName,\n                     attributes[i]));\n-        }\n+    }\n         return metrics;\n     }\n \n@@ -80,4 +80,4 @@ public class JmxMetricGroup {\n     public void setAttributes(String[] attributes) {\n         this.attributes = attributes;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "50",
+                    "severity": "warning",
+                    "message": "'objectName' has incorrect indentation level 0, expected level should be 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "51",
+                    "severity": "warning",
+                    "message": "'MonitoringParameterLevel' has incorrect indentation level 0, expected level should be 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "'false' has incorrect indentation level 0, expected level should be 20.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/91/JmxMetricGroup.java\nindex 035a1b2b2f3..2b879d05541 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/91/JmxMetricGroup.java\n@@ -23,7 +23,6 @@ package com.griddynamics.jagger.agent.model;\n import com.google.common.collect.Lists;\n import com.griddynamics.jagger.dbapi.parameter.MonitoringParameterImpl;\n import com.griddynamics.jagger.dbapi.parameter.MonitoringParameterLevel;\n-\n import javax.management.ObjectName;\n import java.util.ArrayList;\n \n@@ -32,14 +31,13 @@ import java.util.ArrayList;\n  *         Date: 15.07.13\n  */\n \n+\n public class JmxMetricGroup {\n \n     public static final char ATTRIBUTE_DELIMETER = ':';\n-\n     private String groupName;\n     private ObjectName objectName;\n     private String[] attributes;\n-\n     private ArrayList<JmxMetric> metrics = null;\n \n     public ArrayList<JmxMetric> getJmxMetrics() {\n@@ -47,12 +45,11 @@ public class JmxMetricGroup {\n             return metrics;\n         }\n         metrics = Lists.newArrayListWithExpectedSize(attributes.length);\n-\n         for (int i = 0; i < attributes.length; ++i) {\n-            metrics.add(new JmxMetric(\n-                    new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT, false),\n-                    objectName,\n-                    attributes[i]));\n+            metrics.add(new JmxMetric(new MonitoringParameterImpl(\n+objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i],\n+MonitoringParameterLevel.SUT,\n+false), objectName, attributes[i]));\n         }\n         return metrics;\n     }\n@@ -80,4 +77,4 @@ public class JmxMetricGroup {\n     public void setAttributes(String[] attributes) {\n         this.attributes = attributes;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "53",
+                    "column": "78",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/91/JmxMetricGroup.java\nindex 035a1b2b2f3..ac21bccc5de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/91/JmxMetricGroup.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/91/JmxMetricGroup.java\n@@ -50,8 +50,7 @@ public class JmxMetricGroup {\n \n         for (int i = 0; i < attributes.length; ++i) {\n             metrics.add(new JmxMetric(\n-                    new MonitoringParameterImpl(objectName.getCanonicalName() + ATTRIBUTE_DELIMETER + attributes[i], MonitoringParameterLevel.SUT, false),\n-                    objectName,\n+                    new MonitoringParameterImpl(objectName.getCanonicalName()+ ATTRIBUTE_DELIMETER + attributes [i],MonitoringParameterLevel .SUT,false ),objectName ,\n                     attributes[i]));\n         }\n         return metrics;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

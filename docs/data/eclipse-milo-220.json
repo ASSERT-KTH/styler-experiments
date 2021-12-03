@@ -1,0 +1,153 @@
+{
+    "project_name": "eclipse-milo",
+    "violation_id": "220",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 208).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "                            UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                            double minimumSamplingInterval, boolean historizing) {\n        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 200).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-milo/styler/05_predictions/final/files-repaired/220/PropertyTypeNode.java\nindex 1ceb9f9373c..9bd54f08665 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-milo/styler/05_predictions/final/files-repaired/220/PropertyTypeNode.java\n@@ -31,6 +31,6 @@ public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyTy\n                             UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n                             UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                             double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/220/PropertyTypeNode.java\nindex 1ceb9f9373c..2368c8a66a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/220/PropertyTypeNode.java\n@@ -31,6 +31,7 @@ public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyTy\n                             UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n                             UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                             double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType,\n+            valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 204).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/220/PropertyTypeNode.java\nindex 1ceb9f9373c..9e94ab47398 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/220/PropertyTypeNode.java\n@@ -20,17 +20,15 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UByte;\n import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n \n public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyType {\n-    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName,\n-                            LocalizedText displayName, LocalizedText description, UInteger writeMask,\n+    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName, LocalizedText displayName, LocalizedText description, UInteger writeMask,\n                             UInteger userWriteMask) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask);\n+    super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask);\n     }\n \n-    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName,\n-                            LocalizedText displayName, LocalizedText description, UInteger writeMask,\n+    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName, LocalizedText displayName, LocalizedText description, UInteger writeMask,\n                             UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n                             UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                             double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+    super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/220/PropertyTypeNode.java\nindex 1ceb9f9373c..af61ef6cf24 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/220/PropertyTypeNode.java\n@@ -20,17 +20,45 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UByte;\n import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n \n public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyType {\n-    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName,\n-                            LocalizedText displayName, LocalizedText description, UInteger writeMask,\n-                            UInteger userWriteMask) {\n+    public PropertyTypeNode(\n+        UaNodeContext context,\n+        NodeId nodeId,\n+        QualifiedName browseName,\n+        LocalizedText displayName,\n+        LocalizedText description,\n+        UInteger writeMask, UInteger userWriteMask) {\n         super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask);\n     }\n \n-    public PropertyTypeNode(UaNodeContext context, NodeId nodeId, QualifiedName browseName,\n-                            LocalizedText displayName, LocalizedText description, UInteger writeMask,\n-                            UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n-                            UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n-                            double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+    public PropertyTypeNode(\n+        UaNodeContext context,\n+        NodeId nodeId,\n+        QualifiedName browseName,\n+        LocalizedText displayName,\n+        LocalizedText description,\n+        UInteger writeMask,\n+        UInteger userWriteMask,\n+        DataValue value,\n+        NodeId dataType,\n+        Integer valueRank,\n+        UInteger[] arrayDimensions,\n+        UByte accessLevel,\n+        UByte userAccessLevel,\n+        double minimumSamplingInterval, boolean historizing) {\n+        super(context,\n+            nodeId,\n+            browseName,\n+            displayName,\n+            description,\n+            writeMask,\n+            userWriteMask,\n+            value,\n+            dataType,\n+            valueRank,\n+            arrayDimensions,\n+            accessLevel,\n+            userAccessLevel,\n+            minimumSamplingInterval,\n+            historizing);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 200).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/random/files-repaired/220/PropertyTypeNode.java\nindex 1ceb9f9373c..9bd54f08665 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/random/files-repaired/220/PropertyTypeNode.java\n@@ -31,6 +31,6 @@ public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyTy\n                             UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n                             UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                             double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 32, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'method call' child has incorrect indentation level 24, expected level should be 36.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "',' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/220/PropertyTypeNode.java\nindex 1ceb9f9373c..03ec8bfa76c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/220/PropertyTypeNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/220/PropertyTypeNode.java\n@@ -31,6 +31,7 @@ public class PropertyTypeNode extends BaseVariableTypeNode implements PropertyTy\n                             UInteger userWriteMask, DataValue value, NodeId dataType, Integer valueRank,\n                             UInteger[] arrayDimensions, UByte accessLevel, UByte userAccessLevel,\n                             double minimumSamplingInterval, boolean historizing) {\n-        super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask, value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n+                                super(context, nodeId, browseName, displayName, description, writeMask, userWriteMask\n+                        ,value, dataType, valueRank, arrayDimensions, accessLevel, userAccessLevel, minimumSamplingInterval, historizing);\n     }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

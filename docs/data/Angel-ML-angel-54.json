@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "54",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/54/BlasMatrix.java\nindex 90f02f71866..a0174742d63 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/54/BlasMatrix.java\n@@ -34,203 +34,203 @@ import com.tencent.angel.ml.math2.vector.Vector;\n \n public abstract class BlasMatrix extends Matrix {\n \n-  protected int numRows, numCols;\n+    protected int numRows, numCols;\n \n-  public BlasMatrix() {\n-  }\n+    public BlasMatrix() {\n+    }\n \n-  public abstract Vector getRow(int idx);\n+    public abstract Vector getRow(int idx);\n \n-  public abstract Vector getCol(int idx);\n+    public abstract Vector getCol(int idx);\n \n-  @Override\n-  public int getNumRows() {\n-    return numRows;\n-  }\n+    @Override\n+    public int getNumRows() {\n+        return numRows;\n+    }\n \n-  public void setNumRows(int numRows) {\n-    this.numRows = numRows;\n-  }\n+    public void setNumRows(int numRows) {\n+        this.numRows = numRows;\n+    }\n \n-  public int getNumCols() {\n-    return numCols;\n-  }\n+    public int getNumCols() {\n+        return numCols;\n+    }\n \n-  public void setNumCols(int numCols) {\n-    this.numCols = numCols;\n-  }\n+    public void setNumCols(int numCols) {\n+        this.numCols = numCols;\n+    }\n \n-  public void reshape(int rows, int cols) {\n-    assert rows * cols == numRows * numCols;\n-    numRows = rows;\n-    numCols = cols;\n-  }\n+    public void reshape(int rows, int cols) {\n+        assert rows * cols == numRows * numCols;\n+        numRows = rows;\n+        numCols = cols;\n+    }\n \n-  public Matrix iadd(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Add(true));\n-  }\n+    public Matrix iadd(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Add(true));\n+    }\n \n-  public Matrix add(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Add(false));\n-  }\n+    public Matrix add(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Add(false));\n+    }\n \n-  public Matrix isub(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Sub(true));\n-  }\n+    public Matrix isub(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Sub(true));\n+    }\n \n-  public Matrix sub(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Sub(false));\n-  }\n+    public Matrix sub(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Sub(false));\n+    }\n \n-  public Matrix imul(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Mul(true));\n-  }\n+    public Matrix imul(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Mul(true));\n+    }\n \n-  public Matrix mul(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Mul(false));\n-  }\n+    public Matrix mul(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Mul(false));\n+    }\n \n-  public Matrix idiv(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Div(true));\n-  }\n+    public Matrix idiv(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Div(true));\n+    }\n \n-  public Matrix div(int rowId, Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Div(false));\n-  }\n+    public Matrix div(int rowId, Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Div(false));\n+    }\n \n-  public Matrix iaxpy(int rowId, Vector other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Axpy(true, aplha));\n-  }\n+    public Matrix iaxpy(int rowId, Vector other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Axpy(true, aplha));\n+    }\n \n-  public Matrix axpy(int rowId, Vector other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, other, rowId, false, new Axpy(false, aplha));\n-  }\n+    public Matrix axpy(int rowId, Vector other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, other, rowId, false, new Axpy(false, aplha));\n+    }\n \n-  public Matrix iadd(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Add(true));\n-  }\n+    public Matrix iadd(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Add(true));\n+    }\n \n-  public Matrix add(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Add(false));\n-  }\n+    public Matrix add(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Add(false));\n+    }\n \n-  public Matrix isub(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Sub(true));\n-  }\n+    public Matrix isub(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Sub(true));\n+    }\n \n-  public Matrix sub(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Sub(false));\n-  }\n+    public Matrix sub(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Sub(false));\n+    }\n \n-  public Matrix imul(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Mul(true));\n-  }\n+    public Matrix imul(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Mul(true));\n+    }\n \n-  public Matrix mul(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Mul(false));\n-  }\n+    public Matrix mul(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Mul(false));\n+    }\n \n-  public Matrix idiv(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Div(true));\n-  }\n+    public Matrix idiv(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Div(true));\n+    }\n \n-  public Matrix div(Vector other) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Div(false));\n-  }\n+    public Matrix div(Vector other) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Div(false));\n+    }\n \n-  public Matrix iaxpy(Vector other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Axpy(true, aplha));\n-  }\n-\n-  public Matrix axpy(Vector other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, other, false, new Axpy(false, aplha));\n-  }\n-\n-  public Matrix iadd(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Add(true));\n-  }\n-\n-  public Matrix add(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Add(false));\n-  }\n-\n-  public Matrix isub(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Sub(true));\n-  }\n-\n-  public Matrix sub(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Sub(false));\n-  }\n-\n-  public Matrix imul(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Mul(true));\n-  }\n+    public Matrix iaxpy(Vector other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Axpy(true, aplha));\n+    }\n+\n+    public Matrix axpy(Vector other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, other, false, new Axpy(false, aplha));\n+    }\n+\n+    public Matrix iadd(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Add(true));\n+    }\n+\n+    public Matrix add(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Add(false));\n+    }\n+\n+    public Matrix isub(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Sub(true));\n+    }\n+\n+    public Matrix sub(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Sub(false));\n+    }\n+\n+    public Matrix imul(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Mul(true));\n+    }\n \n-  public Matrix mul(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Mul(false));\n-  }\n+    public Matrix mul(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Mul(false));\n+    }\n \n-  public Matrix idiv(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Div(true));\n-  }\n+    public Matrix idiv(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Div(true));\n+    }\n \n-  public Matrix div(Matrix other) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Div(false));\n-  }\n+    public Matrix div(Matrix other) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Div(false));\n+    }\n \n-  public Matrix iaxpy(Matrix other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Axpy(true, aplha));\n-  }\n+    public Matrix iaxpy(Matrix other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Axpy(true, aplha));\n+    }\n \n-  public Matrix axpy(Matrix other, double aplha) {\n-    return BinaryMatrixExecutor.apply(this, false, other, false, new Axpy(false, aplha));\n-  }\n+    public Matrix axpy(Matrix other, double aplha) {\n+        return BinaryMatrixExecutor.apply(this, false, other, false, new Axpy(false, aplha));\n+    }\n \n-  public Matrix iadd(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SAdd(true, x));\n-  }\n+    public Matrix iadd(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SAdd(true, x));\n+    }\n \n-  public Matrix add(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SAdd(false, x));\n-  }\n+    public Matrix add(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SAdd(false, x));\n+    }\n \n-  public Matrix isub(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SSub(true, x));\n-  }\n+    public Matrix isub(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SSub(true, x));\n+    }\n \n-  public Matrix sub(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SSub(false, x));\n-  }\n+    public Matrix sub(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SSub(false, x));\n+    }\n \n-  public Matrix imul(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SMul(true, x));\n-  }\n+    public Matrix imul(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SMul(true, x));\n+    }\n \n-  public Matrix mul(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SMul(false, x));\n-  }\n+    public Matrix mul(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SMul(false, x));\n+    }\n \n-  public Matrix idiv(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SDiv(true, x));\n-  }\n+    public Matrix idiv(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SDiv(true, x));\n+    }\n \n-  public Matrix div(double x) {\n-    return UnaryMatrixExecutor.apply(this, new SDiv(false, x));\n-  }\n+    public Matrix div(double x) {\n+        return UnaryMatrixExecutor.apply(this, new SDiv(false, x));\n+    }\n \n-  public Vector dot(Vector v) {\n-    return DotMatrixExecutor.apply(this, false, v);\n-  }\n+    public Vector dot(Vector v) {\n+        return DotMatrixExecutor.apply(this, false, v);\n+    }\n \n-  public Vector transDot(Vector v) {\n-    return DotMatrixExecutor.apply(this, true, v);\n-  }\n+    public Vector transDot(Vector v) {\n+        return DotMatrixExecutor.apply(this, true, v);\n+    }\n \n-  public Matrix dot(Matrix m, Boolean parallel) {\n-    return DotMatrixExecutor.apply(this, false, m, false, parallel);\n-  }\n+    public Matrix dot(Matrix m, Boolean parallel) {\n+        return DotMatrixExecutor.apply(this, false, m, false, parallel);\n+    }\n \n-  public Matrix dot(Matrix m) {\n-    return DotMatrixExecutor.apply(this, false, m, false, true);\n-  }\n+    public Matrix dot(Matrix m) {\n+        return DotMatrixExecutor.apply(this, false, m, false, true);\n+    }\n }\n",
+            "diff_size": 155
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/54/BlasMatrix.java\nindex 90f02f71866..d5b81f0914b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/54/BlasMatrix.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.ml.math2.matrix;\n \n import com.tencent.angel.ml.math2.ufuncs.executor.matrix.BinaryMatrixExecutor;\n@@ -233,4 +232,4 @@ public abstract class BlasMatrix extends Matrix {\n   public Matrix dot(Matrix m) {\n     return DotMatrixExecutor.apply(this, false, m, false, true);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/54/BlasMatrix.java\nindex 90f02f71866..55e07327503 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/54/BlasMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/54/BlasMatrix.java\n@@ -36,8 +36,7 @@ public abstract class BlasMatrix extends Matrix {\n \n   protected int numRows, numCols;\n \n-  public BlasMatrix() {\n-  }\n+  public BlasMatrix() {}\n \n   public abstract Vector getRow(int idx);\n \n@@ -233,4 +232,5 @@ public abstract class BlasMatrix extends Matrix {\n   public Matrix dot(Matrix m) {\n     return DotMatrixExecutor.apply(this, false, m, false, true);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

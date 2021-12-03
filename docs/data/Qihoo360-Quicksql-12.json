@@ -1,0 +1,89 @@
+{
+    "project_name": "Qihoo360-Quicksql",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage com.qihoo.qsql.org.apache.calcite.linq4j;\n\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/12/PackageMarker.java\nindex af6bc639c38..5f8977e9a8b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/12/PackageMarker.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n import java.lang.annotation.Retention;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/12/PackageMarker.java\nindex af6bc639c38..dff0f6bcd14 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/12/PackageMarker.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n import java.lang.annotation.Retention;\n@@ -28,7 +29,7 @@ import java.lang.annotation.RetentionPolicy;\n  *\n  * <p>See more details in\n  * <a href=\"https://jira.codehaus.org/browse/MCOMPILER-205\">\n- *   maven-compiler-plugin: incremental compilation broken</a>\n+ * maven-compiler-plugin: incremental compilation broken</a>\n  */\n @Retention(RetentionPolicy.SOURCE)\n public @interface PackageMarker {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/12/PackageMarker.java\nindex af6bc639c38..4ebbf967117 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/12/PackageMarker.java\n@@ -30,8 +30,6 @@ import java.lang.annotation.RetentionPolicy;\n  * <a href=\"https://jira.codehaus.org/browse/MCOMPILER-205\">\n  *   maven-compiler-plugin: incremental compilation broken</a>\n  */\n-@Retention(RetentionPolicy.SOURCE)\n-public @interface PackageMarker {\n-}\n \n-// End PackageMarker.java\n+\n+@Retention(RetentionPolicy.SOURCE) public@interface PackageMarker {}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "18",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                },
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "'linq4j' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/random/files-repaired/12/PackageMarker.java\nindex af6bc639c38..c74f8b61e8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/random/files-repaired/12/PackageMarker.java\n@@ -14,7 +14,10 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package com.qihoo.qsql.org.apache.calcite.linq4j;\n+\n+package com.qihoo.qsql.org.apache.calcite.\n+\n+linq4j ;\n \n import java.lang.annotation.Retention;\n import java.lang.annotation.RetentionPolicy;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/12/PackageMarker.java\nindex af6bc639c38..5f8977e9a8b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/12/PackageMarker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/12/PackageMarker.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n import java.lang.annotation.Retention;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

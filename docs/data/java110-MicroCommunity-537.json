@@ -1,0 +1,98 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "537",
+    "information": {
+        "violations": [
+            {
+                "line": "45",
+                "severity": "error",
+                "message": "Line is longer than 150 characters (found 196).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        }\n\n        List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n\n        return orgCommunitys;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 197).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..ea0b308008d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -42,7 +42,7 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n             orgCommunityDto.setPage((page - 1) * orgCommunityDto.getRow());\n         }\n \n-        List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n+        List <OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n \n         return orgCommunitys;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..a8a05409735 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -42,7 +42,9 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n             orgCommunityDto.setPage((page - 1) * orgCommunityDto.getRow());\n         }\n \n-        List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n+        List<OrgCommunityDto> orgCommunitys =\n+            BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)),\n+                OrgCommunityDto.class);\n \n         return orgCommunitys;\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 196).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..b3b6abd5569 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -68,4 +68,4 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n     public void setUserInnerServiceSMOImpl(IUserInnerServiceSMO userInnerServiceSMOImpl) {\n         this.userInnerServiceSMOImpl = userInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 196).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..bee8a771f32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -1,6 +1,5 @@\n package com.java110.user.smo.impl;\n \n-\n import com.java110.core.base.smo.BaseServiceSMO;\n import com.java110.intf.user.IOrgCommunityInnerServiceSMO;\n import com.java110.intf.user.IUserInnerServiceSMO;\n@@ -11,7 +10,6 @@ import com.java110.utils.util.BeanConvertUtil;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.web.bind.annotation.RequestBody;\n import org.springframework.web.bind.annotation.RestController;\n-\n import java.util.List;\n \n /**\n@@ -22,6 +20,8 @@ import java.util.List;\n  * @Version 1.0\n  * add by wuxw 2019/4/24\n  **/\n+\n+\n @RestController\n public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements IOrgCommunityInnerServiceSMO {\n \n@@ -36,18 +36,17 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n \n         //\u6821\u9a8c\u662f\u5426\u4f20\u4e86 \u5206\u9875\u4fe1\u606f\n \n-        int page = orgCommunityDto.getPage();\n \n+\n+        int page = orgCommunityDto.getPage();\n         if (page != PageDto.DEFAULT_PAGE) {\n             orgCommunityDto.setPage((page - 1) * orgCommunityDto.getRow());\n         }\n \n         List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n-\n         return orgCommunitys;\n     }\n \n-\n     @Override\n     public int queryOrgCommunitysCount(@RequestBody OrgCommunityDto orgCommunityDto) {\n         return orgCommunityServiceDaoImpl.queryOrgCommunitysCount(BeanConvertUtil.beanCovertMap(orgCommunityDto));\n@@ -68,4 +67,4 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n     public void setUserInnerServiceSMOImpl(IUserInnerServiceSMO userInnerServiceSMOImpl) {\n         this.userInnerServiceSMOImpl = userInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 197).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..ea0b308008d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -42,7 +42,7 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n             orgCommunityDto.setPage((page - 1) * orgCommunityDto.getRow());\n         }\n \n-        List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n+        List <OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n \n         return orgCommunitys;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "44",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 196).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\nindex 2aef2b81e64..4fd695be3de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/537/OrgCommunityInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/537/OrgCommunityInnerServiceSMOImpl.java\n@@ -41,7 +41,6 @@ public class OrgCommunityInnerServiceSMOImpl extends BaseServiceSMO implements I\n         if (page != PageDto.DEFAULT_PAGE) {\n             orgCommunityDto.setPage((page - 1) * orgCommunityDto.getRow());\n         }\n-\n         List<OrgCommunityDto> orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityServiceDaoImpl.getOrgCommunityInfo(BeanConvertUtil.beanCovertMap(orgCommunityDto)), OrgCommunityDto.class);\n \n         return orgCommunitys;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

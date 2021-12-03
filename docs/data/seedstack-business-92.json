@@ -1,0 +1,87 @@
+{
+    "project_name": "seedstack-business",
+    "violation_id": "92",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.business.internal.pagination;\n\nimport org.seedstack.business.pagination.Slice;\nimport org.seedstack.business.pagination.dsl.LimitPicker;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/92/LimitPickerImpl.java\nindex b4622a53d4a..5a7cdbef0ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/92/LimitPickerImpl.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.pagination;\n \n import org.seedstack.business.pagination.Slice;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/92/LimitPickerImpl.java\nindex b4622a53d4a..5a7cdbef0ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/92/LimitPickerImpl.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.pagination;\n \n import org.seedstack.business.pagination.Slice;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/92/LimitPickerImpl.java\nindex b4622a53d4a..14fba744c88 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/92/LimitPickerImpl.java\n@@ -11,8 +11,7 @@ import org.seedstack.business.pagination.Slice;\n import org.seedstack.business.pagination.dsl.LimitPicker;\n import org.seedstack.business.pagination.dsl.SpecificationPicker;\n \n-class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S, T>\n-        implements LimitPicker<S, T> {\n+class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S, T> implements LimitPicker<S, T> {\n \n     private final AbstractPaginatorContext<T> context;\n \n@@ -26,4 +25,4 @@ class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S,\n         this.context.setLimit(limit);\n         return this;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "79",
+                    "severity": "warning",
+                    "message": "'ctor def' child has incorrect indentation level 78, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/92/LimitPickerImpl.java\nindex b4622a53d4a..b2dcd123a7b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/92/LimitPickerImpl.java\n@@ -11,14 +11,14 @@ import org.seedstack.business.pagination.Slice;\n import org.seedstack.business.pagination.dsl.LimitPicker;\n import org.seedstack.business.pagination.dsl.SpecificationPicker;\n \n-class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S, T>\n-        implements LimitPicker<S, T> {\n+\n+class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S, T> implements LimitPicker<S, T> {\n \n     private final AbstractPaginatorContext<T> context;\n \n     LimitPickerImpl(AbstractPaginatorContext<T> context, PaginationMode mode) {\n         super(context, mode);\n-        this.context = context;\n+                                                                              this.context = context;\n     }\n \n     @Override\n@@ -26,4 +26,4 @@ class LimitPickerImpl<S extends Slice<T>, T> extends SpecificationPickerImpl<S,\n         this.context.setLimit(limit);\n         return this;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/92/LimitPickerImpl.java\nindex b4622a53d4a..5a7cdbef0ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/92/LimitPickerImpl.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.pagination;\n \n import org.seedstack.business.pagination.Slice;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/92/LimitPickerImpl.java\nindex b4622a53d4a..5a7cdbef0ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/92/LimitPickerImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/92/LimitPickerImpl.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.pagination;\n \n import org.seedstack.business.pagination.Slice;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

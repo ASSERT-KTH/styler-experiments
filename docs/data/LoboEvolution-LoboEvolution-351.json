@@ -1,0 +1,94 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "351",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n\t\tSVGTransformable, Drawable {\n\n\t/**\n\t * <p>getX.</p>",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/351/SVGRectElement.java\nindex 3f91054d9c5..a6633c81fad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/351/SVGRectElement.java\n@@ -26,7 +26,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n-\t\tSVGTransformable, Drawable {\n+SVGTransformable, Drawable {\n \n \t/**\n \t * <p>getX.</p>\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/351/SVGRectElement.java\nindex 3f91054d9c5..851a6392ec4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/351/SVGRectElement.java\n@@ -17,56 +17,54 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGRectElement interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n-\t\tSVGTransformable, Drawable {\n+    SVGTransformable, Drawable {\n \n-\t/**\n-\t * <p>getX.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getX();\n+    /**\n+     * <p>getX.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getX();\n \n-\t/**\n-\t * <p>getY.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getY();\n+    /**\n+     * <p>getY.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getY();\n \n-\t/**\n-\t * <p>getWidth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getWidth();\n+    /**\n+     * <p>getWidth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getWidth();\n \n-\t/**\n-\t * <p>getHeight.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getHeight();\n+    /**\n+     * <p>getHeight.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getHeight();\n \n-\t/**\n-\t * <p>getRx.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getRx();\n+    /**\n+     * <p>getRx.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getRx();\n \n-\t/**\n-\t * <p>getRy.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getRy();\n+    /**\n+     * <p>getRy.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getRy();\n }\n",
+            "diff_size": 41
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/351/SVGRectElement.java\nindex 3f91054d9c5..001c6cc9f9e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/351/SVGRectElement.java\n@@ -25,48 +25,61 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n-public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n-\t\tSVGTransformable, Drawable {\n-\n-\t/**\n-\t * <p>getX.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getX();\n-\n-\t/**\n-\t * <p>getY.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getY();\n-\n-\t/**\n-\t * <p>getWidth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getWidth();\n-\n-\t/**\n-\t * <p>getHeight.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getHeight();\n-\n-\t/**\n-\t * <p>getRx.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getRx();\n-\n-\t/**\n-\t * <p>getRy.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getRy();\n-}\n+\n+\n+public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable, Drawable {\n+\n+    /**\n+     * <p>getX.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getX();\n+\n+    /**\n+     * <p>getY.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getY();\n+\n+    /**\n+     * <p>getWidth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getWidth();\n+\n+    /**\n+     * <p>getHeight.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getHeight();\n+\n+    /**\n+     * <p>getRx.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getRx();\n+\n+    /**\n+     * <p>getRy.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getRy();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 58
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "28",
+                    "column": "118",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/351/SVGRectElement.java\nindex 3f91054d9c5..8bb919f0670 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/351/SVGRectElement.java\n@@ -25,8 +25,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n-public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n-\t\tSVGTransformable, Drawable {\n+public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,SVGTransformable, Drawable {\n \n \t/**\n \t * <p>getX.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/351/SVGRectElement.java\nindex 3f91054d9c5..a6633c81fad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/351/SVGRectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/351/SVGRectElement.java\n@@ -26,7 +26,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGRectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable,\n-\t\tSVGTransformable, Drawable {\n+SVGTransformable, Drawable {\n \n \t/**\n \t * <p>getX.</p>\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

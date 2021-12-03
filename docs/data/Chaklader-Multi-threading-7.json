@@ -1,0 +1,95 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "7",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "25",
+                "severity": "error",
+                "message": "'{' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " * A marker interface for the server.\n */\npublic interface Server {}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/7/Server.java\nindex 0b240513ca0..495365fe4f1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/7/Server.java\n@@ -3,4 +3,5 @@ package Multithreading.GroceryCustomerSim;\n /**\n  * A marker interface for the server.\n  */\n-public interface Server {}\n+public interface Server {\n+}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/7/Server.java\nindex 0b240513ca0..2c2620e3dff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/7/Server.java\n@@ -3,4 +3,5 @@ package Multithreading.GroceryCustomerSim;\n /**\n  * A marker interface for the server.\n  */\n-public interface Server {}\n+public interface Server {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/7/Server.java\nindex 0b240513ca0..a9a27dbdab5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/7/Server.java\n@@ -3,4 +3,8 @@ package Multithreading.GroceryCustomerSim;\n /**\n  * A marker interface for the server.\n  */\n-public interface Server {}\n+\n+\n+public interface Server {\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "5",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/7/Server.java\nindex 0b240513ca0..f030253ae24 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/7/Server.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/7/Server.java\n@@ -1,6 +1,5 @@\n package Multithreading.GroceryCustomerSim;\n-\n /**\n  * A marker interface for the server.\n- */\n+ */ public interface Server {}\n public interface Server {}\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

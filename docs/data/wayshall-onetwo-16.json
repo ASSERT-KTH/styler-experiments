@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "16",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "column": "43",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\t}\n\t\n\tpublic EurekaClientContextConfig(){\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/16/EurekaClientContextConfig.java\nindex 7f51d921517..7c8bffd93d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/16/EurekaClientContextConfig.java\n@@ -20,6 +20,6 @@ public class EurekaClientContextConfig {\n \t\treturn new EurekaUnregisterProcessor();\n \t}\n \t\n-\tpublic EurekaClientContextConfig(){\n-\t}\n+\tpublic EurekaClientContextConfig() {\n+ }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/16/EurekaClientContextConfig.java\nindex 7f51d921517..fa6fd3d4333 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/16/EurekaClientContextConfig.java\n@@ -14,12 +14,12 @@ import org.springframework.context.annotation.Configuration;\n @EnableConfigurationProperties({BootJfishCloudConfig.class})\n @Configuration\n public class EurekaClientContextConfig {\n-\t\n-\t@Bean\n-\tpublic EurekaUnregisterProcessor eurekaUnregisterProcessor() {\n-\t\treturn new EurekaUnregisterProcessor();\n-\t}\n-\t\n-\tpublic EurekaClientContextConfig(){\n-\t}\n+\n+  @Bean\n+  public EurekaUnregisterProcessor eurekaUnregisterProcessor() {\n+    return new EurekaUnregisterProcessor();\n+  }\n+\n+  public EurekaClientContextConfig() {\n+  }\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/16/EurekaClientContextConfig.java\nindex 7f51d921517..7c8bffd93d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/16/EurekaClientContextConfig.java\n@@ -20,6 +20,6 @@ public class EurekaClientContextConfig {\n \t\treturn new EurekaUnregisterProcessor();\n \t}\n \t\n-\tpublic EurekaClientContextConfig(){\n-\t}\n+\tpublic EurekaClientContextConfig() {\n+ }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/16/EurekaClientContextConfig.java\nindex 7f51d921517..7c8bffd93d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/16/EurekaClientContextConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/16/EurekaClientContextConfig.java\n@@ -20,6 +20,6 @@ public class EurekaClientContextConfig {\n \t\treturn new EurekaUnregisterProcessor();\n \t}\n \t\n-\tpublic EurekaClientContextConfig(){\n-\t}\n+\tpublic EurekaClientContextConfig() {\n+ }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

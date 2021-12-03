@@ -1,0 +1,63 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "40",
+    "information": {
+        "violations": [
+            {
+                "line": "2",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class FileTreatmentException extends RuntimeException {\n\tpublic FileTreatmentException() {\n    }\n    public FileTreatmentException(String msg) {\n        super(msg);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/40/FileTreatmentException.java\nindex 846e26a12bd..e9ba349003a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/40/FileTreatmentException.java\n@@ -1,5 +1,5 @@\n public class FileTreatmentException extends RuntimeException {\n-\tpublic FileTreatmentException() {\n+public FileTreatmentException() {\n     }\n     public FileTreatmentException(String msg) {\n         super(msg);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/40/FileTreatmentException.java\nindex 846e26a12bd..58ddfcf753f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/40/FileTreatmentException.java\n@@ -1,6 +1,7 @@\n public class FileTreatmentException extends RuntimeException {\n-\tpublic FileTreatmentException() {\n+    public FileTreatmentException() {\n     }\n+\n     public FileTreatmentException(String msg) {\n         super(msg);\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/40/FileTreatmentException.java\nindex 846e26a12bd..c7654496008 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/40/FileTreatmentException.java\n@@ -1,7 +1,7 @@\n public class FileTreatmentException extends RuntimeException {\n-\tpublic FileTreatmentException() {\n-    }\n+    public FileTreatmentException() {\n+}\n     public FileTreatmentException(String msg) {\n         super(msg);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/40/FileTreatmentException.java\nindex 846e26a12bd..e9ba349003a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/40/FileTreatmentException.java\n@@ -1,5 +1,5 @@\n public class FileTreatmentException extends RuntimeException {\n-\tpublic FileTreatmentException() {\n+public FileTreatmentException() {\n     }\n     public FileTreatmentException(String msg) {\n         super(msg);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/40/FileTreatmentException.java\nindex 846e26a12bd..c410eed8f86 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/40/FileTreatmentException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/40/FileTreatmentException.java\n@@ -1,5 +1,5 @@\n public class FileTreatmentException extends RuntimeException {\n-\tpublic FileTreatmentException() {\n+    public FileTreatmentException() {\n     }\n     public FileTreatmentException(String msg) {\n         super(msg);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

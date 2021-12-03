@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "124",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "column": "16",
+                "severity": "warning",
+                "message": "'(' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+            }
+        ]
+    },
+    "source_code": "     * Method for clearing the node\n     */\n    void reset ();\n\n    /**\n     * Method for adding a value to the histogram",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/124/HistogramNode.java\nindex 72c0ef8f85a..5bc3dda8bbb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/124/HistogramNode.java\n@@ -34,7 +34,7 @@ public interface HistogramNode {\n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/124/HistogramNode.java\nindex 72c0ef8f85a..69551a8c1c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/124/HistogramNode.java\n@@ -27,6 +27,7 @@ import java.util.ArrayList;\n /**\n  * A HistogramNode is the building block for the histogram data structure and\n  * provides a common interface for both the data and the fork nodes.\n+ *\n  * @author Jorge Handl\n  */\n public interface HistogramNode {\n@@ -34,7 +35,7 @@ public interface HistogramNode {\n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/124/HistogramNode.java\nindex 72c0ef8f85a..1a96082f286 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/124/HistogramNode.java\n@@ -34,7 +34,7 @@ public interface HistogramNode {\n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n@@ -65,4 +65,4 @@ public interface HistogramNode {\n      * Method for getting a table representing the histogram data\n      */\n     void toTable(ArrayList<Cell> table);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/124/HistogramNode.java\nindex 72c0ef8f85a..c39ef7d59c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/124/HistogramNode.java\n@@ -29,40 +29,49 @@ import java.util.ArrayList;\n  * provides a common interface for both the data and the fork nodes.\n  * @author Jorge Handl\n  */\n+\n+\n public interface HistogramNode {\n \n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n      */\n+\n     HistogramNode addValue(AdaptiveHistogram root, double value);\n \n     /**\n      * Method for getting the number of values stored in the same bucket as a reference value\n      */\n+\n     long getCount(double value);\n \n     /**\n      * Method for getting the cumulative density function for a given value\n      */\n+\n     long getAccumCount(double value);\n \n     /**\n      * Method for getting the value for which the cumulative density function reaches the desired value\n      */\n+\n     Double getValueForAccumCount(long[] accumCount);\n \n     /**\n      * Method for applying a convertion function to the values stored in the histogram\n      */\n+\n     void apply(AdaptiveHistogram.ValueConversion valueConversion);\n \n     /**\n      * Method for getting a table representing the histogram data\n      */\n+\n     void toTable(ArrayList<Cell> table);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/124/HistogramNode.java\nindex 72c0ef8f85a..5bc3dda8bbb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/124/HistogramNode.java\n@@ -34,7 +34,7 @@ public interface HistogramNode {\n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/124/HistogramNode.java\nindex 72c0ef8f85a..5bc3dda8bbb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/124/HistogramNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/124/HistogramNode.java\n@@ -34,7 +34,7 @@ public interface HistogramNode {\n     /**\n      * Method for clearing the node\n      */\n-    void reset ();\n+    void reset();\n \n     /**\n      * Method for adding a value to the histogram\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

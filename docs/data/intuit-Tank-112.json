@@ -1,0 +1,86 @@
+{
+    "project_name": "intuit-Tank",
+    "violation_id": "112",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "64",
+                "severity": "warning",
+                "message": "'+' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    public String buildScript(String script) {\n        LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/intuit-Tank/styler/05_predictions/final/files-repaired/112/LogicScriptUtil.java\nindex 79444269f52..8b24f6555e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/intuit-Tank/styler/05_predictions/final/files-repaired/112/LogicScriptUtil.java\n@@ -29,7 +29,7 @@ public class LogicScriptUtil implements Serializable {\n      */\n     public String buildScript(String script) {\n         LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+        return logicStepConfig.getInsertBefore() + '\\n' + '\\n'\n+        + script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "60",
+                    "severity": "warning",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/checkstyle_idea/112/LogicScriptUtil.java\nindex 79444269f52..6d7ed4691c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/checkstyle_idea/112/LogicScriptUtil.java\n@@ -20,16 +20,15 @@ import com.intuit.tank.vm.settings.TankConfig;\n \n public class LogicScriptUtil implements Serializable {\n \n-    private static final long serialVersionUID = 1L;\n+  private static final long serialVersionUID = 1L;\n \n-    /**\n-     * \n-     * @param script\n-     * @return\n-     */\n-    public String buildScript(String script) {\n-        LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n-    }\n+  /**\n+   * @param script\n+   * @return\n+   */\n+  public String buildScript(String script) {\n+    LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n+    return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n+      script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+  }\n }\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/naturalize/112/LogicScriptUtil.java\nindex 79444269f52..bfec98d31a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/naturalize/112/LogicScriptUtil.java\n@@ -29,7 +29,6 @@ public class LogicScriptUtil implements Serializable {\n      */\n     public String buildScript(String script) {\n         LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' + script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/codebuff/112/LogicScriptUtil.java\nindex 79444269f52..32845bf1105 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/codebuff/112/LogicScriptUtil.java\n@@ -13,11 +13,13 @@ package com.intuit.tank.vm.common;\n  * #L%\n  */\n \n-import java.io.Serializable;\n \n+\n+import java.io.Serializable;\n import com.intuit.tank.vm.settings.LogicStepConfig;\n import com.intuit.tank.vm.settings.TankConfig;\n \n+\n public class LogicScriptUtil implements Serializable {\n \n     private static final long serialVersionUID = 1L;\n@@ -27,9 +29,11 @@ public class LogicScriptUtil implements Serializable {\n      * @param script\n      * @return\n      */\n+\n+\n     public String buildScript(String script) {\n         LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' + script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/random/files-repaired/112/LogicScriptUtil.java\nindex 79444269f52..8b24f6555e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/random/files-repaired/112/LogicScriptUtil.java\n@@ -29,7 +29,7 @@ public class LogicScriptUtil implements Serializable {\n      */\n     public String buildScript(String script) {\n         LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+        return logicStepConfig.getInsertBefore() + '\\n' + '\\n'\n+        + script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/three_grams/files-repaired/112/LogicScriptUtil.java\nindex 79444269f52..ef53f111aa9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/112/LogicScriptUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/three_grams/files-repaired/112/LogicScriptUtil.java\n@@ -29,7 +29,7 @@ public class LogicScriptUtil implements Serializable {\n      */\n     public String buildScript(String script) {\n         LogicStepConfig logicStepConfig = new TankConfig().getLogicStepConfig();\n-        return logicStepConfig.getInsertBefore() + '\\n' + '\\n' +\n-                script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n+        return logicStepConfig.getInsertBefore() + '\\n' + '\\n'\n+                + script + '\\n' + '\\n' + logicStepConfig.getAppendAfter();\n     }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

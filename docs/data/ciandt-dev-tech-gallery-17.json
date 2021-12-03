@@ -1,0 +1,106 @@
+{
+    "project_name": "ciandt-dev-tech-gallery",
+    "violation_id": "17",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 110).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic class Constants {\n  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n  public static final String WEB_CLIENT_ID =\n          \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n  //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ciandt-dev-tech-gallery/styler/05_predictions/final/files-repaired/17/Constants.java\nindex 70b2ffcf456..b3ad5a3644a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ciandt-dev-tech-gallery/styler/05_predictions/final/files-repaired/17/Constants.java\n@@ -6,7 +6,9 @@ import com.google.api.server.spi.Constant;\n  * Contains the client IDs and scopes for allowed clients consuming your API.\n  */\n public class Constants {\n-  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n+\n+  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";\n+//\"r2EklsA7k8ODf91DMLYbhrwT\";\n   public static final String WEB_CLIENT_ID =\n           \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n   //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/checkstyle_idea/17/Constants.java\nindex 70b2ffcf456..d76dcca1ecd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/checkstyle_idea/17/Constants.java\n@@ -6,9 +6,10 @@ import com.google.api.server.spi.Constant;\n  * Contains the client IDs and scopes for allowed clients consuming your API.\n  */\n public class Constants {\n-  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n+  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";\n+//\"r2EklsA7k8ODf91DMLYbhrwT\";\n   public static final String WEB_CLIENT_ID =\n-          \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n+      \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n   //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n   public static final String ANDROID_CLIENT_ID = \"replace this with your Android client ID\";\n   public static final String IOS_CLIENT_ID = \"replace this with your iOS client ID\";\n@@ -17,7 +18,8 @@ public class Constants {\n \n   public static final String EMAIL_SCOPE = \"https://www.googleapis.com/auth/userinfo.email\";\n   public static final String PLUS_SCOPE = \"https://www.googleapis.com/auth/plus.me\";\n-  public static final String PLUS_STREAM_WRITE = \"https://www.googleapis.com/auth/plus.stream.write\";\n+  public static final String PLUS_STREAM_WRITE =\n+      \"https://www.googleapis.com/auth/plus.stream.write\";\n \n   public static final String CRON_MAIL_ACTIVITY_JOB = \"/cron/activityresume\";\n   public static final String CRON_MAIL_ENDORSEMENT_JOB = \"/cron/endorsementresume\";\n@@ -26,8 +28,10 @@ public class Constants {\n   public static final String NEGATIVE_RECOMMENDATION_TEXT = \"negativamente a tecnologia \";\n   public static final String NEW_LINE = System.getProperty(\"line.separator\");\n \n-  public static final String THUMBS_UP = \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-up.png\";\n-  public static final String THUMBS_DOWN = \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-down.png\";\n+  public static final String THUMBS_UP =\n+      \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-up.png\";\n+  public static final String THUMBS_DOWN =\n+      \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-down.png\";\n \n   public static final String APP_NAME = \"Tech Gallery\";\n   public static final String APP_EMAIL = \"google-project@ciandt.com\";\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/naturalize/17/Constants.java\nindex 70b2ffcf456..adc4576136c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/naturalize/17/Constants.java\n@@ -6,10 +6,10 @@ import com.google.api.server.spi.Constant;\n  * Contains the client IDs and scopes for allowed clients consuming your API.\n  */\n public class Constants {\n-  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n-  public static final String WEB_CLIENT_ID =\n-          \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n-  //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n+  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";\n+//\"r2EklsA7k8ODf91DMLYbhrwT\";\n+  public static final String WEB_CLIENT_ID = \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n+//\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n   public static final String ANDROID_CLIENT_ID = \"replace this with your Android client ID\";\n   public static final String IOS_CLIENT_ID = \"replace this with your iOS client ID\";\n   public static final String ANDROID_AUDIENCE = WEB_CLIENT_ID;\n@@ -38,13 +38,11 @@ public class Constants {\n \n   public static final String APPLICATION_VERSION_PROPERTY =\n       \"com.google.appengine.application.version\";\n-\n-  public static final String APPLICATION_ID_PROPERTY = \"com.google.appengine.application.id\";\n+    public static final String APPLICATION_ID_PROPERTY = \"com.google.appengine.application.id\";\n \n   public static final String RUNTIME_ENVIRONMENT_PROPERTY =\n       \"com.google.appengine.runtime.environment\";\n-\n-  public static final String LINK_LOCALHOST = \"http://localhost:8888/\";\n+    public static final String LINK_LOCALHOST = \"http://localhost:8888/\";\n \n   public static final String LINK_PRODUCTION = \"techgallery.ciandt.com\";\n \n@@ -54,4 +52,4 @@ public class Constants {\n \n   public static final String EMAIL_CONTEXT_PLURAL = \"te indicaram em\";\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "15",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "54",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/codebuff/17/Constants.java\nindex 70b2ffcf456..e63679e0d71 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/codebuff/17/Constants.java\n@@ -5,44 +5,57 @@ import com.google.api.server.spi.Constant;\n /**\n  * Contains the client IDs and scopes for allowed clients consuming your API.\n  */\n+\n+\n public class Constants {\n+\n+\n   public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n-  public static final String WEB_CLIENT_ID =\n-          \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n+\n+  public static final String WEB_CLIENT_ID = \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n   //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n+\n   public static final String ANDROID_CLIENT_ID = \"replace this with your Android client ID\";\n+\n   public static final String IOS_CLIENT_ID = \"replace this with your iOS client ID\";\n+\n   public static final String ANDROID_AUDIENCE = WEB_CLIENT_ID;\n+\n   public static final String API_EXPLORER_CLIENT_ID = Constant.API_EXPLORER_CLIENT_ID;\n \n   public static final String EMAIL_SCOPE = \"https://www.googleapis.com/auth/userinfo.email\";\n+\n   public static final String PLUS_SCOPE = \"https://www.googleapis.com/auth/plus.me\";\n+\n   public static final String PLUS_STREAM_WRITE = \"https://www.googleapis.com/auth/plus.stream.write\";\n \n   public static final String CRON_MAIL_ACTIVITY_JOB = \"/cron/activityresume\";\n+\n   public static final String CRON_MAIL_ENDORSEMENT_JOB = \"/cron/endorsementresume\";\n \n   public static final String POSITIVE_RECOMMENDATION_TEXT = \"positivamente a tecnologia \";\n+\n   public static final String NEGATIVE_RECOMMENDATION_TEXT = \"negativamente a tecnologia \";\n+\n   public static final String NEW_LINE = System.getProperty(\"line.separator\");\n \n   public static final String THUMBS_UP = \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-up.png\";\n+\n   public static final String THUMBS_DOWN = \"https://storage.googleapis.com/tech-gallery-assets/email/thumbs-down.png\";\n \n   public static final String APP_NAME = \"Tech Gallery\";\n+\n   public static final String APP_EMAIL = \"google-project@ciandt.com\";\n \n   public static final String TEMPLATES_FOLDER = \"emailtemplates\";\n \n   public static final String PRODUCTION_PROPERTY = \"Production\";\n \n-  public static final String APPLICATION_VERSION_PROPERTY =\n-      \"com.google.appengine.application.version\";\n+  public static final String APPLICATION_VERSION_PROPERTY = \"com.google.appengine.application.version\";\n \n   public static final String APPLICATION_ID_PROPERTY = \"com.google.appengine.application.id\";\n \n-  public static final String RUNTIME_ENVIRONMENT_PROPERTY =\n-      \"com.google.appengine.runtime.environment\";\n+  public static final String RUNTIME_ENVIRONMENT_PROPERTY = \"com.google.appengine.runtime.environment\";\n \n   public static final String LINK_LOCALHOST = \"http://localhost:8888/\";\n \n@@ -54,4 +67,4 @@ public class Constants {\n \n   public static final String EMAIL_CONTEXT_PLURAL = \"te indicaram em\";\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/styler/05_predictions/three_grams/files-repaired/17/Constants.java\nindex 70b2ffcf456..b3ad5a3644a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/violations/17/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ciandt-dev-tech-gallery/styler/05_predictions/three_grams/files-repaired/17/Constants.java\n@@ -6,7 +6,9 @@ import com.google.api.server.spi.Constant;\n  * Contains the client IDs and scopes for allowed clients consuming your API.\n  */\n public class Constants {\n-  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";//\"r2EklsA7k8ODf91DMLYbhrwT\";\n+\n+  public static final String SERVICE_ACCOUNT_CLIENT_ID = \"101429468834662727296\";\n+//\"r2EklsA7k8ODf91DMLYbhrwT\";\n   public static final String WEB_CLIENT_ID =\n           \"1091883615279-ehqv3bfpvtj47hplbsak68epgng6o24s.apps.googleusercontent.com\";\n   //\"192387127763-mbfdnkegtcv169h4rsrn31fgn64mo21m.apps.googleusercontent.com\";\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

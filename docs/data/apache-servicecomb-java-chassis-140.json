@@ -1,0 +1,100 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "140",
+    "information": {
+        "violations": [
+            {
+                "line": "63",
+                "column": "100",
+                "severity": "warning",
+                "message": "'&&' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "  private boolean regionAndAZMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n    if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) &&\n          myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n    }\n    return false;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/140/ZoneAwareServerListFilterExt.java\nindex b43af7d12f3..636fafe7225 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/140/ZoneAwareServerListFilterExt.java\n@@ -60,8 +60,8 @@ public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n \n   private boolean regionAndAZMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n     if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n-      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) &&\n-          myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n+      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion())\n+          && myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n     }\n     return false;\n   }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "63",
+                    "column": "100",
+                    "severity": "warning",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "63",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 202).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/140/ZoneAwareServerListFilterExt.java\nindex b43af7d12f3..4a652b90de2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/140/ZoneAwareServerListFilterExt.java\n@@ -60,8 +60,7 @@ public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n \n   private boolean regionAndAZMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n     if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n-      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) &&\n-          myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n+      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) && myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n     }\n     return false;\n   }\n@@ -72,4 +71,4 @@ public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n     }\n     return false;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "61",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 135).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "62",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 171).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/140/ZoneAwareServerListFilterExt.java\nindex b43af7d12f3..e501593fbc0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/140/ZoneAwareServerListFilterExt.java\n@@ -19,16 +19,13 @@ package org.apache.servicecomb.loadbalance.filter;\n \n import java.util.ArrayList;\n import java.util.List;\n-\n import org.apache.servicecomb.loadbalance.CseServer;\n import org.apache.servicecomb.loadbalance.ServerListFilterExt;\n import org.apache.servicecomb.serviceregistry.RegistryUtils;\n import org.apache.servicecomb.serviceregistry.api.registry.MicroserviceInstance;\n-\n import com.netflix.loadbalancer.Server;\n \n public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n-\n   @Override\n   public List<Server> getFilteredListOfServers(List<Server> list) {\n     List<Server> result = new ArrayList<>();\n@@ -60,16 +57,18 @@ public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n \n   private boolean regionAndAZMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n     if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n-      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) &&\n-          myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n+      return myself.getDataCenterInfo().getRegion()\n+                                       .equals(target.getDataCenterInfo().getRegion()) && myself.getDataCenterInfo().getAvailableZone()\n+                                                                                                                    .equals(target.getDataCenterInfo().getAvailableZone());\n     }\n     return false;\n   }\n \n   private boolean regionMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n     if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n-      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion());\n+      return myself.getDataCenterInfo().getRegion()\n+                                       .equals(target.getDataCenterInfo().getRegion());\n     }\n     return false;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/140/ZoneAwareServerListFilterExt.java\nindex b43af7d12f3..636fafe7225 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/140/ZoneAwareServerListFilterExt.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/140/ZoneAwareServerListFilterExt.java\n@@ -60,8 +60,8 @@ public class ZoneAwareServerListFilterExt implements ServerListFilterExt {\n \n   private boolean regionAndAZMatch(MicroserviceInstance myself, MicroserviceInstance target) {\n     if (myself.getDataCenterInfo() != null && target.getDataCenterInfo() != null) {\n-      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion()) &&\n-          myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n+      return myself.getDataCenterInfo().getRegion().equals(target.getDataCenterInfo().getRegion())\n+          && myself.getDataCenterInfo().getAvailableZone().equals(target.getDataCenterInfo().getAvailableZone());\n     }\n     return false;\n   }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "63",
+                    "column": "100",
+                    "severity": "warning",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

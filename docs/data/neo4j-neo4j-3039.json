@@ -1,0 +1,158 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "3039",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "40",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "40",
+                    "column": "107",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "33",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "43",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "74",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "61",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "61",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "88",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "88",
+                    "column": "52",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3039/SelectiveFileWatcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3039/SelectiveFileWatcher.java\nindex 9d029a60348..43cf1a0483a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3039/SelectiveFileWatcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3039/SelectiveFileWatcher.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.io.fs;\n \n import java.io.IOException;\n@@ -36,7 +37,7 @@ public class SelectiveFileWatcher implements FileWatcher\n     private final FileWatcher defaultFileWatcher;\n     private final FileWatcher specificFileWatcher;\n \n-    SelectiveFileWatcher( Path specialPath, FileWatcher defaultFileWatcher, FileWatcher specificFileWatcher )\n+    SelectiveFileWatcher(Path specialPath, FileWatcher defaultFileWatcher, FileWatcher specificFileWatcher)\n     {\n         this.specialPath = specialPath;\n         this.defaultFileWatcher = defaultFileWatcher;\n@@ -44,23 +45,23 @@ public class SelectiveFileWatcher implements FileWatcher\n     }\n \n     @Override\n-    public WatchedResource watch( Path path ) throws IOException\n+    public WatchedResource watch(Path path) throws IOException\n     {\n-        return chooseFileWatcher( path ).watch( path );\n+        return chooseFileWatcher(path).watch(path);\n     }\n \n     @Override\n-    public void addFileWatchEventListener( FileWatchEventListener listener )\n+    public void addFileWatchEventListener(FileWatchEventListener listener)\n     {\n-        defaultFileWatcher.addFileWatchEventListener( listener );\n-        specificFileWatcher.addFileWatchEventListener( listener );\n+        defaultFileWatcher.addFileWatchEventListener(listener);\n+        specificFileWatcher.addFileWatchEventListener(listener);\n     }\n \n     @Override\n-    public void removeFileWatchEventListener( FileWatchEventListener listener )\n+    public void removeFileWatchEventListener(FileWatchEventListener listener)\n     {\n-        defaultFileWatcher.removeFileWatchEventListener( listener );\n-        specificFileWatcher.removeFileWatchEventListener( listener );\n+        defaultFileWatcher.removeFileWatchEventListener(listener);\n+        specificFileWatcher.removeFileWatchEventListener(listener);\n     }\n \n     @Override\n@@ -84,8 +85,8 @@ public class SelectiveFileWatcher implements FileWatcher\n         specificFileWatcher.close();\n     }\n \n-    private FileWatcher chooseFileWatcher( Path path )\n+    private FileWatcher chooseFileWatcher(Path path)\n     {\n-        return path.equals( specialPath ) ? specificFileWatcher : defaultFileWatcher;\n+        return path.equals(specialPath) ? specificFileWatcher : defaultFileWatcher;\n     }\n }\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "164",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 146).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class AdapterRedactionEngineRetrieveServicePortDescriptor extends AdapterRedactionEngineServicePortDescriptor {\n\n    private static final String WS_ADDRESSING_ACTION_RETRIEVE = \"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n\n    /* (non-Javadoc)\n     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\nindex 5a4a1a3289d..ca87417cb8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n@@ -29,18 +29,18 @@ package gov.hhs.fha.nhinc.redactionengine.adapter.proxy.service;\n \n /**\n  * @author akong\n- *\n  */\n public class AdapterRedactionEngineRetrieveServicePortDescriptor extends AdapterRedactionEngineServicePortDescriptor {\n \n-    private static final String WS_ADDRESSING_ACTION_RETRIEVE = \"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n+  private static final String WS_ADDRESSING_ACTION_RETRIEVE =\n+      \"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n \n-    /* (non-Javadoc)\n-     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n-     */\n-    @Override\n-    public String getWSAddressingAction() {\n-        return WS_ADDRESSING_ACTION_RETRIEVE;\n-    }\n+  /* (non-Javadoc)\n+   * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n+   */\n+  @Override\n+  public String getWSAddressingAction() {\n+    return WS_ADDRESSING_ACTION_RETRIEVE;\n+  }\n \n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\nindex 5a4a1a3289d..4e348a251df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n@@ -43,4 +43,4 @@ public class AdapterRedactionEngineRetrieveServicePortDescriptor extends Adapter\n         return WS_ADDRESSING_ACTION_RETRIEVE;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\nindex 5a4a1a3289d..c5c10811454 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n@@ -31,16 +31,21 @@ package gov.hhs.fha.nhinc.redactionengine.adapter.proxy.service;\n  * @author akong\n  *\n  */\n-public class AdapterRedactionEngineRetrieveServicePortDescriptor extends AdapterRedactionEngineServicePortDescriptor {\n+\n+\n+public class AdapterRedactionEngineRetrieveServicePortDescriptor extends\n+    AdapterRedactionEngineServicePortDescriptor {\n \n     private static final String WS_ADDRESSING_ACTION_RETRIEVE = \"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n \n     /* (non-Javadoc)\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n      */\n+\n+\n     @Override\n     public String getWSAddressingAction() {\n         return WS_ADDRESSING_ACTION_RETRIEVE;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 145).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "64",
+                    "severity": "error",
+                    "message": "'=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\nindex 5a4a1a3289d..5a04fcc514b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/164/AdapterRedactionEngineRetrieveServicePortDescriptor.java\n@@ -33,7 +33,8 @@ package gov.hhs.fha.nhinc.redactionengine.adapter.proxy.service;\n  */\n public class AdapterRedactionEngineRetrieveServicePortDescriptor extends AdapterRedactionEngineServicePortDescriptor {\n \n-    private static final String WS_ADDRESSING_ACTION_RETRIEVE = \"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n+\n+    private static final String WS_ADDRESSING_ACTION_RETRIEVE =\"urn:gov:hhs:fha:nhinc:adaptercomponentredaction:FilterDocRetrieveResultsRequest\";\n \n     /* (non-Javadoc)\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

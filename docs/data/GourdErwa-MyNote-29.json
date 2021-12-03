@@ -1,0 +1,100 @@
+{
+    "project_name": "GourdErwa-MyNote",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "public interface Wizard {\n\n    void smoke();\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/29/Wizard.java\nindex 09c3b08a963..b659556aa47 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/29/Wizard.java\n@@ -27,8 +27,6 @@ package com.iluwatar.dependency.injection;\n  * Wizard interface\n  *\n  */\n-public interface Wizard {\n-\n-    void smoke();\n+public interface Wizard {void smoke();\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/29/Wizard.java\nindex 09c3b08a963..726850127bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/29/Wizard.java\n@@ -20,15 +20,14 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package com.iluwatar.dependency.injection;\n \n /**\n- *\n  * Wizard interface\n- *\n  */\n public interface Wizard {\n \n-    void smoke();\n+  void smoke();\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/29/Wizard.java\nindex 09c3b08a963..ab431d1e051 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/29/Wizard.java\n@@ -31,4 +31,4 @@ public interface Wizard {\n \n     void smoke();\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/29/Wizard.java\nindex 09c3b08a963..55fc7eeae8c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/29/Wizard.java\n@@ -27,8 +27,12 @@ package com.iluwatar.dependency.injection;\n  * Wizard interface\n  *\n  */\n+\n+\n public interface Wizard {\n \n-    void smoke();\n \n-}\n+    void smoke()\n+;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/29/Wizard.java\nindex 09c3b08a963..b659556aa47 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/29/Wizard.java\n@@ -27,8 +27,6 @@ package com.iluwatar.dependency.injection;\n  * Wizard interface\n  *\n  */\n-public interface Wizard {\n-\n-    void smoke();\n+public interface Wizard {void smoke();\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'smoke' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/29/Wizard.java\nindex 09c3b08a963..0571ea8177b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/29/Wizard.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/29/Wizard.java\n@@ -27,8 +27,7 @@ package com.iluwatar.dependency.injection;\n  * Wizard interface\n  *\n  */\n-public interface Wizard {\n-\n-    void smoke();\n+public interface Wizard { void\n+smoke();\n \n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

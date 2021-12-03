@@ -1,0 +1,128 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "109",
+    "information": {
+        "violations": [
+            {
+                "line": "92",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 158).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        private double throughputDeviation;\n        /**\n         * @deprecated We don't show a total duration in the WebUI and a report, but we decided to keep a total duration deviation for a session's comparison.\n         *             Afterwords, we should remove it.\n         */\n        @Deprecated",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/109/WorkloadSessionComparisonReporter.java\nindex 1ddde815e99..b5a155429e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/109/WorkloadSessionComparisonReporter.java\n@@ -36,10 +36,10 @@ import java.util.Comparator;\n import java.util.List;\n \n public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvider<Collection<Verdict<WorkloadComparisonResult>>> {\n-    \n+\n     public static final Comparator<WorkloadSessionComparisonDto> BY_NAME =\n             Comparator.comparing(WorkloadSessionComparisonDto::getName);\n-    \n+\n     private StatusImageProvider statusImageProvider;\n \n     @Override\n@@ -73,7 +73,7 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n \n             result.add(dto);\n         }\n-    \n+\n         Collections.sort(result, BY_NAME);\n         return new JRBeanCollectionDataSource(result);\n     }\n@@ -84,13 +84,13 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n     }\n \n     public static class WorkloadSessionComparisonDto {\n-        \n+\n         private String name;\n         private Decision decision;\n         private double throughputDeviation;\n         /**\n          * @deprecated We don't show a total duration in the WebUI and a report, but we decided to keep a total duration deviation for a session's comparison.\n-         *             Afterwords, we should remove it.\n+         * Afterwords, we should remove it.\n          */\n         @Deprecated\n         private double totalDurationDeviation;\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "44",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "87",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "88",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "91",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/109/WorkloadSessionComparisonReporter.java\nindex 1ddde815e99..f838698ec0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/109/WorkloadSessionComparisonReporter.java\n@@ -37,12 +37,11 @@ import java.util.List;\n \n public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvider<Collection<Verdict<WorkloadComparisonResult>>> {\n     \n-    public static final Comparator<WorkloadSessionComparisonDto> BY_NAME =\n-            Comparator.comparing(WorkloadSessionComparisonDto::getName);\n+    public static final Comparator<WorkloadSessionComparisonDto> BY_NAME = Comparator.comparing(WorkloadSessionComparisonDto::getName);\n     \n     private StatusImageProvider statusImageProvider;\n \n-    @Override\n+@Override\n     public JRDataSource getDataSource(Collection<Verdict<WorkloadComparisonResult>> key, String sessionId) {\n         getContext().getParameters().put(\"jagger.workloadsessioncomparator.statusImageProvider\", statusImageProvider);\n \n@@ -73,8 +72,8 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n \n             result.add(dto);\n         }\n-    \n-        Collections.sort(result, BY_NAME);\n+\n+Collections.sort(result, BY_NAME);\n         return new JRBeanCollectionDataSource(result);\n     }\n \n@@ -84,9 +83,9 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n     }\n \n     public static class WorkloadSessionComparisonDto {\n-        \n-        private String name;\n-        private Decision decision;\n+\n+    private String name;\n+private Decision decision;\n         private double throughputDeviation;\n         /**\n          * @deprecated We don't show a total duration in the WebUI and a report, but we decided to keep a total duration deviation for a session's comparison.\n@@ -163,5 +162,4 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n             this.stdDevLatencyDeviation = stdDevLatencyDeviation;\n         }\n     }\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "85",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/109/WorkloadSessionComparisonReporter.java\nindex 1ddde815e99..4f9bbe45399 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/109/WorkloadSessionComparisonReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/109/WorkloadSessionComparisonReporter.java\n@@ -27,19 +27,16 @@ import com.griddynamics.jagger.util.Decision;\n import net.sf.jasperreports.engine.JRDataSource;\n import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;\n import org.springframework.beans.factory.annotation.Required;\n-\n import com.google.common.collect.Lists;\n-\n import java.util.Collection;\n import java.util.Collections;\n import java.util.Comparator;\n import java.util.List;\n \n+\n public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvider<Collection<Verdict<WorkloadComparisonResult>>> {\n-    \n-    public static final Comparator<WorkloadSessionComparisonDto> BY_NAME =\n-            Comparator.comparing(WorkloadSessionComparisonDto::getName);\n-    \n+\n+    public static final Comparator<WorkloadSessionComparisonDto> BY_NAME = Comparator.comparing(WorkloadSessionComparisonDto::getName);\n     private StatusImageProvider statusImageProvider;\n \n     @Override\n@@ -47,10 +44,8 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n         getContext().getParameters().put(\"jagger.workloadsessioncomparator.statusImageProvider\", statusImageProvider);\n \n         List<WorkloadSessionComparisonDto> result = Lists.newArrayList();\n-\n         for (Verdict<WorkloadComparisonResult> verdict : key) {\n             WorkloadSessionComparisonDto dto = new WorkloadSessionComparisonDto();\n-\n             dto.setName(verdict.getDescription());\n             dto.setDecision(verdict.getDecision());\n \n@@ -70,10 +65,8 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n                 dto.setTotalDurationDeviation(0.0);\n                 dto.setSuccessRateDeviation(0.0);\n             }\n-\n             result.add(dto);\n         }\n-    \n         Collections.sort(result, BY_NAME);\n         return new JRBeanCollectionDataSource(result);\n     }\n@@ -84,7 +77,7 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n     }\n \n     public static class WorkloadSessionComparisonDto {\n-        \n+\n         private String name;\n         private Decision decision;\n         private double throughputDeviation;\n@@ -92,13 +85,13 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n          * @deprecated We don't show a total duration in the WebUI and a report, but we decided to keep a total duration deviation for a session's comparison.\n          *             Afterwords, we should remove it.\n          */\n+\n         @Deprecated\n         private double totalDurationDeviation;\n         private double successRateDeviation;\n         private double avgLatencyDeviation;\n         private double stdDevLatencyDeviation;\n \n-\n         public String getName() {\n             return name;\n         }\n@@ -126,6 +119,7 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n         /**\n          * @deprecated we don't show a total duration in the WebUI and a report\n          */\n+\n         @Deprecated\n         public double getTotalDurationDeviation() {\n             return totalDurationDeviation;\n@@ -134,6 +128,7 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n         /**\n          * @deprecated we don't show a total duration in the WebUI and a report\n          */\n+\n         @Deprecated\n         public void setTotalDurationDeviation(double totalDurationDeviation) {\n             this.totalDurationDeviation = totalDurationDeviation;\n@@ -163,5 +158,4 @@ public class WorkloadSessionComparisonReporter extends AbstractMappedReportProvi\n             this.stdDevLatencyDeviation = stdDevLatencyDeviation;\n         }\n     }\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

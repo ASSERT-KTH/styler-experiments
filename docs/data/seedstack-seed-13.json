@@ -1,0 +1,95 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.cli;\n\nimport java.util.concurrent.Callable;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/13/CommandLineHandler.java\nindex 4f195e84f10..40f055dc300 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/13/CommandLineHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.cli;\n \n import java.util.concurrent.Callable;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/13/CommandLineHandler.java\nindex 4f195e84f10..40f055dc300 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/13/CommandLineHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.cli;\n \n import java.util.concurrent.Callable;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "68",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "warning",
+                    "message": "Block comment has incorrect indentation level 0, expected is 3, indentation should be the same level as line 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "12",
+                    "column": "64",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' should followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/13/CommandLineHandler.java\nindex 4f195e84f10..1e1ce551afb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/13/CommandLineHandler.java\n@@ -5,13 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n-package org.seedstack.seed.cli;\n-\n-import java.util.concurrent.Callable;\n+package org.seedstack.seed.cli;import java.util.concurrent.Callable;\n \n /**\n  * This interface encapsulates the behaviour that will be handled by the SeedRunner.\n- */\n-public interface CommandLineHandler extends Callable<Integer> {\n-\n-}\n+ */public interface CommandLineHandler extends Callable<Integer>{ }\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/13/CommandLineHandler.java\nindex 4f195e84f10..40f055dc300 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/13/CommandLineHandler.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.cli;\n \n import java.util.concurrent.Callable;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/13/CommandLineHandler.java\nindex 4f195e84f10..1e5199fce78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/13/CommandLineHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/13/CommandLineHandler.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.cli;\n \n import java.util.concurrent.Callable;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

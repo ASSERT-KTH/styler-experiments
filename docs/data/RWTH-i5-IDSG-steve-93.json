@@ -1,0 +1,63 @@
+{
+    "project_name": "RWTH-i5-IDSG-steve",
+    "violation_id": "93",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "column": "55",
+                "severity": "error",
+                "message": "',' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public Ocpp15JacksonModule() {\n        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n    }\n\n    @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/final/files-repaired/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..cb08f6b0cd6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/final/files-repaired/93/Ocpp15JacksonModule.java\n@@ -36,7 +36,7 @@ import ocpp.cs._2012._06.ValueFormat;\n public class Ocpp15JacksonModule extends SimpleModule {\n \n     public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n+        super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n     }\n \n     @Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/checkstyle_idea/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..7909c5c3290 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/checkstyle_idea/93/Ocpp15JacksonModule.java\n@@ -35,42 +35,42 @@ import ocpp.cs._2012._06.ValueFormat;\n  */\n public class Ocpp15JacksonModule extends SimpleModule {\n \n-    public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n-    }\n+  public Ocpp15JacksonModule() {\n+    super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n+  }\n \n-    @Override\n-    public void setupModule(Module.SetupContext sc) {\n-        sc.setMixInAnnotations(MeterValuesRequest.class, MeterValue15Mixin.class);\n+  @Override\n+  public void setupModule(Module.SetupContext sc) {\n+    sc.setMixInAnnotations(MeterValuesRequest.class, MeterValue15Mixin.class);\n \n-        // Enums from CP\n-        sc.setMixInAnnotations(ocpp.cp._2012._06.AuthorizationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(AvailabilityStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(AvailabilityType.class, EnumMixin.class);\n-        sc.setMixInAnnotations(CancelReservationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ClearCacheStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ConfigurationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ocpp.cp._2012._06.DataTransferStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(RemoteStartStopStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ReservationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ResetStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ResetType.class, EnumMixin.class);\n-        sc.setMixInAnnotations(UnlockStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(UpdateStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(UpdateType.class, EnumMixin.class);\n+    // Enums from CP\n+    sc.setMixInAnnotations(ocpp.cp._2012._06.AuthorizationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(AvailabilityStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(AvailabilityType.class, EnumMixin.class);\n+    sc.setMixInAnnotations(CancelReservationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ClearCacheStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ConfigurationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ocpp.cp._2012._06.DataTransferStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(RemoteStartStopStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ReservationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ResetStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ResetType.class, EnumMixin.class);\n+    sc.setMixInAnnotations(UnlockStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(UpdateStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(UpdateType.class, EnumMixin.class);\n \n-        // Enums from CS\n-        sc.setMixInAnnotations(ocpp.cs._2012._06.AuthorizationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ChargePointErrorCode.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ChargePointStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ocpp.cs._2012._06.DataTransferStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(DiagnosticsStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(FirmwareStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(Location.class, EnumMixin.class);\n-        sc.setMixInAnnotations(Measurand.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ReadingContext.class, EnumMixin.class);\n-        sc.setMixInAnnotations(RegistrationStatus.class, EnumMixin.class);\n-        sc.setMixInAnnotations(UnitOfMeasure.class, EnumMixin.class);\n-        sc.setMixInAnnotations(ValueFormat.class, EnumMixin.class);\n-    }\n+    // Enums from CS\n+    sc.setMixInAnnotations(ocpp.cs._2012._06.AuthorizationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ChargePointErrorCode.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ChargePointStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ocpp.cs._2012._06.DataTransferStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(DiagnosticsStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(FirmwareStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(Location.class, EnumMixin.class);\n+    sc.setMixInAnnotations(Measurand.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ReadingContext.class, EnumMixin.class);\n+    sc.setMixInAnnotations(RegistrationStatus.class, EnumMixin.class);\n+    sc.setMixInAnnotations(UnitOfMeasure.class, EnumMixin.class);\n+    sc.setMixInAnnotations(ValueFormat.class, EnumMixin.class);\n+  }\n }\n",
+            "diff_size": 35
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/naturalize/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..dd90b10f1cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/naturalize/93/Ocpp15JacksonModule.java\n@@ -36,7 +36,7 @@ import ocpp.cs._2012._06.ValueFormat;\n public class Ocpp15JacksonModule extends SimpleModule {\n \n     public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n+        super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n     }\n \n     @Override\n@@ -73,4 +73,4 @@ public class Ocpp15JacksonModule extends SimpleModule {\n         sc.setMixInAnnotations(UnitOfMeasure.class, EnumMixin.class);\n         sc.setMixInAnnotations(ValueFormat.class, EnumMixin.class);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/codebuff/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..d5cea9f016d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/codebuff/93/Ocpp15JacksonModule.java\n@@ -33,10 +33,12 @@ import ocpp.cs._2012._06.ValueFormat;\n  * @author Sevket Goekay <goekay@dbis.rwth-aachen.de>\n  * @since 27.04.2015\n  */\n+\n+\n public class Ocpp15JacksonModule extends SimpleModule {\n \n     public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n+        super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n     }\n \n     @Override\n@@ -73,4 +75,4 @@ public class Ocpp15JacksonModule extends SimpleModule {\n         sc.setMixInAnnotations(UnitOfMeasure.class, EnumMixin.class);\n         sc.setMixInAnnotations(ValueFormat.class, EnumMixin.class);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/random/files-repaired/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..cb08f6b0cd6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/random/files-repaired/93/Ocpp15JacksonModule.java\n@@ -36,7 +36,7 @@ import ocpp.cs._2012._06.ValueFormat;\n public class Ocpp15JacksonModule extends SimpleModule {\n \n     public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n+        super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n     }\n \n     @Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/three_grams/files-repaired/93/Ocpp15JacksonModule.java\nindex 82b4ac3478a..cb08f6b0cd6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/violations/93/Ocpp15JacksonModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/RWTH-i5-IDSG-steve/styler/05_predictions/three_grams/files-repaired/93/Ocpp15JacksonModule.java\n@@ -36,7 +36,7 @@ import ocpp.cs._2012._06.ValueFormat;\n public class Ocpp15JacksonModule extends SimpleModule {\n \n     public Ocpp15JacksonModule() {\n-        super(\"Ocpp15JacksonModule\", new Version(0, 0 , 1, null, \"de.rwth.idsg\", \"steve\"));\n+        super(\"Ocpp15JacksonModule\", new Version(0, 0, 1, null, \"de.rwth.idsg\", \"steve\"));\n     }\n \n     @Override\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

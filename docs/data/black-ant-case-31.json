@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "31",
+    "information": {
+        "violations": [
+            {
+                "line": "41",
+                "column": "80",
+                "severity": "error",
+                "message": "'+' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    public void sendMain() {\n        logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n                \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n                \"ding\").build());",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/31/Produce.java\nindex bbb525737da..842309ac0e4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/31/Produce.java\n@@ -38,8 +38,7 @@ public class Produce {\n \n     public void sendMain() {\n         logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n-        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n-                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n+        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" + \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n                 \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n                 \"ding\").build());\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "41",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/31/Produce.java\nindex bbb525737da..208b7e65aed 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/31/Produce.java\n@@ -39,9 +39,9 @@ public class Produce {\n     public void sendMain() {\n         logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n         syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n-                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n-                \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n-                \"ding\").build());\n+            \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n+            \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n+            \"ding\").build());\n     }\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/31/Produce.java\nindex bbb525737da..ebb1a965cc1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/31/Produce.java\n@@ -38,10 +38,7 @@ public class Produce {\n \n     public void sendMain() {\n         logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n-        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n-                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n-                \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n-                \"ding\").build());\n+        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" + \"stream\").setHeader(SyncConstants.HEADER_OPERATION, \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE, \"ding\").build());\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/31/Produce.java\nindex bbb525737da..842309ac0e4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/31/Produce.java\n@@ -38,8 +38,7 @@ public class Produce {\n \n     public void sendMain() {\n         logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n-        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n-                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n+        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" + \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n                 \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n                 \"ding\").build());\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/31/Produce.java\nindex bbb525737da..842309ac0e4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/31/Produce.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/31/Produce.java\n@@ -38,8 +38,7 @@ public class Produce {\n \n     public void sendMain() {\n         logger.info(\"------> this is in test :{} <-------\", testClass.getName());\n-        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" +\n-                \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n+        syncEventProducer.producer().send(MessageBuilder.withPayload(\"hello1 \" + \"stream\").setHeader(SyncConstants.HEADER_OPERATION,\n                 \"create\").setHeader(SyncConstants.HEADER_TYPE, \"org\").setHeader(SyncConstants.HEADER_APP_TYPE,\n                 \"ding\").build());\n     }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

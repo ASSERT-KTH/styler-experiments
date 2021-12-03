@@ -1,0 +1,63 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "4",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "column": "28",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private final RestTemplate restTemplate = RestTemplateBuilder.create();\n\n  public void invokeHello(){\n    String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/4/HelloConsumer.java\nindex 7007c11885f..f660de98be9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/4/HelloConsumer.java\n@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/4/HelloConsumer.java\nindex 7007c11885f..f660de98be9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/4/HelloConsumer.java\n@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/4/HelloConsumer.java\nindex 7007c11885f..1883c9a70b7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/4/HelloConsumer.java\n@@ -23,8 +23,8 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/4/HelloConsumer.java\nindex 7007c11885f..6ea38307872 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/4/HelloConsumer.java\n@@ -23,8 +23,7 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/4/HelloConsumer.java\nindex 7007c11885f..f660de98be9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/4/HelloConsumer.java\n@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/4/HelloConsumer.java\nindex 7007c11885f..f660de98be9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/4/HelloConsumer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/4/HelloConsumer.java\n@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;\n public class HelloConsumer {\n   private final RestTemplate restTemplate = RestTemplateBuilder.create();\n \n-  public void invokeHello(){\n+  public void invokeHello() {\n     String result = restTemplate.getForObject(\"cse://business-service/hello\", String.class);\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

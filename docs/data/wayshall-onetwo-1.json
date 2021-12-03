@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "1",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "column": "102",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\t@Bean\n\t@ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository(){\n\t\treturn new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/1/OAuth2SsoClientConfiguration.java\nindex 541e466812f..79af62bf1bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/1/OAuth2SsoClientConfiguration.java\n@@ -15,7 +15,7 @@ public class OAuth2SsoClientConfiguration {\n \n \t@Bean\n \t@ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n-\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository(){\n+\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository() {\n \t\treturn new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n \t}\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/1/OAuth2SsoClientConfiguration.java\nindex 541e466812f..9caa279f2e1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/1/OAuth2SsoClientConfiguration.java\n@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;\n @EnableConfigurationProperties(OAuth2SsoClientProperties.class)\n public class OAuth2SsoClientConfiguration {\n \n-\t@Bean\n-\t@ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n-\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository(){\n-\t\treturn new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n-\t}\n+  @Bean\n+  @ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n+  public OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository() {\n+    return new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n+  }\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/1/OAuth2SsoClientConfiguration.java\nindex 541e466812f..79af62bf1bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/1/OAuth2SsoClientConfiguration.java\n@@ -15,7 +15,7 @@ public class OAuth2SsoClientConfiguration {\n \n \t@Bean\n \t@ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n-\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository(){\n+\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository() {\n \t\treturn new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n \t}\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/1/OAuth2SsoClientConfiguration.java\nindex 541e466812f..79af62bf1bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/1/OAuth2SsoClientConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/1/OAuth2SsoClientConfiguration.java\n@@ -15,7 +15,7 @@ public class OAuth2SsoClientConfiguration {\n \n \t@Bean\n \t@ConditionalOnMissingBean(OAuth2SsoClientUserRepository.class)\n-\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository(){\n+\tpublic OAuth2SsoClientUserRepository<OAuth2SsoClientUserInfo> oauth2SsoClientUserRepository() {\n \t\treturn new HttpRequestOAuth2UserRepository<OAuth2SsoClientUserInfo>();\n \t}\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

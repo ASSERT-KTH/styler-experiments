@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "137",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/137/BinaryLogisticLoss.java\nindex 9e51734acf1..84898b71da4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/137/BinaryLogisticLoss.java\n@@ -25,43 +25,43 @@ import javax.inject.Singleton;\n @Singleton\n public class BinaryLogisticLoss implements BinaryLoss {\n \n-  private static BinaryLogisticLoss instance;\n+    private static BinaryLogisticLoss instance;\n \n-  private BinaryLogisticLoss() {\n-  }\n+    private BinaryLogisticLoss() {\n+    }\n \n-  @Override\n-  public Kind getKind() {\n-    return Kind.BinaryLogistic;\n-  }\n+    @Override\n+    public Kind getKind() {\n+        return Kind.BinaryLogistic;\n+    }\n \n-  @Override\n-  public EvalMetric.Kind defaultEvalMetric() {\n-    return EvalMetric.Kind.LOG_LOSS;\n-  }\n+    @Override\n+    public EvalMetric.Kind defaultEvalMetric() {\n+        return EvalMetric.Kind.LOG_LOSS;\n+    }\n \n-  @Override\n-  public double firOrderGrad(float pred, float label) {\n-    double prob = Maths.fastSigmoid(pred);\n-    return prob - label;\n-  }\n+    @Override\n+    public double firOrderGrad(float pred, float label) {\n+        double prob = Maths.fastSigmoid(pred);\n+        return prob - label;\n+    }\n \n-  @Override\n-  public double secOrderGrad(float pred, float label) {\n-    double prob = Maths.fastSigmoid(pred);\n-    return Math.max(prob * (1 - prob), Maths.EPSILON);\n-  }\n+    @Override\n+    public double secOrderGrad(float pred, float label) {\n+        double prob = Maths.fastSigmoid(pred);\n+        return Math.max(prob * (1 - prob), Maths.EPSILON);\n+    }\n \n-  @Override\n-  public double secOrderGrad(float pred, float label, double firGrad) {\n-    double prob = firGrad + label;\n-    return Math.max(prob * (1 - prob), Maths.EPSILON);\n-  }\n+    @Override\n+    public double secOrderGrad(float pred, float label, double firGrad) {\n+        double prob = firGrad + label;\n+        return Math.max(prob * (1 - prob), Maths.EPSILON);\n+    }\n \n-  public static BinaryLogisticLoss getInstance() {\n-    if (instance == null) {\n-      instance = new BinaryLogisticLoss();\n+    public static BinaryLogisticLoss getInstance() {\n+        if (instance == null) {\n+            instance = new BinaryLogisticLoss();\n+        }\n+        return instance;\n     }\n-    return instance;\n-  }\n }\n",
+            "diff_size": 33
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/137/BinaryLogisticLoss.java\nindex 9e51734acf1..0134cd541f0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/137/BinaryLogisticLoss.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.spark.ml.tree.objective.loss;\n \n import com.tencent.angel.spark.ml.tree.objective.metric.EvalMetric;\n@@ -64,4 +63,4 @@ public class BinaryLogisticLoss implements BinaryLoss {\n     }\n     return instance;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/137/BinaryLogisticLoss.java\nindex 9e51734acf1..f3afac555a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/137/BinaryLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/137/BinaryLogisticLoss.java\n@@ -27,8 +27,7 @@ public class BinaryLogisticLoss implements BinaryLoss {\n \n   private static BinaryLogisticLoss instance;\n \n-  private BinaryLogisticLoss() {\n-  }\n+  private BinaryLogisticLoss() {}\n \n   @Override\n   public Kind getKind() {\n@@ -64,4 +63,4 @@ public class BinaryLogisticLoss implements BinaryLoss {\n     }\n     return instance;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "145",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "93",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "public interface DUIJsonValueWriter {\n\t\n\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException ;\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/145/DUIJsonValueWriter.java\nindex 8c4b0517995..4dbe9fcb939 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/145/DUIJsonValueWriter.java\n@@ -12,6 +12,6 @@ import com.fasterxml.jackson.core.JsonGenerator;\n  */\n public interface DUIJsonValueWriter {\n \t\n-\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException ;\n+\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/145/DUIJsonValueWriter.java\nindex 8c4b0517995..dd4041b7dac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/145/DUIJsonValueWriter.java\n@@ -11,7 +11,7 @@ import com.fasterxml.jackson.core.JsonGenerator;\n  * <br/>\n  */\n public interface DUIJsonValueWriter {\n-\t\n-\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException ;\n+\n+  void write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException;\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/145/DUIJsonValueWriter.java\nindex 8c4b0517995..4dbe9fcb939 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/145/DUIJsonValueWriter.java\n@@ -12,6 +12,6 @@ import com.fasterxml.jackson.core.JsonGenerator;\n  */\n public interface DUIJsonValueWriter {\n \t\n-\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException ;\n+\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/145/DUIJsonValueWriter.java\nindex 8c4b0517995..4dbe9fcb939 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/145/DUIJsonValueWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/145/DUIJsonValueWriter.java\n@@ -12,6 +12,6 @@ import com.fasterxml.jackson.core.JsonGenerator;\n  */\n public interface DUIJsonValueWriter {\n \t\n-\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException ;\n+\tvoid write(Object value, DUIFieldMeta field, JsonGenerator jgen) throws IOException;\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

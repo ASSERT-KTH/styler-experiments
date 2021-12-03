@@ -1,0 +1,110 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "106",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @GetMapping(\"/favorites\")\n  public List<Favorite> findFavorites(@RequestParam(value = \"userId\", required = false) String userId,\n                                      @RequestParam(value = \"appId\", required = false) String appId,\n                                      Pageable page) {\n    return favoriteService.search(userId, appId, page);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/106/FavoriteController.java\nindex fd503f765da..962b051b974 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/106/FavoriteController.java\n@@ -29,9 +29,10 @@ public class FavoriteController {\n \n \n   @GetMapping(\"/favorites\")\n-  public List<Favorite> findFavorites(@RequestParam(value = \"userId\", required = false) String userId,\n-                                      @RequestParam(value = \"appId\", required = false) String appId,\n-                                      Pageable page) {\n+  public List<Favorite> findFavorites(\n+      @RequestParam(value = \"userId\", required = false) String userId,\n+      @RequestParam(value = \"appId\", required = false) String appId,\n+      Pageable page) {\n     return favoriteService.search(userId, appId, page);\n   }\n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "'@' has incorrect indentation level 0, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/106/FavoriteController.java\nindex fd503f765da..927eb1779d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/106/FavoriteController.java\n@@ -30,9 +30,9 @@ public class FavoriteController {\n \n   @GetMapping(\"/favorites\")\n   public List<Favorite> findFavorites(@RequestParam(value = \"userId\", required = false) String userId,\n-                                      @RequestParam(value = \"appId\", required = false) String appId,\n+@RequestParam(value = \"appId\", required = false) String appId,\n                                       Pageable page) {\n-    return favoriteService.search(userId, appId, page);\n+  return favoriteService.search(userId, appId, page);\n   }\n \n \n@@ -47,4 +47,4 @@ public class FavoriteController {\n     favoriteService.adjustFavoriteToFirst(favoriteId);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 182).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/106/FavoriteController.java\nindex fd503f765da..3b5fb56f27b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/106/FavoriteController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/106/FavoriteController.java\n@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;\n import org.springframework.web.bind.annotation.RequestBody;\n import org.springframework.web.bind.annotation.RequestParam;\n import org.springframework.web.bind.annotation.RestController;\n-\n import java.util.List;\n \n @RestController\n@@ -21,30 +20,23 @@ public class FavoriteController {\n   @Autowired\n   private FavoriteService favoriteService;\n \n-\n   @PostMapping(\"/favorites\")\n   public Favorite addFavorite(@RequestBody Favorite favorite) {\n     return favoriteService.addFavorite(favorite);\n   }\n \n-\n   @GetMapping(\"/favorites\")\n-  public List<Favorite> findFavorites(@RequestParam(value = \"userId\", required = false) String userId,\n-                                      @RequestParam(value = \"appId\", required = false) String appId,\n-                                      Pageable page) {\n+  public List<Favorite> findFavorites(@RequestParam(value = \"userId\", required = false) String userId, @RequestParam(value = \"appId\", required = false) String appId, Pageable page) {\n     return favoriteService.search(userId, appId, page);\n   }\n \n-\n   @DeleteMapping(\"/favorites/{favoriteId}\")\n   public void deleteFavorite(@PathVariable long favoriteId) {\n     favoriteService.deleteFavorite(favoriteId);\n   }\n \n-\n   @PutMapping(\"/favorites/{favoriteId}\")\n   public void toTop(@PathVariable long favoriteId) {\n     favoriteService.adjustFavoriteToFirst(favoriteId);\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

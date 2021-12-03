@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string output_uri_prefix = 1;</code>\n   */\n  com.google.protobuf.ByteString getOutputUriPrefixBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/27/ExportDocumentsResponseOrBuilder.java\nindex fa2fabdedb0..b423785e3d8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/27/ExportDocumentsResponseOrBuilder.java\n@@ -31,5 +31,7 @@ public interface ExportDocumentsResponseOrBuilder\n    *\n    * <code>string output_uri_prefix = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getOutputUriPrefixBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/27/ExportDocumentsResponseOrBuilder.java\nindex fa2fabdedb0..7b04df45c30 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/27/ExportDocumentsResponseOrBuilder.java\n@@ -9,8 +9,6 @@ public interface ExportDocumentsResponseOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * Location of the output files. This can be used to begin an import\n    * into Cloud Firestore (this project or another project) after the operation\n@@ -20,9 +18,8 @@ public interface ExportDocumentsResponseOrBuilder\n    * <code>string output_uri_prefix = 1;</code>\n    */\n   java.lang.String getOutputUriPrefix();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * Location of the output files. This can be used to begin an import\n    * into Cloud Firestore (this project or another project) after the operation\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/27/ExportDocumentsResponseOrBuilder.java\nindex fa2fabdedb0..42c2686ae2c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/27/ExportDocumentsResponseOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.firestore.admin.v1;\n \n-public interface ExportDocumentsResponseOrBuilder\n-    extends\n+public interface ExportDocumentsResponseOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.firestore.admin.v1.ExportDocumentsResponse)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -20,7 +19,8 @@ public interface ExportDocumentsResponseOrBuilder\n    * <code>string output_uri_prefix = 1;</code>\n    */\n   java.lang.String getOutputUriPrefix();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -32,4 +32,4 @@ public interface ExportDocumentsResponseOrBuilder\n    * <code>string output_uri_prefix = 1;</code>\n    */\n   com.google.protobuf.ByteString getOutputUriPrefixBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/27/ExportDocumentsResponseOrBuilder.java\nindex fa2fabdedb0..1ed03df577c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/27/ExportDocumentsResponseOrBuilder.java\n@@ -31,5 +31,6 @@ public interface ExportDocumentsResponseOrBuilder\n    *\n    * <code>string output_uri_prefix = 1;</code>\n    */\n-  com.google.protobuf.ByteString getOutputUriPrefixBytes();\n-}\n+  com.google.protobuf.ByteString getOutputUriPrefixBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/27/ExportDocumentsResponseOrBuilder.java\nindex fa2fabdedb0..b423785e3d8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/27/ExportDocumentsResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/27/ExportDocumentsResponseOrBuilder.java\n@@ -31,5 +31,7 @@ public interface ExportDocumentsResponseOrBuilder\n    *\n    * <code>string output_uri_prefix = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getOutputUriPrefixBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

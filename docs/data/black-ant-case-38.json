@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "38",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "column": "35",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Override\n    public int calculate(int num1,int num2) {\n        return num1 + num2;\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/38/Plus.java\nindex 1dbe4d94e0b..9f69ab35abe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/38/Plus.java\n@@ -9,7 +9,7 @@ package com.gang.design.design3.template;\n public class Plus extends AbstractCalculator {\n \n     @Override\n-    public int calculate(int num1,int num2) {\n+    public int calculate(int num1, int num2) {\n         return num1 + num2;\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/38/Plus.java\nindex 1dbe4d94e0b..9f69ab35abe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/38/Plus.java\n@@ -9,7 +9,7 @@ package com.gang.design.design3.template;\n public class Plus extends AbstractCalculator {\n \n     @Override\n-    public int calculate(int num1,int num2) {\n+    public int calculate(int num1, int num2) {\n         return num1 + num2;\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/38/Plus.java\nindex 1dbe4d94e0b..152b263749f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/38/Plus.java\n@@ -9,7 +9,7 @@ package com.gang.design.design3.template;\n public class Plus extends AbstractCalculator {\n \n     @Override\n-    public int calculate(int num1,int num2) {\n+    public int calculate(int num1, int num2) {\n         return num1 + num2;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/38/Plus.java\nindex 1dbe4d94e0b..9f69ab35abe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/38/Plus.java\n@@ -9,7 +9,7 @@ package com.gang.design.design3.template;\n public class Plus extends AbstractCalculator {\n \n     @Override\n-    public int calculate(int num1,int num2) {\n+    public int calculate(int num1, int num2) {\n         return num1 + num2;\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/38/Plus.java\nindex 1dbe4d94e0b..9f69ab35abe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/38/Plus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/38/Plus.java\n@@ -9,7 +9,7 @@ package com.gang.design.design3.template;\n public class Plus extends AbstractCalculator {\n \n     @Override\n-    public int calculate(int num1,int num2) {\n+    public int calculate(int num1, int num2) {\n         return num1 + num2;\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

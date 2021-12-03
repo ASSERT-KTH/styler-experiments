@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "183",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n   */\n  com.google.protobuf.ByteString getPolicyUriBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/183/AutoscalingConfigOrBuilder.java\nindex 6eaaf056517..36e0c0e56e2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/183/AutoscalingConfigOrBuilder.java\n@@ -37,5 +37,7 @@ public interface AutoscalingConfigOrBuilder\n    *\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getPolicyUriBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/183/AutoscalingConfigOrBuilder.java\nindex 6eaaf056517..7231274d90c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/183/AutoscalingConfigOrBuilder.java\n@@ -9,8 +9,6 @@ public interface AutoscalingConfigOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * Optional. The autoscaling policy used by the cluster.\n    * Only resource names including projectid and location (region) are valid.\n@@ -23,9 +21,8 @@ public interface AutoscalingConfigOrBuilder\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n   java.lang.String getPolicyUri();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * Optional. The autoscaling policy used by the cluster.\n    * Only resource names including projectid and location (region) are valid.\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/183/AutoscalingConfigOrBuilder.java\nindex 6eaaf056517..ca8e77c338f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/183/AutoscalingConfigOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.cloud.dataproc.v1;\n \n-public interface AutoscalingConfigOrBuilder\n-    extends\n+public interface AutoscalingConfigOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.cloud.dataproc.v1.AutoscalingConfig)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -23,7 +22,8 @@ public interface AutoscalingConfigOrBuilder\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n   java.lang.String getPolicyUri();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -38,4 +38,4 @@ public interface AutoscalingConfigOrBuilder\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n   com.google.protobuf.ByteString getPolicyUriBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/183/AutoscalingConfigOrBuilder.java\nindex 6eaaf056517..426add062fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/183/AutoscalingConfigOrBuilder.java\n@@ -37,5 +37,6 @@ public interface AutoscalingConfigOrBuilder\n    *\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n-  com.google.protobuf.ByteString getPolicyUriBytes();\n-}\n+  com.google.protobuf.ByteString getPolicyUriBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/183/AutoscalingConfigOrBuilder.java\nindex 6eaaf056517..36e0c0e56e2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/183/AutoscalingConfigOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/183/AutoscalingConfigOrBuilder.java\n@@ -37,5 +37,7 @@ public interface AutoscalingConfigOrBuilder\n    *\n    * <code>string policy_uri = 1 [(.google.api.field_behavior) = OPTIONAL];</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getPolicyUriBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

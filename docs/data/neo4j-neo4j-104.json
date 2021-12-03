@@ -1,0 +1,130 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "104",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "28",
+                    "column": "28",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "105",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "113",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/104/GlobalExtensions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/104/GlobalExtensions.java\nindex 2d70295b5e0..c25d7cb5e58 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/104/GlobalExtensions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/104/GlobalExtensions.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.extension;\n \n import org.neo4j.collection.Dependencies;\n@@ -24,9 +25,9 @@ import org.neo4j.kernel.extension.context.GlobalExtensionContext;\n \n public class GlobalExtensions extends AbstractExtensions\n {\n-    public GlobalExtensions( GlobalExtensionContext extensionContext, Iterable<ExtensionFactory<?>> extensionFactories,\n-                             Dependencies dependencies, ExtensionFailureStrategy extensionFailureStrategy )\n+    public GlobalExtensions(GlobalExtensionContext extensionContext, Iterable<ExtensionFactory<?>> extensionFactories,\n+                            Dependencies dependencies, ExtensionFailureStrategy extensionFailureStrategy)\n     {\n-        super( extensionContext, extensionFactories, dependencies, extensionFailureStrategy, ExtensionType.GLOBAL );\n+        super(extensionContext, extensionFactories, dependencies, extensionFailureStrategy, ExtensionType.GLOBAL);\n     }\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 198).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/104/GlobalExtensions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/naturalize/104/GlobalExtensions.java\nindex 2d70295b5e0..400d0a418b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/104/GlobalExtensions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/naturalize/104/GlobalExtensions.java\n@@ -24,9 +24,8 @@ import org.neo4j.kernel.extension.context.GlobalExtensionContext;\n \n public class GlobalExtensions extends AbstractExtensions\n {\n-    public GlobalExtensions( GlobalExtensionContext extensionContext, Iterable<ExtensionFactory<?>> extensionFactories,\n-                             Dependencies dependencies, ExtensionFailureStrategy extensionFailureStrategy )\n+    public GlobalExtensions( GlobalExtensionContext extensionContext, Iterable<ExtensionFactory<?>> extensionFactories, Dependencies dependencies, ExtensionFailureStrategy extensionFailureStrategy )\n     {\n         super( extensionContext, extensionFactories, dependencies, extensionFailureStrategy, ExtensionType.GLOBAL );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

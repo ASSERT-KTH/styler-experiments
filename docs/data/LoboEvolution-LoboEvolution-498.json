@@ -1,0 +1,96 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "498",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLFieldSetElement extends HTMLElement {\n\t/**\n\t * Returns the FORM element containing this control. Returns\n\t * null if this control is not within the context of a form.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/498/HTMLFieldSetElement.java\nindex cd4c5072c18..ad7059033c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/498/HTMLFieldSetElement.java\n@@ -35,12 +35,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+/**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/498/HTMLFieldSetElement.java\nindex cd4c5072c18..8b82e2f1899 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/498/HTMLFieldSetElement.java\n@@ -35,12 +35,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n-\t * Returns the FORM element containing this control. Returns\n-\t * null if this control is not within the context of a form.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n-\t */\n-\tHTMLFormElement getForm();\n+    /**\n+     * Returns the FORM element containing this control. Returns\n+     * null if this control is not within the context of a form.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n+     */\n+    HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "40",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/498/HTMLFieldSetElement.java\nindex cd4c5072c18..b2370c2a8c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/498/HTMLFieldSetElement.java\n@@ -35,12 +35,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+\n+    /**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n \tHTMLFormElement getForm();\n-\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/498/HTMLFieldSetElement.java\nindex cd4c5072c18..2f508237222 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/498/HTMLFieldSetElement.java\n@@ -34,13 +34,16 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n-\t * Returns the FORM element containing this control. Returns\n-\t * null if this control is not within the context of a form.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n-\t */\n-\tHTMLFormElement getForm();\n+    /**\n+     * Returns the FORM element containing this control. Returns\n+     * null if this control is not within the context of a form.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n+     */\n+\n \n-}\n+    HTMLFormElement getForm();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/498/HTMLFieldSetElement.java\nindex cd4c5072c18..ad7059033c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/498/HTMLFieldSetElement.java\n@@ -35,12 +35,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+/**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/498/HTMLFieldSetElement.java\nindex cd4c5072c18..b90a3bb0581 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/498/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/498/HTMLFieldSetElement.java\n@@ -35,12 +35,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+    /**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

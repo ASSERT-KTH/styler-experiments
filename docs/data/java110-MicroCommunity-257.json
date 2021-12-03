@@ -1,0 +1,98 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "257",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "severity": "error",
+                "message": "Line is longer than 150 characters (found 178).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        }\n\n        List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n\n        return feeDetails;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 179).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..db7d8ab3044 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\n@@ -43,7 +43,7 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n             feeDetailDto.setPage((page - 1) * feeDetailDto.getRow());\n         }\n \n-        List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n+        List <FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n \n         return feeDetails;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..e2d702cfa71 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/257/FeeDetailInnerServiceSMOImpl.java\n@@ -43,7 +43,8 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n             feeDetailDto.setPage((page - 1) * feeDetailDto.getRow());\n         }\n \n-        List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n+        List<FeeDetailDto> feeDetails =\n+            BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n \n         return feeDetails;\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 178).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..28210f4b807 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/257/FeeDetailInnerServiceSMOImpl.java\n@@ -75,4 +75,4 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n     public void setUserInnerServiceSMOImpl(IUserInnerServiceSMO userInnerServiceSMOImpl) {\n         this.userInnerServiceSMOImpl = userInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 178).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..b0deed89528 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/257/FeeDetailInnerServiceSMOImpl.java\n@@ -1,6 +1,5 @@\n package com.java110.fee.smo.impl;\n \n-\n import com.java110.core.base.smo.BaseServiceSMO;\n import com.java110.dto.PageDto;\n import com.java110.dto.fee.FeeDetailDto;\n@@ -12,7 +11,6 @@ import com.java110.utils.util.BeanConvertUtil;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.web.bind.annotation.RequestBody;\n import org.springframework.web.bind.annotation.RestController;\n-\n import java.util.List;\n \n /**\n@@ -23,6 +21,8 @@ import java.util.List;\n  * @Version 1.0\n  * add by wuxw 2019/4/24\n  **/\n+\n+\n @RestController\n public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFeeDetailInnerServiceSMO {\n \n@@ -37,18 +37,17 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n \n         //\u6821\u9a8c\u662f\u5426\u4f20\u4e86 \u5206\u9875\u4fe1\u606f\n \n-        int page = feeDetailDto.getPage();\n \n+\n+        int page = feeDetailDto.getPage();\n         if (page != PageDto.DEFAULT_PAGE) {\n             feeDetailDto.setPage((page - 1) * feeDetailDto.getRow());\n         }\n \n         List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n-\n         return feeDetails;\n     }\n \n-\n     @Override\n     public int queryFeeDetailsCount(@RequestBody FeeDetailDto feeDetailDto) {\n         return feeDetailServiceDaoImpl.queryFeeDetailsCount(BeanConvertUtil.beanCovertMap(feeDetailDto));\n@@ -75,4 +74,4 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n     public void setUserInnerServiceSMOImpl(IUserInnerServiceSMO userInnerServiceSMOImpl) {\n         this.userInnerServiceSMOImpl = userInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 179).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..db7d8ab3044 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\n@@ -43,7 +43,7 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n             feeDetailDto.setPage((page - 1) * feeDetailDto.getRow());\n         }\n \n-        List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n+        List <FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n \n         return feeDetails;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 178).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\nindex a7f01b450b9..828fd061797 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/257/FeeDetailInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/257/FeeDetailInnerServiceSMOImpl.java\n@@ -42,7 +42,6 @@ public class FeeDetailInnerServiceSMOImpl extends BaseServiceSMO implements IFee\n         if (page != PageDto.DEFAULT_PAGE) {\n             feeDetailDto.setPage((page - 1) * feeDetailDto.getRow());\n         }\n-\n         List<FeeDetailDto> feeDetails = BeanConvertUtil.covertBeanList(feeDetailServiceDaoImpl.getFeeDetailInfo(BeanConvertUtil.beanCovertMap(feeDetailDto)), FeeDetailDto.class);\n \n         return feeDetails;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

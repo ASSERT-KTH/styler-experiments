@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "239",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface TextMetrics {\n\n\t/**\n\t * Gets the width.\n\t *\n\t * @return the width",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/239/TextMetrics.java\nindex e87d732e3dd..0329b82e069 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/239/TextMetrics.java\n@@ -31,7 +31,7 @@ package org.loboevolution.html.dom;\n  */\n public interface TextMetrics {\n \n-\t/**\n+/**\n \t * Gets the width.\n \t *\n \t * @return the width\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/239/TextMetrics.java\nindex e87d732e3dd..3000ae258f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/239/TextMetrics.java\n@@ -31,18 +31,18 @@ package org.loboevolution.html.dom;\n  */\n public interface TextMetrics {\n \n-\t/**\n-\t * Gets the width.\n-\t *\n-\t * @return the width\n-\t */\n+    /**\n+     * Gets the width.\n+     *\n+     * @return the width\n+     */\n     double getWidth();\n \n-\t/**\n-\t * Gets the height.\n-\t *\n-\t * @return the height\n-\t */\n+    /**\n+     * Gets the height.\n+     *\n+     * @return the height\n+     */\n     double getHeight();\n \n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/239/TextMetrics.java\nindex e87d732e3dd..9df60f53aad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/239/TextMetrics.java\n@@ -29,20 +29,25 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface TextMetrics {\n \n-\t/**\n-\t * Gets the width.\n-\t *\n-\t * @return the width\n-\t */\n+    /**\n+     * Gets the width.\n+     *\n+     * @return the width\n+     */\n+\n+\n     double getWidth();\n \n-\t/**\n-\t * Gets the height.\n-\t *\n-\t * @return the height\n-\t */\n-    double getHeight();\n+    /**\n+     * Gets the height.\n+     *\n+     * @return the height\n+     */\n+\n \n-}\n+    double getHeight();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/239/TextMetrics.java\nindex e87d732e3dd..0329b82e069 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/239/TextMetrics.java\n@@ -31,7 +31,7 @@ package org.loboevolution.html.dom;\n  */\n public interface TextMetrics {\n \n-\t/**\n+/**\n \t * Gets the width.\n \t *\n \t * @return the width\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/239/TextMetrics.java\nindex e87d732e3dd..36374a25b89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/239/TextMetrics.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/239/TextMetrics.java\n@@ -31,12 +31,12 @@ package org.loboevolution.html.dom;\n  */\n public interface TextMetrics {\n \n-\t/**\n+    /**\n \t * Gets the width.\n \t *\n \t * @return the width\n \t */\n-    double getWidth();\n+double getWidth();\n \n \t/**\n \t * Gets the height.\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

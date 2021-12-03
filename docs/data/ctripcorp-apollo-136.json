@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "136",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "column": "60",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "@Component\n@Profile(\"ctrip\")\npublic class BizLoggingCustomizer extends LoggingCustomizer{\n\n  private final BizConfig bizConfig;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/136/BizLoggingCustomizer.java\nindex a23bf6f3437..98979d94fe4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/136/BizLoggingCustomizer.java\n@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n \n   private final BizConfig bizConfig;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/136/BizLoggingCustomizer.java\nindex a23bf6f3437..98979d94fe4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/136/BizLoggingCustomizer.java\n@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n \n   private final BizConfig bizConfig;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/136/BizLoggingCustomizer.java\nindex a23bf6f3437..b5f946d0373 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/136/BizLoggingCustomizer.java\n@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n \n   private final BizConfig bizConfig;\n \n@@ -24,4 +24,4 @@ public class BizLoggingCustomizer extends LoggingCustomizer{\n   protected String cloggingPort() {\n     return bizConfig.cloggingPort();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/136/BizLoggingCustomizer.java\nindex a23bf6f3437..b6733631fbb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/136/BizLoggingCustomizer.java\n@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n-\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n   private final BizConfig bizConfig;\n \n   public BizLoggingCustomizer(final BizConfig bizConfig) {\n@@ -24,4 +23,4 @@ public class BizLoggingCustomizer extends LoggingCustomizer{\n   protected String cloggingPort() {\n     return bizConfig.cloggingPort();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/136/BizLoggingCustomizer.java\nindex a23bf6f3437..98979d94fe4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/136/BizLoggingCustomizer.java\n@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n \n   private final BizConfig bizConfig;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/136/BizLoggingCustomizer.java\nindex a23bf6f3437..98979d94fe4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/136/BizLoggingCustomizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/136/BizLoggingCustomizer.java\n@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;\n \n @Component\n @Profile(\"ctrip\")\n-public class BizLoggingCustomizer extends LoggingCustomizer{\n+public class BizLoggingCustomizer extends LoggingCustomizer {\n \n   private final BizConfig bizConfig;\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

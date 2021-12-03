@@ -1,0 +1,96 @@
+{
+    "project_name": "ppati000-visualDFA",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "1",
+                "severity": "warning",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class StandardFilter implements Filter {\n\n\t@Override\n\t/**\n\t * Filter for a given method, that decides if the method should be filtered\n\t * out or not.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ppati000-visualDFA/styler/05_predictions/final/files-repaired/21/StandardFilter.java\nindex 9697cb011b5..1a0c0a0fe78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ppati000-visualDFA/styler/05_predictions/final/files-repaired/21/StandardFilter.java\n@@ -8,7 +8,7 @@ package codeprocessor;\n  */\n public class StandardFilter implements Filter {\n \n-\t@Override\n+    @Override\n \t/**\n \t * Filter for a given method, that decides if the method should be filtered\n \t * out or not.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/checkstyle_idea/21/StandardFilter.java\nindex 9697cb011b5..5bf423acec8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/checkstyle_idea/21/StandardFilter.java\n@@ -1,24 +1,22 @@\n package codeprocessor;\n \n /**\n- * \n  * @author Anika Nietzer Implementation of the Interface {@code Filter}. Used if\n- *         all inherited methods should be filtered out.\n- *\n+ * all inherited methods should be filtered out.\n  */\n public class StandardFilter implements Filter {\n \n-\t@Override\n-\t/**\n-\t * Filter for a given method, that decides if the method should be filtered\n-\t * out or not.\n-\t * \n-\t * @param signature\n-\t *            signature of the method\n-\t * @return if the method should be filtered out or not\n-\t */\n-\tpublic boolean filter(String signature) {\n-\t\treturn false;\n-\t}\n+  @Override\n+  /**\n+   * Filter for a given method, that decides if the method should be filtered\n+   * out or not.\n+   *\n+   * @param signature\n+   *            signature of the method\n+   * @return if the method should be filtered out or not\n+   */\n+  public boolean filter(String signature) {\n+    return false;\n+  }\n \n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/naturalize/21/StandardFilter.java\nindex 9697cb011b5..1d72a179ec3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/naturalize/21/StandardFilter.java\n@@ -8,7 +8,7 @@ package codeprocessor;\n  */\n public class StandardFilter implements Filter {\n \n-\t@Override\n+    @Override\n \t/**\n \t * Filter for a given method, that decides if the method should be filtered\n \t * out or not.\n@@ -18,7 +18,7 @@ public class StandardFilter implements Filter {\n \t * @return if the method should be filtered out or not\n \t */\n \tpublic boolean filter(String signature) {\n-\t\treturn false;\n-\t}\n+    return false;\n+    }\n \n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/codebuff/21/StandardFilter.java\nindex 9697cb011b5..9aacc7c0d39 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/codebuff/21/StandardFilter.java\n@@ -6,19 +6,21 @@ package codeprocessor;\n  *         all inherited methods should be filtered out.\n  *\n  */\n+\n+\n public class StandardFilter implements Filter {\n \n-\t@Override\n-\t/**\n-\t * Filter for a given method, that decides if the method should be filtered\n-\t * out or not.\n-\t * \n-\t * @param signature\n-\t *            signature of the method\n-\t * @return if the method should be filtered out or not\n-\t */\n-\tpublic boolean filter(String signature) {\n-\t\treturn false;\n-\t}\n+    @Override\n+    /**\n+     * Filter for a given method, that decides if the method should be filtered\n+     * out or not.\n+     * \n+     * @param signature\n+     *            signature of the method\n+     * @return if the method should be filtered out or not\n+     */\n+    public boolean filter(String signature) {\n+        return false;\n+    }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/styler/05_predictions/random/files-repaired/21/StandardFilter.java\nindex 9697cb011b5..1a0c0a0fe78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/styler/05_predictions/random/files-repaired/21/StandardFilter.java\n@@ -8,7 +8,7 @@ package codeprocessor;\n  */\n public class StandardFilter implements Filter {\n \n-\t@Override\n+    @Override\n \t/**\n \t * Filter for a given method, that decides if the method should be filtered\n \t * out or not.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/styler/05_predictions/three_grams/files-repaired/21/StandardFilter.java\nindex 9697cb011b5..1a0c0a0fe78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/violations/21/StandardFilter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ppati000-visualDFA/styler/05_predictions/three_grams/files-repaired/21/StandardFilter.java\n@@ -8,7 +8,7 @@ package codeprocessor;\n  */\n public class StandardFilter implements Filter {\n \n-\t@Override\n+    @Override\n \t/**\n \t * Filter for a given method, that decides if the method should be filtered\n \t * out or not.\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

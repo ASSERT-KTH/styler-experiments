@@ -1,0 +1,63 @@
+{
+    "project_name": "StuPro-TOSCAna-TOSCAna",
+    "violation_id": "1",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "104",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n    \n    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n        return new HostRequirementBuilder()\n            .capability(capability)\n            .relationship(relationship);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/final/files-repaired/1/HostRequirement.java\nindex 5195e973f3f..3951ea839bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/final/files-repaired/1/HostRequirement.java\n@@ -22,7 +22,7 @@ public class HostRequirement extends Requirement<ContainerCapability, Compute, H\n         super(capability, occurrence, fulfillers, relationship);\n     }\n     \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/checkstyle_idea/1/HostRequirement.java\nindex 5195e973f3f..2d24ef33db8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/checkstyle_idea/1/HostRequirement.java\n@@ -15,17 +15,18 @@ import lombok.Singular;\n public class HostRequirement extends Requirement<ContainerCapability, Compute, HostedOn> {\n \n     @Builder\n-    protected HostRequirement(ContainerCapability capability, \n-                              Range occurrence, \n-                              @Singular Set<Compute> fulfillers, \n+    protected HostRequirement(ContainerCapability capability,\n+                              Range occurrence,\n+                              @Singular Set<Compute> fulfillers,\n                               HostedOn relationship) {\n         super(capability, occurrence, fulfillers, relationship);\n     }\n-    \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+\n+    public static HostRequirementBuilder builder(ContainerCapability capability,\n+                                                 HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n-        \n+\n     }\n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/naturalize/1/HostRequirement.java\nindex 5195e973f3f..7f42490de9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/naturalize/1/HostRequirement.java\n@@ -15,17 +15,15 @@ import lombok.Singular;\n public class HostRequirement extends Requirement<ContainerCapability, Compute, HostedOn> {\n \n     @Builder\n-    protected HostRequirement(ContainerCapability capability, \n-                              Range occurrence, \n+    protected HostRequirement(ContainerCapability capability, Range occurrence, \n                               @Singular Set<Compute> fulfillers, \n                               HostedOn relationship) {\n-        super(capability, occurrence, fulfillers, relationship);\n+    super(capability, occurrence, fulfillers, relationship);\n     }\n-    \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+\n+public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n-        \n     }\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/codebuff/1/HostRequirement.java\nindex 5195e973f3f..8f79f125990 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/codebuff/1/HostRequirement.java\n@@ -1,12 +1,10 @@\n package org.opentosca.toscana.model.requirement;\n \n import java.util.Set;\n-\n import org.opentosca.toscana.model.capability.ContainerCapability;\n import org.opentosca.toscana.model.datatype.Range;\n import org.opentosca.toscana.model.node.Compute;\n import org.opentosca.toscana.model.relation.HostedOn;\n-\n import lombok.Builder;\n import lombok.Data;\n import lombok.Singular;\n@@ -15,17 +13,17 @@ import lombok.Singular;\n public class HostRequirement extends Requirement<ContainerCapability, Compute, HostedOn> {\n \n     @Builder\n-    protected HostRequirement(ContainerCapability capability, \n-                              Range occurrence, \n-                              @Singular Set<Compute> fulfillers, \n-                              HostedOn relationship) {\n+    protected HostRequirement(\n+        ContainerCapability capability,\n+        Range occurrence,\n+        @Singular Set<Compute> fulfillers, HostedOn relationship\n+    ) {\n         super(capability, occurrence, fulfillers, relationship);\n     }\n-    \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+\n+    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n-        \n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/random/files-repaired/1/HostRequirement.java\nindex 5195e973f3f..3951ea839bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/random/files-repaired/1/HostRequirement.java\n@@ -22,7 +22,7 @@ public class HostRequirement extends Requirement<ContainerCapability, Compute, H\n         super(capability, occurrence, fulfillers, relationship);\n     }\n     \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/three_grams/files-repaired/1/HostRequirement.java\nindex 5195e973f3f..3951ea839bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/violations/1/HostRequirement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/StuPro-TOSCAna-TOSCAna/styler/05_predictions/three_grams/files-repaired/1/HostRequirement.java\n@@ -22,7 +22,7 @@ public class HostRequirement extends Requirement<ContainerCapability, Compute, H\n         super(capability, occurrence, fulfillers, relationship);\n     }\n     \n-    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship){\n+    public static HostRequirementBuilder builder(ContainerCapability capability, HostedOn relationship) {\n         return new HostRequirementBuilder()\n             .capability(capability)\n             .relationship(relationship);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

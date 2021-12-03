@@ -1,0 +1,101 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "28",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.strategy.optimizer;\n\nimport org.apache.iotdb.db.exception.query.LogicalOptimizeException;\nimport org.apache.iotdb.db.metadata.PartialPath;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/28/MergeSingleFilterOptimizer.java\nindex 54ef0ea4e4e..98c6d8b6bec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/28/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/28/MergeSingleFilterOptimizer.java\nindex 54ef0ea4e4e..364430e8caa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/28/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n@@ -53,7 +54,7 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n    *\n    * @param filter - children is not empty.\n    * @return - if all recursive children of this node have same seriesPath, set this node to single\n-   *     node, and return the same seriesPath, otherwise, throw exception;\n+   * node, and return the same seriesPath, otherwise, throw exception;\n    */\n   private PartialPath mergeSamePathFilter(FilterOperator filter) throws LogicalOptimizeException {\n     if (filter.isLeaf()) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "153",
+                    "severity": "warning",
+                    "message": "'List' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/28/MergeSingleFilterOptimizer.java\nindex 54ef0ea4e4e..89ee6d79922 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/28/MergeSingleFilterOptimizer.java\n@@ -22,7 +22,6 @@ import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.logical.crud.BasicFunctionOperator;\n import org.apache.iotdb.db.qp.logical.crud.FilterOperator;\n-\n import java.util.ArrayList;\n import java.util.Comparator;\n import java.util.List;\n@@ -55,6 +54,7 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n    * @return - if all recursive children of this node have same seriesPath, set this node to single\n    *     node, and return the same seriesPath, otherwise, throw exception;\n    */\n+\n   private PartialPath mergeSamePathFilter(FilterOperator filter) throws LogicalOptimizeException {\n     if (filter.isLeaf()) {\n       return filter.getSinglePath();\n@@ -150,7 +150,7 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n   }\n \n   private PartialPath addLastNullChild(\n-      List<FilterOperator> ret, FilterOperator filter, int i, PartialPath childPath) {\n+    List<FilterOperator> ret, FilterOperator filter, int i, PartialPath childPath) {\n     List<FilterOperator> children = filter.getChildren();\n     for (; i < children.size(); i++) {\n       ret.add(children.get(i));\n@@ -176,4 +176,4 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n     }\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "70",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/28/MergeSingleFilterOptimizer.java\nindex 54ef0ea4e4e..0c40e6a82ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/28/MergeSingleFilterOptimizer.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.strategy.optimizer;\n+package org.apache.iotdb.db.qp.strategy.optimizer\n \n-import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n+; import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.logical.crud.BasicFunctionOperator;\n import org.apache.iotdb.db.qp.logical.crud.FilterOperator;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/28/MergeSingleFilterOptimizer.java\nindex 54ef0ea4e4e..98c6d8b6bec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/28/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/28/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.strategy.optimizer;\n \n import org.apache.iotdb.db.exception.query.LogicalOptimizeException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "7",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "column": "29",
+                "severity": "error",
+                "message": "'}' at column 29 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "  private static final long serialVersionUID = 1L;\n\n  public CustomException() {}\n\n  public CustomException(String message) {\n    super(message);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/7/CustomException.java\nindex fd291b60539..12e8ed19ddf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/7/CustomException.java\n@@ -31,7 +31,8 @@ public class CustomException extends Exception {\n \r\n   private static final long serialVersionUID = 1L;\r\n \r\n-  public CustomException() {}\r\n+  public CustomException() {\r\n+  }\r\n \r\n   public CustomException(String message) {\r\n     super(message);\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/7/CustomException.java\nindex fd291b60539..2dc707f8465 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/7/CustomException.java\n@@ -1,17 +1,17 @@\n /**\r\n  * The MIT License\r\n  * Copyright (c) 2014 Ilkka Sepp\u00e4l\u00e4\r\n- *\r\n+ * <p>\r\n  * Permission is hereby granted, free of charge, to any person obtaining a copy\r\n  * of this software and associated documentation files (the \"Software\"), to deal\r\n  * in the Software without restriction, including without limitation the rights\r\n  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\n  * copies of the Software, and to permit persons to whom the Software is\r\n  * furnished to do so, subject to the following conditions:\r\n- *\r\n+ * <p>\r\n  * The above copyright notice and this permission notice shall be included in\r\n  * all copies or substantial portions of the Software.\r\n- *\r\n+ * <p>\r\n  * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\n  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\n  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\n@@ -20,10 +20,11 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\r\n  * THE SOFTWARE.\r\n  */\r\n+\r\n package com.iluwatar.dao;\r\n \r\n /**\r\n- * \r\n+ *\r\n  * Custom exception\r\n  *\r\n  */\r\n@@ -31,12 +32,13 @@ public class CustomException extends Exception {\n \r\n   private static final long serialVersionUID = 1L;\r\n \r\n-  public CustomException() {}\r\n+  public CustomException() {\r\n+  }\r\n \r\n   public CustomException(String message) {\r\n     super(message);\r\n   }\r\n-  \r\n+\r\n   public CustomException(String message, Throwable cause) {\r\n     super(message, cause);\r\n   }\r\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'ctor def rcurly' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/7/CustomException.java\nindex fd291b60539..91048eee075 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/7/CustomException.java\n@@ -31,13 +31,14 @@ public class CustomException extends Exception {\n \r\n   private static final long serialVersionUID = 1L;\r\n \r\n-  public CustomException() {}\r\n+  public CustomException() {\n+}\r\n \r\n   public CustomException(String message) {\r\n     super(message);\r\n   }\r\n   \r\n-  public CustomException(String message, Throwable cause) {\r\n-    super(message, cause);\r\n+  public CustomException(String message, Throwable cause) {\n+  super(message, cause);\r\n   }\r\n-}\r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/7/CustomException.java\nindex fd291b60539..bdba1d42311 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/7/CustomException.java\n@@ -26,18 +26,21 @@ package com.iluwatar.dao;\n  * \r\n  * Custom exception\r\n  *\r\n- */\r\n-public class CustomException extends Exception {\r\n-\r\n-  private static final long serialVersionUID = 1L;\r\n-\r\n-  public CustomException() {}\r\n-\r\n-  public CustomException(String message) {\r\n-    super(message);\r\n-  }\r\n-  \r\n-  public CustomException(String message, Throwable cause) {\r\n-    super(message, cause);\r\n-  }\r\n-}\r\n+ */\n+\n+\n+public class CustomException extends Exception {\n+\n+  private static final long serialVersionUID = 1L;\n+\n+  public CustomException() {\n+  }\n+\n+  public CustomException(String message) {\n+    super(message);\n+  }\n+\n+  public CustomException(String message, Throwable cause) {\n+    super(message, cause);\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "'}' at column 29 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/7/CustomException.java\nindex fd291b60539..12e8ed19ddf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/7/CustomException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/7/CustomException.java\n@@ -31,7 +31,8 @@ public class CustomException extends Exception {\n \r\n   private static final long serialVersionUID = 1L;\r\n \r\n-  public CustomException() {}\r\n+  public CustomException() {\r\n+  }\r\n \r\n   public CustomException(String message) {\r\n     super(message);\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "styler_random"
+    ]
+}

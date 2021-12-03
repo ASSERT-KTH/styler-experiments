@@ -1,0 +1,180 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2046",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "90",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "70",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "41",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "41",
+                    "column": "90",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "69",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "90",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "51",
+                    "column": "48",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "51",
+                    "column": "59",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2046/SideSelectorPolicies.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2046/SideSelectorPolicies.java\nindex 488a5d756bf..cad79336075 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2046/SideSelectorPolicies.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2046/SideSelectorPolicies.java\n@@ -17,37 +17,38 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.graphdb.traversal;\n \n /**\n  * A catalogue of convenient side selector policies for use in bidirectional traversals.\n- *\n+ * <p>\n  * Copied from kernel package so that we can hide kernel from the public API.\n  */\n public enum SideSelectorPolicies implements SideSelectorPolicy\n {\n-    LEVEL\n-    {\n+  LEVEL\n+      {\n         @Override\n-        public SideSelector create( BranchSelector start, BranchSelector end, int maxDepth )\n+        public SideSelector create(BranchSelector start, BranchSelector end, int maxDepth)\n         {\n-            return new LevelSelectorOrderer( start, end, false, maxDepth );\n+          return new LevelSelectorOrderer(start, end, false, maxDepth);\n         }\n-    },\n-    LEVEL_STOP_DESCENT_ON_RESULT\n-    {\n+      },\n+  LEVEL_STOP_DESCENT_ON_RESULT\n+      {\n         @Override\n-        public SideSelector create( BranchSelector start, BranchSelector end, int maxDepth )\n+        public SideSelector create(BranchSelector start, BranchSelector end, int maxDepth)\n         {\n-            return new LevelSelectorOrderer( start, end, true, maxDepth );\n+          return new LevelSelectorOrderer(start, end, true, maxDepth);\n         }\n-    },\n-    ALTERNATING\n-    {\n+      },\n+  ALTERNATING\n+      {\n         @Override\n-        public SideSelector create( BranchSelector start, BranchSelector end, int maxDepth )\n+        public SideSelector create(BranchSelector start, BranchSelector end, int maxDepth)\n         {\n-            return new AlternatingSelectorOrderer( start, end );\n+          return new AlternatingSelectorOrderer(start, end);\n         }\n-    }\n+      }\n }\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2046/SideSelectorPolicies.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2046/SideSelectorPolicies.java\nindex 488a5d756bf..22144b7730c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2046/SideSelectorPolicies.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2046/SideSelectorPolicies.java\n@@ -33,16 +33,14 @@ public enum SideSelectorPolicies implements SideSelectorPolicy\n         {\n             return new LevelSelectorOrderer( start, end, false, maxDepth );\n         }\n-    },\n-    LEVEL_STOP_DESCENT_ON_RESULT\n+    }, LEVEL_STOP_DESCENT_ON_RESULT\n     {\n         @Override\n         public SideSelector create( BranchSelector start, BranchSelector end, int maxDepth )\n         {\n             return new LevelSelectorOrderer( start, end, true, maxDepth );\n         }\n-    },\n-    ALTERNATING\n+    }, ALTERNATING\n     {\n         @Override\n         public SideSelector create( BranchSelector start, BranchSelector end, int maxDepth )\n@@ -50,4 +48,4 @@ public enum SideSelectorPolicies implements SideSelectorPolicy\n             return new AlternatingSelectorOrderer( start, end );\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

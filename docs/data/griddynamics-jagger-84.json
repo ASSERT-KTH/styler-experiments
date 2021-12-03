@@ -1,0 +1,79 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "84",
+    "information": {
+        "violations": [
+            {
+                "line": "78",
+                "column": "118",
+                "severity": "warning",
+                "message": "'.' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    public void onApplicationEvent(ApplicationEvent event) {\n        if (autoDiscovery) {\n            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n                Object extension = entry.getValue().getExtension();\n                if (extensionClass.isAssignableFrom(extension.getClass())) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/84/ExtensionRegistry.java\nindex 0a906bd05e9..ac8a2ba8983 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/84/ExtensionRegistry.java\n@@ -75,8 +75,8 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n     @Override\n     public void onApplicationEvent(ApplicationEvent event) {\n         if (autoDiscovery) {\n-            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n-                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n+            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext()\n+                    .getBeansOfType(ExtensionExporter.class).entrySet()) {\n                 Object extension = entry.getValue().getExtension();\n                 if (extensionClass.isAssignableFrom(extension.getClass())) {\n                     extensions.put(entry.getKey(), extensionClass.cast(entry.getValue().getExtension()));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "78",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "78",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 171).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/84/ExtensionRegistry.java\nindex 0a906bd05e9..aaa394d85a1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/84/ExtensionRegistry.java\n@@ -75,8 +75,7 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n     @Override\n     public void onApplicationEvent(ApplicationEvent event) {\n         if (autoDiscovery) {\n-            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n-                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n+            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().getBeansOfType(ExtensionExporter.class).entrySet()) {\n                 Object extension = entry.getValue().getExtension();\n                 if (extensionClass.isAssignableFrom(extension.getClass())) {\n                     extensions.put(entry.getKey(), extensionClass.cast(entry.getValue().getExtension()));\n@@ -84,4 +83,4 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n             }\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/84/ExtensionRegistry.java\nindex 0a906bd05e9..646f226e2d8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/84/ExtensionRegistry.java\n@@ -27,14 +27,13 @@ import org.springframework.context.ApplicationEvent;\n import org.springframework.context.ApplicationListener;\n import org.springframework.context.event.ContextRefreshedEvent;\n import org.springframework.core.Ordered;\n-\n import java.util.Collections;\n import java.util.Map;\n \n+\n public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n \n     private static final Logger log = LoggerFactory.getLogger(ExtensionRegistry.class);\n-\n     private Map<String, T> extensions = Maps.newHashMap();\n     private Class<T> extensionClass;\n     private boolean autoDiscovery = true;\n@@ -75,8 +74,9 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n     @Override\n     public void onApplicationEvent(ApplicationEvent event) {\n         if (autoDiscovery) {\n-            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n-                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n+            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext()\n+                                                                                             .getBeansOfType(ExtensionExporter.class)\n+                                                                                             .entrySet()) {\n                 Object extension = entry.getValue().getExtension();\n                 if (extensionClass.isAssignableFrom(extension.getClass())) {\n                     extensions.put(entry.getKey(), extensionClass.cast(entry.getValue().getExtension()));\n@@ -84,4 +84,4 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n             }\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/84/ExtensionRegistry.java\nindex 0a906bd05e9..ac8a2ba8983 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/84/ExtensionRegistry.java\n@@ -75,8 +75,8 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n     @Override\n     public void onApplicationEvent(ApplicationEvent event) {\n         if (autoDiscovery) {\n-            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n-                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n+            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext()\n+                    .getBeansOfType(ExtensionExporter.class).entrySet()) {\n                 Object extension = entry.getValue().getExtension();\n                 if (extensionClass.isAssignableFrom(extension.getClass())) {\n                     extensions.put(entry.getKey(), extensionClass.cast(entry.getValue().getExtension()));\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/84/ExtensionRegistry.java\nindex 0a906bd05e9..ac8a2ba8983 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/84/ExtensionRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/84/ExtensionRegistry.java\n@@ -75,8 +75,8 @@ public class ExtensionRegistry<T> implements Ordered, ApplicationListener {\n     @Override\n     public void onApplicationEvent(ApplicationEvent event) {\n         if (autoDiscovery) {\n-            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext().\n-                    getBeansOfType(ExtensionExporter.class).entrySet()) {\n+            for (Map.Entry<String, ExtensionExporter> entry : ((ContextRefreshedEvent) event).getApplicationContext()\n+                    .getBeansOfType(ExtensionExporter.class).entrySet()) {\n                 Object extension = entry.getValue().getExtension();\n                 if (extensionClass.isAssignableFrom(extension.getClass())) {\n                     extensions.put(entry.getKey(), extensionClass.cast(entry.getValue().getExtension()));\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize"
+    ]
+}

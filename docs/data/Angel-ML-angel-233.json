@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "233",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/233/GBTSplit.java\nindex 766bf07c567..8ad1d949abf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/233/GBTSplit.java\n@@ -24,55 +24,55 @@ import java.io.Serializable;\n \n public class GBTSplit implements Serializable {\n \n-  private SplitEntry splitEntry;\n-  private GradPair leftGradPair;  // grad pair of left child\n-  private GradPair rightGradPair; // grad pair of right child\n+    private SplitEntry splitEntry;\n+    private GradPair leftGradPair;  // grad pair of left child\n+    private GradPair rightGradPair; // grad pair of right child\n \n-  public GBTSplit() {\n-    this(null, null, null);\n-  }\n+    public GBTSplit() {\n+        this(null, null, null);\n+    }\n \n-  public GBTSplit(SplitEntry splitEntry, GradPair leftGradPair, GradPair rightGradPair) {\n-    super();\n-    this.splitEntry = splitEntry;\n-    this.leftGradPair = leftGradPair;\n-    this.rightGradPair = rightGradPair;\n-  }\n+    public GBTSplit(SplitEntry splitEntry, GradPair leftGradPair, GradPair rightGradPair) {\n+        super();\n+        this.splitEntry = splitEntry;\n+        this.leftGradPair = leftGradPair;\n+        this.rightGradPair = rightGradPair;\n+    }\n \n-  public boolean isValid(float minSplitGain) {\n-    return splitEntry != null && !splitEntry.isEmpty()\n-        && splitEntry.getGain() > minSplitGain;\n-  }\n+    public boolean isValid(float minSplitGain) {\n+        return splitEntry != null && !splitEntry.isEmpty()\n+                && splitEntry.getGain() > minSplitGain;\n+    }\n \n-  public boolean needReplace(GBTSplit split) {\n-    if (this.splitEntry != null) {\n-      return split.splitEntry != null && this.splitEntry.needReplace(split.splitEntry);\n-    } else {\n-      return split.splitEntry != null;\n+    public boolean needReplace(GBTSplit split) {\n+        if (this.splitEntry != null) {\n+            return split.splitEntry != null && this.splitEntry.needReplace(split.splitEntry);\n+        } else {\n+            return split.splitEntry != null;\n+        }\n     }\n-  }\n \n-  public void update(GBTSplit split) {\n-    if (this.needReplace(split)) {\n-      this.splitEntry = split.splitEntry;\n-      this.leftGradPair = split.leftGradPair;\n-      this.rightGradPair = split.rightGradPair;\n+    public void update(GBTSplit split) {\n+        if (this.needReplace(split)) {\n+            this.splitEntry = split.splitEntry;\n+            this.leftGradPair = split.leftGradPair;\n+            this.rightGradPair = split.rightGradPair;\n+        }\n     }\n-  }\n \n-  public SplitEntry getSplitEntry() {\n-    return splitEntry;\n-  }\n+    public SplitEntry getSplitEntry() {\n+        return splitEntry;\n+    }\n \n-  public void setSplitEntry(SplitEntry splitEntry) {\n-    this.splitEntry = splitEntry;\n-  }\n+    public void setSplitEntry(SplitEntry splitEntry) {\n+        this.splitEntry = splitEntry;\n+    }\n \n-  public GradPair getLeftGradPair() {\n-    return leftGradPair;\n-  }\n+    public GradPair getLeftGradPair() {\n+        return leftGradPair;\n+    }\n \n-  public GradPair getRightGradPair() {\n-    return rightGradPair;\n-  }\n+    public GradPair getRightGradPair() {\n+        return rightGradPair;\n+    }\n }\n",
+            "diff_size": 42
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/233/GBTSplit.java\nindex 766bf07c567..1dc93488b8e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/233/GBTSplit.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.spark.ml.tree.gbdt.tree;\n \n import com.tencent.angel.spark.ml.tree.gbdt.histogram.GradPair;\n@@ -25,7 +24,7 @@ import java.io.Serializable;\n public class GBTSplit implements Serializable {\n \n   private SplitEntry splitEntry;\n-  private GradPair leftGradPair;  // grad pair of left child\n+  private GradPair leftGradPair; // grad pair of left child\n   private GradPair rightGradPair; // grad pair of right child\n \n   public GBTSplit() {\n@@ -75,4 +74,4 @@ public class GBTSplit implements Serializable {\n   public GradPair getRightGradPair() {\n     return rightGradPair;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/233/GBTSplit.java\nindex 766bf07c567..43e64b70b20 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/233/GBTSplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/233/GBTSplit.java\n@@ -40,8 +40,7 @@ public class GBTSplit implements Serializable {\n   }\n \n   public boolean isValid(float minSplitGain) {\n-    return splitEntry != null && !splitEntry.isEmpty()\n-        && splitEntry.getGain() > minSplitGain;\n+    return splitEntry != null && !splitEntry.isEmpty() && splitEntry.getGain() > minSplitGain;\n   }\n \n   public boolean needReplace(GBTSplit split) {\n@@ -75,4 +74,4 @@ public class GBTSplit implements Serializable {\n   public GradPair getRightGradPair() {\n     return rightGradPair;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

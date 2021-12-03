@@ -1,0 +1,96 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLMapElement extends HTMLElement {\n\t/**\n\t * The list of areas defined for the image map.\n\t *\n\t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/29/HTMLMapElement.java\nindex b294d3438ee..bd0eb4b2324 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/29/HTMLMapElement.java\n@@ -43,12 +43,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n+/**\n \t * The list of areas defined for the image map.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n \t */\n-\tHTMLCollection getAreas();\n+ HTMLCollection getAreas();\n \n \t/**\n \t * Names the map (for use with usemap). See the name attribute\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/29/HTMLMapElement.java\nindex b294d3438ee..4e8e4c0cb03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/29/HTMLMapElement.java\n@@ -43,27 +43,27 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n-\t * The list of areas defined for the image map.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n-\t */\n-\tHTMLCollection getAreas();\n+    /**\n+     * The list of areas defined for the image map.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n+     */\n+    HTMLCollection getAreas();\n \n-\t/**\n-\t * Names the map (for use with usemap). See the name attribute\n-\t * definition in HTML 4.01.\n-\t *\n-\t * @return a {@link java.lang.String} object.\n-\t */\n-\tString getName();\n+    /**\n+     * Names the map (for use with usemap). See the name attribute\n+     * definition in HTML 4.01.\n+     *\n+     * @return a {@link java.lang.String} object.\n+     */\n+    String getName();\n \n-\t/**\n-\t * Names the map (for use with usemap). See the name attribute\n-\t * definition in HTML 4.01.\n-\t *\n-\t * @param name a {@link java.lang.String} object.\n-\t */\n-\tvoid setName(String name);\n+    /**\n+     * Names the map (for use with usemap). See the name attribute\n+     * definition in HTML 4.01.\n+     *\n+     * @param name a {@link java.lang.String} object.\n+     */\n+    void setName(String name);\n \n }\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "49",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/29/HTMLMapElement.java\nindex b294d3438ee..991b3cdd169 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/29/HTMLMapElement.java\n@@ -18,6 +18,7 @@\n \n     Contact info: lobochief@users.sourceforge.net; ivan.difrancesco@yahoo.it\n  */\n+\n /*\n  * Copyright (c) 2003 World Wide Web Consortium,\n  * (Massachusetts Institute of Technology, Institut National de\n@@ -43,7 +44,8 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n+\n+    /**\n \t * The list of areas defined for the image map.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n@@ -65,5 +67,4 @@ public interface HTMLMapElement extends HTMLElement {\n \t * @param name a {@link java.lang.String} object.\n \t */\n \tvoid setName(String name);\n-\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/29/HTMLMapElement.java\nindex b294d3438ee..d1ef4759b20 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/29/HTMLMapElement.java\n@@ -42,28 +42,35 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n-\t * The list of areas defined for the image map.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n-\t */\n-\tHTMLCollection getAreas();\n-\n-\t/**\n-\t * Names the map (for use with usemap). See the name attribute\n-\t * definition in HTML 4.01.\n-\t *\n-\t * @return a {@link java.lang.String} object.\n-\t */\n-\tString getName();\n-\n-\t/**\n-\t * Names the map (for use with usemap). See the name attribute\n-\t * definition in HTML 4.01.\n-\t *\n-\t * @param name a {@link java.lang.String} object.\n-\t */\n-\tvoid setName(String name);\n-\n-}\n+    /**\n+     * The list of areas defined for the image map.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n+     */\n+\n+\n+    HTMLCollection getAreas();\n+\n+    /**\n+     * Names the map (for use with usemap). See the name attribute\n+     * definition in HTML 4.01.\n+     *\n+     * @return a {@link java.lang.String} object.\n+     */\n+\n+\n+    String getName();\n+\n+    /**\n+     * Names the map (for use with usemap). See the name attribute\n+     * definition in HTML 4.01.\n+     *\n+     * @param name a {@link java.lang.String} object.\n+     */\n+\n+\n+    void setName(String name);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 31
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/29/HTMLMapElement.java\nindex b294d3438ee..bd0eb4b2324 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/29/HTMLMapElement.java\n@@ -43,12 +43,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n+/**\n \t * The list of areas defined for the image map.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n \t */\n-\tHTMLCollection getAreas();\n+ HTMLCollection getAreas();\n \n \t/**\n \t * Names the map (for use with usemap). See the name attribute\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/29/HTMLMapElement.java\nindex b294d3438ee..d9a41e88034 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/29/HTMLMapElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/29/HTMLMapElement.java\n@@ -43,12 +43,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLMapElement extends HTMLElement {\n-\t/**\n+    /**\n \t * The list of areas defined for the image map.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLCollection} object.\n \t */\n-\tHTMLCollection getAreas();\n+ HTMLCollection getAreas();\n \n \t/**\n \t * Names the map (for use with usemap). See the name attribute\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,152 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "170",
+    "information": {
+        "violations": [
+            {
+                "line": "56",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 165).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    private Map<String, List<SummaryDto>> latencyPercentilesMap = new HashMap<String, List<SummaryDto>>();\n    private Map<String, List<SummaryDto>> validatorsMap = new HashMap<String, List<SummaryDto>>();\n    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n    private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n    private int numberOfTestGroups;\n    private boolean isMetricHighlighting;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "160",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/170/SummaryReporter.java\nindex 0e94efc6c1e..88f16e34d78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/170/SummaryReporter.java\n@@ -53,7 +53,7 @@ public class SummaryReporter {\n     private Map<String, List<SummaryDto>> summaryMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> latencyPercentilesMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> validatorsMap = new HashMap<String, List<SummaryDto>>();\n-    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n+    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity,MetricSummaryValueEntity >>();\n     private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/170/SummaryReporter.java\nindex 0e94efc6c1e..4c352cef54b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/170/SummaryReporter.java\n@@ -53,12 +53,13 @@ public class SummaryReporter {\n     private Map<String, List<SummaryDto>> summaryMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> latencyPercentilesMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> validatorsMap = new HashMap<String, List<SummaryDto>>();\n-    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n+    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap =\n+            new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n     private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n     private List<SummaryTestDto> testSummaryData = new ArrayList<>();\n-    private Map<TestEntity,Map<String,Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n+    private Map<TestEntity, Map<String, Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n     private SessionEntity sessionEntity;\n \n     private StatusImageProvider statusImageProvider;\n@@ -128,7 +129,7 @@ public class SummaryReporter {\n         return testSummaryData;\n     }\n \n-    public Map<TestEntity,Map<String,Double>> getDataForScalabilityPlots(String sessionId) {\n+    public Map<TestEntity, Map<String, Double>> getDataForScalabilityPlots(String sessionId) {\n \n         getData(sessionId);\n \n@@ -306,7 +307,7 @@ public class SummaryReporter {\n                 int val2 = Integer.parseInt(result2.getNumber());\n                 return val1 > val2 ? 1 : val1 < val2 ? -1 : 0;\n             }\n-        } );\n+        });\n     }\n \n     private class LocalRankingProvider extends MetricNamesRankingProvider {\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "307",
+                    "column": "28",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '>' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/170/SummaryReporter.java\nindex 0e94efc6c1e..c27fce427aa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/170/SummaryReporter.java\n@@ -58,7 +58,7 @@ public class SummaryReporter {\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n     private List<SummaryTestDto> testSummaryData = new ArrayList<>();\n-    private Map<TestEntity,Map<String,Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n+    private Map<TestEntity, Map<String,Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n     private SessionEntity sessionEntity;\n \n     private StatusImageProvider statusImageProvider;\n@@ -128,7 +128,7 @@ public class SummaryReporter {\n         return testSummaryData;\n     }\n \n-    public Map<TestEntity,Map<String,Double>> getDataForScalabilityPlots(String sessionId) {\n+    public Map<TestEntity, Map<String,Double>> getDataForScalabilityPlots(String sessionId) {\n \n         getData(sessionId);\n \n@@ -304,9 +304,9 @@ public class SummaryReporter {\n             public int compare(final SummaryTestDto result1, final SummaryTestDto result2) {\n                 int val1 = Integer.parseInt(result1.getNumber());\n                 int val2 = Integer.parseInt(result2.getNumber());\n-                return val1 > val2 ? 1 : val1 < val2 ? -1 : 0;\n+                return val1> val2 ? 1 : val1 < val2 ? -1 : 0;\n             }\n-        } );\n+        });\n     }\n \n     private class LocalRankingProvider extends MetricNamesRankingProvider {\n@@ -325,4 +325,4 @@ public class SummaryReporter {\n         this.databaseService = databaseService;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "57",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "287",
+                    "severity": "warning",
+                    "message": "'method call' child has incorrect indentation level 12, expected level should be 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/170/SummaryReporter.java\nindex 0e94efc6c1e..7a45db32de4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/170/SummaryReporter.java\n@@ -33,7 +33,6 @@ import com.griddynamics.jagger.util.FormatCalculator;\n import com.griddynamics.jagger.util.MetricNamesRankingProvider;\n import com.griddynamics.jagger.util.StandardMetricsNamesUtil;\n import org.springframework.beans.factory.annotation.Required;\n-\n import java.text.DateFormat;\n import java.text.DecimalFormat;\n import java.text.SimpleDateFormat;\n@@ -46,7 +45,9 @@ import java.util.List;\n import java.util.Map;\n import java.util.Set;\n \n+\n public class SummaryReporter {\n+\n     private DatabaseService databaseService;\n     private String sessionId;\n     private Map<TestEntity, Set<MetricEntity>> metricsPerTest;\n@@ -58,9 +59,8 @@ public class SummaryReporter {\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n     private List<SummaryTestDto> testSummaryData = new ArrayList<>();\n-    private Map<TestEntity,Map<String,Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n+    private Map<TestEntity, Map<String, Double>> dataForScalabilityPlots = new HashMap<TestEntity, Map<String, Double>>();\n     private SessionEntity sessionEntity;\n-\n     private StatusImageProvider statusImageProvider;\n \n     @Required\n@@ -73,11 +73,8 @@ public class SummaryReporter {\n         this.statusImageProvider = statusImageProvider;\n     }\n \n-\n     public List<SummaryDto> getSummary(String sessionId, String taskId) {\n-\n         getData(sessionId);\n-\n         if (summaryMap.containsKey(taskId)) {\n             return summaryMap.get(taskId);\n         } else {\n@@ -86,9 +83,7 @@ public class SummaryReporter {\n     }\n \n     public List<SummaryDto> getValidators(String sessionId, String taskId) {\n-\n         getData(sessionId);\n-\n         if (validatorsMap.containsKey(taskId)) {\n             return validatorsMap.get(taskId);\n         } else {\n@@ -97,9 +92,7 @@ public class SummaryReporter {\n     }\n \n     public List<SummaryDto> getLatencyPercentile(String sessionId, String taskId) {\n-\n         getData(sessionId);\n-\n         if (latencyPercentilesMap.containsKey(taskId)) {\n             return latencyPercentilesMap.get(taskId);\n         } else {\n@@ -108,37 +101,27 @@ public class SummaryReporter {\n     }\n \n     public Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> getStandardMetricsPerTest(String sessionId) {\n-\n         getData(sessionId);\n-\n         return standardMetricsMap;\n     }\n \n     public int getNumberOfTestGroups(String sessionId) {\n-\n         getData(sessionId);\n-\n         return numberOfTestGroups;\n     }\n \n     public List<SummaryTestDto> getTestSummaryData(String sessionId) {\n-\n         getData(sessionId);\n-\n         return testSummaryData;\n     }\n \n-    public Map<TestEntity,Map<String,Double>> getDataForScalabilityPlots(String sessionId) {\n-\n+    public Map<TestEntity, Map<String, Double>> getDataForScalabilityPlots(String sessionId) {\n         getData(sessionId);\n-\n         return dataForScalabilityPlots;\n     }\n \n     public SessionEntity getSessionEntity(String sessionId) {\n-\n         getData(sessionId);\n-\n         return sessionEntity;\n     }\n \n@@ -154,7 +137,6 @@ public class SummaryReporter {\n             sessionEntity = null;\n             metricsPerTest = null;\n             this.sessionId = sessionId;\n-\n             summaryMap.clear();\n             latencyPercentilesMap.clear();\n             validatorsMap.clear();\n@@ -162,9 +144,7 @@ public class SummaryReporter {\n             testSummaryData.clear();\n             dataForScalabilityPlots.clear();\n         }\n-\n         if (metricsPerTest == null) {\n-\n             Set<String> standardMetricsIds = new HashSet<String>();\n             standardMetricsIds.add(StandardMetricsNamesUtil.THROUGHPUT_ID);\n             standardMetricsIds.add(StandardMetricsNamesUtil.SUCCESS_RATE_ID);\n@@ -174,7 +154,9 @@ public class SummaryReporter {\n             standardMetricsIds.add(StandardMetricsNamesUtil.VIRTUAL_USERS_ID);\n \n             LocalRankingProvider localRankingProvider = new LocalRankingProvider();\n+\n             DataService dataService = new DefaultDataService(databaseService);\n+\n             Set<TestEntity> testEntities = dataService.getTests(sessionId);\n             sessionEntity = dataService.getSession(sessionId);\n             metricsPerTest = dataService.getMetricsByTests(testEntities);\n@@ -183,17 +165,20 @@ public class SummaryReporter {\n             for (TestEntity testEntity : testEntities) {\n                 testIds.add(testEntity.getId());\n             }\n-            numberOfTestGroups = databaseService.getTestGroupIdsByTestIds(testIds).keySet().size();\n-\n+            numberOfTestGroups = databaseService.getTestGroupIdsByTestIds(testIds).keySet()\n+                                                                                  .size();\n             for (Map.Entry<TestEntity, Set<MetricEntity>> entry : metricsPerTest.entrySet()) {\n                 List<SummaryDto> summaryList = new ArrayList<SummaryDto>();\n+\n                 List<SummaryDto> latencyPercentilesList = new ArrayList<SummaryDto>();\n+\n                 List<SummaryDto> validatorsList = new ArrayList<SummaryDto>();\n+\n                 Map<MetricEntity, MetricSummaryValueEntity> standardMetricsPerTest = new HashMap<MetricEntity, MetricSummaryValueEntity>();\n \n                 // Metrics\n-                Map<MetricEntity, MetricSummaryValueEntity> summary = dataService.getMetricSummary(entry.getValue());\n \n+                Map<MetricEntity, MetricSummaryValueEntity> summary = dataService.getMetricSummary(entry.getValue());\n                 for (MetricEntity metricEntity : summary.keySet()) {\n                     SummaryDto value = new SummaryDto();\n \n@@ -209,14 +194,16 @@ public class SummaryReporter {\n                     }\n \n                     // Validators\n-                    if (metricEntity.getMetricNameDto().getOrigin().equals(MetricNameDto.Origin.VALIDATOR)) {\n+                    if (metricEntity.getMetricNameDto().getOrigin()\n+                                                       .equals(MetricNameDto.Origin.VALIDATOR)) {\n                         validatorsList.add(value);\n                     }\n \n                     // Latency percentiles\n                     if (metricEntity.getMetricId().matches(\"^\" + StandardMetricsNamesUtil.LATENCY_PERCENTILE_REGEX)) {\n                         // change key (name) for back compatibility\n-                        value.setKey(metricEntity.getDisplayName().replace(\"Latency \", \"\").concat(\"  -  \"));\n+                        value.setKey(metricEntity.getDisplayName().replace(\"Latency \", \"\")\n+                                                                  .concat(\"  -  \"));\n                         latencyPercentilesList.add(value);\n                     } else {\n                         summaryList.add(value);\n@@ -227,12 +214,12 @@ public class SummaryReporter {\n                         standardMetricsPerTest.put(metricEntity, summary.get(metricEntity));\n                     }\n                 }\n-\n                 localRankingProvider.sortSummaryDto(summaryList);\n                 localRankingProvider.sortSummaryDto(validatorsList);\n                 localRankingProvider.sortSummaryDto(latencyPercentilesList);\n \n                 // Test info\n+\n                 SummaryDto description = new SummaryDto();\n                 description.setKey(\"Test description\");\n                 description.setValue(entry.getKey().getDescription());\n@@ -252,27 +239,28 @@ public class SummaryReporter {\n                 load.setKey(\"Load\");\n                 load.setValue(entry.getKey().getLoad());\n                 summaryList.add(0, load);\n-\n-                summaryMap.put(entry.getKey().getId().toString(), summaryList);\n-                latencyPercentilesMap.put(entry.getKey().getId().toString(), latencyPercentilesList);\n-                validatorsMap.put(entry.getKey().getId().toString(), validatorsList);\n+                summaryMap.put(entry.getKey().getId()\n+                                             .toString(), summaryList);\n+                latencyPercentilesMap.put(entry.getKey().getId()\n+                                                        .toString(), latencyPercentilesList);\n+                validatorsMap.put(entry.getKey().getId()\n+                                                .toString(), validatorsList);\n                 standardMetricsMap.put(entry.getKey(), standardMetricsPerTest);\n             }\n-\n             fillTestSummaryAndScalabilityData(this.sessionId);\n         }\n     }\n \n     private void fillTestSummaryAndScalabilityData(String sessionId) {\n-\n         for (TestEntity testEntity : standardMetricsMap.keySet()) {\n-\n             dataForScalabilityPlots.put(testEntity, new HashMap<String, Double>());\n \n             String testStatusComment = \"\";\n+\n             Decision testStatus = Decision.OK;\n \n             // Errors during workload configuration\n+\n             Decision testExecutionStatus = testEntity.getTestExecutionStatus();\n             if (testExecutionStatus.ordinal() > testStatus.ordinal()) {\n                 testStatusComment = \"Test status is based on test execution status. There were errors during test execution (f.e. timeouts)\";\n@@ -280,13 +268,13 @@ public class SummaryReporter {\n             }\n \n             // Limits based decision\n+\n             Decision testDecisionBasedOLimits = testEntity.getDecision();\n             if (testDecisionBasedOLimits != null) {\n                 if (testDecisionBasedOLimits.ordinal() > testStatus.ordinal()) {\n                     testStatusComment = \"Test status is based on comparison of summary values to limits\";\n                     testStatus = testDecisionBasedOLimits;\n                 }\n-\n             }\n \n             SummaryTestDto reportData = new SummaryTestDto();\n@@ -295,10 +283,10 @@ public class SummaryReporter {\n             reportData.setId(testEntity.getId().toString());\n             reportData.setTestStatus(testStatus);\n             reportData.setStatusImage(statusImageProvider.getImageByDecision(testStatus));\n-            reportData.setTestName(testEntity.getName() + \"\\n\\n\\n\" + testStatusComment);\n+            reportData.setTestName(testEntity.getName() +\n+            \"\\n\\n\\n\" + testStatusComment);\n             testSummaryData.add(reportData);\n         }\n-\n         Collections.sort(testSummaryData, new Comparator<SummaryTestDto>() {\n             @Override\n             public int compare(final SummaryTestDto result1, final SummaryTestDto result2) {\n@@ -306,10 +294,11 @@ public class SummaryReporter {\n                 int val2 = Integer.parseInt(result2.getNumber());\n                 return val1 > val2 ? 1 : val1 < val2 ? -1 : 0;\n             }\n-        } );\n+        });\n     }\n \n     private class LocalRankingProvider extends MetricNamesRankingProvider {\n+\n         public void sortSummaryDto(List<SummaryDto> list) {\n             Collections.sort(list, new Comparator<SummaryDto>() {\n                 @Override\n@@ -324,5 +313,4 @@ public class SummaryReporter {\n     public void setDatabaseService(DatabaseService databaseService) {\n         this.databaseService = databaseService;\n     }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 61
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "160",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/170/SummaryReporter.java\nindex 0e94efc6c1e..88f16e34d78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/170/SummaryReporter.java\n@@ -53,7 +53,7 @@ public class SummaryReporter {\n     private Map<String, List<SummaryDto>> summaryMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> latencyPercentilesMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> validatorsMap = new HashMap<String, List<SummaryDto>>();\n-    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n+    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity,MetricSummaryValueEntity >>();\n     private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 12, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 259).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "169",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "169",
+                    "severity": "warning",
+                    "message": "GenericWhitespace '>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "259",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/170/SummaryReporter.java\nindex 0e94efc6c1e..74cbf59abc9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/170/SummaryReporter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/170/SummaryReporter.java\n@@ -53,8 +53,7 @@ public class SummaryReporter {\n     private Map<String, List<SummaryDto>> summaryMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> latencyPercentilesMap = new HashMap<String, List<SummaryDto>>();\n     private Map<String, List<SummaryDto>> validatorsMap = new HashMap<String, List<SummaryDto>>();\n-    private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>>();\n-    private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n+            private Map<TestEntity, Map<MetricEntity, MetricSummaryValueEntity>> standardMetricsMap = new HashMap<TestEntity, Map<MetricEntity,MetricSummaryValueEntity> >();private DateFormat dateFormatter = new SimpleDateFormat(FormatCalculator.DATE_FORMAT);\n     private int numberOfTestGroups;\n     private boolean isMetricHighlighting;\n     private List<SummaryTestDto> testSummaryData = new ArrayList<>();\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

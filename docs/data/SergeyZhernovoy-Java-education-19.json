@@ -1,0 +1,63 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "19",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "110",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n        DBManager.newInstance().addUser(user);\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/19/UserCreate.java\nindex 6ca29b09b15..770e1c3bdd5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/19/UserCreate.java\n@@ -16,7 +16,7 @@ public class UserCreate extends javax.servlet.http.HttpServlet {\n \n     @Override\n     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n+        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(), req.getParameter(\"password\"));\n         DBManager.newInstance().addUser(user);\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/19/UserCreate.java\nindex 6ca29b09b15..f6ef1300b1a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/19/UserCreate.java\n@@ -1,6 +1,7 @@\n /**\n  * Created by szhernovoy on 02.12.2016.\n  */\n+\n package ru.szhernovoy.controllers;\n \n import ru.szhernovoy.mod.DBManager;\n@@ -15,8 +16,11 @@ import java.io.IOException;\n public class UserCreate extends javax.servlet.http.HttpServlet {\n \n     @Override\n-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)\n+        throws ServletException, IOException {\n+        User user =\n+            new User(req.getParameter(\"email\"), req.getParameter(\"login\"),\n+                System.currentTimeMillis(), req.getParameter(\"password\"));\n         DBManager.newInstance().addUser(user);\n     }\n \n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/19/UserCreate.java\nindex 6ca29b09b15..478b9c62666 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/19/UserCreate.java\n@@ -16,8 +16,8 @@ public class UserCreate extends javax.servlet.http.HttpServlet {\n \n     @Override\n     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n+        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(), req.getParameter(\"password\"));\n         DBManager.newInstance().addUser(user);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/19/UserCreate.java\nindex 6ca29b09b15..770e1c3bdd5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/19/UserCreate.java\n@@ -16,7 +16,7 @@ public class UserCreate extends javax.servlet.http.HttpServlet {\n \n     @Override\n     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n+        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(), req.getParameter(\"password\"));\n         DBManager.newInstance().addUser(user);\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/19/UserCreate.java\nindex 6ca29b09b15..770e1c3bdd5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/19/UserCreate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/19/UserCreate.java\n@@ -16,7 +16,7 @@ public class UserCreate extends javax.servlet.http.HttpServlet {\n \n     @Override\n     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(),req.getParameter(\"password\"));\n+        User user = new User(req.getParameter(\"email\"), req.getParameter(\"login\"), System.currentTimeMillis(), req.getParameter(\"password\"));\n         DBManager.newInstance().addUser(user);\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

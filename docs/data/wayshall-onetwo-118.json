@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "118",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "28",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\tprotected int expire;\n\n\tpublic CacheModel(){\n\t}\n\t\n\tpublic CacheModel(Serializable key, String group, int expire) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/118/CacheModel.java\nindex 8a7d6f1ad23..70ebc4986a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/118/CacheModel.java\n@@ -8,8 +8,8 @@ public class CacheModel {\n \tprotected String group;\r\n \tprotected int expire;\r\n \r\n-\tpublic CacheModel(){\r\n-\t}\r\n+\tpublic CacheModel() {\r\n+ }\r\n \t\r\n \tpublic CacheModel(Serializable key, String group, int expire) {\r\n \t\tthis.key = key;\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/118/CacheModel.java\nindex 8a7d6f1ad23..284c58d12e6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/118/CacheModel.java\n@@ -3,43 +3,43 @@ package org.onetwo.common.spring.mcache;\n import java.io.Serializable;\r\n \r\n public class CacheModel {\r\n-\t\r\n-\tprotected Serializable key;\r\n-\tprotected String group;\r\n-\tprotected int expire;\r\n-\r\n-\tpublic CacheModel(){\r\n-\t}\r\n-\t\r\n-\tpublic CacheModel(Serializable key, String group, int expire) {\r\n-\t\tthis.key = key;\r\n-\t\tthis.group = group;\r\n-\t\tthis.expire = expire;\r\n-\t}\r\n-\r\n-\r\n-\tpublic Serializable getKey() {\r\n-\t\treturn key;\r\n-\t}\r\n-\r\n-\tpublic void setKey(Serializable key) {\r\n-\t\tthis.key = key;\r\n-\t}\r\n-\r\n-\tpublic String getGroup() {\r\n-\t\treturn group;\r\n-\t}\r\n-\r\n-\tpublic void setGroup(String group) {\r\n-\t\tthis.group = group;\r\n-\t}\r\n-\r\n-\tpublic int getExpire() {\r\n-\t\treturn expire;\r\n-\t}\r\n-\r\n-\tpublic void setExpire(int expire) {\r\n-\t\tthis.expire = expire;\r\n-\t}\r\n+\r\n+  protected Serializable key;\r\n+  protected String group;\r\n+  protected int expire;\r\n+\r\n+  public CacheModel() {\r\n+  }\r\n+\r\n+  public CacheModel(Serializable key, String group, int expire) {\r\n+    this.key = key;\r\n+    this.group = group;\r\n+    this.expire = expire;\r\n+  }\r\n+\r\n+\r\n+  public Serializable getKey() {\r\n+    return key;\r\n+  }\r\n+\r\n+  public void setKey(Serializable key) {\r\n+    this.key = key;\r\n+  }\r\n+\r\n+  public String getGroup() {\r\n+    return group;\r\n+  }\r\n+\r\n+  public void setGroup(String group) {\r\n+    this.group = group;\r\n+  }\r\n+\r\n+  public int getExpire() {\r\n+    return expire;\r\n+  }\r\n+\r\n+  public void setExpire(int expire) {\r\n+    this.expire = expire;\r\n+  }\r\n \r\n }\r\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/118/CacheModel.java\nindex 8a7d6f1ad23..70ebc4986a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/118/CacheModel.java\n@@ -8,8 +8,8 @@ public class CacheModel {\n \tprotected String group;\r\n \tprotected int expire;\r\n \r\n-\tpublic CacheModel(){\r\n-\t}\r\n+\tpublic CacheModel() {\r\n+ }\r\n \t\r\n \tpublic CacheModel(Serializable key, String group, int expire) {\r\n \t\tthis.key = key;\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/118/CacheModel.java\nindex 8a7d6f1ad23..70ebc4986a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/118/CacheModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/118/CacheModel.java\n@@ -8,8 +8,8 @@ public class CacheModel {\n \tprotected String group;\r\n \tprotected int expire;\r\n \r\n-\tpublic CacheModel(){\r\n-\t}\r\n+\tpublic CacheModel() {\r\n+ }\r\n \t\r\n \tpublic CacheModel(Serializable key, String group, int expire) {\r\n \t\tthis.key = key;\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

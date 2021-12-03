@@ -1,0 +1,134 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "23",
+    "information": {
+        "violations": [
+            {
+                "line": "24",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 108).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        for (int i = 0; i < numberOfElementsToProduce; i++) {\n            DelayObject object\n                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n            System.out.println(\"Put object = \" + object);\n            try {\n                queue.put(object);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                },
+                {
+                    "line": "26",
+                    "column": "13",
+                    "severity": "error",
+                    "message": "'(' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/23/DelayQueueProducer.java\nindex e4a2d4bfb22..279c59f0f6b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/23/DelayQueueProducer.java\n@@ -21,7 +21,9 @@ public class DelayQueueProducer implements Runnable {\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n             DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+\n+                = new DelayObject (UUID.randomUUID\n+            ().toString(), delayOfEachProducedMessageMilliseconds);\n             System.out.println(\"Put object = \" + object);\n             try {\n                 queue.put(object);\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/23/DelayQueueProducer.java\nindex e4a2d4bfb22..e5432a9511b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/23/DelayQueueProducer.java\n@@ -21,7 +21,8 @@ public class DelayQueueProducer implements Runnable {\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n             DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+                = new DelayObject(UUID.randomUUID().toString(),\n+                delayOfEachProducedMessageMilliseconds);\n             System.out.println(\"Put object = \" + object);\n             try {\n                 queue.put(object);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 119).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/23/DelayQueueProducer.java\nindex e4a2d4bfb22..e8b260a3a40 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/23/DelayQueueProducer.java\n@@ -9,10 +9,8 @@ public class DelayQueueProducer implements Runnable {\n     private final Integer numberOfElementsToProduce;\n     private final Integer delayOfEachProducedMessageMilliseconds;\n \n-    DelayQueueProducer(BlockingQueue<DelayObject> queue,\n-                       Integer numberOfElementsToProduce,\n-                       Integer delayOfEachProducedMessageMilliseconds) {\n-        this.queue = queue;\n+    DelayQueueProducer(BlockingQueue<DelayObject> queue, Integer numberOfElementsToProduce, Integer delayOfEachProducedMessageMilliseconds) {\n+    this.queue = queue;\n         this.numberOfElementsToProduce = numberOfElementsToProduce;\n         this.delayOfEachProducedMessageMilliseconds = delayOfEachProducedMessageMilliseconds;\n     }\n@@ -20,9 +18,8 @@ public class DelayQueueProducer implements Runnable {\n     @Override\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n-            DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n-            System.out.println(\"Put object = \" + object);\n+            DelayObject object = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+System.out.println(\"Put object = \" + object);\n             try {\n                 queue.put(object);\n                 Thread.sleep(500);\n@@ -31,8 +28,4 @@ public class DelayQueueProducer implements Runnable {\n             }\n         }\n     }\n-}\n-\n-\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 119).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/23/DelayQueueProducer.java\nindex e4a2d4bfb22..97460676cd9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/23/DelayQueueProducer.java\n@@ -3,15 +3,14 @@ package com.baeldung.concurrent.delayqueue;\n import java.util.UUID;\n import java.util.concurrent.BlockingQueue;\n \n-\n public class DelayQueueProducer implements Runnable {\n+\n     private BlockingQueue<DelayObject> queue;\n     private final Integer numberOfElementsToProduce;\n     private final Integer delayOfEachProducedMessageMilliseconds;\n \n     DelayQueueProducer(BlockingQueue<DelayObject> queue,\n-                       Integer numberOfElementsToProduce,\n-                       Integer delayOfEachProducedMessageMilliseconds) {\n+Integer numberOfElementsToProduce, Integer delayOfEachProducedMessageMilliseconds) {\n         this.queue = queue;\n         this.numberOfElementsToProduce = numberOfElementsToProduce;\n         this.delayOfEachProducedMessageMilliseconds = delayOfEachProducedMessageMilliseconds;\n@@ -20,9 +19,10 @@ public class DelayQueueProducer implements Runnable {\n     @Override\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n-            DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+            DelayObject object = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+\n             System.out.println(\"Put object = \" + object);\n+\n             try {\n                 queue.put(object);\n                 Thread.sleep(500);\n@@ -31,8 +31,4 @@ public class DelayQueueProducer implements Runnable {\n             }\n         }\n     }\n-}\n-\n-\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 148).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "63",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "103",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/23/DelayQueueProducer.java\nindex e4a2d4bfb22..ad2e53cfc24 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/23/DelayQueueProducer.java\n@@ -21,8 +21,8 @@ public class DelayQueueProducer implements Runnable {\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n             DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n-            System.out.println(\"Put object = \" + object);\n+\n+                = new DelayObject(UUID.randomUUID().toString(),delayOfEachProducedMessageMilliseconds);System.out.println(\"Put object = \" + object);\n             try {\n                 queue.put(object);\n                 Thread.sleep(500);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                },
+                {
+                    "line": "26",
+                    "column": "13",
+                    "severity": "error",
+                    "message": "'(' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/23/DelayQueueProducer.java\nindex e4a2d4bfb22..279c59f0f6b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/23/DelayQueueProducer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/23/DelayQueueProducer.java\n@@ -21,7 +21,9 @@ public class DelayQueueProducer implements Runnable {\n     public void run() {\n         for (int i = 0; i < numberOfElementsToProduce; i++) {\n             DelayObject object\n-                    = new DelayObject(UUID.randomUUID().toString(), delayOfEachProducedMessageMilliseconds);\n+\n+                = new DelayObject (UUID.randomUUID\n+            ().toString(), delayOfEachProducedMessageMilliseconds);\n             System.out.println(\"Put object = \" + object);\n             try {\n                 queue.put(object);\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "project_name": "O2-Czech-Republic-proxima-platform",
+    "violation_id": "65",
+    "information": {
+        "violations": [
+            {
+                "line": "93",
+                "severity": "error",
+                "message": "Line is longer than 90 characters (found 92).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "      return Collections.emptyList();\n    }\n    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n  }\n\n  private UriUtil() {}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/final/files-repaired/65/UriUtil.java\nindex cbad21ff543..eddc350e06f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/final/files-repaired/65/UriUtil.java\n@@ -90,7 +90,8 @@ public class UriUtil {\n     if (path.isEmpty()) {\n       return Collections.emptyList();\n     }\n-    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n+    return Arrays.stream(path.split(\"/\") )\n+      . map(UriUtil::decode).collect(Collectors.toList());\n   }\n \n   private UriUtil() {}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/checkstyle_idea/65/UriUtil.java\nindex cbad21ff543..5b9d31c0d32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/checkstyle_idea/65/UriUtil.java\n@@ -1,18 +1,19 @@\n /**\n  * Copyright 2017-2021 O2 Czech Republic, a.s.\n- *\n+ * <p>\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- *\n- *    http://www.apache.org/licenses/LICENSE-2.0\n- *\n+ * <p>\n+ * http://www.apache.org/licenses/LICENSE-2.0\n+ * <p>\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package cz.o2.proxima.storage;\n \n import cz.o2.proxima.annotations.Internal;\n@@ -90,8 +91,10 @@ public class UriUtil {\n     if (path.isEmpty()) {\n       return Collections.emptyList();\n     }\n-    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n+    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode)\n+        .collect(Collectors.toList());\n   }\n \n-  private UriUtil() {}\n+  private UriUtil() {\n+  }\n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "51",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '?' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "93",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 92).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/naturalize/65/UriUtil.java\nindex cbad21ff543..44053ada4de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/naturalize/65/UriUtil.java\n@@ -48,7 +48,7 @@ public class UriUtil {\n \n   private static String decode(final String encoded) {\n     try {\n-      return encoded == null ? null : URLDecoder.decode(encoded, \"UTF-8\");\n+      return encoded == null? null : URLDecoder.decode(encoded, \"UTF-8\");\n     } catch (UnsupportedEncodingException e) {\n       throw new IllegalStateException(\"UTF-8 is a required encoding\", e);\n     }\n@@ -94,4 +94,4 @@ public class UriUtil {\n   }\n \n   private UriUtil() {}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "48",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "53",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '?' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/codebuff/65/UriUtil.java\nindex cbad21ff543..1ca4c4d3705 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/codebuff/65/UriUtil.java\n@@ -26,6 +26,8 @@ import java.util.Map;\n import java.util.stream.Collectors;\n \n /** Utilities related to URIs. */\n+\n+\n @Internal\n public class UriUtil {\n \n@@ -35,20 +37,20 @@ public class UriUtil {\n    * @param uri uri for parsing\n    * @return Map of query params\n    */\n+\n   public static Map<String, String> parseQuery(URI uri) {\n     String query = uri.getRawQuery();\n     if (query == null) {\n       return Collections.emptyMap();\n     }\n-    return Arrays.asList(query.split(\"&\"))\n-        .stream()\n-        .map(s -> Arrays.copyOf(s.split(\"=\"), 2))\n-        .collect(Collectors.toMap(s -> decode(s[0]), s -> decode(s[1])));\n+    return Arrays.asList(query.split(\"&\")).stream()\n+                                          .map(s -> Arrays.copyOf(s.split(\"=\"), 2))\n+                                          .collect(Collectors.toMap(s -> decode(s[0]), s -> decode(s[1])));\n   }\n \n   private static String decode(final String encoded) {\n     try {\n-      return encoded == null ? null : URLDecoder.decode(encoded, \"UTF-8\");\n+      return encoded == null? null : URLDecoder.decode(encoded, \"UTF-8\");\n     } catch (UnsupportedEncodingException e) {\n       throw new IllegalStateException(\"UTF-8 is a required encoding\", e);\n     }\n@@ -65,6 +67,7 @@ public class UriUtil {\n    * @param uri the URI to extract path from\n    * @return normalized path\n    */\n+\n   public static String getPathNormalized(URI uri) {\n     String p = uri.getPath();\n     while (p.startsWith(\"/\")) {\n@@ -82,6 +85,7 @@ public class UriUtil {\n    * @param uri uri for parsing\n    * @return list of paths as string\n    */\n+\n   public static List<String> parsePath(URI uri) {\n     String path = uri.getRawPath();\n     if (path.startsWith(\"/\")) {\n@@ -90,8 +94,9 @@ public class UriUtil {\n     if (path.isEmpty()) {\n       return Collections.emptyList();\n     }\n-    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n+    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode)\n+                                         .collect(Collectors.toList());\n   }\n \n   private UriUtil() {}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/random/files-repaired/65/UriUtil.java\nindex cbad21ff543..eddc350e06f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/random/files-repaired/65/UriUtil.java\n@@ -90,7 +90,8 @@ public class UriUtil {\n     if (path.isEmpty()) {\n       return Collections.emptyList();\n     }\n-    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n+    return Arrays.stream(path.split(\"/\") )\n+      . map(UriUtil::decode).collect(Collectors.toList());\n   }\n \n   private UriUtil() {}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "93",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 91).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/three_grams/files-repaired/65/UriUtil.java\nindex cbad21ff543..0e5ea0c31f0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/65/UriUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/three_grams/files-repaired/65/UriUtil.java\n@@ -90,8 +90,8 @@ public class UriUtil {\n     if (path.isEmpty()) {\n       return Collections.emptyList();\n     }\n-    return Arrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n+    returnArrays.stream(path.split(\"/\")).map(UriUtil::decode).collect(Collectors.toList());\n   }\n \n-  private UriUtil() {}\n+  private private UriUtil() {}\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

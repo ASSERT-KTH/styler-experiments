@@ -1,0 +1,190 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "253",
+    "information": {
+        "violations": [
+            {
+                "line": "187",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 126).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    DynamicIntProperty property =\n        DynamicPropertyFactory.getInstance()\n            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n    int timeout = property.get();\n    return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n  }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "186",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 159).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/253/ServiceRegistryConfig.java\nindex 23824a8005f..a0320cba74e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/253/ServiceRegistryConfig.java\n@@ -183,9 +183,8 @@ public final class ServiceRegistryConfig {\n   //Set the timeout of the heartbeat request\n   public int getHeartBeatRequestTimeout() {\n     DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n-    int timeout = property.get();\n+        DynamicPropertyFactory.getInstance() .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n+int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/253/ServiceRegistryConfig.java\nindex 23824a8005f..f461c259b36 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/253/ServiceRegistryConfig.java\n@@ -184,7 +184,8 @@ public final class ServiceRegistryConfig {\n   public int getHeartBeatRequestTimeout() {\n     DynamicIntProperty property =\n         DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n+            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\",\n+                DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "185",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/253/ServiceRegistryConfig.java\nindex 23824a8005f..fb6aaaf2e34 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/253/ServiceRegistryConfig.java\n@@ -86,13 +86,11 @@ public final class ServiceRegistryConfig {\n \n   public static final String PROXY_PASSWD = PROXY_PRE_NAME + \"passwd\";\n \n-\n-  private ServiceRegistryConfig() {\n+private ServiceRegistryConfig() {\n \n   }\n \n-\n-  public String getMicroserviceVersionFactory() {\n+public String getMicroserviceVersionFactory() {\n     return DynamicPropertyFactory.getInstance().getStringProperty(MICROSERVICE_VERSION_FACTORY, null).get();\n   }\n \n@@ -315,4 +313,4 @@ public final class ServiceRegistryConfig {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "96",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "120",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 159).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "142",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "150",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 137).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "158",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "165",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "174",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "181",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "188",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "195",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "200",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 144).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "207",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "212",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "217",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/253/ServiceRegistryConfig.java\nindex 23824a8005f..c562608505f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/253/ServiceRegistryConfig.java\n@@ -21,22 +21,20 @@ import java.net.URI;\n import java.util.ArrayList;\n import java.util.Arrays;\n import java.util.List;\n-\n import org.apache.servicecomb.foundation.common.net.IpPort;\n import org.apache.servicecomb.foundation.common.net.NetUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.netflix.config.DynamicBooleanProperty;\n import com.netflix.config.DynamicIntProperty;\n import com.netflix.config.DynamicPropertyFactory;\n import com.netflix.config.DynamicStringProperty;\n-\n import io.vertx.core.http.HttpVersion;\n \n /**\n  * Created by   on 2016/12/23.\n  */\n+\n public final class ServiceRegistryConfig {\n   private static final Logger LOGGER = LoggerFactory.getLogger(ServiceRegistryConfig.class);\n \n@@ -86,34 +84,28 @@ public final class ServiceRegistryConfig {\n \n   public static final String PROXY_PASSWD = PROXY_PRE_NAME + \"passwd\";\n \n-\n   private ServiceRegistryConfig() {\n-\n   }\n \n-\n   public String getMicroserviceVersionFactory() {\n-    return DynamicPropertyFactory.getInstance().getStringProperty(MICROSERVICE_VERSION_FACTORY, null).get();\n+    return DynamicPropertyFactory.getInstance().getStringProperty(MICROSERVICE_VERSION_FACTORY, null)\n+                                               .get();\n   }\n \n   public HttpVersion getHttpVersion() {\n-    DynamicStringProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getStringProperty(\"servicecomb.service.registry.client.httpVersion\", \"HTTP_1_1\");\n+    DynamicStringProperty property = DynamicPropertyFactory.getInstance().getStringProperty(\"servicecomb.service.registry.client.httpVersion\", \"HTTP_1_1\");\n     return HttpVersion.valueOf(property.get());\n   }\n \n   public int getWorkerPoolSize() {\n     String workerPoolSizeKey = \"servicecomb.service.registry.client.workerPoolSize\";\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(workerPoolSizeKey, 1);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(workerPoolSizeKey, 1);\n     int workerPoolSize = property.get();\n     if (workerPoolSize <= 0) {\n       int nAvailableProcessors = Runtime.getRuntime().availableProcessors();\n       LOGGER.warn(\"The property `{}` must be positive integer, fallback to use number of available processors: {}\",\n-          workerPoolSizeKey,\n-          nAvailableProcessors);\n+workerPoolSizeKey,\n+nAvailableProcessors);\n       return nAvailableProcessors;\n     }\n     return workerPoolSize;\n@@ -125,14 +117,14 @@ public final class ServiceRegistryConfig {\n   }\n \n   public ArrayList<IpPort> getIpPort() {\n-    DynamicStringProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getStringProperty(\"servicecomb.service.registry.address\", \"https://127.0.0.1:30100\");\n+    DynamicStringProperty property = DynamicPropertyFactory.getInstance().getStringProperty(\"servicecomb.service.registry.address\", \"https://127.0.0.1:30100\");\n     List<String> uriList = Arrays.asList(property.get().split(\",\"));\n     ArrayList<IpPort> ipPortList = new ArrayList<>();\n     uriList.forEach(anUriList -> {\n       try {\n         URI uri = new URI(anUriList.trim());\n+\n+\n         this.ssl = \"https\".equals(uri.getScheme());\n         ipPortList.add(NetUtils.parseIpPort(uri.getScheme(), uri.getAuthority()));\n       } catch (Exception e) {\n@@ -147,104 +139,82 @@ public final class ServiceRegistryConfig {\n   }\n \n   public int getConnectionTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.connection\", DEFAULT_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.connection\",\n+      DEFAULT_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 0 ? DEFAULT_TIMEOUT_IN_MS : timeout;\n   }\n \n   public int getIdleConnectionTimeout() {\n     // connection pool idle timeout based on client heart beat interval. Heart beat default value is 30.\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.idle\", DEFAULT_TIMEOUT_IN_SECONDS * 2);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.idle\",\n+      DEFAULT_TIMEOUT_IN_SECONDS * 2);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_TIMEOUT_IN_SECONDS * 2 : timeout;\n   }\n \n   public int getIdleWatchTimeout() {\n     // watch idle timeout based on SC PING/PONG interval. SC default value is 30.\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.watch\", DEFAULT_TIMEOUT_IN_SECONDS * 2);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.watch\",\n+      DEFAULT_TIMEOUT_IN_SECONDS * 2);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_TIMEOUT_IN_SECONDS * 2 : timeout;\n   }\n \n   public int getRequestTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.request\", DEFAULT_REQUEST_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.request\",\n+      DEFAULT_REQUEST_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_TIMEOUT_IN_MS : timeout;\n   }\n \n   //Set the timeout of the heartbeat request\n+\n   public int getHeartBeatRequestTimeout() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\",\n+      DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n     int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n \n   public int getHeartbeatInterval() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.healthCheck.interval\",\n-                DEFAULT_CHECK_INTERVAL_IN_S);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.healthCheck.interval\",\n+      DEFAULT_CHECK_INTERVAL_IN_S);\n     int interval = property.get();\n     return interval < 0 ? DEFAULT_CHECK_INTERVAL_IN_S : interval;\n   }\n \n   public int getInstancePullInterval() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.pull.interval\",\n-                DEFAULT_CHECK_INTERVAL_IN_S);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.pull.interval\",\n+      DEFAULT_CHECK_INTERVAL_IN_S);\n     int interval = property.get();\n     return interval < 0 ? DEFAULT_CHECK_INTERVAL_IN_S : interval;\n   }\n \n   public boolean isRegistryAutoDiscovery() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.autodiscovery\",\n-                false);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.autodiscovery\", false);\n     return property.get();\n   }\n \n   public int getResendHeartBeatTimes() {\n-    DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.instance.healthCheck.times\",\n-                DEFAULT_CHECK_TIMES);\n+    DynamicIntProperty property = DynamicPropertyFactory.getInstance().getIntProperty(\"servicecomb.service.registry.instance.healthCheck.times\",\n+      DEFAULT_CHECK_TIMES);\n     int times = property.get();\n     return times < 0 ? DEFAULT_CHECK_TIMES : times;\n   }\n \n   public boolean isEmptyInstanceProtectionEnabled() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.empty.protection\",\n-                true);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.empty.protection\", true);\n     return property.get();\n   }\n \n   public boolean isPreferIpAddress() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.preferIpAddress\",\n-                false);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.preferIpAddress\", false);\n     return property.get();\n   }\n \n   public boolean isWatch() {\n-    DynamicBooleanProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getBooleanProperty(\"servicecomb.service.registry.instance.watch\",\n-                true);\n+    DynamicBooleanProperty property = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.service.registry.instance.watch\", true);\n     return property.get();\n   }\n \n@@ -303,7 +273,8 @@ public final class ServiceRegistryConfig {\n   private String getProperty(String defaultValue, String... keys) {\n     String property = null;\n     for (String key : keys) {\n-      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null).get();\n+      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null)\n+                                                     .get();\n       if (property != null) {\n         break;\n       }\n@@ -315,4 +286,4 @@ public final class ServiceRegistryConfig {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 69
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "186",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 159).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/253/ServiceRegistryConfig.java\nindex 23824a8005f..a0320cba74e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/253/ServiceRegistryConfig.java\n@@ -183,9 +183,8 @@ public final class ServiceRegistryConfig {\n   //Set the timeout of the heartbeat request\n   public int getHeartBeatRequestTimeout() {\n     DynamicIntProperty property =\n-        DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n-    int timeout = property.get();\n+        DynamicPropertyFactory.getInstance() .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n+int timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "187",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "187",
+                    "column": "85",
+                    "severity": "warning",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "187",
+                    "column": "126",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/253/ServiceRegistryConfig.java\nindex 23824a8005f..47e14b42605 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/253/ServiceRegistryConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/253/ServiceRegistryConfig.java\n@@ -184,8 +184,7 @@ public final class ServiceRegistryConfig {\n   public int getHeartBeatRequestTimeout() {\n     DynamicIntProperty property =\n         DynamicPropertyFactory.getInstance()\n-            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\", DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);\n-    int timeout = property.get();\n+            .getIntProperty(\"servicecomb.service.registry.client.timeout.heartbeat\",DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS);inttimeout timeout = property.get();\n     return timeout < 1 ? DEFAULT_REQUEST_HEARTBEAT_TIMEOUT_IN_MS : timeout;\n   }\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

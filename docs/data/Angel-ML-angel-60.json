@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "60",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/60/AdaDeltaThreshold.java\nindex ea3a16f6d46..da4caeb7c48 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/60/AdaDeltaThreshold.java\n@@ -14,144 +14,145 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.ml.math2.ufuncs.expression;\n \n import com.tencent.angel.ml.math2.utils.Constant;\n \n public class AdaDeltaThreshold extends Binary {\n \n-  private double lambda1;\n-  private double lambda2;\n-\n-  public AdaDeltaThreshold(boolean inplace, double lambda1, double lambda2) {\n-    setInplace(inplace);\n-    setKeepStorage(Constant.keepStorage);\n-    this.lambda1 = lambda1;\n-    this.lambda2 = lambda2;\n-  }\n-\n-  @Override\n-  public OpType getOpType() {\n-    return OpType.INTERSECTION;\n-  }\n-\n-  @Override\n-  public double apply(double ele1, double ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return ele1 - threshold;\n-    } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n-    } else {\n-      return 0;\n+    private double lambda1;\n+    private double lambda2;\n+\n+    public AdaDeltaThreshold(boolean inplace, double lambda1, double lambda2) {\n+        setInplace(inplace);\n+        setKeepStorage(Constant.keepStorage);\n+        this.lambda1 = lambda1;\n+        this.lambda2 = lambda2;\n     }\n-  }\n-\n-  @Override\n-  public double apply(double ele1, float ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return ele1 - threshold;\n-    } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public OpType getOpType() {\n+        return OpType.INTERSECTION;\n     }\n-  }\n-\n-  @Override\n-  public double apply(double ele1, long ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return ele1 - threshold;\n-    } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public double apply(double ele1, double ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return ele1 - threshold;\n+        } else if (ele1 < -threshold) {\n+            return ele1 + threshold;\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public double apply(double ele1, int ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return ele1 - threshold;\n-    } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public double apply(double ele1, float ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return ele1 - threshold;\n+        } else if (ele1 < -threshold) {\n+            return ele1 + threshold;\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public float apply(float ele1, float ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (float) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public double apply(double ele1, long ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return ele1 - threshold;\n+        } else if (ele1 < -threshold) {\n+            return ele1 + threshold;\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public float apply(float ele1, long ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (float) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public double apply(double ele1, int ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return ele1 - threshold;\n+        } else if (ele1 < -threshold) {\n+            return ele1 + threshold;\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public float apply(float ele1, int ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (float) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public float apply(float ele1, float ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (float) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (float) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public long apply(long ele1, long ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (long) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (long) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public float apply(float ele1, long ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (float) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (float) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n+    }\n+\n+    @Override\n+    public float apply(float ele1, int ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (float) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (float) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public long apply(long ele1, int ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (long) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (long) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public long apply(long ele1, long ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (long) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (long) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n-\n-  @Override\n-  public int apply(int ele1, int ele2) {\n-    double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n-    if (ele1 > threshold) {\n-      return (int) (ele1 - threshold);\n-    } else if (ele1 < -threshold) {\n-      return (int) (ele1 + threshold);\n-    } else {\n-      return 0;\n+\n+    @Override\n+    public long apply(long ele1, int ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (long) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (long) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n+    }\n+\n+    @Override\n+    public int apply(int ele1, int ele2) {\n+        double threshold = lambda1 / (Math.sqrt(ele2) + lambda2);\n+        if (ele1 > threshold) {\n+            return (int) (ele1 - threshold);\n+        } else if (ele1 < -threshold) {\n+            return (int) (ele1 + threshold);\n+        } else {\n+            return 0;\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 149
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/60/AdaDeltaThreshold.java\nindex ea3a16f6d46..e8930fb8ee6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/60/AdaDeltaThreshold.java\n@@ -154,4 +154,4 @@ public class AdaDeltaThreshold extends Binary {\n       return 0;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/60/AdaDeltaThreshold.java\nindex ea3a16f6d46..7c0925475ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/60/AdaDeltaThreshold.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/60/AdaDeltaThreshold.java\n@@ -41,7 +41,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return ele1 - threshold;\n     } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n+             return ele1 + threshold;\n     } else {\n       return 0;\n     }\n@@ -53,7 +53,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return ele1 - threshold;\n     } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n+             return ele1 + threshold;\n     } else {\n       return 0;\n     }\n@@ -65,7 +65,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return ele1 - threshold;\n     } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n+             return ele1 + threshold;\n     } else {\n       return 0;\n     }\n@@ -77,7 +77,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return ele1 - threshold;\n     } else if (ele1 < -threshold) {\n-      return ele1 + threshold;\n+             return ele1 + threshold;\n     } else {\n       return 0;\n     }\n@@ -89,7 +89,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (float) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n+             return (float) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n@@ -101,7 +101,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (float) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n+             return (float) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n@@ -113,7 +113,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (float) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (float) (ele1 + threshold);\n+             return (float) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n@@ -125,7 +125,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (long) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (long) (ele1 + threshold);\n+             return (long) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n@@ -137,7 +137,7 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (long) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (long) (ele1 + threshold);\n+             return (long) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n@@ -149,9 +149,10 @@ public class AdaDeltaThreshold extends Binary {\n     if (ele1 > threshold) {\n       return (int) (ele1 - threshold);\n     } else if (ele1 < -threshold) {\n-      return (int) (ele1 + threshold);\n+             return (int) (ele1 + threshold);\n     } else {\n       return 0;\n     }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "343",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/343/TypeNeighborElement.java\nindex 55da93e695d..f7d6391021c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/343/TypeNeighborElement.java\n@@ -35,187 +35,187 @@ import java.util.Random;\n  */\n public class TypeNeighborElement implements IElement {\n \n-  private int selfType;\n-  private long[] data;\n-  private int[] type;\n-  private int[] indptr; // indicate the index of nbrs' type\n-\n-  public TypeNeighborElement(int selfType, long[] data, int[] type, int[] indptr) {\n-    this.selfType = selfType;\n-    this.data = data;\n-    this.type = type;\n-    this.indptr = indptr;\n-  }\n-\n-  public TypeNeighborElement(long[] data) {\n-    this.data = data;\n-  }\n-\n-  public TypeNeighborElement() {\n-    this(-1, null, null, null);\n-  }\n-\n-  public long[] getData() {\n-    return data;\n-  }\n-\n-  public int[] getTypes() {\n-    return type;\n-  }\n-\n-  public int[] getIndptr() {\n-    return indptr;\n-  }\n-\n-  public int getSelfType() {\n-    return selfType;\n-  }\n-\n-  public void setData(long[] data) {\n-    this.data = data;\n-  }\n-\n-  public void setTypes(int[] type) {\n-    this.type = type;\n-  }\n-\n-  public void setIndptr(int[] indptr) {\n-    this.indptr = indptr;\n-  }\n-\n-  public void setSelfType(int selfType) {\n-    this.selfType = selfType;\n-  }\n-\n-  public long sample(int sampleType, Random random, long key) {\n-    if (type == null) {\n-      int value = random.nextInt(data.length);\n-      return data[value];\n-    } else {\n-      int idx = ArrayUtils.indexOf(type, sampleType);\n-      if (idx < 0) {\n-        return key; // no given sampleType neighbors, return the key itself\n-      } else {\n-        int min = indptr[idx];\n-        int max = indptr[idx + 1];\n-        int value = random.nextInt(max) % (max - min) + min;\n-        return data[value];\n-      }\n-    }\n-  }\n-\n-  public long[] sample(int sampleType, Random random, long key, int count) {\n-    long[] re = new long[count];\n-    if (type == null) {\n-      for (int i = 0; i < count; i ++) {\n-        int idx = random.nextInt(data.length);\n-        re[i] = data[idx];\n-      }\n-    } else {\n-      int typeIdx = ArrayUtils.indexOf(type, sampleType);\n-      if (typeIdx < 0) {\n-        Arrays.fill(re, key);\n-      } else {\n-        int min = indptr[typeIdx];\n-        int max = indptr[typeIdx + 1];\n-        for (int i = 0; i < count; i ++) {\n-          int idx = random.nextInt(max) % (max - min) + min;\n-          re[i] = data[idx];\n+    private int selfType;\n+    private long[] data;\n+    private int[] type;\n+    private int[] indptr; // indicate the index of nbrs' type\n+\n+    public TypeNeighborElement(int selfType, long[] data, int[] type, int[] indptr) {\n+        this.selfType = selfType;\n+        this.data = data;\n+        this.type = type;\n+        this.indptr = indptr;\n+    }\n+\n+    public TypeNeighborElement(long[] data) {\n+        this.data = data;\n+    }\n+\n+    public TypeNeighborElement() {\n+        this(-1, null, null, null);\n+    }\n+\n+    public long[] getData() {\n+        return data;\n+    }\n+\n+    public int[] getTypes() {\n+        return type;\n+    }\n+\n+    public int[] getIndptr() {\n+        return indptr;\n+    }\n+\n+    public int getSelfType() {\n+        return selfType;\n+    }\n+\n+    public void setData(long[] data) {\n+        this.data = data;\n+    }\n+\n+    public void setTypes(int[] type) {\n+        this.type = type;\n+    }\n+\n+    public void setIndptr(int[] indptr) {\n+        this.indptr = indptr;\n+    }\n+\n+    public void setSelfType(int selfType) {\n+        this.selfType = selfType;\n+    }\n+\n+    public long sample(int sampleType, Random random, long key) {\n+        if (type == null) {\n+            int value = random.nextInt(data.length);\n+            return data[value];\n+        } else {\n+            int idx = ArrayUtils.indexOf(type, sampleType);\n+            if (idx < 0) {\n+                return key; // no given sampleType neighbors, return the key itself\n+            } else {\n+                int min = indptr[idx];\n+                int max = indptr[idx + 1];\n+                int value = random.nextInt(max) % (max - min) + min;\n+                return data[value];\n+            }\n+        }\n+    }\n+\n+    public long[] sample(int sampleType, Random random, long key, int count) {\n+        long[] re = new long[count];\n+        if (type == null) {\n+            for (int i = 0; i < count; i++) {\n+                int idx = random.nextInt(data.length);\n+                re[i] = data[idx];\n+            }\n+        } else {\n+            int typeIdx = ArrayUtils.indexOf(type, sampleType);\n+            if (typeIdx < 0) {\n+                Arrays.fill(re, key);\n+            } else {\n+                int min = indptr[typeIdx];\n+                int max = indptr[typeIdx + 1];\n+                for (int i = 0; i < count; i++) {\n+                    int idx = random.nextInt(max) % (max - min) + min;\n+                    re[i] = data[idx];\n+                }\n+            }\n         }\n-      }\n-    }\n-    return re;\n-  }\n-\n-  @Override\n-  public TypeNeighborElement deepClone() {\n-    long[] newData = new long[data.length];\n-    System.arraycopy(data, 0, newData, 0, data.length);\n-    if (type != null) {\n-      int[] newType = new int[type.length];\n-      int[] newIndptr = new int[indptr.length];\n-      System.arraycopy(type, 0, newType, 0, data.length);\n-      System.arraycopy(indptr, 0, newIndptr, 0, indptr.length);\n-      return new TypeNeighborElement(selfType, newData, newType, newIndptr);\n-    } else {\n-      return new TypeNeighborElement(newData);\n-    }\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    output.writeInt(selfType);\n-    ByteBufSerdeUtils.serializeLongs(output, data);\n-    if (type != null) {\n-      ByteBufSerdeUtils.serializeInts(output, type);\n-    } else {\n-      output.writeInt(0);\n-    }\n-    if (indptr != null) {\n-      ByteBufSerdeUtils.serializeInts(output, indptr);\n-    } else {\n-      output.writeInt(0);\n-    }\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    selfType = input.readInt();\n-    data = ByteBufSerdeUtils.deserializeLongs(input);\n-    type = ByteBufSerdeUtils.deserializeInts(input);\n-    indptr = ByteBufSerdeUtils.deserializeInts(input);\n-    if (type.length == 0) {\n-      type = null;\n-    }\n-    if (indptr.length == 0) {\n-      indptr = null;\n-    }\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    int len = 4 + 4 * 3 + data.length * 8;\n-    if (type != null) {\n-      len += type.length * 4;\n-    }\n-    if (indptr != null) {\n-      len += indptr.length * 4;\n-    }\n-    return len;\n-  }\n-\n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-    output.writeInt(selfType);\n-    StreamSerdeUtils.serializeLongs(output, data);\n-    if (type != null) {\n-      StreamSerdeUtils.serializeInts(output, type);\n-    } else {\n-      output.writeInt(0);\n-    }\n-    if (indptr != null) {\n-      StreamSerdeUtils.serializeInts(output, indptr);\n-    } else {\n-      output.writeInt(0);\n-    }\n-  }\n-\n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-    selfType = input.readInt();\n-    data = StreamSerdeUtils.deserializeLongs(input);\n-    type = StreamSerdeUtils.deserializeInts(input);\n-    indptr = StreamSerdeUtils.deserializeInts(input);\n-    if (type.length == 0) {\n-      type = null;\n-    }\n-    if (indptr.length == 0) {\n-      indptr = null;\n-    }\n-  }\n-\n-  @Override\n-  public int dataLen() {\n-    return bufferLen();\n-  }\n+        return re;\n+    }\n+\n+    @Override\n+    public TypeNeighborElement deepClone() {\n+        long[] newData = new long[data.length];\n+        System.arraycopy(data, 0, newData, 0, data.length);\n+        if (type != null) {\n+            int[] newType = new int[type.length];\n+            int[] newIndptr = new int[indptr.length];\n+            System.arraycopy(type, 0, newType, 0, data.length);\n+            System.arraycopy(indptr, 0, newIndptr, 0, indptr.length);\n+            return new TypeNeighborElement(selfType, newData, newType, newIndptr);\n+        } else {\n+            return new TypeNeighborElement(newData);\n+        }\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        output.writeInt(selfType);\n+        ByteBufSerdeUtils.serializeLongs(output, data);\n+        if (type != null) {\n+            ByteBufSerdeUtils.serializeInts(output, type);\n+        } else {\n+            output.writeInt(0);\n+        }\n+        if (indptr != null) {\n+            ByteBufSerdeUtils.serializeInts(output, indptr);\n+        } else {\n+            output.writeInt(0);\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        selfType = input.readInt();\n+        data = ByteBufSerdeUtils.deserializeLongs(input);\n+        type = ByteBufSerdeUtils.deserializeInts(input);\n+        indptr = ByteBufSerdeUtils.deserializeInts(input);\n+        if (type.length == 0) {\n+            type = null;\n+        }\n+        if (indptr.length == 0) {\n+            indptr = null;\n+        }\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        int len = 4 + 4 * 3 + data.length * 8;\n+        if (type != null) {\n+            len += type.length * 4;\n+        }\n+        if (indptr != null) {\n+            len += indptr.length * 4;\n+        }\n+        return len;\n+    }\n+\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+        output.writeInt(selfType);\n+        StreamSerdeUtils.serializeLongs(output, data);\n+        if (type != null) {\n+            StreamSerdeUtils.serializeInts(output, type);\n+        } else {\n+            output.writeInt(0);\n+        }\n+        if (indptr != null) {\n+            StreamSerdeUtils.serializeInts(output, indptr);\n+        } else {\n+            output.writeInt(0);\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+        selfType = input.readInt();\n+        data = StreamSerdeUtils.deserializeLongs(input);\n+        type = StreamSerdeUtils.deserializeInts(input);\n+        indptr = StreamSerdeUtils.deserializeInts(input);\n+        if (type.length == 0) {\n+            type = null;\n+        }\n+        if (indptr.length == 0) {\n+            indptr = null;\n+        }\n+    }\n+\n+    @Override\n+    public int dataLen() {\n+        return bufferLen();\n+    }\n }\n",
+            "diff_size": 184
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/343/TypeNeighborElement.java\nindex 55da93e695d..8e203338a1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/343/TypeNeighborElement.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.graph.model.neighbor.simplewithtype;\n \n import com.tencent.angel.common.ByteBufSerdeUtils;\n@@ -218,4 +217,4 @@ public class TypeNeighborElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/343/TypeNeighborElement.java\nindex 55da93e695d..979e42d02b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/343/TypeNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/343/TypeNeighborElement.java\n@@ -23,7 +23,6 @@ import com.tencent.angel.common.StreamSerdeUtils;\n import com.tencent.angel.ps.storage.vector.element.IElement;\n import io.netty.buffer.ByteBuf;\n import org.apache.commons.lang.ArrayUtils;\n-\n import java.io.DataInputStream;\n import java.io.DataOutputStream;\n import java.io.IOException;\n@@ -33,6 +32,7 @@ import java.util.Random;\n /**\n  * The complex object that contains a integer array,, it can be stored in PS\n  */\n+\n public class TypeNeighborElement implements IElement {\n \n   private int selfType;\n@@ -107,7 +107,7 @@ public class TypeNeighborElement implements IElement {\n   public long[] sample(int sampleType, Random random, long key, int count) {\n     long[] re = new long[count];\n     if (type == null) {\n-      for (int i = 0; i < count; i ++) {\n+      for (int i = 0; i < count; i++) {\n         int idx = random.nextInt(data.length);\n         re[i] = data[idx];\n       }\n@@ -118,7 +118,7 @@ public class TypeNeighborElement implements IElement {\n       } else {\n         int min = indptr[typeIdx];\n         int max = indptr[typeIdx + 1];\n-        for (int i = 0; i < count; i ++) {\n+        for (int i = 0; i < count; i++) {\n           int idx = random.nextInt(max) % (max - min) + min;\n           re[i] = data[idx];\n         }\n@@ -151,6 +151,7 @@ public class TypeNeighborElement implements IElement {\n     } else {\n       output.writeInt(0);\n     }\n+\n     if (indptr != null) {\n       ByteBufSerdeUtils.serializeInts(output, indptr);\n     } else {\n@@ -167,6 +168,7 @@ public class TypeNeighborElement implements IElement {\n     if (type.length == 0) {\n       type = null;\n     }\n+\n     if (indptr.length == 0) {\n       indptr = null;\n     }\n@@ -178,6 +180,7 @@ public class TypeNeighborElement implements IElement {\n     if (type != null) {\n       len += type.length * 4;\n     }\n+\n     if (indptr != null) {\n       len += indptr.length * 4;\n     }\n@@ -193,6 +196,7 @@ public class TypeNeighborElement implements IElement {\n     } else {\n       output.writeInt(0);\n     }\n+\n     if (indptr != null) {\n       StreamSerdeUtils.serializeInts(output, indptr);\n     } else {\n@@ -209,6 +213,7 @@ public class TypeNeighborElement implements IElement {\n     if (type.length == 0) {\n       type = null;\n     }\n+\n     if (indptr.length == 0) {\n       indptr = null;\n     }\n@@ -218,4 +223,5 @@ public class TypeNeighborElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

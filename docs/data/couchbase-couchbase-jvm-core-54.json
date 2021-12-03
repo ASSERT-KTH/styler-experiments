@@ -1,0 +1,84 @@
+{
+    "project_name": "couchbase-couchbase-jvm-core",
+    "violation_id": "54",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "1",
+                "severity": "warning",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public CouchbaseException() {\n\tsuper();\n    }\n\n    public CouchbaseException(String message) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/final/files-repaired/54/CouchbaseException.java\nindex 85baafc6a71..5fa4c0a6eef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/final/files-repaired/54/CouchbaseException.java\n@@ -30,7 +30,7 @@ public class CouchbaseException extends RuntimeException {\n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+        super();\n     }\n \n     public CouchbaseException(String message) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/checkstyle_idea/54/CouchbaseException.java\nindex 85baafc6a71..b25fe643731 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/checkstyle_idea/54/CouchbaseException.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.couchbase.client.core;\n \n import com.couchbase.client.core.annotations.InterfaceAudience;\n@@ -30,7 +31,7 @@ public class CouchbaseException extends RuntimeException {\n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+        super();\n     }\n \n     public CouchbaseException(String message) {\n@@ -62,8 +63,8 @@ public class CouchbaseException extends RuntimeException {\n         String message = super.getMessage();\n \n         if (responseStatusDetails != null) {\n-            message +=  \" (Context: \" + responseStatusDetails.context() + \", Reference: \"\n-                    + responseStatusDetails.reference() + \")\";\n+            message += \" (Context: \" + responseStatusDetails.context() + \", Reference: \"\n+                + responseStatusDetails.reference() + \")\";\n         }\n         return message;\n     }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "66",
+                    "severity": "warning",
+                    "message": "'if rcurly' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/naturalize/54/CouchbaseException.java\nindex 85baafc6a71..37615ab2251 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/naturalize/54/CouchbaseException.java\n@@ -30,7 +30,7 @@ public class CouchbaseException extends RuntimeException {\n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+    super();\n     }\n \n     public CouchbaseException(String message) {\n@@ -62,9 +62,8 @@ public class CouchbaseException extends RuntimeException {\n         String message = super.getMessage();\n \n         if (responseStatusDetails != null) {\n-            message +=  \" (Context: \" + responseStatusDetails.context() + \", Reference: \"\n-                    + responseStatusDetails.reference() + \")\";\n-        }\n+            message += \" (Context: \" + responseStatusDetails.context() + \", Reference: \" + responseStatusDetails.reference() + \")\";\n+    }\n         return message;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "67",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/codebuff/54/CouchbaseException.java\nindex 85baafc6a71..ec7e96d3a2a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/codebuff/54/CouchbaseException.java\n@@ -25,12 +25,13 @@ import com.couchbase.client.core.message.ResponseStatusDetails;\n  * @author Michael Nitschinger\n  * @since 1.0\n  */\n+\n public class CouchbaseException extends RuntimeException {\n \n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+        super();\n     }\n \n     public CouchbaseException(String message) {\n@@ -51,20 +52,20 @@ public class CouchbaseException extends RuntimeException {\n         return responseStatusDetails;\n     }\n \n+\n     @InterfaceAudience.Private\n     @InterfaceStability.Experimental\n     public void details(final ResponseStatusDetails responseStatusDetails) {\n         this.responseStatusDetails = responseStatusDetails;\n     }\n \n+\n     @Override\n     public String getMessage() {\n         String message = super.getMessage();\n-\n         if (responseStatusDetails != null) {\n-            message +=  \" (Context: \" + responseStatusDetails.context() + \", Reference: \"\n-                    + responseStatusDetails.reference() + \")\";\n+            message += \" (Context: \" + responseStatusDetails.context() + \", Reference: \" + responseStatusDetails.reference() + \")\";\n         }\n         return message;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/random/files-repaired/54/CouchbaseException.java\nindex 85baafc6a71..5fa4c0a6eef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/random/files-repaired/54/CouchbaseException.java\n@@ -30,7 +30,7 @@ public class CouchbaseException extends RuntimeException {\n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+        super();\n     }\n \n     public CouchbaseException(String message) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/three_grams/files-repaired/54/CouchbaseException.java\nindex 85baafc6a71..5fa4c0a6eef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/violations/54/CouchbaseException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/couchbase-couchbase-jvm-core/styler/05_predictions/three_grams/files-repaired/54/CouchbaseException.java\n@@ -30,7 +30,7 @@ public class CouchbaseException extends RuntimeException {\n     private volatile ResponseStatusDetails responseStatusDetails;\n \n     public CouchbaseException() {\n-\tsuper();\n+        super();\n     }\n \n     public CouchbaseException(String message) {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

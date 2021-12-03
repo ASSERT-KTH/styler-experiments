@@ -1,0 +1,89 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "701",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.bpmn.model;\n\npublic class DataStoreReference extends FlowElement {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/701/DataStoreReference.java\nindex d581ca26878..cbce1ff597f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/701/DataStoreReference.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class DataStoreReference extends FlowElement {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/701/DataStoreReference.java\nindex d581ca26878..27f28f70ca0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/701/DataStoreReference.java\n@@ -13,49 +13,50 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class DataStoreReference extends FlowElement {\n \n-  protected String dataState;\n-  protected String itemSubjectRef;\n-  protected String dataStoreRef;\n-\n-  public String getDataState() {\n-    return dataState;\n-  }\n-\n-  public void setDataState(String dataState) {\n-    this.dataState = dataState;\n-  }\n-\n-  public String getItemSubjectRef() {\n-    return itemSubjectRef;\n-  }\n-\n-  public void setItemSubjectRef(String itemSubjectRef) {\n-    this.itemSubjectRef = itemSubjectRef;\n-  }\n-\n-  public String getDataStoreRef() {\n-    return dataStoreRef;\n-  }\n-\n-  public void setDataStoreRef(String dataStoreRef) {\n-    this.dataStoreRef = dataStoreRef;\n-  }\n-\n-  public DataStoreReference clone() {\n-    DataStoreReference clone = new DataStoreReference();\n-    clone.setValues(this);\n-    return clone;\n-  }\n-\n-  public void setValues(DataStoreReference otherElement) {\n-    super.setValues(otherElement);\n-    setDataState(otherElement.getDataState());\n-    setItemSubjectRef(otherElement.getItemSubjectRef());\n-    setDataStoreRef(otherElement.getDataStoreRef());\n-  }\n+    protected String dataState;\n+    protected String itemSubjectRef;\n+    protected String dataStoreRef;\n+\n+    public String getDataState() {\n+        return dataState;\n+    }\n+\n+    public void setDataState(String dataState) {\n+        this.dataState = dataState;\n+    }\n+\n+    public String getItemSubjectRef() {\n+        return itemSubjectRef;\n+    }\n+\n+    public void setItemSubjectRef(String itemSubjectRef) {\n+        this.itemSubjectRef = itemSubjectRef;\n+    }\n+\n+    public String getDataStoreRef() {\n+        return dataStoreRef;\n+    }\n+\n+    public void setDataStoreRef(String dataStoreRef) {\n+        this.dataStoreRef = dataStoreRef;\n+    }\n+\n+    public DataStoreReference clone() {\n+        DataStoreReference clone = new DataStoreReference();\n+        clone.setValues(this);\n+        return clone;\n+    }\n+\n+    public void setValues(DataStoreReference otherElement) {\n+        super.setValues(otherElement);\n+        setDataState(otherElement.getDataState());\n+        setItemSubjectRef(otherElement.getItemSubjectRef());\n+        setDataStoreRef(otherElement.getDataStoreRef());\n+    }\n \n }\n",
+            "diff_size": 41
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/701/DataStoreReference.java\nindex d581ca26878..b3b1348b134 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/701/DataStoreReference.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class DataStoreReference extends FlowElement {\n@@ -58,4 +59,4 @@ public class DataStoreReference extends FlowElement {\n     setDataStoreRef(otherElement.getDataStoreRef());\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/701/DataStoreReference.java\nindex d581ca26878..899d4836a8f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/701/DataStoreReference.java\n@@ -20,7 +20,6 @@ public class DataStoreReference extends FlowElement {\n   protected String dataState;\n   protected String itemSubjectRef;\n   protected String dataStoreRef;\n-\n   public String getDataState() {\n     return dataState;\n   }\n@@ -57,5 +56,4 @@ public class DataStoreReference extends FlowElement {\n     setItemSubjectRef(otherElement.getItemSubjectRef());\n     setDataStoreRef(otherElement.getDataStoreRef());\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/701/DataStoreReference.java\nindex d581ca26878..1485e24c717 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/701/DataStoreReference.java\n@@ -13,7 +13,9 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package org.activiti.bpmn.model;\n+package org.activiti.\n+\n+bpmn.model;\n \n public class DataStoreReference extends FlowElement {\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/701/DataStoreReference.java\nindex d581ca26878..cbce1ff597f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/701/DataStoreReference.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/701/DataStoreReference.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class DataStoreReference extends FlowElement {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

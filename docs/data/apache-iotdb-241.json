@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "241",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *\n */\npackage org.apache.iotdb.db.qp.physical.sys;\n\nimport org.apache.iotdb.db.metadata.PartialPath;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/241/ShowChildPathsPlan.java\nindex 845b924bc64..e4010e9e323 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/241/ShowChildPathsPlan.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/241/ShowChildPathsPlan.java\nindex 845b924bc64..e4010e9e323 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/241/ShowChildPathsPlan.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/241/ShowChildPathsPlan.java\nindex 845b924bc64..7d29f2d3f9f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/241/ShowChildPathsPlan.java\n@@ -24,6 +24,7 @@ import org.apache.iotdb.db.metadata.PartialPath;\n public class ShowChildPathsPlan extends ShowPlan {\n \n   // the path could be a prefix path with wildcard\n+\n   private PartialPath prefixPath;\n \n   public ShowChildPathsPlan(ShowContentType showContentType, PartialPath prefixPath) {\n@@ -36,4 +37,4 @@ public class ShowChildPathsPlan extends ShowPlan {\n   public PartialPath getPath() {\n     return this.prefixPath;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/241/ShowChildPathsPlan.java\nindex 845b924bc64..e4010e9e323 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/241/ShowChildPathsPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/241/ShowChildPathsPlan.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

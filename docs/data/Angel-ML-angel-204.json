@@ -1,0 +1,110 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "204",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/204/SplitSet.java\nindex ea2c7c86a35..8bd27d45114 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/204/SplitSet.java\n@@ -24,62 +24,62 @@ import com.tencent.angel.spark.ml.tree.util.Maths;\n \n public class SplitSet extends SplitEntry {\n \n-  private float[] edges;\n-  private int firstFlow;\n-  private int defaultFlow;\n+    private float[] edges;\n+    private int firstFlow;\n+    private int defaultFlow;\n \n-  public SplitSet() {\n-    this(-1, 0.0f, null, -1, -1);\n-  }\n+    public SplitSet() {\n+        this(-1, 0.0f, null, -1, -1);\n+    }\n \n-  public SplitSet(int fid, float gain, float[] edges, int firstFlow, int defaultFlow) {\n-    super(fid, gain);\n-    this.edges = edges;\n-    this.firstFlow = firstFlow;\n-    this.defaultFlow = defaultFlow;\n-  }\n+    public SplitSet(int fid, float gain, float[] edges, int firstFlow, int defaultFlow) {\n+        super(fid, gain);\n+        this.edges = edges;\n+        this.firstFlow = firstFlow;\n+        this.defaultFlow = defaultFlow;\n+    }\n \n-  @Override\n-  public int flowTo(float x) {\n-    if (edges.length == 1) {\n-      return firstFlow;\n-    } else {\n-      int index = Maths.indexOf(edges, x);\n-      if (Maths.isEven(index)) {\n-        return firstFlow;\n-      } else {\n-        return 1 - firstFlow;\n-      }\n+    @Override\n+    public int flowTo(float x) {\n+        if (edges.length == 1) {\n+            return firstFlow;\n+        } else {\n+            int index = Maths.indexOf(edges, x);\n+            if (Maths.isEven(index)) {\n+                return firstFlow;\n+            } else {\n+                return 1 - firstFlow;\n+            }\n+        }\n     }\n-  }\n \n-  @Override\n-  public int flowTo(Vector x) {\n-    if (x instanceof SparseVector) {\n-      SparseVector sv = (SparseVector) x;\n-      int t = Arrays.binarySearch(sv.indices(), fid);\n-      if (t >= 0) {\n-        return flowTo((float) sv.values()[t]);\n-      } else {\n-        return defaultFlow;\n-      }\n+    @Override\n+    public int flowTo(Vector x) {\n+        if (x instanceof SparseVector) {\n+            SparseVector sv = (SparseVector) x;\n+            int t = Arrays.binarySearch(sv.indices(), fid);\n+            if (t >= 0) {\n+                return flowTo((float) sv.values()[t]);\n+            } else {\n+                return defaultFlow;\n+            }\n+        }\n+        return flowTo((float) x.apply(fid));\n     }\n-    return flowTo((float) x.apply(fid));\n-  }\n \n-  @Override\n-  public int defaultTo() {\n-    return defaultFlow;\n-  }\n+    @Override\n+    public int defaultTo() {\n+        return defaultFlow;\n+    }\n \n-  @Override\n-  public SplitType splitType() {\n-    return SplitType.SPLIT_SET;\n-  }\n+    @Override\n+    public SplitType splitType() {\n+        return SplitType.SPLIT_SET;\n+    }\n \n-  @Override\n-  public String toString() {\n-    return String.format(\"%s fid[%d] edges%s firstFlow[%d] defaultFlow[%d] gain[%f]\",\n-        this.splitType(), fid, Arrays.toString(edges), firstFlow, defaultFlow, gain);\n-  }\n+    @Override\n+    public String toString() {\n+        return String.format(\"%s fid[%d] edges%s firstFlow[%d] defaultFlow[%d] gain[%f]\",\n+                this.splitType(), fid, Arrays.toString(edges), firstFlow, defaultFlow, gain);\n+    }\n }\n",
+            "diff_size": 52
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/204/SplitSet.java\nindex ea2c7c86a35..4c0f38df992 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/204/SplitSet.java\n@@ -82,4 +82,4 @@ public class SplitSet extends SplitEntry {\n     return String.format(\"%s fid[%d] edges%s firstFlow[%d] defaultFlow[%d] gain[%f]\",\n         this.splitType(), fid, Arrays.toString(edges), firstFlow, defaultFlow, gain);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "82",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 163).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/204/SplitSet.java\nindex ea2c7c86a35..2c3d0e68efe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/204/SplitSet.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/204/SplitSet.java\n@@ -79,7 +79,6 @@ public class SplitSet extends SplitEntry {\n \n   @Override\n   public String toString() {\n-    return String.format(\"%s fid[%d] edges%s firstFlow[%d] defaultFlow[%d] gain[%f]\",\n-        this.splitType(), fid, Arrays.toString(edges), firstFlow, defaultFlow, gain);\n+    return String.format(\"%s fid[%d] edges%s firstFlow[%d] defaultFlow[%d] gain[%f]\", this.splitType(), fid, Arrays.toString(edges), firstFlow, defaultFlow, gain);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "project_name": "O2-Czech-Republic-proxima-platform",
+    "violation_id": "78",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "severity": "error",
+                "message": "Line is longer than 90 characters (found 95).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  }\n\n  private static <M extends GenericContainer> ValueSerializer<M> createSerializer(URI scheme) {\n    try {\n      return new SchemaRegistryValueSerializer<>(scheme);\n    } catch (Exception e) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "46",
+                    "severity": "error",
+                    "message": "GenericWhitespace '>' should followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "'createSerializer' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "error",
+                    "message": "'try' has incorrect indentation level 5, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/final/files-repaired/78/SchemaRegistrySerializerFactory.java\nindex fecb99b4829..60041404ad5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/final/files-repaired/78/SchemaRegistrySerializerFactory.java\n@@ -36,8 +36,9 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n     return \"schema-registry\";\n   }\n \n-  private static <M extends GenericContainer> ValueSerializer<M> createSerializer(URI scheme) {\n-    try {\n+  private static <M extends GenericContainer>ValueSerializer<M>\n+  createSerializer(URI scheme) {\n+     try {\n       return new SchemaRegistryValueSerializer<>(scheme);\n     } catch (Exception e) {\n       throw new SerializationException(\"Unable to create value serializer.\", e);\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/checkstyle_idea/78/SchemaRegistrySerializerFactory.java\nindex fecb99b4829..40ab7a80b02 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/checkstyle_idea/78/SchemaRegistrySerializerFactory.java\n@@ -1,18 +1,19 @@\n /**\n  * Copyright 2017-2021 O2 Czech Republic, a.s.\n- *\n+ * <p>\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- *\n- *    http://www.apache.org/licenses/LICENSE-2.0\n- *\n+ * <p>\n+ * http://www.apache.org/licenses/LICENSE-2.0\n+ * <p>\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package cz.o2.proxima.scheme.confluent;\n \n import cz.o2.proxima.scheme.SerializationException;\n@@ -36,7 +37,8 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n     return \"schema-registry\";\n   }\n \n-  private static <M extends GenericContainer> ValueSerializer<M> createSerializer(URI scheme) {\n+  private static <M extends GenericContainer> ValueSerializer<M> createSerializer(\n+      URI scheme) {\n     try {\n       return new SchemaRegistryValueSerializer<>(scheme);\n     } catch (Exception e) {\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 95).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 113).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/naturalize/78/SchemaRegistrySerializerFactory.java\nindex fecb99b4829..fc5c1ac302f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/naturalize/78/SchemaRegistrySerializerFactory.java\n@@ -47,8 +47,7 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n   @SuppressWarnings(\"unchecked\")\n   @Override\n   public <T> ValueSerializer<T> getValueSerializer(URI scheme) {\n-    return (ValueSerializer<T>)\n-        cache.computeIfAbsent(scheme, SchemaRegistrySerializerFactory::createSerializer);\n+    return (ValueSerializer<T>) cache.computeIfAbsent(scheme, SchemaRegistrySerializerFactory::createSerializer);\n   }\n \n   @Override\n@@ -56,7 +55,6 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n     @SuppressWarnings(\"unchecked\")\n     SchemaRegistryValueSerializer<?> serializer =\n         (SchemaRegistryValueSerializer) getValueSerializer(scheme);\n-\n-    return serializer.getClassName();\n+return serializer.getClassName();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 95).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 113).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "55",
+                    "severity": "error",
+                    "message": "Line is longer than 90 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/codebuff/78/SchemaRegistrySerializerFactory.java\nindex fecb99b4829..89112f783a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/codebuff/78/SchemaRegistrySerializerFactory.java\n@@ -24,11 +24,11 @@ import java.util.concurrent.ConcurrentHashMap;\n import lombok.extern.slf4j.Slf4j;\n import org.apache.avro.generic.GenericContainer;\n \n+\n @Slf4j\n public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n \n   private static final long serialVersionUID = 1L;\n-\n   private Map<URI, ValueSerializer<?>> cache = new ConcurrentHashMap<>();\n \n   @Override\n@@ -47,16 +47,12 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n   @SuppressWarnings(\"unchecked\")\n   @Override\n   public <T> ValueSerializer<T> getValueSerializer(URI scheme) {\n-    return (ValueSerializer<T>)\n-        cache.computeIfAbsent(scheme, SchemaRegistrySerializerFactory::createSerializer);\n+    return (ValueSerializer<T>) cache.computeIfAbsent(scheme, SchemaRegistrySerializerFactory::createSerializer);\n   }\n \n   @Override\n   public String getClassName(URI scheme) {\n-    @SuppressWarnings(\"unchecked\")\n-    SchemaRegistryValueSerializer<?> serializer =\n-        (SchemaRegistryValueSerializer) getValueSerializer(scheme);\n-\n+    @SuppressWarnings(\"unchecked\") SchemaRegistryValueSerializer<?> serializer = (SchemaRegistryValueSerializer) getValueSerializer(scheme);\n     return serializer.getClassName();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "39",
+                    "column": "46",
+                    "severity": "error",
+                    "message": "GenericWhitespace '>' should followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "'createSerializer' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "error",
+                    "message": "'try' has incorrect indentation level 5, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/three_grams/files-repaired/78/SchemaRegistrySerializerFactory.java\nindex fecb99b4829..60041404ad5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/violations/78/SchemaRegistrySerializerFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/O2-Czech-Republic-proxima-platform/styler/05_predictions/three_grams/files-repaired/78/SchemaRegistrySerializerFactory.java\n@@ -36,8 +36,9 @@ public class SchemaRegistrySerializerFactory implements ValueSerializerFactory {\n     return \"schema-registry\";\n   }\n \n-  private static <M extends GenericContainer> ValueSerializer<M> createSerializer(URI scheme) {\n-    try {\n+  private static <M extends GenericContainer>ValueSerializer<M>\n+  createSerializer(URI scheme) {\n+     try {\n       return new SchemaRegistryValueSerializer<>(scheme);\n     } catch (Exception e) {\n       throw new SerializationException(\"Unable to create value serializer.\", e);\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

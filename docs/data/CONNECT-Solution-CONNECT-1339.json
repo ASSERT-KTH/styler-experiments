@@ -1,0 +1,104 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "1339",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n\n/**\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..9b56c61c4d1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n+\n+package gov.hhs.fha.nhinc.corex12.ds.\n+\n+realtime .nhin.proxy.service;\n \n /**\n  *\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..3e3ce5ffa87 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -24,16 +24,16 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n \n /**\n- *\n  * @author cmay\n  */\n public class NhinX12DSRealTimeServicePortDescriptor extends AbstractCOREServicePortDescriptor {\n \n-    @Override\n-    public String getWSAddressingAction() {\n-        return \"RealTimeTransaction\";\n-    }\n+  @Override\n+  public String getWSAddressingAction() {\n+    return \"RealTimeTransaction\";\n+  }\n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..940612a5ac9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n \n /**\n@@ -36,4 +37,4 @@ public class NhinX12DSRealTimeServicePortDescriptor extends AbstractCOREServiceP\n     public String getWSAddressingAction() {\n         return \"RealTimeTransaction\";\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..ef8e36209d6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -30,10 +30,14 @@ package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n  *\n  * @author cmay\n  */\n-public class NhinX12DSRealTimeServicePortDescriptor extends AbstractCOREServicePortDescriptor {\n+\n+\n+public class NhinX12DSRealTimeServicePortDescriptor extends\n+    AbstractCOREServicePortDescriptor {\n+\n \n     @Override\n     public String getWSAddressingAction() {\n         return \"RealTimeTransaction\";\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "27",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..85c3dd6cbc7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -24,7 +24,8 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n+package gov . hhs.fha.nhinc.corex12.ds.\n+realtime .nhin.proxy.service;\n \n /**\n  *\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\nindex 347103e5149..9b56c61c4d1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1339/NhinX12DSRealTimeServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/1339/NhinX12DSRealTimeServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.corex12.ds.realtime.nhin.proxy.service;\n+\n+package gov.hhs.fha.nhinc.corex12.ds.\n+\n+realtime .nhin.proxy.service;\n \n /**\n  *\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

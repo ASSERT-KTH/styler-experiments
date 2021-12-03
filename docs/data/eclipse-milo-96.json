@@ -1,0 +1,112 @@
+{
+    "project_name": "eclipse-milo",
+    "violation_id": "96",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=349\");\n\n    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=351\");\n\n    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=350\");\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/96/NodeAttributes.java\nindex 6614df13d3c..363233a3146 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/96/NodeAttributes.java\n@@ -32,7 +32,8 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n public class NodeAttributes extends Structure implements UaStructure {\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=349\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=351\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID =\n+        ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=351\");\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=350\");\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "51",
+                    "severity": "error",
+                    "message": "'ctor def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/96/NodeAttributes.java\nindex 6614df13d3c..9195e97a6ba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/96/NodeAttributes.java\n@@ -48,7 +48,7 @@ public class NodeAttributes extends Structure implements UaStructure {\n \n     public NodeAttributes(UInteger specifiedAttributes, LocalizedText displayName,\n                           LocalizedText description, UInteger writeMask, UInteger userWriteMask) {\n-        this.specifiedAttributes = specifiedAttributes;\n+    this.specifiedAttributes = specifiedAttributes;\n         this.displayName = displayName;\n         this.description = description;\n         this.writeMask = writeMask;\n@@ -115,4 +115,4 @@ public class NodeAttributes extends Structure implements UaStructure {\n             encoder.writeUInt32(\"UserWriteMask\", value.getUserWriteMask());\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/96/NodeAttributes.java\nindex 6614df13d3c..afa331be1ee 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/96/NodeAttributes.java\n@@ -30,10 +30,13 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n )\n @ToString\n public class NodeAttributes extends Structure implements UaStructure {\n+\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=349\");\n \n+\n     public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=351\");\n \n+\n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=350\");\n \n     private final UInteger specifiedAttributes;\n@@ -46,8 +49,11 @@ public class NodeAttributes extends Structure implements UaStructure {\n \n     private final UInteger userWriteMask;\n \n-    public NodeAttributes(UInteger specifiedAttributes, LocalizedText displayName,\n-                          LocalizedText description, UInteger writeMask, UInteger userWriteMask) {\n+    public NodeAttributes(\n+        UInteger specifiedAttributes,\n+        LocalizedText displayName,\n+        LocalizedText description,\n+        UInteger writeMask, UInteger userWriteMask) {\n         this.specifiedAttributes = specifiedAttributes;\n         this.displayName = displayName;\n         this.description = description;\n@@ -99,9 +105,13 @@ public class NodeAttributes extends Structure implements UaStructure {\n         @Override\n         public NodeAttributes decode(SerializationContext context, UaDecoder decoder) {\n             UInteger specifiedAttributes = decoder.readUInt32(\"SpecifiedAttributes\");\n+\n             LocalizedText displayName = decoder.readLocalizedText(\"DisplayName\");\n+\n             LocalizedText description = decoder.readLocalizedText(\"Description\");\n+\n             UInteger writeMask = decoder.readUInt32(\"WriteMask\");\n+\n             UInteger userWriteMask = decoder.readUInt32(\"UserWriteMask\");\n             return new NodeAttributes(specifiedAttributes, displayName, description, writeMask, userWriteMask);\n         }\n@@ -115,4 +125,5 @@ public class NodeAttributes extends Structure implements UaStructure {\n             encoder.writeUInt32(\"UserWriteMask\", value.getUserWriteMask());\n         }\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "76",
+                    "severity": "error",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                },
+                {
+                    "line": "36",
+                    "column": "15",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/96/NodeAttributes.java\nindex 6614df13d3c..652490637bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/96/NodeAttributes.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/96/NodeAttributes.java\n@@ -32,7 +32,8 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;\n public class NodeAttributes extends Structure implements UaStructure {\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=349\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=351\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId .\n+        parse (\"nsu=http://opcfoundation.org/UA/;i=351\");\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=350\");\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

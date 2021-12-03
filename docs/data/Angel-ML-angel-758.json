@@ -1,0 +1,96 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "758",
+    "information": {
+        "violations": [
+            {
+                "line": "62",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 104).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    for (Entry<Request, Response> entry : responses.entrySet()) {\n      keyParts[index] = ((IndexPartGetRowRequest) (entry.getKey().getData())).getKeyPart();\n      valueParts[index] = ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n      index++;\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/758/IndexGetRowHandler.java\nindex 948a4ec8ed8..6a3093a70d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/758/IndexGetRowHandler.java\n@@ -59,7 +59,9 @@ public class IndexGetRowHandler extends Handler {\n     int index = 0;\n     for (Entry<Request, Response> entry : responses.entrySet()) {\n       keyParts[index] = ((IndexPartGetRowRequest) (entry.getKey().getData())).getKeyPart();\n-      valueParts[index] = ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n+      valueParts[index]= ( ( StreamIndexPartGetRowResponse )(entry.getValue()\n+      .getData()))\n+      .getValuePart();\n       index++;\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/758/IndexGetRowHandler.java\nindex 948a4ec8ed8..4c93f89b3d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/758/IndexGetRowHandler.java\n@@ -21,50 +21,51 @@ import org.apache.commons.logging.LogFactory;\n \n public class IndexGetRowHandler extends Handler {\n \n-  private static final Log LOG = LogFactory.getLog(IndexGetRowHandler.class);\n+    private static final Log LOG = LogFactory.getLog(IndexGetRowHandler.class);\n \n-  public IndexGetRowHandler(PSAgentContext context) {\n-    super(context);\n-  }\n-\n-  @Override\n-  public ResponseData parseResponse(ByteBuf in) {\n-    StreamIndexPartGetRowResponse response = new StreamIndexPartGetRowResponse();\n-    response.deserialize(in);\n-    return response;\n-  }\n+    public IndexGetRowHandler(PSAgentContext context) {\n+        super(context);\n+    }\n \n-  @Override\n-  public void handle(FutureResult finalResult, UserRequest userRequest,\n-      ResponseCache responseCache) {\n-    IndexGetRowRequest indexGetRowRequest = (IndexGetRowRequest) userRequest;\n-    MapResponseCache cache = (MapResponseCache) responseCache;\n-    ConcurrentHashMap<Request, Response> responses = cache.getResponses();\n+    @Override\n+    public ResponseData parseResponse(ByteBuf in) {\n+        StreamIndexPartGetRowResponse response = new StreamIndexPartGetRowResponse();\n+        response.deserialize(in);\n+        return response;\n+    }\n \n-    // Merge\n-    Vector result = merge(indexGetRowRequest, responses);\n+    @Override\n+    public void handle(FutureResult finalResult, UserRequest userRequest,\n+                       ResponseCache responseCache) {\n+        IndexGetRowRequest indexGetRowRequest = (IndexGetRowRequest) userRequest;\n+        MapResponseCache cache = (MapResponseCache) responseCache;\n+        ConcurrentHashMap<Request, Response> responses = cache.getResponses();\n \n-    // Set matrix/row meta\n-    result.setMatrixId(indexGetRowRequest.getMatrixId());\n-    result.setRowId(indexGetRowRequest.getRowId());\n+        // Merge\n+        Vector result = merge(indexGetRowRequest, responses);\n \n-    // Set final result\n-    finalResult.set(result);\n-  }\n+        // Set matrix/row meta\n+        result.setMatrixId(indexGetRowRequest.getMatrixId());\n+        result.setRowId(indexGetRowRequest.getRowId());\n \n-  private Vector merge(IndexGetRowRequest indexGetRowRequest,\n-      ConcurrentHashMap<Request, Response> responses) {\n-    KeyPart[] keyParts = new KeyPart[responses.size()];\n-    ValuePart[] valueParts = new ValuePart[responses.size()];\n-    int index = 0;\n-    for (Entry<Request, Response> entry : responses.entrySet()) {\n-      keyParts[index] = ((IndexPartGetRowRequest) (entry.getKey().getData())).getKeyPart();\n-      valueParts[index] = ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n-      index++;\n+        // Set final result\n+        finalResult.set(result);\n     }\n \n-    return MergeUtils.combineIndexRowSplits(indexGetRowRequest.getMatrixId(),\n-        indexGetRowRequest.getRowId(), indexGetRowRequest.size(), keyParts, valueParts);\n-  }\n+    private Vector merge(IndexGetRowRequest indexGetRowRequest,\n+                         ConcurrentHashMap<Request, Response> responses) {\n+        KeyPart[] keyParts = new KeyPart[responses.size()];\n+        ValuePart[] valueParts = new ValuePart[responses.size()];\n+        int index = 0;\n+        for (Entry<Request, Response> entry : responses.entrySet()) {\n+            keyParts[index] = ((IndexPartGetRowRequest) (entry.getKey().getData())).getKeyPart();\n+            valueParts[index] =\n+                    ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n+            index++;\n+        }\n+\n+        return MergeUtils.combineIndexRowSplits(indexGetRowRequest.getMatrixId(),\n+                indexGetRowRequest.getRowId(), indexGetRowRequest.size(), keyParts, valueParts);\n+    }\n \n }\n",
+            "diff_size": 53
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "62",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/758/IndexGetRowHandler.java\nindex 948a4ec8ed8..c40296475cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/758/IndexGetRowHandler.java\n@@ -54,7 +54,7 @@ public class IndexGetRowHandler extends Handler {\n \n   private Vector merge(IndexGetRowRequest indexGetRowRequest,\n       ConcurrentHashMap<Request, Response> responses) {\n-    KeyPart[] keyParts = new KeyPart[responses.size()];\n+  KeyPart[] keyParts = new KeyPart[responses.size()];\n     ValuePart[] valueParts = new ValuePart[responses.size()];\n     int index = 0;\n     for (Entry<Request, Response> entry : responses.entrySet()) {\n@@ -67,4 +67,4 @@ public class IndexGetRowHandler extends Handler {\n         indexGetRowRequest.getRowId(), indexGetRowRequest.size(), keyParts, valueParts);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "55",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 111).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "61",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 158).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/758/IndexGetRowHandler.java\nindex 948a4ec8ed8..31f99eb8fce 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/758/IndexGetRowHandler.java\n@@ -35,8 +35,8 @@ public class IndexGetRowHandler extends Handler {\n   }\n \n   @Override\n-  public void handle(FutureResult finalResult, UserRequest userRequest,\n-      ResponseCache responseCache) {\n+  public void handle(\n+    FutureResult finalResult, UserRequest userRequest, ResponseCache responseCache) {\n     IndexGetRowRequest indexGetRowRequest = (IndexGetRowRequest) userRequest;\n     MapResponseCache cache = (MapResponseCache) responseCache;\n     ConcurrentHashMap<Request, Response> responses = cache.getResponses();\n@@ -52,8 +52,7 @@ public class IndexGetRowHandler extends Handler {\n     finalResult.set(result);\n   }\n \n-  private Vector merge(IndexGetRowRequest indexGetRowRequest,\n-      ConcurrentHashMap<Request, Response> responses) {\n+  private Vector merge(IndexGetRowRequest indexGetRowRequest, ConcurrentHashMap<Request, Response> responses) {\n     KeyPart[] keyParts = new KeyPart[responses.size()];\n     ValuePart[] valueParts = new ValuePart[responses.size()];\n     int index = 0;\n@@ -62,9 +61,7 @@ public class IndexGetRowHandler extends Handler {\n       valueParts[index] = ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n       index++;\n     }\n-\n-    return MergeUtils.combineIndexRowSplits(indexGetRowRequest.getMatrixId(),\n-        indexGetRowRequest.getRowId(), indexGetRowRequest.size(), keyParts, valueParts);\n+    return MergeUtils.combineIndexRowSplits(indexGetRowRequest.getMatrixId(), indexGetRowRequest.getRowId(), indexGetRowRequest.size(), keyParts, valueParts);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/758/IndexGetRowHandler.java\nindex 948a4ec8ed8..6a3093a70d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/758/IndexGetRowHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/758/IndexGetRowHandler.java\n@@ -59,7 +59,9 @@ public class IndexGetRowHandler extends Handler {\n     int index = 0;\n     for (Entry<Request, Response> entry : responses.entrySet()) {\n       keyParts[index] = ((IndexPartGetRowRequest) (entry.getKey().getData())).getKeyPart();\n-      valueParts[index] = ((StreamIndexPartGetRowResponse) (entry.getValue().getData())).getValuePart();\n+      valueParts[index]= ( ( StreamIndexPartGetRowResponse )(entry.getValue()\n+      .getData()))\n+      .getValuePart();\n       index++;\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "62",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

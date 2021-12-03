@@ -1,0 +1,70 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "416",
+    "information": {
+        "violations": [
+            {
+                "line": "43",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "    boolean isCompact();\n\n    \n    /**\n     * <p>setCompact.</p>\n     *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/416/HTMLDListElement.java\nindex 1047ed43ea4..7b830746822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/416/HTMLDListElement.java\n@@ -40,7 +40,6 @@ public interface HTMLDListElement extends HTMLElement {\n     @Deprecated\n     boolean isCompact();\n \n-    \n     /**\n      * <p>setCompact.</p>\n      *\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/416/HTMLDListElement.java\nindex 1047ed43ea4..2d3e44cfdb6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/416/HTMLDListElement.java\n@@ -21,13 +21,8 @@\n package org.loboevolution.html.dom;\n \n \n-\n-\n /**\n  * Provides special properties (beyond those of the regular HTMLElement interface it also has available to it by inheritance) for manipulating definition list (&lt;dl&gt;) elements.\n- *\n- *\n- *\n  */\n public interface HTMLDListElement extends HTMLElement {\n \n@@ -40,7 +35,7 @@ public interface HTMLDListElement extends HTMLElement {\n     @Deprecated\n     boolean isCompact();\n \n-    \n+\n     /**\n      * <p>setCompact.</p>\n      *\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/416/HTMLDListElement.java\nindex 1047ed43ea4..923b168dc90 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/416/HTMLDListElement.java\n@@ -20,9 +20,6 @@\n \n package org.loboevolution.html.dom;\n \n-\n-\n-\n /**\n  * Provides special properties (beyond those of the regular HTMLElement interface it also has available to it by inheritance) for manipulating definition list (&lt;dl&gt;) elements.\n  *\n@@ -31,7 +28,6 @@ package org.loboevolution.html.dom;\n  */\n public interface HTMLDListElement extends HTMLElement {\n \n-\n     /**\n      * <p>isCompact.</p>\n      *\n@@ -40,12 +36,11 @@ public interface HTMLDListElement extends HTMLElement {\n     @Deprecated\n     boolean isCompact();\n \n-    \n-    /**\n+/**\n      * <p>setCompact.</p>\n      *\n      * @param compact a boolean.\n      */\n-    void setCompact(boolean compact);\n+void setCompact(boolean compact);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "48",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/416/HTMLDListElement.java\nindex 1047ed43ea4..99211741705 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/416/HTMLDListElement.java\n@@ -29,6 +29,8 @@ package org.loboevolution.html.dom;\n  *\n  *\n  */\n+\n+\n public interface HTMLDListElement extends HTMLElement {\n \n \n@@ -37,7 +39,10 @@ public interface HTMLDListElement extends HTMLElement {\n      *\n      * @return a boolean.\n      */\n+\n+\n     @Deprecated\n+\n     boolean isCompact();\n \n     \n@@ -46,6 +51,7 @@ public interface HTMLDListElement extends HTMLElement {\n      *\n      * @param compact a boolean.\n      */\n-    void setCompact(boolean compact);\n \n-}\n+\n+    void setCompact(boolean compact);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/416/HTMLDListElement.java\nindex 1047ed43ea4..7b830746822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/416/HTMLDListElement.java\n@@ -40,7 +40,6 @@ public interface HTMLDListElement extends HTMLElement {\n     @Deprecated\n     boolean isCompact();\n \n-    \n     /**\n      * <p>setCompact.</p>\n      *\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/416/HTMLDListElement.java\nindex 1047ed43ea4..7b830746822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/416/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/416/HTMLDListElement.java\n@@ -40,7 +40,6 @@ public interface HTMLDListElement extends HTMLElement {\n     @Deprecated\n     boolean isCompact();\n \n-    \n     /**\n      * <p>setCompact.</p>\n      *\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

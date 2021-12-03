@@ -1,0 +1,77 @@
+{
+    "project_name": "Plugily-Projects-MurderMystery",
+    "violation_id": "79",
+    "information": {
+        "violations": [
+            {
+                "line": "49",
+                "severity": "warning",
+                "message": "'feature' has incorrect indentation level 12, expected level should be 14.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "          hooks.put(feature, false);\n          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n            feature.name(), requiredHook.getPluginName());\n          hooked = false;\n          break;\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/final/files-repaired/79/HookManager.java\nindex 1fe3e4ed61b..000b6f996b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/final/files-repaired/79/HookManager.java\n@@ -45,8 +45,7 @@ public class HookManager {\n       for (Hook requiredHook : feature.getRequiredHooks()) {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n-          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n+          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",feature.name(), requiredHook.getPluginName());\n           hooked = false;\n           break;\n         }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/checkstyle_idea/79/HookManager.java\nindex 1fe3e4ed61b..70f3c67c8f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/checkstyle_idea/79/HookManager.java\n@@ -46,7 +46,7 @@ public class HookManager {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n           Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n+              feature.name(), requiredHook.getPluginName());\n           hooked = false;\n           break;\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "49",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 0, expected level should be 10.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/naturalize/79/HookManager.java\nindex 1fe3e4ed61b..a6cbf298f79 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/naturalize/79/HookManager.java\n@@ -45,9 +45,8 @@ public class HookManager {\n       for (Hook requiredHook : feature.getRequiredHooks()) {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n-          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n-          hooked = false;\n+          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\", feature.name(), requiredHook.getPluginName());\n+hooked = false;\n           break;\n         }\n       }\n@@ -91,4 +90,4 @@ public class HookManager {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/codebuff/79/HookManager.java\nindex 1fe3e4ed61b..cd330f145be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/codebuff/79/HookManager.java\n@@ -21,9 +21,7 @@ package pl.plajer.murdermystery;\n import java.util.EnumMap;\n import java.util.Map;\n import java.util.logging.Level;\n-\n import org.bukkit.Bukkit;\n-\n import pl.plajer.murdermystery.utils.Debugger;\n \n /**\n@@ -31,6 +29,8 @@ import pl.plajer.murdermystery.utils.Debugger;\n  * <p>\n  * Created at 28.04.2019\n  */\n+\n+\n public class HookManager {\n \n   private Map<HookFeature, Boolean> hooks = new EnumMap<>(HookFeature.class);\n@@ -45,8 +45,7 @@ public class HookManager {\n       for (Hook requiredHook : feature.getRequiredHooks()) {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n-          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n+          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\", feature.name(), requiredHook.getPluginName());\n           hooked = false;\n           break;\n         }\n@@ -91,4 +90,4 @@ public class HookManager {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "49",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/random/files-repaired/79/HookManager.java\nindex 1fe3e4ed61b..94c62f8d9d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/random/files-repaired/79/HookManager.java\n@@ -45,9 +45,8 @@ public class HookManager {\n       for (Hook requiredHook : feature.getRequiredHooks()) {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n-          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n-          hooked = false;\n+          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\", feature.name(), requiredHook.getPluginName());hooked\n+        = false;\n           break;\n         }\n       }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/three_grams/files-repaired/79/HookManager.java\nindex 1fe3e4ed61b..000b6f996b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/79/HookManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/three_grams/files-repaired/79/HookManager.java\n@@ -45,8 +45,7 @@ public class HookManager {\n       for (Hook requiredHook : feature.getRequiredHooks()) {\n         if (!Bukkit.getPluginManager().isPluginEnabled(requiredHook.getPluginName())) {\n           hooks.put(feature, false);\n-          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",\n-            feature.name(), requiredHook.getPluginName());\n+          Debugger.debug(Level.INFO, \"[HookManager] Feature {0} won't be enabled because {1} is not installed! Please install it in order to enable this feature in-game!\",feature.name(), requiredHook.getPluginName());\n           hooked = false;\n           break;\n         }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "styler_random"
+    ]
+}

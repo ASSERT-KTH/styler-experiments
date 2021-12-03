@@ -1,0 +1,72 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "145",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "column": "23",
+                "severity": "error",
+                "message": "'}' at column 23 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @JsonCreator\n  public LoggerDto() {}\n\n  public String getName() {\n    return name;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/145/LoggerDto.java\nindex e341bae616c..f44bfd326de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/145/LoggerDto.java\n@@ -23,7 +23,9 @@ public class LoggerDto {\n   }\n \n   @JsonCreator\n-  public LoggerDto() {}\n+  public LoggerDto() {\n+\n+  }\n \n   public String getName() {\n     return name;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/145/LoggerDto.java\nindex e341bae616c..4ef783d10ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/145/LoggerDto.java\n@@ -19,11 +19,12 @@ public class LoggerDto {\n   public LoggerDto(Logger logger) {\n     this.name = logger.getName();\n     this.level = logger.getEffectiveLevel()\n-      .toString();\n+        .toString();\n   }\n \n   @JsonCreator\n-  public LoggerDto() {}\n+  public LoggerDto() {\n+  }\n \n   public String getName() {\n     return name;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "column": "23",
+                    "severity": "error",
+                    "message": "'}' at column 23 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/145/LoggerDto.java\nindex e341bae616c..b3c048fc876 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/145/LoggerDto.java\n@@ -45,4 +45,4 @@ public class LoggerDto {\n   public String toString() {\n     return \"LoggerDTO{\" + \"name='\" + name + '\\'' + \", level='\" + level + '\\'' + '}';\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/145/LoggerDto.java\nindex e341bae616c..0cb3bac1e69 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/145/LoggerDto.java\n@@ -1,14 +1,14 @@\n package eu.dzhw.fdz.metadatamanagement.common.rest.dto;\n \n import com.fasterxml.jackson.annotation.JsonCreator;\n-\n import ch.qos.logback.classic.Logger;\n \n /**\n  * DTO for setting log levels dynamically.\n  */\n-public class LoggerDto {\n \n+\n+public class LoggerDto {\n   private String name;\n \n   private String level;\n@@ -16,14 +16,16 @@ public class LoggerDto {\n   /**\n    * Create the DTO.\n    */\n+\n   public LoggerDto(Logger logger) {\n     this.name = logger.getName();\n-    this.level = logger.getEffectiveLevel()\n-      .toString();\n+    this.level = logger.getEffectiveLevel().toString();\n   }\n \n+\n   @JsonCreator\n-  public LoggerDto() {}\n+  public LoggerDto() {\n+  }\n \n   public String getName() {\n     return name;\n@@ -41,8 +43,9 @@ public class LoggerDto {\n     this.level = level;\n   }\n \n+\n   @Override\n   public String toString() {\n     return \"LoggerDTO{\" + \"name='\" + name + '\\'' + \", level='\" + level + '\\'' + '}';\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/145/LoggerDto.java\nindex e341bae616c..f44bfd326de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/145/LoggerDto.java\n@@ -23,7 +23,9 @@ public class LoggerDto {\n   }\n \n   @JsonCreator\n-  public LoggerDto() {}\n+  public LoggerDto() {\n+\n+  }\n \n   public String getName() {\n     return name;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/145/LoggerDto.java\nindex e341bae616c..f44bfd326de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/145/LoggerDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/145/LoggerDto.java\n@@ -23,7 +23,9 @@ public class LoggerDto {\n   }\n \n   @JsonCreator\n-  public LoggerDto() {}\n+  public LoggerDto() {\n+\n+  }\n \n   public String getName() {\n     return name;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

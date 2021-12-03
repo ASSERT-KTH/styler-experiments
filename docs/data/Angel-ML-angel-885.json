@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "885",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/885/LongRangePartitioner.java\nindex de95e859f70..2eba25bb46b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/885/LongRangePartitioner.java\n@@ -21,11 +21,13 @@ package com.tencent.angel.ps;\n  * Long range model partitioner\n  */\n public class LongRangePartitioner extends RangePartitioner {\n-  @Override protected long getMaxIndex() {\n-    return Long.MAX_VALUE;\n-  }\n+    @Override\n+    protected long getMaxIndex() {\n+        return Long.MAX_VALUE;\n+    }\n \n-  @Override protected long getMinIndex() {\n-    return Long.MIN_VALUE;\n-  }\n+    @Override\n+    protected long getMinIndex() {\n+        return Long.MIN_VALUE;\n+    }\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/885/LongRangePartitioner.java\nindex de95e859f70..503088a053e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/885/LongRangePartitioner.java\n@@ -14,18 +14,19 @@\n  * limitations under the License.\n  */\n \n-\n package com.tencent.angel.ps;\n \n /**\n  * Long range model partitioner\n  */\n public class LongRangePartitioner extends RangePartitioner {\n-  @Override protected long getMaxIndex() {\n+  @Override\n+protected long getMaxIndex() {\n     return Long.MAX_VALUE;\n   }\n \n-  @Override protected long getMinIndex() {\n+  @Override\n+protected long getMinIndex() {\n     return Long.MIN_VALUE;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/885/LongRangePartitioner.java\nindex de95e859f70..fee6a327428 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/885/LongRangePartitioner.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/885/LongRangePartitioner.java\n@@ -20,12 +20,19 @@ package com.tencent.angel.ps;\n /**\n  * Long range model partitioner\n  */\n+\n+\n+\n public class LongRangePartitioner extends RangePartitioner {\n-  @Override protected long getMaxIndex() {\n+\n+\n+  @Override\n+  protected long getMaxIndex() {\n     return Long.MAX_VALUE;\n   }\n \n-  @Override protected long getMinIndex() {\n+  @Override\n+  protected long getMinIndex() {\n     return Long.MIN_VALUE;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "80",
+    "information": {
+        "violations": [
+            {
+                "line": "82",
+                "column": "44",
+                "severity": "warning",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "\n    private void checkRunning() throws CommandException {\n        programOpts.setInteractive(false); // don't prompt for password\n        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n            String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n            throw new IllegalStateException(msg);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "84",
+                    "column": "14",
+                    "severity": "warning",
+                    "message": "'if' has incorrect indentation level 13, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/80/DeleteDomainCommand.java\nindex b2ec70e667d..50d2bf21a57 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/80/DeleteDomainCommand.java\n@@ -79,8 +79,9 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     }\n \n     private void checkRunning() throws CommandException {\n-        programOpts.setInteractive(false); // don't prompt for password\n-        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+        programOpts.setInteractive(false);\n+        // don't prompt for password if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+             if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n             String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n             throw new IllegalStateException(msg);\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "85",
+                    "column": "44",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/80/DeleteDomainCommand.java\nindex b2ec70e667d..4ed69452a60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/80/DeleteDomainCommand.java\n@@ -48,6 +48,7 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     private HostAndPort adminAddress;\n \n     /**\n+     *\n      */\n     @Override\n     protected void validate() throws CommandException, CommandValidationException {\n@@ -57,12 +58,14 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     }\n \n     /**\n+     *\n      */\n     @Override\n     protected int executeCommand() throws CommandException, CommandValidationException {\n \n         try {\n-            DomainConfig domainConfig = new DomainConfig(getDomainName(), getDomainsDir().getPath());\n+            DomainConfig domainConfig =\n+                new DomainConfig(getDomainName(), getDomainsDir().getPath());\n             checkRunning();\n             checkRename();\n             DomainsManager manager = new PEDomainsManager();\n@@ -80,7 +83,8 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n \n     private void checkRunning() throws CommandException {\n         programOpts.setInteractive(false); // don't prompt for password\n-        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) &&\n+            isThisDAS(getDomainRootDir())) {\n             String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n             throw new IllegalStateException(msg);\n         }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/80/DeleteDomainCommand.java\nindex b2ec70e667d..a0abcf99e9e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/80/DeleteDomainCommand.java\n@@ -79,7 +79,9 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     }\n \n     private void checkRunning() throws CommandException {\n-        programOpts.setInteractive(false); // don't prompt for password\n+        programOpts.setInteractive(false);\n+\n+// don't prompt for password\n         if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n             String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n             throw new IllegalStateException(msg);\n@@ -106,4 +108,4 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n         }\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "84",
+                    "column": "14",
+                    "severity": "warning",
+                    "message": "'if' has incorrect indentation level 13, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/80/DeleteDomainCommand.java\nindex b2ec70e667d..50d2bf21a57 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/80/DeleteDomainCommand.java\n@@ -79,8 +79,9 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     }\n \n     private void checkRunning() throws CommandException {\n-        programOpts.setInteractive(false); // don't prompt for password\n-        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+        programOpts.setInteractive(false);\n+        // don't prompt for password if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+             if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n             String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n             throw new IllegalStateException(msg);\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "84",
+                    "column": "10",
+                    "severity": "warning",
+                    "message": "'if' has incorrect indentation level 9, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/80/DeleteDomainCommand.java\nindex b2ec70e667d..a81a1ca29f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/80/DeleteDomainCommand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/80/DeleteDomainCommand.java\n@@ -79,8 +79,9 @@ public final class DeleteDomainCommand extends LocalDomainCommand {\n     }\n \n     private void checkRunning() throws CommandException {\n-        programOpts.setInteractive(false); // don't prompt for password\n-        if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n+        programOpts.setInteractive(false);\n+    // don't prompt for password\n+         if (isRunning(adminAddress.getHost(), adminAddress.getPort()) && isThisDAS(getDomainRootDir())) {\n             String msg = strings.get(\"domain.is.running\", getDomainName(), getDomainRootDir());\n             throw new IllegalStateException(msg);\n         }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

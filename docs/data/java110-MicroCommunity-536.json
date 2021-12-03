@@ -1,0 +1,77 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "536",
+    "information": {
+        "violations": [
+            {
+                "line": "68",
+                "severity": "error",
+                "message": "Line is longer than 150 characters (found 157).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n        if (count > 0) {\n            orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n        } else {\n            orgCommunitys = new ArrayList<>();\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/536/ListOrgCommunitysListener.java\nindex 66d9e478016..2a4e5116ca2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/536/ListOrgCommunitysListener.java\n@@ -65,7 +65,7 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         List<ApiOrgCommunityDataVo> orgCommunitys = null;\n \n         if (count > 0) {\n-            orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n+    orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n         } else {\n             orgCommunitys = new ArrayList<>();\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/536/ListOrgCommunitysListener.java\nindex 66d9e478016..8cad5e81b85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/536/ListOrgCommunitysListener.java\n@@ -47,7 +47,6 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n     }\n \n \n-\n     @Override\n     protected void validate(ServiceDataFlowEvent event, JSONObject reqJson) {\n         super.validatePageInfo(reqJson);\n@@ -65,7 +64,8 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         List<ApiOrgCommunityDataVo> orgCommunitys = null;\n \n         if (count > 0) {\n-            orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n+            orgCommunitys =\n+                BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n         } else {\n             orgCommunitys = new ArrayList<>();\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "66",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/536/ListOrgCommunitysListener.java\nindex 66d9e478016..6a1765a6ae5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/536/ListOrgCommunitysListener.java\n@@ -46,9 +46,7 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         return DEFAULT_ORDER;\n     }\n \n-\n-\n-    @Override\n+@Override\n     protected void validate(ServiceDataFlowEvent event, JSONObject reqJson) {\n         super.validatePageInfo(reqJson);\n         Assert.hasKeyAndValue(reqJson, \"storeId\", \"\u5fc5\u586b\uff0c\u8bf7\u586b\u5199\u5546\u6237ID\");\n@@ -90,4 +88,4 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n     public void setOrgCommunityInnerServiceSMOImpl(IOrgCommunityInnerServiceSMO orgCommunityInnerServiceSMOImpl) {\n         this.orgCommunityInnerServiceSMOImpl = orgCommunityInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "63",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/536/ListOrgCommunitysListener.java\nindex 66d9e478016..b756ab76fae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/536/ListOrgCommunitysListener.java\n@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.http.HttpMethod;\n import org.springframework.http.HttpStatus;\n import org.springframework.http.ResponseEntity;\n-\n import java.util.ArrayList;\n import java.util.List;\n \n@@ -24,6 +23,8 @@ import java.util.List;\n /**\n  * \u67e5\u8be2\u5c0f\u533a\u4fa6\u542c\u7c7b\n  */\n+\n+\n @Java110Listener(\"listOrgCommunitysListener\")\n public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n \n@@ -40,14 +41,11 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         return HttpMethod.GET;\n     }\n \n-\n     @Override\n     public int getOrder() {\n         return DEFAULT_ORDER;\n     }\n \n-\n-\n     @Override\n     protected void validate(ServiceDataFlowEvent event, JSONObject reqJson) {\n         super.validatePageInfo(reqJson);\n@@ -56,14 +54,11 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n     }\n \n     @Override\n-    protected void doSoService(ServiceDataFlowEvent event, DataFlowContext context, JSONObject reqJson) {\n-\n+    protected void doSoService(ServiceDataFlowEvent event,\n+                               DataFlowContext context, JSONObject reqJson) {\n         OrgCommunityDto orgCommunityDto = BeanConvertUtil.covertBean(reqJson, OrgCommunityDto.class);\n-\n         int count = orgCommunityInnerServiceSMOImpl.queryOrgCommunitysCount(orgCommunityDto);\n-\n         List<ApiOrgCommunityDataVo> orgCommunitys = null;\n-\n         if (count > 0) {\n             orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n         } else {\n@@ -71,18 +66,13 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         }\n \n         ApiOrgCommunityVo apiOrgVo = new ApiOrgCommunityVo();\n-\n         apiOrgVo.setTotal(count);\n         apiOrgVo.setRecords((int) Math.ceil((double) count / (double) reqJson.getInteger(\"row\")));\n         apiOrgVo.setOrgCommunitys(orgCommunitys);\n-\n         ResponseEntity<String> responseEntity = new ResponseEntity<String>(JSONObject.toJSONString(apiOrgVo), HttpStatus.OK);\n-\n         context.setResponseEntity(responseEntity);\n-\n     }\n \n-\n     public IOrgCommunityInnerServiceSMO getOrgCommunityInnerServiceSMOImpl() {\n         return orgCommunityInnerServiceSMOImpl;\n     }\n@@ -90,4 +80,4 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n     public void setOrgCommunityInnerServiceSMOImpl(IOrgCommunityInnerServiceSMO orgCommunityInnerServiceSMOImpl) {\n         this.orgCommunityInnerServiceSMOImpl = orgCommunityInnerServiceSMOImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/536/ListOrgCommunitysListener.java\nindex 66d9e478016..2a4e5116ca2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/536/ListOrgCommunitysListener.java\n@@ -65,7 +65,7 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         List<ApiOrgCommunityDataVo> orgCommunitys = null;\n \n         if (count > 0) {\n-            orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n+    orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n         } else {\n             orgCommunitys = new ArrayList<>();\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/536/ListOrgCommunitysListener.java\nindex 66d9e478016..2a4e5116ca2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/536/ListOrgCommunitysListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/536/ListOrgCommunitysListener.java\n@@ -65,7 +65,7 @@ public class ListOrgCommunitysListener extends AbstractServiceApiListener {\n         List<ApiOrgCommunityDataVo> orgCommunitys = null;\n \n         if (count > 0) {\n-            orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n+    orgCommunitys = BeanConvertUtil.covertBeanList(orgCommunityInnerServiceSMOImpl.queryOrgCommunitys(orgCommunityDto), ApiOrgCommunityDataVo.class);\n         } else {\n             orgCommunitys = new ArrayList<>();\n         }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

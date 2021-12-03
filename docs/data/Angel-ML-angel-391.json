@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "391",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/391/ServerSparseIntRow.java\nindex 22cde3081d1..a8237a88ee0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/391/ServerSparseIntRow.java\n@@ -31,190 +31,190 @@ import java.io.IOException;\n  */\n public class ServerSparseIntRow extends ServerRow {\n \n-  private Int2IntOpenHashMap hashMap;\n-\n-  public ServerSparseIntRow(int rowId, int startCol, int endCol) {\n-    super(rowId, startCol, endCol);\n-    this.hashMap = new Int2IntOpenHashMap();\n-  }\n-\n-  public ServerSparseIntRow() {\n-    this(0, 0, 0);\n-  }\n-\n-  @Override\n-  public MLProtos.RowType getRowType() {\n-    return MLProtos.RowType.T_INT_SPARSE;\n-  }\n-\n-  @Override\n-  public void writeTo(DataOutputStream output) throws IOException {\n-    try {\n-      lock.readLock().lock();\n-      super.writeTo(output);\n-      output.writeInt(hashMap.size());\n-      for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n-        output.writeInt(entry.getIntKey());\n-        output.writeInt(entry.getIntValue());\n-      }\n-    } finally {\n-      lock.readLock().unlock();\n-    }\n-  }\n-\n-  @Override\n-  public void readFrom(DataInputStream input) throws IOException {\n-    try {\n-      lock.writeLock().lock();\n-      super.readFrom(input);\n-      int nnz = input.readInt();\n-      for (int i = 0; i < nnz; i++) {\n-        hashMap.addTo(input.readInt(), input.readInt());\n-      }\n-    } finally {\n-      lock.writeLock().unlock();\n-    }\n-  }\n-\n-  @Override\n-  public int size() {\n-    return hashMap.size();\n-  }\n-\n-  @Override\n-  public void update(RowType rowType, ByteBuf buf, int size) {\n-    try {\n-      lock.writeLock().lock();\n-      switch (rowType) {\n-        case T_INT_SPARSE:\n-          updateIntSparse(buf, size);\n-          break;\n-\n-        case T_INT_DENSE:\n-          updateIntDense(buf, size);\n-          break;\n-        default:\n-          break;\n-      }\n-\n-      updateRowVersion();\n-    } finally {\n-      lock.writeLock().unlock();\n-    }\n-  }\n-\n-  private void updateIntDense(ByteBuf buf, int size) {\n-    for (int i = 0; i < size; i++) {\n-      hashMap.addTo(i, buf.readInt());\n-    }\n-  }\n-\n-  private void updateIntSparse(ByteBuf buf, int size) {\n-    ByteBuf valueBuf = buf.slice(buf.readerIndex() + size * 4, size * 4);\n-    for (int i = 0; i < size; i++) {\n-      hashMap.addTo(buf.readInt(), valueBuf.readInt());\n-    }\n-    buf.readerIndex(buf.readerIndex() + size * 4);\n-  }\n-\n-  public Int2IntOpenHashMap getData() {\n-    return hashMap;\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf buf) {\n-    try {\n-      lock.readLock().lock();\n-      super.serialize(buf);\n-      buf.writeInt(hashMap.size());\n-      for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n-        buf.writeInt(entry.getIntKey());\n-        buf.writeInt(entry.getIntValue());\n-      }\n-    } finally {\n-      lock.readLock().unlock();\n-    }\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf buf) {\n-    try {\n-      lock.writeLock().lock();\n-      super.deserialize(buf);\n-      int elemNum = buf.readInt();\n-      if (hashMap == null) {\n-        hashMap = new Int2IntOpenHashMap(elemNum);\n-      }\n-      for (int i = 0; i < elemNum; i++) {\n-        hashMap.put(buf.readInt(), buf.readInt());\n-      }\n-    } finally {\n-      lock.writeLock().unlock();\n-    }\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    try {\n-      lock.readLock().lock();\n-      return super.bufferLen() + 4 + hashMap.size() * 8;\n-    } finally {\n-      lock.readLock().unlock();\n-    }\n-  }\n-\n-  public void mergeIntDense(int size, ByteBuf buf) {\n-    try {\n-      lock.writeLock().lock();\n-      for (int i = 0; i < size; i++) {\n-        hashMap.addTo(i, buf.readInt());\n-      }\n-    } finally {\n-      lock.writeLock().unlock();\n-    }\n-  }\n-\n-  public void mergeIntSparse(int size, ByteBuf buf) {\n-    try {\n-      lock.writeLock().lock();\n-      ByteBuf valueBuf = buf.slice(buf.readerIndex() + size * 4, size * 4);\n-      for (int i = 0; i < size; i++) {\n-        hashMap.addTo(buf.readInt(), valueBuf.readInt());\n-      }\n-      buf.readerIndex(buf.readerIndex() + size * 4);\n-    } finally {\n-      lock.writeLock().unlock();\n-    }\n-  }\n-\n-  public void mergeTo(Int2IntOpenHashMap indexToValueMap) {\n-    try {\n-      lock.readLock().lock();\n-      indexToValueMap.putAll(hashMap);\n-    } finally {\n-      lock.readLock().unlock();\n-    }\n-  }\n-\n-  public void mergeTo(int[] indexes, int[] values, int startPos, int len) {\n-    try {\n-      lock.readLock().lock();\n-      int writeLen = len < hashMap.size() ? len : hashMap.size();\n-      if (writeLen == 0) {\n-        return;\n-      }\n-\n-      int index = 0;\n-      for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n-        indexes[startPos + index] = entry.getIntKey();\n-        values[startPos + index] = entry.getIntValue();\n-        index++;\n-        if (index == writeLen) {\n-          return;\n+    private Int2IntOpenHashMap hashMap;\n+\n+    public ServerSparseIntRow(int rowId, int startCol, int endCol) {\n+        super(rowId, startCol, endCol);\n+        this.hashMap = new Int2IntOpenHashMap();\n+    }\n+\n+    public ServerSparseIntRow() {\n+        this(0, 0, 0);\n+    }\n+\n+    @Override\n+    public MLProtos.RowType getRowType() {\n+        return MLProtos.RowType.T_INT_SPARSE;\n+    }\n+\n+    @Override\n+    public void writeTo(DataOutputStream output) throws IOException {\n+        try {\n+            lock.readLock().lock();\n+            super.writeTo(output);\n+            output.writeInt(hashMap.size());\n+            for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n+                output.writeInt(entry.getIntKey());\n+                output.writeInt(entry.getIntValue());\n+            }\n+        } finally {\n+            lock.readLock().unlock();\n+        }\n+    }\n+\n+    @Override\n+    public void readFrom(DataInputStream input) throws IOException {\n+        try {\n+            lock.writeLock().lock();\n+            super.readFrom(input);\n+            int nnz = input.readInt();\n+            for (int i = 0; i < nnz; i++) {\n+                hashMap.addTo(input.readInt(), input.readInt());\n+            }\n+        } finally {\n+            lock.writeLock().unlock();\n+        }\n+    }\n+\n+    @Override\n+    public int size() {\n+        return hashMap.size();\n+    }\n+\n+    @Override\n+    public void update(RowType rowType, ByteBuf buf, int size) {\n+        try {\n+            lock.writeLock().lock();\n+            switch (rowType) {\n+                case T_INT_SPARSE:\n+                    updateIntSparse(buf, size);\n+                    break;\n+\n+                case T_INT_DENSE:\n+                    updateIntDense(buf, size);\n+                    break;\n+                default:\n+                    break;\n+            }\n+\n+            updateRowVersion();\n+        } finally {\n+            lock.writeLock().unlock();\n+        }\n+    }\n+\n+    private void updateIntDense(ByteBuf buf, int size) {\n+        for (int i = 0; i < size; i++) {\n+            hashMap.addTo(i, buf.readInt());\n+        }\n+    }\n+\n+    private void updateIntSparse(ByteBuf buf, int size) {\n+        ByteBuf valueBuf = buf.slice(buf.readerIndex() + size * 4, size * 4);\n+        for (int i = 0; i < size; i++) {\n+            hashMap.addTo(buf.readInt(), valueBuf.readInt());\n+        }\n+        buf.readerIndex(buf.readerIndex() + size * 4);\n+    }\n+\n+    public Int2IntOpenHashMap getData() {\n+        return hashMap;\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        try {\n+            lock.readLock().lock();\n+            super.serialize(buf);\n+            buf.writeInt(hashMap.size());\n+            for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n+                buf.writeInt(entry.getIntKey());\n+                buf.writeInt(entry.getIntValue());\n+            }\n+        } finally {\n+            lock.readLock().unlock();\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        try {\n+            lock.writeLock().lock();\n+            super.deserialize(buf);\n+            int elemNum = buf.readInt();\n+            if (hashMap == null) {\n+                hashMap = new Int2IntOpenHashMap(elemNum);\n+            }\n+            for (int i = 0; i < elemNum; i++) {\n+                hashMap.put(buf.readInt(), buf.readInt());\n+            }\n+        } finally {\n+            lock.writeLock().unlock();\n+        }\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        try {\n+            lock.readLock().lock();\n+            return super.bufferLen() + 4 + hashMap.size() * 8;\n+        } finally {\n+            lock.readLock().unlock();\n+        }\n+    }\n+\n+    public void mergeIntDense(int size, ByteBuf buf) {\n+        try {\n+            lock.writeLock().lock();\n+            for (int i = 0; i < size; i++) {\n+                hashMap.addTo(i, buf.readInt());\n+            }\n+        } finally {\n+            lock.writeLock().unlock();\n+        }\n+    }\n+\n+    public void mergeIntSparse(int size, ByteBuf buf) {\n+        try {\n+            lock.writeLock().lock();\n+            ByteBuf valueBuf = buf.slice(buf.readerIndex() + size * 4, size * 4);\n+            for (int i = 0; i < size; i++) {\n+                hashMap.addTo(buf.readInt(), valueBuf.readInt());\n+            }\n+            buf.readerIndex(buf.readerIndex() + size * 4);\n+        } finally {\n+            lock.writeLock().unlock();\n+        }\n+    }\n+\n+    public void mergeTo(Int2IntOpenHashMap indexToValueMap) {\n+        try {\n+            lock.readLock().lock();\n+            indexToValueMap.putAll(hashMap);\n+        } finally {\n+            lock.readLock().unlock();\n+        }\n+    }\n+\n+    public void mergeTo(int[] indexes, int[] values, int startPos, int len) {\n+        try {\n+            lock.readLock().lock();\n+            int writeLen = len < hashMap.size() ? len : hashMap.size();\n+            if (writeLen == 0) {\n+                return;\n+            }\n+\n+            int index = 0;\n+            for (Int2IntMap.Entry entry : hashMap.int2IntEntrySet()) {\n+                indexes[startPos + index] = entry.getIntKey();\n+                values[startPos + index] = entry.getIntValue();\n+                index++;\n+                if (index == writeLen) {\n+                    return;\n+                }\n+            }\n+        } finally {\n+            lock.readLock().unlock();\n         }\n-      }\n-    } finally {\n-      lock.readLock().unlock();\n     }\n-  }\n }\n",
+            "diff_size": 188
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/391/ServerSparseIntRow.java\nindex 22cde3081d1..53278205e33 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/391/ServerSparseIntRow.java\n@@ -89,8 +89,7 @@ public class ServerSparseIntRow extends ServerRow {\n         case T_INT_SPARSE:\n           updateIntSparse(buf, size);\n           break;\n-\n-        case T_INT_DENSE:\n+  case T_INT_DENSE:\n           updateIntDense(buf, size);\n           break;\n         default:\n@@ -217,4 +216,4 @@ public class ServerSparseIntRow extends ServerRow {\n       lock.readLock().unlock();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/391/ServerSparseIntRow.java\nindex 22cde3081d1..fd45c0edbd1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/391/ServerSparseIntRow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/391/ServerSparseIntRow.java\n@@ -19,7 +19,6 @@ package com.tencent.angel.ps.impl.matrix;\n import com.tencent.angel.protobuf.generated.MLProtos;\n import com.tencent.angel.protobuf.generated.MLProtos.RowType;\n import io.netty.buffer.ByteBuf;\n-\n import it.unimi.dsi.fastutil.ints.Int2IntMap;\n import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;\n import java.io.DataInputStream;\n@@ -29,6 +28,7 @@ import java.io.IOException;\n /**\n  * The class represent sparse int row on parameter server.\n  */\n+\n public class ServerSparseIntRow extends ServerRow {\n \n   private Int2IntOpenHashMap hashMap;\n@@ -67,6 +67,7 @@ public class ServerSparseIntRow extends ServerRow {\n     try {\n       lock.writeLock().lock();\n       super.readFrom(input);\n+\n       int nnz = input.readInt();\n       for (int i = 0; i < nnz; i++) {\n         hashMap.addTo(input.readInt(), input.readInt());\n@@ -82,21 +83,20 @@ public class ServerSparseIntRow extends ServerRow {\n   }\n \n   @Override\n-  public void update(RowType rowType, ByteBuf buf, int size) {\n+  public void update(\n+    RowType rowType, ByteBuf buf, int size) {\n     try {\n       lock.writeLock().lock();\n       switch (rowType) {\n         case T_INT_SPARSE:\n           updateIntSparse(buf, size);\n           break;\n-\n         case T_INT_DENSE:\n           updateIntDense(buf, size);\n           break;\n         default:\n           break;\n       }\n-\n       updateRowVersion();\n     } finally {\n       lock.writeLock().unlock();\n@@ -141,10 +141,12 @@ public class ServerSparseIntRow extends ServerRow {\n     try {\n       lock.writeLock().lock();\n       super.deserialize(buf);\n+\n       int elemNum = buf.readInt();\n       if (hashMap == null) {\n         hashMap = new Int2IntOpenHashMap(elemNum);\n       }\n+\n       for (int i = 0; i < elemNum; i++) {\n         hashMap.put(buf.readInt(), buf.readInt());\n       }\n@@ -199,6 +201,7 @@ public class ServerSparseIntRow extends ServerRow {\n   public void mergeTo(int[] indexes, int[] values, int startPos, int len) {\n     try {\n       lock.readLock().lock();\n+\n       int writeLen = len < hashMap.size() ? len : hashMap.size();\n       if (writeLen == 0) {\n         return;\n@@ -217,4 +220,4 @@ public class ServerSparseIntRow extends ServerRow {\n       lock.readLock().unlock();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

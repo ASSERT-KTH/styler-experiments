@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "24",
+                "column": "48",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tpublic final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n\t\tprivate DisableMvcInterceptor(){\n\t\t}\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/21/InterceptorDisabled.java\nindex c1043bcbb91..b6b06376119 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/21/InterceptorDisabled.java\n@@ -21,7 +21,7 @@ import org.onetwo.boot.core.web.mvc.interceptor.MvcInterceptorAdapter;\n public @interface InterceptorDisabled {\n \n \tpublic final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n-\t\tprivate DisableMvcInterceptor(){\n-\t\t}\n+\t\tprivate DisableMvcInterceptor() {\n+  }\n \t}\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/21/InterceptorDisabled.java\nindex c1043bcbb91..3fce54fc6ee 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/21/InterceptorDisabled.java\n@@ -10,9 +10,9 @@ import org.onetwo.boot.core.web.mvc.annotation.InterceptorDisabled.DisableMvcInt\n import org.onetwo.boot.core.web.mvc.interceptor.MvcInterceptorAdapter;\n \n /**\n- * @see MvcInterceptorManager#findInterceptorAnnotationAttrsList\n  * @author wayshall\n  * <br/>\n+ * @see MvcInterceptorManager#findInterceptorAnnotationAttrsList\n  */\n @Target({ElementType.TYPE, ElementType.METHOD})\n @Retention(RetentionPolicy.RUNTIME)\n@@ -20,8 +20,8 @@ import org.onetwo.boot.core.web.mvc.interceptor.MvcInterceptorAdapter;\n @Inherited\n public @interface InterceptorDisabled {\n \n-\tpublic final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n-\t\tprivate DisableMvcInterceptor(){\n-\t\t}\n-\t}\n+  public final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n+    private DisableMvcInterceptor() {\n+    }\n+  }\n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/21/InterceptorDisabled.java\nindex c1043bcbb91..b6b06376119 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/21/InterceptorDisabled.java\n@@ -21,7 +21,7 @@ import org.onetwo.boot.core.web.mvc.interceptor.MvcInterceptorAdapter;\n public @interface InterceptorDisabled {\n \n \tpublic final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n-\t\tprivate DisableMvcInterceptor(){\n-\t\t}\n+\t\tprivate DisableMvcInterceptor() {\n+  }\n \t}\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/21/InterceptorDisabled.java\nindex c1043bcbb91..b6b06376119 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/21/InterceptorDisabled.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/21/InterceptorDisabled.java\n@@ -21,7 +21,7 @@ import org.onetwo.boot.core.web.mvc.interceptor.MvcInterceptorAdapter;\n public @interface InterceptorDisabled {\n \n \tpublic final class DisableMvcInterceptor extends MvcInterceptorAdapter {\n-\t\tprivate DisableMvcInterceptor(){\n-\t\t}\n+\t\tprivate DisableMvcInterceptor() {\n+  }\n \t}\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

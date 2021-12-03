@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "43",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "66",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "import org.springframework.data.jpa.repository.JpaRepository;\n\npublic interface UserLogRepository extends JpaRepository<UserLog,Long> {\n\n     UserLog findBySn(int sn);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/43/UserLogRepository.java\nindex 3596d1eadbd..d62d35bc70b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/43/UserLogRepository.java\n@@ -3,7 +3,7 @@ package com.security.demo.repository;\n import com.security.demo.entity.UserLog;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserLogRepository extends JpaRepository<UserLog,Long> {\n+public interface UserLogRepository extends JpaRepository<UserLog, Long> {\n \n      UserLog findBySn(int sn);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/43/UserLogRepository.java\nindex 3596d1eadbd..3361c430707 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/43/UserLogRepository.java\n@@ -3,7 +3,7 @@ package com.security.demo.repository;\n import com.security.demo.entity.UserLog;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserLogRepository extends JpaRepository<UserLog,Long> {\n+public interface UserLogRepository extends JpaRepository<UserLog, Long> {\n \n-     UserLog findBySn(int sn);\n+    UserLog findBySn(int sn);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/43/UserLogRepository.java\nindex 3596d1eadbd..d27a7063ddc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/43/UserLogRepository.java\n@@ -3,7 +3,7 @@ package com.security.demo.repository;\n import com.security.demo.entity.UserLog;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserLogRepository extends JpaRepository<UserLog,Long> {\n+public interface UserLogRepository extends JpaRepository<UserLog, Long> {\n \n-     UserLog findBySn(int sn);\n-}\n+    UserLog findBySn(int sn);\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/43/UserLogRepository.java\nindex 3596d1eadbd..d62d35bc70b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/43/UserLogRepository.java\n@@ -3,7 +3,7 @@ package com.security.demo.repository;\n import com.security.demo.entity.UserLog;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserLogRepository extends JpaRepository<UserLog,Long> {\n+public interface UserLogRepository extends JpaRepository<UserLog, Long> {\n \n      UserLog findBySn(int sn);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/43/UserLogRepository.java\nindex 3596d1eadbd..a1f40b35d72 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/43/UserLogRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/43/UserLogRepository.java\n@@ -3,7 +3,8 @@ package com.security.demo.repository;\n import com.security.demo.entity.UserLog;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserLogRepository extends JpaRepository<UserLog,Long> {\n+public interface UserLogRepository extends JpaRepository<UserLog, Long\n+  > {\n \n      UserLog findBySn(int sn);\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

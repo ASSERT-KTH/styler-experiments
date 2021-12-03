@@ -1,0 +1,63 @@
+{
+    "project_name": "fangjinuo-easyjson",
+    "violation_id": "57",
+    "information": {
+        "violations": [
+            {
+                "line": "60",
+                "column": "32",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    private Boolean booleanUsingONOFF;\n\n    public CodecConfiguration(){\n        setTarget(new HashMap<String, Object>());\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/57/CodecConfiguration.java\nindex 5e57a2f7ee5..87e90ad08e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/57/CodecConfiguration.java\n@@ -57,7 +57,7 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/57/CodecConfiguration.java\nindex 5e57a2f7ee5..87e90ad08e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/57/CodecConfiguration.java\n@@ -57,7 +57,7 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/57/CodecConfiguration.java\nindex 5e57a2f7ee5..63df5419035 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/57/CodecConfiguration.java\n@@ -52,12 +52,10 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     // \u7f16\u53f7\n     private Boolean enumUsingIndex;\n     private Boolean enumUsingToString;\n-\n-\n-    private Boolean booleanUsing01;\n+private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n@@ -150,4 +148,4 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     public void setBooleanUsingONOFF(Boolean booleanUsingONOFF) {\n         this.booleanUsingONOFF = booleanUsingONOFF;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/57/CodecConfiguration.java\nindex 5e57a2f7ee5..b154b4bdf85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/57/CodecConfiguration.java\n@@ -16,12 +16,10 @@ package com.jn.easyjson.core.codec.dialect;\n \n import com.jn.langx.configuration.Configuration;\n import com.jn.langx.util.collection.MapAccessor;\n-\n import java.text.DateFormat;\n import java.util.HashMap;\n \n public class CodecConfiguration extends MapAccessor implements Configuration {\n-\n     private String id;\n \n     /**\n@@ -52,12 +50,10 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     // \u7f16\u53f7\n     private Boolean enumUsingIndex;\n     private Boolean enumUsingToString;\n-\n-\n     private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n@@ -150,4 +146,4 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     public void setBooleanUsingONOFF(Boolean booleanUsingONOFF) {\n         this.booleanUsingONOFF = booleanUsingONOFF;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/57/CodecConfiguration.java\nindex 5e57a2f7ee5..87e90ad08e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/57/CodecConfiguration.java\n@@ -57,7 +57,7 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/57/CodecConfiguration.java\nindex 5e57a2f7ee5..87e90ad08e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/57/CodecConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/57/CodecConfiguration.java\n@@ -57,7 +57,7 @@ public class CodecConfiguration extends MapAccessor implements Configuration {\n     private Boolean booleanUsing01;\n     private Boolean booleanUsingONOFF;\n \n-    public CodecConfiguration(){\n+    public CodecConfiguration() {\n         setTarget(new HashMap<String, Object>());\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

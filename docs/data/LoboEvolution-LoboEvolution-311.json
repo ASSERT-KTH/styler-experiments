@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "311",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGAnimatedNumber {\n\t/**\n\t * <p>getBaseVal.</p>\n\t *\n\t * @return a float.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/311/SVGAnimatedNumber.java\nindex 509221734b1..57b1273e75b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/311/SVGAnimatedNumber.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGAnimatedNumber {\n-\t/**\n+/**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a float.\n \t */\n-\tfloat getBaseVal();\n+ float getBaseVal();\n \n \t/**\n \t * <p>setBaseVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/311/SVGAnimatedNumber.java\nindex 509221734b1..b9803c30c00 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/311/SVGAnimatedNumber.java\n@@ -17,36 +17,33 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n-package org.loboevolution.html.dom.svg;\n \n+package org.loboevolution.html.dom.svg;\n \n \n /**\n  * <p>SVGAnimatedNumber interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGAnimatedNumber {\n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a float.\n-\t */\n-\tfloat getBaseVal();\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a float.\n+     */\n+    float getBaseVal();\n \n-\t/**\n-\t * <p>setBaseVal.</p>\n-\t *\n-\t * @param baseVal a float.\n-\t * @throws org.w3c.dom.DOMException if any.\n-\t */\n-\tvoid setBaseVal(float baseVal);\n+    /**\n+     * <p>setBaseVal.</p>\n+     *\n+     * @param baseVal a float.\n+     * @throws org.w3c.dom.DOMException if any.\n+     */\n+    void setBaseVal(float baseVal);\n \n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a float.\n-\t */\n-\tfloat getAnimVal();\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a float.\n+     */\n+    float getAnimVal();\n }\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/311/SVGAnimatedNumber.java\nindex 509221734b1..6b606b8bc29 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/311/SVGAnimatedNumber.java\n@@ -27,26 +27,34 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n+\n+\n public interface SVGAnimatedNumber {\n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a float.\n-\t */\n-\tfloat getBaseVal();\n-\n-\t/**\n-\t * <p>setBaseVal.</p>\n-\t *\n-\t * @param baseVal a float.\n-\t * @throws org.w3c.dom.DOMException if any.\n-\t */\n-\tvoid setBaseVal(float baseVal);\n-\n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a float.\n-\t */\n-\tfloat getAnimVal();\n-}\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a float.\n+     */\n+\n+\n+    float getBaseVal();\n+\n+    /**\n+     * <p>setBaseVal.</p>\n+     *\n+     * @param baseVal a float.\n+     * @throws org.w3c.dom.DOMException if any.\n+     */\n+\n+\n+    void setBaseVal(float baseVal);\n+\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a float.\n+     */\n+\n+\n+    float getAnimVal();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 30
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/311/SVGAnimatedNumber.java\nindex 509221734b1..57b1273e75b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/311/SVGAnimatedNumber.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGAnimatedNumber {\n-\t/**\n+/**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a float.\n \t */\n-\tfloat getBaseVal();\n+ float getBaseVal();\n \n \t/**\n \t * <p>setBaseVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/311/SVGAnimatedNumber.java\nindex 509221734b1..d972f70e260 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/311/SVGAnimatedNumber.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/311/SVGAnimatedNumber.java\n@@ -28,12 +28,12 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGAnimatedNumber {\n-\t/**\n+    /**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a float.\n \t */\n-\tfloat getBaseVal();\n+ float getBaseVal();\n \n \t/**\n \t * <p>setBaseVal.</p>\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

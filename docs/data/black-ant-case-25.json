@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "25",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "60",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "                .regexMatchers(\".*sign.*\").permitAll()\n                .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n                .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n                .and()\n                .formLogin()",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/25/WebSecurityConfig.java\nindex c551707eca7..71e80773e85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/25/WebSecurityConfig.java\n@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n                 .antMatchers(\"/index\").permitAll()\n                 .regexMatchers(\".*sign.*\").permitAll()\n                 .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n-                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n+                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\", \"USER\")\n                 .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n                 .and()\n                 .formLogin()\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/25/WebSecurityConfig.java\nindex c551707eca7..89acf187fa4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/25/WebSecurityConfig.java\n@@ -15,9 +15,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n     protected void configure(AuthenticationManagerBuilder auth) throws Exception {\n         //\u8be5\u65b9\u6cd5\u7528\u4e8e\u7528\u6237\u8ba4\u8bc1\uff0c\u6b64\u5904\u6dfb\u52a0\u5185\u5b58\u7528\u6237\uff0c\u5e76\u4e14\u6307\u5b9a\u4e86\u6743\u9650\n         auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())\n-                .withUser(\"user\").password(new BCryptPasswordEncoder().encode(\"123456\")).roles(\"USER\")\n-                .and()\n-                .withUser(\"admin\").password(new BCryptPasswordEncoder().encode(\"123456\")).roles(\"ADMIN\");\n+            .withUser(\"user\").password(new BCryptPasswordEncoder().encode(\"123456\")).roles(\"USER\")\n+            .and()\n+            .withUser(\"admin\").password(new BCryptPasswordEncoder().encode(\"123456\")).roles(\"ADMIN\");\n     }\n \n     @Override\n@@ -26,19 +26,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n         //\u5176\u4e2d\uff1aantMatchers--\u4f7f\u7528ant\u98ce\u683c\u7684\u8def\u5f84\u5339\u914d\n         //regexMatchers--\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u5339\u914d\n         http.authorizeRequests()\n-                .antMatchers(\"/\").permitAll()\n-                .antMatchers(\"/index\").permitAll()\n-                .regexMatchers(\".*sign.*\").permitAll()\n-                .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n-                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n-                .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n-                .and()\n-                .formLogin()\n-                .loginPage(\"/login\")                             //\u5b9a\u4e49\u767b\u5f55\u7684\u9875\u9762\"/login\"\uff0c\u5141\u8bb8\u8bbf\u95ee\n-                .permitAll()\n-                .and()\n-                .logout()                                           //\u9ed8\u8ba4\u7684\"/logout\", \u5141\u8bb8\u8bbf\u95ee\n-                .permitAll();\n+            .antMatchers(\"/\").permitAll()\n+            .antMatchers(\"/index\").permitAll()\n+            .regexMatchers(\".*sign.*\").permitAll()\n+            .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n+            .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\", \"USER\")\n+            .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n+            .and()\n+            .formLogin()\n+            .loginPage(\"/login\")                             //\u5b9a\u4e49\u767b\u5f55\u7684\u9875\u9762\"/login\"\uff0c\u5141\u8bb8\u8bbf\u95ee\n+            .permitAll()\n+            .and()\n+            .logout()                                           //\u9ed8\u8ba4\u7684\"/logout\", \u5141\u8bb8\u8bbf\u95ee\n+            .permitAll();\n \n     }\n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/25/WebSecurityConfig.java\nindex c551707eca7..95673274406 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/25/WebSecurityConfig.java\n@@ -30,15 +30,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n                 .antMatchers(\"/index\").permitAll()\n                 .regexMatchers(\".*sign.*\").permitAll()\n                 .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n-                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n+                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\", \"USER\")\n                 .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n                 .and()\n                 .formLogin()\n-                .loginPage(\"/login\")                             //\u5b9a\u4e49\u767b\u5f55\u7684\u9875\u9762\"/login\"\uff0c\u5141\u8bb8\u8bbf\u95ee\n+                .loginPage(\"/login\")\n+//\u5b9a\u4e49\u767b\u5f55\u7684\u9875\u9762\"/login\"\uff0c\u5141\u8bb8\u8bbf\u95ee\n                 .permitAll()\n                 .and()\n                 .logout()                                           //\u9ed8\u8ba4\u7684\"/logout\", \u5141\u8bb8\u8bbf\u95ee\n                 .permitAll();\n \n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/25/WebSecurityConfig.java\nindex c551707eca7..71e80773e85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/25/WebSecurityConfig.java\n@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n                 .antMatchers(\"/index\").permitAll()\n                 .regexMatchers(\".*sign.*\").permitAll()\n                 .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n-                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n+                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\", \"USER\")\n                 .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n                 .and()\n                 .formLogin()\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/25/WebSecurityConfig.java\nindex c551707eca7..71e80773e85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/25/WebSecurityConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/25/WebSecurityConfig.java\n@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {\n                 .antMatchers(\"/index\").permitAll()\n                 .regexMatchers(\".*sign.*\").permitAll()\n                 .antMatchers(\"/admin\").hasRole(\"ADMIN\")\n-                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\",\"USER\")\n+                .antMatchers(\"/admin2\").hasAnyRole(\"ADMIN\", \"USER\")\n                 .anyRequest().authenticated()                      //\u5176\u5b83\u8bf7\u6c42\u90fd\u9700\u8981\u6821\u9a8c\u624d\u80fd\u8bbf\u95ee\n                 .and()\n                 .formLogin()\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

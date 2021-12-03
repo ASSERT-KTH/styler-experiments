@@ -1,0 +1,63 @@
+{
+    "project_name": "opencb-opencga",
+    "violation_id": "247",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "column": "37",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n            throws CatalogException,IOException {\n        ObjectMap params = new ObjectMap();\n        params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n        params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/247/AclCommandExecutor.java\nindex 49abb738cf4..e37fc8a3ab1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/247/AclCommandExecutor.java\n@@ -33,7 +33,7 @@ public class AclCommandExecutor<T> {\n     // change it for :\n \n     public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n-            throws CatalogException,IOException {\n+            throws CatalogException, IOException {\n         ObjectMap params = new ObjectMap();\n         params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n         params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/247/AclCommandExecutor.java\nindex 49abb738cf4..7700e2f8096 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/247/AclCommandExecutor.java\n@@ -29,15 +29,15 @@ import java.io.IOException;\n  */\n public class AclCommandExecutor<T> {\n \n-    // We put .replace(\"/\",\":\") because there are some pathParams such as in files where \"/\" cannot be sent in the url. Instead, we will\n-    // change it for :\n+  // We put .replace(\"/\",\":\") because there are some pathParams such as in files where \"/\" cannot be sent in the url. Instead, we will\n+  // change it for :\n \n-    public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n-            throws CatalogException,IOException {\n-        ObjectMap params = new ObjectMap();\n-        params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n-        params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n-        return client.getAcls(aclCommandOptions.id.replace(\"/\", \":\"), params);\n-    }\n+  public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n+      throws CatalogException, IOException {\n+    ObjectMap params = new ObjectMap();\n+    params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n+    params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n+    return client.getAcls(aclCommandOptions.id.replace(\"/\", \":\"), params);\n+  }\n \n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/247/AclCommandExecutor.java\nindex 49abb738cf4..0dedd05e619 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/247/AclCommandExecutor.java\n@@ -33,11 +33,11 @@ public class AclCommandExecutor<T> {\n     // change it for :\n \n     public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n-            throws CatalogException,IOException {\n+            throws CatalogException, IOException {\n         ObjectMap params = new ObjectMap();\n         params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n         params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n         return client.getAcls(aclCommandOptions.id.replace(\"/\", \":\"), params);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/247/AclCommandExecutor.java\nindex 49abb738cf4..e37fc8a3ab1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/247/AclCommandExecutor.java\n@@ -33,7 +33,7 @@ public class AclCommandExecutor<T> {\n     // change it for :\n \n     public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n-            throws CatalogException,IOException {\n+            throws CatalogException, IOException {\n         ObjectMap params = new ObjectMap();\n         params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n         params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/247/AclCommandExecutor.java\nindex 49abb738cf4..e37fc8a3ab1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/247/AclCommandExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/247/AclCommandExecutor.java\n@@ -33,7 +33,7 @@ public class AclCommandExecutor<T> {\n     // change it for :\n \n     public DataResponse<ObjectMap> acls(AclCommandOptions.AclsCommandOptions aclCommandOptions, CatalogClient<T> client)\n-            throws CatalogException,IOException {\n+            throws CatalogException, IOException {\n         ObjectMap params = new ObjectMap();\n         params.putIfNotEmpty(\"study\", aclCommandOptions.study);\n         params.putIfNotEmpty(\"member\", aclCommandOptions.memberId);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

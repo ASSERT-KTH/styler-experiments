@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "379",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.file.metadata;\n\nimport org.apache.iotdb.tsfile.file.metadata.statistics.Statistics;\nimport org.apache.iotdb.tsfile.read.controller.IChunkMetadataLoader;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/379/ITimeSeriesMetadata.java\nindex 6bb6ec1dc99..92a648c1b8f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/379/ITimeSeriesMetadata.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.file.metadata;\n \n import org.apache.iotdb.tsfile.file.metadata.statistics.Statistics;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/379/ITimeSeriesMetadata.java\nindex 6bb6ec1dc99..92a648c1b8f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/379/ITimeSeriesMetadata.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.file.metadata;\n \n import org.apache.iotdb.tsfile.file.metadata.statistics.Statistics;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/379/ITimeSeriesMetadata.java\nindex 6bb6ec1dc99..d5c9c16e791 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/379/ITimeSeriesMetadata.java\n@@ -20,7 +20,6 @@ package org.apache.iotdb.tsfile.file.metadata;\n \n import org.apache.iotdb.tsfile.file.metadata.statistics.Statistics;\n import org.apache.iotdb.tsfile.read.controller.IChunkMetadataLoader;\n-\n import java.io.IOException;\n import java.util.List;\n \n@@ -28,17 +27,24 @@ public interface ITimeSeriesMetadata {\n \n   Statistics getStatistics();\n \n+\n   boolean isModified();\n \n+\n   void setModified(boolean modified);\n \n+\n   boolean isSeq();\n \n+\n   void setSeq(boolean seq);\n \n+\n   List<IChunkMetadata> loadChunkMetadataList() throws IOException;\n \n+\n   List<IChunkMetadata> getChunkMetadataList();\n \n+\n   void setChunkMetadataLoader(IChunkMetadataLoader chunkMetadataLoader);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/379/ITimeSeriesMetadata.java\nindex 6bb6ec1dc99..92a648c1b8f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/379/ITimeSeriesMetadata.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/379/ITimeSeriesMetadata.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.file.metadata;\n \n import org.apache.iotdb.tsfile.file.metadata.statistics.Statistics;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

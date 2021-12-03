@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "column": "109",
+                "severity": "error",
+                "message": "'+' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": " * @Created by zengzg\n */\n@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n        \"charset=UTF-8\")\n@RestController\npublic class OrgController {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/29/OrgController.java\nindex 6233dd5687c..eb5b77b0335 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/29/OrgController.java\n@@ -24,8 +24,7 @@ import java.util.List;\n  * @Date 2020/1/19 14:47\n  * @Created by zengzg\n  */\n-@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n-        \"charset=UTF-8\")\n+@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" + \"charset=UTF-8\")\n @RestController\n public class OrgController {\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "27",
+                    "column": "109",
+                    "severity": "error",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/29/OrgController.java\nindex 6233dd5687c..a1f63a1e98c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/29/OrgController.java\n@@ -25,7 +25,7 @@ import java.util.List;\n  * @Created by zengzg\n  */\n @RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n-        \"charset=UTF-8\")\n+    \"charset=UTF-8\")\n @RestController\n public class OrgController {\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/29/OrgController.java\nindex 6233dd5687c..3325362808a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/29/OrgController.java\n@@ -24,8 +24,7 @@ import java.util.List;\n  * @Date 2020/1/19 14:47\n  * @Created by zengzg\n  */\n-@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n-        \"charset=UTF-8\")\n+@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" + \"charset=UTF-8\")\n @RestController\n public class OrgController {\n \n@@ -93,4 +92,4 @@ public class OrgController {\n         }\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/29/OrgController.java\nindex 6233dd5687c..eb5b77b0335 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/29/OrgController.java\n@@ -24,8 +24,7 @@ import java.util.List;\n  * @Date 2020/1/19 14:47\n  * @Created by zengzg\n  */\n-@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n-        \"charset=UTF-8\")\n+@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" + \"charset=UTF-8\")\n @RestController\n public class OrgController {\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/29/OrgController.java\nindex 6233dd5687c..eb5b77b0335 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/29/OrgController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/29/OrgController.java\n@@ -24,8 +24,7 @@ import java.util.List;\n  * @Date 2020/1/19 14:47\n  * @Created by zengzg\n  */\n-@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" +\n-        \"charset=UTF-8\")\n+@RequestMapping(value = \"/org\", produces = \"application/json;charset=UTF-8\", consumes = \"application/json;\" + \"charset=UTF-8\")\n @RestController\n public class OrgController {\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

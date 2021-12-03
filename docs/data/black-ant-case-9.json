@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "36",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "public class User1 extends User {\n\n    public User1(Mediator mediator){\n        super(mediator);\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/9/User1.java\nindex e9da9484443..cc258cf30a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/9/User1.java\n@@ -8,7 +8,7 @@ package com.gang.design.design3.mediator;\n  */\n public class User1 extends User {\n \n-    public User1(Mediator mediator){\n+    public User1(Mediator mediator) {\n         super(mediator);\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/9/User1.java\nindex e9da9484443..cc258cf30a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/9/User1.java\n@@ -8,7 +8,7 @@ package com.gang.design.design3.mediator;\n  */\n public class User1 extends User {\n \n-    public User1(Mediator mediator){\n+    public User1(Mediator mediator) {\n         super(mediator);\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/9/User1.java\nindex e9da9484443..120f3fee04d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/9/User1.java\n@@ -8,7 +8,7 @@ package com.gang.design.design3.mediator;\n  */\n public class User1 extends User {\n \n-    public User1(Mediator mediator){\n+    public User1(Mediator mediator) {\n         super(mediator);\n     }\n \n@@ -16,4 +16,4 @@ public class User1 extends User {\n     public void work() {\n         System.out.println(\"user1 exe!\");\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/9/User1.java\nindex e9da9484443..cc258cf30a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/9/User1.java\n@@ -8,7 +8,7 @@ package com.gang.design.design3.mediator;\n  */\n public class User1 extends User {\n \n-    public User1(Mediator mediator){\n+    public User1(Mediator mediator) {\n         super(mediator);\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/9/User1.java\nindex e9da9484443..cc258cf30a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/9/User1.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/9/User1.java\n@@ -8,7 +8,7 @@ package com.gang.design.design3.mediator;\n  */\n public class User1 extends User {\n \n-    public User1(Mediator mediator){\n+    public User1(Mediator mediator) {\n         super(mediator);\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

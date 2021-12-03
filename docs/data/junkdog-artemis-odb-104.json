@@ -1,0 +1,91 @@
+{
+    "project_name": "junkdog-artemis-odb",
+    "violation_id": "104",
+    "information": {
+        "violations": [
+            {
+                "line": "22",
+                "severity": "error",
+                "message": "Line is longer than 105 characters (found 138).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n    private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n                .setAccessLevel(AccessLevel.PUBLIC)\n                .build();\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 119).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/junkdog-artemis-odb/styler/05_predictions/final/files-repaired/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..758bbf2a84a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/junkdog-artemis-odb/styler/05_predictions/final/files-repaired/104/ComponentMapperFieldsStrategy.java\n@@ -19,8 +19,8 @@ public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n     }\n \n     private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n+\t\t\t\t\treturn new FieldBuilder (newParameterizedTypeImpl(ComponentMapper.class,component.getComponentType(\n+    )),\"m\"+component.getName()).setAccessLevelsetAccessLevel(AccessLevel.PUBLIC)\n                 .build();\n     }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/checkstyle_idea/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..8b6f2026380 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/checkstyle_idea/104/ComponentMapperFieldsStrategy.java\n@@ -13,15 +13,17 @@ import com.artemis.generator.util.FieldBuilder;\n  */\n public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n \n-    @Override\n-    protected void apply(ComponentDescriptor component, TypeModel model) {\n-        model.add(createComponentMapper(component));\n-    }\n+  @Override\n+  protected void apply(ComponentDescriptor component, TypeModel model) {\n+    model.add(createComponentMapper(component));\n+  }\n \n-    private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n-                .build();\n-    }\n+  private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n+    return new FieldBuilder(\n+        new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()),\n+        \"m\" + component.getName())\n+        .setAccessLevel(AccessLevel.PUBLIC)\n+        .build();\n+  }\n \n }\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 134).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/naturalize/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..c78ab57f98f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/naturalize/104/ComponentMapperFieldsStrategy.java\n@@ -12,16 +12,14 @@ import com.artemis.generator.util.FieldBuilder;\n  * @author Daan van Yperen\n  */\n public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n-\n-    @Override\n+\t@Override\n     protected void apply(ComponentDescriptor component, TypeModel model) {\n         model.add(createComponentMapper(component));\n     }\n \n     private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n+\treturn new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n+\t.setAccessLevel(AccessLevel.PUBLIC)\n                 .build();\n-    }\n-\n-}\n+\t}\n+\t}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/codebuff/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..ddb6e175389 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/codebuff/104/ComponentMapperFieldsStrategy.java\n@@ -3,6 +3,7 @@ package com.artemis.generator.strategy;\n import com.artemis.ComponentMapper;\n import com.artemis.generator.common.IterativeModelStrategy;\n import com.artemis.generator.model.artemis.ComponentDescriptor;\n+\n import com.artemis.generator.model.type.*;\n import com.artemis.generator.util.FieldBuilder;\n \n@@ -11,17 +12,16 @@ import com.artemis.generator.util.FieldBuilder;\n  *\n  * @author Daan van Yperen\n  */\n-public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n \n-    @Override\n-    protected void apply(ComponentDescriptor component, TypeModel model) {\n-        model.add(createComponentMapper(component));\n-    }\n-\n-    private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n-                .build();\n-    }\n+public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n+ @Override\n+ protected void apply(ComponentDescriptor component, TypeModel model) {\n+  model.add(createComponentMapper(component));\n+ }\n \n-}\n+ private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n+  return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()),\n+   \"m\" + component.getName()).setAccessLevel(AccessLevel.PUBLIC)\n+                             .build();\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 119).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/random/files-repaired/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..758bbf2a84a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/random/files-repaired/104/ComponentMapperFieldsStrategy.java\n@@ -19,8 +19,8 @@ public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n     }\n \n     private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n+\t\t\t\t\treturn new FieldBuilder (newParameterizedTypeImpl(ComponentMapper.class,component.getComponentType(\n+    )),\"m\"+component.getName()).setAccessLevelsetAccessLevel(AccessLevel.PUBLIC)\n                 .build();\n     }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/three_grams/files-repaired/104/ComponentMapperFieldsStrategy.java\nindex d4ea3b72be2..f8b01a84b51 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/104/ComponentMapperFieldsStrategy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/three_grams/files-repaired/104/ComponentMapperFieldsStrategy.java\n@@ -19,8 +19,9 @@ public class ComponentMapperFieldsStrategy extends IterativeModelStrategy {\n     }\n \n     private FieldDescriptor createComponentMapper(ComponentDescriptor component) {\n-        return new FieldBuilder(new ParameterizedTypeImpl(ComponentMapper.class, component.getComponentType()), \"m\" + component.getName())\n-                .setAccessLevel(AccessLevel.PUBLIC)\n+\t\t\t\t\treturn newFieldBuilder(new ParameterizedTypeImpl( ComponentMapper .class,component .getComponentType()\n+\t\t\t), \"m\" + component.getName())\n+                .setAccessLevelsetAccessLevel(AccessLevel.PUBLIC)\n                 .build();\n     }\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

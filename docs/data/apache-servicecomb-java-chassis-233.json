@@ -1,0 +1,110 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "233",
+    "information": {
+        "violations": [
+            {
+                "line": "70",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 125).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  /*\n      as the data is returned, we can block the thread at a short time. consider that if the multiple verticles were deployed\n      and if we use pull mode and push mode at the same time , we must share a common lock with all methods which would\n      change the config setting\n     */",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "109",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 167).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/233/ParseConfigUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/233/ParseConfigUtils.java\nindex b51e0d75f54..29ba08a3522 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/233/ParseConfigUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/233/ParseConfigUtils.java\n@@ -77,7 +77,7 @@ public class ParseConfigUtils {\n       String oldRevision = currentVersionInfo;\n       currentVersionInfo =\n           remoteItems.getOrDefault(\"revision\", new HashMap<>()).getOrDefault(\"version\", \"default\").toString();\n-      //make sure the currentVersionInfo != \"\"\n+//make sure the currentVersionInfo != \"\"\n       currentVersionInfo = currentVersionInfo.equals(\"\") ? \"default\" : currentVersionInfo;\n       //the key revision is not the config setting\n       boolean newVersion = (remoteItems.remove(\"revision\") != null);\n@@ -106,8 +106,7 @@ public class ParseConfigUtils {\n       configLock.lock();\n       if (\"UPDATE\".equals(action.get(\"action\"))) {\n         try {\n-          multiDimensionItems.put((String) action.get(\"key\"), JsonUtils.OBJ_MAPPER\n-              .readValue(action.get(\"value\").toString(), new TypeReference<Map<String, Object>>() {\n+          multiDimensionItems.put((String) action.get(\"key\"), JsonUtils.OBJ_MAPPER.readValue(action.get(\"value\").toString(), new TypeReference<Map<String, Object>>() {\n               }));\n         } catch (IOException e) {\n           LOGGER.error(\"parse config change action fail\");\n@@ -165,4 +164,4 @@ public class ParseConfigUtils {\n     updateHandler.handle(\"set\", itemsModified);\n     updateHandler.handle(\"delete\", itemsDeleted);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "71",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/233/ParseConfigUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/233/ParseConfigUtils.java\nindex b51e0d75f54..ba6d6b7a294 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/233/ParseConfigUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/233/ParseConfigUtils.java\n@@ -23,19 +23,17 @@ import java.util.LinkedHashMap;\n import java.util.Map;\n import java.util.concurrent.locks.Lock;\n import java.util.concurrent.locks.ReentrantLock;\n-\n import org.apache.servicecomb.config.archaius.sources.ConfigCenterConfigurationSourceImpl.UpdateHandler;\n import org.apache.servicecomb.foundation.common.utils.JsonUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.fasterxml.jackson.core.type.TypeReference;\n \n /**\n  * Created by on 2017/1/5.\n  */\n-public class ParseConfigUtils {\n \n+public class ParseConfigUtils {\n   private static final Logger LOGGER = LoggerFactory.getLogger(ParseConfigUtils.class);\n \n   private static final ParseConfigUtils INSTANCE = new ParseConfigUtils();\n@@ -43,6 +41,7 @@ public class ParseConfigUtils {\n   private LinkedHashMap<String, Map<String, Object>> multiDimensionItems = new LinkedHashMap<>();\n \n   //it's dangerous to make flatItems public\n+\n   private final Map<String, Object> flatItems = new HashMap<>();\n \n   private String currentVersionInfo = \"default\";\n@@ -52,6 +51,7 @@ public class ParseConfigUtils {\n   private Lock configLock = new ReentrantLock();\n \n   //for compatibility with other modules and JunitTest\n+\n   public ParseConfigUtils(UpdateHandler updateHandler) {\n     this.updateHandler = updateHandler;\n   }\n@@ -63,6 +63,7 @@ public class ParseConfigUtils {\n     if (updateHandler == null) {\n       LOGGER.error(\"when init ParseConfigUtils, updateHandler can not be null\");\n     }\n+\n     this.updateHandler = updateHandler;\n   }\n \n@@ -71,22 +72,26 @@ public class ParseConfigUtils {\n       and if we use pull mode and push mode at the same time , we must share a common lock with all methods which would\n       change the config setting\n      */\n+\n   public void refreshConfigItems(Map<String, Map<String, Object>> remoteItems) {\n     try {\n       configLock.lock();\n+\n       String oldRevision = currentVersionInfo;\n-      currentVersionInfo =\n-          remoteItems.getOrDefault(\"revision\", new HashMap<>()).getOrDefault(\"version\", \"default\").toString();\n+      currentVersionInfo = remoteItems.getOrDefault(\"revision\", new HashMap<>()).getOrDefault(\"version\", \"default\")\n+                                                                                .toString();\n       //make sure the currentVersionInfo != \"\"\n       currentVersionInfo = currentVersionInfo.equals(\"\") ? \"default\" : currentVersionInfo;\n       //the key revision is not the config setting\n+\n       boolean newVersion = (remoteItems.remove(\"revision\") != null);\n       multiDimensionItems.clear();\n       multiDimensionItems.putAll(remoteItems);\n       doRefreshItems();\n       if (newVersion) {\n-        LOGGER.info(\"Updating remote config is done. revision has changed from {} to {}\", oldRevision,\n-            currentVersionInfo);\n+        LOGGER.info(\"Updating remote config is done. revision has changed from {} to {}\",\n+oldRevision,\n+currentVersionInfo);\n       }\n     } finally {\n       configLock.unlock();\n@@ -106,12 +111,13 @@ public class ParseConfigUtils {\n       configLock.lock();\n       if (\"UPDATE\".equals(action.get(\"action\"))) {\n         try {\n-          multiDimensionItems.put((String) action.get(\"key\"), JsonUtils.OBJ_MAPPER\n-              .readValue(action.get(\"value\").toString(), new TypeReference<Map<String, Object>>() {\n-              }));\n+          multiDimensionItems.put((String) action.get(\"key\"),\n+JsonUtils.OBJ_MAPPER.readValue(action.get(\"value\").toString(), new TypeReference<Map<String, Object>>() {\n+                                                              }));\n         } catch (IOException e) {\n           LOGGER.error(\"parse config change action fail\");\n         }\n+\n         doRefreshItems();\n       } else if (\"DELETE\".equals(action.get(\"action\"))) {\n         multiDimensionItems.remove(action.get(\"key\"));\n@@ -131,7 +137,8 @@ public class ParseConfigUtils {\n \n   private Map<String, Object> mergeDimensionItems(Map<String, Map<String, Object>> items) {\n     Map<String, Object> flatMap = new HashMap<>();\n-    return items.values().stream().reduce(flatMap, (result, item) -> {\n+    return items.values().stream()\n+                         .reduce(flatMap, (result, item) -> {\n       result.putAll(item);\n       return result;\n     });\n@@ -145,10 +152,12 @@ public class ParseConfigUtils {\n       updateHandler.handle(\"create\", after);\n       return;\n     }\n+\n     if (after == null || after.isEmpty()) {\n       updateHandler.handle(\"delete\", before);\n       return;\n     }\n+\n     for (String itemKey : after.keySet()) {\n       if (!before.containsKey(itemKey)) {\n         itemsCreated.put(itemKey, after.get(itemKey));\n@@ -156,13 +165,15 @@ public class ParseConfigUtils {\n         itemsModified.put(itemKey, after.get(itemKey));\n       }\n     }\n+\n     for (String itemKey : before.keySet()) {\n       if (!after.containsKey(itemKey)) {\n         itemsDeleted.put(itemKey, \"\");\n       }\n     }\n+\n     updateHandler.handle(\"create\", itemsCreated);\n     updateHandler.handle(\"set\", itemsModified);\n     updateHandler.handle(\"delete\", itemsDeleted);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 26
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "70",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

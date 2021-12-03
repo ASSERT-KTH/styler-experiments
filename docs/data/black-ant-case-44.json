@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "44",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "60",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "import org.springframework.data.jpa.repository.JpaRepository;\n\npublic interface UserRepository extends JpaRepository<User,Long> {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/44/UserRepository.java\nindex b3e34dd5a69..bf8b8e678ab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/44/UserRepository.java\n@@ -3,5 +3,5 @@ package com.gang.shardingjdbc.demo.repository;\n import com.gang.shardingjdbc.demo.entity.User;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserRepository extends JpaRepository<User,Long> {\n+public interface UserRepository extends JpaRepository<User, Long> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/44/UserRepository.java\nindex b3e34dd5a69..bf8b8e678ab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/44/UserRepository.java\n@@ -3,5 +3,5 @@ package com.gang.shardingjdbc.demo.repository;\n import com.gang.shardingjdbc.demo.entity.User;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserRepository extends JpaRepository<User,Long> {\n+public interface UserRepository extends JpaRepository<User, Long> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/44/UserRepository.java\nindex b3e34dd5a69..d09588447ce 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/44/UserRepository.java\n@@ -3,5 +3,5 @@ package com.gang.shardingjdbc.demo.repository;\n import com.gang.shardingjdbc.demo.entity.User;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserRepository extends JpaRepository<User,Long> {\n-}\n+public interface UserRepository extends JpaRepository<User, Long> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/44/UserRepository.java\nindex b3e34dd5a69..bf8b8e678ab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/44/UserRepository.java\n@@ -3,5 +3,5 @@ package com.gang.shardingjdbc.demo.repository;\n import com.gang.shardingjdbc.demo.entity.User;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserRepository extends JpaRepository<User,Long> {\n+public interface UserRepository extends JpaRepository<User, Long> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/44/UserRepository.java\nindex b3e34dd5a69..bf8b8e678ab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/44/UserRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/44/UserRepository.java\n@@ -3,5 +3,5 @@ package com.gang.shardingjdbc.demo.repository;\n import com.gang.shardingjdbc.demo.entity.User;\n import org.springframework.data.jpa.repository.JpaRepository;\n \n-public interface UserRepository extends JpaRepository<User,Long> {\n+public interface UserRepository extends JpaRepository<User, Long> {\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

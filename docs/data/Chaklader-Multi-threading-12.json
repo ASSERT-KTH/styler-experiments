@@ -1,0 +1,96 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class Invoker implements Executor {\n\n\t@Override\n\tpublic void execute(Runnable r) {\n\t\tr.run();\n\t}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/12/Invoker.java\nindex d9f11986d65..0d9391dfb11 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/12/Invoker.java\n@@ -4,7 +4,7 @@ import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n \n-\t@Override\n+@Override\n \tpublic void execute(Runnable r) {\n \t\tr.run();\n \t}\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/12/Invoker.java\nindex d9f11986d65..44edea4842e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/12/Invoker.java\n@@ -4,9 +4,9 @@ import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n \n-\t@Override\n-\tpublic void execute(Runnable r) {\n-\t\tr.run();\n-\t}\n+    @Override\n+    public void execute(Runnable r) {\n+        r.run();\n+    }\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/12/Invoker.java\nindex d9f11986d65..9f318b8e010 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/12/Invoker.java\n@@ -4,9 +4,8 @@ import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n \n-\t@Override\n+    @Override\n \tpublic void execute(Runnable r) {\n-\t\tr.run();\n-\t}\n-\n-}\n+    r.run();\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/12/Invoker.java\nindex d9f11986d65..0de38236bc3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/12/Invoker.java\n@@ -3,10 +3,8 @@ package com.baeldung.concurrent.executor;\n import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n-\n-\t@Override\n-\tpublic void execute(Runnable r) {\n-\t\tr.run();\n-\t}\n-\n-}\n+    @Override\n+    public void execute(Runnable r) {\n+        r.run();\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/12/Invoker.java\nindex d9f11986d65..0d9391dfb11 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/12/Invoker.java\n@@ -4,7 +4,7 @@ import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n \n-\t@Override\n+@Override\n \tpublic void execute(Runnable r) {\n \t\tr.run();\n \t}\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/12/Invoker.java\nindex d9f11986d65..6b7b5f6e8c9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/12/Invoker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/12/Invoker.java\n@@ -4,7 +4,7 @@ import java.util.concurrent.Executor;\n \n public class Invoker implements Executor {\n \n-\t@Override\n+    @Override\n \tpublic void execute(Runnable r) {\n \t\tr.run();\n \t}\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

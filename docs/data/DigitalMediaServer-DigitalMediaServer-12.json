@@ -1,0 +1,283 @@
+{
+    "project_name": "DigitalMediaServer-DigitalMediaServer",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "Line is longer than 140 characters (found 162).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\tprotected void manageItem() {\n\t\t// Picasa Web Albums Support\n\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n\t\t} else {\n\t\t\tsuper.manageItem();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/final/files-repaired/12/ImagesFeed.java\nindex 8f5109a3075..cf36f19600e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/final/files-repaired/12/ImagesFeed.java\n@@ -22,8 +22,9 @@ public class ImagesFeed extends Feed {\n \t@Override\n \tprotected void manageItem() {\n \t\t// Picasa Web Albums Support\n-\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n-\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n+  if (getTempFeedLink() != null && getTempCategory() !=\n+\tnull && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n+\t\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n \t\t} else {\n \t\t\tsuper.manageItem();\n \t\t}\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/checkstyle_idea/12/ImagesFeed.java\nindex 8f5109a3075..58b078f4902 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/checkstyle_idea/12/ImagesFeed.java\n@@ -16,20 +16,22 @@\n  * along with this program; if not, write to the Free Software\n  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n  */\n+\n package net.pms.dlna;\n \n public class ImagesFeed extends Feed {\n-\t@Override\n-\tprotected void manageItem() {\n-\t\t// Picasa Web Albums Support\n-\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n-\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n-\t\t} else {\n-\t\t\tsuper.manageItem();\n-\t\t}\n-\t}\n+    @Override\n+    protected void manageItem() {\n+        // Picasa Web Albums Support\n+        if (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") &&\n+            getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n+            addChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n+        } else {\n+            super.manageItem();\n+        }\n+    }\n \n-\tpublic ImagesFeed(String url) {\n-\t\tsuper(\"\" + System.currentTimeMillis(), url, MediaType.IMAGE);\n-\t}\n+    public ImagesFeed(String url) {\n+        super(\"\" + System.currentTimeMillis(), url, MediaType.IMAGE);\n+    }\n }\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Line is longer than 140 characters (found 162).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/naturalize/12/ImagesFeed.java\nindex 8f5109a3075..111b1f04f03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/naturalize/12/ImagesFeed.java\n@@ -32,4 +32,4 @@ public class ImagesFeed extends Feed {\n \tpublic ImagesFeed(String url) {\n \t\tsuper(\"\" + System.currentTimeMillis(), url, MediaType.IMAGE);\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Line is longer than 140 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/codebuff/12/ImagesFeed.java\nindex 8f5109a3075..28d57dfa401 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/codebuff/12/ImagesFeed.java\n@@ -19,17 +19,18 @@\n package net.pms.dlna;\n \n public class ImagesFeed extends Feed {\n-\t@Override\n-\tprotected void manageItem() {\n-\t\t// Picasa Web Albums Support\n-\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n-\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n-\t\t} else {\n-\t\t\tsuper.manageItem();\n-\t\t}\n-\t}\n \n-\tpublic ImagesFeed(String url) {\n-\t\tsuper(\"\" + System.currentTimeMillis(), url, MediaType.IMAGE);\n-\t}\n-}\n+ @Override\n+ protected void manageItem() {\n+  // Picasa Web Albums Support\n+  if (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n+   addChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n+  } else {\n+   super.manageItem();\n+  }\n+ }\n+\n+ public ImagesFeed(String url) {\n+  super(\"\" + System.currentTimeMillis(), url, MediaType.IMAGE);\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "22",
+                    "severity": "warning",
+                    "message": "'(' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "24",
+                    "severity": "warning",
+                    "message": "')' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "34",
+                    "severity": "warning",
+                    "message": "'&&' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "61",
+                    "severity": "warning",
+                    "message": "'&&' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "26",
+                    "column": "13",
+                    "severity": "warning",
+                    "message": "'(' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/random/files-repaired/12/ImagesFeed.java\nindex 8f5109a3075..51727167cde 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/random/files-repaired/12/ImagesFeed.java\n@@ -22,7 +22,8 @@ public class ImagesFeed extends Feed {\n \t@Override\n \tprotected void manageItem() {\n \t\t// Picasa Web Albums Support\n-\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n+  if (getTempFeedLink( ) != null &&getTempCategory() != null&& getTempCategory\n+\t\t\t().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n \t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n \t\t} else {\n \t\t\tsuper.manageItem();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/three_grams/files-repaired/12/ImagesFeed.java\nindex 8f5109a3075..cf36f19600e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/12/ImagesFeed.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/three_grams/files-repaired/12/ImagesFeed.java\n@@ -22,8 +22,9 @@ public class ImagesFeed extends Feed {\n \t@Override\n \tprotected void manageItem() {\n \t\t// Picasa Web Albums Support\n-\t\tif (getTempFeedLink() != null && getTempCategory() != null && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n-\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n+  if (getTempFeedLink() != null && getTempCategory() !=\n+\tnull && getTempCategory().endsWith(\"user\") && getUrl().toLowerCase().contains(\"picasaweb.google\")) {\n+\t\t\t\taddChild(new ImagesFeed(getTempFeedLink().replace(\"data/entry/base\", \"data/feed/base\")));\n \t\t} else {\n \t\t\tsuper.manageItem();\n \t\t}\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

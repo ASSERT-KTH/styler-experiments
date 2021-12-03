@@ -1,0 +1,62 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "8",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "column": "39",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "     * @param msg\n     */\n    public MenuOfException(String msg){\n        super(msg);\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/8/MenuOfException.java\nindex 37734453862..393f9ceeeba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/8/MenuOfException.java\n@@ -9,7 +9,7 @@ public class MenuOfException extends RuntimeException {\n      * Constructor.\n      * @param msg\n      */\n-    public MenuOfException(String msg){\n+    public MenuOfException(String msg) {\n         super(msg);\n     }\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/8/MenuOfException.java\nindex 37734453862..1933628b3ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/8/MenuOfException.java\n@@ -1,15 +1,17 @@\n package ru.szhernovoy.calculator.model;\n \n-/**Own exception out value from range\n+/**\n+ * Own exception out value from range\n  * Created by szhernovoy on 04.08.2016.\n  */\n public class MenuOfException extends RuntimeException {\n \n     /**\n      * Constructor.\n+     *\n      * @param msg\n      */\n-    public MenuOfException(String msg){\n+    public MenuOfException(String msg) {\n         super(msg);\n     }\n }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/8/MenuOfException.java\nindex 37734453862..393f9ceeeba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/8/MenuOfException.java\n@@ -9,7 +9,7 @@ public class MenuOfException extends RuntimeException {\n      * Constructor.\n      * @param msg\n      */\n-    public MenuOfException(String msg){\n+    public MenuOfException(String msg) {\n         super(msg);\n     }\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/8/MenuOfException.java\nindex 37734453862..393f9ceeeba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/8/MenuOfException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/8/MenuOfException.java\n@@ -9,7 +9,7 @@ public class MenuOfException extends RuntimeException {\n      * Constructor.\n      * @param msg\n      */\n-    public MenuOfException(String msg){\n+    public MenuOfException(String msg) {\n         super(msg);\n     }\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

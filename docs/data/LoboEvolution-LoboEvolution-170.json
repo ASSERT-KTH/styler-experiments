@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "170",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface SVGTransformable extends SVGLocatable {\n\n\t/**\n\t * <p>getTransform.</p>\n\t *\n\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/170/SVGTransformable.java\nindex f8dd94207f5..d7d4a70e353 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/170/SVGTransformable.java\n@@ -30,10 +30,10 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGTransformable extends SVGLocatable {\n \n-\t/**\n+    /**\n \t * <p>getTransform.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n \t */\n-\tSVGAnimatedTransformList getTransform();\n+ SVGAnimatedTransformList getTransform();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/170/SVGTransformable.java\nindex f8dd94207f5..7b95f660230 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/170/SVGTransformable.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -30,10 +31,10 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGTransformable extends SVGLocatable {\n \n-\t/**\n-\t * <p>getTransform.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n-\t */\n-\tSVGAnimatedTransformList getTransform();\n+    /**\n+     * <p>getTransform.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n+     */\n+    SVGAnimatedTransformList getTransform();\n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/170/SVGTransformable.java\nindex f8dd94207f5..032818692ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/170/SVGTransformable.java\n@@ -28,12 +28,16 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface SVGTransformable extends SVGLocatable {\n \n-\t/**\n-\t * <p>getTransform.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n-\t */\n-\tSVGAnimatedTransformList getTransform();\n-}\n+    /**\n+     * <p>getTransform.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n+     */\n+\n+\n+    SVGAnimatedTransformList getTransform();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/170/SVGTransformable.java\nindex f8dd94207f5..d7d4a70e353 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/170/SVGTransformable.java\n@@ -30,10 +30,10 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGTransformable extends SVGLocatable {\n \n-\t/**\n+    /**\n \t * <p>getTransform.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n \t */\n-\tSVGAnimatedTransformList getTransform();\n+ SVGAnimatedTransformList getTransform();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/170/SVGTransformable.java\nindex f8dd94207f5..d7d4a70e353 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/170/SVGTransformable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/170/SVGTransformable.java\n@@ -30,10 +30,10 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface SVGTransformable extends SVGLocatable {\n \n-\t/**\n+    /**\n \t * <p>getTransform.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedTransformList} object.\n \t */\n-\tSVGAnimatedTransformList getTransform();\n+ SVGAnimatedTransformList getTransform();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

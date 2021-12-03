@@ -1,0 +1,86 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "76",
+    "information": {
+        "violations": [
+            {
+                "line": "14",
+                "column": "47",
+                "severity": "error",
+                "message": "'typecast' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "\t@Override\n\tpublic Character doConvert(Object value, Class<?> componentType) {\n\t\treturn Character.valueOf((char)longDelegate.convert(value, componentType).shortValue());\n\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "14",
+                    "column": "47",
+                    "severity": "error",
+                    "message": "'typecast' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/76/ToCharConvertor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/76/ToCharConvertor.java\nindex 3ae2e495fe4..b0fa2f39ba3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/76/ToCharConvertor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/76/ToCharConvertor.java\n@@ -2,17 +2,17 @@ package org.onetwo.common.convert;\n \n public class ToCharConvertor extends AbstractTypeConvert<Character> {\n \n-\tprivate ToLongConvertor longDelegate;\n+  private ToLongConvertor longDelegate;\n \n-\tpublic ToCharConvertor() {\n-\t\tsuper('\\u0000');\n-\t\tthis.longDelegate = new ToLongConvertor();\n-\t}\n-\t\n-\t@Override\n-\tpublic Character doConvert(Object value, Class<?> componentType) {\n-\t\treturn Character.valueOf((char)longDelegate.convert(value, componentType).shortValue());\n+  public ToCharConvertor() {\n+    super('\\u0000');\n+    this.longDelegate = new ToLongConvertor();\n+  }\n \n-\t}\n+  @Override\n+  public Character doConvert(Object value, Class<?> componentType) {\n+    return Character.valueOf((char) longDelegate.convert(value, componentType).shortValue());\n+\n+  }\n \n }\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "14",
+                    "column": "47",
+                    "severity": "error",
+                    "message": "'typecast' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "14",
+                    "column": "47",
+                    "severity": "error",
+                    "message": "'typecast' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

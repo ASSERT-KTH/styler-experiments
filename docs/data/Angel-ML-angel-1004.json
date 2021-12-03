@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1004",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1004/AngelController.java\nindex 4bb887728fb..b9d708f0c03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1004/AngelController.java\n@@ -22,66 +22,66 @@ import com.tencent.angel.webapp.page.*;\n import org.apache.hadoop.yarn.webapp.Controller;\n \n public class AngelController extends Controller implements AngelParams {\n-  protected final AMContext appContext;\n+    protected final AMContext appContext;\n \n-  // The app injection is optional\n-  @Inject\n-  AngelController(AMContext appCtx, RequestContext ctx) {\n-    super(ctx);\n-    this.appContext = appCtx;\n-  }\n+    // The app injection is optional\n+    @Inject\n+    AngelController(AMContext appCtx, RequestContext ctx) {\n+        super(ctx);\n+        this.appContext = appCtx;\n+    }\n \n-  @Override\n-  public void index() {\n-    render(AngelAppPage.class);\n-    // renderText(\"hello world\");\n-  }\n+    @Override\n+    public void index() {\n+        render(AngelAppPage.class);\n+        // renderText(\"hello world\");\n+    }\n \n-  public void workerGroupsPage() {\n-    render(WorkerGroupsPage.class);\n-  }\n+    public void workerGroupsPage() {\n+        render(WorkerGroupsPage.class);\n+    }\n \n-  public void parameterServersPage() {\n-    render(ParameterServersPage.class);\n-  }\n+    public void parameterServersPage() {\n+        render(ParameterServersPage.class);\n+    }\n \n-  public void parameterServerThreadStackPage() {\n-    render(ParameterServerThreadStackPage.class);\n+    public void parameterServerThreadStackPage() {\n+        render(ParameterServerThreadStackPage.class);\n \n-  }\n+    }\n \n-  public void workerThreadStackPage() {\n-    render(WorkerThreadStackPage.class);\n+    public void workerThreadStackPage() {\n+        render(WorkerThreadStackPage.class);\n \n-  }\n+    }\n \n-  // user choose a workerGroupID from the workergroups page,\n-  // now we should change the AngelApp params and render the workergroup page;\n-  public void workerGroupPage() {\n-    render(WorkerGroupPage.class);\n-  }\n+    // user choose a workerGroupID from the workergroups page,\n+    // now we should change the AngelApp params and render the workergroup page;\n+    public void workerGroupPage() {\n+        render(WorkerGroupPage.class);\n+    }\n \n-  public void workerPage() {\n-    render(WorkerPage.class);\n-  }\n+    public void workerPage() {\n+        render(WorkerPage.class);\n+    }\n \n-  public void environmentPage() {\n-    render(EnvironmentPage.class);\n-  }\n+    public void environmentPage() {\n+        render(EnvironmentPage.class);\n+    }\n \n-  public void executorsPage() {\n-    render(ExecutorsPage.class);\n-  }\n+    public void executorsPage() {\n+        render(ExecutorsPage.class);\n+    }\n \n-  public void progressPage() {\n-    render(ProgressPage.class);\n-  }\n+    public void progressPage() {\n+        render(ProgressPage.class);\n+    }\n \n-  public void workerCounterPage() {\n-    render(WorkerCounterPage.class);\n-  }\n+    public void workerCounterPage() {\n+        render(WorkerCounterPage.class);\n+    }\n \n-  public void taskCountersPage() {\n-    render(TaskCountersPage.class);\n-  }\n+    public void taskCountersPage() {\n+        render(TaskCountersPage.class);\n+    }\n }\n",
+            "diff_size": 47
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1004/AngelController.java\nindex 4bb887728fb..c14fb1e16f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1004/AngelController.java\n@@ -52,7 +52,6 @@ public class AngelController extends Controller implements AngelParams {\n \n   public void workerThreadStackPage() {\n     render(WorkerThreadStackPage.class);\n-\n   }\n \n   // user choose a workerGroupID from the workergroups page,\n@@ -84,4 +83,4 @@ public class AngelController extends Controller implements AngelParams {\n   public void taskCountersPage() {\n     render(TaskCountersPage.class);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1004/AngelController.java\nindex 4bb887728fb..e6d0cb76f8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1004/AngelController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1004/AngelController.java\n@@ -22,9 +22,11 @@ import com.tencent.angel.webapp.page.*;\n import org.apache.hadoop.yarn.webapp.Controller;\n \n public class AngelController extends Controller implements AngelParams {\n+\n   protected final AMContext appContext;\n \n   // The app injection is optional\n+\n   @Inject\n   AngelController(AMContext appCtx, RequestContext ctx) {\n     super(ctx);\n@@ -47,16 +49,15 @@ public class AngelController extends Controller implements AngelParams {\n \n   public void parameterServerThreadStackPage() {\n     render(ParameterServerThreadStackPage.class);\n-\n   }\n \n   public void workerThreadStackPage() {\n     render(WorkerThreadStackPage.class);\n-\n   }\n \n   // user choose a workerGroupID from the workergroups page,\n   // now we should change the AngelApp params and render the workergroup page;\n+\n   public void workerGroupPage() {\n     render(WorkerGroupPage.class);\n   }\n@@ -84,4 +85,5 @@ public class AngelController extends Controller implements AngelParams {\n   public void taskCountersPage() {\n     render(TaskCountersPage.class);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

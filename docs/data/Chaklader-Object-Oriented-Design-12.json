@@ -1,0 +1,62 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "public interface Command {\n\n    public void execute();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/12/Command.java\nindex 52c1d050376..d0482e939df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/12/Command.java\n@@ -2,5 +2,5 @@ package design.design_patterns.command.simpleremote;\n \n public interface Command {\n \n-    public void execute();\n+  public void execute();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/12/Command.java\nindex 52c1d050376..d0482e939df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/12/Command.java\n@@ -2,5 +2,5 @@ package design.design_patterns.command.simpleremote;\n \n public interface Command {\n \n-    public void execute();\n+  public void execute();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/12/Command.java\nindex 52c1d050376..13816e17055 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/12/Command.java\n@@ -2,5 +2,5 @@ package design.design_patterns.command.simpleremote;\n \n public interface Command {\n \n-    public void execute();\n-}\n+  public void execute();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/12/Command.java\nindex 52c1d050376..7449968a43c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/12/Command.java\n@@ -1,6 +1,7 @@\n package design.design_patterns.command.simpleremote;\n \n+\n public interface Command {\n \n-    public void execute();\n-}\n+  public void execute();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/12/Command.java\nindex 52c1d050376..d0482e939df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/12/Command.java\n@@ -2,5 +2,5 @@ package design.design_patterns.command.simpleremote;\n \n public interface Command {\n \n-    public void execute();\n+  public void execute();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/12/Command.java\nindex 52c1d050376..d0482e939df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/12/Command.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/12/Command.java\n@@ -2,5 +2,5 @@ package design.design_patterns.command.simpleremote;\n \n public interface Command {\n \n-    public void execute();\n+  public void execute();\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

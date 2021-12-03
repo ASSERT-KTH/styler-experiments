@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "888",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/888/ByteBufUtils.java\nindex 28e0309997a..a9aecaae22c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/888/ByteBufUtils.java\n@@ -22,42 +22,42 @@ import io.netty.buffer.*;\n  * Netty ByteBuf allocation utils.\n  */\n public class ByteBufUtils {\n-  private static volatile ByteBufAllocator allocator = null;\n-  public static volatile boolean useDirect = true;\n-  public static volatile boolean usePool = true;\n-\n-  private static ByteBufAllocator getBufferAllocator() {\n-    if(allocator == null) {\n-      if(usePool) {\n-        allocator = new PooledByteBufAllocator();\n-      } else {\n-        allocator = new UnpooledByteBufAllocator(true);\n-      }\n+    private static volatile ByteBufAllocator allocator = null;\n+    public static volatile boolean useDirect = true;\n+    public static volatile boolean usePool = true;\n+\n+    private static ByteBufAllocator getBufferAllocator() {\n+        if (allocator == null) {\n+            if (usePool) {\n+                allocator = new PooledByteBufAllocator();\n+            } else {\n+                allocator = new UnpooledByteBufAllocator(true);\n+            }\n+        }\n+        return allocator;\n     }\n-    return allocator;\n-  }\n-\n-  public static ByteBuf newHeapByteBuf(int estimizeSerilizeSize) {\n-    return getBufferAllocator().buffer(estimizeSerilizeSize);\n-  }\n-\n-  public static ByteBuf newDirectByteBuf(int estimizeSerilizeSize) {\n-    return getBufferAllocator().directBuffer(estimizeSerilizeSize);\n-  }\n-\n-  public static ByteBuf newByteBuf(int estimizeSerilizeSize, boolean useDirect) {\n-    if (useDirect) {\n-      return newDirectByteBuf(estimizeSerilizeSize);\n-    } else {\n-      return newHeapByteBuf(estimizeSerilizeSize);\n+\n+    public static ByteBuf newHeapByteBuf(int estimizeSerilizeSize) {\n+        return getBufferAllocator().buffer(estimizeSerilizeSize);\n+    }\n+\n+    public static ByteBuf newDirectByteBuf(int estimizeSerilizeSize) {\n+        return getBufferAllocator().directBuffer(estimizeSerilizeSize);\n+    }\n+\n+    public static ByteBuf newByteBuf(int estimizeSerilizeSize, boolean useDirect) {\n+        if (useDirect) {\n+            return newDirectByteBuf(estimizeSerilizeSize);\n+        } else {\n+            return newHeapByteBuf(estimizeSerilizeSize);\n+        }\n     }\n-  }\n \n-  public static ByteBuf newByteBuf(int estimizeSerilizeSize) {\n-    if (useDirect) {\n-      return newDirectByteBuf(estimizeSerilizeSize);\n-    } else {\n-      return newHeapByteBuf(estimizeSerilizeSize);\n+    public static ByteBuf newByteBuf(int estimizeSerilizeSize) {\n+        if (useDirect) {\n+            return newDirectByteBuf(estimizeSerilizeSize);\n+        } else {\n+            return newHeapByteBuf(estimizeSerilizeSize);\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/888/ByteBufUtils.java\nindex 28e0309997a..40875f65e55 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/888/ByteBufUtils.java\n@@ -60,4 +60,4 @@ public class ByteBufUtils {\n       return newHeapByteBuf(estimizeSerilizeSize);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/888/ByteBufUtils.java\nindex 28e0309997a..752bd7f55fb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/888/ByteBufUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/888/ByteBufUtils.java\n@@ -21,14 +21,17 @@ import io.netty.buffer.*;\n /**\n  * Netty ByteBuf allocation utils.\n  */\n+\n public class ByteBufUtils {\n+\n   private static volatile ByteBufAllocator allocator = null;\n+\n   public static volatile boolean useDirect = true;\n-  public static volatile boolean usePool = true;\n \n+  public static volatile boolean usePool = true;\n   private static ByteBufAllocator getBufferAllocator() {\n-    if(allocator == null) {\n-      if(usePool) {\n+    if (allocator == null) {\n+      if (usePool) {\n         allocator = new PooledByteBufAllocator();\n       } else {\n         allocator = new UnpooledByteBufAllocator(true);\n@@ -60,4 +63,4 @@ public class ByteBufUtils {\n       return newHeapByteBuf(estimizeSerilizeSize);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

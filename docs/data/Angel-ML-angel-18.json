@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 114).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n/**\n * Sparse double matrix that is represented by a group of component sparse int vector  {@link CompSparseIntVector}\n */\npublic class CompSparseIntMatrix extends TIntMatrix {\n  private static final Log LOG = LogFactory.getLog(SparseIntMatrix.class);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/18/CompSparseIntMatrix.java\nindex b47d4cf8974..1d7679a987c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/18/CompSparseIntMatrix.java\n@@ -26,25 +26,26 @@ import org.apache.commons.logging.LogFactory;\n  * Sparse double matrix that is represented by a group of component sparse int vector  {@link CompSparseIntVector}\n  */\n public class CompSparseIntMatrix extends TIntMatrix {\n-  private static final Log LOG = LogFactory.getLog(SparseIntMatrix.class);\n+    private static final Log LOG = LogFactory.getLog(SparseIntMatrix.class);\n \n-  /**\n-   * Create a ComponentSparseIntMatrix\n-   *\n-   * @param row the row number\n-   * @param col the col number\n-   */\n-  public CompSparseIntMatrix(int row, int col) {\n-    super(row, col);\n-  }\n+    /**\n+     * Create a ComponentSparseIntMatrix\n+     *\n+     * @param row the row number\n+     * @param col the col number\n+     */\n+    public CompSparseIntMatrix(int row, int col) {\n+        super(row, col);\n+    }\n \n-  /**\n-   * init the empty vector\n-   *\n-   * @param rowIndex row index\n-   * @return\n-   */\n-  @Override public TVector initVector(int rowIndex) {\n-    return new CompSparseIntVector(matrixId, rowIndex, (int)col);\n-  }\n+    /**\n+     * init the empty vector\n+     *\n+     * @param rowIndex row index\n+     * @return\n+     */\n+    @Override\n+    public TVector initVector(int rowIndex) {\n+        return new CompSparseIntVector(matrixId, rowIndex, (int) col);\n+    }\n }\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/18/CompSparseIntMatrix.java\nindex b47d4cf8974..df0b9b68dcb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/18/CompSparseIntMatrix.java\n@@ -44,7 +44,8 @@ public class CompSparseIntMatrix extends TIntMatrix {\n    * @param rowIndex row index\n    * @return\n    */\n-  @Override public TVector initVector(int rowIndex) {\n-    return new CompSparseIntVector(matrixId, rowIndex, (int)col);\n+  @Override\n+public TVector initVector(int rowIndex) {\n+    return new CompSparseIntVector(matrixId, rowIndex, (int) col);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/18/CompSparseIntMatrix.java\nindex b47d4cf8974..3fa1bf59601 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/18/CompSparseIntMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/18/CompSparseIntMatrix.java\n@@ -25,7 +25,9 @@ import org.apache.commons.logging.LogFactory;\n /**\n  * Sparse double matrix that is represented by a group of component sparse int vector  {@link CompSparseIntVector}\n  */\n+\n public class CompSparseIntMatrix extends TIntMatrix {\n+\n   private static final Log LOG = LogFactory.getLog(SparseIntMatrix.class);\n \n   /**\n@@ -34,6 +36,7 @@ public class CompSparseIntMatrix extends TIntMatrix {\n    * @param row the row number\n    * @param col the col number\n    */\n+\n   public CompSparseIntMatrix(int row, int col) {\n     super(row, col);\n   }\n@@ -44,7 +47,10 @@ public class CompSparseIntMatrix extends TIntMatrix {\n    * @param rowIndex row index\n    * @return\n    */\n-  @Override public TVector initVector(int rowIndex) {\n-    return new CompSparseIntVector(matrixId, rowIndex, (int)col);\n+\n+  @Override\n+  public TVector initVector(int rowIndex) {\n+    return new CompSparseIntVector(matrixId, rowIndex, (int) col);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 114).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

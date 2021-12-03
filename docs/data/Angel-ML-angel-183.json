@@ -1,0 +1,101 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "183",
+    "information": {
+        "violations": [
+            {
+                "line": "67",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 101).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    private Serialize func;\n\n    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds, Serialize func) {\n      super(matrixId, partKey, false);\n      this.rowIds = rowIds;\n      this.func = func;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/183/MFUpdateParam.java\nindex ea745198b6b..5a6752276c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/183/MFUpdateParam.java\n@@ -64,8 +64,8 @@ public class MFUpdateParam extends UpdateParam {\n     private int[] rowIds;\n     private Serialize func;\n \n-    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds, Serialize func) {\n-      super(matrixId, partKey, false);\n+    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int [] rowIds ,Serialize func\n+      ){super(matrixId, partKey, false);\n       this.rowIds = rowIds;\n       this.func = func;\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/183/MFUpdateParam.java\nindex ea745198b6b..b79602c0e80 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/183/MFUpdateParam.java\n@@ -31,104 +31,105 @@ import java.util.List;\n  */\n public class MFUpdateParam extends UpdateParam {\n \n-  private final int[] rowIds;\n-  private final Serialize func;\n-\n-  public MFUpdateParam(int matrixId, int[] rowIds, Serialize func) {\n-    super(matrixId, false);\n-    this.rowIds = rowIds;\n-    this.func = func;\n-  }\n-\n-  @Override\n-  public List<PartitionUpdateParam> split() {\n-    List<PartitionKey> partList = PSAgentContext.get()\n-        .getMatrixPartitionRouter()\n-        .getPartitionKeyList(matrixId);\n-\n-    int size = partList.size();\n-    List<PartitionUpdateParam> partParams = new ArrayList<PartitionUpdateParam>(size);\n-    for (PartitionKey part : partList) {\n-      for (int rowId : rowIds) {\n-        if (rowId < part.getStartRow() || rowId >= part.getEndRow()) {\n-          throw new RuntimeException(\"Wrong rowId!\");\n+    private final int[] rowIds;\n+    private final Serialize func;\n+\n+    public MFUpdateParam(int matrixId, int[] rowIds, Serialize func) {\n+        super(matrixId, false);\n+        this.rowIds = rowIds;\n+        this.func = func;\n+    }\n+\n+    @Override\n+    public List<PartitionUpdateParam> split() {\n+        List<PartitionKey> partList = PSAgentContext.get()\n+                .getMatrixPartitionRouter()\n+                .getPartitionKeyList(matrixId);\n+\n+        int size = partList.size();\n+        List<PartitionUpdateParam> partParams = new ArrayList<PartitionUpdateParam>(size);\n+        for (PartitionKey part : partList) {\n+            for (int rowId : rowIds) {\n+                if (rowId < part.getStartRow() || rowId >= part.getEndRow()) {\n+                    throw new RuntimeException(\"Wrong rowId!\");\n+                }\n+            }\n+            partParams.add(new MFPartitionUpdateParam(matrixId, part, rowIds, func));\n         }\n-      }\n-      partParams.add(new MFPartitionUpdateParam(matrixId, part, rowIds, func));\n+\n+        return partParams;\n     }\n \n-    return partParams;\n-  }\n+    public static class MFPartitionUpdateParam extends PartitionUpdateParam {\n+        private int[] rowIds;\n+        private Serialize func;\n \n-  public static class MFPartitionUpdateParam extends PartitionUpdateParam {\n-    private int[] rowIds;\n-    private Serialize func;\n+        public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds,\n+                                      Serialize func) {\n+            super(matrixId, partKey, false);\n+            this.rowIds = rowIds;\n+            this.func = func;\n+        }\n \n-    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds, Serialize func) {\n-      super(matrixId, partKey, false);\n-      this.rowIds = rowIds;\n-      this.func = func;\n-    }\n+        public MFPartitionUpdateParam() {\n+            super();\n+        }\n \n-    public MFPartitionUpdateParam() {\n-      super();\n-    }\n+        @Override\n+        public void serialize(ByteBuf buf) {\n+            super.serialize(buf);\n+            buf.writeInt(rowIds.length);\n+            for (int rowId : rowIds) {\n+                buf.writeInt(rowId);\n+            }\n+\n+            byte[] bytes = func.getClass().getName().getBytes();\n+            buf.writeInt(bytes.length);\n+            buf.writeBytes(bytes);\n+            func.serialize(buf);\n+        }\n \n-    @Override\n-    public void serialize(ByteBuf buf) {\n-      super.serialize(buf);\n-      buf.writeInt(rowIds.length);\n-      for (int rowId : rowIds) {\n-        buf.writeInt(rowId);\n-      }\n-\n-      byte[] bytes = func.getClass().getName().getBytes();\n-      buf.writeInt(bytes.length);\n-      buf.writeBytes(bytes);\n-      func.serialize(buf);\n-    }\n+        @Override\n+        public void deserialize(ByteBuf buf) {\n+            super.deserialize(buf);\n+            int rowIdNum = buf.readInt();\n+            int[] rowIds = new int[rowIdNum];\n+            for (int i = 0; i < rowIdNum; i++) {\n+                rowIds[i] = buf.readInt();\n+            }\n+            this.rowIds = rowIds;\n+\n+            int size = buf.readInt();\n+            byte[] bytes = new byte[size];\n+            buf.readBytes(bytes);\n+            try {\n+                this.func = (Serialize) Class.forName(new String(bytes)).newInstance();\n+            } catch (ReflectiveOperationException e) {\n+                throw new RuntimeException(e);\n+            }\n+            this.func.deserialize(buf);\n+        }\n \n-    @Override\n-    public void deserialize(ByteBuf buf) {\n-      super.deserialize(buf);\n-      int rowIdNum = buf.readInt();\n-      int[] rowIds = new int[rowIdNum];\n-      for (int i = 0; i < rowIdNum; i++) {\n-        rowIds[i] = buf.readInt();\n-      }\n-      this.rowIds = rowIds;\n-\n-      int size = buf.readInt();\n-      byte[] bytes = new byte[size];\n-      buf.readBytes(bytes);\n-      try {\n-        this.func = (Serialize) Class.forName(new String(bytes)).newInstance();\n-      } catch (ReflectiveOperationException e) {\n-        throw new RuntimeException(e);\n-      }\n-      this.func.deserialize(buf);\n-    }\n+        @Override\n+        public int bufferLen() {\n+            return super.bufferLen() + (4 + rowIds.length * 4)\n+                    + (4 + func.getClass().getName().getBytes().length + func.bufferLen());\n+        }\n \n-    @Override\n-    public int bufferLen() {\n-      return super.bufferLen() + (4 + rowIds.length * 4)\n-          + (4 + func.getClass().getName().getBytes().length + func.bufferLen());\n-    }\n+        public int[] getRowIds() {\n+            return this.rowIds;\n+        }\n \n-    public int[] getRowIds() {\n-      return this.rowIds;\n-    }\n+        public Serialize getFunc() {\n+            return this.func;\n+        }\n \n-    public Serialize getFunc() {\n-      return this.func;\n-    }\n+        @Override\n+        public String toString() {\n+            return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" +\n+                    func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n+        }\n \n-    @Override\n-    public String toString() {\n-      return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" +\n-          func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n     }\n \n-  }\n-\n }\n",
+            "diff_size": 112
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "67",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "128",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/183/MFUpdateParam.java\nindex ea745198b6b..6dbcc015719 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/183/MFUpdateParam.java\n@@ -125,10 +125,8 @@ public class MFUpdateParam extends UpdateParam {\n \n     @Override\n     public String toString() {\n-      return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" +\n-          func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n+      return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" + func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n     }\n-\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "118",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 128).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "131",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/183/MFUpdateParam.java\nindex ea745198b6b..d2b104ca2f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/183/MFUpdateParam.java\n@@ -21,7 +21,6 @@ import com.tencent.angel.PartitionKey;\n import com.tencent.angel.common.Serialize;\n import com.tencent.angel.psagent.PSAgentContext;\n import io.netty.buffer.ByteBuf;\n-\n import java.util.ArrayList;\n import java.util.Arrays;\n import java.util.List;\n@@ -29,6 +28,7 @@ import java.util.List;\n /**\n  * `MFUpdateParam` is Parameter class for `MFUpdateFunc`\n  */\n+\n public class MFUpdateParam extends UpdateParam {\n \n   private final int[] rowIds;\n@@ -42,10 +42,7 @@ public class MFUpdateParam extends UpdateParam {\n \n   @Override\n   public List<PartitionUpdateParam> split() {\n-    List<PartitionKey> partList = PSAgentContext.get()\n-        .getMatrixPartitionRouter()\n-        .getPartitionKeyList(matrixId);\n-\n+    List<PartitionKey> partList = PSAgentContext.get().getMatrixPartitionRouter().getPartitionKeyList(matrixId);\n     int size = partList.size();\n     List<PartitionUpdateParam> partParams = new ArrayList<PartitionUpdateParam>(size);\n     for (PartitionKey part : partList) {\n@@ -56,11 +53,11 @@ public class MFUpdateParam extends UpdateParam {\n       }\n       partParams.add(new MFPartitionUpdateParam(matrixId, part, rowIds, func));\n     }\n-\n     return partParams;\n   }\n \n   public static class MFPartitionUpdateParam extends PartitionUpdateParam {\n+\n     private int[] rowIds;\n     private Serialize func;\n \n@@ -91,11 +88,15 @@ public class MFUpdateParam extends UpdateParam {\n     @Override\n     public void deserialize(ByteBuf buf) {\n       super.deserialize(buf);\n+\n       int rowIdNum = buf.readInt();\n       int[] rowIds = new int[rowIdNum];\n       for (int i = 0; i < rowIdNum; i++) {\n         rowIds[i] = buf.readInt();\n       }\n+\n+\n+\n       this.rowIds = rowIds;\n \n       int size = buf.readInt();\n@@ -106,13 +107,15 @@ public class MFUpdateParam extends UpdateParam {\n       } catch (ReflectiveOperationException e) {\n         throw new RuntimeException(e);\n       }\n+\n+\n+\n       this.func.deserialize(buf);\n     }\n \n     @Override\n     public int bufferLen() {\n-      return super.bufferLen() + (4 + rowIds.length * 4)\n-          + (4 + func.getClass().getName().getBytes().length + func.bufferLen());\n+      return super.bufferLen() + (4 + rowIds.length * 4) + (4 + func.getClass().getName().getBytes().length + func.bufferLen());\n     }\n \n     public int[] getRowIds() {\n@@ -125,10 +128,8 @@ public class MFUpdateParam extends UpdateParam {\n \n     @Override\n     public String toString() {\n-      return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" +\n-          func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n+      return \"MFPartitionUpdateParam rowIds=\" + Arrays.toString(rowIds) + \", func=\" + func.getClass().getName() + \", toString()=\" + super.toString() + \"]\";\n     }\n-\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/183/MFUpdateParam.java\nindex ea745198b6b..5a6752276c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/183/MFUpdateParam.java\n@@ -64,8 +64,8 @@ public class MFUpdateParam extends UpdateParam {\n     private int[] rowIds;\n     private Serialize func;\n \n-    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds, Serialize func) {\n-      super(matrixId, partKey, false);\n+    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int [] rowIds ,Serialize func\n+      ){super(matrixId, partKey, false);\n       this.rowIds = rowIds;\n       this.func = func;\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/183/MFUpdateParam.java\nindex ea745198b6b..f3dbc6ecfc4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/183/MFUpdateParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/183/MFUpdateParam.java\n@@ -64,8 +64,10 @@ public class MFUpdateParam extends UpdateParam {\n     private int[] rowIds;\n     private Serialize func;\n \n-    public MFPartitionUpdateParam(int matrixId, PartitionKey partKey, int[] rowIds, Serialize func) {\n-      super(matrixId, partKey, false);\n+    public MFPartitionUpdateParam(\n+        int matrixId, PartitionKey partKey, int [] rowIds ,Serialize\n+    func ) {\n+       super(matrixId, partKey, false);\n       this.rowIds = rowIds;\n       this.func = func;\n     }\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "266",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/266/GetClosenessPartResult.java\nindex cc6d2f40037..26311a6569d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/266/GetClosenessPartResult.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.spark.ml.psf.hyperanf;\n \n import com.tencent.angel.ml.matrix.psf.get.base.PartitionGetResult;\n@@ -24,48 +25,48 @@ import it.unimi.dsi.fastutil.objects.ObjectIterator;\n \n public class GetClosenessPartResult extends PartitionGetResult {\n \n-  private Long2DoubleOpenHashMap closenesses;\n-\n-  public GetClosenessPartResult(Long2DoubleOpenHashMap closenesses) {\n-    this.closenesses = closenesses;\n-  }\n+    private Long2DoubleOpenHashMap closenesses;\n \n-  public GetClosenessPartResult() {\n-    this.closenesses = new Long2DoubleOpenHashMap();\n-  }\n+    public GetClosenessPartResult(Long2DoubleOpenHashMap closenesses) {\n+        this.closenesses = closenesses;\n+    }\n \n-  public Long2DoubleOpenHashMap getClosenesses() {\n-    return closenesses;\n-  }\n+    public GetClosenessPartResult() {\n+        this.closenesses = new Long2DoubleOpenHashMap();\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n-    output.writeInt(closenesses.size());\n-    ObjectIterator<Long2DoubleMap.Entry> it =\n-        closenesses.long2DoubleEntrySet().fastIterator();\n-    while (it.hasNext()) {\n-      Long2DoubleMap.Entry entry = it.next();\n-      output.writeLong(entry.getLongKey());\n-      output.writeDouble(entry.getDoubleValue());\n+    public Long2DoubleOpenHashMap getClosenesses() {\n+        return closenesses;\n     }\n \n-  }\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        output.writeInt(closenesses.size());\n+        ObjectIterator<Long2DoubleMap.Entry> it =\n+                closenesses.long2DoubleEntrySet().fastIterator();\n+        while (it.hasNext()) {\n+            Long2DoubleMap.Entry entry = it.next();\n+            output.writeLong(entry.getLongKey());\n+            output.writeDouble(entry.getDoubleValue());\n+        }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    int size = input.readInt();\n-    closenesses = new Long2DoubleOpenHashMap();\n-    for (int i = 0; i < size; i++) {\n-      long key = input.readLong();\n-      double val = input.readDouble();\n-      closenesses.put(key, val);\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    int len = 4;\n-    len += closenesses.size() * 16;\n-    return len;\n-  }\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        int size = input.readInt();\n+        closenesses = new Long2DoubleOpenHashMap();\n+        for (int i = 0; i < size; i++) {\n+            long key = input.readLong();\n+            double val = input.readDouble();\n+            closenesses.put(key, val);\n+        }\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        int len = 4;\n+        len += closenesses.size() * 16;\n+        return len;\n+    }\n }\n",
+            "diff_size": 57
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/266/GetClosenessPartResult.java\nindex cc6d2f40037..f1d977297df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/266/GetClosenessPartResult.java\n@@ -43,7 +43,7 @@ public class GetClosenessPartResult extends PartitionGetResult {\n     output.writeInt(closenesses.size());\n     ObjectIterator<Long2DoubleMap.Entry> it =\n         closenesses.long2DoubleEntrySet().fastIterator();\n-    while (it.hasNext()) {\n+while (it.hasNext()) {\n       Long2DoubleMap.Entry entry = it.next();\n       output.writeLong(entry.getLongKey());\n       output.writeDouble(entry.getDoubleValue());\n@@ -68,4 +68,4 @@ public class GetClosenessPartResult extends PartitionGetResult {\n     len += closenesses.size() * 16;\n     return len;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/266/GetClosenessPartResult.java\nindex cc6d2f40037..9c2faefe440 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/266/GetClosenessPartResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/266/GetClosenessPartResult.java\n@@ -41,14 +41,12 @@ public class GetClosenessPartResult extends PartitionGetResult {\n   @Override\n   public void serialize(ByteBuf output) {\n     output.writeInt(closenesses.size());\n-    ObjectIterator<Long2DoubleMap.Entry> it =\n-        closenesses.long2DoubleEntrySet().fastIterator();\n+    ObjectIterator<Long2DoubleMap.Entry> it = closenesses.long2DoubleEntrySet().fastIterator();\n     while (it.hasNext()) {\n       Long2DoubleMap.Entry entry = it.next();\n       output.writeLong(entry.getLongKey());\n       output.writeDouble(entry.getDoubleValue());\n     }\n-\n   }\n \n   @Override\n@@ -68,4 +66,5 @@ public class GetClosenessPartResult extends PartitionGetResult {\n     len += closenesses.size() * 16;\n     return len;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

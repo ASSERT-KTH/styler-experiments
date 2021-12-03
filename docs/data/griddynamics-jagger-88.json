@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "88",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "column": "84",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " * To change this template use File | Settings | File Templates.\n */\npublic interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n    C calculate(R response);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/88/AbstractMetricCalculator.java\nindex 54449732ace..d0af3ae6bf1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/88/AbstractMetricCalculator.java\n@@ -9,6 +9,6 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n     C calculate(R response);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/88/AbstractMetricCalculator.java\nindex 54449732ace..d0af3ae6bf1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/88/AbstractMetricCalculator.java\n@@ -9,6 +9,6 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n     C calculate(R response);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/88/AbstractMetricCalculator.java\nindex 54449732ace..098777e4033 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/88/AbstractMetricCalculator.java\n@@ -9,6 +9,6 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n     C calculate(R response);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/88/AbstractMetricCalculator.java\nindex 54449732ace..d39e4b8f0ac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/88/AbstractMetricCalculator.java\n@@ -9,6 +9,9 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+\n+\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n+\n     C calculate(R response);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/88/AbstractMetricCalculator.java\nindex 54449732ace..d0af3ae6bf1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/88/AbstractMetricCalculator.java\n@@ -9,6 +9,6 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n     C calculate(R response);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/88/AbstractMetricCalculator.java\nindex 54449732ace..d0af3ae6bf1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/88/AbstractMetricCalculator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/88/AbstractMetricCalculator.java\n@@ -9,6 +9,6 @@ import java.io.Serializable;\n  * Time: 9:21 AM\n  * To change this template use File | Settings | File Templates.\n  */\n-public interface AbstractMetricCalculator<R, C extends Number> extends Serializable{\n+public interface AbstractMetricCalculator<R, C extends Number> extends Serializable {\n     C calculate(R response);\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

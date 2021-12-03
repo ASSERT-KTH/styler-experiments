@@ -1,0 +1,84 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "881",
+    "information": {
+        "violations": [
+            {
+                "line": "61",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  @Override\n  protected double doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n    long entireSize = row1.getEndCol() - row2.getStartCol();\n\n    Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/881/Dot.java\nindex a5c4e0d03b1..59ebdd8f553 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/881/Dot.java\n@@ -57,9 +57,8 @@ public final class Dot extends BinaryAggrFunc {\n     return sum;\n   }\n \n-  @Override\n-  protected double doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n-    long entireSize = row1.getEndCol() - row2.getStartCol();\n+  @Override doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n+    long entireSize = entireSize = row1.getEndCol() - row2.getStartCol();\n \n     Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();\n     Long2DoubleOpenHashMap data2 = row2.getIndex2ValueMap();\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/881/Dot.java\nindex a5c4e0d03b1..56744fdaff3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/881/Dot.java\n@@ -37,57 +37,58 @@ import java.util.List;\n  */\n public final class Dot extends BinaryAggrFunc {\n \n-  public Dot(int matrixId, int rowId1, int rowId2) {\n-    super(matrixId, rowId1, rowId2);\n-  }\n-\n-  public Dot() {\n-    super();\n-  }\n-\n-  @Override\n-  protected double doProcessRow(ServerDenseDoubleRow row1, ServerDenseDoubleRow row2) {\n-    double sum = 0.0;\n-    DoubleBuffer data1 = row1.getData();\n-    DoubleBuffer data2 = row2.getData();\n-    int size = row1.size();\n-    for (int i = 0; i < size; i++) {\n-      sum += data1.get(i) * data2.get(i);\n+    public Dot(int matrixId, int rowId1, int rowId2) {\n+        super(matrixId, rowId1, rowId2);\n     }\n-    return sum;\n-  }\n \n-  @Override\n-  protected double doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n-    long entireSize = row1.getEndCol() - row2.getStartCol();\n+    public Dot() {\n+        super();\n+    }\n \n-    Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();\n-    Long2DoubleOpenHashMap data2 = row2.getIndex2ValueMap();\n+    @Override\n+    protected double doProcessRow(ServerDenseDoubleRow row1, ServerDenseDoubleRow row2) {\n+        double sum = 0.0;\n+        DoubleBuffer data1 = row1.getData();\n+        DoubleBuffer data2 = row2.getData();\n+        int size = row1.size();\n+        for (int i = 0; i < size; i++) {\n+            sum += data1.get(i) * data2.get(i);\n+        }\n+        return sum;\n+    }\n \n-    LongSet keys = new LongOpenHashSet(data1.keySet());\n-    keys.addAll(data2.keySet());\n+    @Override\n+    protected double doProcessRow(ServerSparseDoubleLongKeyRow row1,\n+                                  ServerSparseDoubleLongKeyRow row2) {\n+        long entireSize = row1.getEndCol() - row2.getStartCol();\n \n-    double sum = 0.0;\n-    for (long key: keys) {\n-      sum += data1.get(key) * data2.get(key);\n-    }\n+        Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();\n+        Long2DoubleOpenHashMap data2 = row2.getIndex2ValueMap();\n \n-    sum += (entireSize - keys.size()) * data1.defaultReturnValue() * data2.defaultReturnValue();\n+        LongSet keys = new LongOpenHashSet(data1.keySet());\n+        keys.addAll(data2.keySet());\n \n-    return sum;\n-  }\n+        double sum = 0.0;\n+        for (long key : keys) {\n+            sum += data1.get(key) * data2.get(key);\n+        }\n \n+        sum += (entireSize - keys.size()) * data1.defaultReturnValue() * data2.defaultReturnValue();\n \n-  @Override\n-  public GetResult merge(List<PartitionGetResult> partResults) {\n-    double sum = 0.0;\n-    for (PartitionGetResult partResult : partResults) {\n-      if (partResult != null) {\n-        sum += ((ScalarPartitionAggrResult) partResult).result;\n-      }\n+        return sum;\n     }\n \n-    return new ScalarAggrResult(sum);\n-  }\n+\n+    @Override\n+    public GetResult merge(List<PartitionGetResult> partResults) {\n+        double sum = 0.0;\n+        for (PartitionGetResult partResult : partResults) {\n+            if (partResult != null) {\n+                sum += ((ScalarPartitionAggrResult) partResult).result;\n+            }\n+        }\n+\n+        return new ScalarAggrResult(sum);\n+    }\n \n }\n",
+            "diff_size": 66
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "61",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/881/Dot.java\nindex a5c4e0d03b1..d39919eb5aa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/881/Dot.java\n@@ -77,8 +77,7 @@ public final class Dot extends BinaryAggrFunc {\n     return sum;\n   }\n \n-\n-  @Override\n+@Override\n   public GetResult merge(List<PartitionGetResult> partResults) {\n     double sum = 0.0;\n     for (PartitionGetResult partResult : partResults) {\n@@ -90,4 +89,4 @@ public final class Dot extends BinaryAggrFunc {\n     return new ScalarAggrResult(sum);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "61",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/881/Dot.java\nindex a5c4e0d03b1..a7ab4be64cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/881/Dot.java\n@@ -27,7 +27,6 @@ import com.tencent.angel.ps.impl.matrix.ServerSparseDoubleLongKeyRow;\n import it.unimi.dsi.fastutil.longs.Long2DoubleOpenHashMap;\n import it.unimi.dsi.fastutil.longs.LongOpenHashSet;\n import it.unimi.dsi.fastutil.longs.LongSet;\n-\n import java.nio.DoubleBuffer;\n import java.util.List;\n \n@@ -35,6 +34,7 @@ import java.util.List;\n  * `Dot` will return dot product result of `rowId1` and `rowId2`.\n  * That is math.dot(matrix[rowId1], matrix[rowId2]).\n  */\n+\n public final class Dot extends BinaryAggrFunc {\n \n   public Dot(int matrixId, int rowId1, int rowId2) {\n@@ -60,24 +60,18 @@ public final class Dot extends BinaryAggrFunc {\n   @Override\n   protected double doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n     long entireSize = row1.getEndCol() - row2.getStartCol();\n-\n     Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();\n     Long2DoubleOpenHashMap data2 = row2.getIndex2ValueMap();\n-\n     LongSet keys = new LongOpenHashSet(data1.keySet());\n     keys.addAll(data2.keySet());\n-\n     double sum = 0.0;\n-    for (long key: keys) {\n+    for (long key : keys) {\n       sum += data1.get(key) * data2.get(key);\n     }\n-\n     sum += (entireSize - keys.size()) * data1.defaultReturnValue() * data2.defaultReturnValue();\n-\n     return sum;\n   }\n \n-\n   @Override\n   public GetResult merge(List<PartitionGetResult> partResults) {\n     double sum = 0.0;\n@@ -86,8 +80,7 @@ public final class Dot extends BinaryAggrFunc {\n         sum += ((ScalarPartitionAggrResult) partResult).result;\n       }\n     }\n-\n     return new ScalarAggrResult(sum);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "61",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/881/Dot.java\nindex a5c4e0d03b1..59ebdd8f553 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/881/Dot.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/881/Dot.java\n@@ -57,9 +57,8 @@ public final class Dot extends BinaryAggrFunc {\n     return sum;\n   }\n \n-  @Override\n-  protected double doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n-    long entireSize = row1.getEndCol() - row2.getStartCol();\n+  @Override doProcessRow(ServerSparseDoubleLongKeyRow row1, ServerSparseDoubleLongKeyRow row2) {\n+    long entireSize = entireSize = row1.getEndCol() - row2.getStartCol();\n \n     Long2DoubleOpenHashMap data1 = row1.getIndex2ValueMap();\n     Long2DoubleOpenHashMap data2 = row2.getIndex2ValueMap();\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "22",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic class TicketAuthenticationToken extends AbstractAuthenticationToken {\n    private static final long serialVersionUID = 1106578947954376394L;\n\n    private static final GrantedAuthority[] AUTHORITIES = { \n                new SimpleGrantedAuthority(\"ROLE_TICKET\") };",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/22/TicketAuthenticationToken.java\nindex e5f1abb9106..c6426fbf15d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/22/TicketAuthenticationToken.java\n@@ -32,9 +32,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n  * token's principal is the {@link Ticket} itself.\n  */\n public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n-    private static final long serialVersionUID = 1106578947954376394L;\n-\n-    private static final GrantedAuthority[] AUTHORITIES = { \n+    private static final long serialVersionUID = 1106578947954376394L;private static final GrantedAuthority[] AUTHORITIES = { \n                 new SimpleGrantedAuthority(\"ROLE_TICKET\") };\n     \n     private boolean authenticated;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/22/TicketAuthenticationToken.java\nindex e5f1abb9106..0d6d2e20b4c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/22/TicketAuthenticationToken.java\n@@ -1,12 +1,12 @@\n /*\n  * Copyright 2005-2006 Open Source Applications Foundation\n- * \n+ *\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- * \n+ *\n  *     http://www.apache.org/licenses/LICENSE-2.0\n- * \n+ *\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n@@ -26,7 +26,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n /**\n  * Represents a ticket-based\n  * {@link org.springframework.security.Authentication}.\n- *\n+ * <p>\n  * Before being authenticated, the token contains the ticket id and\n  * the path of the ticketed resource. After authentication, the\n  * token's principal is the {@link Ticket} itself.\n@@ -34,9 +34,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n     private static final long serialVersionUID = 1106578947954376394L;\n \n-    private static final GrantedAuthority[] AUTHORITIES = { \n-                new SimpleGrantedAuthority(\"ROLE_TICKET\") };\n-    \n+    private static final GrantedAuthority[] AUTHORITIES = {\n+            new SimpleGrantedAuthority(\"ROLE_TICKET\")};\n+\n     private boolean authenticated;\n     private String path;\n     private Set<String> keys;\n@@ -48,7 +48,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      */\n     public TicketAuthenticationToken(String path,\n                                      Set<String> keys) {\n-        super( Arrays.asList(AUTHORITIES));\n+        super(Arrays.asList(AUTHORITIES));\n         if (path == null || path.equals(\"\")) {\n             throw new IllegalArgumentException(\"path may not be null or empty\");\n         }\n@@ -64,6 +64,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Sets authenticated.\n+     *\n      * @param isAuthenticated is authenticated boolean.\n      */\n     public void setAuthenticated(boolean isAuthenticated) {\n@@ -73,8 +74,8 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n     /**\n      * Verify if the user is authenticated.\n      * {@inheritDoc}\n+     *\n      * @return If the user is authenticated or not.\n-     * \n      */\n     public boolean isAuthenticated() {\n         return authenticated;\n@@ -82,6 +83,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Always returns an empty <code>String</code>.\n+     *\n      * @return The credentials.\n      */\n     public Object getCredentials() {\n@@ -90,6 +92,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Returns the ticket.\n+     *\n      * @return The ticket.\n      */\n     public Object getPrincipal() {\n@@ -100,6 +103,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Sets the ticket.\n+     *\n      * @param ticket The ticket.\n      */\n     public void setTicket(Ticket ticket) {\n@@ -108,6 +112,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Gets path.\n+     *\n      * @return The path.\n      */\n     public String getPath() {\n@@ -116,6 +121,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n \n     /**\n      * Gets keys.\n+     *\n      * @return the keys.\n      */\n     public Set<String> getKeys() {\n@@ -131,26 +137,26 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n         return result;\n     }\n \n-  \n \n     /**\n      * Equals.\n      * {@inheritDoc}\n+     *\n      * @param obj The obj.\n      * @return The result.\n      */\n     @Override\n     public boolean equals(Object obj) {\n-        if (! super.equals(obj)) {\n+        if (!super.equals(obj)) {\n             return false;\n         }\n-        if (! (obj instanceof TicketAuthenticationToken)) {\n+        if (!(obj instanceof TicketAuthenticationToken)) {\n             return false;\n         }\n         TicketAuthenticationToken test = (TicketAuthenticationToken) obj;\n         //After authentication, the token's principal is the {@link Ticket} itself.\n         return ticket.equals(test.getPrincipal());\n     }\n-    \n-    \n+\n+\n }\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/22/TicketAuthenticationToken.java\nindex e5f1abb9106..3084bf58df5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/22/TicketAuthenticationToken.java\n@@ -34,10 +34,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n     private static final long serialVersionUID = 1106578947954376394L;\n \n-    private static final GrantedAuthority[] AUTHORITIES = { \n-                new SimpleGrantedAuthority(\"ROLE_TICKET\") };\n-    \n-    private boolean authenticated;\n+    private static final GrantedAuthority[] AUTHORITIES = { new SimpleGrantedAuthority(\"ROLE_TICKET\")};\n+\n+private boolean authenticated;\n     private String path;\n     private Set<String> keys;\n     private Ticket ticket;\n@@ -48,7 +47,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      */\n     public TicketAuthenticationToken(String path,\n                                      Set<String> keys) {\n-        super( Arrays.asList(AUTHORITIES));\n+        super(Arrays.asList(AUTHORITIES));\n         if (path == null || path.equals(\"\")) {\n             throw new IllegalArgumentException(\"path may not be null or empty\");\n         }\n@@ -139,7 +138,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * @param obj The obj.\n      * @return The result.\n      */\n-    @Override\n+@Override\n     public boolean equals(Object obj) {\n         if (! super.equals(obj)) {\n             return false;\n@@ -153,4 +152,4 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n     }\n     \n     \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/22/TicketAuthenticationToken.java\nindex e5f1abb9106..5470d68f0b3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/22/TicketAuthenticationToken.java\n@@ -17,7 +17,6 @@ package org.unitedinternet.cosmo.acegisecurity.providers.ticket;\n \n import java.util.Arrays;\n import java.util.Set;\n-\n import org.unitedinternet.cosmo.model.Ticket;\n import org.springframework.security.authentication.AbstractAuthenticationToken;\n import org.springframework.security.core.GrantedAuthority;\n@@ -31,12 +30,12 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n  * the path of the ticketed resource. After authentication, the\n  * token's principal is the {@link Ticket} itself.\n  */\n+\n+\n public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n-    private static final long serialVersionUID = 1106578947954376394L;\n \n-    private static final GrantedAuthority[] AUTHORITIES = { \n-                new SimpleGrantedAuthority(\"ROLE_TICKET\") };\n-    \n+    private static final long serialVersionUID = 1106578947954376394L;\n+    private static final GrantedAuthority[] AUTHORITIES = { new SimpleGrantedAuthority(\"ROLE_TICKET\")};\n     private boolean authenticated;\n     private String path;\n     private Set<String> keys;\n@@ -46,9 +45,9 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * @param path the absolute URI path to the ticketed resource\n      * @param keys all ticket keys provided for the resource\n      */\n-    public TicketAuthenticationToken(String path,\n-                                     Set<String> keys) {\n-        super( Arrays.asList(AUTHORITIES));\n+\n+    public TicketAuthenticationToken(String path, Set<String> keys) {\n+        super(Arrays.asList(AUTHORITIES));\n         if (path == null || path.equals(\"\")) {\n             throw new IllegalArgumentException(\"path may not be null or empty\");\n         }\n@@ -66,6 +65,8 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Sets authenticated.\n      * @param isAuthenticated is authenticated boolean.\n      */\n+\n+\n     public void setAuthenticated(boolean isAuthenticated) {\n         authenticated = isAuthenticated;\n     }\n@@ -76,6 +77,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * @return If the user is authenticated or not.\n      * \n      */\n+\n     public boolean isAuthenticated() {\n         return authenticated;\n     }\n@@ -84,6 +86,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Always returns an empty <code>String</code>.\n      * @return The credentials.\n      */\n+\n     public Object getCredentials() {\n         return \"\";\n     }\n@@ -92,6 +95,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Returns the ticket.\n      * @return The ticket.\n      */\n+\n     public Object getPrincipal() {\n         return ticket;\n     }\n@@ -102,6 +106,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Sets the ticket.\n      * @param ticket The ticket.\n      */\n+\n     public void setTicket(Ticket ticket) {\n         this.ticket = ticket;\n     }\n@@ -110,6 +115,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Gets path.\n      * @return The path.\n      */\n+\n     public String getPath() {\n         return path;\n     }\n@@ -118,6 +124,7 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * Gets keys.\n      * @return the keys.\n      */\n+\n     public Set<String> getKeys() {\n         return keys;\n     }\n@@ -139,18 +146,18 @@ public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n      * @param obj The obj.\n      * @return The result.\n      */\n+\n     @Override\n     public boolean equals(Object obj) {\n-        if (! super.equals(obj)) {\n+        if (!super.equals(obj)) {\n             return false;\n         }\n-        if (! (obj instanceof TicketAuthenticationToken)) {\n+        if (!(obj instanceof TicketAuthenticationToken)) {\n             return false;\n         }\n+\n         TicketAuthenticationToken test = (TicketAuthenticationToken) obj;\n         //After authentication, the token's principal is the {@link Ticket} itself.\n         return ticket.equals(test.getPrincipal());\n     }\n-    \n-    \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 25
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/22/TicketAuthenticationToken.java\nindex e5f1abb9106..c6426fbf15d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/22/TicketAuthenticationToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/22/TicketAuthenticationToken.java\n@@ -32,9 +32,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;\n  * token's principal is the {@link Ticket} itself.\n  */\n public class TicketAuthenticationToken extends AbstractAuthenticationToken {\n-    private static final long serialVersionUID = 1106578947954376394L;\n-\n-    private static final GrantedAuthority[] AUTHORITIES = { \n+    private static final long serialVersionUID = 1106578947954376394L;private static final GrantedAuthority[] AUTHORITIES = { \n                 new SimpleGrantedAuthority(\"ROLE_TICKET\") };\n     \n     private boolean authenticated;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

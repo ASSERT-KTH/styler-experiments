@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "44",
+    "information": {
+        "violations": [
+            {
+                "line": "88",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string public_key_id = 2;</code>\n   */\n  com.google.protobuf.ByteString getPublicKeyIdBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/44/SignatureOrBuilder.java\nindex 8c256a96b5b..e267601babb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/44/SignatureOrBuilder.java\n@@ -85,5 +85,7 @@ public interface SignatureOrBuilder\n    *\n    * <code>string public_key_id = 2;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getPublicKeyIdBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/44/SignatureOrBuilder.java\nindex 8c256a96b5b..2c7b374226f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/44/SignatureOrBuilder.java\n@@ -25,8 +25,6 @@ public interface SignatureOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The content of the signature, an opaque bytestring.\n    * The payload that this signature verifies MUST be unambiguously provided\n@@ -41,8 +39,6 @@ public interface SignatureOrBuilder\n   com.google.protobuf.ByteString getSignature();\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The identifier for the public key that verifies this signature.\n    *   * The `public_key_id` is required.\n@@ -63,9 +59,8 @@ public interface SignatureOrBuilder\n    * <code>string public_key_id = 2;</code>\n    */\n   java.lang.String getPublicKeyId();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * The identifier for the public key that verifies this signature.\n    *   * The `public_key_id` is required.\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/44/SignatureOrBuilder.java\nindex 8c256a96b5b..9043ef263d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/44/SignatureOrBuilder.java\n@@ -19,8 +19,7 @@\n \n package io.grafeas.v1;\n \n-public interface SignatureOrBuilder\n-    extends\n+public interface SignatureOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:grafeas.v1.Signature)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -63,7 +62,8 @@ public interface SignatureOrBuilder\n    * <code>string public_key_id = 2;</code>\n    */\n   java.lang.String getPublicKeyId();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -86,4 +86,4 @@ public interface SignatureOrBuilder\n    * <code>string public_key_id = 2;</code>\n    */\n   com.google.protobuf.ByteString getPublicKeyIdBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "88",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "90",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/44/SignatureOrBuilder.java\nindex 8c256a96b5b..affe69e41d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/44/SignatureOrBuilder.java\n@@ -85,5 +85,6 @@ public interface SignatureOrBuilder\n    *\n    * <code>string public_key_id = 2;</code>\n    */\n-  com.google.protobuf.ByteString getPublicKeyIdBytes();\n-}\n+  com.google.protobuf.ByteString getPublicKeyIdBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/44/SignatureOrBuilder.java\nindex 8c256a96b5b..e267601babb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/44/SignatureOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/44/SignatureOrBuilder.java\n@@ -85,5 +85,7 @@ public interface SignatureOrBuilder\n    *\n    * <code>string public_key_id = 2;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getPublicKeyIdBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

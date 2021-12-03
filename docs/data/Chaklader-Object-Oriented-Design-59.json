@@ -1,0 +1,62 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "59",
+    "information": {
+        "violations": [
+            {
+                "line": "4",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic interface ChristmasTree {\n    String decorate();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/59/ChristmasTree.java\nindex be07f4faf29..961d72fa636 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/59/ChristmasTree.java\n@@ -1,5 +1,5 @@\n package com.baeldung.decorator;\n \n public interface ChristmasTree {\n-    String decorate();\n+  String decorate();\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/59/ChristmasTree.java\nindex be07f4faf29..961d72fa636 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/59/ChristmasTree.java\n@@ -1,5 +1,5 @@\n package com.baeldung.decorator;\n \n public interface ChristmasTree {\n-    String decorate();\n+  String decorate();\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/59/ChristmasTree.java\nindex be07f4faf29..d07696f3430 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/59/ChristmasTree.java\n@@ -1,5 +1,7 @@\n package com.baeldung.decorator;\n \n+\n public interface ChristmasTree {\n-    String decorate();\n+\n+  String decorate();\n }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/59/ChristmasTree.java\nindex be07f4faf29..961d72fa636 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/59/ChristmasTree.java\n@@ -1,5 +1,5 @@\n package com.baeldung.decorator;\n \n public interface ChristmasTree {\n-    String decorate();\n+  String decorate();\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/59/ChristmasTree.java\nindex be07f4faf29..961d72fa636 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/59/ChristmasTree.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/59/ChristmasTree.java\n@@ -1,5 +1,5 @@\n package com.baeldung.decorator;\n \n public interface ChristmasTree {\n-    String decorate();\n+  String decorate();\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

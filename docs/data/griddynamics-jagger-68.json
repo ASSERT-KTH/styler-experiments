@@ -1,0 +1,76 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "68",
+    "information": {
+        "violations": [
+            {
+                "line": "54",
+                "severity": "warning",
+                "message": "'method def modifier' has incorrect indentation level 5, expected level should be 4.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/68/LogWriter.java\nindex 604796f2b59..2e9d76711a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/68/LogWriter.java\n@@ -51,5 +51,5 @@ public interface LogWriter {\n         void writeObject(Object object) throws IOException;\n     }\n \n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+    abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/68/LogWriter.java\nindex 604796f2b59..2e9d76711a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/68/LogWriter.java\n@@ -51,5 +51,5 @@ public interface LogWriter {\n         void writeObject(Object object) throws IOException;\n     }\n \n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+    abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/68/LogWriter.java\nindex 604796f2b59..38263acd7ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/68/LogWriter.java\n@@ -49,7 +49,5 @@ public interface LogWriter {\n \n     interface LogWriterOutput extends Closeable {\n         void writeObject(Object object) throws IOException;\n-    }\n-\n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n-}\n+    } abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/68/LogWriter.java\nindex 604796f2b59..2d93f8caa47 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/68/LogWriter.java\n@@ -22,7 +22,6 @@ package com.griddynamics.jagger.storage.fs.logging;\n \n import com.griddynamics.jagger.master.SessionIdProvider;\n import org.springframework.beans.factory.annotation.Required;\n-\n import java.io.Closeable;\n import java.io.IOException;\n import java.io.OutputStream;\n@@ -33,11 +32,14 @@ import java.io.Serializable;\n  *\n  * @author Aleksandr Balan\n  */\n+\n+\n public interface LogWriter {\n \n     /**\n      * Writes log entry to specified file. Changes should not be written until flush call.\n      */\n+\n     void log(String sessionId, String logOwner, String kernelId, Serializable logEntry);\n \n     void log(String path, Serializable logEntry);\n@@ -45,11 +47,13 @@ public interface LogWriter {\n     /**\n      * Flushes changes to specified file.\n      */\n+\n     void flush();\n \n     interface LogWriterOutput extends Closeable {\n+\n         void writeObject(Object object) throws IOException;\n     }\n \n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n-}\n+    abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/68/LogWriter.java\nindex 604796f2b59..2e9d76711a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/68/LogWriter.java\n@@ -51,5 +51,5 @@ public interface LogWriter {\n         void writeObject(Object object) throws IOException;\n     }\n \n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+    abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/68/LogWriter.java\nindex 604796f2b59..2e9d76711a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/68/LogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/68/LogWriter.java\n@@ -51,5 +51,5 @@ public interface LogWriter {\n         void writeObject(Object object) throws IOException;\n     }\n \n-     abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n+    abstract LogWriterOutput getOutput(OutputStream in) throws IOException;\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

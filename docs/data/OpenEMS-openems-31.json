@@ -1,0 +1,70 @@
+{
+    "project_name": "OpenEMS-openems",
+    "violation_id": "31",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "23",
+                "severity": "warning",
+                "message": "'(' is followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+            }
+        ]
+    },
+    "source_code": "import org.osgi.service.metatype.annotations.ObjectClassDefinition;\n\n@ObjectClassDefinition( //\n\t\tname = \"Controller Phase-Rectification\", //\n\t\tdescription = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n@interface Config {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/OpenEMS-openems/styler/05_predictions/final/files-repaired/31/Config.java\nindex c88c10c747b..42b55745571 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/OpenEMS-openems/styler/05_predictions/final/files-repaired/31/Config.java\n@@ -3,7 +3,7 @@ package io.openems.edge.controller.asymmetric.phaserectification;\n import org.osgi.service.metatype.annotations.AttributeDefinition;\n import org.osgi.service.metatype.annotations.ObjectClassDefinition;\n \n-@ObjectClassDefinition( //\n+@ObjectClassDefinition(//\n \t\tname = \"Controller Phase-Rectification\", //\n \t\tdescription = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n @interface Config {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "23",
+                    "severity": "warning",
+                    "message": "'(' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/checkstyle_idea/31/Config.java\nindex c88c10c747b..c6743a9c093 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/checkstyle_idea/31/Config.java\n@@ -4,24 +4,24 @@ import org.osgi.service.metatype.annotations.AttributeDefinition;\n import org.osgi.service.metatype.annotations.ObjectClassDefinition;\n \n @ObjectClassDefinition( //\n-\t\tname = \"Controller Phase-Rectification\", //\n-\t\tdescription = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n+    name = \"Controller Phase-Rectification\", //\n+    description = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n @interface Config {\n \n-\t@AttributeDefinition(name = \"Component-ID\", description = \"Unique ID of this Component\")\n-\tString id() default \"ctrlPhaseRectification0\";\n+  @AttributeDefinition(name = \"Component-ID\", description = \"Unique ID of this Component\")\n+  String id() default \"ctrlPhaseRectification0\";\n \n-\t@AttributeDefinition(name = \"Alias\", description = \"Human-readable name of this Component; defaults to Component-ID\")\n-\tString alias() default \"\";\n+  @AttributeDefinition(name = \"Alias\", description = \"Human-readable name of this Component; defaults to Component-ID\")\n+  String alias() default \"\";\n \n-\t@AttributeDefinition(name = \"Is enabled?\", description = \"Is this Component enabled?\")\n-\tboolean enabled() default true;\n+  @AttributeDefinition(name = \"Is enabled?\", description = \"Is this Component enabled?\")\n+  boolean enabled() default true;\n \n-\t@AttributeDefinition(name = \"Ess-ID\", description = \"ID of Ess device.\")\n-\tString ess_id();\n+  @AttributeDefinition(name = \"Ess-ID\", description = \"ID of Ess device.\")\n+  String ess_id();\n \n-\t@AttributeDefinition(name = \"Grid-Meter-ID\", description = \"ID of the Grid-Meter.\")\n-\tString meter_id();\n+  @AttributeDefinition(name = \"Grid-Meter-ID\", description = \"ID of the Grid-Meter.\")\n+  String meter_id();\n \n-\tString webconsole_configurationFactory_nameHint() default \"Controller Phase-Rectification [{id}]\";\n+  String webconsole_configurationFactory_nameHint() default \"Controller Phase-Rectification [{id}]\";\n }\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/styler/05_predictions/random/files-repaired/31/Config.java\nindex c88c10c747b..42b55745571 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/styler/05_predictions/random/files-repaired/31/Config.java\n@@ -3,7 +3,7 @@ package io.openems.edge.controller.asymmetric.phaserectification;\n import org.osgi.service.metatype.annotations.AttributeDefinition;\n import org.osgi.service.metatype.annotations.ObjectClassDefinition;\n \n-@ObjectClassDefinition( //\n+@ObjectClassDefinition(//\n \t\tname = \"Controller Phase-Rectification\", //\n \t\tdescription = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n @interface Config {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/styler/05_predictions/three_grams/files-repaired/31/Config.java\nindex c88c10c747b..42b55745571 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/violations/31/Config.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/OpenEMS-openems/styler/05_predictions/three_grams/files-repaired/31/Config.java\n@@ -3,7 +3,7 @@ package io.openems.edge.controller.asymmetric.phaserectification;\n import org.osgi.service.metatype.annotations.AttributeDefinition;\n import org.osgi.service.metatype.annotations.ObjectClassDefinition;\n \n-@ObjectClassDefinition( //\n+@ObjectClassDefinition(//\n \t\tname = \"Controller Phase-Rectification\", //\n \t\tdescription = \"Sets the ess to the required activepower to get all three phases on the meter to the same level.\")\n @interface Config {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

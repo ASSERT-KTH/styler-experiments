@@ -1,0 +1,113 @@
+{
+    "project_name": "GourdErwa-MyNote",
+    "violation_id": "3",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "public interface WizardDao extends Dao<Wizard> {\n\n    Wizard findByName(String name);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "48",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/3/WizardDao.java\nindex 70740b8d3dd..f0f109dcceb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/3/WizardDao.java\n@@ -29,8 +29,6 @@ import com.iluwatar.servicelayer.common.Dao;\n  * WizardDao interface.\n  *\n  */\n-public interface WizardDao extends Dao<Wizard> {\n-\n-    Wizard findByName(String name);\n+public interface WizardDao extends Dao<Wizard> {Wizard findByName(String name);\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/3/WizardDao.java\nindex 70740b8d3dd..05dbe83431c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/3/WizardDao.java\n@@ -20,17 +20,16 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package com.iluwatar.servicelayer.wizard;\n \n import com.iluwatar.servicelayer.common.Dao;\n \n /**\n- *\n  * WizardDao interface.\n- *\n  */\n public interface WizardDao extends Dao<Wizard> {\n \n-    Wizard findByName(String name);\n+  Wizard findByName(String name);\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/3/WizardDao.java\nindex 70740b8d3dd..3ff90760b97 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/3/WizardDao.java\n@@ -33,4 +33,4 @@ public interface WizardDao extends Dao<Wizard> {\n \n     Wizard findByName(String name);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "39",
+                    "severity": "error",
+                    "message": "GenericWhitespace '<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/3/WizardDao.java\nindex 70740b8d3dd..dee3d9842ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/3/WizardDao.java\n@@ -29,8 +29,9 @@ import com.iluwatar.servicelayer.common.Dao;\n  * WizardDao interface.\n  *\n  */\n-public interface WizardDao extends Dao<Wizard> {\n \n-    Wizard findByName(String name);\n \n-}\n+public interface WizardDao extends Dao< Wizard> { Wizard findByName( String name)\n+;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "column": "48",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/3/WizardDao.java\nindex 70740b8d3dd..f0f109dcceb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/3/WizardDao.java\n@@ -29,8 +29,6 @@ import com.iluwatar.servicelayer.common.Dao;\n  * WizardDao interface.\n  *\n  */\n-public interface WizardDao extends Dao<Wizard> {\n-\n-    Wizard findByName(String name);\n+public interface WizardDao extends Dao<Wizard> {Wizard findByName(String name);\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'findByName' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/3/WizardDao.java\nindex 70740b8d3dd..c3a8dd0e23d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/3/WizardDao.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/3/WizardDao.java\n@@ -31,6 +31,7 @@ import com.iluwatar.servicelayer.common.Dao;\n  */\n public interface WizardDao extends Dao<Wizard> {\n \n-    Wizard findByName(String name);\n+Wizard\n+findByName(String name);\n \n-}\n+ }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "gomint-gomint",
+    "violation_id": "34",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "error",
+                "message": "Line is longer than 180 characters (found 231).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class Stone extends Block implements BlockStone {\n\n    private static final EnumBlockState<BlockStone.Type, String> VARIANT = new EnumBlockState<>(v -> new String[]{\"stone_type\"}, BlockStone.Type.values(), e -> e.name().toLowerCase(), v -> BlockStone.Type.valueOf(v.toUpperCase()));\n\n    @Override\n    public long getBreakTime() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 231).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/34/Stone.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/34/Stone.java\nindex cb46bd9d2ec..f43f64cc53d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/34/Stone.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/34/Stone.java\n@@ -16,11 +16,12 @@ import java.util.List;\n  * @author geNAZt\n  * @version 1.0\n  */\n-@RegisterInfo( sId = \"minecraft:stone\", def = true )\n-@RegisterInfo( sId = \"minecraft:smooth_stone\" )\n+@RegisterInfo(sId = \"minecraft:stone\", def = true)\n+@RegisterInfo(sId = \"minecraft:smooth_stone\")\n public class Stone extends Block implements BlockStone {\n \n-    private static final EnumBlockState<BlockStone.Type, String> VARIANT = new EnumBlockState<>(v -> new String[]{\"stone_type\"}, BlockStone.Type.values(), e -> e.name().toLowerCase(), v -> BlockStone.Type.valueOf(v.toUpperCase()));\n+    private static final EnumBlockState<BlockStone.Type, String> VARIANT =\n+        new EnumBlockState<>(v -> new String[] {\"stone_type\"}, BlockStone.Type.values(), e -> e.name().toLowerCase(), v -> BlockStone.Type.valueOf(v.toUpperCase()));\n \n     @Override\n     public long getBreakTime() {\n@@ -38,7 +39,7 @@ public class Stone extends Block implements BlockStone {\n     }\n \n     @Override\n-    public List<ItemStack> getDrops( ItemStack itemInHand ) {\n+    public List<ItemStack> getDrops(ItemStack itemInHand) {\n         return new ArrayList<>() {{\n             add(ItemCobblestone.create(1));\n         }};\n@@ -57,7 +58,7 @@ public class Stone extends Block implements BlockStone {\n         }\n \n         this.setBlockId(\"minecraft:stone\");\n-        VARIANT.setState(this,type);\n+        VARIANT.setState(this, type);\n     }\n \n     @Override\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 231).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/34/Stone.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/34/Stone.java\nindex cb46bd9d2ec..95a9e57f21a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/34/Stone.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/34/Stone.java\n@@ -57,7 +57,7 @@ public class Stone extends Block implements BlockStone {\n         }\n \n         this.setBlockId(\"minecraft:stone\");\n-        VARIANT.setState(this,type);\n+        VARIANT.setState(this, type);\n     }\n \n     @Override\n@@ -69,4 +69,4 @@ public class Stone extends Block implements BlockStone {\n         return VARIANT.getState(this);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 231).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

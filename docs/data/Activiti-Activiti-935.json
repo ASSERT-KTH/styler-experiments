@@ -1,0 +1,70 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "935",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.runtime.api.event.impl;\n\nimport org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\nimport org.activiti.engine.delegate.event.ActivitiEntityEvent;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..5d6b22cf857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..5d6b22cf857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..e7bc0f8fd41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n@@ -49,4 +50,4 @@ public class ToAPITaskCandidateUserAddedEventConverter implements EventConverter\n                 identityLinkEntity.getUserId() != null;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..6311c5c25d7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -19,34 +19,31 @@ import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n import org.activiti.engine.delegate.event.ActivitiEntityEvent;\n import org.activiti.engine.task.IdentityLink;\n import org.activiti.runtime.api.model.impl.APITaskCandidateUserConverter;\n-\n import java.util.Optional;\n \n import static org.activiti.engine.task.IdentityLinkType.CANDIDATE;\n \n public class ToAPITaskCandidateUserAddedEventConverter implements EventConverter<TaskCandidateUserAddedEvent, ActivitiEntityEvent> {\n \n-    private APITaskCandidateUserConverter converter;\n-\n-    public ToAPITaskCandidateUserAddedEventConverter(APITaskCandidateUserConverter converter) {\n-        this.converter = converter;\n-    }\n+  private APITaskCandidateUserConverter converter;\n \n-    @Override\n-    public Optional<TaskCandidateUserAddedEvent> from(ActivitiEntityEvent internalEvent) {\n-        TaskCandidateUserAddedEventImpl event = null;\n-        if (internalEvent.getEntity() instanceof IdentityLink) {\n-            IdentityLink entity = (IdentityLink) internalEvent.getEntity();\n-            if (isCandidateUserEntity(entity)) {\n-                event = new TaskCandidateUserAddedEventImpl(converter.from(entity));\n-            }\n-        }\n-        return Optional.ofNullable(event);\n-    }\n+  public ToAPITaskCandidateUserAddedEventConverter(APITaskCandidateUserConverter converter) {\n+    this.converter = converter;\n+  }\n \n-    private boolean isCandidateUserEntity(IdentityLink identityLinkEntity) {\n-        return CANDIDATE.equalsIgnoreCase(identityLinkEntity.getType()) &&\n-                identityLinkEntity.getUserId() != null;\n+  @Override\n+  public Optional<TaskCandidateUserAddedEvent> from(ActivitiEntityEvent internalEvent) {\n+    TaskCandidateUserAddedEventImpl event = null;\n+    if (internalEvent.getEntity() instanceof IdentityLink) {\n+      IdentityLink entity = (IdentityLink) internalEvent.getEntity();\n+      if (isCandidateUserEntity(entity)) {\n+        event = new TaskCandidateUserAddedEventImpl(converter.from(entity));\n+      }\n     }\n+    return Optional.ofNullable(event);\n+  }\n \n-}\n+  private boolean isCandidateUserEntity(IdentityLink identityLinkEntity) {\n+    return CANDIDATE.equalsIgnoreCase(identityLinkEntity.getType()) && identityLinkEntity.getUserId() != null;\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 31
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..5d6b22cf857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\nindex f926cb1f964..5d6b22cf857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/935/ToAPITaskCandidateUserAddedEventConverter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/935/ToAPITaskCandidateUserAddedEventConverter.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.task.runtime.events.TaskCandidateUserAddedEvent;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

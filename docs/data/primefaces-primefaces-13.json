@@ -1,0 +1,71 @@
+{
+    "project_name": "primefaces-primefaces",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "severity": "error",
+                "message": "Line matches the illegal pattern 'Trailing whitespace'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "@RequestScoped\npublic class FieldsetView {\n    \n    public void handleToggle(ToggleEvent event) {\n        FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n        FacesContext.getCurrentInstance().addMessage(null, msg);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/13/FieldsetView.java\nindex dbddfd680a3..b60f0436c54 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/13/FieldsetView.java\n@@ -33,7 +33,6 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class FieldsetView {\n-    \n     public void handleToggle(ToggleEvent event) {\n         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/13/FieldsetView.java\nindex dbddfd680a3..8015d9cfd7f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/13/FieldsetView.java\n@@ -21,6 +21,7 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package org.primefaces.showcase.view.panel;\n \n import org.primefaces.event.ToggleEvent;\n@@ -33,7 +34,7 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class FieldsetView {\n-    \n+\n     public void handleToggle(ToggleEvent event) {\n         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "5",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/13/FieldsetView.java\nindex dbddfd680a3..0dc3a52763a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/13/FieldsetView.java\n@@ -33,9 +33,9 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class FieldsetView {\n-    \n+\n     public void handleToggle(ToggleEvent event) {\n-        FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n+    FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/13/FieldsetView.java\nindex dbddfd680a3..4e1ab085795 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/13/FieldsetView.java\n@@ -24,7 +24,6 @@\n package org.primefaces.showcase.view.panel;\n \n import org.primefaces.event.ToggleEvent;\n-\n import javax.enterprise.context.RequestScoped;\n import javax.faces.application.FacesMessage;\n import javax.faces.context.FacesContext;\n@@ -33,9 +32,9 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class FieldsetView {\n-    \n+\n     public void handleToggle(ToggleEvent event) {\n         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/13/FieldsetView.java\nindex dbddfd680a3..b60f0436c54 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/13/FieldsetView.java\n@@ -33,7 +33,6 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class FieldsetView {\n-    \n     public void handleToggle(ToggleEvent event) {\n         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/13/FieldsetView.java\nindex dbddfd680a3..3d203cf6dbf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/13/FieldsetView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/13/FieldsetView.java\n@@ -32,9 +32,7 @@ import javax.inject.Named;\n \n @Named\n @RequestScoped\n-public class FieldsetView {\n-    \n-    public void handleToggle(ToggleEvent event) {\n+public class FieldsetView { public void handleToggle(ToggleEvent event) {\n         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, \"Toggled\", \"Visibility:\" + event.getVisibility());\n         FacesContext.getCurrentInstance().addMessage(null, msg);\n     }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

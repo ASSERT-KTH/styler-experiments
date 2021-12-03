@@ -1,0 +1,69 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "472",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>.grafeas.v1beta1.provenance.Hash.HashType type = 1;</code>\n   */\n  io.grafeas.v1beta1.provenance.Hash.HashType getType();\n\n  /**\n   * <pre>",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/472/HashOrBuilder.java\nindex 135c4c62e9a..5768cdde680 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/472/HashOrBuilder.java\n@@ -22,6 +22,8 @@ public interface HashOrBuilder extends\n    *\n    * <code>.grafeas.v1beta1.provenance.Hash.HashType type = 1;</code>\n    */\n+\n+\n   io.grafeas.v1beta1.provenance.Hash.HashType getType();\n \n   /**\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/472/HashOrBuilder.java\nindex 135c4c62e9a..ec3e9818fbc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/472/HashOrBuilder.java\n@@ -15,6 +15,7 @@ public interface HashOrBuilder extends\n    * <code>.grafeas.v1beta1.provenance.Hash.HashType type = 1;</code>\n    */\n   int getTypeValue();\n+\n   /**\n    * <pre>\n    * The type of hash that was performed.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/472/HashOrBuilder.java\nindex 135c4c62e9a..ab3707a72b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/472/HashOrBuilder.java\n@@ -15,7 +15,8 @@ public interface HashOrBuilder extends\n    * <code>.grafeas.v1beta1.provenance.Hash.HashType type = 1;</code>\n    */\n   int getTypeValue();\n-  /**\n+\n+/**\n    * <pre>\n    * The type of hash that was performed.\n    * </pre>\n@@ -32,4 +33,4 @@ public interface HashOrBuilder extends\n    * <code>bytes value = 2;</code>\n    */\n   com.google.protobuf.ByteString getValue();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/472/HashOrBuilder.java\nindex 135c4c62e9a..5768cdde680 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/472/HashOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/472/HashOrBuilder.java\n@@ -22,6 +22,8 @@ public interface HashOrBuilder extends\n    *\n    * <code>.grafeas.v1beta1.provenance.Hash.HashType type = 1;</code>\n    */\n+\n+\n   io.grafeas.v1beta1.provenance.Hash.HashType getType();\n \n   /**\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

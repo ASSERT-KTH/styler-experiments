@@ -1,0 +1,71 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "63",
+    "information": {
+        "violations": [
+            {
+                "line": "61",
+                "column": "9",
+                "severity": "warning",
+                "message": "'if' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    int serversCount = servers.size();\n    for (ServerListFilterExt filterExt : filters) {\n      if(!filterExt.enabled()) {\n        continue;\n      }\n      servers = filterExt.getFilteredListOfServers(servers, invocation);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/63/LoadBalancer.java\nindex aced1f57efb..7ff670a83cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/63/LoadBalancer.java\n@@ -58,7 +58,7 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/63/LoadBalancer.java\nindex aced1f57efb..309538e1b2d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/63/LoadBalancer.java\n@@ -29,7 +29,7 @@ import com.google.common.annotations.VisibleForTesting;\n import com.netflix.loadbalancer.LoadBalancerStats;\n \n /**\n- *  A load balancer with RuleExt and ServerListFilterExt\n+ * A load balancer with RuleExt and ServerListFilterExt\n  */\n public class LoadBalancer {\n   private static final Logger LOGGER = LoggerFactory.getLogger(LoadBalancer.class);\n@@ -58,7 +58,7 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/63/LoadBalancer.java\nindex aced1f57efb..cb7a4331bfd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/63/LoadBalancer.java\n@@ -58,7 +58,7 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n@@ -92,4 +92,4 @@ public class LoadBalancer {\n   void setFilters(List<ServerListFilterExt> filters) {\n     this.filters = filters;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "78",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 185).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/63/LoadBalancer.java\nindex aced1f57efb..1c8a0133e78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/63/LoadBalancer.java\n@@ -19,18 +19,17 @@ package org.apache.servicecomb.loadbalance;\n \n import java.util.List;\n import java.util.concurrent.atomic.AtomicInteger;\n-\n import org.apache.servicecomb.core.Invocation;\n import org.apache.servicecomb.foundation.common.utils.SPIServiceUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.google.common.annotations.VisibleForTesting;\n import com.netflix.loadbalancer.LoadBalancerStats;\n \n /**\n  *  A load balancer with RuleExt and ServerListFilterExt\n  */\n+\n public class LoadBalancer {\n   private static final Logger LOGGER = LoggerFactory.getLogger(LoadBalancer.class);\n \n@@ -58,24 +57,25 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n+\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n       if (servers.isEmpty() && serversCount > 0) {\n         LOGGER.warn(\"There are not servers exist after filtered by {}.\", filterExt.getClass());\n         break;\n       }\n     }\n+\n     ServiceCombServer server = rule.choose(servers, invocation);\n     if (null == server) {\n       return null;\n     }\n+\n     ServiceCombServerStats serverStats = ServiceCombLoadBalancerStats.INSTANCE.getServiceCombServerStats(server);\n     if (serverStats.isIsolated()) {\n-      LOGGER.info(\"The Service {}'s instance {} has been isolated for a while, give a single test opportunity.\",\n-          invocation.getMicroserviceName(),\n-          server.getInstance().getInstanceId());\n+      LOGGER.info(\"The Service {}'s instance {} has been isolated for a while, give a single test opportunity.\", invocation.getMicroserviceName(), server.getInstance().getInstanceId());\n     }\n     return server;\n   }\n@@ -92,4 +92,4 @@ public class LoadBalancer {\n   void setFilters(List<ServerListFilterExt> filters) {\n     this.filters = filters;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/63/LoadBalancer.java\nindex aced1f57efb..7ff670a83cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/63/LoadBalancer.java\n@@ -58,7 +58,7 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/63/LoadBalancer.java\nindex aced1f57efb..7ff670a83cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/63/LoadBalancer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/63/LoadBalancer.java\n@@ -58,7 +58,7 @@ public class LoadBalancer {\n     List<ServiceCombServer> servers = invocation.getLocalContext(LoadbalanceHandler.CONTEXT_KEY_SERVER_LIST);\n     int serversCount = servers.size();\n     for (ServerListFilterExt filterExt : filters) {\n-      if(!filterExt.enabled()) {\n+      if (!filterExt.enabled()) {\n         continue;\n       }\n       servers = filterExt.getFilteredListOfServers(servers, invocation);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "119",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "error",
+                "message": "Line is longer than 80 characters (found 91).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * @param <V> The result type returned by this Future's {@code get} method\n */\npublic interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n\n    /**\n     * Returns true if this is a periodic task. A periodic task may",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/119/RunnableScheduledFuture.java\nindex 71252332952..5cbda4445f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/119/RunnableScheduledFuture.java\n@@ -16,7 +16,8 @@ package java.util.concurrent;\n  * @author Doug Lea\n  * @param <V> The result type returned by this Future's {@code get} method\n  */\n-public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n+public interface RunnableScheduledFuture\n+    <V> extends RunnableFuture<V>, ScheduledFuture<V> {\n \n     /**\n      * Returns true if this is a periodic task. A periodic task may\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/119/RunnableScheduledFuture.java\nindex 71252332952..d994873b483 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/119/RunnableScheduledFuture.java\n@@ -10,20 +10,22 @@ package java.util.concurrent;\n  * A {@link ScheduledFuture} that is {@link Runnable}. Successful\n  * execution of the {@code run} method causes completion of the\n  * {@code Future} and allows access to its results.\n+ *\n+ * @param <V> The result type returned by this Future's {@code get} method\n+ * @author Doug Lea\n  * @see FutureTask\n  * @see Executor\n  * @since 1.6\n- * @author Doug Lea\n- * @param <V> The result type returned by this Future's {@code get} method\n  */\n-public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n+public interface RunnableScheduledFuture<V>\n+  extends RunnableFuture<V>, ScheduledFuture<V> {\n \n-    /**\n-     * Returns true if this is a periodic task. A periodic task may\n-     * re-run according to some schedule. A non-periodic task can be\n-     * run only once.\n-     *\n-     * @return true if this task is periodic\n-     */\n-    boolean isPeriodic();\n+  /**\n+   * Returns true if this is a periodic task. A periodic task may\n+   * re-run according to some schedule. A non-periodic task can be\n+   * run only once.\n+   *\n+   * @return true if this task is periodic\n+   */\n+  boolean isPeriodic();\n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 91).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/119/RunnableScheduledFuture.java\nindex 71252332952..7c075ef6597 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/119/RunnableScheduledFuture.java\n@@ -26,4 +26,4 @@ public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, Scheduled\n      * @return true if this task is periodic\n      */\n     boolean isPeriodic();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 91).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/119/RunnableScheduledFuture.java\nindex 71252332952..bf8166bcfb7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/119/RunnableScheduledFuture.java\n@@ -16,6 +16,8 @@ package java.util.concurrent;\n  * @author Doug Lea\n  * @param <V> The result type returned by this Future's {@code get} method\n  */\n+\n+\n public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n \n     /**\n@@ -25,5 +27,7 @@ public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, Scheduled\n      *\n      * @return true if this task is periodic\n      */\n+\n+\n     boolean isPeriodic();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "44",
+                    "severity": "error",
+                    "message": "'>' is followed by an illegal character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "19",
+                    "column": "44",
+                    "severity": "error",
+                    "message": "'>' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "19",
+                    "column": "68",
+                    "severity": "error",
+                    "message": "'<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                },
+                {
+                    "line": "20",
+                    "column": "11",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/119/RunnableScheduledFuture.java\nindex 71252332952..67a7345970d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/119/RunnableScheduledFuture.java\n@@ -16,7 +16,8 @@ package java.util.concurrent;\n  * @author Doug Lea\n  * @param <V> The result type returned by this Future's {@code get} method\n  */\n-public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n+public interface RunnableScheduledFuture<V >extends RunnableFuture <V\n+        > , ScheduledFuture<V> {\n \n     /**\n      * Returns true if this is a periodic task. A periodic task may\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/119/RunnableScheduledFuture.java\nindex 71252332952..5cbda4445f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/119/RunnableScheduledFuture.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/119/RunnableScheduledFuture.java\n@@ -16,7 +16,8 @@ package java.util.concurrent;\n  * @author Doug Lea\n  * @param <V> The result type returned by this Future's {@code get} method\n  */\n-public interface RunnableScheduledFuture<V> extends RunnableFuture<V>, ScheduledFuture<V> {\n+public interface RunnableScheduledFuture\n+    <V> extends RunnableFuture<V>, ScheduledFuture<V> {\n \n     /**\n      * Returns true if this is a periodic task. A periodic task may\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

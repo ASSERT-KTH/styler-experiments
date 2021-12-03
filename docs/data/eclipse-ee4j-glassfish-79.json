@@ -1,0 +1,79 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "79",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "column": "5",
+                "severity": "warning",
+                "message": "'testFindMappings' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public void\n    testFindMappings() {\n        final Set<Servlet> servlets = getTestUtil().getAllAMX(Servlet.class);\n\n        for (final Servlet servlet : servlets) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/79/ServletTest.java\nindex 13b83d97beb..01b04f006a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/79/ServletTest.java\n@@ -31,7 +31,7 @@ public final class ServletTest\n     }\n \n     public void\n-    testFindMappings() {\n+                 testFindMappings() {\n         final Set<Servlet> servlets = getTestUtil().getAllAMX(Servlet.class);\n \n         for (final Servlet servlet : servlets) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'testFindMappings' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/79/ServletTest.java\nindex 13b83d97beb..cf41d8a8412 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/79/ServletTest.java\n@@ -22,11 +22,11 @@ import org.glassfish.admin.amxtest.AMXTestBase;\n import java.util.Set;\n \n /**\n- Test serialization on the AMX Stats/Statistics classes which travel\n- from server to client.\n+ * Test serialization on the AMX Stats/Statistics classes which travel\n+ * from server to client.\n  */\n public final class ServletTest\n-        extends AMXTestBase {\n+    extends AMXTestBase {\n     public ServletTest() {\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/79/ServletTest.java\nindex 13b83d97beb..94f02d21228 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/79/ServletTest.java\n@@ -27,11 +27,11 @@ import java.util.Set;\n  */\n public final class ServletTest\n         extends AMXTestBase {\n+\n     public ServletTest() {\n     }\n \n-    public void\n-    testFindMappings() {\n+    public void testFindMappings() {\n         final Set<Servlet> servlets = getTestUtil().getAllAMX(Servlet.class);\n \n         for (final Servlet servlet : servlets) {\n@@ -44,5 +44,4 @@ public final class ServletTest\n         }\n     }\n \n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/79/ServletTest.java\nindex 13b83d97beb..01b04f006a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/79/ServletTest.java\n@@ -31,7 +31,7 @@ public final class ServletTest\n     }\n \n     public void\n-    testFindMappings() {\n+                 testFindMappings() {\n         final Set<Servlet> servlets = getTestUtil().getAllAMX(Servlet.class);\n \n         for (final Servlet servlet : servlets) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'testFindMappings' has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/79/ServletTest.java\nindex 13b83d97beb..24bdce507a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/79/ServletTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/79/ServletTest.java\n@@ -31,7 +31,7 @@ public final class ServletTest\n     }\n \n     public void\n-    testFindMappings() {\n+testFindMappings() {\n         final Set<Servlet> servlets = getTestUtil().getAllAMX(Servlet.class);\n \n         for (final Servlet servlet : servlets) {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2215",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "19",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "39",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "86",
+                    "column": "26",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "86",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "92",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "92",
+                    "column": "50",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2215/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2215/Group.java\nindex 5c055db1dc4..8490d3ce460 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2215/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2215/Group.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.unsafe.impl.batchimport.input;\n \n import org.neo4j.unsafe.impl.batchimport.cache.idmapping.IdMapper;\n@@ -27,66 +28,66 @@ import org.neo4j.unsafe.impl.batchimport.cache.idmapping.IdMapper;\n  */\n public interface Group\n {\n-    /**\n-     * @return id of this group, used for identifying this group.\n-     */\n-    int id();\n+  /**\n+   * @return id of this group, used for identifying this group.\n+   */\n+  int id();\n \n-    /**\n-     * @return the name of this group.\n-     */\n-    String name();\n+  /**\n+   * @return the name of this group.\n+   */\n+  String name();\n \n-    /**\n-     * @return {@link #name()}.\n-     */\n-    @Override\n-    String toString();\n+  /**\n+   * @return {@link #name()}.\n+   */\n+  @Override\n+  String toString();\n \n-    class Adapter implements Group\n-    {\n-        private final int id;\n-        private final String name;\n+  class Adapter implements Group\n+  {\n+    private final int id;\n+    private final String name;\n \n-        public Adapter( int id, String name )\n-        {\n-            this.id = id;\n-            this.name = name;\n-        }\n+    public Adapter(int id, String name)\n+    {\n+      this.id = id;\n+      this.name = name;\n+    }\n \n-        @Override\n-        public int id()\n-        {\n-            return id;\n-        }\n+    @Override\n+    public int id()\n+    {\n+      return id;\n+    }\n \n-        @Override\n-        public String name()\n-        {\n-            return name;\n-        }\n+    @Override\n+    public String name()\n+    {\n+      return name;\n+    }\n \n-        @Override\n-        public String toString()\n-        {\n-            return \"(\" + name + \",\" + id + \")\";\n-        }\n+    @Override\n+    public String toString()\n+    {\n+      return \"(\" + name + \",\" + id + \")\";\n+    }\n \n-        @Override\n-        public int hashCode()\n-        {\n-            final int prime = 31;\n-            int result = 1;\n-            result = prime * result + id;\n-            return result;\n-        }\n+    @Override\n+    public int hashCode()\n+    {\n+      final int prime = 31;\n+      int result = 1;\n+      result = prime * result + id;\n+      return result;\n+    }\n \n-        @Override\n-        public boolean equals( Object obj )\n-        {\n-            return obj instanceof Group && ((Group)obj).id() == id;\n-        }\n+    @Override\n+    public boolean equals(Object obj)\n+    {\n+      return obj instanceof Group && ((Group) obj).id() == id;\n     }\n+  }\n \n-    Group GLOBAL = new Adapter( 0, \"global id space\" );\n+  Group GLOBAL = new Adapter(0, \"global id space\");\n }\n",
+            "diff_size": 53
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2215/Group.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2215/Group.java\nindex 5c055db1dc4..dbe4d823a80 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2215/Group.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2215/Group.java\n@@ -84,9 +84,9 @@ public interface Group\n         @Override\n         public boolean equals( Object obj )\n         {\n-            return obj instanceof Group && ((Group)obj).id() == id;\n+            return obj instanceof Group && ((Group) obj).id() == id;\n         }\n     }\n \n     Group GLOBAL = new Adapter( 0, \"global id space\" );\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

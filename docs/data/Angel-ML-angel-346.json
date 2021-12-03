@@ -1,0 +1,120 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "346",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private final Properties conf;\n\n  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n      Configuration hadoopConf) {\n    this.partitionNum = partitionNum;\n    this.minNodeId = minNodeId;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/346/ModelContext.java\nindex f4b6e90b89c..48d4e4b048e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/346/ModelContext.java\n@@ -17,8 +17,10 @@ public class ModelContext implements Serializable {\n   private final String modelName;\n   private final Properties conf;\n \n-  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n-      Configuration hadoopConf) {\n+  public ModelContext(\n+      int partitionNum, long minNodeId, long maxNodeId, long nodeNum,\n+  String modelName,\n+       Configuration hadoopConf) {\n     this.partitionNum = partitionNum;\n     this.minNodeId = minNodeId;\n     this.maxNodeId = maxNodeId;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/346/ModelContext.java\nindex f4b6e90b89c..70b023517f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/346/ModelContext.java\n@@ -10,113 +10,116 @@ import java.util.Set;\n import org.apache.hadoop.conf.Configuration;\n \n public class ModelContext implements Serializable {\n-  private final int partitionNum;\n-  private final long minNodeId;\n-  private final long maxNodeId;\n-  private final long nodeNum;\n-  private final String modelName;\n-  private final Properties conf;\n-\n-  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n-      Configuration hadoopConf) {\n-    this.partitionNum = partitionNum;\n-    this.minNodeId = minNodeId;\n-    this.maxNodeId = maxNodeId;\n-    this.nodeNum = nodeNum;\n-    this.modelName = modelName;\n-    this.conf = new Properties();\n-    Iterator<Entry<String, String>> iter = hadoopConf.iterator();\n-    while(iter.hasNext()) {\n-      Entry<String, String> kv = iter.next();\n-      conf.setProperty(kv.getKey(), kv.getValue());\n-    }\n-  }\n-\n-  public int getPartitionNum() {\n-    return partitionNum;\n-  }\n-\n-  public long getMinNodeId() {\n-    return minNodeId;\n-  }\n-\n-  public long getMaxNodeId() {\n-    return maxNodeId;\n-  }\n-\n-  public String getModelName() {\n-    return modelName;\n-  }\n-\n-  public boolean isUseHashPartition() {\n-    return \"hash\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n-  }\n-\n-  public boolean isUseRangePartition() {\n-    return \"range\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n-  }\n-\n-  public boolean isLoadBalancePartitionEnable() {\n-    return getBoolean(AngelConf.ANGEL_PS_LOADBALANCE_PARTITION_ENABLE,\n-        AngelConf.DEFAULT_ANGEL_PS_LOADBALANCE_PARTITION_ENABLE);\n-  }\n-\n-  public boolean isUseBytesFormatForReadOnly() {\n-    return getBoolean(AngelGraphConf.ANGEL_GRAPH_USE_BYTES_FOR_READONLY,\n-        AngelGraphConf.DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY);\n-  }\n-\n-  private boolean getBoolean(String key, boolean defaultValue) {\n-    String value = conf.getProperty(key);\n-    if(key == null) {\n-      return defaultValue;\n-    }\n-\n-    return \"true\".equalsIgnoreCase(value);\n-  }\n-\n-  private int getInt(String key, int defaultValue) {\n-    String value = conf.getProperty(key);\n-    if(key == null) {\n-      return defaultValue;\n-    }\n-\n-    return Integer.valueOf(value);\n-  }\n-\n-\n-  public void setMasterHost(String masterHost) {\n-    conf.setProperty(AngelConf.ANGEL_AM_HOST, masterHost);\n-  }\n-\n-  public void setMasterPort(int masterPort) {\n-    conf.setProperty(AngelConf.ANGEL_AM_PORT, \"\" + masterPort);\n-  }\n-\n-  public String getMasterHost() {\n-    return conf.getProperty(AngelConf.ANGEL_AM_HOST);\n-  }\n-\n-  public int getMasterPort() {\n-    return getInt(AngelConf.ANGEL_AM_PORT, -1);\n-  }\n-\n-  public Configuration getHadoopConf() {\n-    Configuration hadoopConf = new Configuration();\n-    Set<String> keyNames = conf.stringPropertyNames();\n-    for(String keyName : keyNames) {\n-      hadoopConf.set(keyName, conf.getProperty(keyName));\n-    }\n-    return hadoopConf;\n-  }\n-\n-  public long getNodeNum() {\n-    return nodeNum;\n-  }\n-\n-  public Properties getConf() {\n-    return conf;\n-  }\n+    private final int partitionNum;\n+    private final long minNodeId;\n+    private final long maxNodeId;\n+    private final long nodeNum;\n+    private final String modelName;\n+    private final Properties conf;\n+\n+    public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum,\n+                        String modelName,\n+                        Configuration hadoopConf) {\n+        this.partitionNum = partitionNum;\n+        this.minNodeId = minNodeId;\n+        this.maxNodeId = maxNodeId;\n+        this.nodeNum = nodeNum;\n+        this.modelName = modelName;\n+        this.conf = new Properties();\n+        Iterator<Entry<String, String>> iter = hadoopConf.iterator();\n+        while (iter.hasNext()) {\n+            Entry<String, String> kv = iter.next();\n+            conf.setProperty(kv.getKey(), kv.getValue());\n+        }\n+    }\n+\n+    public int getPartitionNum() {\n+        return partitionNum;\n+    }\n+\n+    public long getMinNodeId() {\n+        return minNodeId;\n+    }\n+\n+    public long getMaxNodeId() {\n+        return maxNodeId;\n+    }\n+\n+    public String getModelName() {\n+        return modelName;\n+    }\n+\n+    public boolean isUseHashPartition() {\n+        return \"hash\".equalsIgnoreCase(\n+                conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE,\n+                        AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    }\n+\n+    public boolean isUseRangePartition() {\n+        return \"range\".equalsIgnoreCase(\n+                conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE,\n+                        AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    }\n+\n+    public boolean isLoadBalancePartitionEnable() {\n+        return getBoolean(AngelConf.ANGEL_PS_LOADBALANCE_PARTITION_ENABLE,\n+                AngelConf.DEFAULT_ANGEL_PS_LOADBALANCE_PARTITION_ENABLE);\n+    }\n+\n+    public boolean isUseBytesFormatForReadOnly() {\n+        return getBoolean(AngelGraphConf.ANGEL_GRAPH_USE_BYTES_FOR_READONLY,\n+                AngelGraphConf.DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY);\n+    }\n+\n+    private boolean getBoolean(String key, boolean defaultValue) {\n+        String value = conf.getProperty(key);\n+        if (key == null) {\n+            return defaultValue;\n+        }\n+\n+        return \"true\".equalsIgnoreCase(value);\n+    }\n+\n+    private int getInt(String key, int defaultValue) {\n+        String value = conf.getProperty(key);\n+        if (key == null) {\n+            return defaultValue;\n+        }\n+\n+        return Integer.valueOf(value);\n+    }\n+\n+\n+    public void setMasterHost(String masterHost) {\n+        conf.setProperty(AngelConf.ANGEL_AM_HOST, masterHost);\n+    }\n+\n+    public void setMasterPort(int masterPort) {\n+        conf.setProperty(AngelConf.ANGEL_AM_PORT, \"\" + masterPort);\n+    }\n+\n+    public String getMasterHost() {\n+        return conf.getProperty(AngelConf.ANGEL_AM_HOST);\n+    }\n+\n+    public int getMasterPort() {\n+        return getInt(AngelConf.ANGEL_AM_PORT, -1);\n+    }\n+\n+    public Configuration getHadoopConf() {\n+        Configuration hadoopConf = new Configuration();\n+        Set<String> keyNames = conf.stringPropertyNames();\n+        for (String keyName : keyNames) {\n+            hadoopConf.set(keyName, conf.getProperty(keyName));\n+        }\n+        return hadoopConf;\n+    }\n+\n+    public long getNodeNum() {\n+        return nodeNum;\n+    }\n+\n+    public Properties getConf() {\n+        return conf;\n+    }\n }\n",
+            "diff_size": 112
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/346/ModelContext.java\nindex f4b6e90b89c..6c6331d3857 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/346/ModelContext.java\n@@ -26,7 +26,7 @@ public class ModelContext implements Serializable {\n     this.modelName = modelName;\n     this.conf = new Properties();\n     Iterator<Entry<String, String>> iter = hadoopConf.iterator();\n-    while(iter.hasNext()) {\n+    while (iter.hasNext()) {\n       Entry<String, String> kv = iter.next();\n       conf.setProperty(kv.getKey(), kv.getValue());\n     }\n@@ -49,13 +49,11 @@ public class ModelContext implements Serializable {\n   }\n \n   public boolean isUseHashPartition() {\n-    return \"hash\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    return \"hash\".equalsIgnoreCase(conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n   }\n \n   public boolean isUseRangePartition() {\n-    return \"range\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    return \"range\".equalsIgnoreCase(conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n   }\n \n   public boolean isLoadBalancePartitionEnable() {\n@@ -70,7 +68,7 @@ public class ModelContext implements Serializable {\n \n   private boolean getBoolean(String key, boolean defaultValue) {\n     String value = conf.getProperty(key);\n-    if(key == null) {\n+    if (key == null) {\n       return defaultValue;\n     }\n \n@@ -79,7 +77,7 @@ public class ModelContext implements Serializable {\n \n   private int getInt(String key, int defaultValue) {\n     String value = conf.getProperty(key);\n-    if(key == null) {\n+    if (key == null) {\n       return defaultValue;\n     }\n \n@@ -106,7 +104,7 @@ public class ModelContext implements Serializable {\n   public Configuration getHadoopConf() {\n     Configuration hadoopConf = new Configuration();\n     Set<String> keyNames = conf.stringPropertyNames();\n-    for(String keyName : keyNames) {\n+    for (String keyName : keyNames) {\n       hadoopConf.set(keyName, conf.getProperty(keyName));\n     }\n     return hadoopConf;\n@@ -119,4 +117,4 @@ public class ModelContext implements Serializable {\n   public Properties getConf() {\n     return conf;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 128).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 132).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/346/ModelContext.java\nindex f4b6e90b89c..b7db6b163f1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/346/ModelContext.java\n@@ -10,6 +10,7 @@ import java.util.Set;\n import org.apache.hadoop.conf.Configuration;\n \n public class ModelContext implements Serializable {\n+\n   private final int partitionNum;\n   private final long minNodeId;\n   private final long maxNodeId;\n@@ -17,8 +18,7 @@ public class ModelContext implements Serializable {\n   private final String modelName;\n   private final Properties conf;\n \n-  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n-      Configuration hadoopConf) {\n+  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName, Configuration hadoopConf) {\n     this.partitionNum = partitionNum;\n     this.minNodeId = minNodeId;\n     this.maxNodeId = maxNodeId;\n@@ -26,7 +26,7 @@ public class ModelContext implements Serializable {\n     this.modelName = modelName;\n     this.conf = new Properties();\n     Iterator<Entry<String, String>> iter = hadoopConf.iterator();\n-    while(iter.hasNext()) {\n+    while (iter.hasNext()) {\n       Entry<String, String> kv = iter.next();\n       conf.setProperty(kv.getKey(), kv.getValue());\n     }\n@@ -49,44 +49,37 @@ public class ModelContext implements Serializable {\n   }\n \n   public boolean isUseHashPartition() {\n-    return \"hash\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    return \"hash\".equalsIgnoreCase(conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n   }\n \n   public boolean isUseRangePartition() {\n-    return \"range\".equalsIgnoreCase(\n-        conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n+    return \"range\".equalsIgnoreCase(conf.getProperty(AngelConf.ANGEL_PS_ROUTER_TYPE, AngelConf.DEFAULT_ANGEL_PS_ROUTER_TYPE));\n   }\n \n   public boolean isLoadBalancePartitionEnable() {\n-    return getBoolean(AngelConf.ANGEL_PS_LOADBALANCE_PARTITION_ENABLE,\n-        AngelConf.DEFAULT_ANGEL_PS_LOADBALANCE_PARTITION_ENABLE);\n+    return getBoolean(AngelConf.ANGEL_PS_LOADBALANCE_PARTITION_ENABLE, AngelConf.DEFAULT_ANGEL_PS_LOADBALANCE_PARTITION_ENABLE);\n   }\n \n   public boolean isUseBytesFormatForReadOnly() {\n-    return getBoolean(AngelGraphConf.ANGEL_GRAPH_USE_BYTES_FOR_READONLY,\n-        AngelGraphConf.DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY);\n+    return getBoolean(AngelGraphConf.ANGEL_GRAPH_USE_BYTES_FOR_READONLY, AngelGraphConf.DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY);\n   }\n \n   private boolean getBoolean(String key, boolean defaultValue) {\n     String value = conf.getProperty(key);\n-    if(key == null) {\n+    if (key == null) {\n       return defaultValue;\n     }\n-\n     return \"true\".equalsIgnoreCase(value);\n   }\n \n   private int getInt(String key, int defaultValue) {\n     String value = conf.getProperty(key);\n-    if(key == null) {\n+    if (key == null) {\n       return defaultValue;\n     }\n-\n     return Integer.valueOf(value);\n   }\n \n-\n   public void setMasterHost(String masterHost) {\n     conf.setProperty(AngelConf.ANGEL_AM_HOST, masterHost);\n   }\n@@ -106,7 +99,7 @@ public class ModelContext implements Serializable {\n   public Configuration getHadoopConf() {\n     Configuration hadoopConf = new Configuration();\n     Set<String> keyNames = conf.stringPropertyNames();\n-    for(String keyName : keyNames) {\n+    for (String keyName : keyNames) {\n       hadoopConf.set(keyName, conf.getProperty(keyName));\n     }\n     return hadoopConf;\n@@ -119,4 +112,5 @@ public class ModelContext implements Serializable {\n   public Properties getConf() {\n     return conf;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/346/ModelContext.java\nindex f4b6e90b89c..f76e6ba988c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/346/ModelContext.java\n@@ -17,8 +17,7 @@ public class ModelContext implements Serializable {\n   private final String modelName;\n   private final Properties conf;\n \n-  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n-      Configuration hadoopConf) {\n+  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName, Configuration hadoopConf) {\n     this.partitionNum = partitionNum;\n     this.minNodeId = minNodeId;\n     this.maxNodeId = maxNodeId;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/346/ModelContext.java\nindex f4b6e90b89c..48d4e4b048e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/346/ModelContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/346/ModelContext.java\n@@ -17,8 +17,10 @@ public class ModelContext implements Serializable {\n   private final String modelName;\n   private final Properties conf;\n \n-  public ModelContext(int partitionNum, long minNodeId, long maxNodeId, long nodeNum, String modelName,\n-      Configuration hadoopConf) {\n+  public ModelContext(\n+      int partitionNum, long minNodeId, long maxNodeId, long nodeNum,\n+  String modelName,\n+       Configuration hadoopConf) {\n     this.partitionNum = partitionNum;\n     this.minNodeId = minNodeId;\n     this.maxNodeId = maxNodeId;\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

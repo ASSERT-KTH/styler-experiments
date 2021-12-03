@@ -1,0 +1,62 @@
+{
+    "project_name": "vassalengine-vassal",
+    "violation_id": "15",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "28",
+                "severity": "error",
+                "message": "'(' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+            }
+        ]
+    },
+    "source_code": "    LoggerFactory.getLogger(Console.class);\n\n  private static void show (String s) {\n    GameModule.getGameModule().warn(s);\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/vassalengine-vassal/styler/05_predictions/final/files-repaired/15/Console.java\nindex 7734c631420..d9fc44766a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/vassalengine-vassal/styler/05_predictions/final/files-repaired/15/Console.java\n@@ -14,7 +14,7 @@ public class Console {\n   private static final org.slf4j.Logger log =\n     LoggerFactory.getLogger(Console.class);\n \n-  private static void show (String s) {\n+  private static void show(String s) {\n     GameModule.getGameModule().warn(s);\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/checkstyle_idea/15/Console.java\nindex 7734c631420..25ec2b924cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/checkstyle_idea/15/Console.java\n@@ -14,7 +14,7 @@ public class Console {\n   private static final org.slf4j.Logger log =\n     LoggerFactory.getLogger(Console.class);\n \n-  private static void show (String s) {\n+  private static void show(String s) {\n     GameModule.getGameModule().warn(s);\n   }\n \n@@ -43,8 +43,7 @@ public class Console {\n             if (tokens.length > 2) {\n               try {\n                 start = Math.max(0, end - Integer.valueOf(tokens[2]) + 1);\n-              }\n-              catch (NumberFormatException e) {\n+              } catch (NumberFormatException e) {\n                 //\n               }\n             }\n@@ -53,22 +52,19 @@ public class Console {\n               show(lines[line]);\n             }\n           }\n-        }\n-        else if (\"write\".equals(tokens[1])) {\n+        } else if (\"write\".equals(tokens[1])) {\n           int where = s.toLowerCase().indexOf(\"write\");\n           if (where > 0) {\n             String writeString = s.substring(where + 6);\n             log.info(writeString);\n           }\n-        }\n-        else if (\"wipe\".equals(tokens[1])) {\n+        } else if (\"wipe\".equals(tokens[1])) {\n           // truncate the errorLog\n           final File errorLog = Info.getErrorLogPath();\n           try {\n             new FileOutputStream(errorLog).close();\n             show(\"Wiped errorlog\");\n-          }\n-          catch (IOException e) {\n+          } catch (IOException e) {\n             show(\"Failed to wipe errorlog\");\n           }\n         }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/random/files-repaired/15/Console.java\nindex 7734c631420..d9fc44766a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/random/files-repaired/15/Console.java\n@@ -14,7 +14,7 @@ public class Console {\n   private static final org.slf4j.Logger log =\n     LoggerFactory.getLogger(Console.class);\n \n-  private static void show (String s) {\n+  private static void show(String s) {\n     GameModule.getGameModule().warn(s);\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/three_grams/files-repaired/15/Console.java\nindex 7734c631420..d9fc44766a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/violations/15/Console.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/vassalengine-vassal/styler/05_predictions/three_grams/files-repaired/15/Console.java\n@@ -14,7 +14,7 @@ public class Console {\n   private static final org.slf4j.Logger log =\n     LoggerFactory.getLogger(Console.class);\n \n-  private static void show (String s) {\n+  private static void show(String s) {\n     GameModule.getGameModule().warn(s);\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

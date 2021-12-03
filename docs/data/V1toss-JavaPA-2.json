@@ -1,0 +1,63 @@
+{
+    "project_name": "V1toss-JavaPA",
+    "violation_id": "2",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "column": "51",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@Repository\npublic interface CarDAO extends CrudRepository<Car,Integer> {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/2/CarDAO.java\nindex bbc7cff1b5f..f40bb4d0387 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/V1toss-JavaPA/styler/05_predictions/final/files-repaired/2/CarDAO.java\n@@ -12,5 +12,5 @@ import vkaretko.models.Car;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/2/CarDAO.java\nindex bbc7cff1b5f..f40bb4d0387 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/checkstyle_idea/2/CarDAO.java\n@@ -12,5 +12,5 @@ import vkaretko.models.Car;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/2/CarDAO.java\nindex bbc7cff1b5f..c7069cdce4c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/naturalize/2/CarDAO.java\n@@ -12,5 +12,5 @@ import vkaretko.models.Car;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n-}\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/2/CarDAO.java\nindex bbc7cff1b5f..5ab43658817 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/codebuff/2/CarDAO.java\n@@ -11,6 +11,8 @@ import vkaretko.models.Car;\n  * @version 1.00.\n  * @since 08.05.2017.\n  */\n+\n+\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n-}\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/2/CarDAO.java\nindex bbc7cff1b5f..f40bb4d0387 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/random/files-repaired/2/CarDAO.java\n@@ -12,5 +12,5 @@ import vkaretko.models.Car;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/2/CarDAO.java\nindex bbc7cff1b5f..f40bb4d0387 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/violations/2/CarDAO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/V1toss-JavaPA/styler/05_predictions/three_grams/files-repaired/2/CarDAO.java\n@@ -12,5 +12,5 @@ import vkaretko.models.Car;\n  * @since 08.05.2017.\n  */\n @Repository\n-public interface CarDAO extends CrudRepository<Car,Integer> {\n+public interface CarDAO extends CrudRepository<Car, Integer> {\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

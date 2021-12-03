@@ -1,0 +1,86 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "162",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 131).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public static class HeaderProcessor extends AbstractParamProcessor {\n    // This configuration is used for temporary use only. Do not use it if you are sure how it works. And may be deleted in future.\n    private boolean ignoreRequiredCheck = DynamicPropertyFactory.getInstance()\n        .getBooleanProperty(\"servicecomb.rest.parameter.header.ignoreRequiredCheck\", false).get();\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/162/HeaderProcessorCreator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/162/HeaderProcessorCreator.java\nindex b8ef8505c78..87251e369b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/162/HeaderProcessorCreator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/162/HeaderProcessorCreator.java\n@@ -105,4 +105,4 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n     return new HeaderProcessor(parameter.getName(), targetType, ((HeaderParameter) parameter).getDefaultValue(),\n         parameter.getRequired());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "43",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/162/HeaderProcessorCreator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/162/HeaderProcessorCreator.java\nindex b8ef8505c78..540539271c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/162/HeaderProcessorCreator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/162/HeaderProcessorCreator.java\n@@ -20,20 +20,16 @@ package org.apache.servicecomb.common.rest.codec.param;\n import java.lang.reflect.Type;\n import java.util.Collections;\n import java.util.Enumeration;\n-\n import javax.servlet.http.HttpServletRequest;\n import javax.ws.rs.core.Response.Status;\n-\n import org.apache.servicecomb.common.rest.codec.RestClientRequest;\n import org.apache.servicecomb.common.rest.codec.RestObjectMapperFactory;\n import org.apache.servicecomb.swagger.invocation.exception.InvocationException;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.fasterxml.jackson.databind.JavaType;\n import com.fasterxml.jackson.databind.type.TypeFactory;\n import com.netflix.config.DynamicPropertyFactory;\n-\n import io.swagger.models.parameters.HeaderParameter;\n import io.swagger.models.parameters.Parameter;\n \n@@ -44,8 +40,8 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n \n   public static class HeaderProcessor extends AbstractParamProcessor {\n     // This configuration is used for temporary use only. Do not use it if you are sure how it works. And may be deleted in future.\n-    private boolean ignoreRequiredCheck = DynamicPropertyFactory.getInstance()\n-        .getBooleanProperty(\"servicecomb.rest.parameter.header.ignoreRequiredCheck\", false).get();\n+    private boolean ignoreRequiredCheck = DynamicPropertyFactory.getInstance().getBooleanProperty(\"servicecomb.rest.parameter.header.ignoreRequiredCheck\", false)\n+                                                                              .get();\n \n     public HeaderProcessor(String paramPath, JavaType targetType, Object defaultValue, boolean required) {\n       super(paramPath, targetType, defaultValue, required);\n@@ -60,6 +56,7 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n           //Even if the paramPath does not exist, headerValues won't be null at now\n           return null;\n         }\n+\n         value = Collections.list(headerValues);\n       } else {\n         value = request.getHeader(paramPath);\n@@ -67,7 +64,6 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n           value = checkRequiredAndDefaultValue();\n         }\n       }\n-\n       return convertValue(value, targetType);\n     }\n \n@@ -82,11 +78,13 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n     public void setValue(RestClientRequest clientRequest, Object arg) throws Exception {\n       if (null == arg) {\n         // null header should not be set to clientRequest to avoid NullPointerException in Netty.\n-        LOGGER.debug(\"Header arg is null, will not be set into clientRequest. paramPath = [{}]\", paramPath);\n+        LOGGER.debug(\"Header arg is null, will not be set into clientRequest. paramPath = [{}]\",\n+paramPath);\n         return;\n       }\n+\n       clientRequest.putHeader(paramPath,\n-          RestObjectMapperFactory.getConsumerWriterMapper().convertToString(arg));\n+RestObjectMapperFactory.getConsumerWriterMapper().convertToString(arg));\n     }\n \n     @Override\n@@ -102,7 +100,9 @@ public class HeaderProcessorCreator implements ParamValueProcessorCreator {\n   @Override\n   public ParamValueProcessor create(Parameter parameter, Type genericParamType) {\n     JavaType targetType = TypeFactory.defaultInstance().constructType(genericParamType);\n-    return new HeaderProcessor(parameter.getName(), targetType, ((HeaderParameter) parameter).getDefaultValue(),\n-        parameter.getRequired());\n+    return new HeaderProcessor(parameter.getName(),\n+      targetType,\n+        ((HeaderParameter) parameter).getDefaultValue(),\n+          parameter.getRequired());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

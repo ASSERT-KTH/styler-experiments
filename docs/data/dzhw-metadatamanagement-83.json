@@ -1,0 +1,117 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "83",
+    "information": {
+        "violations": [
+            {
+                "line": "21",
+                "column": "77",
+                "severity": "error",
+                "message": "'}' at column 77 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/83/OneStudyOrStudySeriesIsUsedValidator.java\nindex 9d98057b655..f113176cce1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/83/OneStudyOrStudySeriesIsUsedValidator.java\n@@ -18,7 +18,9 @@ public class OneStudyOrStudySeriesIsUsedValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {}\n+  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/83/OneStudyOrStudySeriesIsUsedValidator.java\nindex 9d98057b655..85b0fd00311 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/83/OneStudyOrStudySeriesIsUsedValidator.java\n@@ -14,22 +14,23 @@ public class OneStudyOrStudySeriesIsUsedValidator\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {}\n+  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n   @Override\n-  public boolean isValid(RelatedPublication relatedPublication, \n-      ConstraintValidatorContext context) {\n-    if (relatedPublication.getStudyIds() == null \n+  public boolean isValid(RelatedPublication relatedPublication,\n+                         ConstraintValidatorContext context) {\n+    if (relatedPublication.getStudyIds() == null\n         && relatedPublication.getStudySerieses() == null) {\n       return false;\n     }\n@@ -39,8 +40,8 @@ public class OneStudyOrStudySeriesIsUsedValidator\n     if (relatedPublication.getStudySerieses() == null) {\n       return !relatedPublication.getStudyIds().isEmpty();\n     }\n-    \n-    return !relatedPublication.getStudyIds().isEmpty() \n+\n+    return !relatedPublication.getStudyIds().isEmpty()\n         || !relatedPublication.getStudySerieses().isEmpty();\n   }\n \n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "21",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "'}' at column 77 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "33",
+                    "severity": "error",
+                    "message": "'if' child has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "43",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "'class def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/83/OneStudyOrStudySeriesIsUsedValidator.java\nindex 9d98057b655..06acd4e06c1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/83/OneStudyOrStudySeriesIsUsedValidator.java\n@@ -29,8 +29,8 @@ public class OneStudyOrStudySeriesIsUsedValidator\n   @Override\n   public boolean isValid(RelatedPublication relatedPublication, \n       ConstraintValidatorContext context) {\n-    if (relatedPublication.getStudyIds() == null \n-        && relatedPublication.getStudySerieses() == null) {\n+    if (relatedPublication.getStudyIds() == null\n+    && relatedPublication.getStudySerieses() == null) {\n       return false;\n     }\n     if (relatedPublication.getStudyIds() == null) {\n@@ -40,8 +40,6 @@ public class OneStudyOrStudySeriesIsUsedValidator\n       return !relatedPublication.getStudyIds().isEmpty();\n     }\n     \n-    return !relatedPublication.getStudyIds().isEmpty() \n-        || !relatedPublication.getStudySerieses().isEmpty();\n+    return !relatedPublication.getStudyIds().isEmpty() || !relatedPublication.getStudySerieses().isEmpty();\n   }\n-\n-}\n+  }\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 131).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/83/OneStudyOrStudySeriesIsUsedValidator.java\nindex 9d98057b655..6782fdbb663 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/83/OneStudyOrStudySeriesIsUsedValidator.java\n@@ -2,23 +2,26 @@ package eu.dzhw.fdz.metadatamanagement.relatedpublicationmanagement.domain.valid\n \n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import eu.dzhw.fdz.metadatamanagement.relatedpublicationmanagement.domain.RelatedPublication;\n \n \n /**\n  * Checks for the study list. The list has to be filled.\n  */\n-public class OneStudyOrStudySeriesIsUsedValidator\n-    implements ConstraintValidator<OneStudyOrStudySeriesIsUsed, RelatedPublication> {\n+\n+\n+public class OneStudyOrStudySeriesIsUsedValidator implements ConstraintValidator<OneStudyOrStudySeriesIsUsed, RelatedPublication> {\n \n   /*\n    * (non-Javadoc)\n    * \n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {}\n+  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n@@ -26,11 +29,12 @@ public class OneStudyOrStudySeriesIsUsedValidator\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n+\n+\n   @Override\n-  public boolean isValid(RelatedPublication relatedPublication, \n-      ConstraintValidatorContext context) {\n-    if (relatedPublication.getStudyIds() == null \n-        && relatedPublication.getStudySerieses() == null) {\n+  public boolean isValid(RelatedPublication relatedPublication,\n+    ConstraintValidatorContext context) {\n+    if (relatedPublication.getStudyIds() == null && relatedPublication.getStudySerieses() == null) {\n       return false;\n     }\n     if (relatedPublication.getStudyIds() == null) {\n@@ -39,9 +43,7 @@ public class OneStudyOrStudySeriesIsUsedValidator\n     if (relatedPublication.getStudySerieses() == null) {\n       return !relatedPublication.getStudyIds().isEmpty();\n     }\n-    \n-    return !relatedPublication.getStudyIds().isEmpty() \n-        || !relatedPublication.getStudySerieses().isEmpty();\n-  }\n \n-}\n+    return !relatedPublication.getStudyIds().isEmpty() || !relatedPublication.getStudySerieses().isEmpty();\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/83/OneStudyOrStudySeriesIsUsedValidator.java\nindex 9d98057b655..f113176cce1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/83/OneStudyOrStudySeriesIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/83/OneStudyOrStudySeriesIsUsedValidator.java\n@@ -18,7 +18,9 @@ public class OneStudyOrStudySeriesIsUsedValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {}\n+  public void initialize(OneStudyOrStudySeriesIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "21",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "'}' at column 77 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

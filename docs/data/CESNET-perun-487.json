@@ -1,0 +1,62 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "487",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tprivate Auditer auditer;\n\t\n\t@Override\n\tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n\t\tthis.getAuditer().newTopLevelTransaction();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/487/PerunTransactionManager.java\nindex c069cfba252..393793a06e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/487/PerunTransactionManager.java\n@@ -13,8 +13,8 @@ public class PerunTransactionManager extends DataSourceTransactionManager implem\n \tprivate static final long serialVersionUID = 1L;\n \n \tprivate Auditer auditer;\n-\t\n-\t@Override\n+\n+ @Override\n \tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n \t\tthis.getAuditer().newTopLevelTransaction();\n \t\tsuper.doBegin(transaction, definition);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/487/PerunTransactionManager.java\nindex c069cfba252..5020ca1420c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/487/PerunTransactionManager.java\n@@ -8,42 +8,43 @@ import org.springframework.transaction.support.DefaultTransactionStatus;\n import org.springframework.transaction.support.ResourceTransactionManager;\n \n \n-public class PerunTransactionManager extends DataSourceTransactionManager implements ResourceTransactionManager, InitializingBean {\n-\n-\tprivate static final long serialVersionUID = 1L;\n-\n-\tprivate Auditer auditer;\n-\t\n-\t@Override\n-\tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n-\t\tthis.getAuditer().newTopLevelTransaction();\n-\t\tsuper.doBegin(transaction, definition);\n-\t}\n-\n-\t@Override\n-\tprotected void doCommit(DefaultTransactionStatus status) {\n-\t\tsuper.doCommit(status);\n-\t\tthis.getAuditer().flush();\n-\t}\n-\n-\t@Override\n-\tprotected void doRollback(DefaultTransactionStatus status) {\n-\t\tsuper.doRollback(status);\n-\t\tthis.getAuditer().clean();\n-\t}\n-\n-\t@Override\n-\tprotected void doCleanupAfterCompletion(Object transaction) {\n-\t\tsuper.doCleanupAfterCompletion(transaction);\n-\t\tthis.getAuditer().clean();\n-\t}\n-\n-\tpublic Auditer getAuditer() {\n-\t\treturn this.auditer;\n-\t}\n-\n-\tpublic void setAuditer(Auditer auditer) {\n-\t\tthis.auditer = auditer;\n-\t}\n+public class PerunTransactionManager extends DataSourceTransactionManager\n+    implements ResourceTransactionManager, InitializingBean {\n+\n+    private static final long serialVersionUID = 1L;\n+\n+    private Auditer auditer;\n+\n+    @Override\n+    protected void doBegin(Object transaction, TransactionDefinition definition) {\n+        this.getAuditer().newTopLevelTransaction();\n+        super.doBegin(transaction, definition);\n+    }\n+\n+    @Override\n+    protected void doCommit(DefaultTransactionStatus status) {\n+        super.doCommit(status);\n+        this.getAuditer().flush();\n+    }\n+\n+    @Override\n+    protected void doRollback(DefaultTransactionStatus status) {\n+        super.doRollback(status);\n+        this.getAuditer().clean();\n+    }\n+\n+    @Override\n+    protected void doCleanupAfterCompletion(Object transaction) {\n+        super.doCleanupAfterCompletion(transaction);\n+        this.getAuditer().clean();\n+    }\n+\n+    public Auditer getAuditer() {\n+        return this.auditer;\n+    }\n+\n+    public void setAuditer(Auditer auditer) {\n+        this.auditer = auditer;\n+    }\n \n }\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/487/PerunTransactionManager.java\nindex c069cfba252..931b6451b2c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/487/PerunTransactionManager.java\n@@ -1,6 +1,5 @@\n package cz.metacentrum.perun.core.impl;\n \n-\n import org.springframework.beans.factory.InitializingBean;\n import org.springframework.jdbc.datasource.DataSourceTransactionManager;\n import org.springframework.transaction.TransactionDefinition;\n@@ -10,40 +9,39 @@ import org.springframework.transaction.support.ResourceTransactionManager;\n \n public class PerunTransactionManager extends DataSourceTransactionManager implements ResourceTransactionManager, InitializingBean {\n \n-\tprivate static final long serialVersionUID = 1L;\n-\n-\tprivate Auditer auditer;\n-\t\n-\t@Override\n-\tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n-\t\tthis.getAuditer().newTopLevelTransaction();\n-\t\tsuper.doBegin(transaction, definition);\n-\t}\n-\n-\t@Override\n-\tprotected void doCommit(DefaultTransactionStatus status) {\n-\t\tsuper.doCommit(status);\n-\t\tthis.getAuditer().flush();\n-\t}\n-\n-\t@Override\n-\tprotected void doRollback(DefaultTransactionStatus status) {\n-\t\tsuper.doRollback(status);\n-\t\tthis.getAuditer().clean();\n-\t}\n-\n-\t@Override\n-\tprotected void doCleanupAfterCompletion(Object transaction) {\n-\t\tsuper.doCleanupAfterCompletion(transaction);\n-\t\tthis.getAuditer().clean();\n-\t}\n-\n-\tpublic Auditer getAuditer() {\n-\t\treturn this.auditer;\n-\t}\n-\n-\tpublic void setAuditer(Auditer auditer) {\n-\t\tthis.auditer = auditer;\n-\t}\n-\n-}\n+\n+ private static final long serialVersionUID = 1L;\n+ private Auditer auditer;\n+\n+ @Override\n+ protected void doBegin(Object transaction, TransactionDefinition definition) {\n+  this.getAuditer().newTopLevelTransaction();\n+  super.doBegin(transaction, definition);\n+ }\n+\n+ @Override\n+ protected void doCommit(DefaultTransactionStatus status) {\n+  super.doCommit(status);\n+  this.getAuditer().flush();\n+ }\n+\n+ @Override\n+ protected void doRollback(DefaultTransactionStatus status) {\n+  super.doRollback(status);\n+  this.getAuditer().clean();\n+ }\n+\n+ @Override\n+ protected void doCleanupAfterCompletion(Object transaction) {\n+  super.doCleanupAfterCompletion(transaction);\n+  this.getAuditer().clean();\n+ }\n+\n+ public Auditer getAuditer() {\n+  return this.auditer;\n+ }\n+\n+ public void setAuditer(Auditer auditer) {\n+  this.auditer = auditer;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/487/PerunTransactionManager.java\nindex c069cfba252..393793a06e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/487/PerunTransactionManager.java\n@@ -13,8 +13,8 @@ public class PerunTransactionManager extends DataSourceTransactionManager implem\n \tprivate static final long serialVersionUID = 1L;\n \n \tprivate Auditer auditer;\n-\t\n-\t@Override\n+\n+ @Override\n \tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n \t\tthis.getAuditer().newTopLevelTransaction();\n \t\tsuper.doBegin(transaction, definition);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/487/PerunTransactionManager.java\nindex c069cfba252..6f7ddc26167 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/487/PerunTransactionManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/487/PerunTransactionManager.java\n@@ -12,9 +12,8 @@ public class PerunTransactionManager extends DataSourceTransactionManager implem\n \n \tprivate static final long serialVersionUID = 1L;\n \n-\tprivate Auditer auditer;\n-\t\n-\t@Override\n+\tprivate Auditer auditer\n+ ; @Override\n \tprotected void doBegin(Object transaction, TransactionDefinition definition) {\n \t\tthis.getAuditer().newTopLevelTransaction();\n \t\tsuper.doBegin(transaction, definition);\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

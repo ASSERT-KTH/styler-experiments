@@ -1,0 +1,84 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "24",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 105).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "class EventWindowSort {\n    private final ConcurrentSkipListMap<ZonedDateTime, String> events\n      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n\n    void acceptEvent(Event event) {\n        events.put(event.getEventTime(), event.getContent());",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/24/EventWindowSort.java\nindex 2e501ed3681..0b689f14510 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/24/EventWindowSort.java\n@@ -7,7 +7,8 @@ import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n     private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+    = new ConcurrentSkipListMap<>(Comparator.comparingLong(\n+    value-> value.toInstant().toEpochMilli()));\n \n     void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/24/EventWindowSort.java\nindex 2e501ed3681..8b1efbf950b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/24/EventWindowSort.java\n@@ -7,7 +7,8 @@ import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n     private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+        = new ConcurrentSkipListMap<>(\n+        Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n \n     void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n@@ -15,14 +16,14 @@ class EventWindowSort {\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsFromLastMinute() {\n         return events.tailMap(ZonedDateTime\n-          .now()\n-          .minusMinutes(1));\n+            .now()\n+            .minusMinutes(1));\n     }\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsOlderThatOneMinute() {\n         return events.headMap(ZonedDateTime\n-          .now()\n-          .minusMinutes(1));\n+            .now()\n+            .minusMinutes(1));\n     }\n \n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 169).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/24/EventWindowSort.java\nindex 2e501ed3681..22db7fb0ea5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/24/EventWindowSort.java\n@@ -6,24 +6,20 @@ import java.util.concurrent.ConcurrentNavigableMap;\n import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n-    private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+    private final ConcurrentSkipListMap<ZonedDateTime, String> events = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n \n-    void acceptEvent(Event event) {\n+void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n     }\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsFromLastMinute() {\n-        return events.tailMap(ZonedDateTime\n-          .now()\n+        return events.tailMap(ZonedDateTime.now()\n           .minusMinutes(1));\n     }\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsOlderThatOneMinute() {\n-        return events.headMap(ZonedDateTime\n-          .now()\n+        return events.headMap(ZonedDateTime.now()\n           .minusMinutes(1));\n     }\n \n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 169).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/24/EventWindowSort.java\nindex 2e501ed3681..e76e8a7e47a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/24/EventWindowSort.java\n@@ -6,24 +6,18 @@ import java.util.concurrent.ConcurrentNavigableMap;\n import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n-    private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+\n+    private final ConcurrentSkipListMap<ZonedDateTime, String> events = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n \n     void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n     }\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsFromLastMinute() {\n-        return events.tailMap(ZonedDateTime\n-          .now()\n-          .minusMinutes(1));\n+        return events.tailMap(ZonedDateTime.now().minusMinutes(1));\n     }\n \n     ConcurrentNavigableMap<ZonedDateTime, String> getEventsOlderThatOneMinute() {\n-        return events.headMap(ZonedDateTime\n-          .now()\n-          .minusMinutes(1));\n+        return events.headMap(ZonedDateTime.now().minusMinutes(1));\n     }\n-\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/24/EventWindowSort.java\nindex 2e501ed3681..0b689f14510 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/24/EventWindowSort.java\n@@ -7,7 +7,8 @@ import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n     private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+    = new ConcurrentSkipListMap<>(Comparator.comparingLong(\n+    value-> value.toInstant().toEpochMilli()));\n \n     void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 169).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/24/EventWindowSort.java\nindex 2e501ed3681..d61e18490bb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/24/EventWindowSort.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/24/EventWindowSort.java\n@@ -6,10 +6,9 @@ import java.util.concurrent.ConcurrentNavigableMap;\n import java.util.concurrent.ConcurrentSkipListMap;\n \n class EventWindowSort {\n-    private final ConcurrentSkipListMap<ZonedDateTime, String> events\n-      = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n+    private final ConcurrentSkipListMap<ZonedDateTime, String> events = new ConcurrentSkipListMap<>(Comparator.comparingLong(value -> value.toInstant().toEpochMilli()));\n \n-    void acceptEvent(Event event) {\n+  void acceptEvent(Event event) {\n         events.put(event.getEventTime(), event.getContent());\n     }\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

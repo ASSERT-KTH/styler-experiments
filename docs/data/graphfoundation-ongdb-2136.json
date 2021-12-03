@@ -1,0 +1,180 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2136",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2018 \"Neo Technology,\"\n * Network Engine for Objects in Lund AB [http://neotechnology.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "19",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "101",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "47",
+                    "column": "12",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "55",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "108",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "109",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "57",
+                    "column": "61",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "22",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "70",
+                    "column": "52",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "70",
+                    "column": "87",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2136/RaftProtocolClientInstaller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2136/RaftProtocolClientInstaller.java\nindex 5d94c0013e1..e52add85c03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2136/RaftProtocolClientInstaller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2136/RaftProtocolClientInstaller.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU Affero General Public License\n  * along with this program. If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.causalclustering.core.consensus;\n \n import io.netty.channel.Channel;\n@@ -37,50 +38,50 @@ import org.neo4j.logging.LogProvider;\n \n public class RaftProtocolClientInstaller implements ProtocolInstaller<Orientation.Client>\n {\n-    private static final Protocol.ApplicationProtocols APPLICATION_PROTOCOL = Protocol.ApplicationProtocols.RAFT_1;\n+  private static final Protocol.ApplicationProtocols APPLICATION_PROTOCOL = Protocol.ApplicationProtocols.RAFT_1;\n \n-    public static class Factory extends ProtocolInstaller.Factory<Orientation.Client, RaftProtocolClientInstaller>\n+  public static class Factory extends ProtocolInstaller.Factory<Orientation.Client, RaftProtocolClientInstaller>\n+  {\n+    public Factory(NettyPipelineBuilderFactory clientPipelineBuilderFactory, LogProvider logProvider)\n     {\n-        public Factory( NettyPipelineBuilderFactory clientPipelineBuilderFactory, LogProvider logProvider )\n-        {\n-            super( APPLICATION_PROTOCOL,\n-                    modifiers -> new RaftProtocolClientInstaller( clientPipelineBuilderFactory, modifiers, logProvider ) );\n-        }\n+      super(APPLICATION_PROTOCOL,\n+          modifiers -> new RaftProtocolClientInstaller(clientPipelineBuilderFactory, modifiers, logProvider));\n     }\n+  }\n \n-    private final List<ModifierProtocolInstaller<Orientation.Client>> modifiers;\n-    private final Log log;\n-    private final NettyPipelineBuilderFactory clientPipelineBuilderFactory;\n+  private final List<ModifierProtocolInstaller<Orientation.Client>> modifiers;\n+  private final Log log;\n+  private final NettyPipelineBuilderFactory clientPipelineBuilderFactory;\n \n-    public RaftProtocolClientInstaller( NettyPipelineBuilderFactory clientPipelineBuilderFactory, List<ModifierProtocolInstaller<Orientation.Client>> modifiers,\n-            LogProvider logProvider )\n-    {\n-        this.modifiers = modifiers;\n-        this.log = logProvider.getLog( getClass() );\n-        this.clientPipelineBuilderFactory = clientPipelineBuilderFactory;\n-    }\n+  public RaftProtocolClientInstaller(NettyPipelineBuilderFactory clientPipelineBuilderFactory, List<ModifierProtocolInstaller<Orientation.Client>> modifiers,\n+                                     LogProvider logProvider)\n+  {\n+    this.modifiers = modifiers;\n+    this.log = logProvider.getLog(getClass());\n+    this.clientPipelineBuilderFactory = clientPipelineBuilderFactory;\n+  }\n \n-    @Override\n-    public void install( Channel channel ) throws Exception\n-    {\n-        clientPipelineBuilderFactory.client( channel, log )\n-                .modify( modifiers )\n-                .addFraming()\n-                .add( \"raft_encoder\", new RaftMessageEncoder( new CoreReplicatedContentMarshal() ) )\n-                .install();\n-    }\n+  @Override\n+  public void install(Channel channel) throws Exception\n+  {\n+    clientPipelineBuilderFactory.client(channel, log)\n+        .modify(modifiers)\n+        .addFraming()\n+        .add(\"raft_encoder\", new RaftMessageEncoder(new CoreReplicatedContentMarshal()))\n+        .install();\n+  }\n \n-    @Override\n-    public Protocol.ApplicationProtocol applicationProtocol()\n-    {\n-        return APPLICATION_PROTOCOL;\n-    }\n+  @Override\n+  public Protocol.ApplicationProtocol applicationProtocol()\n+  {\n+    return APPLICATION_PROTOCOL;\n+  }\n \n-    @Override\n-    public Collection<Collection<Protocol.ModifierProtocol>> modifiers()\n-    {\n-        return modifiers.stream()\n-                .map( ModifierProtocolInstaller::protocols )\n-                .collect( Collectors.toList() );\n-    }\n+  @Override\n+  public Collection<Collection<Protocol.ModifierProtocol>> modifiers()\n+  {\n+    return modifiers.stream()\n+        .map(ModifierProtocolInstaller::protocols)\n+        .collect(Collectors.toList());\n+  }\n }\n",
+            "diff_size": 42
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2136/RaftProtocolClientInstaller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2136/RaftProtocolClientInstaller.java\nindex 5d94c0013e1..618e6b6e322 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2136/RaftProtocolClientInstaller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2136/RaftProtocolClientInstaller.java\n@@ -45,7 +45,7 @@ public class RaftProtocolClientInstaller implements ProtocolInstaller<Orientatio\n         {\n             super( APPLICATION_PROTOCOL,\n                     modifiers -> new RaftProtocolClientInstaller( clientPipelineBuilderFactory, modifiers, logProvider ) );\n-        }\n+    }\n     }\n \n     private final List<ModifierProtocolInstaller<Orientation.Client>> modifiers;\n@@ -63,11 +63,8 @@ public class RaftProtocolClientInstaller implements ProtocolInstaller<Orientatio\n     @Override\n     public void install( Channel channel ) throws Exception\n     {\n-        clientPipelineBuilderFactory.client( channel, log )\n-                .modify( modifiers )\n-                .addFraming()\n-                .add( \"raft_encoder\", new RaftMessageEncoder( new CoreReplicatedContentMarshal() ) )\n-                .install();\n+        clientPipelineBuilderFactory.client( channel, log ).modify( modifiers )\n+                .addFraming().add( \"raft_encoder\", new RaftMessageEncoder( new CoreReplicatedContentMarshal() ) ).install();\n     }\n \n     @Override\n@@ -79,8 +76,6 @@ public class RaftProtocolClientInstaller implements ProtocolInstaller<Orientatio\n     @Override\n     public Collection<Collection<Protocol.ModifierProtocol>> modifiers()\n     {\n-        return modifiers.stream()\n-                .map( ModifierProtocolInstaller::protocols )\n-                .collect( Collectors.toList() );\n+        return modifiers.stream().map( ModifierProtocolInstaller::protocols ).collect( Collectors.toList() );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "271",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.spark.tsfile.qp.optimizer;\n\nimport org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\nimport org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/271/MergeSingleFilterOptimizer.java\nindex 2f4aabad7f0..34cd74c5e21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/271/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/271/MergeSingleFilterOptimizer.java\nindex 2f4aabad7f0..34cd74c5e21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/271/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/271/MergeSingleFilterOptimizer.java\nindex 2f4aabad7f0..3a502066bd2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/271/MergeSingleFilterOptimizer.java\n@@ -21,7 +21,6 @@ package org.apache.iotdb.spark.tsfile.qp.optimizer;\n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;\n import org.apache.iotdb.spark.tsfile.qp.exception.MergeFilterException;\n-\n import java.util.ArrayList;\n import java.util.Collections;\n import java.util.List;\n@@ -31,7 +30,6 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n   @Override\n   public FilterOperator optimize(FilterOperator filter) throws MergeFilterException {\n     mergeSamePathFilter(filter);\n-\n     return filter;\n   }\n \n@@ -66,7 +64,6 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n     // make same paths close\n     Collections.sort(children);\n     List<FilterOperator> ret = new ArrayList<>();\n-\n     List<FilterOperator> tempExtrNode = null;\n     int i;\n     for (i = 0; i < children.size(); i++) {\n@@ -140,4 +137,4 @@ public class MergeSingleFilterOptimizer implements IFilterOptimizer {\n     }\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "63",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/271/MergeSingleFilterOptimizer.java\nindex 2f4aabad7f0..23a9e6745ed 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/271/MergeSingleFilterOptimizer.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.spark.tsfile.qp.optimizer;\n+package org.apache.iotdb.spark.tsfile.qp.optimizer\n \n-import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n+; import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;\n import org.apache.iotdb.spark.tsfile.qp.exception.MergeFilterException;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/271/MergeSingleFilterOptimizer.java\nindex 2f4aabad7f0..34cd74c5e21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/271/MergeSingleFilterOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/271/MergeSingleFilterOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

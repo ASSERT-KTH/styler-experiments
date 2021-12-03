@@ -1,0 +1,124 @@
+{
+    "project_name": "GourdErwa-MyNote",
+    "violation_id": "52",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n\n    Person findByName(String name);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/52/PersonRepository.java\nindex ef22a662785..e16cb871f27 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/52/PersonRepository.java\n@@ -34,6 +34,6 @@ import org.springframework.stereotype.Repository;\n @Repository\n public interface PersonRepository\n         extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n-\n-    Person findByName(String name);\n-}\n+    Person\n+        findByName(String name);\n+ }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/52/PersonRepository.java\nindex ef22a662785..5ac7b54e469 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/52/PersonRepository.java\n@@ -20,6 +20,7 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package com.iluwatar.repository;\n \n import org.springframework.data.jpa.repository.JpaSpecificationExecutor;\n@@ -27,13 +28,11 @@ import org.springframework.data.repository.CrudRepository;\n import org.springframework.stereotype.Repository;\n \n /**\n- *\n  * Person repository\n- *\n  */\n @Repository\n public interface PersonRepository\n-        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n+    extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n \n-    Person findByName(String name);\n+  Person findByName(String name);\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/52/PersonRepository.java\nindex ef22a662785..9f7bf2c22b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/52/PersonRepository.java\n@@ -32,8 +32,6 @@ import org.springframework.stereotype.Repository;\n  *\n  */\n @Repository\n-public interface PersonRepository\n-        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n-\n-    Person findByName(String name);\n-}\n+public interface PersonRepository extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n+Person findByName(String name);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 139).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "97",
+                    "severity": "error",
+                    "message": "GenericWhitespace '<' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/52/PersonRepository.java\nindex ef22a662785..79607a5ef4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/52/PersonRepository.java\n@@ -31,9 +31,10 @@ import org.springframework.stereotype.Repository;\n  * Person repository\n  *\n  */\n+\n+\n @Repository\n-public interface PersonRepository\n-        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n+public interface PersonRepository extends CrudRepository<Person, Long>, JpaSpecificationExecutor< Person> { Person findByName( String name)\n+;\n \n-    Person findByName(String name);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/52/PersonRepository.java\nindex ef22a662785..4bef4650920 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/52/PersonRepository.java\n@@ -33,7 +33,5 @@ import org.springframework.stereotype.Repository;\n  */\n @Repository\n public interface PersonRepository\n-        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n-\n-    Person findByName(String name);\n-}\n+        extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {Person findByName(String name);\n+    }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/52/PersonRepository.java\nindex ef22a662785..e16cb871f27 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/52/PersonRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/52/PersonRepository.java\n@@ -34,6 +34,6 @@ import org.springframework.stereotype.Repository;\n @Repository\n public interface PersonRepository\n         extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person> {\n-\n-    Person findByName(String name);\n-}\n+    Person\n+        findByName(String name);\n+ }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "420",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.api.task.model.builders;\n\nimport org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..828036d046f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/420/GetTaskVariablesPayloadBuilder.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..828036d046f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/420/GetTaskVariablesPayloadBuilder.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..1bd333ba5aa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/420/GetTaskVariablesPayloadBuilder.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n@@ -26,9 +27,9 @@ public class GetTaskVariablesPayloadBuilder {\n     public GetTaskVariablesPayloadBuilder withTaskId(String taskId) {\n         this.taskId = taskId;\n         return this;\n-    }\n+  }\n \n     public GetTaskVariablesPayload build() {\n         return new GetTaskVariablesPayload(taskId);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "'CLASS_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..f94f3a0746d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/420/GetTaskVariablesPayloadBuilder.java\n@@ -16,19 +16,18 @@\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n-\n import java.util.Collection;\n \n-public class GetTaskVariablesPayloadBuilder {\n \n-    private String taskId;\n+public class GetTaskVariablesPayloadBuilder {\n \n-    public GetTaskVariablesPayloadBuilder withTaskId(String taskId) {\n-        this.taskId = taskId;\n-        return this;\n-    }\n+  private String taskId;\n+  public GetTaskVariablesPayloadBuilder withTaskId(String taskId) {\n+    this.taskId = taskId;\n+    return this;\n+  }\n \n-    public GetTaskVariablesPayload build() {\n-        return new GetTaskVariablesPayload(taskId);\n-    }\n-}\n+  public GetTaskVariablesPayload build() {\n+    return new GetTaskVariablesPayload(taskId);\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..828036d046f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/420/GetTaskVariablesPayloadBuilder.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/420/GetTaskVariablesPayloadBuilder.java\nindex 8dbb0e89faf..828036d046f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/420/GetTaskVariablesPayloadBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/420/GetTaskVariablesPayloadBuilder.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.api.task.model.builders;\n \n import org.activiti.api.task.model.payloads.GetTaskVariablesPayload;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

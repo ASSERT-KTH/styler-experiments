@@ -1,0 +1,76 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "257",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.read.query.timegenerator.node;\n\nimport org.apache.iotdb.tsfile.read.common.BatchData;\nimport org.apache.iotdb.tsfile.read.reader.IBatchReader;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/257/LeafNode.java\nindex 4b68d65c0a3..afd59241e06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/257/LeafNode.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.query.timegenerator.node;\n \n import org.apache.iotdb.tsfile.read.common.BatchData;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/257/LeafNode.java\nindex 4b68d65c0a3..1086859b6b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/257/LeafNode.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.query.timegenerator.node;\n \n import org.apache.iotdb.tsfile.read.common.BatchData;\n@@ -80,7 +81,9 @@ public class LeafNode implements Node {\n     return cachedTime == time;\n   }\n \n-  /** Function for getting the value at the given time. */\n+  /**\n+   * Function for getting the value at the given time.\n+   */\n   public Object currentValue() {\n     return cachedValue;\n   }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/257/LeafNode.java\nindex 4b68d65c0a3..2593e039c07 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/257/LeafNode.java\n@@ -20,16 +20,13 @@ package org.apache.iotdb.tsfile.read.query.timegenerator.node;\n \n import org.apache.iotdb.tsfile.read.common.BatchData;\n import org.apache.iotdb.tsfile.read.reader.IBatchReader;\n-\n import java.io.IOException;\n \n public class LeafNode implements Node {\n \n   private IBatchReader reader;\n-\n   private BatchData cacheData;\n   private boolean hasCached;\n-\n   private long cachedTime;\n   private Object cachedValue;\n \n@@ -76,11 +73,13 @@ public class LeafNode implements Node {\n    * @param time the given time\n    * @return True if the current time equals the given time. False if not.\n    */\n+\n   public boolean currentTimeIs(long time) {\n     return cachedTime == time;\n   }\n \n   /** Function for getting the value at the given time. */\n+\n   public Object currentValue() {\n     return cachedValue;\n   }\n@@ -89,4 +88,4 @@ public class LeafNode implements Node {\n   public NodeType getType() {\n     return NodeType.LEAF;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/257/LeafNode.java\nindex 4b68d65c0a3..afd59241e06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/257/LeafNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/257/LeafNode.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.query.timegenerator.node;\n \n import org.apache.iotdb.tsfile.read.common.BatchData;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "934",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.bpmn.model;\n\npublic class MapExceptionEntry {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/934/MapExceptionEntry.java\nindex c92cdd37b27..55fc624bee4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/934/MapExceptionEntry.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class MapExceptionEntry {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/934/MapExceptionEntry.java\nindex c92cdd37b27..b6c0facb379 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/934/MapExceptionEntry.java\n@@ -13,43 +13,44 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class MapExceptionEntry {\n \n-  String errorCode;\n-  String className;\n-  boolean andChildren;\n+    String errorCode;\n+    String className;\n+    boolean andChildren;\n \n-  public MapExceptionEntry(String errorCode, String className, boolean andChildren) {\n+    public MapExceptionEntry(String errorCode, String className, boolean andChildren) {\n \n-    this.errorCode = errorCode;\n-    this.className = className;\n-    this.andChildren = andChildren;\n-  }\n+        this.errorCode = errorCode;\n+        this.className = className;\n+        this.andChildren = andChildren;\n+    }\n \n-  public String getErrorCode() {\n-    return errorCode;\n-  }\n+    public String getErrorCode() {\n+        return errorCode;\n+    }\n \n-  public void setErrorCode(String errorCode) {\n-    this.errorCode = errorCode;\n-  }\n+    public void setErrorCode(String errorCode) {\n+        this.errorCode = errorCode;\n+    }\n \n-  public String getClassName() {\n-    return className;\n-  }\n+    public String getClassName() {\n+        return className;\n+    }\n \n-  public void setClassName(String className) {\n-    this.className = className;\n-  }\n+    public void setClassName(String className) {\n+        this.className = className;\n+    }\n \n-  public boolean isAndChildren() {\n-    return andChildren;\n-  }\n+    public boolean isAndChildren() {\n+        return andChildren;\n+    }\n \n-  public void setAndChildren(boolean andChildren) {\n-    this.andChildren = andChildren;\n-  }\n+    public void setAndChildren(boolean andChildren) {\n+        this.andChildren = andChildren;\n+    }\n \n }\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/934/MapExceptionEntry.java\nindex c92cdd37b27..7ad1b4fac46 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/934/MapExceptionEntry.java\n@@ -22,7 +22,6 @@ public class MapExceptionEntry {\n   boolean andChildren;\n \n   public MapExceptionEntry(String errorCode, String className, boolean andChildren) {\n-\n     this.errorCode = errorCode;\n     this.className = className;\n     this.andChildren = andChildren;\n@@ -52,4 +51,4 @@ public class MapExceptionEntry {\n     this.andChildren = andChildren;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/934/MapExceptionEntry.java\nindex c92cdd37b27..4c6f0e0fd28 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/934/MapExceptionEntry.java\n@@ -13,7 +13,9 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package org.activiti.bpmn.model;\n+package org.activiti.\n+\n+bpmn.model;\n \n public class MapExceptionEntry {\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/934/MapExceptionEntry.java\nindex c92cdd37b27..55fc624bee4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/934/MapExceptionEntry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/934/MapExceptionEntry.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class MapExceptionEntry {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

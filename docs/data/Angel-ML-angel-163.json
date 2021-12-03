@@ -1,0 +1,84 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "163",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private int numBuckets;\n\n  public PullDegreeBucketPartitionParam(int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n    super(matrixId, partKey);\n    this.maxDegree = maxDegree;\n    this.minDegree = minDegree;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/163/PullDegreeBucketPartitionParam.java\nindex c0e246b7af7..88109dcfb12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/163/PullDegreeBucketPartitionParam.java\n@@ -9,8 +9,9 @@ public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n   private int minDegree;\n   private int numBuckets;\n \n-  public PullDegreeBucketPartitionParam(int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n-    super(matrixId, partKey);\n+  public PullDegreeBucketPartitionParam(\n+      int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n+super(matrixId, partKey);\n     this.maxDegree = maxDegree;\n     this.minDegree = minDegree;\n     this.numBuckets = numBuckets;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/163/PullDegreeBucketPartitionParam.java\nindex c0e246b7af7..561a61ebb4f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/163/PullDegreeBucketPartitionParam.java\n@@ -5,67 +5,71 @@ import com.tencent.angel.ml.matrix.psf.get.base.PartitionGetParam;\n import io.netty.buffer.ByteBuf;\n \n public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n-  private int maxDegree;\n-  private int minDegree;\n-  private int numBuckets;\n+    private int maxDegree;\n+    private int minDegree;\n+    private int numBuckets;\n \n-  public PullDegreeBucketPartitionParam(int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n-    super(matrixId, partKey);\n-    this.maxDegree = maxDegree;\n-    this.minDegree = minDegree;\n-    this.numBuckets = numBuckets;\n-  }\n+    public PullDegreeBucketPartitionParam(int matrixId, PartitionKey partKey, int maxDegree,\n+                                          int minDegree, int numBuckets) {\n+        super(matrixId, partKey);\n+        this.maxDegree = maxDegree;\n+        this.minDegree = minDegree;\n+        this.numBuckets = numBuckets;\n+    }\n \n-  public PullDegreeBucketPartitionParam(int maxDegree, int minDegree, int numBuckets) {\n-    this.maxDegree = maxDegree;\n-    this.minDegree = minDegree;\n-    this.numBuckets = numBuckets;\n-  }\n+    public PullDegreeBucketPartitionParam(int maxDegree, int minDegree, int numBuckets) {\n+        this.maxDegree = maxDegree;\n+        this.minDegree = minDegree;\n+        this.numBuckets = numBuckets;\n+    }\n \n-  public PullDegreeBucketPartitionParam() {\n-    super();\n-  }\n+    public PullDegreeBucketPartitionParam() {\n+        super();\n+    }\n \n-  public int getMaxDegree() {\n-    return maxDegree;\n-  }\n+    public int getMaxDegree() {\n+        return maxDegree;\n+    }\n \n-  public void setMaxDegree(int maxDegree) {\n-    this.maxDegree = maxDegree;\n-  }\n+    public void setMaxDegree(int maxDegree) {\n+        this.maxDegree = maxDegree;\n+    }\n \n-  public int getMinDegree() {\n-    return minDegree;\n-  }\n+    public int getMinDegree() {\n+        return minDegree;\n+    }\n \n-  public void setMinDegree(int minDegree) {\n-    this.minDegree = minDegree;\n-  }\n+    public void setMinDegree(int minDegree) {\n+        this.minDegree = minDegree;\n+    }\n \n-  public int getNumBuckets() {\n-    return numBuckets;\n-  }\n+    public int getNumBuckets() {\n+        return numBuckets;\n+    }\n \n-  public void setNumBuckets(int numBuckets) {\n-    this.numBuckets = numBuckets;\n-  }\n+    public void setNumBuckets(int numBuckets) {\n+        this.numBuckets = numBuckets;\n+    }\n \n-  @Override public void serialize(ByteBuf buf) {\n-    super.serialize(buf);\n-    buf.writeInt(maxDegree);\n-    buf.writeInt(minDegree);\n-    buf.writeInt(numBuckets);\n-  }\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        super.serialize(buf);\n+        buf.writeInt(maxDegree);\n+        buf.writeInt(minDegree);\n+        buf.writeInt(numBuckets);\n+    }\n \n-  @Override public void deserialize(ByteBuf buf) {\n-    super.deserialize(buf);\n-    maxDegree = buf.readInt();\n-    minDegree = buf.readInt();\n-    numBuckets = buf.readInt();\n-  }\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        super.deserialize(buf);\n+        maxDegree = buf.readInt();\n+        minDegree = buf.readInt();\n+        numBuckets = buf.readInt();\n+    }\n \n-  @Override public int bufferLen() {\n-    return 12 + super.bufferLen();\n-  }\n+    @Override\n+    public int bufferLen() {\n+        return 12 + super.bufferLen();\n+    }\n \n }\n",
+            "diff_size": 54
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/163/PullDegreeBucketPartitionParam.java\nindex c0e246b7af7..1508aa330c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/163/PullDegreeBucketPartitionParam.java\n@@ -50,22 +50,25 @@ public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n     this.numBuckets = numBuckets;\n   }\n \n-  @Override public void serialize(ByteBuf buf) {\n+  @Override\n+public void serialize(ByteBuf buf) {\n     super.serialize(buf);\n     buf.writeInt(maxDegree);\n     buf.writeInt(minDegree);\n     buf.writeInt(numBuckets);\n   }\n \n-  @Override public void deserialize(ByteBuf buf) {\n+  @Override\n+public void deserialize(ByteBuf buf) {\n     super.deserialize(buf);\n     maxDegree = buf.readInt();\n     minDegree = buf.readInt();\n     numBuckets = buf.readInt();\n   }\n \n-  @Override public int bufferLen() {\n+  @Override\n+public int bufferLen() {\n     return 12 + super.bufferLen();\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/163/PullDegreeBucketPartitionParam.java\nindex c0e246b7af7..6dde24640a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/163/PullDegreeBucketPartitionParam.java\n@@ -5,6 +5,7 @@ import com.tencent.angel.ml.matrix.psf.get.base.PartitionGetParam;\n import io.netty.buffer.ByteBuf;\n \n public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n+\n   private int maxDegree;\n   private int minDegree;\n   private int numBuckets;\n@@ -50,22 +51,25 @@ public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n     this.numBuckets = numBuckets;\n   }\n \n-  @Override public void serialize(ByteBuf buf) {\n+  @Override\n+  public void serialize(ByteBuf buf) {\n     super.serialize(buf);\n     buf.writeInt(maxDegree);\n     buf.writeInt(minDegree);\n     buf.writeInt(numBuckets);\n   }\n \n-  @Override public void deserialize(ByteBuf buf) {\n+  @Override\n+  public void deserialize(ByteBuf buf) {\n     super.deserialize(buf);\n     maxDegree = buf.readInt();\n     minDegree = buf.readInt();\n     numBuckets = buf.readInt();\n   }\n \n-  @Override public int bufferLen() {\n+  @Override\n+  public int bufferLen() {\n     return 12 + super.bufferLen();\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/163/PullDegreeBucketPartitionParam.java\nindex c0e246b7af7..88109dcfb12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/163/PullDegreeBucketPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/163/PullDegreeBucketPartitionParam.java\n@@ -9,8 +9,9 @@ public class PullDegreeBucketPartitionParam extends PartitionGetParam {\n   private int minDegree;\n   private int numBuckets;\n \n-  public PullDegreeBucketPartitionParam(int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n-    super(matrixId, partKey);\n+  public PullDegreeBucketPartitionParam(\n+      int matrixId, PartitionKey partKey, int maxDegree, int minDegree, int numBuckets) {\n+super(matrixId, partKey);\n     this.maxDegree = maxDegree;\n     this.minDegree = minDegree;\n     this.numBuckets = numBuckets;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

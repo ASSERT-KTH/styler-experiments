@@ -1,0 +1,93 @@
+{
+    "project_name": "seedstack-business",
+    "violation_id": "59",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.business.domain;\n\n@Deprecated\npublic abstract class LegacyBaseRepository<A extends AggregateRoot<I>, I> extends BaseRepository<A, I> implements",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/59/LegacyBaseRepository.java\nindex 8610425c82c..4403a6df568 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/59/LegacyBaseRepository.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.domain;\n \n @Deprecated\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/59/LegacyBaseRepository.java\nindex 8610425c82c..4403a6df568 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/59/LegacyBaseRepository.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.domain;\n \n @Deprecated\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "14",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'class def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/59/LegacyBaseRepository.java\nindex 8610425c82c..28ebdd577b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/59/LegacyBaseRepository.java\n@@ -10,4 +10,5 @@ package org.seedstack.business.domain;\n @Deprecated\n public abstract class LegacyBaseRepository<A extends AggregateRoot<I>, I> extends BaseRepository<A, I> implements\n         LegacyRepository<A, I> {\n-}\n+\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "11",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 139).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/59/LegacyBaseRepository.java\nindex 8610425c82c..b66afed02cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/59/LegacyBaseRepository.java\n@@ -8,6 +8,4 @@\n package org.seedstack.business.domain;\n \n @Deprecated\n-public abstract class LegacyBaseRepository<A extends AggregateRoot<I>, I> extends BaseRepository<A, I> implements\n-        LegacyRepository<A, I> {\n-}\n+public abstract class LegacyBaseRepository<A extends AggregateRoot<I>, I> extends BaseRepository<A, I> implements LegacyRepository<A, I> {}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/59/LegacyBaseRepository.java\nindex 8610425c82c..4403a6df568 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/59/LegacyBaseRepository.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.domain;\n \n @Deprecated\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/59/LegacyBaseRepository.java\nindex 8610425c82c..4403a6df568 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/59/LegacyBaseRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/59/LegacyBaseRepository.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.domain;\n \n @Deprecated\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

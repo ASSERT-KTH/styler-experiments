@@ -1,0 +1,95 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "315",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.physical.sys;\n\nimport org.apache.iotdb.db.exception.metadata.IllegalPathException;\nimport org.apache.iotdb.db.index.common.IndexType;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/315/DropIndexPlan.java\nindex 012615333db..9eab18d5436 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/315/DropIndexPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.exception.metadata.IllegalPathException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/315/DropIndexPlan.java\nindex 012615333db..9eab18d5436 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/315/DropIndexPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.exception.metadata.IllegalPathException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/315/DropIndexPlan.java\nindex 012615333db..6889dd49843 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/315/DropIndexPlan.java\n@@ -24,7 +24,6 @@ import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.logical.Operator;\n import org.apache.iotdb.db.qp.logical.Operator.OperatorType;\n import org.apache.iotdb.db.qp.physical.PhysicalPlan;\n-\n import java.io.DataOutputStream;\n import java.io.IOException;\n import java.nio.ByteBuffer;\n@@ -69,12 +68,10 @@ public class DropIndexPlan extends PhysicalPlan {\n   public void serialize(DataOutputStream stream) throws IOException {\n     stream.writeByte((byte) PhysicalPlanType.DROP_INDEX.ordinal());\n     stream.write((byte) indexType.serialize());\n-\n     stream.writeInt(paths.size());\n     for (PartialPath path : paths) {\n       putString(stream, path.getFullPath());\n     }\n-\n     stream.writeLong(index);\n   }\n \n@@ -83,25 +80,21 @@ public class DropIndexPlan extends PhysicalPlan {\n     int type = PhysicalPlanType.DROP_INDEX.ordinal();\n     buffer.put((byte) type);\n     buffer.put((byte) indexType.serialize());\n-\n     buffer.putInt(paths.size());\n     for (PartialPath path : paths) {\n       putString(buffer, path.getFullPath());\n     }\n-\n     buffer.putLong(index);\n   }\n \n   @Override\n   public void deserialize(ByteBuffer buffer) throws IllegalPathException {\n     indexType = IndexType.deserialize(buffer.get());\n-\n     int pathNum = buffer.getInt();\n     paths = new ArrayList<>();\n     for (int i = 0; i < pathNum; i++) {\n       paths.add(new PartialPath(readString(buffer)));\n     }\n-\n     this.index = buffer.getLong();\n   }\n \n@@ -126,4 +119,4 @@ public class DropIndexPlan extends PhysicalPlan {\n   public String toString() {\n     return String.format(\"paths: %s, index type: %s\", paths, indexType);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "69",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/315/DropIndexPlan.java\nindex 012615333db..e94e0cbe404 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/315/DropIndexPlan.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.physical.sys;\n+package org.apache.iotdb.db.qp.physical.sys\n \n-import org.apache.iotdb.db.exception.metadata.IllegalPathException;\n+; import org.apache.iotdb.db.exception.metadata.IllegalPathException;\n import org.apache.iotdb.db.index.common.IndexType;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.logical.Operator;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/315/DropIndexPlan.java\nindex 012615333db..9eab18d5436 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/315/DropIndexPlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/315/DropIndexPlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.sys;\n \n import org.apache.iotdb.db.exception.metadata.IllegalPathException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

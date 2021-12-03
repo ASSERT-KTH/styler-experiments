@@ -1,0 +1,71 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "42",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "1",
+                "severity": "error",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic enum ServiceType {\n\tEJB, JMS;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/42/ServiceType.java\nindex 96f1fda0dce..ed79fd27ac2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/42/ServiceType.java\n@@ -3,5 +3,5 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n+EJB, JMS;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/42/ServiceType.java\nindex 96f1fda0dce..9aba24652f9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/42/ServiceType.java\n@@ -3,5 +3,5 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n+  EJB, JMS;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "'enum def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/42/ServiceType.java\nindex 96f1fda0dce..8ec221f26b3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/42/ServiceType.java\n@@ -3,5 +3,6 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n-}\n+\n+  EJB, JMS;\n+  }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/42/ServiceType.java\nindex 96f1fda0dce..1776a959d1f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/42/ServiceType.java\n@@ -3,5 +3,7 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n-}\n+\n+  EJB, JMS;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/42/ServiceType.java\nindex 96f1fda0dce..ed79fd27ac2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/42/ServiceType.java\n@@ -3,5 +3,5 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n+EJB, JMS;\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/42/ServiceType.java\nindex 96f1fda0dce..9aba24652f9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/42/ServiceType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/42/ServiceType.java\n@@ -3,5 +3,5 @@\n  * Enumeration for service types\n  */\n public enum ServiceType {\n-\tEJB, JMS;\n+  EJB, JMS;\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

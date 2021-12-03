@@ -1,0 +1,86 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "597",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "7",
+                "severity": "error",
+                "message": "',' should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n      , int startIndex, int endIndex) {\n    super(matrixId, part);\n    this.nodeIds = nodeIds;\n    this.startIndex = startIndex;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..652d4146c0b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/597/PartGetNodeFeatsParam.java\n@@ -15,8 +15,8 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   private int endIndex;\n \n \n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n+  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds,\n+      int startIndex, int endIndex) {\n     super(matrixId, part);\n     this.nodeIds = nodeIds;\n     this.startIndex = startIndex;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "13",
+                    "severity": "error",
+                    "message": "',' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..80a997e2af6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/597/PartGetNodeFeatsParam.java\n@@ -6,63 +6,63 @@ import io.netty.buffer.ByteBuf;\n \n public class PartGetNodeFeatsParam extends PartitionGetParam {\n \n-  /**\n-   * Node ids\n-   */\n-  private int[] nodeIds;\n+    /**\n+     * Node ids\n+     */\n+    private int[] nodeIds;\n \n-  private int startIndex;\n-  private int endIndex;\n+    private int startIndex;\n+    private int endIndex;\n \n \n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n-    super(matrixId, part);\n-    this.nodeIds = nodeIds;\n-    this.startIndex = startIndex;\n-    this.endIndex = endIndex;\n-  }\n+    public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n+            , int startIndex, int endIndex) {\n+        super(matrixId, part);\n+        this.nodeIds = nodeIds;\n+        this.startIndex = startIndex;\n+        this.endIndex = endIndex;\n+    }\n \n-  public PartGetNodeFeatsParam() {\n-    this(-1, null, null, -1, -1);\n-  }\n+    public PartGetNodeFeatsParam() {\n+        this(-1, null, null, -1, -1);\n+    }\n \n-  public int[] getNodeIds() {\n-    return nodeIds;\n-  }\n+    public int[] getNodeIds() {\n+        return nodeIds;\n+    }\n \n-  public void setNodeIds(int[] nodeIds) {\n-    this.nodeIds = nodeIds;\n-  }\n+    public void setNodeIds(int[] nodeIds) {\n+        this.nodeIds = nodeIds;\n+    }\n \n-  public int getStartIndex() {\n-    return startIndex;\n-  }\n+    public int getStartIndex() {\n+        return startIndex;\n+    }\n \n-  public int getEndIndex() {\n-    return endIndex;\n-  }\n+    public int getEndIndex() {\n+        return endIndex;\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf buf) {\n-    super.serialize(buf);\n-    buf.writeInt(endIndex - startIndex);\n-    for (int i = startIndex; i < endIndex; i++) {\n-      buf.writeInt(nodeIds[i]);\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        super.serialize(buf);\n+        buf.writeInt(endIndex - startIndex);\n+        for (int i = startIndex; i < endIndex; i++) {\n+            buf.writeInt(nodeIds[i]);\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf buf) {\n-    super.deserialize(buf);\n-    nodeIds = new int[buf.readInt()];\n-    for (int i = 0; i < nodeIds.length; i++) {\n-      nodeIds[i] = buf.readInt();\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        super.deserialize(buf);\n+        nodeIds = new int[buf.readInt()];\n+        for (int i = 0; i < nodeIds.length; i++) {\n+            nodeIds[i] = buf.readInt();\n+        }\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    return super.bufferLen() + 4 + 4 * nodeIds.length;\n-  }\n+    @Override\n+    public int bufferLen() {\n+        return super.bufferLen() + 4 + 4 * nodeIds.length;\n+    }\n }\n",
+            "diff_size": 48
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..f2d8e096fb7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/597/PartGetNodeFeatsParam.java\n@@ -15,8 +15,7 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   private int endIndex;\n \n \n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n+  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds, int startIndex, int endIndex) {\n     super(matrixId, part);\n     this.nodeIds = nodeIds;\n     this.startIndex = startIndex;\n@@ -65,4 +64,4 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   public int bufferLen() {\n     return super.bufferLen() + 4 + 4 * nodeIds.length;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..80db2cae2ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/597/PartGetNodeFeatsParam.java\n@@ -9,14 +9,12 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   /**\n    * Node ids\n    */\n-  private int[] nodeIds;\n \n+  private int[] nodeIds;\n   private int startIndex;\n   private int endIndex;\n \n-\n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n+  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds, int startIndex, int endIndex) {\n     super(matrixId, part);\n     this.nodeIds = nodeIds;\n     this.startIndex = startIndex;\n@@ -65,4 +63,4 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   public int bufferLen() {\n     return super.bufferLen() + 4 + 4 * nodeIds.length;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..652d4146c0b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/597/PartGetNodeFeatsParam.java\n@@ -15,8 +15,8 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   private int endIndex;\n \n \n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n+  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds,\n+      int startIndex, int endIndex) {\n     super(matrixId, part);\n     this.nodeIds = nodeIds;\n     this.startIndex = startIndex;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/597/PartGetNodeFeatsParam.java\nindex 1db07bf0fae..9c9fc8365fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/597/PartGetNodeFeatsParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/597/PartGetNodeFeatsParam.java\n@@ -15,8 +15,8 @@ public class PartGetNodeFeatsParam extends PartitionGetParam {\n   private int endIndex;\n \n \n-  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds\n-      , int startIndex, int endIndex) {\n+  public PartGetNodeFeatsParam(int matrixId, PartitionKey part, int[] nodeIds,\n+                 int startIndex, int endIndex) {\n     super(matrixId, part);\n     this.nodeIds = nodeIds;\n     this.startIndex = startIndex;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

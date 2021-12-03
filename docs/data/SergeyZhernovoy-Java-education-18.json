@@ -1,0 +1,63 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "47",
+                "column": "61",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    public JsonArray converterToJson(Collection<Item> items){\n        JsonArray array = new JsonArray();\n        Item item = null;\n        for (Item task : items) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/18/Controller.java\nindex 77bc32b9510..59cf520ecda 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/18/Controller.java\n@@ -44,7 +44,7 @@ public class Controller extends HttpServlet {\n         out.flush();\n     }\n \n-    public JsonArray converterToJson(Collection<Item> items){\n+    public JsonArray converterToJson(Collection<Item> items) {\n         JsonArray array = new JsonArray();\n         Item item = null;\n         for (Item task : items) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/18/Controller.java\nindex 77bc32b9510..ba32d637e3e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/18/Controller.java\n@@ -18,11 +18,12 @@ import java.util.Collection;\n  */\n public class Controller extends HttpServlet {\n     @Override\n-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)\n+        throws ServletException, IOException {\n         resp.setContentType(\"text/json\");\n         DBManager manager = new DBManager();\n         PrintWriter out = resp.getWriter();\n-        JsonObject result  = new JsonObject();\n+        JsonObject result = new JsonObject();\n         Item task = new Item();\n         task.setDesc(req.getParameter(\"descr\"));\n         task.setDone(Boolean.valueOf(req.getParameter(\"done\")));\n@@ -32,19 +33,21 @@ public class Controller extends HttpServlet {\n     }\n \n     @Override\n-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)\n+        throws ServletException, IOException {\n         resp.setContentType(\"text/json;charset=Windows-1251\");\n         resp.setCharacterEncoding(\"UTF-8\");\n         boolean alltasks = Boolean.valueOf(req.getParameter(\"doneAll\"));\n         PrintWriter out = new PrintWriter(resp.getOutputStream());\n         JsonObject jsonObject = new JsonObject();\n         DBManager manager = new DBManager();\n-        jsonObject.addProperty(\"tasks\", converterToJson(manager.getItems(alltasks)).toString());\n+        jsonObject.addProperty(\"tasks\",\n+            converterToJson(manager.getItems(alltasks)).toString());\n         out.append(jsonObject.toString());\n         out.flush();\n     }\n \n-    public JsonArray converterToJson(Collection<Item> items){\n+    public JsonArray converterToJson(Collection<Item> items) {\n         JsonArray array = new JsonArray();\n         Item item = null;\n         for (Item task : items) {\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/18/Controller.java\nindex 77bc32b9510..562c223ee79 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/18/Controller.java\n@@ -22,7 +22,7 @@ public class Controller extends HttpServlet {\n         resp.setContentType(\"text/json\");\n         DBManager manager = new DBManager();\n         PrintWriter out = resp.getWriter();\n-        JsonObject result  = new JsonObject();\n+        JsonObject result = new JsonObject();\n         Item task = new Item();\n         task.setDesc(req.getParameter(\"descr\"));\n         task.setDone(Boolean.valueOf(req.getParameter(\"done\")));\n@@ -44,7 +44,7 @@ public class Controller extends HttpServlet {\n         out.flush();\n     }\n \n-    public JsonArray converterToJson(Collection<Item> items){\n+    public JsonArray converterToJson(Collection<Item> items) {\n         JsonArray array = new JsonArray();\n         Item item = null;\n         for (Item task : items) {\n@@ -62,4 +62,4 @@ public class Controller extends HttpServlet {\n     }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/18/Controller.java\nindex 77bc32b9510..59cf520ecda 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/18/Controller.java\n@@ -44,7 +44,7 @@ public class Controller extends HttpServlet {\n         out.flush();\n     }\n \n-    public JsonArray converterToJson(Collection<Item> items){\n+    public JsonArray converterToJson(Collection<Item> items) {\n         JsonArray array = new JsonArray();\n         Item item = null;\n         for (Item task : items) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/18/Controller.java\nindex 77bc32b9510..59cf520ecda 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/18/Controller.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/18/Controller.java\n@@ -44,7 +44,7 @@ public class Controller extends HttpServlet {\n         out.flush();\n     }\n \n-    public JsonArray converterToJson(Collection<Item> items){\n+    public JsonArray converterToJson(Collection<Item> items) {\n         JsonArray array = new JsonArray();\n         Item item = null;\n         for (Item task : items) {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

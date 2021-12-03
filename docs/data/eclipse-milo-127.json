@@ -1,0 +1,105 @@
+{
+    "project_name": "eclipse-milo",
+    "violation_id": "127",
+    "information": {
+        "violations": [
+            {
+                "line": "36",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=939\");\n\n    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n\n    private final ByteString tokenData;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/127/IssuedIdentityToken.java\nindex e8c5ec6b284..e4c38bd0124 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/checkstyle_idea/127/IssuedIdentityToken.java\n@@ -33,7 +33,8 @@ public class IssuedIdentityToken extends UserIdentityToken implements UaStructur\n \n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=939\");\n \n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n+    public static final ExpandedNodeId BINARY_ENCODING_ID =\n+        ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n \n     private final ByteString tokenData;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/127/IssuedIdentityToken.java\nindex e8c5ec6b284..5893ff9296b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/naturalize/127/IssuedIdentityToken.java\n@@ -89,4 +89,4 @@ public class IssuedIdentityToken extends UserIdentityToken implements UaStructur\n             encoder.writeString(\"EncryptionAlgorithm\", value.getEncryptionAlgorithm());\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/127/IssuedIdentityToken.java\nindex e8c5ec6b284..89e266d441f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/codebuff/127/IssuedIdentityToken.java\n@@ -29,10 +29,13 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.ExpandedNodeId;\n )\n @ToString\n public class IssuedIdentityToken extends UserIdentityToken implements UaStructure {\n+\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=938\");\n \n+\n     public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=939\");\n \n+\n     public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n \n     private final ByteString tokenData;\n@@ -41,6 +44,7 @@ public class IssuedIdentityToken extends UserIdentityToken implements UaStructur\n \n     public IssuedIdentityToken(String policyId, ByteString tokenData, String encryptionAlgorithm) {\n         super(policyId);\n+\n         this.tokenData = tokenData;\n         this.encryptionAlgorithm = encryptionAlgorithm;\n     }\n@@ -77,7 +81,9 @@ public class IssuedIdentityToken extends UserIdentityToken implements UaStructur\n         @Override\n         public IssuedIdentityToken decode(SerializationContext context, UaDecoder decoder) {\n             String policyId = decoder.readString(\"PolicyId\");\n+\n             ByteString tokenData = decoder.readByteString(\"TokenData\");\n+\n             String encryptionAlgorithm = decoder.readString(\"EncryptionAlgorithm\");\n             return new IssuedIdentityToken(policyId, tokenData, encryptionAlgorithm);\n         }\n@@ -89,4 +95,5 @@ public class IssuedIdentityToken extends UserIdentityToken implements UaStructur\n             encoder.writeString(\"EncryptionAlgorithm\", value.getEncryptionAlgorithm());\n         }\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 240).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "34",
+                    "column": "240",
+                    "severity": "error",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/127/IssuedIdentityToken.java\nindex e8c5ec6b284..23e5b47246c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/violations/127/IssuedIdentityToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-milo/styler/05_predictions/three_grams/files-repaired/127/IssuedIdentityToken.java\n@@ -31,9 +31,7 @@ import org.eclipse.milo.opcua.stack.core.types.builtin.ExpandedNodeId;\n public class IssuedIdentityToken extends UserIdentityToken implements UaStructure {\n     public static final ExpandedNodeId TYPE_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=938\");\n \n-    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=939\");\n-\n-    public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n+    public static final ExpandedNodeId XML_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=939\"); public static final ExpandedNodeId BINARY_ENCODING_ID = ExpandedNodeId.parse(\"nsu=http://opcfoundation.org/UA/;i=940\");\n \n     private final ByteString tokenData;\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

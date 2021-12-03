@@ -1,0 +1,89 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "718",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic interface UnbindDeviceFromGatewayResponseOrBuilder extends\n    // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n    com.google.protobuf.MessageOrBuilder {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\nindex ace2c0a1508..d5ca3831a0d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n@@ -4,6 +4,7 @@\n package com.google.cloud.iot.v1;\n \n public interface UnbindDeviceFromGatewayResponseOrBuilder extends\n-    // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n+\n+  // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n     com.google.protobuf.MessageOrBuilder {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "7",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "7",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/718/UnbindDeviceFromGatewayResponseOrBuilder.java\nindex ace2c0a1508..189e7cc0333 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n@@ -6,4 +6,4 @@ package com.google.cloud.iot.v1;\n public interface UnbindDeviceFromGatewayResponseOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n     com.google.protobuf.MessageOrBuilder {\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 163).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "7",
+                    "severity": "warning",
+                    "message": "'com' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\nindex ace2c0a1508..d6561004fd4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n@@ -3,7 +3,6 @@\n \n package com.google.cloud.iot.v1;\n \n-public interface UnbindDeviceFromGatewayResponseOrBuilder extends\n-    // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n-    com.google.protobuf.MessageOrBuilder {\n+public interface UnbindDeviceFromGatewayResponseOrBuilder extends// @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n+com.google.protobuf.MessageOrBuilder {\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\nindex ace2c0a1508..d5ca3831a0d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/718/UnbindDeviceFromGatewayResponseOrBuilder.java\n@@ -4,6 +4,7 @@\n package com.google.cloud.iot.v1;\n \n public interface UnbindDeviceFromGatewayResponseOrBuilder extends\n-    // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n+\n+  // @@protoc_insertion_point(interface_extends:google.cloud.iot.v1.UnbindDeviceFromGatewayResponse)\n     com.google.protobuf.MessageOrBuilder {\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

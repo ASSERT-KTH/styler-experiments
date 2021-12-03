@@ -1,0 +1,113 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "444",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.logical.sys;\n\nimport org.apache.iotdb.db.exception.query.LogicalOperatorException;\nimport org.apache.iotdb.db.exception.query.QueryProcessException;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/444/CountOperator.java\nindex 6424116e146..bea226ee017 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/444/CountOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/444/CountOperator.java\nindex 6424116e146..f3b224fe15d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/444/CountOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n@@ -27,7 +28,9 @@ import org.apache.iotdb.db.qp.physical.sys.CountPlan;\n import org.apache.iotdb.db.qp.physical.sys.ShowPlan.ShowContentType;\n import org.apache.iotdb.db.qp.strategy.PhysicalGenerator;\n \n-/** CountOperator is used to count time-series and count nodes. */\n+/**\n+ * CountOperator is used to count time-series and count nodes.\n+ */\n public class CountOperator extends ShowOperator {\n   private PartialPath path;\n   private int level;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "43",
+                    "severity": "warning",
+                    "message": "'int' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "71",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/444/CountOperator.java\nindex 6424116e146..3111f459875 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/444/CountOperator.java\n@@ -28,7 +28,9 @@ import org.apache.iotdb.db.qp.physical.sys.ShowPlan.ShowContentType;\n import org.apache.iotdb.db.qp.strategy.PhysicalGenerator;\n \n /** CountOperator is used to count time-series and count nodes. */\n+\n public class CountOperator extends ShowOperator {\n+\n   private PartialPath path;\n   private int level;\n \n@@ -37,7 +39,8 @@ public class CountOperator extends ShowOperator {\n     this.path = path;\n   }\n \n-  public CountOperator(int tokenIntType, PartialPath path, int level) {\n+  public CountOperator(\n+    int tokenIntType, PartialPath path, int level) {\n     super(tokenIntType);\n     this.path = path;\n     this.level = level;\n@@ -52,8 +55,7 @@ public class CountOperator extends ShowOperator {\n   }\n \n   @Override\n-  public PhysicalPlan generatePhysicalPlan(PhysicalGenerator generator)\n-      throws QueryProcessException {\n+  public PhysicalPlan generatePhysicalPlan(PhysicalGenerator generator) throws QueryProcessException {\n     switch (tokenIntType) {\n       case SQLConstant.TOK_COUNT_DEVICES:\n         return new CountPlan(ShowContentType.COUNT_DEVICES, path);\n@@ -66,8 +68,7 @@ public class CountOperator extends ShowOperator {\n       case SQLConstant.TOK_COUNT_TIMESERIES:\n         return new CountPlan(ShowContentType.COUNT_TIMESERIES, path);\n       default:\n-        throw new LogicalOperatorException(\n-            String.format(\"not supported operator type %s in show operation.\", operatorType));\n+        throw new LogicalOperatorException(String.format(\"not supported operator type %s in show operation.\", operatorType));\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "70",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/444/CountOperator.java\nindex 6424116e146..6ffbd883077 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/444/CountOperator.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.qp.logical.sys;\n+package org.apache.iotdb.db.qp.logical.sys\n \n-import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n+; import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n import org.apache.iotdb.db.exception.query.QueryProcessException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.constant.SQLConstant;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/444/CountOperator.java\nindex 6424116e146..bea226ee017 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/444/CountOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/444/CountOperator.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.LogicalOperatorException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

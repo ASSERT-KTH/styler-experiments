@@ -1,0 +1,70 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "179",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n\t\n\tpublic void setLastProcessedId(int lastProcessedId);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/179/LdapcManager.java\nindex ed3f19f2d0c..c04bc669d53 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/179/LdapcManager.java\n@@ -28,7 +28,7 @@ public interface LdapcManager {\n \tpublic PerunPrincipal getPerunPrincipal();\n \n \tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n-\t\n-\tpublic void setLastProcessedId(int lastProcessedId);\n+\n+ public void setLastProcessedId(int lastProcessedId);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/179/LdapcManager.java\nindex ed3f19f2d0c..c492e34d81a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/179/LdapcManager.java\n@@ -7,28 +7,28 @@ import cz.metacentrum.perun.core.api.exceptions.InternalErrorException;\n \n public interface LdapcManager {\n \n-\t/**\n-\t * Start processing incommming events from Perun Auditer.\n-\t */\n-\tvoid startProcessingEvents();\n+    /**\n+     * Start processing incommming events from Perun Auditer.\n+     */\n+    void startProcessingEvents();\n \n-\t/**\n-\t * Stop processing incommming events from Perun Auditer.\n-\t */\n-\tvoid stopProcessingEvents();\n+    /**\n+     * Stop processing incommming events from Perun Auditer.\n+     */\n+    void stopProcessingEvents();\n \n-\tvoid synchronize() throws InternalErrorException;\n+    void synchronize() throws InternalErrorException;\n \n-\tpublic Perun getPerunBl();\n+    public Perun getPerunBl();\n \n-\tpublic void setPerunBl(Perun perunBl);\n+    public void setPerunBl(Perun perunBl);\n \n-\tpublic PerunSession getPerunSession() throws InternalErrorException;\n+    public PerunSession getPerunSession() throws InternalErrorException;\n \n-\tpublic PerunPrincipal getPerunPrincipal();\n+    public PerunPrincipal getPerunPrincipal();\n \n-\tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n-\t\n-\tpublic void setLastProcessedId(int lastProcessedId);\n+    public void setPerunPrincipal(PerunPrincipal perunPrincipal);\n+\n+    public void setLastProcessedId(int lastProcessedId);\n \n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/179/LdapcManager.java\nindex ed3f19f2d0c..4093a9e8360 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/179/LdapcManager.java\n@@ -31,4 +31,4 @@ public interface LdapcManager {\n \t\n \tpublic void setLastProcessedId(int lastProcessedId);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/179/LdapcManager.java\nindex ed3f19f2d0c..a11b07d9c00 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/179/LdapcManager.java\n@@ -5,30 +5,42 @@ import cz.metacentrum.perun.core.api.PerunPrincipal;\n import cz.metacentrum.perun.core.api.PerunSession;\n import cz.metacentrum.perun.core.api.exceptions.InternalErrorException;\n \n+\n public interface LdapcManager {\n \n-\t/**\n-\t * Start processing incommming events from Perun Auditer.\n-\t */\n-\tvoid startProcessingEvents();\n+ /**\n+  * Start processing incommming events from Perun Auditer.\n+  */\n+\n+\n+ void startProcessingEvents();\n+\n+ /**\n+  * Stop processing incommming events from Perun Auditer.\n+  */\n+\n+\n+ void stopProcessingEvents();\n+\n+\n+ void synchronize() throws InternalErrorException;\n+\n+\n+ public Perun getPerunBl();\n+\n+\n+ public void setPerunBl(Perun perunBl);\n+\n \n-\t/**\n-\t * Stop processing incommming events from Perun Auditer.\n-\t */\n-\tvoid stopProcessingEvents();\n+ public PerunSession getPerunSession() throws InternalErrorException;\n \n-\tvoid synchronize() throws InternalErrorException;\n \n-\tpublic Perun getPerunBl();\n+ public PerunPrincipal getPerunPrincipal();\n \n-\tpublic void setPerunBl(Perun perunBl);\n \n-\tpublic PerunSession getPerunSession() throws InternalErrorException;\n+ public void setPerunPrincipal(PerunPrincipal perunPrincipal);\n \n-\tpublic PerunPrincipal getPerunPrincipal();\n \n-\tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n-\t\n-\tpublic void setLastProcessedId(int lastProcessedId);\n+ public void setLastProcessedId(int lastProcessedId);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/179/LdapcManager.java\nindex ed3f19f2d0c..c04bc669d53 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/179/LdapcManager.java\n@@ -28,7 +28,7 @@ public interface LdapcManager {\n \tpublic PerunPrincipal getPerunPrincipal();\n \n \tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n-\t\n-\tpublic void setLastProcessedId(int lastProcessedId);\n+\n+ public void setLastProcessedId(int lastProcessedId);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/179/LdapcManager.java\nindex ed3f19f2d0c..46e87aef381 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/179/LdapcManager.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/179/LdapcManager.java\n@@ -27,8 +27,8 @@ public interface LdapcManager {\n \n \tpublic PerunPrincipal getPerunPrincipal();\n \n-\tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal);\n-\t\n-\tpublic void setLastProcessedId(int lastProcessedId);\n+\tpublic void setPerunPrincipal(PerunPrincipal perunPrincipal)\n+\n+ ; public void setLastProcessedId(int lastProcessedId);\n \n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

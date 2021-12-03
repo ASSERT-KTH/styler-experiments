@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "672",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/672/SampleNeighborResult.java\nindex cfa51697b20..41b8197d3ee 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/672/SampleNeighborResult.java\n@@ -22,21 +22,21 @@ import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;\n \n public class SampleNeighborResult extends GetResult {\n \n-  /**\n-   * Node id to neighbors map\n-   */\n-  private Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors;\n+    /**\n+     * Node id to neighbors map\n+     */\n+    private Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors;\n \n-  SampleNeighborResult(Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n-    this.nodeIdToNeighbors = nodeIdToNeighbors;\n-  }\n+    SampleNeighborResult(Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n+        this.nodeIdToNeighbors = nodeIdToNeighbors;\n+    }\n \n-  public Long2ObjectOpenHashMap<long[]> getNodeIdToNeighbors() {\n-    return nodeIdToNeighbors;\n-  }\n+    public Long2ObjectOpenHashMap<long[]> getNodeIdToNeighbors() {\n+        return nodeIdToNeighbors;\n+    }\n \n-  public void setNodeIdToNeighbors(\n-      Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n-    this.nodeIdToNeighbors = nodeIdToNeighbors;\n-  }\n+    public void setNodeIdToNeighbors(\n+            Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n+        this.nodeIdToNeighbors = nodeIdToNeighbors;\n+    }\n }\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/672/SampleNeighborResult.java\nindex cfa51697b20..c39c68004cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/672/SampleNeighborResult.java\n@@ -35,8 +35,7 @@ public class SampleNeighborResult extends GetResult {\n     return nodeIdToNeighbors;\n   }\n \n-  public void setNodeIdToNeighbors(\n-      Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n+  public void setNodeIdToNeighbors(Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n     this.nodeIdToNeighbors = nodeIdToNeighbors;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/672/SampleNeighborResult.java\nindex cfa51697b20..ace2bbd579e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/672/SampleNeighborResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/672/SampleNeighborResult.java\n@@ -25,6 +25,7 @@ public class SampleNeighborResult extends GetResult {\n   /**\n    * Node id to neighbors map\n    */\n+\n   private Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors;\n \n   SampleNeighborResult(Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n@@ -35,8 +36,8 @@ public class SampleNeighborResult extends GetResult {\n     return nodeIdToNeighbors;\n   }\n \n-  public void setNodeIdToNeighbors(\n-      Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n+  public void setNodeIdToNeighbors(Long2ObjectOpenHashMap<long[]> nodeIdToNeighbors) {\n     this.nodeIdToNeighbors = nodeIdToNeighbors;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

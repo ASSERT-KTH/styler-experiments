@@ -1,0 +1,72 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "300",
+    "information": {
+        "violations": [
+            {
+                "line": "136",
+                "column": "37",
+                "severity": "warning",
+                "message": "'typecast' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "  @Override\n  public void end() {\n    end((Handler<AsyncResult<Void>>)null);\n  }\n\n  @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..b75466a3cf4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/300/OutputStreamToWriteStream.java\n@@ -133,7 +133,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   @Override\n   public void end() {\n-    end((Handler<AsyncResult<Void>>)null);\n+    end((Handler<AsyncResult<Void>>) null);\n   }\n \n   @Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..06ca59b30ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/300/OutputStreamToWriteStream.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.foundation.vertx.stream;\n \n import java.io.IOException;\n@@ -70,7 +71,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   private int drainMark = maxBuffers / 2;\n \n   public OutputStreamToWriteStream(Context context, OutputStream outputStream,\n-      boolean autoCloseOutputStream) {\n+                                   boolean autoCloseOutputStream) {\n     this.context = context;\n     this.outputStream = outputStream;\n     this.autoCloseOutputStream = autoCloseOutputStream;\n@@ -133,7 +134,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   @Override\n   public void end() {\n-    end((Handler<AsyncResult<Void>>)null);\n+    end((Handler<AsyncResult<Void>>) null);\n   }\n \n   @Override\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "135",
+                    "column": "37",
+                    "severity": "warning",
+                    "message": "'typecast' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..2e697a533db 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/300/OutputStreamToWriteStream.java\n@@ -101,8 +101,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   public WriteStream<Buffer> write(Buffer data, Handler<AsyncResult<Void>> handler) {\n     currentBufferCount++;\n     buffers.add(data);\n-    context.executeBlocking(this::writeInWorker,\n-        true,\n+    context.executeBlocking(this::writeInWorker, true,\n         handler);\n     return this;\n   }\n@@ -208,4 +207,4 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n     future.complete(null);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..c747fa796f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/300/OutputStreamToWriteStream.java\n@@ -21,9 +21,7 @@ import java.io.OutputStream;\n import java.util.Queue;\n import java.util.concurrent.CompletableFuture;\n import java.util.concurrent.ConcurrentLinkedQueue;\n-\n import org.apache.servicecomb.foundation.common.io.AsyncCloseable;\n-\n import io.vertx.core.AsyncResult;\n import io.vertx.core.Context;\n import io.vertx.core.Handler;\n@@ -34,6 +32,7 @@ import io.vertx.core.streams.WriteStream;\n /**\n  * for pump from a readStream\n  */\n+\n public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncCloseable<Void> {\n   private static final int DEFAULT_MAX_BUFFERS = 4;\n \n@@ -48,15 +47,18 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   private Handler<Throwable> exceptionHandler;\n \n   // resume readStream\n+\n   private Handler<Void> drainHandler;\n \n   // when invoke close, but outputStream not write all data, must put close logic to closedDeferred\n+\n   private Runnable closedDeferred;\n \n   private boolean closed;\n \n   // buffers.size() need to loop all node, and maybe result is not correct in concurrent condition\n   // we just need to flow control by pump, so use another size\n+\n   private Queue<Buffer> buffers = new ConcurrentLinkedQueue<>();\n \n   private int currentBufferCount;\n@@ -64,13 +66,14 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   // just indicate if buffers is full, not control add logic\n   // must >= SMALLEST_MAX_BUFFERS\n   // if < SMALLEST_MAX_BUFFERS, then maxBuffers will be SMALLEST_MAX_BUFFERS\n+\n   private int maxBuffers = DEFAULT_MAX_BUFFERS;\n \n   // if currentBufferCount <= drainMark, will invoke drainHandler to resume readStream\n+\n   private int drainMark = maxBuffers / 2;\n \n-  public OutputStreamToWriteStream(Context context, OutputStream outputStream,\n-      boolean autoCloseOutputStream) {\n+  public OutputStreamToWriteStream(Context context, OutputStream outputStream, boolean autoCloseOutputStream) {\n     this.context = context;\n     this.outputStream = outputStream;\n     this.autoCloseOutputStream = autoCloseOutputStream;\n@@ -91,9 +94,9 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   @Override\n   public synchronized WriteStream<Buffer> write(Buffer data) {\n     return write(data, ar -> {\n-      if (ar.failed()) {\n-        handleException(ar.cause());\n-      }\n+             if (ar.failed()) {\n+               handleException(ar.cause());\n+             }\n     });\n   }\n \n@@ -101,9 +104,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n   public WriteStream<Buffer> write(Buffer data, Handler<AsyncResult<Void>> handler) {\n     currentBufferCount++;\n     buffers.add(data);\n-    context.executeBlocking(this::writeInWorker,\n-        true,\n-        handler);\n+    context.executeBlocking(this::writeInWorker, true, handler);\n     return this;\n   }\n \n@@ -117,9 +118,9 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n       try {\n         outputStream.write(buffer.getBytes());\n-\n         synchronized (OutputStreamToWriteStream.this) {\n           currentBufferCount--;\n+\n           Runnable action = (currentBufferCount == 0 && closedDeferred != null) ? closedDeferred : this::checkDrained;\n           action.run();\n         }\n@@ -133,7 +134,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   @Override\n   public void end() {\n-    end((Handler<AsyncResult<Void>>)null);\n+    end((Handler<AsyncResult<Void>>) null);\n   }\n \n   @Override\n@@ -178,13 +179,13 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   private void checkClosed() {\n     if (closed) {\n-      throw new IllegalStateException(this.getClass().getName() + \" is closed\");\n+      throw new IllegalStateException(this.getClass()\n+                                          .getName() + \" is closed\");\n     }\n   }\n \n   private synchronized CompletableFuture<Void> closeInternal() {\n     check();\n-\n     closed = true;\n \n     CompletableFuture<Void> future = new CompletableFuture<>();\n@@ -208,4 +209,4 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n     future.complete(null);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..b75466a3cf4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/300/OutputStreamToWriteStream.java\n@@ -133,7 +133,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   @Override\n   public void end() {\n-    end((Handler<AsyncResult<Void>>)null);\n+    end((Handler<AsyncResult<Void>>) null);\n   }\n \n   @Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/300/OutputStreamToWriteStream.java\nindex d449ddfa5d4..b75466a3cf4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/300/OutputStreamToWriteStream.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/300/OutputStreamToWriteStream.java\n@@ -133,7 +133,7 @@ public class OutputStreamToWriteStream implements WriteStream<Buffer>, AsyncClos\n \n   @Override\n   public void end() {\n-    end((Handler<AsyncResult<Void>>)null);\n+    end((Handler<AsyncResult<Void>>) null);\n   }\n \n   @Override\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

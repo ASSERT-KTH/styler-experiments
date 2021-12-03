@@ -1,0 +1,83 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "110",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.bpmn.model;\n\npublic class Signal extends BaseElement {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/110/Signal.java\nindex ec72bd0ec80..489665a32a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/110/Signal.java\n@@ -10,6 +10,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class Signal extends BaseElement {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/110/Signal.java\nindex ec72bd0ec80..e09290168d6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/110/Signal.java\n@@ -1,59 +1,60 @@\n /* Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- * \n+ *\n  *      http://www.apache.org/licenses/LICENSE-2.0\n- * \n+ *\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class Signal extends BaseElement {\n \n-  public static final String SCOPE_GLOBAL = \"global\";\n-  public static final String SCOPE_PROCESS_INSTANCE = \"processInstance\";\n+    public static final String SCOPE_GLOBAL = \"global\";\n+    public static final String SCOPE_PROCESS_INSTANCE = \"processInstance\";\n \n-  protected String name;\n+    protected String name;\n \n-  protected String scope;\n+    protected String scope;\n \n-  public Signal() {\n-  }\n+    public Signal() {\n+    }\n \n-  public Signal(String id, String name) {\n-    this.id = id;\n-    this.name = name;\n-  }\n+    public Signal(String id, String name) {\n+        this.id = id;\n+        this.name = name;\n+    }\n \n-  public String getName() {\n-    return name;\n-  }\n+    public String getName() {\n+        return name;\n+    }\n \n-  public void setName(String name) {\n-    this.name = name;\n-  }\n+    public void setName(String name) {\n+        this.name = name;\n+    }\n \n-  public String getScope() {\n-    return scope;\n-  }\n+    public String getScope() {\n+        return scope;\n+    }\n \n-  public void setScope(String scope) {\n-    this.scope = scope;\n-  }\n+    public void setScope(String scope) {\n+        this.scope = scope;\n+    }\n \n-  public Signal clone() {\n-    Signal clone = new Signal();\n-    clone.setValues(this);\n-    return clone;\n-  }\n+    public Signal clone() {\n+        Signal clone = new Signal();\n+        clone.setValues(this);\n+        return clone;\n+    }\n \n-  public void setValues(Signal otherElement) {\n-    super.setValues(otherElement);\n-    setName(otherElement.getName());\n-    setScope(otherElement.getScope());\n-  }\n+    public void setValues(Signal otherElement) {\n+        super.setValues(otherElement);\n+        setName(otherElement.getName());\n+        setScope(otherElement.getScope());\n+    }\n }\n",
+            "diff_size": 35
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/110/Signal.java\nindex ec72bd0ec80..e4f4e6e32d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/110/Signal.java\n@@ -10,6 +10,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class Signal extends BaseElement {\n@@ -56,4 +57,4 @@ public class Signal extends BaseElement {\n     setName(otherElement.getName());\n     setScope(otherElement.getScope());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/110/Signal.java\nindex ec72bd0ec80..9323e87e72d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/110/Signal.java\n@@ -16,9 +16,7 @@ public class Signal extends BaseElement {\n \n   public static final String SCOPE_GLOBAL = \"global\";\n   public static final String SCOPE_PROCESS_INSTANCE = \"processInstance\";\n-\n   protected String name;\n-\n   protected String scope;\n \n   public Signal() {\n@@ -56,4 +54,5 @@ public class Signal extends BaseElement {\n     setName(otherElement.getName());\n     setScope(otherElement.getScope());\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/110/Signal.java\nindex ec72bd0ec80..a46e0dff12c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/110/Signal.java\n@@ -10,7 +10,9 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package org.activiti.bpmn.model;\n+package org.activiti.\n+\n+bpmn.model;\n \n public class Signal extends BaseElement {\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/110/Signal.java\nindex ec72bd0ec80..489665a32a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/110/Signal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/110/Signal.java\n@@ -10,6 +10,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class Signal extends BaseElement {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

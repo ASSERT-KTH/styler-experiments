@@ -1,0 +1,96 @@
+{
+    "project_name": "GluuFederation-oxCore",
+    "violation_id": "124",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface PersistenceExtension {\n\n\tString createHashedPassword(String credential);\n\tboolean compareHashedPasswords(String credential, String storedCredential);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GluuFederation-oxCore/styler/05_predictions/final/files-repaired/124/PersistenceExtension.java\nindex 4ee11b275c2..b509208b9fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GluuFederation-oxCore/styler/05_predictions/final/files-repaired/124/PersistenceExtension.java\n@@ -7,7 +7,7 @@ package org.gluu.persist.exception.extension;\n  */\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n+    String createHashedPassword(String credential);\n \tboolean compareHashedPasswords(String credential, String storedCredential);\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/checkstyle_idea/124/PersistenceExtension.java\nindex 4ee11b275c2..81f5c9d0212 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/checkstyle_idea/124/PersistenceExtension.java\n@@ -7,7 +7,8 @@ package org.gluu.persist.exception.extension;\n  */\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n-\tboolean compareHashedPasswords(String credential, String storedCredential);\n+    String createHashedPassword(String credential);\n+\n+    boolean compareHashedPasswords(String credential, String storedCredential);\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/naturalize/124/PersistenceExtension.java\nindex 4ee11b275c2..1220f98606c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/naturalize/124/PersistenceExtension.java\n@@ -7,7 +7,7 @@ package org.gluu.persist.exception.extension;\n  */\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n+    String createHashedPassword(String credential);\n \tboolean compareHashedPasswords(String credential, String storedCredential);\n \n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/codebuff/124/PersistenceExtension.java\nindex 4ee11b275c2..18346ffa507 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/codebuff/124/PersistenceExtension.java\n@@ -5,9 +5,12 @@ package org.gluu.persist.exception.extension;\n  *\n  * @author Yuriy Movchan Date: 06/04/2020\n  */\n+\n+\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n-\tboolean compareHashedPasswords(String credential, String storedCredential);\n+    String createHashedPassword(String credential);\n+\n+    boolean compareHashedPasswords(String credential, String storedCredential);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/random/files-repaired/124/PersistenceExtension.java\nindex 4ee11b275c2..b509208b9fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/random/files-repaired/124/PersistenceExtension.java\n@@ -7,7 +7,7 @@ package org.gluu.persist.exception.extension;\n  */\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n+    String createHashedPassword(String credential);\n \tboolean compareHashedPasswords(String credential, String storedCredential);\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/three_grams/files-repaired/124/PersistenceExtension.java\nindex 4ee11b275c2..b509208b9fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/124/PersistenceExtension.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/three_grams/files-repaired/124/PersistenceExtension.java\n@@ -7,7 +7,7 @@ package org.gluu.persist.exception.extension;\n  */\n public interface PersistenceExtension {\n \n-\tString createHashedPassword(String credential);\n+    String createHashedPassword(String credential);\n \tboolean compareHashedPasswords(String credential, String storedCredential);\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "157",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface NodeRenderer {\n\t/**\n\t * <p>setRootNode.</p>\n\t *\n\t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/157/NodeRenderer.java\nindex 817db145ff7..d9572b8dcdc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/157/NodeRenderer.java\n@@ -34,10 +34,10 @@ import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n  * @version $Id: $Id\n  */\n public interface NodeRenderer {\n-\t/**\n+/**\n \t * <p>setRootNode.</p>\n \t *\n \t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n \t */\n-\tvoid setRootNode(NodeImpl node);\n+ void setRootNode(NodeImpl node);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/157/NodeRenderer.java\nindex 817db145ff7..e37a7e3356b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/157/NodeRenderer.java\n@@ -23,6 +23,7 @@\n /*\n  * Created on Jan 29, 2006\n  */\n+\n package org.loboevolution.html.renderer;\n \n import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n@@ -34,10 +35,10 @@ import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n  * @version $Id: $Id\n  */\n public interface NodeRenderer {\n-\t/**\n-\t * <p>setRootNode.</p>\n-\t *\n-\t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n-\t */\n-\tvoid setRootNode(NodeImpl node);\n+    /**\n+     * <p>setRootNode.</p>\n+     *\n+     * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n+     */\n+    void setRootNode(NodeImpl node);\n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/157/NodeRenderer.java\nindex 817db145ff7..2e6bae5263e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/157/NodeRenderer.java\n@@ -33,11 +33,15 @@ import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface NodeRenderer {\n-\t/**\n-\t * <p>setRootNode.</p>\n-\t *\n-\t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n-\t */\n-\tvoid setRootNode(NodeImpl node);\n-}\n+    /**\n+     * <p>setRootNode.</p>\n+     *\n+     * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n+     */\n+\n+\n+    void setRootNode(NodeImpl node);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/157/NodeRenderer.java\nindex 817db145ff7..d9572b8dcdc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/157/NodeRenderer.java\n@@ -34,10 +34,10 @@ import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n  * @version $Id: $Id\n  */\n public interface NodeRenderer {\n-\t/**\n+/**\n \t * <p>setRootNode.</p>\n \t *\n \t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n \t */\n-\tvoid setRootNode(NodeImpl node);\n+ void setRootNode(NodeImpl node);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/157/NodeRenderer.java\nindex 817db145ff7..ac898ba8322 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/157/NodeRenderer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/157/NodeRenderer.java\n@@ -34,10 +34,10 @@ import org.loboevolution.html.dom.nodeimpl.NodeImpl;\n  * @version $Id: $Id\n  */\n public interface NodeRenderer {\n-\t/**\n+    /**\n \t * <p>setRootNode.</p>\n \t *\n \t * @param node a {@link org.loboevolution.html.dom.nodeimpl.NodeImpl} object.\n \t */\n-\tvoid setRootNode(NodeImpl node);\n+ void setRootNode(NodeImpl node);\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

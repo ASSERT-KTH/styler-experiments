@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "938",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/938/LabeledData.java\nindex c9f49b01553..fae81457135 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/938/LabeledData.java\n@@ -13,67 +13,67 @@\n  * either express or implied. See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.tencent.angel.ml.feature;\n \n import com.tencent.angel.ml.math.TAbstractVector;\n \n /**\n  * training data with label\n- *\n  */\n public class LabeledData {\n \n-  private TAbstractVector x;\n-  private double y;\n-  private double y1;\n+    private TAbstractVector x;\n+    private double y;\n+    private double y1;\n \n-  private double score;\n+    private double score;\n \n-  /**\n-   * @param x\n-   * @param y\n-   */\n-  public LabeledData(TAbstractVector x, double y) {\n-    super();\n-    this.x = x;\n-    this.y = y;\n-  }\n+    /**\n+     * @param x\n+     * @param y\n+     */\n+    public LabeledData(TAbstractVector x, double y) {\n+        super();\n+        this.x = x;\n+        this.y = y;\n+    }\n \n-  public LabeledData() {\n-    super();\n-    x = null;\n-    y = 0;\n-  }\n+    public LabeledData() {\n+        super();\n+        x = null;\n+        y = 0;\n+    }\n \n-  public TAbstractVector getX() {\n-    return x;\n-  }\n+    public TAbstractVector getX() {\n+        return x;\n+    }\n \n-  public void setX(TAbstractVector x) {\n-    this.x = x;\n-  }\n+    public void setX(TAbstractVector x) {\n+        this.x = x;\n+    }\n \n-  public double getY() {\n-    return y;\n-  }\n+    public double getY() {\n+        return y;\n+    }\n \n-  public void setY(double y) {\n-    this.y = y;\n-  }\n+    public void setY(double y) {\n+        this.y = y;\n+    }\n \n-  public void setY1(double y1) {\n-    this.y1 = y1;\n-  }\n+    public void setY1(double y1) {\n+        this.y1 = y1;\n+    }\n \n-  public double getY1() {\n-    return y1;\n-  }\n+    public double getY1() {\n+        return y1;\n+    }\n \n-  public double getScore() {\n-    return score;\n-  }\n+    public double getScore() {\n+        return score;\n+    }\n \n-  public void setScore(double score) {\n-    this.score = score;\n-  }\n+    public void setScore(double score) {\n+        this.score = score;\n+    }\n }\n",
+            "diff_size": 44
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/938/LabeledData.java\nindex c9f49b01553..7a29eac13d9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/938/LabeledData.java\n@@ -76,4 +76,4 @@ public class LabeledData {\n   public void setScore(double score) {\n     this.score = score;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/938/LabeledData.java\nindex c9f49b01553..a4ca11e4dab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/938/LabeledData.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/938/LabeledData.java\n@@ -21,18 +21,19 @@ import com.tencent.angel.ml.math.TAbstractVector;\n  * training data with label\n  *\n  */\n+\n public class LabeledData {\n \n   private TAbstractVector x;\n   private double y;\n   private double y1;\n-\n   private double score;\n \n   /**\n    * @param x\n    * @param y\n    */\n+\n   public LabeledData(TAbstractVector x, double y) {\n     super();\n     this.x = x;\n@@ -76,4 +77,5 @@ public class LabeledData {\n   public void setScore(double score) {\n     this.score = score;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

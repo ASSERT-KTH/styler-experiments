@@ -1,0 +1,87 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "     */\n    public void beforeRemove(CollectionItem parent,  Set<Item> items);\n\t\n    /**\n     * Intercepter executed after removing an item from a collection.\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "29",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "Line contains a tab character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/12/EventRemoveHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/12/EventRemoveHandler.java\nindex 4bc427c579b..30ebb3d3c9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/12/EventRemoveHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/12/EventRemoveHandler.java\n@@ -1,8 +1,8 @@\n /*\n  * EventRemoveHandler.java Jun 25, 2012\n- * \n+ *\n  * Copyright (c) 2012 1&1 Internet AG. All rights reserved.\n- * \n+ *\n  * $Id$\n  */\n package org.unitedinternet.cosmo.service.interceptors;\n@@ -14,24 +14,24 @@ import org.unitedinternet.cosmo.model.Item;\n \n /**\n  * Interface for event remove handler.\n- * @author ccoman\n  *\n+ * @author ccoman\n  */\n public interface EventRemoveHandler {\n-    \n+\n     /**\n      * Intercepter executed before removing an item from a collection.\n-     * \n+     *\n      * @param parent CollectionItem\n-     * @param items Set<Item> to remove\n+     * @param items  Set<Item> to remove\n      */\n-    public void beforeRemove(CollectionItem parent,  Set<Item> items);\n-\t\n+    public void beforeRemove(CollectionItem parent, Set<Item> items);\n+\n     /**\n      * Intercepter executed after removing an item from a collection.\n-\n+     *\n      * @param parent CollectionItem\n-     * @param items Set<Item> to remove\n+     * @param items  Set<Item> to remove\n      */\n     public void afterRemove(CollectionItem parent, Set<Item> items);\n }\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/12/EventRemoveHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/12/EventRemoveHandler.java\nindex 4bc427c579b..621d11735ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/12/EventRemoveHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/12/EventRemoveHandler.java\n@@ -8,7 +8,6 @@\n package org.unitedinternet.cosmo.service.interceptors;\n \n import java.util.Set;\n-\n import org.unitedinternet.cosmo.model.CollectionItem;\n import org.unitedinternet.cosmo.model.Item;\n \n@@ -17,6 +16,8 @@ import org.unitedinternet.cosmo.model.Item;\n  * @author ccoman\n  *\n  */\n+\n+\n public interface EventRemoveHandler {\n     \n     /**\n@@ -25,13 +26,18 @@ public interface EventRemoveHandler {\n      * @param parent CollectionItem\n      * @param items Set<Item> to remove\n      */\n-    public void beforeRemove(CollectionItem parent,  Set<Item> items);\n-\t\n+\n+\n+    public void beforeRemove(CollectionItem parent, Set<Item> items);\n+    \n     /**\n      * Intercepter executed after removing an item from a collection.\n \n      * @param parent CollectionItem\n      * @param items Set<Item> to remove\n      */\n+\n+\n     public void afterRemove(CollectionItem parent, Set<Item> items);\n+\n }\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "29",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "Line contains a tab character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "Line contains a tab character.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "project_name": "bakdata-conquery",
+    "violation_id": "768",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "27",
+                "severity": "warning",
+                "message": "'{' at column 21 should have line break after.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "\t\n\tdefault Consumer<MetaDataPatch> labeler() {\n\t\treturn (patch) -> {setLabel(patch.getLabel());};\n\t\t\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/768/Labelable.java\nindex ddece35c3d9..c67bd9fb2ac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/768/Labelable.java\n@@ -8,7 +8,8 @@ public interface Labelable {\n \tvoid setLabel(String label);\n \t\n \tdefault Consumer<MetaDataPatch> labeler() {\n-\t\treturn (patch) -> {setLabel(patch.getLabel());};\n+\t\treturn (patch) -> {\n+\t\t\tsetLabel(patch.getLabel());};\n \t\t\n \t}\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "15",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/768/Labelable.java\nindex ddece35c3d9..9a2f99f3f14 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/768/Labelable.java\n@@ -5,10 +5,12 @@ import java.util.function.Consumer;\n import com.bakdata.conquery.apiv1.MetaDataPatch;\n \n public interface Labelable {\n-\tvoid setLabel(String label);\n-\t\n-\tdefault Consumer<MetaDataPatch> labeler() {\n-\t\treturn (patch) -> {setLabel(patch.getLabel());};\n-\t\t\n-\t}\n+    void setLabel(String label);\n+\n+    default Consumer<MetaDataPatch> labeler() {\n+        return (patch) -> {\n+            setLabel(patch.getLabel());\n+        };\n+\n+    }\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'{' at column 21 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/768/Labelable.java\nindex ddece35c3d9..95d3ebad070 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/768/Labelable.java\n@@ -11,4 +11,4 @@ public interface Labelable {\n \t\treturn (patch) -> {setLabel(patch.getLabel());};\n \t\t\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "7",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "7",
+                    "column": "2",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 1, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "9",
+                    "column": "2",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 1, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "10",
+                    "column": "3",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 2, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "11",
+                    "column": "4",
+                    "severity": "warning",
+                    "message": "'block' child has incorrect indentation level 3, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "13",
+                    "column": "2",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 1, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/768/Labelable.java\nindex ddece35c3d9..ccbcb3db63d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/768/Labelable.java\n@@ -1,14 +1,14 @@\n package com.bakdata.conquery.models.execution;\n \n import java.util.function.Consumer;\n-\n import com.bakdata.conquery.apiv1.MetaDataPatch;\n \n public interface Labelable {\n-\tvoid setLabel(String label);\n-\t\n-\tdefault Consumer<MetaDataPatch> labeler() {\n-\t\treturn (patch) -> {setLabel(patch.getLabel());};\n-\t\t\n-\t}\n-}\n+ void setLabel(String label);\n+\n+ default Consumer<MetaDataPatch> labeler() {\n+  return (patch) -> {\n+   setLabel(patch.getLabel());\n+  };\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/768/Labelable.java\nindex ddece35c3d9..c67bd9fb2ac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/768/Labelable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/768/Labelable.java\n@@ -8,7 +8,8 @@ public interface Labelable {\n \tvoid setLabel(String label);\n \t\n \tdefault Consumer<MetaDataPatch> labeler() {\n-\t\treturn (patch) -> {setLabel(patch.getLabel());};\n+\t\treturn (patch) -> {\n+\t\t\tsetLabel(patch.getLabel());};\n \t\t\n \t}\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'{' at column 21 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

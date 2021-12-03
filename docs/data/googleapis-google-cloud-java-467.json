@@ -1,0 +1,69 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "467",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n   */\n  io.grafeas.v1beta1.common.NoteKind getAnalysisKind();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/467/DiscoveryOrBuilder.java\nindex 58011312b92..784a21048f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/467/DiscoveryOrBuilder.java\n@@ -22,5 +22,7 @@ public interface DiscoveryOrBuilder extends\n    *\n    * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n    */\n+\n+\n   io.grafeas.v1beta1.common.NoteKind getAnalysisKind();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/467/DiscoveryOrBuilder.java\nindex 58011312b92..bae725bf43b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/467/DiscoveryOrBuilder.java\n@@ -15,6 +15,7 @@ public interface DiscoveryOrBuilder extends\n    * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n    */\n   int getAnalysisKindValue();\n+\n   /**\n    * <pre>\n    * The kind of analysis that is handled by this discovery.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/467/DiscoveryOrBuilder.java\nindex 58011312b92..8a28ca11f90 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/467/DiscoveryOrBuilder.java\n@@ -15,7 +15,8 @@ public interface DiscoveryOrBuilder extends\n    * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n    */\n   int getAnalysisKindValue();\n-  /**\n+\n+/**\n    * <pre>\n    * The kind of analysis that is handled by this discovery.\n    * </pre>\n@@ -23,4 +24,4 @@ public interface DiscoveryOrBuilder extends\n    * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n    */\n   io.grafeas.v1beta1.common.NoteKind getAnalysisKind();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/467/DiscoveryOrBuilder.java\nindex 58011312b92..784a21048f4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/467/DiscoveryOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/467/DiscoveryOrBuilder.java\n@@ -22,5 +22,7 @@ public interface DiscoveryOrBuilder extends\n    *\n    * <code>.grafeas.v1beta1.NoteKind analysis_kind = 1;</code>\n    */\n+\n+\n   io.grafeas.v1beta1.common.NoteKind getAnalysisKind();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

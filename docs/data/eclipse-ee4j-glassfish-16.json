@@ -1,0 +1,70 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "16",
+    "information": {
+        "violations": [
+            {
+                "line": "42",
+                "column": "5",
+                "severity": "warning",
+                "message": "'testMethodA' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "     */\n    public void\n    testMethodA() {\n        // chan\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/16/TestTemplateTest.java\nindex 268f21a838b..1801b464ee2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/16/TestTemplateTest.java\n@@ -39,7 +39,7 @@ public final class TestTemplateTest\n      unless it's totally obvious.\n      */\n     public void\n-    testMethodA() {\n+        testMethodA() {\n         // chan\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "42",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'testMethodA' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/16/TestTemplateTest.java\nindex 268f21a838b..6d2fa7f794e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/16/TestTemplateTest.java\n@@ -19,24 +19,24 @@ package org.glassfish.admin.amxtest;\n //\n \n /**\n- A sample skeleton unit test.\n- <p/>\n- Change the class name to <ClassToBeTested>Test (don't forget)\n- to change the constructor also.\n+ * A sample skeleton unit test.\n+ * <p/>\n+ * Change the class name to <ClassToBeTested>Test (don't forget)\n+ * to change the constructor also.\n  */\n public final class TestTemplateTest\n-        extends junit.framework.TestCase\n-        // or extends JMXTestBase\n-        // or extends AMXTestBase\n+    extends junit.framework.TestCase\n+    // or extends JMXTestBase\n+    // or extends AMXTestBase\n {\n     public TestTemplateTest() {\n         // generally nothing to do here\n     }\n \n     /**\n-     Change the method name to something appropriate\n-     and add explanatory javadoc of what the test does\n-     unless it's totally obvious.\n+     * Change the method name to something appropriate\n+     * and add explanatory javadoc of what the test does\n+     * unless it's totally obvious.\n      */\n     public void\n     testMethodA() {\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/16/TestTemplateTest.java\nindex 268f21a838b..36fe82318ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/16/TestTemplateTest.java\n@@ -39,7 +39,8 @@ public final class TestTemplateTest\n      unless it's totally obvious.\n      */\n     public void\n-    testMethodA() {\n+\n+        testMethodA() {\n         // chan\n     }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/16/TestTemplateTest.java\nindex 268f21a838b..1801b464ee2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/16/TestTemplateTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/16/TestTemplateTest.java\n@@ -39,7 +39,7 @@ public final class TestTemplateTest\n      unless it's totally obvious.\n      */\n     public void\n-    testMethodA() {\n+        testMethodA() {\n         // chan\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

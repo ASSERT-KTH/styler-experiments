@@ -1,0 +1,88 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "53",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.apache.iotdb.db.exception.index;\n\nimport org.apache.iotdb.db.exception.query.QueryProcessException;\nimport org.apache.iotdb.rpc.TSStatusCode;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/53/UnsupportedIndexTypeException.java\nindex 911a2f2615c..895b978564e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/53/UnsupportedIndexTypeException.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.exception.index;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/53/UnsupportedIndexTypeException.java\nindex 911a2f2615c..895b978564e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/53/UnsupportedIndexTypeException.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.exception.index;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'\"Unsupported index type: \"' has incorrect indentation level 6, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "'TSStatusCode' has incorrect indentation level 6, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/53/UnsupportedIndexTypeException.java\nindex 911a2f2615c..fde8b2fac92 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/53/UnsupportedIndexTypeException.java\n@@ -26,7 +26,8 @@ public class UnsupportedIndexTypeException extends QueryProcessException {\n \n   public UnsupportedIndexTypeException(String indexType) {\n     super(\n-        \"Unsupported index type: \" + indexType,\n-        TSStatusCode.UNSUPPORTED_INDEX_TYPE_ERROR.getStatusCode());\n+      \"Unsupported index type: \"\n+        + indexType,\n+      TSStatusCode.UNSUPPORTED_INDEX_TYPE_ERROR.getStatusCode());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/53/UnsupportedIndexTypeException.java\nindex 911a2f2615c..895b978564e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/53/UnsupportedIndexTypeException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/53/UnsupportedIndexTypeException.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.iotdb.db.exception.index;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

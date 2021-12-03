@@ -1,0 +1,77 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "67",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "  public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n  void addToConfig(T fields, Configuration conf);\n  String queryToString(T fields);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/67/PcapFilterConfigurator.java\nindex 43e79ce984f..01bc22972d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/67/PcapFilterConfigurator.java\n@@ -23,5 +23,6 @@ import org.apache.hadoop.conf.Configuration;\n public interface PcapFilterConfigurator<T> {\n   public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n   void addToConfig(T fields, Configuration conf);\n+\n   String queryToString(T fields);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/67/PcapFilterConfigurator.java\nindex 43e79ce984f..3b85b6ffd75 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/67/PcapFilterConfigurator.java\n@@ -6,9 +6,9 @@\n  * to you under the Apache License, Version 2.0 (the\n  * \"License\"); you may not use this file except in compliance\n  * with the License.  You may obtain a copy of the License at\n- *\n- *     http://www.apache.org/licenses/LICENSE-2.0\n- *\n+ * <p>\n+ * http://www.apache.org/licenses/LICENSE-2.0\n+ * <p>\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n@@ -22,6 +22,8 @@ import org.apache.hadoop.conf.Configuration;\n \n public interface PcapFilterConfigurator<T> {\n   public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n+\n   void addToConfig(T fields, Configuration conf);\n+\n   String queryToString(T fields);\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/67/PcapFilterConfigurator.java\nindex 43e79ce984f..503d8485bbd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/67/PcapFilterConfigurator.java\n@@ -21,7 +21,8 @@ package org.apache.metron.pcap.filter;\n import org.apache.hadoop.conf.Configuration;\n \n public interface PcapFilterConfigurator<T> {\n+\n   public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n   void addToConfig(T fields, Configuration conf);\n   String queryToString(T fields);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/67/PcapFilterConfigurator.java\nindex 43e79ce984f..64690b89cb9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/67/PcapFilterConfigurator.java\n@@ -22,6 +22,10 @@ import org.apache.hadoop.conf.Configuration;\n \n public interface PcapFilterConfigurator<T> {\n   public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n+\n+\n   void addToConfig(T fields, Configuration conf);\n+\n+\n   String queryToString(T fields);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/67/PcapFilterConfigurator.java\nindex 43e79ce984f..01bc22972d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/67/PcapFilterConfigurator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/67/PcapFilterConfigurator.java\n@@ -23,5 +23,6 @@ import org.apache.hadoop.conf.Configuration;\n public interface PcapFilterConfigurator<T> {\n   public static final String PCAP_FILTER_NAME_CONF = \"PCAP_FILTER_NAME\";\n   void addToConfig(T fields, Configuration conf);\n+\n   String queryToString(T fields);\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "styler_random"
+    ]
+}

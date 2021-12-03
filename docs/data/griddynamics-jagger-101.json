@@ -1,0 +1,77 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "101",
+    "information": {
+        "violations": [
+            {
+                "line": "28",
+                "severity": "warning",
+                "message": "'method def' child has incorrect indentation level 16, expected level should be 12.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "        @Override\n        public void writeObject(Object object) throws IOException {\n                out.writeObject(object);\n        }\n\n        @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..57a4ba16c12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/101/JBossBufferedLogWriter.java\n@@ -25,7 +25,9 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n+            out.writeObject(object)\n+    ;\n+\n         }\n \n         @Override\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..cc79d9ce031 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/101/JBossBufferedLogWriter.java\n@@ -25,7 +25,7 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n+            out.writeObject(object);\n         }\n \n         @Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 4, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..78fee6f9897 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/101/JBossBufferedLogWriter.java\n@@ -25,7 +25,7 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n+    out.writeObject(object);\n         }\n \n         @Override\n@@ -39,4 +39,4 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n         return new JBossLogWriterOutput(out);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..f0a7d0c8673 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/101/JBossBufferedLogWriter.java\n@@ -4,10 +4,10 @@ import com.griddynamics.jagger.storage.FileStorage;\n import org.jboss.serial.io.JBossObjectOutputStream;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.IOException;\n import java.io.OutputStream;\n \n+\n public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n     private final Logger log = LoggerFactory.getLogger(JBossBufferedLogWriter.class);\n@@ -17,6 +17,7 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n     }\n \n     private static class JBossLogWriterOutput implements LogWriterOutput {\n+\n         private final JBossObjectOutputStream out;\n \n         private JBossLogWriterOutput(OutputStream out) throws IOException {\n@@ -25,7 +26,7 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n+            out.writeObject(object);\n         }\n \n         @Override\n@@ -38,5 +39,4 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n     public LogWriterOutput getOutput(OutputStream out) throws IOException {\n         return new JBossLogWriterOutput(out);\n     }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..57a4ba16c12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/101/JBossBufferedLogWriter.java\n@@ -25,7 +25,9 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n+            out.writeObject(object)\n+    ;\n+\n         }\n \n         @Override\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/101/JBossBufferedLogWriter.java\nindex 9dfb54d0d22..6cff13be79b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/101/JBossBufferedLogWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/101/JBossBufferedLogWriter.java\n@@ -25,8 +25,8 @@ public class JBossBufferedLogWriter extends BufferedLogWriter {\n \n         @Override\n         public void writeObject(Object object) throws IOException {\n-                out.writeObject(object);\n-        }\n+            out.writeObject(object);\n+    }\n \n         @Override\n         public void close() throws IOException {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "styler_three_grams"
+    ]
+}

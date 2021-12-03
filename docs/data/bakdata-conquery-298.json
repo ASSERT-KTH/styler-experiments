@@ -1,0 +1,100 @@
+{
+    "project_name": "bakdata-conquery",
+    "violation_id": "298",
+    "information": {
+        "violations": [
+            {
+                "line": "10",
+                "severity": "warning",
+                "message": "trailing whitespaces",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "\tBEFORE,\n\tNEUTRAL,\n\tAFTER;\t",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/298/IndexPlacement.java\nindex 1178cb0debe..4c327e851d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/298/IndexPlacement.java\n@@ -7,5 +7,5 @@ import lombok.RequiredArgsConstructor;\n public enum IndexPlacement {\n \tBEFORE,\n \tNEUTRAL,\n-\tAFTER;\t\n+AFTER;\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/298/IndexPlacement.java\nindex 1178cb0debe..2fdb47ac941 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/298/IndexPlacement.java\n@@ -3,9 +3,10 @@ package com.bakdata.conquery.apiv1.forms;\n import lombok.Getter;\n import lombok.RequiredArgsConstructor;\n \n-@RequiredArgsConstructor @Getter\n+@RequiredArgsConstructor\n+@Getter\n public enum IndexPlacement {\n-\tBEFORE,\n-\tNEUTRAL,\n-\tAFTER;\t\n+    BEFORE,\n+    NEUTRAL,\n+    AFTER;\n }\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/298/IndexPlacement.java\nindex 1178cb0debe..fc2b94fe722 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/298/IndexPlacement.java\n@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;\n \n @RequiredArgsConstructor @Getter\n public enum IndexPlacement {\n-\tBEFORE,\n-\tNEUTRAL,\n-\tAFTER;\t\n+ BEFORE,\n+ NEUTRAL,\n+ AFTER;\n }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/298/IndexPlacement.java\nindex 1178cb0debe..4c327e851d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/298/IndexPlacement.java\n@@ -7,5 +7,5 @@ import lombok.RequiredArgsConstructor;\n public enum IndexPlacement {\n \tBEFORE,\n \tNEUTRAL,\n-\tAFTER;\t\n+AFTER;\n }\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/298/IndexPlacement.java\nindex 1178cb0debe..730069ce276 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/298/IndexPlacement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/298/IndexPlacement.java\n@@ -6,6 +6,5 @@ import lombok.RequiredArgsConstructor;\n @RequiredArgsConstructor @Getter\n public enum IndexPlacement {\n \tBEFORE,\n-\tNEUTRAL,\n-\tAFTER;\t\n+\tNEUTRAL,AFTER;\n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

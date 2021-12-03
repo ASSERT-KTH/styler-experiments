@@ -1,0 +1,68 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "460",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.monitor;\n\nimport org.apache.iotdb.db.conf.IoTDBConfig;\nimport org.apache.iotdb.db.conf.IoTDBConstant;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/460/StatMonitor.java\nindex 03a8b10b2fb..a02b18a6d62 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/460/StatMonitor.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.monitor;\n \n import org.apache.iotdb.db.conf.IoTDBConfig;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/460/StatMonitor.java\nindex 03a8b10b2fb..84a43bd48a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/460/StatMonitor.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.monitor;\n \n import org.apache.iotdb.db.conf.IoTDBConfig;\n@@ -95,7 +96,9 @@ public class StatMonitor implements StatMonitorMBean, IService {\n     }\n   }\n \n-  /** Generate tsRecords for stat parameters and insert them into StorageEngine. */\n+  /**\n+   * Generate tsRecords for stat parameters and insert them into StorageEngine.\n+   */\n   public void saveStatValue(String storageGroupName)\n       throws MetadataException, StorageEngineException {\n     long insertTime = System.currentTimeMillis();\n@@ -126,7 +129,9 @@ public class StatMonitor implements StatMonitorMBean, IService {\n     }\n   }\n \n-  /** Recover the cache values of monitor series using last query if time series exist. */\n+  /**\n+   * Recover the cache values of monitor series using last query if time series exist.\n+   */\n   public void recovery() {\n     try {\n       for (int i = 0; i < globalSeries.size(); i++) {\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/460/StatMonitor.java\nindex 03a8b10b2fb..a02b18a6d62 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/460/StatMonitor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/460/StatMonitor.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.monitor;\n \n import org.apache.iotdb.db.conf.IoTDBConfig;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

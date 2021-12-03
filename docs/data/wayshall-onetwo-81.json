@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "81",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "95",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "\tString[] tags() default {};\n\tMessageModel messageModel() default MessageModel.CLUSTERING;\n\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET ;\n\tlong ignoreOffSetThreshold() default -1;\n\t\n\t//TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/81/RMQSubscribe.java\nindex 8f5fede6ae6..5036466827f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/81/RMQSubscribe.java\n@@ -22,8 +22,8 @@ public @interface RMQSubscribe {\n \tString topic();\n \tString[] tags() default {};\n \tMessageModel messageModel() default MessageModel.CLUSTERING;\n-\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET ;\n-\tlong ignoreOffSetThreshold() default -1;\n+\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET;\n+ long ignoreOffSetThreshold() default -1;\n \t\n \t//TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e\n \t//configClass() default Object.class;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/81/RMQSubscribe.java\nindex 8f5fede6ae6..6d8a9fb096d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/81/RMQSubscribe.java\n@@ -10,7 +10,7 @@ import com.alibaba.rocketmq.common.protocol.heartbeat.MessageModel;\n \n /****\n  * @author wayshall\n- * \n+ *\n  * \u628a\u6ce8\u89e3\u653e\u5728\u6709\u4e14\u53ea\u6709\u4e00\u4e2aMessageExt\u7c7b\u578b\u53c2\u6570\u7684\u65b9\u6cd5\u4e0a\n  *\n  */\n@@ -18,13 +18,18 @@ import com.alibaba.rocketmq.common.protocol.heartbeat.MessageModel;\n @Retention(RetentionPolicy.RUNTIME)\n public @interface RMQSubscribe {\n \n-\tString groupName();\n-\tString topic();\n-\tString[] tags() default {};\n-\tMessageModel messageModel() default MessageModel.CLUSTERING;\n-\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET ;\n-\tlong ignoreOffSetThreshold() default -1;\n-\t\n-\t//TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e\n-\t//configClass() default Object.class;\n+  String groupName();\n+\n+  String topic();\n+\n+  String[] tags() default {};\n+\n+  MessageModel messageModel() default MessageModel.CLUSTERING;\n+\n+  ConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET;\n+\n+  long ignoreOffSetThreshold() default -1;\n+\n+  //TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e\n+  //configClass() default Object.class;\n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/81/RMQSubscribe.java\nindex 8f5fede6ae6..5036466827f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/81/RMQSubscribe.java\n@@ -22,8 +22,8 @@ public @interface RMQSubscribe {\n \tString topic();\n \tString[] tags() default {};\n \tMessageModel messageModel() default MessageModel.CLUSTERING;\n-\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET ;\n-\tlong ignoreOffSetThreshold() default -1;\n+\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET;\n+ long ignoreOffSetThreshold() default -1;\n \t\n \t//TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e\n \t//configClass() default Object.class;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/81/RMQSubscribe.java\nindex 8f5fede6ae6..5036466827f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/81/RMQSubscribe.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/81/RMQSubscribe.java\n@@ -22,8 +22,8 @@ public @interface RMQSubscribe {\n \tString topic();\n \tString[] tags() default {};\n \tMessageModel messageModel() default MessageModel.CLUSTERING;\n-\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET ;\n-\tlong ignoreOffSetThreshold() default -1;\n+\tConsumeFromWhere consumeFromWhere() default ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET;\n+ long ignoreOffSetThreshold() default -1;\n \t\n \t//TODO \u53ef\u589e\u52a0\u56de\u8c03\u7c7b\u5b8c\u5168\u5b9a\u5236\u914d\u7f6e\n \t//configClass() default Object.class;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

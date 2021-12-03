@@ -1,0 +1,105 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "59",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "column": "72",
+                "severity": "error",
+                "message": "'}' at column 72 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(ValidQuestionImageType constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/59/ValidQuestionImageTypeValidator.java\nindex 4fc728bbd77..7e77d2b04fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/59/ValidQuestionImageTypeValidator.java\n@@ -20,7 +20,9 @@ public class ValidQuestionImageTypeValidator implements\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidQuestionImageType constraintAnnotation) {}\n+  public void initialize(ValidQuestionImageType constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/59/ValidQuestionImageTypeValidator.java\nindex 4fc728bbd77..14611caa378 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/59/ValidQuestionImageTypeValidator.java\n@@ -6,13 +6,12 @@ import javax.validation.ConstraintValidatorContext;\n import eu.dzhw.fdz.metadatamanagement.questionmanagement.domain.ImageType;\n \n /**\n- * Validator of the question image type. Only the png value from the enum {@link ImageType} is \n+ * Validator of the question image type. Only the png value from the enum {@link ImageType} is\n  * allowed.\n- * \n- * @author Daniel Katzberg\n  *\n+ * @author Daniel Katzberg\n  */\n-public class ValidQuestionImageTypeValidator implements \n+public class ValidQuestionImageTypeValidator implements\n     ConstraintValidator<ValidQuestionImageType, ImageType> {\n \n   /*\n@@ -20,16 +19,17 @@ public class ValidQuestionImageTypeValidator implements\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidQuestionImageType constraintAnnotation) {}\n+  public void initialize(ValidQuestionImageType constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * @see javax.validation.ConstraintValidator#isValid(java.lang.Object, \n+   * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n   @Override\n   public boolean isValid(ImageType imageType, ConstraintValidatorContext context) {\n-        \n+\n     if (imageType == null) {\n       return true;\n     }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "22",
+                    "column": "72",
+                    "severity": "error",
+                    "message": "'}' at column 72 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'if' has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "error",
+                    "message": "'if' child has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/59/ValidQuestionImageTypeValidator.java\nindex 4fc728bbd77..b29a47a6874 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/59/ValidQuestionImageTypeValidator.java\n@@ -14,7 +14,6 @@ import eu.dzhw.fdz.metadatamanagement.questionmanagement.domain.ImageType;\n  */\n public class ValidQuestionImageTypeValidator implements \n     ConstraintValidator<ValidQuestionImageType, ImageType> {\n-\n   /*\n    * (non-Javadoc)\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n@@ -29,13 +28,12 @@ public class ValidQuestionImageTypeValidator implements\n    */\n   @Override\n   public boolean isValid(ImageType imageType, ConstraintValidatorContext context) {\n-        \n-    if (imageType == null) {\n-      return true;\n+  if (imageType == null) {\n+  return true;\n     }\n \n     // check for scale levels\n     return imageType.equals(ImageType.PNG);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/59/ValidQuestionImageTypeValidator.java\nindex 4fc728bbd77..27433be4653 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/59/ValidQuestionImageTypeValidator.java\n@@ -2,7 +2,6 @@ package eu.dzhw.fdz.metadatamanagement.questionmanagement.domain.validation;\n \n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import eu.dzhw.fdz.metadatamanagement.questionmanagement.domain.ImageType;\n \n /**\n@@ -12,30 +11,36 @@ import eu.dzhw.fdz.metadatamanagement.questionmanagement.domain.ImageType;\n  * @author Daniel Katzberg\n  *\n  */\n-public class ValidQuestionImageTypeValidator implements \n-    ConstraintValidator<ValidQuestionImageType, ImageType> {\n+\n+\n+public class ValidQuestionImageTypeValidator implements ConstraintValidator<ValidQuestionImageType, ImageType> {\n \n   /*\n    * (non-Javadoc)\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(ValidQuestionImageType constraintAnnotation) {}\n+  public void initialize(ValidQuestionImageType constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object, \n    * javax.validation.ConstraintValidatorContext)\n    */\n+\n+\n   @Override\n-  public boolean isValid(ImageType imageType, ConstraintValidatorContext context) {\n-        \n+  public boolean isValid(ImageType imageType,\n+    ConstraintValidatorContext context) {\n     if (imageType == null) {\n       return true;\n     }\n \n     // check for scale levels\n+\n     return imageType.equals(ImageType.PNG);\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/59/ValidQuestionImageTypeValidator.java\nindex 4fc728bbd77..7e77d2b04fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/59/ValidQuestionImageTypeValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/59/ValidQuestionImageTypeValidator.java\n@@ -20,7 +20,9 @@ public class ValidQuestionImageTypeValidator implements\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidQuestionImageType constraintAnnotation) {}\n+  public void initialize(ValidQuestionImageType constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "23",
+                    "column": "72",
+                    "severity": "error",
+                    "message": "'}' at column 72 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "69",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "column": "63",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    public Serializable generateId(Session session) {\n            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/69/UuidSessionIdGenerator.java\nindex d9a615746f4..da4185ddcf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/69/UuidSessionIdGenerator.java\n@@ -15,6 +15,6 @@ import java.util.UUID;\n public class UuidSessionIdGenerator implements SessionIdGenerator {\n     @Override\n     public Serializable generateId(Session session) {\n-            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n+            return UUID.randomUUID().toString().replaceAll(\"-\", \"\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/69/UuidSessionIdGenerator.java\nindex d9a615746f4..69817e7cd2e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/69/UuidSessionIdGenerator.java\n@@ -15,6 +15,6 @@ import java.util.UUID;\n public class UuidSessionIdGenerator implements SessionIdGenerator {\n     @Override\n     public Serializable generateId(Session session) {\n-            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n+        return UUID.randomUUID().toString().replaceAll(\"-\", \"\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "18",
+                    "column": "55",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/69/UuidSessionIdGenerator.java\nindex d9a615746f4..d8567008787 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/69/UuidSessionIdGenerator.java\n@@ -15,6 +15,6 @@ import java.util.UUID;\n public class UuidSessionIdGenerator implements SessionIdGenerator {\n     @Override\n     public Serializable generateId(Session session) {\n-            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n+    return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/69/UuidSessionIdGenerator.java\nindex d9a615746f4..da4185ddcf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/69/UuidSessionIdGenerator.java\n@@ -15,6 +15,6 @@ import java.util.UUID;\n public class UuidSessionIdGenerator implements SessionIdGenerator {\n     @Override\n     public Serializable generateId(Session session) {\n-            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n+            return UUID.randomUUID().toString().replaceAll(\"-\", \"\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/69/UuidSessionIdGenerator.java\nindex d9a615746f4..da4185ddcf7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/69/UuidSessionIdGenerator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/69/UuidSessionIdGenerator.java\n@@ -15,6 +15,6 @@ import java.util.UUID;\n public class UuidSessionIdGenerator implements SessionIdGenerator {\n     @Override\n     public Serializable generateId(Session session) {\n-            return UUID.randomUUID().toString().replaceAll(\"-\",\"\");\n+            return UUID.randomUUID().toString().replaceAll(\"-\", \"\");\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

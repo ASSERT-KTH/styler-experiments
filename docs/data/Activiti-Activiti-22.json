@@ -1,0 +1,82 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "22",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.bpmn.model;\n\npublic class ImplementationType {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/22/ImplementationType.java\nindex 38defc77ae6..45bce0c4384 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/22/ImplementationType.java\n@@ -10,6 +10,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class ImplementationType {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/22/ImplementationType.java\nindex 38defc77ae6..4ff24332f89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/22/ImplementationType.java\n@@ -1,29 +1,30 @@\n /* Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- * \n+ *\n  *      http://www.apache.org/licenses/LICENSE-2.0\n- * \n+ *\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class ImplementationType {\n \n-  public static String IMPLEMENTATION_TYPE_CLASS = \"class\";\n-  public static String IMPLEMENTATION_TYPE_EXPRESSION = \"expression\";\n-  public static String IMPLEMENTATION_TYPE_DELEGATEEXPRESSION = \"delegateExpression\";\n-  public static String IMPLEMENTATION_TYPE_INSTANCE = \"instance\";\n-  public static String IMPLEMENTATION_TYPE_THROW_SIGNAL_EVENT = \"throwSignalEvent\";\n-  public static String IMPLEMENTATION_TYPE_THROW_GLOBAL_SIGNAL_EVENT = \"throwGlobalSignalEvent\";\n-  public static String IMPLEMENTATION_TYPE_THROW_MESSAGE_EVENT = \"throwMessageEvent\";\n-  public static String IMPLEMENTATION_TYPE_THROW_ERROR_EVENT = \"throwErrorEvent\";\n-  public static String IMPLEMENTATION_TYPE_WEBSERVICE = \"##WebService\";\n+    public static String IMPLEMENTATION_TYPE_CLASS = \"class\";\n+    public static String IMPLEMENTATION_TYPE_EXPRESSION = \"expression\";\n+    public static String IMPLEMENTATION_TYPE_DELEGATEEXPRESSION = \"delegateExpression\";\n+    public static String IMPLEMENTATION_TYPE_INSTANCE = \"instance\";\n+    public static String IMPLEMENTATION_TYPE_THROW_SIGNAL_EVENT = \"throwSignalEvent\";\n+    public static String IMPLEMENTATION_TYPE_THROW_GLOBAL_SIGNAL_EVENT = \"throwGlobalSignalEvent\";\n+    public static String IMPLEMENTATION_TYPE_THROW_MESSAGE_EVENT = \"throwMessageEvent\";\n+    public static String IMPLEMENTATION_TYPE_THROW_ERROR_EVENT = \"throwErrorEvent\";\n+    public static String IMPLEMENTATION_TYPE_WEBSERVICE = \"##WebService\";\n \n-  public static String IMPLEMENTATION_TYPE_INVALID_THROW_EVENT = \"invalidThrowEvent\";\n+    public static String IMPLEMENTATION_TYPE_INVALID_THROW_EVENT = \"invalidThrowEvent\";\n \n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/22/ImplementationType.java\nindex 38defc77ae6..b9340503f16 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/22/ImplementationType.java\n@@ -23,7 +23,5 @@ public class ImplementationType {\n   public static String IMPLEMENTATION_TYPE_THROW_MESSAGE_EVENT = \"throwMessageEvent\";\n   public static String IMPLEMENTATION_TYPE_THROW_ERROR_EVENT = \"throwErrorEvent\";\n   public static String IMPLEMENTATION_TYPE_WEBSERVICE = \"##WebService\";\n-\n   public static String IMPLEMENTATION_TYPE_INVALID_THROW_EVENT = \"invalidThrowEvent\";\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/22/ImplementationType.java\nindex 38defc77ae6..81e9e4788cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/22/ImplementationType.java\n@@ -10,7 +10,9 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package org.activiti.bpmn.model;\n+package org.activiti.bpmn.\n+\n+model;\n \n public class ImplementationType {\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/22/ImplementationType.java\nindex 38defc77ae6..45bce0c4384 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/22/ImplementationType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/22/ImplementationType.java\n@@ -10,6 +10,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.bpmn.model;\n \n public class ImplementationType {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

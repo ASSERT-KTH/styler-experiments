@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "522",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/522/ChannelPool2.java\nindex 3f8ef960dff..244699c3220 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/522/ChannelPool2.java\n@@ -35,188 +35,189 @@ import org.apache.commons.logging.LogFactory;\n  * Channel pool to a server\n  */\n public class ChannelPool2 {\n-  private static final Log LOG = LogFactory.getLog(ChannelPool.class);\n-  /**\n-   * Active channels in the pool\n-   */\n-  private final List<NettyChannel> channels;\n-\n-  /**\n-   * Netty client bootstrap\n-   */\n-  private final Bootstrap bootstrap;\n-\n-  /**\n-   * Server location\n-   */\n-  private final Location loc;\n-\n-  /**\n-   * Pool parameters\n-   */\n-  private final ChannelPoolParam param;\n-\n-  /**\n-   * Lock\n-   */\n-  private final Lock lock;\n-\n-  private final Random r = new Random();\n-\n-  /**\n-   * Create channel token\n-   */\n-  private int channelToken;\n-\n-  /**\n-   * Create a channel pool\n-   *\n-   * @param bootstrap netty client bootstrap\n-   * @param loc       server location\n-   * @param param     pool parameters\n-   */\n-  public ChannelPool2(Bootstrap bootstrap, Location loc, ChannelPoolParam param) {\n-    this.bootstrap = bootstrap;\n-    this.loc = loc;\n-    this.param = param;\n-    this.channels = new Vector<>();\n-    this.lock = new ReentrantLock();\n-    this.channelToken = 0;\n-  }\n-\n-  /**\n-   * Get a channel from the pool or create a new channel\n-   *\n-   * @param timeoutMs max wait time for a channel\n-   * @return the channel to the server\n-   * @throws InterruptedException\n-   * @throws TimeoutException\n-   */\n-  public NettyChannel getChannel(long timeoutMs) {\n-    if(channels.isEmpty()) {\n-      lock.lock();\n-      try {\n-        if(channels.isEmpty()) {\n-          init(timeoutMs);\n-        }\n-      } finally {\n-        lock.unlock();\n-      }\n+    private static final Log LOG = LogFactory.getLog(ChannelPool.class);\n+    /**\n+     * Active channels in the pool\n+     */\n+    private final List<NettyChannel> channels;\n+\n+    /**\n+     * Netty client bootstrap\n+     */\n+    private final Bootstrap bootstrap;\n+\n+    /**\n+     * Server location\n+     */\n+    private final Location loc;\n+\n+    /**\n+     * Pool parameters\n+     */\n+    private final ChannelPoolParam param;\n+\n+    /**\n+     * Lock\n+     */\n+    private final Lock lock;\n+\n+    private final Random r = new Random();\n+\n+    /**\n+     * Create channel token\n+     */\n+    private int channelToken;\n+\n+    /**\n+     * Create a channel pool\n+     *\n+     * @param bootstrap netty client bootstrap\n+     * @param loc       server location\n+     * @param param     pool parameters\n+     */\n+    public ChannelPool2(Bootstrap bootstrap, Location loc, ChannelPoolParam param) {\n+        this.bootstrap = bootstrap;\n+        this.loc = loc;\n+        this.param = param;\n+        this.channels = new Vector<>();\n+        this.lock = new ReentrantLock();\n+        this.channelToken = 0;\n     }\n \n-    return channels.get(Math.abs(r.nextInt()) % channels.size());\n-  }\n+    /**\n+     * Get a channel from the pool or create a new channel\n+     *\n+     * @param timeoutMs max wait time for a channel\n+     * @return the channel to the server\n+     * @throws InterruptedException\n+     * @throws TimeoutException\n+     */\n+    public NettyChannel getChannel(long timeoutMs) {\n+        if (channels.isEmpty()) {\n+            lock.lock();\n+            try {\n+                if (channels.isEmpty()) {\n+                    init(timeoutMs);\n+                }\n+            } finally {\n+                lock.unlock();\n+            }\n+        }\n \n-  private void init(long timeoutMs) {\n-    for(int i = 0; i < param.maxActive; i++) {\n-      channels.add(createChannel(timeoutMs));\n+        return channels.get(Math.abs(r.nextInt()) % channels.size());\n     }\n-  }\n-\n-  private NettyChannel createChannel(long timeoutMs) {\n-    Channel newChannel;\n-    try {\n-      newChannel = connect(timeoutMs);\n-      return new NettyChannel(newChannel, loc);\n-    } catch (Throwable e) {\n-      LOG.error(\"Connect to \" + loc + \" failed \", e);\n-      throw new RuntimeException(\"Connect to \" + loc + \" failed \", e);\n+\n+    private void init(long timeoutMs) {\n+        for (int i = 0; i < param.maxActive; i++) {\n+            channels.add(createChannel(timeoutMs));\n+        }\n     }\n-  }\n-\n-  /**\n-   * Connect to the server to get a channel\n-   *\n-   * @param timeoutMs max wait time\n-   * @return a channel to the server\n-   * @throws InterruptedException\n-   * @throws TimeoutException\n-   */\n-  private Channel connect(long timeoutMs) throws InterruptedException, TimeoutException {\n-    ChannelFuture connectFuture = bootstrap.connect(loc.getIp(), loc.getPort());\n-    int ticks = Math.max(1, (int) (timeoutMs / 10));\n-    while (ticks-- >= 0) {\n-      if (connectFuture.isDone()) {\n-        return connectFuture.channel();\n-      }\n-      Thread.sleep(10);\n+\n+    private NettyChannel createChannel(long timeoutMs) {\n+        Channel newChannel;\n+        try {\n+            newChannel = connect(timeoutMs);\n+            return new NettyChannel(newChannel, loc);\n+        } catch (Throwable e) {\n+            LOG.error(\"Connect to \" + loc + \" failed \", e);\n+            throw new RuntimeException(\"Connect to \" + loc + \" failed \", e);\n+        }\n     }\n \n-    if (!connectFuture.isDone()) {\n-      throw new TimeoutException(\"connect \" + loc + \" timeout\");\n-    } else {\n-      return connectFuture.channel();\n+    /**\n+     * Connect to the server to get a channel\n+     *\n+     * @param timeoutMs max wait time\n+     * @return a channel to the server\n+     * @throws InterruptedException\n+     * @throws TimeoutException\n+     */\n+    private Channel connect(long timeoutMs) throws InterruptedException, TimeoutException {\n+        ChannelFuture connectFuture = bootstrap.connect(loc.getIp(), loc.getPort());\n+        int ticks = Math.max(1, (int) (timeoutMs / 10));\n+        while (ticks-- >= 0) {\n+            if (connectFuture.isDone()) {\n+                return connectFuture.channel();\n+            }\n+            Thread.sleep(10);\n+        }\n+\n+        if (!connectFuture.isDone()) {\n+            throw new TimeoutException(\"connect \" + loc + \" timeout\");\n+        } else {\n+            return connectFuture.channel();\n+        }\n     }\n-  }\n-\n-  /**\n-   * Release the channel\n-   *\n-   * @param channel channel\n-   */\n-  public void releaseChannel(NettyChannel channel) {\n-\n-  }\n-\n-  /**\n-   * Remove all channels in the pool\n-   */\n-  public void removeChannels() {\n-    try {\n-      lock.lock();\n-      int size = channels.size();\n-      for (int i = 0; i < size; i++) {\n-        channels.get(i).close();\n-      }\n-    } finally {\n-      lock.unlock();\n+\n+    /**\n+     * Release the channel\n+     *\n+     * @param channel channel\n+     */\n+    public void releaseChannel(NettyChannel channel) {\n+\n     }\n-  }\n-\n-  /**\n-   * Check the idle times of all channels are over limit or not\n-   */\n-  public void check() {\n-    long ts = System.currentTimeMillis();\n-    try {\n-      lock.lock();\n-      int size = channels.size();\n-      for (int i = 0; i < size; ) {\n-        if (channels.size() > param.minActive && channels.get(i).isUseable()\n-            && (ts - channels.get(i).getLastUseTs()) > param.maxIdleTimeMs) {\n-          LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \"\n-              + (ts - channels.get(i).getLastUseTs()) + \" ms\");\n-          channels.get(i).close();\n-          channels.remove(i);\n-          size = channels.size();\n-        } else {\n-          i++;\n+\n+    /**\n+     * Remove all channels in the pool\n+     */\n+    public void removeChannels() {\n+        try {\n+            lock.lock();\n+            int size = channels.size();\n+            for (int i = 0; i < size; i++) {\n+                channels.get(i).close();\n+            }\n+        } finally {\n+            lock.unlock();\n         }\n-      }\n-    } finally {\n-      lock.unlock();\n     }\n-  }\n-\n-  @Override public String toString() {\n-    StringBuilder sb = new StringBuilder();\n-    int usableNum = 0;\n-    try {\n-      lock.lock();\n-      int size = channels.size();\n-      for (int i = 0; i < size; i++) {\n-        if (channels.get(i).isUseable()) {\n-          usableNum++;\n+\n+    /**\n+     * Check the idle times of all channels are over limit or not\n+     */\n+    public void check() {\n+        long ts = System.currentTimeMillis();\n+        try {\n+            lock.lock();\n+            int size = channels.size();\n+            for (int i = 0; i < size; ) {\n+                if (channels.size() > param.minActive && channels.get(i).isUseable()\n+                        && (ts - channels.get(i).getLastUseTs()) > param.maxIdleTimeMs) {\n+                    LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \"\n+                            + (ts - channels.get(i).getLastUseTs()) + \" ms\");\n+                    channels.get(i).close();\n+                    channels.remove(i);\n+                    size = channels.size();\n+                } else {\n+                    i++;\n+                }\n+            }\n+        } finally {\n+            lock.unlock();\n         }\n-      }\n-    } finally {\n-      lock.unlock();\n     }\n \n-    sb.append(\"loc=\").append(loc).append(\",\");\n-    sb.append(\"channel number=\").append(channels.size()).append(\",\");\n-    sb.append(\"channel usable number=\").append(usableNum).append(\",\");\n-    sb.append(\"channelToken=\").append(channelToken);\n-    return sb.toString();\n-  }\n+    @Override\n+    public String toString() {\n+        StringBuilder sb = new StringBuilder();\n+        int usableNum = 0;\n+        try {\n+            lock.lock();\n+            int size = channels.size();\n+            for (int i = 0; i < size; i++) {\n+                if (channels.get(i).isUseable()) {\n+                    usableNum++;\n+                }\n+            }\n+        } finally {\n+            lock.unlock();\n+        }\n+\n+        sb.append(\"loc=\").append(loc).append(\",\");\n+        sb.append(\"channel number=\").append(channels.size()).append(\",\");\n+        sb.append(\"channel usable number=\").append(usableNum).append(\",\");\n+        sb.append(\"channelToken=\").append(channelToken);\n+        return sb.toString();\n+    }\n }\n",
+            "diff_size": 234
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/522/ChannelPool2.java\nindex 3f8ef960dff..217b724bf2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/522/ChannelPool2.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.common.transport;\n \n import com.tencent.angel.common.location.Location;\n@@ -108,7 +107,7 @@ public class ChannelPool2 {\n   }\n \n   private void init(long timeoutMs) {\n-    for(int i = 0; i < param.maxActive; i++) {\n+    for (int i = 0; i < param.maxActive; i++) {\n       channels.add(createChannel(timeoutMs));\n     }\n   }\n@@ -181,10 +180,10 @@ public class ChannelPool2 {\n     try {\n       lock.lock();\n       int size = channels.size();\n-      for (int i = 0; i < size; ) {\n+      for (int i = 0; i < size;) {\n         if (channels.size() > param.minActive && channels.get(i).isUseable()\n             && (ts - channels.get(i).getLastUseTs()) > param.maxIdleTimeMs) {\n-          LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \"\n+  LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \"\n               + (ts - channels.get(i).getLastUseTs()) + \" ms\");\n           channels.get(i).close();\n           channels.remove(i);\n@@ -198,7 +197,8 @@ public class ChannelPool2 {\n     }\n   }\n \n-  @Override public String toString() {\n+  @Override\n+public String toString() {\n     StringBuilder sb = new StringBuilder();\n     int usableNum = 0;\n     try {\n@@ -219,4 +219,4 @@ public class ChannelPool2 {\n     sb.append(\"channelToken=\").append(channelToken);\n     return sb.toString();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "191",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "192",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/522/ChannelPool2.java\nindex 3f8ef960dff..a79209c6b82 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/522/ChannelPool2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/522/ChannelPool2.java\n@@ -34,7 +34,9 @@ import org.apache.commons.logging.LogFactory;\n /**\n  * Channel pool to a server\n  */\n+\n public class ChannelPool2 {\n+\n   private static final Log LOG = LogFactory.getLog(ChannelPool.class);\n   /**\n    * Active channels in the pool\n@@ -60,7 +62,6 @@ public class ChannelPool2 {\n    * Lock\n    */\n   private final Lock lock;\n-\n   private final Random r = new Random();\n \n   /**\n@@ -75,6 +76,7 @@ public class ChannelPool2 {\n    * @param loc       server location\n    * @param param     pool parameters\n    */\n+\n   public ChannelPool2(Bootstrap bootstrap, Location loc, ChannelPoolParam param) {\n     this.bootstrap = bootstrap;\n     this.loc = loc;\n@@ -92,23 +94,23 @@ public class ChannelPool2 {\n    * @throws InterruptedException\n    * @throws TimeoutException\n    */\n+\n   public NettyChannel getChannel(long timeoutMs) {\n-    if(channels.isEmpty()) {\n+    if (channels.isEmpty()) {\n       lock.lock();\n       try {\n-        if(channels.isEmpty()) {\n+        if (channels.isEmpty()) {\n           init(timeoutMs);\n         }\n       } finally {\n         lock.unlock();\n       }\n     }\n-\n     return channels.get(Math.abs(r.nextInt()) % channels.size());\n   }\n \n   private void init(long timeoutMs) {\n-    for(int i = 0; i < param.maxActive; i++) {\n+    for (int i = 0; i < param.maxActive; i++) {\n       channels.add(createChannel(timeoutMs));\n     }\n   }\n@@ -132,6 +134,7 @@ public class ChannelPool2 {\n    * @throws InterruptedException\n    * @throws TimeoutException\n    */\n+\n   private Channel connect(long timeoutMs) throws InterruptedException, TimeoutException {\n     ChannelFuture connectFuture = bootstrap.connect(loc.getIp(), loc.getPort());\n     int ticks = Math.max(1, (int) (timeoutMs / 10));\n@@ -154,16 +157,17 @@ public class ChannelPool2 {\n    *\n    * @param channel channel\n    */\n-  public void releaseChannel(NettyChannel channel) {\n \n-  }\n+  public void releaseChannel(NettyChannel channel) {}\n \n   /**\n    * Remove all channels in the pool\n    */\n+\n   public void removeChannels() {\n     try {\n       lock.lock();\n+\n       int size = channels.size();\n       for (int i = 0; i < size; i++) {\n         channels.get(i).close();\n@@ -176,16 +180,16 @@ public class ChannelPool2 {\n   /**\n    * Check the idle times of all channels are over limit or not\n    */\n+\n   public void check() {\n     long ts = System.currentTimeMillis();\n     try {\n       lock.lock();\n+\n       int size = channels.size();\n-      for (int i = 0; i < size; ) {\n-        if (channels.size() > param.minActive && channels.get(i).isUseable()\n-            && (ts - channels.get(i).getLastUseTs()) > param.maxIdleTimeMs) {\n-          LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \"\n-              + (ts - channels.get(i).getLastUseTs()) + \" ms\");\n+      for (int i = 0; i < size;) {\n+        if (channels.size() > param.minActive && channels.get(i).isUseable() && (ts - channels.get(i).getLastUseTs()) > param.maxIdleTimeMs) {\n+          LOG.info(\"channel \" + channels.get(i) + \" will be closed, as it not use over \" + (ts - channels.get(i).getLastUseTs()) + \" ms\");\n           channels.get(i).close();\n           channels.remove(i);\n           size = channels.size();\n@@ -198,11 +202,13 @@ public class ChannelPool2 {\n     }\n   }\n \n-  @Override public String toString() {\n+  @Override\n+  public String toString() {\n     StringBuilder sb = new StringBuilder();\n     int usableNum = 0;\n     try {\n       lock.lock();\n+\n       int size = channels.size();\n       for (int i = 0; i < size; i++) {\n         if (channels.get(i).isUseable()) {\n@@ -212,11 +218,11 @@ public class ChannelPool2 {\n     } finally {\n       lock.unlock();\n     }\n-\n     sb.append(\"loc=\").append(loc).append(\",\");\n     sb.append(\"channel number=\").append(channels.size()).append(\",\");\n     sb.append(\"channel usable number=\").append(usableNum).append(\",\");\n     sb.append(\"channelToken=\").append(channelToken);\n     return sb.toString();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

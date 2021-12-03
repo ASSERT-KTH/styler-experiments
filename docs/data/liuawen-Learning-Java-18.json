@@ -1,0 +1,71 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "package com.itheima.instance.factory;\nimport org.springframework.context.ApplicationContext;\nimport \n\torg.springframework.context.support.ClassPathXmlApplicationContext;\npublic class InstanceTest3 {\n\tpublic static void main(String[] args) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/18/InstanceTest3.java\nindex fa31954a551..91c38a10c85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/18/InstanceTest3.java\n@@ -1,7 +1,6 @@\n package com.itheima.instance.factory;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-\torg.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class InstanceTest3 {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/18/InstanceTest3.java\nindex fa31954a551..6445991d660 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/18/InstanceTest3.java\n@@ -1,14 +1,16 @@\n package com.itheima.instance.factory;\r\n+\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-\torg.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import\r\n+    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+\r\n public class InstanceTest3 {\r\n-\tpublic static void main(String[] args) {\r\n-\t\t// \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n-\t\tString xmlPath = \"com/itheima/instance/factory/beans3.xml\";\r\n-\t\t// ApplicationContext\u5728\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\u65f6\uff0c\u5bf9Bean\u8fdb\u884c\u5b9e\u4f8b\u5316\r\n-\t\tApplicationContext applicationContext = \r\n-\t\t\t\tnew ClassPathXmlApplicationContext(xmlPath);\r\n-\t\tSystem.out.println(applicationContext.getBean(\"bean3\"));\r\n-\t}\r\n+    public static void main(String[] args) {\r\n+        // \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n+        String xmlPath = \"com/itheima/instance/factory/beans3.xml\";\r\n+        // ApplicationContext\u5728\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\u65f6\uff0c\u5bf9Bean\u8fdb\u884c\u5b9e\u4f8b\u5316\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(xmlPath);\r\n+        System.out.println(applicationContext.getBean(\"bean3\"));\r\n+    }\r\n } \r\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/18/InstanceTest3.java\nindex fa31954a551..5c9e7c9c026 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/18/InstanceTest3.java\n@@ -1,14 +1,13 @@\n package com.itheima.instance.factory;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-\torg.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\n+\n public class InstanceTest3 {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n \t\tString xmlPath = \"com/itheima/instance/factory/beans3.xml\";\r\n \t\t// ApplicationContext\u5728\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\u65f6\uff0c\u5bf9Bean\u8fdb\u884c\u5b9e\u4f8b\u5316\r\n-\t\tApplicationContext applicationContext = \r\n-\t\t\t\tnew ClassPathXmlApplicationContext(xmlPath);\r\n-\t\tSystem.out.println(applicationContext.getBean(\"bean3\"));\r\n+\t\tApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);\n+System.out.println(applicationContext.getBean(\"bean3\"));\r\n \t}\r\n-} \r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/18/InstanceTest3.java\nindex fa31954a551..91c38a10c85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/18/InstanceTest3.java\n@@ -1,7 +1,6 @@\n package com.itheima.instance.factory;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-\torg.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class InstanceTest3 {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/18/InstanceTest3.java\nindex fa31954a551..91c38a10c85 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/18/InstanceTest3.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/18/InstanceTest3.java\n@@ -1,7 +1,6 @@\n package com.itheima.instance.factory;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-\torg.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class InstanceTest3 {\r\n \tpublic static void main(String[] args) {\r\n \t\t// \u6307\u5b9a\u914d\u7f6e\u6587\u4ef6\u8def\u5f84\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

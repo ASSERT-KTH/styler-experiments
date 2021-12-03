@@ -1,0 +1,71 @@
+{
+    "project_name": "primefaces-primefaces",
+    "violation_id": "10",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "error",
+                "message": "Line matches the illegal pattern 'Trailing whitespace'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "@RequestScoped\npublic class ProcessView {\n    \n    private String firstname;\n    private String middlename;\n    private String lastname;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/10/ProcessView.java\nindex f632fa7ddae..d5c2897f860 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/10/ProcessView.java\n@@ -31,7 +31,6 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class ProcessView {\n-    \n     private String firstname;\n     private String middlename;\n     private String lastname;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/10/ProcessView.java\nindex f632fa7ddae..64d163b0c4d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/10/ProcessView.java\n@@ -21,6 +21,7 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package org.primefaces.showcase.view.ajax;\n \n import javax.enterprise.context.RequestScoped;\n@@ -31,7 +32,7 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class ProcessView {\n-    \n+\n     private String firstname;\n     private String middlename;\n     private String lastname;\n@@ -62,6 +63,6 @@ public class ProcessView {\n \n     public void save() {\n         FacesContext.getCurrentInstance().addMessage(null,\n-                new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n+            new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n     }\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/10/ProcessView.java\nindex f632fa7ddae..25b980c11f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/10/ProcessView.java\n@@ -31,9 +31,9 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class ProcessView {\n-    \n+\n     private String firstname;\n-    private String middlename;\n+private String middlename;\n     private String lastname;\n \n     public String getFirstname() {\n@@ -61,7 +61,6 @@ public class ProcessView {\n     }\n \n     public void save() {\n-        FacesContext.getCurrentInstance().addMessage(null,\n-                new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/10/ProcessView.java\nindex f632fa7ddae..836205c9b22 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/10/ProcessView.java\n@@ -31,11 +31,12 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class ProcessView {\n-    \n+\n     private String firstname;\n+\n     private String middlename;\n-    private String lastname;\n \n+    private String lastname;\n     public String getFirstname() {\n         return firstname;\n     }\n@@ -61,7 +62,6 @@ public class ProcessView {\n     }\n \n     public void save() {\n-        FacesContext.getCurrentInstance().addMessage(null,\n-                new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(\"Welcome \" + firstname + \" \" + middlename + \" \" + lastname));\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/10/ProcessView.java\nindex f632fa7ddae..d5c2897f860 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/10/ProcessView.java\n@@ -31,7 +31,6 @@ import javax.inject.Named;\n @Named\n @RequestScoped\n public class ProcessView {\n-    \n     private String firstname;\n     private String middlename;\n     private String lastname;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/10/ProcessView.java\nindex f632fa7ddae..60454fa8dd7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/10/ProcessView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/10/ProcessView.java\n@@ -30,9 +30,7 @@ import javax.inject.Named;\n \n @Named\n @RequestScoped\n-public class ProcessView {\n-    \n-    private String firstname;\n+public class ProcessView { private String firstname;\n     private String middlename;\n     private String lastname;\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

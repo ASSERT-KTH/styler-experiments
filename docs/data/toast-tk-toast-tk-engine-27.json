@@ -1,0 +1,70 @@
+{
+    "project_name": "toast-tk-toast-tk-engine",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "info",
+                "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "\t\tWebEventRecord eventObject) {\n\t\tthis.value = eventObject;\n\t}\n\n\n\t@Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/27/WebRecordResponse.java\nindex 9c0491e8453..615bf506d01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/27/WebRecordResponse.java\n@@ -22,8 +22,7 @@ public class WebRecordResponse implements IIdRequest {\n \t\tthis.value = eventObject;\n \t}\n \n-\n-\t@Override\n+ @Override\n \tpublic String getId() {\n \t\treturn id;\n \t}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "info",
+                    "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/27/WebRecordResponse.java\nindex 9c0491e8453..5534719534a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/27/WebRecordResponse.java\n@@ -5,31 +5,31 @@ import com.synaptix.toast.core.net.request.IIdRequest;\n \n public class WebRecordResponse implements IIdRequest {\n \n-\tprivate String id;\n+    private String id;\n \n-\tpublic WebEventRecord value;\n+    public WebEventRecord value;\n \n-\tprivate String sentence;\n+    private String sentence;\n \n-\t/**\n-\t * serialization only\n-\t */\n-\tpublic WebRecordResponse() {\n-\t}\n+    /**\n+     * serialization only\n+     */\n+    public WebRecordResponse() {\n+    }\n \n-\tpublic WebRecordResponse(\n-\t\tWebEventRecord eventObject) {\n-\t\tthis.value = eventObject;\n-\t}\n+    public WebRecordResponse(\n+        WebEventRecord eventObject) {\n+        this.value = eventObject;\n+    }\n \n \n-\t@Override\n-\tpublic String getId() {\n-\t\treturn id;\n-\t}\n+    @Override\n+    public String getId() {\n+        return id;\n+    }\n \n-\tpublic WebEventRecord getEvent() {\n-\t\treturn value;\n-\t}\n+    public WebEventRecord getEvent() {\n+        return value;\n+    }\n \n }\n",
+            "diff_size": 19
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/27/WebRecordResponse.java\nindex 9c0491e8453..98f9167f158 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/27/WebRecordResponse.java\n@@ -22,8 +22,7 @@ public class WebRecordResponse implements IIdRequest {\n \t\tthis.value = eventObject;\n \t}\n \n-\n-\t@Override\n+@Override\n \tpublic String getId() {\n \t\treturn id;\n \t}\n@@ -32,4 +31,4 @@ public class WebRecordResponse implements IIdRequest {\n \t\treturn value;\n \t}\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/27/WebRecordResponse.java\nindex 9c0491e8453..b6661e7beb3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/27/WebRecordResponse.java\n@@ -5,31 +5,30 @@ import com.synaptix.toast.core.net.request.IIdRequest;\n \n public class WebRecordResponse implements IIdRequest {\n \n-\tprivate String id;\n+ private String id;\n \n-\tpublic WebEventRecord value;\n+ public WebEventRecord value;\n \n-\tprivate String sentence;\n+ private String sentence;\n \n-\t/**\n-\t * serialization only\n-\t */\n-\tpublic WebRecordResponse() {\n-\t}\n+ /**\n+  * serialization only\n+  */\n \n-\tpublic WebRecordResponse(\n-\t\tWebEventRecord eventObject) {\n-\t\tthis.value = eventObject;\n-\t}\n+ public WebRecordResponse() {\n+ }\n \n+ public WebRecordResponse(\n+  WebEventRecord eventObject) {\n+  this.value = eventObject;\n+ }\n \n-\t@Override\n-\tpublic String getId() {\n-\t\treturn id;\n-\t}\n+ @Override\n+ public String getId() {\n+  return id;\n+ }\n \n-\tpublic WebEventRecord getEvent() {\n-\t\treturn value;\n-\t}\n-\n-}\n+ public WebEventRecord getEvent() {\n+  return value;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 25
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/27/WebRecordResponse.java\nindex 9c0491e8453..615bf506d01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/27/WebRecordResponse.java\n@@ -22,8 +22,7 @@ public class WebRecordResponse implements IIdRequest {\n \t\tthis.value = eventObject;\n \t}\n \n-\n-\t@Override\n+ @Override\n \tpublic String getId() {\n \t\treturn id;\n \t}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/27/WebRecordResponse.java\nindex 9c0491e8453..615bf506d01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/27/WebRecordResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/27/WebRecordResponse.java\n@@ -22,8 +22,7 @@ public class WebRecordResponse implements IIdRequest {\n \t\tthis.value = eventObject;\n \t}\n \n-\n-\t@Override\n+ @Override\n \tpublic String getId() {\n \t\treturn id;\n \t}\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "144",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/144/W2VRandomPartitionParam.java\nindex 2b6230c588c..02dde9fe282 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/144/W2VRandomPartitionParam.java\n@@ -23,25 +23,26 @@ import io.netty.buffer.ByteBuf;\n \n public class W2VRandomPartitionParam extends PartitionUpdateParam {\n \n-  int dimension;\n-\n-  public W2VRandomPartitionParam(int matrixId, PartitionKey partKey,\n-                                 int dimension) {\n-    super(matrixId, partKey);\n-    this.dimension = dimension;\n-  }\n-\n-  public W2VRandomPartitionParam() { }\n-\n-  @Override\n-  public void serialize(ByteBuf buf) {\n-    super.serialize(buf);\n-    buf.writeInt(dimension);\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf buf) {\n-    super.deserialize(buf);\n-    dimension = buf.readInt();\n-  }\n+    int dimension;\n+\n+    public W2VRandomPartitionParam(int matrixId, PartitionKey partKey,\n+                                   int dimension) {\n+        super(matrixId, partKey);\n+        this.dimension = dimension;\n+    }\n+\n+    public W2VRandomPartitionParam() {\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        super.serialize(buf);\n+        buf.writeInt(dimension);\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        super.deserialize(buf);\n+        dimension = buf.readInt();\n+    }\n }\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/144/W2VRandomPartitionParam.java\nindex 2b6230c588c..2a21bfba0c0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/144/W2VRandomPartitionParam.java\n@@ -25,13 +25,12 @@ public class W2VRandomPartitionParam extends PartitionUpdateParam {\n \n   int dimension;\n \n-  public W2VRandomPartitionParam(int matrixId, PartitionKey partKey,\n-                                 int dimension) {\n-    super(matrixId, partKey);\n+  public W2VRandomPartitionParam(int matrixId, PartitionKey partKey, int dimension) {\n+  super(matrixId, partKey);\n     this.dimension = dimension;\n   }\n \n-  public W2VRandomPartitionParam() { }\n+  public W2VRandomPartitionParam() {}\n \n   @Override\n   public void serialize(ByteBuf buf) {\n@@ -44,4 +43,4 @@ public class W2VRandomPartitionParam extends PartitionUpdateParam {\n     super.deserialize(buf);\n     dimension = buf.readInt();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/144/W2VRandomPartitionParam.java\nindex 2b6230c588c..67c61577953 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/144/W2VRandomPartitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/144/W2VRandomPartitionParam.java\n@@ -25,13 +25,12 @@ public class W2VRandomPartitionParam extends PartitionUpdateParam {\n \n   int dimension;\n \n-  public W2VRandomPartitionParam(int matrixId, PartitionKey partKey,\n-                                 int dimension) {\n+  public W2VRandomPartitionParam(int matrixId, PartitionKey partKey, int dimension) {\n     super(matrixId, partKey);\n     this.dimension = dimension;\n   }\n \n-  public W2VRandomPartitionParam() { }\n+  public W2VRandomPartitionParam() {}\n \n   @Override\n   public void serialize(ByteBuf buf) {\n@@ -44,4 +43,5 @@ public class W2VRandomPartitionParam extends PartitionUpdateParam {\n     super.deserialize(buf);\n     dimension = buf.readInt();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

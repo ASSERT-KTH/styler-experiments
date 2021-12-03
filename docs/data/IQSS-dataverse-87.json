@@ -1,0 +1,96 @@
+{
+    "project_name": "IQSS-dataverse",
+    "violation_id": "87",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic class DatasetDTO implements java.io.Serializable {\n\tprivate String id;\n        private String identifier;\n        private String protocol;\n        private String authority;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "20",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/IQSS-dataverse/styler/05_predictions/final/files-repaired/87/DatasetDTO.java\nindex 87564c96637..dc55c809e66 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/IQSS-dataverse/styler/05_predictions/final/files-repaired/87/DatasetDTO.java\n@@ -8,7 +8,7 @@ import java.util.List;\n  * @author michael\n  */\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n+private String id;\n         private String identifier;\n         private String protocol;\n         private String authority;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/checkstyle_idea/87/DatasetDTO.java\nindex 87564c96637..ad2f249813a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/checkstyle_idea/87/DatasetDTO.java\n@@ -5,97 +5,100 @@ import java.util.List;\n \n /**\n  * Data transfer object for {@link Dataset}.\n+ *\n  * @author michael\n  */\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n-        private String identifier;\n-        private String protocol;\n-        private String authority;\n-        private String globalIdCreateTime;\n-        private String publisher;\n-        private String publicationDate;\n-        private DatasetVersionDTO datasetVersion;\n-        private List<DataFileDTO> dataFiles;\n-\tpublic static final String DOI_PROTOCOL = \"doi\";\n-\tpublic static final String HDL_PROTOCOL = \"hdl\";\n-\n-    public String getId() {\n-        return id;\n-    }\n-\n-    public void setId(String id) {\n-        this.id = id;\n-    }\n-\n-    public String getIdentifier() {\n-        return identifier;\n-    }\n-\n-    public void setIdentifier(String identifier) {\n-        this.identifier = identifier;\n-    }\n-\n-    public String getProtocol() {\n-        return protocol;\n-    }\n-\n-    public void setProtocol(String protocol) {\n-        this.protocol = protocol;\n-    }\n-\n-    public String getAuthority() {\n-        return authority;\n-    }\n-\n-    public void setAuthority(String authority) {\n-        this.authority = authority;\n-    }\n-\n-    public String getGlobalIdCreateTime() {\n-        return globalIdCreateTime;\n-    }\n-\n-    public void setGlobalIdCreateTime(String globalIdCreateTime) {\n-        this.globalIdCreateTime = globalIdCreateTime;\n-    }\n-\n-    public DatasetVersionDTO getDatasetVersion() {\n-        return datasetVersion;\n-    }\n-\n-    public void setDatasetVersion(DatasetVersionDTO datasetVersion) {\n-        this.datasetVersion = datasetVersion;\n-    }\n-\n-\n-    public List<DataFileDTO> getDataFiles() {\n-        return dataFiles;\n-    }\n-\n-    public void setDataFiles(List<DataFileDTO> dataFiles) {\n-        this.dataFiles = dataFiles;\n-    }\n-\n-    public String getPublisher() {\n-        return publisher;\n-    }\n-\n-    public void setPublisher(String publisher) {\n-        this.publisher = publisher;\n-    }\n-\n-    public String getPublicationDate() {\n-        return publicationDate;\n-    }\n-\n-    public void setPublicationDate(String publicationDate) {\n-        this.publicationDate = publicationDate;\n-    }\n-\n-    @Override\n-    public String toString() {\n-        return \"DatasetDTO{\" + \"id=\" + id + \", identifier=\" + identifier + \", protocol=\" + protocol + \", authority=\" + authority + \", globalIdCreateTime=\" + globalIdCreateTime + \", datasetVersion=\" + datasetVersion + \", dataFiles=\" + dataFiles + '}';\n-    }\n-        \n+  private String id;\n+  private String identifier;\n+  private String protocol;\n+  private String authority;\n+  private String globalIdCreateTime;\n+  private String publisher;\n+  private String publicationDate;\n+  private DatasetVersionDTO datasetVersion;\n+  private List<DataFileDTO> dataFiles;\n+  public static final String DOI_PROTOCOL = \"doi\";\n+  public static final String HDL_PROTOCOL = \"hdl\";\n+\n+  public String getId() {\n+    return id;\n+  }\n+\n+  public void setId(String id) {\n+    this.id = id;\n+  }\n+\n+  public String getIdentifier() {\n+    return identifier;\n+  }\n+\n+  public void setIdentifier(String identifier) {\n+    this.identifier = identifier;\n+  }\n+\n+  public String getProtocol() {\n+    return protocol;\n+  }\n+\n+  public void setProtocol(String protocol) {\n+    this.protocol = protocol;\n+  }\n+\n+  public String getAuthority() {\n+    return authority;\n+  }\n+\n+  public void setAuthority(String authority) {\n+    this.authority = authority;\n+  }\n+\n+  public String getGlobalIdCreateTime() {\n+    return globalIdCreateTime;\n+  }\n+\n+  public void setGlobalIdCreateTime(String globalIdCreateTime) {\n+    this.globalIdCreateTime = globalIdCreateTime;\n+  }\n+\n+  public DatasetVersionDTO getDatasetVersion() {\n+    return datasetVersion;\n+  }\n+\n+  public void setDatasetVersion(DatasetVersionDTO datasetVersion) {\n+    this.datasetVersion = datasetVersion;\n+  }\n+\n+\n+  public List<DataFileDTO> getDataFiles() {\n+    return dataFiles;\n+  }\n+\n+  public void setDataFiles(List<DataFileDTO> dataFiles) {\n+    this.dataFiles = dataFiles;\n+  }\n+\n+  public String getPublisher() {\n+    return publisher;\n+  }\n+\n+  public void setPublisher(String publisher) {\n+    this.publisher = publisher;\n+  }\n+\n+  public String getPublicationDate() {\n+    return publicationDate;\n+  }\n+\n+  public void setPublicationDate(String publicationDate) {\n+    this.publicationDate = publicationDate;\n+  }\n+\n+  @Override\n+  public String toString() {\n+    return \"DatasetDTO{\" + \"id=\" + id + \", identifier=\" + identifier + \", protocol=\" + protocol + \", authority=\" +\n+      authority + \", globalIdCreateTime=\" + globalIdCreateTime + \", datasetVersion=\" + datasetVersion + \", dataFiles=\" +\n+      dataFiles + '}';\n+  }\n+\n }\n",
+            "diff_size": 93
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/naturalize/87/DatasetDTO.java\nindex 87564c96637..8e573e7062a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/naturalize/87/DatasetDTO.java\n@@ -8,8 +8,9 @@ import java.util.List;\n  * @author michael\n  */\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n-        private String identifier;\n+\n+    private String id;\n+private String identifier;\n         private String protocol;\n         private String authority;\n         private String globalIdCreateTime;\n@@ -17,10 +18,10 @@ public class DatasetDTO implements java.io.Serializable {\n         private String publicationDate;\n         private DatasetVersionDTO datasetVersion;\n         private List<DataFileDTO> dataFiles;\n-\tpublic static final String DOI_PROTOCOL = \"doi\";\n-\tpublic static final String HDL_PROTOCOL = \"hdl\";\n \n-    public String getId() {\n+public static final String DOI_PROTOCOL = \"doi\";\n+\tpublic static final String HDL_PROTOCOL = \"hdl\";\n+public String getId() {\n         return id;\n     }\n \n@@ -98,4 +99,4 @@ public class DatasetDTO implements java.io.Serializable {\n         return \"DatasetDTO{\" + \"id=\" + id + \", identifier=\" + identifier + \", protocol=\" + protocol + \", authority=\" + authority + \", globalIdCreateTime=\" + globalIdCreateTime + \", datasetVersion=\" + datasetVersion + \", dataFiles=\" + dataFiles + '}';\n     }\n         \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/codebuff/87/DatasetDTO.java\nindex 87564c96637..17494093117 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/codebuff/87/DatasetDTO.java\n@@ -7,18 +7,23 @@ import java.util.List;\n  * Data transfer object for {@link Dataset}.\n  * @author michael\n  */\n+\n+\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n-        private String identifier;\n-        private String protocol;\n-        private String authority;\n-        private String globalIdCreateTime;\n-        private String publisher;\n-        private String publicationDate;\n-        private DatasetVersionDTO datasetVersion;\n-        private List<DataFileDTO> dataFiles;\n-\tpublic static final String DOI_PROTOCOL = \"doi\";\n-\tpublic static final String HDL_PROTOCOL = \"hdl\";\n+\n+    private String id;\n+    private String identifier;\n+    private String protocol;\n+    private String authority;\n+    private String globalIdCreateTime;\n+    private String publisher;\n+    private String publicationDate;\n+    private DatasetVersionDTO datasetVersion;\n+    private List<DataFileDTO> dataFiles;\n+\n+    public static final String DOI_PROTOCOL = \"doi\";\n+\n+    public static final String HDL_PROTOCOL = \"hdl\";\n \n     public String getId() {\n         return id;\n@@ -68,7 +73,6 @@ public class DatasetDTO implements java.io.Serializable {\n         this.datasetVersion = datasetVersion;\n     }\n \n-\n     public List<DataFileDTO> getDataFiles() {\n         return dataFiles;\n     }\n@@ -97,5 +101,5 @@ public class DatasetDTO implements java.io.Serializable {\n     public String toString() {\n         return \"DatasetDTO{\" + \"id=\" + id + \", identifier=\" + identifier + \", protocol=\" + protocol + \", authority=\" + authority + \", globalIdCreateTime=\" + globalIdCreateTime + \", datasetVersion=\" + datasetVersion + \", dataFiles=\" + dataFiles + '}';\n     }\n-        \n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 19
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/random/files-repaired/87/DatasetDTO.java\nindex 87564c96637..dc55c809e66 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/random/files-repaired/87/DatasetDTO.java\n@@ -8,7 +8,7 @@ import java.util.List;\n  * @author michael\n  */\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n+private String id;\n         private String identifier;\n         private String protocol;\n         private String authority;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "20",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/three_grams/files-repaired/87/DatasetDTO.java\nindex 87564c96637..fbefb8233ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/87/DatasetDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/three_grams/files-repaired/87/DatasetDTO.java\n@@ -8,7 +8,7 @@ import java.util.List;\n  * @author michael\n  */\n public class DatasetDTO implements java.io.Serializable {\n-\tprivate String id;\n+    private String id;\n         private String identifier;\n         private String protocol;\n         private String authority;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

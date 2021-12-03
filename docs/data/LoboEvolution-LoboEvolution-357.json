@@ -1,0 +1,96 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "357",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGExternalResourcesRequired {\n\t/**\n\t * <p>getExternalResourcesRequired.</p>\n\t *\n\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/357/SVGExternalResourcesRequired.java\nindex e936916c04b..447d319d0f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/357/SVGExternalResourcesRequired.java\n@@ -26,10 +26,10 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGExternalResourcesRequired {\n-\t/**\n+/**\n \t * <p>getExternalResourcesRequired.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n \t */\n-\tSVGAnimatedBoolean getExternalResourcesRequired();\n+ SVGAnimatedBoolean getExternalResourcesRequired();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/357/SVGExternalResourcesRequired.java\nindex e936916c04b..140658ea08b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/357/SVGExternalResourcesRequired.java\n@@ -17,19 +17,17 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGExternalResourcesRequired interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGExternalResourcesRequired {\n-\t/**\n-\t * <p>getExternalResourcesRequired.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n-\t */\n-\tSVGAnimatedBoolean getExternalResourcesRequired();\n+    /**\n+     * <p>getExternalResourcesRequired.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n+     */\n+    SVGAnimatedBoolean getExternalResourcesRequired();\n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/357/SVGExternalResourcesRequired.java\nindex e936916c04b..4afdcff6aab 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/357/SVGExternalResourcesRequired.java\n@@ -26,10 +26,11 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGExternalResourcesRequired {\n-\t/**\n+\n+    /**\n \t * <p>getExternalResourcesRequired.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n \t */\n \tSVGAnimatedBoolean getExternalResourcesRequired();\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/357/SVGExternalResourcesRequired.java\nindex e936916c04b..88df10d25dd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/357/SVGExternalResourcesRequired.java\n@@ -25,11 +25,15 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n+\n+\n public interface SVGExternalResourcesRequired {\n-\t/**\n-\t * <p>getExternalResourcesRequired.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n-\t */\n-\tSVGAnimatedBoolean getExternalResourcesRequired();\n-}\n+    /**\n+     * <p>getExternalResourcesRequired.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n+     */\n+\n+\n+    SVGAnimatedBoolean getExternalResourcesRequired();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/357/SVGExternalResourcesRequired.java\nindex e936916c04b..447d319d0f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/357/SVGExternalResourcesRequired.java\n@@ -26,10 +26,10 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGExternalResourcesRequired {\n-\t/**\n+/**\n \t * <p>getExternalResourcesRequired.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n \t */\n-\tSVGAnimatedBoolean getExternalResourcesRequired();\n+ SVGAnimatedBoolean getExternalResourcesRequired();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/357/SVGExternalResourcesRequired.java\nindex e936916c04b..2c1a6e928a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/357/SVGExternalResourcesRequired.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/357/SVGExternalResourcesRequired.java\n@@ -26,10 +26,10 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGExternalResourcesRequired {\n-\t/**\n+    /**\n \t * <p>getExternalResourcesRequired.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedBoolean} object.\n \t */\n-\tSVGAnimatedBoolean getExternalResourcesRequired();\n+ SVGAnimatedBoolean getExternalResourcesRequired();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

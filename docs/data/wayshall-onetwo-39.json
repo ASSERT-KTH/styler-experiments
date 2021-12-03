@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "39",
+    "information": {
+        "violations": [
+            {
+                "line": "14",
+                "column": "34",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\t\n\t@GetMapping(\"me\")\n\tpublic AdminUserInfo me(){\n\t\tUserDetail userDetail = this.getCurrentLoginUser();\n\t\tAdminUserInfo user = CopyUtils.copyFrom(userDetail)\n\t\t\t\t\t\t\t\t\t\t.propertyMapping(\"nickName\", \"nickname\")",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/39/AdminMeController.java\nindex ee6de9bcc94..1a5fc86327e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/39/AdminMeController.java\n@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class AdminMeController extends WebAdminBaseController {\n \t\n \t@GetMapping(\"me\")\n-\tpublic AdminUserInfo me(){\n+\tpublic AdminUserInfo me() {\n \t\tUserDetail userDetail = this.getCurrentLoginUser();\n \t\tAdminUserInfo user = CopyUtils.copyFrom(userDetail)\n \t\t\t\t\t\t\t\t\t\t.propertyMapping(\"nickName\", \"nickname\")\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/39/AdminMeController.java\nindex ee6de9bcc94..f9f5bc9b47e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/39/AdminMeController.java\n@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.RestController;\n \n @RestController\n public class AdminMeController extends WebAdminBaseController {\n-\t\n-\t@GetMapping(\"me\")\n-\tpublic AdminUserInfo me(){\n-\t\tUserDetail userDetail = this.getCurrentLoginUser();\n-\t\tAdminUserInfo user = CopyUtils.copyFrom(userDetail)\n-\t\t\t\t\t\t\t\t\t\t.propertyMapping(\"nickName\", \"nickname\")\n-\t\t\t\t \t\t\t\t\t\t.toClass(AdminUserInfo.class);\n-\t\treturn user;\n-\t}\n-\t\n-\t@Data\n-\tpublic static class AdminUserInfo {\n-\t\tLong userId;\n-\t\tString nickName;\n-\t\tString userName;\n-\t\tString avatar;\n-\t}\n+\n+  @GetMapping(\"me\")\n+  public AdminUserInfo me() {\n+    UserDetail userDetail = this.getCurrentLoginUser();\n+    AdminUserInfo user = CopyUtils.copyFrom(userDetail)\n+      .propertyMapping(\"nickName\", \"nickname\")\n+      .toClass(AdminUserInfo.class);\n+    return user;\n+  }\n+\n+  @Data\n+  public static class AdminUserInfo {\n+    Long userId;\n+    String nickName;\n+    String userName;\n+    String avatar;\n+  }\n \n }\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/39/AdminMeController.java\nindex ee6de9bcc94..1a5fc86327e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/39/AdminMeController.java\n@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class AdminMeController extends WebAdminBaseController {\n \t\n \t@GetMapping(\"me\")\n-\tpublic AdminUserInfo me(){\n+\tpublic AdminUserInfo me() {\n \t\tUserDetail userDetail = this.getCurrentLoginUser();\n \t\tAdminUserInfo user = CopyUtils.copyFrom(userDetail)\n \t\t\t\t\t\t\t\t\t\t.propertyMapping(\"nickName\", \"nickname\")\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/39/AdminMeController.java\nindex ee6de9bcc94..1a5fc86327e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/39/AdminMeController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/39/AdminMeController.java\n@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class AdminMeController extends WebAdminBaseController {\n \t\n \t@GetMapping(\"me\")\n-\tpublic AdminUserInfo me(){\n+\tpublic AdminUserInfo me() {\n \t\tUserDetail userDetail = this.getCurrentLoginUser();\n \t\tAdminUserInfo user = CopyUtils.copyFrom(userDetail)\n \t\t\t\t\t\t\t\t\t\t.propertyMapping(\"nickName\", \"nickname\")\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

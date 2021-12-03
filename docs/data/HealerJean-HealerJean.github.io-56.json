@@ -1,0 +1,63 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "56",
+    "information": {
+        "violations": [
+            {
+                "line": "22",
+                "column": "35",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "    void oneCache(Long id);\n\n     void updateOneCache(Long id) ;\n\n    void twoCache(Long id);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/56/HibernateCacheService.java\nindex 425af276e0d..541f74608fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/56/HibernateCacheService.java\n@@ -19,7 +19,7 @@ public interface HibernateCacheService {\n \n     void oneCache(Long id);\n \n-     void updateOneCache(Long id) ;\n+     void updateOneCache(Long id);\n \n-    void twoCache(Long id);\n+     void twoCache(Long id);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/56/HibernateCacheService.java\nindex 425af276e0d..f9a63cb87b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/56/HibernateCacheService.java\n@@ -19,7 +19,7 @@ public interface HibernateCacheService {\n \n     void oneCache(Long id);\n \n-     void updateOneCache(Long id) ;\n+    void updateOneCache(Long id);\n \n     void twoCache(Long id);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/56/HibernateCacheService.java\nindex 425af276e0d..99af807ceb1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/56/HibernateCacheService.java\n@@ -19,7 +19,6 @@ public interface HibernateCacheService {\n \n     void oneCache(Long id);\n \n-     void updateOneCache(Long id) ;\n-\n-    void twoCache(Long id);\n-}\n+void updateOneCache(Long id);\n+void twoCache(Long id);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/56/HibernateCacheService.java\nindex 425af276e0d..541f74608fa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/56/HibernateCacheService.java\n@@ -19,7 +19,7 @@ public interface HibernateCacheService {\n \n     void oneCache(Long id);\n \n-     void updateOneCache(Long id) ;\n+     void updateOneCache(Long id);\n \n-    void twoCache(Long id);\n+     void twoCache(Long id);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/56/HibernateCacheService.java\nindex 425af276e0d..0eef982bf2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/56/HibernateCacheService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/56/HibernateCacheService.java\n@@ -19,7 +19,7 @@ public interface HibernateCacheService {\n \n     void oneCache(Long id);\n \n-     void updateOneCache(Long id) ;\n+     void updateOneCache(Long id);\n \n-    void twoCache(Long id);\n+      void twoCache(Long id);\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

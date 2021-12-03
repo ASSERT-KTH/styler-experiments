@@ -1,0 +1,63 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "10",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "column": "65",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    public void run() {\n        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n    }\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/10/Work.java\nindex 79f7443b46c..1cadbfad906 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/10/Work.java\n@@ -17,7 +17,7 @@ public class Work implements Runnable {\n      */\n     @Override\n     public void run() {\n-        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n+        System.out.println(String.format(\"Thread -%s is execute\", Thread.currentThread().getId()));\n     }\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/10/Work.java\nindex 79f7443b46c..764edd26879 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/10/Work.java\n@@ -17,7 +17,8 @@ public class Work implements Runnable {\n      */\n     @Override\n     public void run() {\n-        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n+        System.out.println(String.format(\"Thread -%s is execute\",\n+            Thread.currentThread().getId()));\n     }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/10/Work.java\nindex 79f7443b46c..ff02cb7f343 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/10/Work.java\n@@ -17,7 +17,7 @@ public class Work implements Runnable {\n      */\n     @Override\n     public void run() {\n-        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n+        System.out.println(String.format(\"Thread -%s is execute\", Thread.currentThread().getId()));\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/10/Work.java\nindex 79f7443b46c..1cadbfad906 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/10/Work.java\n@@ -17,7 +17,7 @@ public class Work implements Runnable {\n      */\n     @Override\n     public void run() {\n-        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n+        System.out.println(String.format(\"Thread -%s is execute\", Thread.currentThread().getId()));\n     }\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/10/Work.java\nindex 79f7443b46c..1cadbfad906 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/10/Work.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/10/Work.java\n@@ -17,7 +17,7 @@ public class Work implements Runnable {\n      */\n     @Override\n     public void run() {\n-        System.out.println(String.format(\"Thread -%s is execute\",Thread.currentThread().getId()));\n+        System.out.println(String.format(\"Thread -%s is execute\", Thread.currentThread().getId()));\n     }\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

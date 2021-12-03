@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1056",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1056/Loss.java\nindex 532910ef211..2ff93a21c70 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1056/Loss.java\n@@ -13,144 +13,149 @@\n  * either express or implied. See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.tencent.angel.ml.algorithm.objective;\n \n import com.tencent.angel.ml.algorithm.utils.MathUtils;\n \n /**\n  * Description: implementation of popular loss function\n- *\n  */\n \n public class Loss {\n \n-  /**\n-   * Linear square loss loss. (y, y') = 1/2(y'-y)^2, grad = y'-y\n-   */\n-  public static class LinearSquareLoss implements LossHelper {\n-\n-    public LinearSquareLoss() {}\n-\n-    @Override\n-    public float predTransform(float x) {\n-      return x;\n-    }\n-\n-    @Override\n-    public boolean checkLabel(float x) {\n-      return true;\n-    }\n-\n-    @Override\n-    public float firOrderGrad(float pred, float label) {\n-      return (pred - label);\n-    }\n-\n-    @Override\n-    public float secOrderGrad(float pred, float label) {\n-      return 1.0f;\n-    }\n-\n-    @Override\n-    public float prob2Margin(float baseScore) {\n-      return baseScore;\n-    }\n-\n-    @Override\n-    public String labelErrorMsg() {\n-      return \"\";\n-    }\n-\n-    @Override\n-    public String defaultEvalMetric() {\n-      return \"rmse\";\n-    }\n-  }\n-\n-  /**\n-   * logistic loss for probability regression task. loss(y,y')=y*log(1+e^-y')+(1-y)*log(1+e^y'),\n-   * grad = y'-y, 2nd-grad = y'*(1-y')\n-   */\n-  public static class LogisticRegression implements LossHelper {\n-\n-    public LogisticRegression() {}\n-\n-    @Override\n-    public float predTransform(float x) {\n-      return MathUtils.sigmoid(x);\n-    }\n-\n-    @Override\n-    public boolean checkLabel(float x) {\n-      return x >= 0.0f && x <= 1.0f;\n-    }\n-\n-    @Override\n-    public float firOrderGrad(float pred, float label) {\n-      return pred - label;\n-    }\n-\n-    @Override\n-    public float secOrderGrad(float pred, float label) {\n-      float eps = 1e-16f;\n-      return Math.max(pred * (1 - pred), eps);\n-    }\n-\n-    @Override\n-    public float prob2Margin(float baseScore) {\n-      assert baseScore > 0 && baseScore < 1.0f; // base_score must be in (0,1) for logistic loss\n-      return (float) Math.log(1.0 / (double) baseScore - 1.0);\n-    }\n-\n-    @Override\n-    public String labelErrorMsg() {\n-      return \"label must be in [0,1] for logistic regression\";\n-    }\n-\n-    @Override\n-    public String defaultEvalMetric() {\n-      return \"rmse\";\n-    }\n-  }\n-\n-  // logistic loss for binary classification task.\n-  public static class LogisticClassification extends LogisticRegression {\n-\n-    public LogisticClassification() {}\n-\n-    @Override\n-    public String defaultEvalMetric() {\n-      return \"error\";\n-    }\n-  }\n-\n-  // logistic loss, but predict un-transformed margin\n-  public static class LogisticRaw extends LogisticRegression {\n-\n-    public LogisticRaw() {}\n-\n-    @Override\n-    public float predTransform(float x) {\n-      return x;\n-    }\n-\n-    @Override\n-    public float firOrderGrad(float pred, float label) {\n-      pred = MathUtils.sigmoid(pred);\n-      return pred - label;\n-    }\n-\n-    @Override\n-    public float secOrderGrad(float pred, float label) {\n-      float eps = 1e-16f;\n-      pred = MathUtils.sigmoid(pred);\n-      return Math.max(pred * (1 - pred), eps);\n-    }\n-\n-    @Override\n-    public String defaultEvalMetric() {\n-      return \"auc\";\n+    /**\n+     * Linear square loss loss. (y, y') = 1/2(y'-y)^2, grad = y'-y\n+     */\n+    public static class LinearSquareLoss implements LossHelper {\n+\n+        public LinearSquareLoss() {\n+        }\n+\n+        @Override\n+        public float predTransform(float x) {\n+            return x;\n+        }\n+\n+        @Override\n+        public boolean checkLabel(float x) {\n+            return true;\n+        }\n+\n+        @Override\n+        public float firOrderGrad(float pred, float label) {\n+            return (pred - label);\n+        }\n+\n+        @Override\n+        public float secOrderGrad(float pred, float label) {\n+            return 1.0f;\n+        }\n+\n+        @Override\n+        public float prob2Margin(float baseScore) {\n+            return baseScore;\n+        }\n+\n+        @Override\n+        public String labelErrorMsg() {\n+            return \"\";\n+        }\n+\n+        @Override\n+        public String defaultEvalMetric() {\n+            return \"rmse\";\n+        }\n+    }\n+\n+    /**\n+     * logistic loss for probability regression task. loss(y,y')=y*log(1+e^-y')+(1-y)*log(1+e^y'),\n+     * grad = y'-y, 2nd-grad = y'*(1-y')\n+     */\n+    public static class LogisticRegression implements LossHelper {\n+\n+        public LogisticRegression() {\n+        }\n+\n+        @Override\n+        public float predTransform(float x) {\n+            return MathUtils.sigmoid(x);\n+        }\n+\n+        @Override\n+        public boolean checkLabel(float x) {\n+            return x >= 0.0f && x <= 1.0f;\n+        }\n+\n+        @Override\n+        public float firOrderGrad(float pred, float label) {\n+            return pred - label;\n+        }\n+\n+        @Override\n+        public float secOrderGrad(float pred, float label) {\n+            float eps = 1e-16f;\n+            return Math.max(pred * (1 - pred), eps);\n+        }\n+\n+        @Override\n+        public float prob2Margin(float baseScore) {\n+            assert baseScore > 0 &&\n+                    baseScore < 1.0f; // base_score must be in (0,1) for logistic loss\n+            return (float) Math.log(1.0 / (double) baseScore - 1.0);\n+        }\n+\n+        @Override\n+        public String labelErrorMsg() {\n+            return \"label must be in [0,1] for logistic regression\";\n+        }\n+\n+        @Override\n+        public String defaultEvalMetric() {\n+            return \"rmse\";\n+        }\n+    }\n+\n+    // logistic loss for binary classification task.\n+    public static class LogisticClassification extends LogisticRegression {\n+\n+        public LogisticClassification() {\n+        }\n+\n+        @Override\n+        public String defaultEvalMetric() {\n+            return \"error\";\n+        }\n+    }\n+\n+    // logistic loss, but predict un-transformed margin\n+    public static class LogisticRaw extends LogisticRegression {\n+\n+        public LogisticRaw() {\n+        }\n+\n+        @Override\n+        public float predTransform(float x) {\n+            return x;\n+        }\n+\n+        @Override\n+        public float firOrderGrad(float pred, float label) {\n+            pred = MathUtils.sigmoid(pred);\n+            return pred - label;\n+        }\n+\n+        @Override\n+        public float secOrderGrad(float pred, float label) {\n+            float eps = 1e-16f;\n+            pred = MathUtils.sigmoid(pred);\n+            return Math.max(pred * (1 - pred), eps);\n+        }\n+\n+        @Override\n+        public String defaultEvalMetric() {\n+            return \"auc\";\n+        }\n     }\n-  }\n \n }\n",
+            "diff_size": 135
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1056/Loss.java\nindex 532910ef211..7bbc907aa86 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1056/Loss.java\n@@ -153,4 +153,4 @@ public class Loss {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1056/Loss.java\nindex 532910ef211..dacab145703 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1056/Loss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1056/Loss.java\n@@ -27,6 +27,7 @@ public class Loss {\n   /**\n    * Linear square loss loss. (y, y') = 1/2(y'-y)^2, grad = y'-y\n    */\n+\n   public static class LinearSquareLoss implements LossHelper {\n \n     public LinearSquareLoss() {}\n@@ -71,6 +72,7 @@ public class Loss {\n    * logistic loss for probability regression task. loss(y,y')=y*log(1+e^-y')+(1-y)*log(1+e^y'),\n    * grad = y'-y, 2nd-grad = y'*(1-y')\n    */\n+\n   public static class LogisticRegression implements LossHelper {\n \n     public LogisticRegression() {}\n@@ -114,6 +116,7 @@ public class Loss {\n   }\n \n   // logistic loss for binary classification task.\n+\n   public static class LogisticClassification extends LogisticRegression {\n \n     public LogisticClassification() {}\n@@ -125,6 +128,7 @@ public class Loss {\n   }\n \n   // logistic loss, but predict un-transformed margin\n+\n   public static class LogisticRaw extends LogisticRegression {\n \n     public LogisticRaw() {}\n@@ -151,6 +155,7 @@ public class Loss {\n     public String defaultEvalMetric() {\n       return \"auc\";\n     }\n+\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

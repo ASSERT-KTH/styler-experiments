@@ -1,0 +1,61 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "305",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.core.internal.lifecycle;\n\nimport com.google.inject.AbstractModule;\nimport com.google.inject.multibindings.Multibinder;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/305/LifecycleModule.java\nindex dae47a5cf47..9dc7c0dd618 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/305/LifecycleModule.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.lifecycle;\n \n import com.google.inject.AbstractModule;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/305/LifecycleModule.java\nindex dae47a5cf47..2b8e39c82cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/305/LifecycleModule.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.lifecycle;\n \n import com.google.inject.AbstractModule;\n@@ -17,7 +18,7 @@ class LifecycleModule extends AbstractModule {\n     private final LifecycleManager lifecycleManager;\n \n     LifecycleModule(Set<Class<? extends LifecycleListener>> lifecycleListenerClasses,\n-            LifecycleManager lifecycleManager) {\n+                    LifecycleManager lifecycleManager) {\n         this.lifecycleListenerClasses = lifecycleListenerClasses;\n         this.lifecycleManager = lifecycleManager;\n     }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/305/LifecycleModule.java\nindex dae47a5cf47..9dc7c0dd618 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/305/LifecycleModule.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.core.internal.lifecycle;\n \n import com.google.inject.AbstractModule;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/305/LifecycleModule.java\nindex dae47a5cf47..365a5d2b650 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/305/LifecycleModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/305/LifecycleModule.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.core.internal.lifecycle;\n \n import com.google.inject.AbstractModule;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

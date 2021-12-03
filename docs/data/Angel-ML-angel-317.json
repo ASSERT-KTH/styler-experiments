@@ -1,0 +1,77 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "317",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "import io.netty.buffer.ByteBuf;\n\npublic class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n  /**\n   * Whole key array before serialization, sorted by asc\n   */",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..a4aceb1366e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/317/RangeViewDoubleValuesPart.java\n@@ -3,9 +3,7 @@ package com.tencent.angel.psagent.matrix.transport.router.range;\n import com.tencent.angel.common.ByteBufSerdeUtils;\n import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyDoubleValuePartOp;\n-import io.netty.buffer.ByteBuf;\n-\n-public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n+import io.netty.buffer.ByteBuf; public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..4cbf1a1b0fd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/317/RangeViewDoubleValuesPart.java\n@@ -5,86 +5,87 @@ import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyDoubleValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n-  /**\n-   * Whole key array before serialization, sorted by asc\n-   */\n-  private int[] keys;\n-\n-  /**\n-   * Whole value array before serialization\n-   */\n-  private double[] values;\n-\n-\n-  public RangeViewDoubleValuesPart(int rowId, double[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n-    this.values = values;\n-  }\n-\n-  public RangeViewDoubleValuesPart(double[] values, int startPos, int endPos) {\n-    this(-1, values, startPos, endPos);\n-  }\n-\n-  public RangeViewDoubleValuesPart() {\n-    this(-1, null, -1, -1);\n-  }\n-\n-  @Override\n-  public int[] getKeys() {\n-    if(keys == null) {\n-      keys = new int[values.length];\n-      for(int i = 0; i < keys.length; i++) {\n-        keys[i] = i;\n-      }\n+public class RangeViewDoubleValuesPart extends RangeKeyValuePart\n+        implements IIntKeyDoubleValuePartOp {\n+    /**\n+     * Whole key array before serialization, sorted by asc\n+     */\n+    private int[] keys;\n+\n+    /**\n+     * Whole value array before serialization\n+     */\n+    private double[] values;\n+\n+\n+    public RangeViewDoubleValuesPart(int rowId, double[] values, int startPos, int endPos) {\n+        super(rowId, startPos, endPos);\n+        this.values = values;\n     }\n \n-    return keys;\n-  }\n-\n-  @Override\n-  public double[] getValues() {\n-    return values;\n-  }\n-\n-  @Override\n-  public void add(int key, double value) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n-\n-  @Override\n-  public void add(int[] keys, double[] values) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n-\n-  @Override\n-  public int size() {\n-    if(endPos != -1) {\n-      return endPos - startPos;\n-    } else {\n-      return keys.length;\n+    public RangeViewDoubleValuesPart(double[] values, int startPos, int endPos) {\n+        this(-1, values, startPos, endPos);\n+    }\n+\n+    public RangeViewDoubleValuesPart() {\n+        this(-1, null, -1, -1);\n+    }\n+\n+    @Override\n+    public int[] getKeys() {\n+        if (keys == null) {\n+            keys = new int[values.length];\n+            for (int i = 0; i < keys.length; i++) {\n+                keys[i] = i;\n+            }\n+        }\n+\n+        return keys;\n+    }\n+\n+    @Override\n+    public double[] getValues() {\n+        return values;\n+    }\n+\n+    @Override\n+    public void add(int key, double value) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n+\n+    @Override\n+    public void add(int[] keys, double[] values) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n+\n+    @Override\n+    public int size() {\n+        if (endPos != -1) {\n+            return endPos - startPos;\n+        } else {\n+            return keys.length;\n+        }\n+    }\n+\n+    @Override\n+    public RowType getKeyValueType() {\n+        return RowType.T_DOUBLE_DENSE;\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        super.serialize(output);\n+        ByteBufSerdeUtils.serializeDoubles(output, values, startPos, endPos);\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        super.deserialize(input);\n+        values = ByteBufSerdeUtils.deserializeDoubles(input);\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return super.bufferLen() + ByteBufSerdeUtils.serializedDoublesLen(values, startPos, endPos);\n     }\n-  }\n-\n-  @Override\n-  public RowType getKeyValueType() {\n-    return RowType.T_DOUBLE_DENSE;\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    super.serialize(output);\n-    ByteBufSerdeUtils.serializeDoubles(output, values, startPos, endPos);\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    super.deserialize(input);\n-    values = ByteBufSerdeUtils.deserializeDoubles(input);\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    return super.bufferLen() + ByteBufSerdeUtils.serializedDoublesLen(values, startPos, endPos);\n-  }\n }\n",
+            "diff_size": 119
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..354fb31fabc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/317/RangeViewDoubleValuesPart.java\n@@ -34,7 +34,7 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n   public int[] getKeys() {\n     if(keys == null) {\n       keys = new int[values.length];\n-      for(int i = 0; i < keys.length; i++) {\n+      for (int i = 0; i < keys.length; i++) {\n         keys[i] = i;\n       }\n     }\n@@ -87,4 +87,4 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n   public int bufferLen() {\n     return super.bufferLen() + ByteBufSerdeUtils.serializedDoublesLen(values, startPos, endPos);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..7b8590fb1e8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/317/RangeViewDoubleValuesPart.java\n@@ -9,6 +9,7 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n+\n   private int[] keys;\n \n   /**\n@@ -16,7 +17,6 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n    */\n   private double[] values;\n \n-\n   public RangeViewDoubleValuesPart(int rowId, double[] values, int startPos, int endPos) {\n     super(rowId, startPos, endPos);\n     this.values = values;\n@@ -32,13 +32,12 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n \n   @Override\n   public int[] getKeys() {\n-    if(keys == null) {\n+    if (keys == null) {\n       keys = new int[values.length];\n-      for(int i = 0; i < keys.length; i++) {\n+      for (int i = 0; i < keys.length; i++) {\n         keys[i] = i;\n       }\n     }\n-\n     return keys;\n   }\n \n@@ -59,7 +58,7 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n \n   @Override\n   public int size() {\n-    if(endPos != -1) {\n+    if (endPos != -1) {\n       return endPos - startPos;\n     } else {\n       return keys.length;\n@@ -87,4 +86,5 @@ public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IInt\n   public int bufferLen() {\n     return super.bufferLen() + ByteBufSerdeUtils.serializedDoublesLen(values, startPos, endPos);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..7db72f5cecc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/317/RangeViewDoubleValuesPart.java\n@@ -5,11 +5,11 @@ import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyDoubleValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n-  /**\n+public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements\n+   IIntKeyDoubleValuePartOp {/**\n    * Whole key array before serialization, sorted by asc\n-   */\n-  private int[] keys;\n+   */private int[] keys;\n+private int[] keys;\n \n   /**\n    * Whole value array before serialization\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/317/RangeViewDoubleValuesPart.java\nindex 977a0377bbd..a4aceb1366e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/317/RangeViewDoubleValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/317/RangeViewDoubleValuesPart.java\n@@ -3,9 +3,7 @@ package com.tencent.angel.psagent.matrix.transport.router.range;\n import com.tencent.angel.common.ByteBufSerdeUtils;\n import com.tencent.angel.ml.matrix.RowType;\n import com.tencent.angel.psagent.matrix.transport.router.operator.IIntKeyDoubleValuePartOp;\n-import io.netty.buffer.ByteBuf;\n-\n-public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n+import io.netty.buffer.ByteBuf; public class RangeViewDoubleValuesPart extends RangeKeyValuePart implements IIntKeyDoubleValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

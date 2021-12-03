@@ -1,0 +1,62 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "15",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\n\tprivate Resource resource;\n\t\n\tpublic ResourceExistsException(String message) {\n\t\tsuper(message);\n\t}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/27/ResourceExistsException.java\nindex 7b3fa923dba..a4b70a7fc40 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/27/ResourceExistsException.java\n@@ -12,8 +12,8 @@ public class ResourceExistsException extends PerunException {\n \tprivate static final long serialVersionUID = -255958501797585251L;\n \n \tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n+\n+ public ResourceExistsException(String message) {\n \t\tsuper(message);\n \t}\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/27/ResourceExistsException.java\nindex 7b3fa923dba..2ccb947b3dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/27/ResourceExistsException.java\n@@ -9,28 +9,28 @@ import cz.metacentrum.perun.core.api.Resource;\n  */\n public class ResourceExistsException extends PerunException {\n \n-\tprivate static final long serialVersionUID = -255958501797585251L;\n-\n-\tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n-\t\tsuper(message);\n-\t}\n-\n-\tpublic ResourceExistsException(String message, Throwable cause) {\n-\t\tsuper(message, cause);\n-\t}\n-\n-\tpublic ResourceExistsException(Throwable cause) {\n-\t\tsuper(cause);\n-\t}\n-\n-\tpublic ResourceExistsException(Resource resource) {\n-\t\tsuper(\"Resource with name \\\"\" + resource.getName() + \"\\\" already exists in Facility and Vo.\");\n-\t\tthis.resource = resource;\n-\t}\n-\n-\tpublic Resource getResource() {\n-\t\treturn resource;\n-\t}\n+    private static final long serialVersionUID = -255958501797585251L;\n+\n+    private Resource resource;\n+\n+    public ResourceExistsException(String message) {\n+        super(message);\n+    }\n+\n+    public ResourceExistsException(String message, Throwable cause) {\n+        super(message, cause);\n+    }\n+\n+    public ResourceExistsException(Throwable cause) {\n+        super(cause);\n+    }\n+\n+    public ResourceExistsException(Resource resource) {\n+        super(\"Resource with name \\\"\" + resource.getName() + \"\\\" already exists in Facility and Vo.\");\n+        this.resource = resource;\n+    }\n+\n+    public Resource getResource() {\n+        return resource;\n+    }\n }\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/27/ResourceExistsException.java\nindex 7b3fa923dba..7a688cd94de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/naturalize/27/ResourceExistsException.java\n@@ -12,9 +12,9 @@ public class ResourceExistsException extends PerunException {\n \tprivate static final long serialVersionUID = -255958501797585251L;\n \n \tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n-\t\tsuper(message);\n+\n+public ResourceExistsException(String message) {\n+\tsuper(message);\n \t}\n \n \tpublic ResourceExistsException(String message, Throwable cause) {\n@@ -33,4 +33,4 @@ public class ResourceExistsException extends PerunException {\n \tpublic Resource getResource() {\n \t\treturn resource;\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/27/ResourceExistsException.java\nindex 7b3fa923dba..db280b7fef3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/27/ResourceExistsException.java\n@@ -7,30 +7,33 @@ import cz.metacentrum.perun.core.api.Resource;\n  *\n  * @author Oliver Mr\u00e1zik\n  */\n+\n+\n public class ResourceExistsException extends PerunException {\n \n-\tprivate static final long serialVersionUID = -255958501797585251L;\n \n-\tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n-\t\tsuper(message);\n-\t}\n+ private static final long serialVersionUID = -255958501797585251L;\n+ private Resource resource;\n+\n+\n+ public ResourceExistsException(String message) {\n+  super(message);\n+ }\n \n-\tpublic ResourceExistsException(String message, Throwable cause) {\n-\t\tsuper(message, cause);\n-\t}\n+ public ResourceExistsException(String message, Throwable cause) {\n+  super(message, cause);\n+ }\n \n-\tpublic ResourceExistsException(Throwable cause) {\n-\t\tsuper(cause);\n-\t}\n+ public ResourceExistsException(Throwable cause) {\n+  super(cause);\n+ }\n \n-\tpublic ResourceExistsException(Resource resource) {\n-\t\tsuper(\"Resource with name \\\"\" + resource.getName() + \"\\\" already exists in Facility and Vo.\");\n-\t\tthis.resource = resource;\n-\t}\n+ public ResourceExistsException(Resource resource) {\n+  super(\"Resource with name \\\"\" + resource.getName() + \"\\\" already exists in Facility and Vo.\");\n+  this.resource = resource;\n+ }\n \n-\tpublic Resource getResource() {\n-\t\treturn resource;\n-\t}\n-}\n+ public Resource getResource() {\n+  return resource;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/27/ResourceExistsException.java\nindex 7b3fa923dba..a4b70a7fc40 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/27/ResourceExistsException.java\n@@ -12,8 +12,8 @@ public class ResourceExistsException extends PerunException {\n \tprivate static final long serialVersionUID = -255958501797585251L;\n \n \tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n+\n+ public ResourceExistsException(String message) {\n \t\tsuper(message);\n \t}\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/27/ResourceExistsException.java\nindex 7b3fa923dba..043b24374ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/27/ResourceExistsException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/27/ResourceExistsException.java\n@@ -11,9 +11,8 @@ public class ResourceExistsException extends PerunException {\n \n \tprivate static final long serialVersionUID = -255958501797585251L;\n \n-\tprivate Resource resource;\n-\t\n-\tpublic ResourceExistsException(String message) {\n+\tprivate Resource resource\n+\t\t;public ResourceExistsException(String message) {\n \t\tsuper(message);\n \t}\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

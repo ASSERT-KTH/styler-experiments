@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "115",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "82",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " * @param <T>\n */\npublic interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet>{\n\n\tpublic DATA extractData(Sheet sheet, int sheetIndex);\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/115/ExcelDataExtractor.java\nindex 502887586eb..3f21e9e1511 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/115/ExcelDataExtractor.java\n@@ -10,7 +10,7 @@ import org.onetwo.ext.poi.utils.TableDataExtractor;\n  *\n  * @param <T>\n  */\n-public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet>{\n+public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet> {\n \n \tpublic DATA extractData(Sheet sheet, int sheetIndex);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/115/ExcelDataExtractor.java\nindex 502887586eb..b846a0474ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/115/ExcelDataExtractor.java\n@@ -10,8 +10,8 @@ import org.onetwo.ext.poi.utils.TableDataExtractor;\n  *\n  * @param <T>\n  */\n-public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet>{\n+public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet> {\n \n-\tpublic DATA extractData(Sheet sheet, int sheetIndex);\n+  public DATA extractData(Sheet sheet, int sheetIndex);\n \n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/115/ExcelDataExtractor.java\nindex 502887586eb..3f21e9e1511 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/115/ExcelDataExtractor.java\n@@ -10,7 +10,7 @@ import org.onetwo.ext.poi.utils.TableDataExtractor;\n  *\n  * @param <T>\n  */\n-public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet>{\n+public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet> {\n \n \tpublic DATA extractData(Sheet sheet, int sheetIndex);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/115/ExcelDataExtractor.java\nindex 502887586eb..3f21e9e1511 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/115/ExcelDataExtractor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/115/ExcelDataExtractor.java\n@@ -10,7 +10,7 @@ import org.onetwo.ext.poi.utils.TableDataExtractor;\n  *\n  * @param <T>\n  */\n-public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet>{\n+public interface ExcelDataExtractor<DATA> extends TableDataExtractor<DATA, Sheet> {\n \n \tpublic DATA extractData(Sheet sheet, int sheetIndex);\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

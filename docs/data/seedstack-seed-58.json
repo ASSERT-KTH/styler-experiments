@@ -1,0 +1,183 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "58",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.security.internal;\n\nimport org.apache.shiro.authc.UsernamePasswordToken;\nimport org.seedstack.seed.security.AuthenticationToken;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/58/SeedUsernamePasswordToken.java\nindex 8e82a891b4e..6ff60dc741f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/58/SeedUsernamePasswordToken.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.security.internal;\n \n import org.apache.shiro.authc.UsernamePasswordToken;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/58/SeedUsernamePasswordToken.java\nindex 8e82a891b4e..6ff60dc741f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/58/SeedUsernamePasswordToken.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.security.internal;\n \n import org.apache.shiro.authc.UsernamePasswordToken;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'CLASS_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "97",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "152",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "252",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "252",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "349",
+                    "severity": "warning",
+                    "message": "'{' at column 349 should have line break after.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "349",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "349",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "390",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "391",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "391",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "8",
+                    "column": "392",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/58/SeedUsernamePasswordToken.java\nindex 8e82a891b4e..91c3f05d66e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/codebuff/58/SeedUsernamePasswordToken.java\n@@ -5,13 +5,4 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n-package org.seedstack.seed.security.internal;\n-\n-import org.apache.shiro.authc.UsernamePasswordToken;\n-import org.seedstack.seed.security.AuthenticationToken;\n-\n-public class SeedUsernamePasswordToken extends UsernamePasswordToken implements AuthenticationToken {\n-    public SeedUsernamePasswordToken(String username, char[] password, boolean rememberMe, String host) {\n-        super(username, password, rememberMe, host);\n-    }\n-}\n+package org.seedstack.seed.security.internal;import org.apache.shiro.authc.UsernamePasswordToken;import org.seedstack.seed.security.AuthenticationToken;public class SeedUsernamePasswordToken extends UsernamePasswordToken implements AuthenticationToken{public SeedUsernamePasswordToken(String username,char[ ]password,boolean rememberMe,String host){super(username,password,rememberMe,host);}}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/58/SeedUsernamePasswordToken.java\nindex 8e82a891b4e..6ff60dc741f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/58/SeedUsernamePasswordToken.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.security.internal;\n \n import org.apache.shiro.authc.UsernamePasswordToken;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "8",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "10",
+                    "severity": "warning",
+                    "message": "'org' has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "12",
+                    "severity": "warning",
+                    "message": "'import' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/58/SeedUsernamePasswordToken.java\nindex 8e82a891b4e..1c229a6d637 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/58/SeedUsernamePasswordToken.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/58/SeedUsernamePasswordToken.java\n@@ -5,9 +5,11 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n-package org.seedstack.seed.security.internal;\n+package\n \n-import org.apache.shiro.authc.UsernamePasswordToken;\n+org.seedstack.seed.security.internal;\n+\n+ import org.apache.shiro.authc.UsernamePasswordToken;\n import org.seedstack.seed.security.AuthenticationToken;\n \n public class SeedUsernamePasswordToken extends UsernamePasswordToken implements AuthenticationToken {\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

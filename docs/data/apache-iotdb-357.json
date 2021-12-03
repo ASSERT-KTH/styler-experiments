@@ -1,0 +1,95 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "357",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.spark.tsfile.qp.optimizer;\n\nimport org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\nimport org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/357/RemoveNotOptimizer.java\nindex 19bd0dc1439..b765988ad41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/357/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/357/RemoveNotOptimizer.java\nindex 19bd0dc1439..b765988ad41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/357/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/357/RemoveNotOptimizer.java\nindex 19bd0dc1439..1f4edd23e27 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/357/RemoveNotOptimizer.java\n@@ -22,10 +22,8 @@ import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.SQLConstant;\n import org.apache.iotdb.spark.tsfile.qp.exception.RemoveNotException;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.util.List;\n \n import static org.apache.iotdb.spark.tsfile.qp.common.SQLConstant.KW_AND;\n@@ -44,6 +42,7 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n    * @return optimized filter operator\n    * @throws RemoveNotException excepiton in remove not optimizing\n    */\n+\n   @Override\n   public FilterOperator optimize(FilterOperator filter) throws RemoveNotException {\n     return removeNot(filter);\n@@ -65,8 +64,8 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n       case KW_NOT:\n         return reverseFilter(filter.getChildren().get(0));\n       default:\n-        throw new RemoveNotException(\n-            \"Unknown token in removeNot: \" + tokenInt + \",\" + SQLConstant.tokenNames.get(tokenInt));\n+        throw new RemoveNotException(\"Unknown token in removeNot: \" + tokenInt\n+        + \",\" + SQLConstant.tokenNames.get(tokenInt));\n     }\n   }\n \n@@ -76,6 +75,7 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n       ((BasicOperator) filter).setReversedTokenIntType();\n       return filter;\n     }\n+\n     switch (tokenInt) {\n       case KW_AND:\n       case KW_OR:\n@@ -87,11 +87,8 @@ public class RemoveNotOptimizer implements IFilterOptimizer {\n       case KW_NOT:\n         return removeNot(filter.getChildren().get(0));\n       default:\n-        throw new RemoveNotException(\n-            \"Unknown token in reverseFilter: \"\n-                + tokenInt\n-                + \",\"\n-                + SQLConstant.tokenNames.get(tokenInt));\n+        throw new RemoveNotException(\"Unknown token in reverseFilter: \" + tokenInt\n+        + \",\" + SQLConstant.tokenNames.get(tokenInt));\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "63",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/357/RemoveNotOptimizer.java\nindex 19bd0dc1439..31dd32fc54e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/357/RemoveNotOptimizer.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.spark.tsfile.qp.optimizer;\n+package org.apache.iotdb.spark.tsfile.qp.optimizer\n \n-import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n+; import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.FilterOperator;\n import org.apache.iotdb.spark.tsfile.qp.common.SQLConstant;\n import org.apache.iotdb.spark.tsfile.qp.exception.RemoveNotException;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/357/RemoveNotOptimizer.java\nindex 19bd0dc1439..b765988ad41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/357/RemoveNotOptimizer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/357/RemoveNotOptimizer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.spark.tsfile.qp.optimizer;\n \n import org.apache.iotdb.spark.tsfile.qp.common.BasicOperator;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,196 @@
+{
+    "project_name": "primefaces-primefaces",
+    "violation_id": "32",
+    "information": {
+        "violations": [
+            {
+                "line": "75",
+                "severity": "error",
+                "message": "Line is longer than 160 characters (found 202).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        marker = event.getMarker();\n\n        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "74",
+                    "column": "5",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "75",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/32/DraggableMarkersView.java\nindex 5d042c682ed..79fb39995d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/primefaces-primefaces/styler/05_predictions/final/files-repaired/32/DraggableMarkersView.java\n@@ -71,7 +71,7 @@ public class DraggableMarkersView implements Serializable {\n \n     public void onMarkerDrag(MarkerDragEvent event) {\n         marker = event.getMarker();\n-\n-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n+    FacesContext\n+        .getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n     }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/32/DraggableMarkersView.java\nindex 5d042c682ed..93bf7e8beb7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/checkstyle_idea/32/DraggableMarkersView.java\n@@ -21,6 +21,7 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package org.primefaces.showcase.view.data.gmap;\n \n import javax.faces.view.ViewScoped;\n@@ -72,6 +73,7 @@ public class DraggableMarkersView implements Serializable {\n     public void onMarkerDrag(MarkerDragEvent event) {\n         marker = event.getMarker();\n \n-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n+        FacesContext.getCurrentInstance().addMessage(null,\n+            new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n     }\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "75",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 202).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/32/DraggableMarkersView.java\nindex 5d042c682ed..4be897925dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/naturalize/32/DraggableMarkersView.java\n@@ -74,4 +74,4 @@ public class DraggableMarkersView implements Serializable {\n \n         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "73",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 202).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/32/DraggableMarkersView.java\nindex 5d042c682ed..4fd6f0cd9a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/codebuff/32/DraggableMarkersView.java\n@@ -29,7 +29,6 @@ import org.primefaces.model.map.DefaultMapModel;\n import org.primefaces.model.map.LatLng;\n import org.primefaces.model.map.MapModel;\n import org.primefaces.model.map.Marker;\n-\n import javax.annotation.PostConstruct;\n import javax.faces.application.FacesMessage;\n import javax.faces.context.FacesContext;\n@@ -49,6 +48,7 @@ public class DraggableMarkersView implements Serializable {\n         draggableModel = new DefaultMapModel();\n \n         //Shared coordinates\n+\n         LatLng coord1 = new LatLng(36.879466, 30.667648);\n         LatLng coord2 = new LatLng(36.883707, 30.689216);\n         LatLng coord3 = new LatLng(36.879703, 30.706707);\n@@ -59,7 +59,6 @@ public class DraggableMarkersView implements Serializable {\n         draggableModel.addOverlay(new Marker(coord2, \"Ataturk Parki\"));\n         draggableModel.addOverlay(new Marker(coord3, \"Karaalioglu Parki\"));\n         draggableModel.addOverlay(new Marker(coord4, \"Kaleici\"));\n-\n         for (Marker premarker : draggableModel.getMarkers()) {\n             premarker.setDraggable(true);\n         }\n@@ -71,7 +70,6 @@ public class DraggableMarkersView implements Serializable {\n \n     public void onMarkerDrag(MarkerDragEvent event) {\n         marker = event.getMarker();\n-\n         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "74",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 212).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "13",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 12, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "48",
+                    "severity": "error",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "137",
+                    "severity": "error",
+                    "message": "'+' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "137",
+                    "severity": "error",
+                    "message": "'+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "167",
+                    "severity": "error",
+                    "message": "'+' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "167",
+                    "severity": "error",
+                    "message": "'+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "176",
+                    "severity": "error",
+                    "message": "'+' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "176",
+                    "severity": "error",
+                    "message": "'+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "210",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "211",
+                    "severity": "error",
+                    "message": "'}' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "211",
+                    "severity": "error",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "212",
+                    "severity": "error",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/32/DraggableMarkersView.java\nindex 5d042c682ed..2841100bb9d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/random/files-repaired/32/DraggableMarkersView.java\n@@ -71,7 +71,4 @@ public class DraggableMarkersView implements Serializable {\n \n     public void onMarkerDrag(MarkerDragEvent event) {\n         marker = event.getMarker();\n-\n-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n-    }\n-}\n+            FacesContext .getCurrentInstance( ). addMessage (null , newFacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\"+marker.getLatlng() .getLat ()+\", Lng:\"+marker .getLatlng ().getLng() )) ;}}\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "74",
+                    "column": "5",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "75",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/32/DraggableMarkersView.java\nindex 5d042c682ed..79fb39995d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/violations/32/DraggableMarkersView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/primefaces-primefaces/styler/05_predictions/three_grams/files-repaired/32/DraggableMarkersView.java\n@@ -71,7 +71,7 @@ public class DraggableMarkersView implements Serializable {\n \n     public void onMarkerDrag(MarkerDragEvent event) {\n         marker = event.getMarker();\n-\n-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n+    FacesContext\n+        .getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, \"Marker Dragged\", \"Lat:\" + marker.getLatlng().getLat() + \", Lng:\" + marker.getLatlng().getLng()));\n     }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

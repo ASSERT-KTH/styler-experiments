@@ -1,0 +1,63 @@
+{
+    "project_name": "fangjinuo-easyjson",
+    "violation_id": "54",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "140",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "import java.lang.reflect.AnnotatedElement;\n\npublic interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n    @Override\n    public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..58b9da0a143 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..58b9da0a143 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..db9568e61d9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..db9568e61d9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..58b9da0a143 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\nindex 582aa4e1482..58b9da0a143 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/54/BeanPropertyAnnotatedCodecConfigurationParser.java\n@@ -16,7 +16,7 @@ package com.jn.easyjson.core.codec.dialect;\n \n import java.lang.reflect.AnnotatedElement;\n \n-public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration>{\n+public interface BeanPropertyAnnotatedCodecConfigurationParser extends AnnotatedElementCodecConfigurationParser<PropertyCodecConfiguration> {\n     @Override\n     public PropertyCodecConfiguration parse(AnnotatedElement annotatedElement);\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

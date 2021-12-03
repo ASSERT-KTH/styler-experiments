@@ -1,0 +1,104 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "3",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "public class AuditableObjectInterceptor extends EmptyInterceptor {\n\n    private static final long serialVersionUID = 2206186604411196082L;\n\n    @Override\n    public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..d70c01d7a22 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/3/AuditableObjectInterceptor.java\n@@ -29,9 +29,9 @@ import org.springframework.stereotype.Component;\n @Component\n public class AuditableObjectInterceptor extends EmptyInterceptor {\n \n-    private static final long serialVersionUID = 2206186604411196082L;\n+private static final long serialVersionUID = 2206186604411196082L;@\n \n-    @Override\n+Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,\n             Object[] previousState, String[] propertyNames, Type[] types) {\n         if(! (object instanceof HibAuditableObject)) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..9a6ac080a08 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/3/AuditableObjectInterceptor.java\n@@ -1,12 +1,12 @@\n /*\n  * Copyright 2006 Open Source Applications Foundation\n- * \n+ *\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\n  * you may not use this file except in compliance with the License.\n  * You may obtain a copy of the License at\n- * \n+ *\n  *     http://www.apache.org/licenses/LICENSE-2.0\n- * \n+ *\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n@@ -33,22 +33,22 @@ public class AuditableObjectInterceptor extends EmptyInterceptor {\n \n     @Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,\n-            Object[] previousState, String[] propertyNames, Type[] types) {\n-        if(! (object instanceof HibAuditableObject)) {\n+                                Object[] previousState, String[] propertyNames, Type[] types) {\n+        if (!(object instanceof HibAuditableObject)) {\n             return false;\n         }\n-        \n+\n         // Set new modifyDate so that calculateEntityTag()\n         // has access to it\n         HibAuditableObject ao = (HibAuditableObject) object;\n         Date curDate = new Date(System.currentTimeMillis());\n         ao.setModifiedDate(curDate);\n-        \n+\n         // update modifiedDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"modifiedDate\".equals( propertyNames[i] ) ) {\n+        for (int i = 0; i < propertyNames.length; i++) {\n+            if (\"modifiedDate\".equals(propertyNames[i])) {\n                 currentState[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+            } else if (\"etag\".equals(propertyNames[i])) {\n                 currentState[i] = ao.calculateEntityTag();\n             }\n         }\n@@ -57,23 +57,23 @@ public class AuditableObjectInterceptor extends EmptyInterceptor {\n \n     @Override\n     public boolean onSave(Object object, Serializable id, Object[] state, String[] propertyNames, Type[] types) {\n-        \n-        if(! (object instanceof HibAuditableObject)) {\n+\n+        if (!(object instanceof HibAuditableObject)) {\n             return false;\n         }\n-        \n+\n         // Set new modifyDate so that calculateEntityTag()\n         // has access to it\n         HibAuditableObject ao = (HibAuditableObject) object;\n         Date curDate = new Date(System.currentTimeMillis());\n         ao.setModifiedDate(curDate);\n-        \n+\n         // initialize modifiedDate, creationDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"creationDate\".equals(propertyNames[i]) ||\n-                  \"modifiedDate\".equals(propertyNames[i]) ) {\n+        for (int i = 0; i < propertyNames.length; i++) {\n+            if (\"creationDate\".equals(propertyNames[i]) ||\n+                    \"modifiedDate\".equals(propertyNames[i])) {\n                 state[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+            } else if (\"etag\".equals(propertyNames[i])) {\n                 state[i] = ao.calculateEntityTag();\n             }\n         }\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..9d58e5c93a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/3/AuditableObjectInterceptor.java\n@@ -45,10 +45,10 @@ public class AuditableObjectInterceptor extends EmptyInterceptor {\n         ao.setModifiedDate(curDate);\n         \n         // update modifiedDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"modifiedDate\".equals( propertyNames[i] ) ) {\n+        for (int i=0; i < propertyNames.length; i++) {\n+            if (\"modifiedDate\".equals(propertyNames[i]) ) {\n                 currentState[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+            } else if(\"etag\".equals(propertyNames[i])) {\n                 currentState[i] = ao.calculateEntityTag();\n             }\n         }\n@@ -69,15 +69,14 @@ public class AuditableObjectInterceptor extends EmptyInterceptor {\n         ao.setModifiedDate(curDate);\n         \n         // initialize modifiedDate, creationDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"creationDate\".equals(propertyNames[i]) ||\n-                  \"modifiedDate\".equals(propertyNames[i]) ) {\n-                state[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+        for (int i=0; i < propertyNames.length; i++) {\n+            if (\"creationDate\".equals(propertyNames[i]) || \"modifiedDate\".equals(propertyNames[i])) {\n+    state[i] = curDate;\n+            } else if(\"etag\".equals(propertyNames[i])) {\n                 state[i] = ao.calculateEntityTag();\n             }\n         }\n         return true;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..cdf713bfbd0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/3/AuditableObjectInterceptor.java\n@@ -17,7 +17,6 @@ package org.unitedinternet.cosmo.model.hibernate;\n \n import java.io.Serializable;\n import java.util.Date;\n-\n import org.hibernate.EmptyInterceptor;\n import org.hibernate.type.Type;\n import org.springframework.stereotype.Component;\n@@ -26,58 +25,67 @@ import org.springframework.stereotype.Component;\n  * Hibernate Interceptor that updates creationDate, modifiedDate,\n  * and etag each time an AuditableObject is saved/updated.\n  */\n+\n+\n @Component\n public class AuditableObjectInterceptor extends EmptyInterceptor {\n \n     private static final long serialVersionUID = 2206186604411196082L;\n \n     @Override\n-    public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,\n-            Object[] previousState, String[] propertyNames, Type[] types) {\n-        if(! (object instanceof HibAuditableObject)) {\n+    public boolean onFlushDirty(Object object,\n+        Serializable id,\n+            Object[] currentState,\n+                Object[] previousState,\n+                    String[] propertyNames, Type[] types) {\n+        if (!(object instanceof HibAuditableObject)) {\n             return false;\n         }\n         \n         // Set new modifyDate so that calculateEntityTag()\n         // has access to it\n+\n         HibAuditableObject ao = (HibAuditableObject) object;\n         Date curDate = new Date(System.currentTimeMillis());\n         ao.setModifiedDate(curDate);\n         \n         // update modifiedDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"modifiedDate\".equals( propertyNames[i] ) ) {\n+        for (int i = 0; i<propertyNames.length; i++) {\n+            if (\"modifiedDate\".equals(propertyNames[i])) {\n                 currentState[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+            } else if(\"etag\".equals(propertyNames[i])) {\n                 currentState[i] = ao.calculateEntityTag();\n             }\n         }\n+\n         return true;\n     }\n \n     @Override\n-    public boolean onSave(Object object, Serializable id, Object[] state, String[] propertyNames, Type[] types) {\n-        \n-        if(! (object instanceof HibAuditableObject)) {\n+    public boolean onSave(Object object,\n+        Serializable id,\n+            Object[] state,\n+                String[] propertyNames, Type[] types) {\n+        if (!(object instanceof HibAuditableObject)) {\n             return false;\n         }\n         \n         // Set new modifyDate so that calculateEntityTag()\n         // has access to it\n+\n         HibAuditableObject ao = (HibAuditableObject) object;\n         Date curDate = new Date(System.currentTimeMillis());\n         ao.setModifiedDate(curDate);\n         \n         // initialize modifiedDate, creationDate and entityTag\n-        for ( int i=0; i < propertyNames.length; i++ ) {\n-            if ( \"creationDate\".equals(propertyNames[i]) ||\n-                  \"modifiedDate\".equals(propertyNames[i]) ) {\n+        for (int i = 0; i<propertyNames.length; i++) {\n+            if (\"creationDate\".equals(propertyNames[i]) || \"modifiedDate\".equals(propertyNames[i])) {\n                 state[i] = curDate;\n-            } else if(\"etag\".equals( propertyNames[i] )) {\n+            } else if(\"etag\".equals(propertyNames[i])) {\n                 state[i] = ao.calculateEntityTag();\n             }\n         }\n+\n         return true;\n     }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..80edc5f755d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/3/AuditableObjectInterceptor.java\n@@ -28,10 +28,7 @@ import org.springframework.stereotype.Component;\n  */\n @Component\n public class AuditableObjectInterceptor extends EmptyInterceptor {\n-\n-    private static final long serialVersionUID = 2206186604411196082L;\n-\n-    @Override\n+private static final long serialVersionUID = 2206186604411196082L;@Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,\n             Object[] previousState, String[] propertyNames, Type[] types) {\n         if(! (object instanceof HibAuditableObject)) {\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/3/AuditableObjectInterceptor.java\nindex 125c41cbf12..d70c01d7a22 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/3/AuditableObjectInterceptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/3/AuditableObjectInterceptor.java\n@@ -29,9 +29,9 @@ import org.springframework.stereotype.Component;\n @Component\n public class AuditableObjectInterceptor extends EmptyInterceptor {\n \n-    private static final long serialVersionUID = 2206186604411196082L;\n+private static final long serialVersionUID = 2206186604411196082L;@\n \n-    @Override\n+Override\n     public boolean onFlushDirty(Object object, Serializable id, Object[] currentState,\n             Object[] previousState, String[] propertyNames, Type[] types) {\n         if(! (object instanceof HibAuditableObject)) {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

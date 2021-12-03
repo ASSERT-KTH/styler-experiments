@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "572",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/572/LongArrayElement.java\nindex 396a92af4d6..3e928db2451 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/572/LongArrayElement.java\n@@ -31,75 +31,75 @@ import java.util.Arrays;\n  */\n public class LongArrayElement implements IElement {\n \n-  private long[] data;\n-\n-  public LongArrayElement(long[] data) {\n-    this.data = data;\n-  }\n-\n-  public LongArrayElement() {\n-    this(null);\n-  }\n-\n-  public long[] getData() {\n-    return data;\n-  }\n-\n-  public void setData(long[] data) {\n-    this.data = data;\n-  }\n-\n-  public void add(long[] incs) {\n-    this.data = ArrayUtils.addAll(data, incs);\n-    Arrays.sort(this.data);\n-  }\n-\n-  @Override\n-  public LongArrayElement deepClone() {\n-    long[] newData = new long[data.length];\n-    System.arraycopy(data, 0, newData, 0, data.length);\n-    return new LongArrayElement(newData);\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    output.writeInt(data.length);\n-    for (int i = 0; i < data.length; i++) {\n-      output.writeLong(data[i]);\n+    private long[] data;\n+\n+    public LongArrayElement(long[] data) {\n+        this.data = data;\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    data = new long[input.readInt()];\n-    for (int i = 0; i < data.length; i++) {\n-      data[i] = input.readLong();\n+    public LongArrayElement() {\n+        this(null);\n     }\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    return 4 + data.length * 8;\n-  }\n-\n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-    output.writeInt(data.length);\n-    for (int i = 0; i < data.length; i++) {\n-      output.writeLong(data[i]);\n+\n+    public long[] getData() {\n+        return data;\n     }\n-  }\n \n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-    data = new long[input.readInt()];\n-    for (int i = 0; i < data.length; i++) {\n-      data[i] = input.readLong();\n+    public void setData(long[] data) {\n+        this.data = data;\n     }\n-  }\n \n-  @Override\n-  public int dataLen() {\n-    return bufferLen();\n-  }\n+    public void add(long[] incs) {\n+        this.data = ArrayUtils.addAll(data, incs);\n+        Arrays.sort(this.data);\n+    }\n+\n+    @Override\n+    public LongArrayElement deepClone() {\n+        long[] newData = new long[data.length];\n+        System.arraycopy(data, 0, newData, 0, data.length);\n+        return new LongArrayElement(newData);\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        output.writeInt(data.length);\n+        for (int i = 0; i < data.length; i++) {\n+            output.writeLong(data[i]);\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        data = new long[input.readInt()];\n+        for (int i = 0; i < data.length; i++) {\n+            data[i] = input.readLong();\n+        }\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return 4 + data.length * 8;\n+    }\n+\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+        output.writeInt(data.length);\n+        for (int i = 0; i < data.length; i++) {\n+            output.writeLong(data[i]);\n+        }\n+    }\n+\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+        data = new long[input.readInt()];\n+        for (int i = 0; i < data.length; i++) {\n+            data[i] = input.readLong();\n+        }\n+    }\n+\n+    @Override\n+    public int dataLen() {\n+        return bufferLen();\n+    }\n }\n",
+            "diff_size": 113
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/572/LongArrayElement.java\nindex 396a92af4d6..f8489f6c21d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/572/LongArrayElement.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.ps.storage.vector.element;\n \n import io.netty.buffer.ByteBuf;\n@@ -102,4 +101,4 @@ public class LongArrayElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/572/LongArrayElement.java\nindex 396a92af4d6..134179a72a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/572/LongArrayElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/572/LongArrayElement.java\n@@ -20,7 +20,6 @@ package com.tencent.angel.ps.storage.vector.element;\n \n import io.netty.buffer.ByteBuf;\n import org.apache.commons.lang.ArrayUtils;\n-\n import java.io.DataInputStream;\n import java.io.DataOutputStream;\n import java.io.IOException;\n@@ -29,6 +28,7 @@ import java.util.Arrays;\n /**\n  * The complex object that contains a integer array,, it can be stored in PS\n  */\n+\n public class LongArrayElement implements IElement {\n \n   private long[] data;\n@@ -102,4 +102,4 @@ public class LongArrayElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

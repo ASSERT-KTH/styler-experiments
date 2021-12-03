@@ -1,0 +1,76 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "1045",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.docretrieve.entity.proxy;\n\nimport gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\nimport gov.hhs.fha.nhinc.common.nhinccommon.NhinTargetCommunitiesType;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/1045/EntityDocRetrieveProxyNoOpImpl.java\nindex 5f6a2c189d4..c8aed0643eb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/1045/EntityDocRetrieveProxyNoOpImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docretrieve.entity.proxy;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/1045/EntityDocRetrieveProxyNoOpImpl.java\nindex 5f6a2c189d4..b22cf25b218 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/1045/EntityDocRetrieveProxyNoOpImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docretrieve.entity.proxy;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n@@ -35,17 +36,17 @@ import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n /**\n- *\n  * @author dunnek\n  */\n public class EntityDocRetrieveProxyNoOpImpl implements EntityDocRetrieveProxy {\n-    private static final Logger LOG = LoggerFactory.getLogger(EntityDocRetrieveProxyNoOpImpl.class);\n+  private static final Logger LOG = LoggerFactory.getLogger(EntityDocRetrieveProxyNoOpImpl.class);\n \n-    @Override\n-    public RetrieveDocumentSetResponseType respondingGatewayCrossGatewayRetrieve(RetrieveDocumentSetRequestType body,\n-            AssertionType assertion, NhinTargetCommunitiesType targets) {\n-        LOG.trace(\"begin respondingGatewayCrossGatewayRetrieve()\");\n-        return new RetrieveDocumentSetResponseType();\n-    }\n+  @Override\n+  public RetrieveDocumentSetResponseType respondingGatewayCrossGatewayRetrieve(RetrieveDocumentSetRequestType body,\n+                                                                               AssertionType assertion,\n+                                                                               NhinTargetCommunitiesType targets) {\n+    LOG.trace(\"begin respondingGatewayCrossGatewayRetrieve()\");\n+    return new RetrieveDocumentSetResponseType();\n+  }\n \n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 179).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/1045/EntityDocRetrieveProxyNoOpImpl.java\nindex 5f6a2c189d4..6eab18bf968 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/1045/EntityDocRetrieveProxyNoOpImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docretrieve.entity.proxy;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n@@ -42,10 +43,10 @@ public class EntityDocRetrieveProxyNoOpImpl implements EntityDocRetrieveProxy {\n     private static final Logger LOG = LoggerFactory.getLogger(EntityDocRetrieveProxyNoOpImpl.class);\n \n     @Override\n-    public RetrieveDocumentSetResponseType respondingGatewayCrossGatewayRetrieve(RetrieveDocumentSetRequestType body,\n-            AssertionType assertion, NhinTargetCommunitiesType targets) {\n+    public RetrieveDocumentSetResponseType respondingGatewayCrossGatewayRetrieve(RetrieveDocumentSetRequestType body, AssertionType assertion, NhinTargetCommunitiesType targets) {\n         LOG.trace(\"begin respondingGatewayCrossGatewayRetrieve()\");\n-        return new RetrieveDocumentSetResponseType();\n+\n+return new RetrieveDocumentSetResponseType();\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/1045/EntityDocRetrieveProxyNoOpImpl.java\nindex 5f6a2c189d4..34dc62e8655 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/1045/EntityDocRetrieveProxyNoOpImpl.java\n@@ -30,7 +30,6 @@ import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n import gov.hhs.fha.nhinc.common.nhinccommon.NhinTargetCommunitiesType;\n import ihe.iti.xds_b._2007.RetrieveDocumentSetRequestType;\n import ihe.iti.xds_b._2007.RetrieveDocumentSetResponseType;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n \n@@ -38,14 +37,18 @@ import org.slf4j.LoggerFactory;\n  *\n  * @author dunnek\n  */\n+\n+\n public class EntityDocRetrieveProxyNoOpImpl implements EntityDocRetrieveProxy {\n+\n     private static final Logger LOG = LoggerFactory.getLogger(EntityDocRetrieveProxyNoOpImpl.class);\n \n+\n     @Override\n     public RetrieveDocumentSetResponseType respondingGatewayCrossGatewayRetrieve(RetrieveDocumentSetRequestType body,\n-            AssertionType assertion, NhinTargetCommunitiesType targets) {\n+        AssertionType assertion, NhinTargetCommunitiesType targets) {\n         LOG.trace(\"begin respondingGatewayCrossGatewayRetrieve()\");\n         return new RetrieveDocumentSetResponseType();\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/1045/EntityDocRetrieveProxyNoOpImpl.java\nindex 5f6a2c189d4..c8aed0643eb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/1045/EntityDocRetrieveProxyNoOpImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/random/files-repaired/1045/EntityDocRetrieveProxyNoOpImpl.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docretrieve.entity.proxy;\n \n import gov.hhs.fha.nhinc.common.nhinccommon.AssertionType;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

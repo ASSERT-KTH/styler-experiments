@@ -1,0 +1,85 @@
+{
+    "project_name": "bakdata-conquery",
+    "violation_id": "265",
+    "information": {
+        "violations": [
+            {
+                "line": "12",
+                "column": "91",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " */\n@RequiredArgsConstructor\npublic abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n\tprotected final ObjectReader reader;\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..eb560c13e06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/bakdata-conquery/styler/05_predictions/final/files-repaired/265/FormFrontendConfigProviderBase.java\n@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n \tprotected final ObjectReader reader;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..5a0b75a9024 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/checkstyle_idea/265/FormFrontendConfigProviderBase.java\n@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n-\tprotected final ObjectReader reader;\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n+    protected final ObjectReader reader;\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..f6066038f22 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/naturalize/265/FormFrontendConfigProviderBase.java\n@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n \tprotected final ObjectReader reader;\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "15",
+                    "severity": "error",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "15",
+                    "column": "2",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 1, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..fc54abfbbac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/codebuff/265/FormFrontendConfigProviderBase.java\n@@ -8,8 +8,9 @@ import lombok.RequiredArgsConstructor;\n  * Base class providers of frontend form configurations, which are automatically loaded by the {@link FormProcessor}.\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n+\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n-\tprotected final ObjectReader reader;\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n \n-}\n+ protected final ObjectReader reader;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..eb560c13e06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/random/files-repaired/265/FormFrontendConfigProviderBase.java\n@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n \tprotected final ObjectReader reader;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/265/FormFrontendConfigProviderBase.java\nindex 40111bc39cd..eb560c13e06 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/violations/265/FormFrontendConfigProviderBase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/bakdata-conquery/styler/05_predictions/three_grams/files-repaired/265/FormFrontendConfigProviderBase.java\n@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;\n  * The provided {@link ObjectReader} can be used to parse the configurations to {@link JsonNode}s.\n  */\n @RequiredArgsConstructor\n-public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider{\n+public abstract class FormFrontendConfigProviderBase implements FormFrontendConfigProvider {\n \tprotected final ObjectReader reader;\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

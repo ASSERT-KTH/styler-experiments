@@ -1,0 +1,62 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "63",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface FlyingCreature {\n    public void fly();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/63/FlyingCreature.java\nindex 31221cd7cdb..731e50c83b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/63/FlyingCreature.java\n@@ -4,5 +4,5 @@ package design.solid_principles.interface_segregation.good.src;\n  * Created by mrk on 4/7/14.\n  */\n public interface FlyingCreature {\n-    public void fly();\n+  public void fly();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/63/FlyingCreature.java\nindex 31221cd7cdb..731e50c83b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/63/FlyingCreature.java\n@@ -4,5 +4,5 @@ package design.solid_principles.interface_segregation.good.src;\n  * Created by mrk on 4/7/14.\n  */\n public interface FlyingCreature {\n-    public void fly();\n+  public void fly();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/63/FlyingCreature.java\nindex 31221cd7cdb..d11b897cbbb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/63/FlyingCreature.java\n@@ -4,5 +4,6 @@ package design.solid_principles.interface_segregation.good.src;\n  * Created by mrk on 4/7/14.\n  */\n public interface FlyingCreature {\n-    public void fly();\n-}\n+\n+  public void fly();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/63/FlyingCreature.java\nindex 31221cd7cdb..9aa26839c07 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/63/FlyingCreature.java\n@@ -3,6 +3,9 @@ package design.solid_principles.interface_segregation.good.src;\n /**\n  * Created by mrk on 4/7/14.\n  */\n+\n+\n public interface FlyingCreature {\n-    public void fly();\n-}\n+\n+  public void fly();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/63/FlyingCreature.java\nindex 31221cd7cdb..731e50c83b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/63/FlyingCreature.java\n@@ -4,5 +4,5 @@ package design.solid_principles.interface_segregation.good.src;\n  * Created by mrk on 4/7/14.\n  */\n public interface FlyingCreature {\n-    public void fly();\n+  public void fly();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/63/FlyingCreature.java\nindex 31221cd7cdb..731e50c83b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/63/FlyingCreature.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/63/FlyingCreature.java\n@@ -4,5 +4,5 @@ package design.solid_principles.interface_segregation.good.src;\n  * Created by mrk on 4/7/14.\n  */\n public interface FlyingCreature {\n-    public void fly();\n+  public void fly();\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

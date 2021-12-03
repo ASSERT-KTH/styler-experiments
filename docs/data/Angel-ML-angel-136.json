@@ -1,0 +1,110 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "136",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/136/ObjectiveFactory.java\nindex 4ccd44db482..f8c12431956 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/136/ObjectiveFactory.java\n@@ -24,128 +24,128 @@ import com.tencent.angel.spark.ml.tree.objective.metric.*;\n \n public class ObjectiveFactory {\n \n-  public static Loss getLoss(Loss.Kind lossFunc) {\n-    switch (lossFunc) {\n-      case RMSE:\n-        return RMSELoss.getInstance();\n-      case BinaryLogistic:\n-        return BinaryLogisticLoss.getInstance();\n-      case MultiLogistic:\n-        return MultinomialLogisticLoss.getInstance();\n-      default:\n-        throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n+    public static Loss getLoss(Loss.Kind lossFunc) {\n+        switch (lossFunc) {\n+            case RMSE:\n+                return RMSELoss.getInstance();\n+            case BinaryLogistic:\n+                return BinaryLogisticLoss.getInstance();\n+            case MultiLogistic:\n+                return MultinomialLogisticLoss.getInstance();\n+            default:\n+                throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n+        }\n     }\n-  }\n-\n-  public static BinaryLoss getBinaryLoss(Loss.Kind lossFunc) {\n-    switch (lossFunc) {\n-      case RMSE:\n-        return RMSELoss.getInstance();\n-      case BinaryLogistic:\n-        return BinaryLogisticLoss.getInstance();\n-      case MultiLogistic:\n-        throw new GBDTException(\"Loss function \" + lossFunc\n-            + \" is not a binary loss function\");\n-      default:\n-        throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n+\n+    public static BinaryLoss getBinaryLoss(Loss.Kind lossFunc) {\n+        switch (lossFunc) {\n+            case RMSE:\n+                return RMSELoss.getInstance();\n+            case BinaryLogistic:\n+                return BinaryLogisticLoss.getInstance();\n+            case MultiLogistic:\n+                throw new GBDTException(\"Loss function \" + lossFunc\n+                        + \" is not a binary loss function\");\n+            default:\n+                throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n+        }\n     }\n-  }\n-\n-  public static MultiLoss getMultiLoss(Loss.Kind lossFunc) {\n-    switch (lossFunc) {\n-      case RMSE:\n-        return RMSELoss.getInstance();\n-      case MultiLogistic:\n-        return MultinomialLogisticLoss.getInstance();\n-      case BinaryLogistic:\n-        throw new GBDTException(\"Loss function \" + lossFunc\n-            + \" is not a multi-class loss function\");\n-      default:\n+\n+    public static MultiLoss getMultiLoss(Loss.Kind lossFunc) {\n+        switch (lossFunc) {\n+            case RMSE:\n+                return RMSELoss.getInstance();\n+            case MultiLogistic:\n+                return MultinomialLogisticLoss.getInstance();\n+            case BinaryLogistic:\n+                throw new GBDTException(\"Loss function \" + lossFunc\n+                        + \" is not a multi-class loss function\");\n+            default:\n+                throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n+        }\n+    }\n+\n+    public static Loss getLoss(String lossFunc) {\n+        for (Loss.Kind kind : Loss.Kind.values()) {\n+            if (lossFunc.equalsIgnoreCase(kind.toString())) {\n+                return getLoss(kind);\n+            }\n+        }\n         throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n-  }\n \n-  public static Loss getLoss(String lossFunc) {\n-    for (Loss.Kind kind : Loss.Kind.values()) {\n-      if (lossFunc.equalsIgnoreCase(kind.toString())) {\n-        return getLoss(kind);\n-      }\n+    public static BinaryLoss getBinaryLoss(String lossFunc) {\n+        for (Loss.Kind kind : Loss.Kind.values()) {\n+            if (lossFunc.equalsIgnoreCase(kind.toString())) {\n+                return getBinaryLoss(kind);\n+            }\n+        }\n+        throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n-    throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n-  }\n-\n-  public static BinaryLoss getBinaryLoss(String lossFunc) {\n-    for (Loss.Kind kind : Loss.Kind.values()) {\n-      if (lossFunc.equalsIgnoreCase(kind.toString())) {\n-        return getBinaryLoss(kind);\n-      }\n+\n+    public static MultiLoss getMultiLoss(String lossFunc) {\n+        for (Loss.Kind kind : Loss.Kind.values()) {\n+            if (lossFunc.equalsIgnoreCase(kind.toString())) {\n+                return getMultiLoss(kind);\n+            }\n+        }\n+        throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n-    throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n-  }\n-\n-  public static MultiLoss getMultiLoss(String lossFunc) {\n-    for (Loss.Kind kind : Loss.Kind.values()) {\n-      if (lossFunc.equalsIgnoreCase(kind.toString())) {\n-        return getMultiLoss(kind);\n-      }\n+\n+    public static EvalMetric getEvalMetric(EvalMetric.Kind metric) {\n+        switch (metric) {\n+            case RMSE:\n+                return RMSEMetric.getInstance();\n+            case ERROR:\n+                return ErrorMetric.getInstance();\n+            case PRECISION:\n+                return PrecisionMetric.getInstance();\n+            case LOG_LOSS:\n+                return LogLossMetric.getInstance();\n+            case CROSS_ENTROPY:\n+                return CrossEntropyMetric.getInstance();\n+            case AUC:\n+                return new AUCMetric();\n+            default:\n+                throw new GBDTException(\"Unrecognizable eval metric: \" + metric);\n+        }\n     }\n-    throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n-  }\n-\n-  public static EvalMetric getEvalMetric(EvalMetric.Kind metric) {\n-    switch (metric) {\n-      case RMSE:\n-        return RMSEMetric.getInstance();\n-      case ERROR:\n-        return ErrorMetric.getInstance();\n-      case PRECISION:\n-        return PrecisionMetric.getInstance();\n-      case LOG_LOSS:\n-        return LogLossMetric.getInstance();\n-      case CROSS_ENTROPY:\n-        return CrossEntropyMetric.getInstance();\n-      case AUC:\n-        return new AUCMetric();\n-      default:\n+\n+    public static EvalMetric getEvalMetric(String metric) {\n+        for (EvalMetric.Kind kind : EvalMetric.Kind.values()) {\n+            if (metric.equalsIgnoreCase(kind.toString())) {\n+                return getEvalMetric(kind);\n+            }\n+        }\n         throw new GBDTException(\"Unrecognizable eval metric: \" + metric);\n     }\n-  }\n \n-  public static EvalMetric getEvalMetric(String metric) {\n-    for (EvalMetric.Kind kind : EvalMetric.Kind.values()) {\n-      if (metric.equalsIgnoreCase(kind.toString())) {\n-        return getEvalMetric(kind);\n-      }\n+    public static EvalMetric getEvalMetricOrDefault(String metric, Loss loss) {\n+        if (metric == null || metric.length() == 0) {\n+            return getEvalMetric(loss.defaultEvalMetric());\n+        } else {\n+            return getEvalMetric(metric);\n+        }\n     }\n-    throw new GBDTException(\"Unrecognizable eval metric: \" + metric);\n-  }\n-\n-  public static EvalMetric getEvalMetricOrDefault(String metric, Loss loss) {\n-    if (metric == null || metric.length() == 0) {\n-      return getEvalMetric(loss.defaultEvalMetric());\n-    } else {\n-      return getEvalMetric(metric);\n-    }\n-  }\n \n-  public static EvalMetric[] getEvalMetrics(String[] metrics) {\n-    if (metrics.length == 0) {\n-      throw new GBDTException(\"No eval metric specified\");\n-    }\n+    public static EvalMetric[] getEvalMetrics(String[] metrics) {\n+        if (metrics.length == 0) {\n+            throw new GBDTException(\"No eval metric specified\");\n+        }\n \n-    EvalMetric[] result = new EvalMetric[metrics.length];\n-    for (int i = 0; i < metrics.length; i++) {\n-      result[i] = getEvalMetric(metrics[i]);\n+        EvalMetric[] result = new EvalMetric[metrics.length];\n+        for (int i = 0; i < metrics.length; i++) {\n+            result[i] = getEvalMetric(metrics[i]);\n+        }\n+        return result;\n     }\n-    return result;\n-  }\n-\n-  public static EvalMetric[] getEvalMetricsOrDefault(String[] metrics, Loss loss) {\n-    if (metrics == null || metrics.length == 0) {\n-      return new EvalMetric[]{getEvalMetric(loss.defaultEvalMetric())};\n-    } else {\n-      return getEvalMetrics(metrics);\n+\n+    public static EvalMetric[] getEvalMetricsOrDefault(String[] metrics, Loss loss) {\n+        if (metrics == null || metrics.length == 0) {\n+            return new EvalMetric[] {getEvalMetric(loss.defaultEvalMetric())};\n+        } else {\n+            return getEvalMetrics(metrics);\n+        }\n     }\n-  }\n \n }\n",
+            "diff_size": 132
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/136/ObjectiveFactory.java\nindex 4ccd44db482..9e08ae79e12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/136/ObjectiveFactory.java\n@@ -46,7 +46,7 @@ public class ObjectiveFactory {\n       case MultiLogistic:\n         throw new GBDTException(\"Loss function \" + lossFunc\n             + \" is not a binary loss function\");\n-      default:\n+  default:\n         throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n   }\n@@ -60,7 +60,7 @@ public class ObjectiveFactory {\n       case BinaryLogistic:\n         throw new GBDTException(\"Loss function \" + lossFunc\n             + \" is not a multi-class loss function\");\n-      default:\n+  default:\n         throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n   }\n@@ -148,4 +148,4 @@ public class ObjectiveFactory {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/136/ObjectiveFactory.java\nindex 4ccd44db482..0aa8bccc4e8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/136/ObjectiveFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/136/ObjectiveFactory.java\n@@ -44,8 +44,7 @@ public class ObjectiveFactory {\n       case BinaryLogistic:\n         return BinaryLogisticLoss.getInstance();\n       case MultiLogistic:\n-        throw new GBDTException(\"Loss function \" + lossFunc\n-            + \" is not a binary loss function\");\n+        throw new GBDTException(\"Loss function \" + lossFunc + \" is not a binary loss function\");\n       default:\n         throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n@@ -58,8 +57,7 @@ public class ObjectiveFactory {\n       case MultiLogistic:\n         return MultinomialLogisticLoss.getInstance();\n       case BinaryLogistic:\n-        throw new GBDTException(\"Loss function \" + lossFunc\n-            + \" is not a multi-class loss function\");\n+        throw new GBDTException(\"Loss function \" + lossFunc + \" is not a multi-class loss function\");\n       default:\n         throw new GBDTException(\"Unrecognizable loss function: \" + lossFunc);\n     }\n@@ -142,10 +140,10 @@ public class ObjectiveFactory {\n \n   public static EvalMetric[] getEvalMetricsOrDefault(String[] metrics, Loss loss) {\n     if (metrics == null || metrics.length == 0) {\n-      return new EvalMetric[]{getEvalMetric(loss.defaultEvalMetric())};\n+      return new EvalMetric[] {getEvalMetric(loss.defaultEvalMetric())};\n     } else {\n       return getEvalMetrics(metrics);\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

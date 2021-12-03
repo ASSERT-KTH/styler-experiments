@@ -1,0 +1,70 @@
+{
+    "project_name": "toast-tk-toast-tk-engine",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "severity": "info",
+                "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "import java.awt.Component;\n\nimport com.synaptix.toast.core.net.request.CommandRequest;\n\n\npublic interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..1e944915853 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/21/ISwingwidgetActionHandler.java\n@@ -4,7 +4,6 @@ import java.awt.Component;\n \r\n import com.synaptix.toast.core.net.request.CommandRequest;\r\n \r\n-\r\n public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n \t\r\n \tpublic O handle(E component, R command);\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "5",
+                    "severity": "info",
+                    "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..91cc2aca3ae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/21/ISwingwidgetActionHandler.java\n@@ -6,6 +6,6 @@ import com.synaptix.toast.core.net.request.CommandRequest;\n \r\n \r\n public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n-\t\r\n-\tpublic O handle(E component, R command);\r\n+\r\n+    public O handle(E component, R command);\r\n }\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..fc100022fb8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/21/ISwingwidgetActionHandler.java\n@@ -2,10 +2,9 @@ package com.synaptix.toast.adapter.swing.handler;\n \r\n import java.awt.Component;\r\n \r\n-import com.synaptix.toast.core.net.request.CommandRequest;\r\n-\r\n-\r\n+import com.synaptix.toast.core.net.request.CommandRequest;\n+\n public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n \t\r\n \tpublic O handle(E component, R command);\r\n-}\r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..26fbc0e1bc0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/21/ISwingwidgetActionHandler.java\n@@ -1,11 +1,11 @@\n-package com.synaptix.toast.adapter.swing.handler;\r\n-\r\n-import java.awt.Component;\r\n-\r\n-import com.synaptix.toast.core.net.request.CommandRequest;\r\n-\r\n-\r\n-public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n-\t\r\n-\tpublic O handle(E component, R command);\r\n-}\r\n+package com.synaptix.toast.adapter.swing.handler;\n+\n+import java.awt.Component;\n+import com.synaptix.toast.core.net.request.CommandRequest;\n+\n+public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\n+\n+ public O handle(\n+  E component,\n+  R command);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..1e944915853 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/21/ISwingwidgetActionHandler.java\n@@ -4,7 +4,6 @@ import java.awt.Component;\n \r\n import com.synaptix.toast.core.net.request.CommandRequest;\r\n \r\n-\r\n public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n \t\r\n \tpublic O handle(E component, R command);\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/21/ISwingwidgetActionHandler.java\nindex 1d7324cdd6e..1e944915853 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/21/ISwingwidgetActionHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/21/ISwingwidgetActionHandler.java\n@@ -4,7 +4,6 @@ import java.awt.Component;\n \r\n import com.synaptix.toast.core.net.request.CommandRequest;\r\n \r\n-\r\n public interface ISwingwidgetActionHandler<E extends Component, O, R extends CommandRequest> {\r\n \t\r\n \tpublic O handle(E component, R command);\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea"
+    ]
+}

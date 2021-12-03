@@ -1,0 +1,95 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "92",
+    "information": {
+        "violations": [
+            {
+                "line": "58",
+                "column": "33",
+                "severity": "warning",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "        String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n\n        if (grpList == null) {  // JAAS behavior\n            String msg = sm.getString(\"filelm.faillogin\", _username);\n            throw new LoginException(msg);\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "60",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/92/FileLoginModule.java\nindex 2fe4fee76f1..784a521b58f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/92/FileLoginModule.java\n@@ -55,8 +55,9 @@ public class FileLoginModule extends PasswordLoginModule\n \n         String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n \n-        if (grpList == null) {  // JAAS behavior\n-            String msg = sm.getString(\"filelm.faillogin\", _username);\n+        if (grpList == null) {\n+            // JAAS behavior\n+        String msg = sm.getString(\"filelm.faillogin\", _username);\n             throw new LoginException(msg);\n         }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "54",
+                    "column": "33",
+                    "severity": "warning",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/92/FileLoginModule.java\nindex 2fe4fee76f1..f41ba023ece 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/92/FileLoginModule.java\n@@ -33,25 +33,21 @@ import javax.security.auth.login.LoginException;\n  *\n  * @see com.sun.enterprise.security.auth.login.PasswordLoginModule\n  * @see com.sun.enterprise.security.auth.realm.file.FileRealm\n- *\n  */\n-public class FileLoginModule extends PasswordLoginModule\n-{\n+public class FileLoginModule extends PasswordLoginModule {\n \n     /**\n      * Perform file authentication. Delegates to FileRealm.\n      *\n      * @throws LoginException If login fails (JAAS login() behavior).\n-     *\n      */\n     protected void authenticate()\n-        throws LoginException\n-    {\n+        throws LoginException {\n         if (!(_currentRealm instanceof FileRealm)) {\n             String msg = sm.getString(\"filelm.badrealm\");\n             throw new LoginException(msg);\n         }\n-        FileRealm fileRealm = (FileRealm)_currentRealm;\n+        FileRealm fileRealm = (FileRealm) _currentRealm;\n \n         String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n \n@@ -65,6 +61,6 @@ public class FileLoginModule extends PasswordLoginModule\n         }\n \n         commitAuthentication(_username, getPasswordChar(),\n-                             _currentRealm, grpList);\n+            _currentRealm, grpList);\n     }\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/92/FileLoginModule.java\nindex 2fe4fee76f1..d01bd5b25ae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/92/FileLoginModule.java\n@@ -55,7 +55,8 @@ public class FileLoginModule extends PasswordLoginModule\n \n         String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n \n-        if (grpList == null) {  // JAAS behavior\n+        if (grpList == null) {\n+// JAAS behavior\n             String msg = sm.getString(\"filelm.faillogin\", _username);\n             throw new LoginException(msg);\n         }\n@@ -64,7 +65,6 @@ public class FileLoginModule extends PasswordLoginModule\n             _logger.log(Level.FINE, \"File login succeeded for: \" + _username);\n         }\n \n-        commitAuthentication(_username, getPasswordChar(),\n-                             _currentRealm, grpList);\n+        commitAuthentication(_username, getPasswordChar(), _currentRealm, grpList);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "60",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/92/FileLoginModule.java\nindex 2fe4fee76f1..784a521b58f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/92/FileLoginModule.java\n@@ -55,8 +55,9 @@ public class FileLoginModule extends PasswordLoginModule\n \n         String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n \n-        if (grpList == null) {  // JAAS behavior\n-            String msg = sm.getString(\"filelm.faillogin\", _username);\n+        if (grpList == null) {\n+            // JAAS behavior\n+        String msg = sm.getString(\"filelm.faillogin\", _username);\n             throw new LoginException(msg);\n         }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "61",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "'if' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/92/FileLoginModule.java\nindex 2fe4fee76f1..e918471f70d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/92/FileLoginModule.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/92/FileLoginModule.java\n@@ -55,8 +55,10 @@ public class FileLoginModule extends PasswordLoginModule\n \n         String[] grpList = fileRealm.authenticate(_username, getPasswordChar());\n \n-        if (grpList == null) {  // JAAS behavior\n-            String msg = sm.getString(\"filelm.faillogin\", _username);\n+        if (grpList == null) {\n+\n+        // JAAS behavior\n+        String msg = sm.getString(\"filelm.faillogin\", _username);\n             throw new LoginException(msg);\n         }\n \n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

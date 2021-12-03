@@ -1,0 +1,96 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class Demo {\n\n\tpublic void execute() {\n\t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n\t\tfor (int i = 0; i < 10; i++) {\n\t\t\tThread t = factory.newThread(new Task());",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/29/Demo.java\nindex d2af97b761b..85bf0639ab7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/29/Demo.java\n@@ -2,7 +2,7 @@ package com.baeldung.concurrent.threadfactory;\n \n public class Demo {\n \n-\tpublic void execute() {\n+public void execute() {\n \t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n \t\tfor (int i = 0; i < 10; i++) {\n \t\t\tThread t = factory.newThread(new Task());\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/29/Demo.java\nindex d2af97b761b..ad2f884f0b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/29/Demo.java\n@@ -2,12 +2,12 @@ package com.baeldung.concurrent.threadfactory;\n \n public class Demo {\n \n-\tpublic void execute() {\n-\t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n-\t\tfor (int i = 0; i < 10; i++) {\n-\t\t\tThread t = factory.newThread(new Task());\n-\t\t\tt.start();\n-\t\t}\n-\t}\n+    public void execute() {\n+        BaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n+        for (int i = 0; i < 10; i++) {\n+            Thread t = factory.newThread(new Task());\n+            t.start();\n+        }\n+    }\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/29/Demo.java\nindex d2af97b761b..af11705b818 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/29/Demo.java\n@@ -2,12 +2,11 @@ package com.baeldung.concurrent.threadfactory;\n \n public class Demo {\n \n-\tpublic void execute() {\n-\t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n+    public void execute() {\n+    BaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n \t\tfor (int i = 0; i < 10; i++) {\n-\t\t\tThread t = factory.newThread(new Task());\n+    Thread t = factory.newThread(new Task());\n \t\t\tt.start();\n-\t\t}\n-\t}\n-\n-}\n+    }\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/29/Demo.java\nindex d2af97b761b..af6bccaa306 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/29/Demo.java\n@@ -1,13 +1,14 @@\n package com.baeldung.concurrent.threadfactory;\n \n+\n public class Demo {\n \n-\tpublic void execute() {\n-\t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n-\t\tfor (int i = 0; i < 10; i++) {\n-\t\t\tThread t = factory.newThread(new Task());\n-\t\t\tt.start();\n-\t\t}\n-\t}\n+    public void execute() {\n+        BaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n+        for (int i = 0; i < 10; i++) {\n+            Thread t = factory.newThread(new Task());\n \n-}\n+            t.start();\n+        }\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/29/Demo.java\nindex d2af97b761b..85bf0639ab7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/29/Demo.java\n@@ -2,7 +2,7 @@ package com.baeldung.concurrent.threadfactory;\n \n public class Demo {\n \n-\tpublic void execute() {\n+public void execute() {\n \t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n \t\tfor (int i = 0; i < 10; i++) {\n \t\t\tThread t = factory.newThread(new Task());\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/29/Demo.java\nindex d2af97b761b..eb182983e9e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/29/Demo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/29/Demo.java\n@@ -2,7 +2,7 @@ package com.baeldung.concurrent.threadfactory;\n \n public class Demo {\n \n-\tpublic void execute() {\n+    public void execute() {\n \t\tBaeldungThreadFactory factory = new BaeldungThreadFactory(\"BaeldungThreadFactory\");\n \t\tfor (int i = 0; i < 10; i++) {\n \t\t\tThread t = factory.newThread(new Task());\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

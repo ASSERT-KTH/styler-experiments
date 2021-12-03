@@ -1,0 +1,71 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "7",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "56",
+                "severity": "error",
+                "message": "';' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    public JwtAccessTokenConverter jwtAccessTokenConverter() {\n        JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();\n        accessTokenConverter.setSigningKey(\"test_key\");//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n        return accessTokenConverter;\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/7/JwtTokenStoreConfig.java\nindex 2517e636513..2e483a9c6af 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/7/JwtTokenStoreConfig.java\n@@ -22,7 +22,8 @@ public class JwtTokenStoreConfig {\n     @Bean\n     public JwtAccessTokenConverter jwtAccessTokenConverter() {\n         JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();\n-        accessTokenConverter.setSigningKey(\"test_key\");//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n+        accessTokenConverter.setSigningKey(\"test_key\");\n+//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n         return accessTokenConverter;\n     }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "56",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/7/JwtTokenStoreConfig.java\nindex 2517e636513..ab6be7bdf21 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/7/JwtTokenStoreConfig.java\n@@ -22,7 +22,8 @@ public class JwtTokenStoreConfig {\n     @Bean\n     public JwtAccessTokenConverter jwtAccessTokenConverter() {\n         JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();\n-        accessTokenConverter.setSigningKey(\"test_key\");//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n+        accessTokenConverter.setSigningKey(\"test_key\");\n+//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n         return accessTokenConverter;\n     }\n \n@@ -30,4 +31,4 @@ public class JwtTokenStoreConfig {\n     public JwtTokenEnhancer jwtTokenEnhancer() {\n         return new JwtTokenEnhancer();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/7/JwtTokenStoreConfig.java\nindex 2517e636513..2e483a9c6af 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/7/JwtTokenStoreConfig.java\n@@ -22,7 +22,8 @@ public class JwtTokenStoreConfig {\n     @Bean\n     public JwtAccessTokenConverter jwtAccessTokenConverter() {\n         JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();\n-        accessTokenConverter.setSigningKey(\"test_key\");//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n+        accessTokenConverter.setSigningKey(\"test_key\");\n+//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n         return accessTokenConverter;\n     }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/7/JwtTokenStoreConfig.java\nindex 2517e636513..eb8e651ad93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/7/JwtTokenStoreConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/7/JwtTokenStoreConfig.java\n@@ -22,7 +22,8 @@ public class JwtTokenStoreConfig {\n     @Bean\n     public JwtAccessTokenConverter jwtAccessTokenConverter() {\n         JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();\n-        accessTokenConverter.setSigningKey(\"test_key\");//\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n+        accessTokenConverter.setSigningKey(\"test_key\");\n+        //\u914d\u7f6eJWT\u4f7f\u7528\u7684\u79d8\u94a5\n         return accessTokenConverter;\n     }\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

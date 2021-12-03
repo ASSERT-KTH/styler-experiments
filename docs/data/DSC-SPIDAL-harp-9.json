@@ -1,0 +1,90 @@
+{
+    "project_name": "DSC-SPIDAL-harp",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright 2013-2017 Indiana University\n * \n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "3",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/checkstyle_idea/9/SingleFileInputFormat.java\nindex 01cd670f980..b408d68b2c7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/checkstyle_idea/9/SingleFileInputFormat.java\n@@ -1,6 +1,6 @@\n /*\r\n  * Copyright 2013-2017 Indiana University\r\n- * \r\n+ *\r\n  * Licensed under the Apache License, Version 2.0 (the \"License\");\r\n  * you may not use this file except in compliance with the License.\r\n  * You may obtain a copy of the License at\r\n@@ -26,18 +26,18 @@ import org.apache.hadoop.mapreduce.TaskAttemptContext;\n import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;\r\n \r\n public class SingleFileInputFormat\r\n-  extends FileInputFormat<String, String> {\r\n+    extends FileInputFormat<String, String> {\r\n \r\n-  protected boolean isSplitable(\r\n-    JobContext context, Path filename) {\r\n-    return false;\r\n-  }\r\n+    protected boolean isSplitable(\r\n+        JobContext context, Path filename) {\r\n+        return false;\r\n+    }\r\n \r\n-  @Override\r\n-  public RecordReader<String, String>\r\n+    @Override\r\n+    public RecordReader<String, String>\r\n     createRecordReader(InputSplit split,\r\n-      TaskAttemptContext context)\r\n-      throws IOException, InterruptedException {\r\n-    return new SingleFileRecordReader();\r\n-  }\r\n+                       TaskAttemptContext context)\r\n+        throws IOException, InterruptedException {\r\n+        return new SingleFileRecordReader();\r\n+    }\r\n }\r\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "3",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/codebuff/9/SingleFileInputFormat.java\nindex 01cd670f980..c552fd6997f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/codebuff/9/SingleFileInputFormat.java\n@@ -14,30 +14,30 @@\n  * limitations under the License.\r\n  */\r\n \r\n-package edu.iu.fileformat;\r\n-\r\n-import java.io.IOException;\r\n-\r\n-import org.apache.hadoop.fs.Path;\r\n-import org.apache.hadoop.mapreduce.InputSplit;\r\n-import org.apache.hadoop.mapreduce.JobContext;\r\n-import org.apache.hadoop.mapreduce.RecordReader;\r\n-import org.apache.hadoop.mapreduce.TaskAttemptContext;\r\n-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;\r\n-\r\n-public class SingleFileInputFormat\r\n-  extends FileInputFormat<String, String> {\r\n-\r\n-  protected boolean isSplitable(\r\n-    JobContext context, Path filename) {\r\n-    return false;\r\n-  }\r\n-\r\n-  @Override\r\n-  public RecordReader<String, String>\r\n-    createRecordReader(InputSplit split,\r\n-      TaskAttemptContext context)\r\n-      throws IOException, InterruptedException {\r\n-    return new SingleFileRecordReader();\r\n-  }\r\n-}\r\n+package edu.iu.fileformat;\n+\n+import java.io.IOException;\n+import org.apache.hadoop.fs.Path;\n+import org.apache.hadoop.mapreduce.InputSplit;\n+import org.apache.hadoop.mapreduce.JobContext;\n+import org.apache.hadoop.mapreduce.RecordReader;\n+import org.apache.hadoop.mapreduce.TaskAttemptContext;\n+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;\n+\n+\n+public class SingleFileInputFormat extends\n+  FileInputFormat<String, String> {\n+\n+  protected boolean isSplitable(JobContext context,\n+                                Path filename) {\n+    return false;\n+  }\n+\n+\n+  @Override\n+  public RecordReader<String, String> createRecordReader(InputSplit split,\n+                                                         TaskAttemptContext context)\n+                                                           throws IOException, InterruptedException {\n+    return new SingleFileRecordReader();\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "3",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "3",
+                    "severity": "error",
+                    "message": "Line has trailing spaces.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/three_grams/files-repaired/9/SingleFileInputFormat.java\nindex 01cd670f980..4695aae874a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/violations/9/SingleFileInputFormat.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DSC-SPIDAL-harp/styler/05_predictions/three_grams/files-repaired/9/SingleFileInputFormat.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\r\n  */\r\n \r\n+\r\n package edu.iu.fileformat;\r\n \r\n import java.io.IOException;\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

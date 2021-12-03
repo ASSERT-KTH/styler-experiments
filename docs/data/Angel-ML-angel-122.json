@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "122",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/122/TNode.java\nindex b89331120bc..a5e9b99bea1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/122/TNode.java\n@@ -22,110 +22,110 @@ import com.tencent.angel.spark.ml.tree.tree.split.SplitEntry;\n \n public abstract class TNode<NodeStat extends TNodeStat> implements Serializable {\n \n-  private final int nid;  // node id in the tree\n-  private final TNode parent;  // node id of parent in the tree, start with 0\n-  private TNode leftChild; // left child in the tree\n-  private TNode rightChild; // right child in the tree\n-  private SplitEntry splitEntry;\n-  private boolean isLeaf;\n-\n-  protected NodeStat[] nodeStats;  // stats of current node, each stats stands for a class\n-\n-  public TNode(int nid, TNode parent, TNode left, TNode right) {\n-    this.nid = nid;\n-    this.parent = parent;\n-    this.leftChild = left;\n-    this.rightChild = right;\n-    this.isLeaf = false;\n-  }\n-\n-  public TNode(int nid, TNode parent) {\n-    this(nid, parent, null, null);\n-  }\n-\n-  public int getNid() {\n-    return this.nid;\n-  }\n-\n-  public TNode getParent() {\n-    return this.parent;\n-  }\n-\n-  public TNode getLeftChild() {\n-    return this.leftChild;\n-  }\n-\n-  public TNode getRightChild() {\n-    return this.rightChild;\n-  }\n-\n-  public SplitEntry getSplitEntry() {\n-    return splitEntry;\n-  }\n-\n-  public float getGain() {\n-    return nodeStats[0].getGain();\n-  }\n-\n-  public float[] getGains() {\n-    float[] gains = new float[nodeStats.length];\n-    for (int i = 0; i < nodeStats.length; i++) {\n-      gains[i] = nodeStats[i].getGain();\n-    }\n-    return gains;\n-  }\n-\n-  public NodeStat getNodeStat() {\n-    return this.nodeStats[0];\n-  }\n-\n-  public NodeStat getNodeStat(int classId) {\n-    return nodeStats[classId];\n-  }\n-\n-  public NodeStat[] getNodeStats() {\n-    return this.nodeStats;\n-  }\n-\n-  public void setLeftChild(TNode leftChild) {\n-    this.leftChild = leftChild;\n-  }\n-\n-  public void setRightChild(TNode rightChild) {\n-    this.rightChild = rightChild;\n-  }\n-\n-  public void setSplitEntry(SplitEntry splitEntry) {\n-    this.splitEntry = splitEntry;\n-  }\n-\n-  public void setGain(float gain) {\n-    this.nodeStats[0].setGain(gain);\n-  }\n-\n-  public void setGains(float[] gains) {\n-    for (int i = 0; i < this.nodeStats.length; i++) {\n-      this.nodeStats[i].setGain(gains[i]);\n-    }\n-  }\n-\n-  public void setNodeWeight(float nodeWeight) {\n-    this.nodeStats[0].setNodeWeight(nodeWeight);\n-  }\n-\n-  public void setNodeWeights(float[] nodeWeights) {\n-    for (int i = 0; i < this.nodeStats.length; i++) {\n-      this.nodeStats[i].setNodeWeight(nodeWeights[i]);\n-    }\n-  }\n-\n-  public boolean isLeaf() {\n-    return this.isLeaf;\n-  }\n-\n-  public void chgToLeaf() {\n-    this.isLeaf = true;\n-  }\n+    private final int nid;  // node id in the tree\n+    private final TNode parent;  // node id of parent in the tree, start with 0\n+    private TNode leftChild; // left child in the tree\n+    private TNode rightChild; // right child in the tree\n+    private SplitEntry splitEntry;\n+    private boolean isLeaf;\n+\n+    protected NodeStat[] nodeStats;  // stats of current node, each stats stands for a class\n+\n+    public TNode(int nid, TNode parent, TNode left, TNode right) {\n+        this.nid = nid;\n+        this.parent = parent;\n+        this.leftChild = left;\n+        this.rightChild = right;\n+        this.isLeaf = false;\n+    }\n+\n+    public TNode(int nid, TNode parent) {\n+        this(nid, parent, null, null);\n+    }\n+\n+    public int getNid() {\n+        return this.nid;\n+    }\n+\n+    public TNode getParent() {\n+        return this.parent;\n+    }\n+\n+    public TNode getLeftChild() {\n+        return this.leftChild;\n+    }\n+\n+    public TNode getRightChild() {\n+        return this.rightChild;\n+    }\n+\n+    public SplitEntry getSplitEntry() {\n+        return splitEntry;\n+    }\n+\n+    public float getGain() {\n+        return nodeStats[0].getGain();\n+    }\n+\n+    public float[] getGains() {\n+        float[] gains = new float[nodeStats.length];\n+        for (int i = 0; i < nodeStats.length; i++) {\n+            gains[i] = nodeStats[i].getGain();\n+        }\n+        return gains;\n+    }\n+\n+    public NodeStat getNodeStat() {\n+        return this.nodeStats[0];\n+    }\n+\n+    public NodeStat getNodeStat(int classId) {\n+        return nodeStats[classId];\n+    }\n+\n+    public NodeStat[] getNodeStats() {\n+        return this.nodeStats;\n+    }\n+\n+    public void setLeftChild(TNode leftChild) {\n+        this.leftChild = leftChild;\n+    }\n+\n+    public void setRightChild(TNode rightChild) {\n+        this.rightChild = rightChild;\n+    }\n+\n+    public void setSplitEntry(SplitEntry splitEntry) {\n+        this.splitEntry = splitEntry;\n+    }\n+\n+    public void setGain(float gain) {\n+        this.nodeStats[0].setGain(gain);\n+    }\n+\n+    public void setGains(float[] gains) {\n+        for (int i = 0; i < this.nodeStats.length; i++) {\n+            this.nodeStats[i].setGain(gains[i]);\n+        }\n+    }\n+\n+    public void setNodeWeight(float nodeWeight) {\n+        this.nodeStats[0].setNodeWeight(nodeWeight);\n+    }\n+\n+    public void setNodeWeights(float[] nodeWeights) {\n+        for (int i = 0; i < this.nodeStats.length; i++) {\n+            this.nodeStats[i].setNodeWeight(nodeWeights[i]);\n+        }\n+    }\n+\n+    public boolean isLeaf() {\n+        return this.isLeaf;\n+    }\n+\n+    public void chgToLeaf() {\n+        this.isLeaf = true;\n+    }\n \n }\n \n",
+            "diff_size": 104
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/122/TNode.java\nindex b89331120bc..4da8110768f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/122/TNode.java\n@@ -22,14 +22,14 @@ import com.tencent.angel.spark.ml.tree.tree.split.SplitEntry;\n \n public abstract class TNode<NodeStat extends TNodeStat> implements Serializable {\n \n-  private final int nid;  // node id in the tree\n-  private final TNode parent;  // node id of parent in the tree, start with 0\n+  private final int nid; // node id in the tree\n+  private final TNode parent; // node id of parent in the tree, start with 0\n   private TNode leftChild; // left child in the tree\n   private TNode rightChild; // right child in the tree\n   private SplitEntry splitEntry;\n   private boolean isLeaf;\n \n-  protected NodeStat[] nodeStats;  // stats of current node, each stats stands for a class\n+  protected NodeStat[] nodeStats; // stats of current node, each stats stands for a class\n \n   public TNode(int nid, TNode parent, TNode left, TNode right) {\n     this.nid = nid;\n@@ -127,5 +127,4 @@ public abstract class TNode<NodeStat extends TNodeStat> implements Serializable\n     this.isLeaf = true;\n   }\n \n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/122/TNode.java\nindex b89331120bc..2057d884963 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/122/TNode.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/122/TNode.java\n@@ -127,5 +127,4 @@ public abstract class TNode<NodeStat extends TNodeStat> implements Serializable\n     this.isLeaf = true;\n   }\n \n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

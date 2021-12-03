@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "600",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/600/Node.java\nindex 10628c19743..51b10566e97 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/600/Node.java\n@@ -29,93 +29,93 @@ import java.io.IOException;\n  */\n public class Node implements IElement {\n \n-  private IntFloatVector feats;\n+    private IntFloatVector feats;\n \n-  private long[] neighbors;\n+    private long[] neighbors;\n \n-  public Node(IntFloatVector feats, long[] neighbors) {\n-    this.feats = feats;\n-    this.neighbors = neighbors;\n-  }\n+    public Node(IntFloatVector feats, long[] neighbors) {\n+        this.feats = feats;\n+        this.neighbors = neighbors;\n+    }\n \n-  public Node() {\n-    this(null, null);\n-  }\n+    public Node() {\n+        this(null, null);\n+    }\n \n-  public IntFloatVector getFeats() {\n-    return feats;\n-  }\n+    public IntFloatVector getFeats() {\n+        return feats;\n+    }\n \n-  public void setFeats(IntFloatVector feats) {\n-    this.feats = feats;\n-  }\n+    public void setFeats(IntFloatVector feats) {\n+        this.feats = feats;\n+    }\n \n-  public long[] getNeighbors() {\n-    return neighbors;\n-  }\n+    public long[] getNeighbors() {\n+        return neighbors;\n+    }\n \n-  public void setNeighbors(long[] neighbors) {\n-    this.neighbors = neighbors;\n-  }\n+    public void setNeighbors(long[] neighbors) {\n+        this.neighbors = neighbors;\n+    }\n \n-  @Override\n-  public Node deepClone() {\n-    IntFloatVector cloneFeats = feats.clone();\n+    @Override\n+    public Node deepClone() {\n+        IntFloatVector cloneFeats = feats.clone();\n \n-    long[] cloneNeighbors = new long[neighbors.length];\n-    System.arraycopy(neighbors, 0, cloneNeighbors, 0, neighbors.length);\n-    return new Node(cloneFeats, cloneNeighbors);\n-  }\n+        long[] cloneNeighbors = new long[neighbors.length];\n+        System.arraycopy(neighbors, 0, cloneNeighbors, 0, neighbors.length);\n+        return new Node(cloneFeats, cloneNeighbors);\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n-    NodeUtils.serialize(feats, output);\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        NodeUtils.serialize(feats, output);\n \n-    output.writeInt(neighbors.length);\n-    for (int i = 0; i < neighbors.length; i++) {\n-      output.writeLong(neighbors[i]);\n+        output.writeInt(neighbors.length);\n+        for (int i = 0; i < neighbors.length; i++) {\n+            output.writeLong(neighbors[i]);\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    feats = NodeUtils.deserialize(input);\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        feats = NodeUtils.deserialize(input);\n \n-    int len = input.readInt();\n-    neighbors = new long[len];\n-    for (int i = 0; i < len; i++) {\n-      neighbors[i] = input.readLong();\n+        int len = input.readInt();\n+        neighbors = new long[len];\n+        for (int i = 0; i < len; i++) {\n+            neighbors[i] = input.readLong();\n+        }\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    return NodeUtils.dataLen(feats) + 4 + 8 * neighbors.length;\n-  }\n+    @Override\n+    public int bufferLen() {\n+        return NodeUtils.dataLen(feats) + 4 + 8 * neighbors.length;\n+    }\n \n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-    NodeUtils.serialize(feats, output);\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+        NodeUtils.serialize(feats, output);\n \n-    output.writeInt(neighbors.length);\n-    for (int i = 0; i < neighbors.length; i++) {\n-      output.writeLong(neighbors[i]);\n+        output.writeInt(neighbors.length);\n+        for (int i = 0; i < neighbors.length; i++) {\n+            output.writeLong(neighbors[i]);\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-    feats = NodeUtils.deserialize(input);\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+        feats = NodeUtils.deserialize(input);\n \n-    int len = input.readInt();\n-    neighbors = new long[len];\n-    for (int i = 0; i < len; i++) {\n-      neighbors[i] = input.readLong();\n+        int len = input.readInt();\n+        neighbors = new long[len];\n+        for (int i = 0; i < len; i++) {\n+            neighbors[i] = input.readLong();\n+        }\n     }\n-  }\n \n-  @Override\n-  public int dataLen() {\n-    return bufferLen();\n-  }\n+    @Override\n+    public int dataLen() {\n+        return bufferLen();\n+    }\n }\n",
+            "diff_size": 70
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/600/Node.java\nindex 10628c19743..7017394ac95 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/600/Node.java\n@@ -61,8 +61,7 @@ public class Node implements IElement {\n   @Override\n   public Node deepClone() {\n     IntFloatVector cloneFeats = feats.clone();\n-\n-    long[] cloneNeighbors = new long[neighbors.length];\n+long[] cloneNeighbors = new long[neighbors.length];\n     System.arraycopy(neighbors, 0, cloneNeighbors, 0, neighbors.length);\n     return new Node(cloneFeats, cloneNeighbors);\n   }\n@@ -118,4 +117,4 @@ public class Node implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/600/Node.java\nindex 10628c19743..04f7f6eb2d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/600/Node.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/600/Node.java\n@@ -27,10 +27,10 @@ import java.io.IOException;\n /**\n  * Node features\n  */\n+\n public class Node implements IElement {\n \n   private IntFloatVector feats;\n-\n   private long[] neighbors;\n \n   public Node(IntFloatVector feats, long[] neighbors) {\n@@ -61,7 +61,6 @@ public class Node implements IElement {\n   @Override\n   public Node deepClone() {\n     IntFloatVector cloneFeats = feats.clone();\n-\n     long[] cloneNeighbors = new long[neighbors.length];\n     System.arraycopy(neighbors, 0, cloneNeighbors, 0, neighbors.length);\n     return new Node(cloneFeats, cloneNeighbors);\n@@ -70,7 +69,6 @@ public class Node implements IElement {\n   @Override\n   public void serialize(ByteBuf output) {\n     NodeUtils.serialize(feats, output);\n-\n     output.writeInt(neighbors.length);\n     for (int i = 0; i < neighbors.length; i++) {\n       output.writeLong(neighbors[i]);\n@@ -96,7 +94,6 @@ public class Node implements IElement {\n   @Override\n   public void serialize(DataOutputStream output) throws IOException {\n     NodeUtils.serialize(feats, output);\n-\n     output.writeInt(neighbors.length);\n     for (int i = 0; i < neighbors.length; i++) {\n       output.writeLong(neighbors[i]);\n@@ -118,4 +115,5 @@ public class Node implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

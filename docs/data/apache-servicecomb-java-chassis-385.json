@@ -1,0 +1,80 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "385",
+    "information": {
+        "violations": [
+            {
+                "line": "76",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 125).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "      startListen(httpServer, startFuture);\n    } catch (Throwable e) {\n      // vert.x got some states that not print error and execute call back in VertexUtils.blockDeploy, we add a log our self.\n      LOGGER.error(\"\", e);\n      throw e;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/385/RestServerVerticle.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/385/RestServerVerticle.java\nindex f2ac2fb156e..8e35b4dcd22 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/385/RestServerVerticle.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/385/RestServerVerticle.java\n@@ -85,8 +85,7 @@ public class RestServerVerticle extends AbstractVerticle {\n       LOGGER.info(\"access log enabled, pattern = {}\", pattern);\n       mainRouter.route()\n           .handler(new AccessLogHandler(\n-              pattern\n-          ));\n+              pattern));\n     }\n   }\n \n@@ -146,4 +145,4 @@ public class RestServerVerticle extends AbstractVerticle {\n \n     return serverOptions;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/385/RestServerVerticle.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/385/RestServerVerticle.java\nindex f2ac2fb156e..bebabbc9c90 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/385/RestServerVerticle.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/385/RestServerVerticle.java\n@@ -18,7 +18,6 @@\n package org.apache.servicecomb.transport.rest.vertx;\n \n import java.util.List;\n-\n import org.apache.servicecomb.core.Endpoint;\n import org.apache.servicecomb.core.transport.AbstractTransport;\n import org.apache.servicecomb.foundation.common.net.URIEndpointObject;\n@@ -31,7 +30,6 @@ import org.apache.servicecomb.transport.rest.vertx.accesslog.AccessLogConfigurat\n import org.apache.servicecomb.transport.rest.vertx.accesslog.impl.AccessLogHandler;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import io.vertx.core.AbstractVerticle;\n import io.vertx.core.Context;\n import io.vertx.core.Future;\n@@ -66,9 +64,11 @@ public class RestServerVerticle extends AbstractVerticle {\n         startFuture.complete();\n         return;\n       }\n+\n       Router mainRouter = Router.router(vertx);\n       mountAccessLogHandler(mainRouter);\n       initDispatcher(mainRouter);\n+\n       HttpServer httpServer = createHttpServer();\n       httpServer.requestHandler(mainRouter::accept);\n       startListen(httpServer, startFuture);\n@@ -83,10 +83,7 @@ public class RestServerVerticle extends AbstractVerticle {\n     if (AccessLogConfiguration.INSTANCE.getAccessLogEnabled()) {\n       String pattern = AccessLogConfiguration.INSTANCE.getAccesslogPattern();\n       LOGGER.info(\"access log enabled, pattern = {}\", pattern);\n-      mainRouter.route()\n-          .handler(new AccessLogHandler(\n-              pattern\n-          ));\n+      mainRouter.route().handler(new AccessLogHandler(pattern));\n     }\n   }\n \n@@ -103,15 +100,15 @@ public class RestServerVerticle extends AbstractVerticle {\n     server.listen(endpointObject.getPort(), endpointObject.getHostOrIp(), ar -> {\n       if (ar.succeeded()) {\n         LOGGER.info(\"rest listen success. address={}:{}\",\n-            endpointObject.getHostOrIp(),\n-            ar.result().actualPort());\n+endpointObject.getHostOrIp(),\n+ar.result().actualPort());\n         startFuture.complete();\n         return;\n       }\n \n       String msg = String.format(\"rest listen failed, address=%s:%d\",\n-          endpointObject.getHostOrIp(),\n-          endpointObject.getPort());\n+endpointObject.getHostOrIp(),\n+endpointObject.getPort());\n       LOGGER.error(msg, ar.cause());\n       startFuture.fail(ar.cause());\n     });\n@@ -131,19 +128,19 @@ public class RestServerVerticle extends AbstractVerticle {\n     if (endpointObject.isHttp2Enabled()) {\n       serverOptions.setUseAlpn(true);\n     }\n+\n     if (endpointObject.isSslEnabled()) {\n-      SSLOptionFactory factory =\n-          SSLOptionFactory.createSSLOptionFactory(SSL_KEY, null);\n+      SSLOptionFactory factory = SSLOptionFactory.createSSLOptionFactory(SSL_KEY, null);\n       SSLOption sslOption;\n       if (factory == null) {\n         sslOption = SSLOption.buildFromYaml(SSL_KEY);\n       } else {\n         sslOption = factory.createSSLOption();\n       }\n+\n       SSLCustom sslCustom = SSLCustom.createSSLCustom(sslOption.getSslCustomClass());\n       VertxTLSBuilder.buildNetServerOptions(sslOption, sslCustom, serverOptions);\n     }\n-\n     return serverOptions;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": null,
+            "diff": null
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

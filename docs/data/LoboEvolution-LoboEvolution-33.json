@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "33",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLPreElement extends HTMLElement {\n\t/**\n\t * Fixed width for content. See the width attribute definition in HTML 4.01.\n\t * This attribute is deprecated in HTML 4.01.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/33/HTMLPreElement.java\nindex 696af7c2c28..975fefe6a01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/33/HTMLPreElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLPreElement extends HTMLElement {\n-\t/**\n+/**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n \t * This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a int.\n \t */\n-\tint getWidth();\n+ int getWidth();\n \n \t/**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/33/HTMLPreElement.java\nindex 696af7c2c28..27b9b6f8ea6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/33/HTMLPreElement.java\n@@ -43,20 +43,20 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLPreElement extends HTMLElement {\n-\t/**\n-\t * Fixed width for content. See the width attribute definition in HTML 4.01.\n-\t * This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getWidth();\n-\n-\t/**\n-\t * Fixed width for content. See the width attribute definition in HTML 4.01.\n-\t * This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @param width a int.\n-\t */\n-\tvoid setWidth(int width);\n+    /**\n+     * Fixed width for content. See the width attribute definition in HTML 4.01.\n+     * This attribute is deprecated in HTML 4.01.\n+     *\n+     * @return a int.\n+     */\n+    int getWidth();\n+\n+    /**\n+     * Fixed width for content. See the width attribute definition in HTML 4.01.\n+     * This attribute is deprecated in HTML 4.01.\n+     *\n+     * @param width a int.\n+     */\n+    void setWidth(int width);\n \n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/33/HTMLPreElement.java\nindex 696af7c2c28..aa95addbc78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/33/HTMLPreElement.java\n@@ -42,21 +42,26 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLPreElement extends HTMLElement {\n-\t/**\n-\t * Fixed width for content. See the width attribute definition in HTML 4.01.\n-\t * This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @return a int.\n-\t */\n-\tint getWidth();\n-\n-\t/**\n-\t * Fixed width for content. See the width attribute definition in HTML 4.01.\n-\t * This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @param width a int.\n-\t */\n-\tvoid setWidth(int width);\n-\n-}\n+    /**\n+     * Fixed width for content. See the width attribute definition in HTML 4.01.\n+     * This attribute is deprecated in HTML 4.01.\n+     *\n+     * @return a int.\n+     */\n+\n+\n+    int getWidth();\n+\n+    /**\n+     * Fixed width for content. See the width attribute definition in HTML 4.01.\n+     * This attribute is deprecated in HTML 4.01.\n+     *\n+     * @param width a int.\n+     */\n+\n+\n+    void setWidth(int width);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/33/HTMLPreElement.java\nindex 696af7c2c28..975fefe6a01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/33/HTMLPreElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLPreElement extends HTMLElement {\n-\t/**\n+/**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n \t * This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a int.\n \t */\n-\tint getWidth();\n+ int getWidth();\n \n \t/**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/33/HTMLPreElement.java\nindex 696af7c2c28..8ca6260bbd6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/33/HTMLPreElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/33/HTMLPreElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLPreElement extends HTMLElement {\n-\t/**\n+    /**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n \t * This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a int.\n \t */\n-\tint getWidth();\n+ int getWidth();\n \n \t/**\n \t * Fixed width for content. See the width attribute definition in HTML 4.01.\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

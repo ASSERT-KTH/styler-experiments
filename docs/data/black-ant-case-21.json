@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "68",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Override\n    public void addViewControllers(ViewControllerRegistry registry){\n        registry.addViewController(\"/login\").setViewName(\"login\");\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/21/MyMVCConfig.java\nindex a65daf7c573..3a8afa07a25 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/21/MyMVCConfig.java\n@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n public class MyMVCConfig implements WebMvcConfigurer {\n \n     @Override\n-    public void addViewControllers(ViewControllerRegistry registry){\n+    public void addViewControllers(ViewControllerRegistry registry) {\n         registry.addViewController(\"/login\").setViewName(\"login\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/21/MyMVCConfig.java\nindex a65daf7c573..3a8afa07a25 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/21/MyMVCConfig.java\n@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n public class MyMVCConfig implements WebMvcConfigurer {\n \n     @Override\n-    public void addViewControllers(ViewControllerRegistry registry){\n+    public void addViewControllers(ViewControllerRegistry registry) {\n         registry.addViewController(\"/login\").setViewName(\"login\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/21/MyMVCConfig.java\nindex a65daf7c573..341589a19cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/21/MyMVCConfig.java\n@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n public class MyMVCConfig implements WebMvcConfigurer {\n \n     @Override\n-    public void addViewControllers(ViewControllerRegistry registry){\n+    public void addViewControllers(ViewControllerRegistry registry) {\n         registry.addViewController(\"/login\").setViewName(\"login\");\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/21/MyMVCConfig.java\nindex a65daf7c573..3a8afa07a25 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/21/MyMVCConfig.java\n@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n public class MyMVCConfig implements WebMvcConfigurer {\n \n     @Override\n-    public void addViewControllers(ViewControllerRegistry registry){\n+    public void addViewControllers(ViewControllerRegistry registry) {\n         registry.addViewController(\"/login\").setViewName(\"login\");\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/21/MyMVCConfig.java\nindex a65daf7c573..3a8afa07a25 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/21/MyMVCConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/21/MyMVCConfig.java\n@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;\n public class MyMVCConfig implements WebMvcConfigurer {\n \n     @Override\n-    public void addViewControllers(ViewControllerRegistry registry){\n+    public void addViewControllers(ViewControllerRegistry registry) {\n         registry.addViewController(\"/login\").setViewName(\"login\");\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "808",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * </pre>\n   */\n  com.google.protobuf.ByteString\n      getSinkNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'getSinkNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/808/GetSinkRequestOrBuilder.java\nindex 76bce80841a..89413e62176 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/808/GetSinkRequestOrBuilder.java\n@@ -16,6 +16,7 @@ public interface GetSinkRequestOrBuilder extends\n    * </pre>\n    */\n   java.lang.String getSinkName();\n+\n   /**\n    * <code>optional string sink_name = 1;</code>\n    *\n@@ -25,5 +26,5 @@ public interface GetSinkRequestOrBuilder extends\n    * </pre>\n    */\n   com.google.protobuf.ByteString\n-      getSinkNameBytes();\n+  getSinkNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/808/GetSinkRequestOrBuilder.java\nindex 76bce80841a..9797e4800e6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/808/GetSinkRequestOrBuilder.java\n@@ -16,7 +16,8 @@ public interface GetSinkRequestOrBuilder extends\n    * </pre>\n    */\n   java.lang.String getSinkName();\n-  /**\n+\n+/**\n    * <code>optional string sink_name = 1;</code>\n    *\n    * <pre>\n@@ -24,6 +25,5 @@ public interface GetSinkRequestOrBuilder extends\n    * Example: `\"projects/my-project-id/sinks/my-sink-id\"`.\n    * </pre>\n    */\n-  com.google.protobuf.ByteString\n-      getSinkNameBytes();\n-}\n+  com.google.protobuf.ByteString getSinkNameBytes();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "'getSinkNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/808/GetSinkRequestOrBuilder.java\nindex 76bce80841a..7d191cbfc31 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/808/GetSinkRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/808/GetSinkRequestOrBuilder.java\n@@ -25,5 +25,5 @@ public interface GetSinkRequestOrBuilder extends\n    * </pre>\n    */\n   com.google.protobuf.ByteString\n-      getSinkNameBytes();\n+  getSinkNameBytes();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

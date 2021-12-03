@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "490",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/490/NnzEdge.java\nindex f86607b8bcb..a7594011481 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/490/NnzEdge.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.graph.client.summary;\n \n import com.tencent.angel.graph.data.Node;\n@@ -27,34 +28,34 @@ import it.unimi.dsi.fastutil.objects.ObjectIterator;\n \n public class NnzEdge extends UnaryAggrFunc {\n \n-  public NnzEdge(int matrixId, int rowId) {\n-    super(matrixId, rowId);\n-  }\n-\n-  public NnzEdge() {\n-  }\n-\n-  @Override\n-  public double mergeInit() {\n-    return 0;\n-  }\n-\n-  @Override\n-  public double mergeOp(double a, double b) {\n-    return a + b;\n-  }\n-\n-  @Override\n-  public double processRow(ServerRow row) {\n-    LongElementStorage storage = ((ServerLongAnyRow) row).getStorage();\n-    ObjectIterator<Long2ObjectMap.Entry<IElement>> it = storage.iterator();\n-    long size = 0;\n-    while (it.hasNext()) {\n-      Node node = (Node) (it.next().getValue());\n-      if (node.getNeighbors() != null) {\n-        size += node.getNeighbors().length;\n-      }\n+    public NnzEdge(int matrixId, int rowId) {\n+        super(matrixId, rowId);\n+    }\n+\n+    public NnzEdge() {\n+    }\n+\n+    @Override\n+    public double mergeInit() {\n+        return 0;\n+    }\n+\n+    @Override\n+    public double mergeOp(double a, double b) {\n+        return a + b;\n+    }\n+\n+    @Override\n+    public double processRow(ServerRow row) {\n+        LongElementStorage storage = ((ServerLongAnyRow) row).getStorage();\n+        ObjectIterator<Long2ObjectMap.Entry<IElement>> it = storage.iterator();\n+        long size = 0;\n+        while (it.hasNext()) {\n+            Node node = (Node) (it.next().getValue());\n+            if (node.getNeighbors() != null) {\n+                size += node.getNeighbors().length;\n+            }\n+        }\n+        return size;\n     }\n-    return size;\n-  }\n }\n",
+            "diff_size": 32
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/490/NnzEdge.java\nindex f86607b8bcb..011794a740f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/490/NnzEdge.java\n@@ -57,4 +57,4 @@ public class NnzEdge extends UnaryAggrFunc {\n     }\n     return size;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/490/NnzEdge.java\nindex f86607b8bcb..a2b3e95aeed 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/490/NnzEdge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/490/NnzEdge.java\n@@ -31,8 +31,7 @@ public class NnzEdge extends UnaryAggrFunc {\n     super(matrixId, rowId);\n   }\n \n-  public NnzEdge() {\n-  }\n+  public NnzEdge() {}\n \n   @Override\n   public double mergeInit() {\n@@ -57,4 +56,5 @@ public class NnzEdge extends UnaryAggrFunc {\n     }\n     return size;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

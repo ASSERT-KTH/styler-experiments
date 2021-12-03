@@ -1,0 +1,104 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "11",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 176).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    private final CountDownLatch completedThreadCounter;\n\n    WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n\n        this.outputScraper = outputScraper;\n        this.readyThreadCounter = readyThreadCounter;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 228).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "11",
+                    "column": "56",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/11/WaitingWorker.java\nindex 4aee5cf89ac..e1dc99c756b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/11/WaitingWorker.java\n@@ -8,9 +8,7 @@ public class WaitingWorker implements Runnable {\n     private final List<String> outputScraper;\n     private final CountDownLatch readyThreadCounter;\n     private final CountDownLatch callingThreadBlocker;\n-    private final CountDownLatch completedThreadCounter;\n-\n-    WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n+    private final CountDownLatch completedThreadCounter;WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n \n         this.outputScraper = outputScraper;\n         this.readyThreadCounter = readyThreadCounter;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/11/WaitingWorker.java\nindex 4aee5cf89ac..0f63fad17ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/11/WaitingWorker.java\n@@ -10,7 +10,9 @@ public class WaitingWorker implements Runnable {\n     private final CountDownLatch callingThreadBlocker;\n     private final CountDownLatch completedThreadCounter;\n \n-    WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n+    WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter,\n+                  final CountDownLatch callingThreadBlocker,\n+                  CountDownLatch completedThreadCounter) {\n \n         this.outputScraper = outputScraper;\n         this.readyThreadCounter = readyThreadCounter;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 176).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/11/WaitingWorker.java\nindex 4aee5cf89ac..ddcd1635dfa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/11/WaitingWorker.java\n@@ -31,4 +31,4 @@ public class WaitingWorker implements Runnable {\n             completedThreadCounter.countDown();\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 176).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/11/WaitingWorker.java\nindex 4aee5cf89ac..e082bfff7d5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/11/WaitingWorker.java\n@@ -11,7 +11,6 @@ public class WaitingWorker implements Runnable {\n     private final CountDownLatch completedThreadCounter;\n \n     WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n-\n         this.outputScraper = outputScraper;\n         this.readyThreadCounter = readyThreadCounter;\n         this.callingThreadBlocker = callingThreadBlocker;\n@@ -22,6 +21,7 @@ public class WaitingWorker implements Runnable {\n     public void run() {\n         // Mark this thread as read / started\n         readyThreadCounter.countDown();\n+\n         try {\n             callingThreadBlocker.await();\n             outputScraper.add(\"Counted down\");\n@@ -31,4 +31,4 @@ public class WaitingWorker implements Runnable {\n             completedThreadCounter.countDown();\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 228).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "11",
+                    "column": "56",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/11/WaitingWorker.java\nindex 4aee5cf89ac..e1dc99c756b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/11/WaitingWorker.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/11/WaitingWorker.java\n@@ -8,9 +8,7 @@ public class WaitingWorker implements Runnable {\n     private final List<String> outputScraper;\n     private final CountDownLatch readyThreadCounter;\n     private final CountDownLatch callingThreadBlocker;\n-    private final CountDownLatch completedThreadCounter;\n-\n-    WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n+    private final CountDownLatch completedThreadCounter;WaitingWorker(final List<String> outputScraper, final CountDownLatch readyThreadCounter, final CountDownLatch callingThreadBlocker, CountDownLatch completedThreadCounter) {\n \n         this.outputScraper = outputScraper;\n         this.readyThreadCounter = readyThreadCounter;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

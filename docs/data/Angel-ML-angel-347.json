@@ -1,0 +1,91 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "347",
+    "information": {
+        "violations": [
+            {
+                "line": "4",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic class AngelGraphConf {\n  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n  public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/347/AngelGraphConf.java\nindex f4969fb9e28..00b18965e5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/347/AngelGraphConf.java\n@@ -1,6 +1,6 @@\n package com.tencent.angel.graph.common.conf;\n \n public class AngelGraphConf {\n-  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n-  public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n+public staticfinalString ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n+  public static final static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/347/AngelGraphConf.java\nindex f4969fb9e28..67b354eb1ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/347/AngelGraphConf.java\n@@ -1,6 +1,7 @@\n package com.tencent.angel.graph.common.conf;\n \n public class AngelGraphConf {\n-  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n-  public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n+    public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY =\n+            \"angel.graph.use.bytes.for.readonly\";\n+    public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "4",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/347/AngelGraphConf.java\nindex f4969fb9e28..56e79c54d84 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/347/AngelGraphConf.java\n@@ -3,4 +3,4 @@ package com.tencent.angel.graph.common.conf;\n public class AngelGraphConf {\n   public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n   public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "7",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/347/AngelGraphConf.java\nindex f4969fb9e28..147b8c0c4d2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/347/AngelGraphConf.java\n@@ -1,6 +1,11 @@\n package com.tencent.angel.graph.common.conf;\n \n+\n+\n public class AngelGraphConf {\n+\n   public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n+\n   public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "4",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 183).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "4",
+                    "column": "183",
+                    "severity": "error",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/347/AngelGraphConf.java\nindex f4969fb9e28..b82c3e85dc8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/347/AngelGraphConf.java\n@@ -1,6 +1,5 @@\n package com.tencent.angel.graph.common.conf;\n \n public class AngelGraphConf {\n-  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n-  public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n+  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\" ; public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/347/AngelGraphConf.java\nindex f4969fb9e28..00b18965e5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/347/AngelGraphConf.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/347/AngelGraphConf.java\n@@ -1,6 +1,6 @@\n package com.tencent.angel.graph.common.conf;\n \n public class AngelGraphConf {\n-  public static final String ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n-  public static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n+public staticfinalString ANGEL_GRAPH_USE_BYTES_FOR_READONLY = \"angel.graph.use.bytes.for.readonly\";\n+  public static final static final Boolean DEFAULT_ANGEL_GRAPH_USE_BYTES_FOR_READONLY = true;\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "108",
+    "information": {
+        "violations": [
+            {
+                "line": "63",
+                "column": "40",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    private void loadSystemProperties(){\n        Properties propertiesSys = System.getProperties();\n        for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n            String key = enumeration.nextElement();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/108/PropertiesResolver.java\nindex 685c67845f6..da5d52ee4da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/108/PropertiesResolver.java\n@@ -60,7 +60,7 @@ public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n         }\n     }\n \n-    private void loadSystemProperties(){\n+    private void loadSystemProperties() {\n         Properties propertiesSys = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/108/PropertiesResolver.java\nindex 685c67845f6..e5b239ba0fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/108/PropertiesResolver.java\n@@ -35,7 +35,7 @@ import java.util.Properties;\n  * Alternative to PropertyPlaceholderConfigurer that allows to declare multiple beans which are backed by single properties registry\n  */\n public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n-    \n+\n     private PropertiesResolverRegistry registry;\n \n     protected String resolvePlaceholder(String placeholder, Properties props) {\n@@ -60,7 +60,7 @@ public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n         }\n     }\n \n-    private void loadSystemProperties(){\n+    private void loadSystemProperties() {\n         Properties propertiesSys = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/108/PropertiesResolver.java\nindex 685c67845f6..4713f473f49 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/108/PropertiesResolver.java\n@@ -25,7 +25,6 @@ import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;\n import org.springframework.core.io.Resource;\n-\n import java.io.IOException;\n import java.util.Enumeration;\n import java.util.List;\n@@ -34,10 +33,11 @@ import java.util.Properties;\n /**\n  * Alternative to PropertyPlaceholderConfigurer that allows to declare multiple beans which are backed by single properties registry\n  */\n+\n+\n public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n-    \n-    private PropertiesResolverRegistry registry;\n \n+    private PropertiesResolverRegistry registry;\n     protected String resolvePlaceholder(String placeholder, Properties props) {\n         return registry.getProperty(placeholder);\n     }\n@@ -60,7 +60,7 @@ public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n         }\n     }\n \n-    private void loadSystemProperties(){\n+    private void loadSystemProperties() {\n         Properties propertiesSys = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/108/PropertiesResolver.java\nindex 685c67845f6..da5d52ee4da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/108/PropertiesResolver.java\n@@ -60,7 +60,7 @@ public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n         }\n     }\n \n-    private void loadSystemProperties(){\n+    private void loadSystemProperties() {\n         Properties propertiesSys = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/108/PropertiesResolver.java\nindex 685c67845f6..da5d52ee4da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/108/PropertiesResolver.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/108/PropertiesResolver.java\n@@ -60,7 +60,7 @@ public class PropertiesResolver extends PropertyPlaceholderConfigurer {\n         }\n     }\n \n-    private void loadSystemProperties(){\n+    private void loadSystemProperties() {\n         Properties propertiesSys = System.getProperties();\n         for (Enumeration<String> enumeration = (Enumeration<String>) propertiesSys.propertyNames(); enumeration.hasMoreElements(); ) {\n             String key = enumeration.nextElement();\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

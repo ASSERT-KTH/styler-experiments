@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "398",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGForeignObjectElement\n\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n\t/**\n\t * <p>getX.</p>\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/398/SVGForeignObjectElement.java\nindex 374a5f66a32..a57e3ff9276 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/398/SVGForeignObjectElement.java\n@@ -26,7 +26,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGForeignObjectElement\n-\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n+        extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n \t/**\n \t * <p>getX.</p>\n \t *\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/398/SVGForeignObjectElement.java\nindex 374a5f66a32..85c14e997a1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/398/SVGForeignObjectElement.java\n@@ -17,41 +17,39 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGForeignObjectElement interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGForeignObjectElement\n-\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n-\t/**\n-\t * <p>getX.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getX();\n+    extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n+    /**\n+     * <p>getX.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getX();\n \n-\t/**\n-\t * <p>getY.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getY();\n+    /**\n+     * <p>getY.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getY();\n \n-\t/**\n-\t * <p>getWidth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getWidth();\n+    /**\n+     * <p>getWidth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getWidth();\n \n-\t/**\n-\t * <p>getHeight.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getHeight();\n+    /**\n+     * <p>getHeight.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+    SVGAnimatedLength getHeight();\n }\n",
+            "diff_size": 29
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/398/SVGForeignObjectElement.java\nindex 374a5f66a32..5894c0dd92e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/398/SVGForeignObjectElement.java\n@@ -25,33 +25,42 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n-public interface SVGForeignObjectElement\n-\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n-\t/**\n-\t * <p>getX.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getX();\n-\n-\t/**\n-\t * <p>getY.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getY();\n-\n-\t/**\n-\t * <p>getWidth.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getWidth();\n-\n-\t/**\n-\t * <p>getHeight.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n-\t */\n-\tSVGAnimatedLength getHeight();\n-}\n+\n+\n+public interface SVGForeignObjectElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n+    /**\n+     * <p>getX.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getX();\n+\n+    /**\n+     * <p>getY.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getY();\n+\n+    /**\n+     * <p>getWidth.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getWidth();\n+\n+    /**\n+     * <p>getHeight.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGAnimatedLength} object.\n+     */\n+\n+\n+    SVGAnimatedLength getHeight();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 39
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/398/SVGForeignObjectElement.java\nindex 374a5f66a32..a57e3ff9276 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/398/SVGForeignObjectElement.java\n@@ -26,7 +26,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGForeignObjectElement\n-\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n+        extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n \t/**\n \t * <p>getX.</p>\n \t *\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/398/SVGForeignObjectElement.java\nindex 374a5f66a32..bec6444ad4d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/398/SVGForeignObjectElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/398/SVGForeignObjectElement.java\n@@ -26,7 +26,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGForeignObjectElement\n-\t\textends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n+extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable {\n \t/**\n \t * <p>getX.</p>\n \t *\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

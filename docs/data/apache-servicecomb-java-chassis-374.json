@@ -1,0 +1,106 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "374",
+    "information": {
+        "violations": [
+            {
+                "line": "104",
+                "column": "118",
+                "severity": "warning",
+                "message": "'>' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  private void ensureInvocationNotTimeout(Invocation invocation) {\n    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n        invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n      if (invocation.getLocalContext(Const.CONTEXT_TIMED_OUT) != null) {\n        // already timed out, do not throw exception again",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/374/InvocationTimeoutBootListener.java\nindex 86fed1914ce..2c781ff95ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/374/InvocationTimeoutBootListener.java\n@@ -101,8 +101,8 @@ public class InvocationTimeoutBootListener implements BootListener {\n    *  after timeout.\n    */\n   private void ensureInvocationNotTimeout(Invocation invocation) {\n-    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n-        invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n+    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation)\n+        > invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n       if (invocation.getLocalContext(Const.CONTEXT_TIMED_OUT) != null) {\n         // already timed out, do not throw exception again\n         return;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "104",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "'>' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/374/InvocationTimeoutBootListener.java\nindex 86fed1914ce..6811e2c02de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/374/InvocationTimeoutBootListener.java\n@@ -98,7 +98,7 @@ public class InvocationTimeoutBootListener implements BootListener {\n    * check if invocation is timeout.\n    *\n    * @throws InvocationException if timeout, throw an exception. Will not throw exception twice if this method called\n-   *  after timeout.\n+   *                             after timeout.\n    */\n   private void ensureInvocationNotTimeout(Invocation invocation) {\n     if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "104",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/374/InvocationTimeoutBootListener.java\nindex 86fed1914ce..9bc0fb03dcb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/374/InvocationTimeoutBootListener.java\n@@ -101,8 +101,7 @@ public class InvocationTimeoutBootListener implements BootListener {\n    *  after timeout.\n    */\n   private void ensureInvocationNotTimeout(Invocation invocation) {\n-    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n-        invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n+    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) > invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n       if (invocation.getLocalContext(Const.CONTEXT_TIMED_OUT) != null) {\n         // already timed out, do not throw exception again\n         return;\n@@ -148,4 +147,4 @@ public class InvocationTimeoutBootListener implements BootListener {\n     ensureInvocationNotTimeout(invocation);\n     invocation.addContext(Const.CONTEXT_TIME_ELAPSED, Long.toString(calculateElapsedTime(invocation)));\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "106",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 148).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "107",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "119",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/374/InvocationTimeoutBootListener.java\nindex 86fed1914ce..c903fd43796 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/374/InvocationTimeoutBootListener.java\n@@ -37,7 +37,6 @@ import org.apache.servicecomb.swagger.invocation.exception.InvocationException;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n import org.springframework.stereotype.Component;\n-\n import com.google.common.eventbus.Subscribe;\n import com.netflix.config.DynamicPropertyFactory;\n \n@@ -49,7 +48,8 @@ public class InvocationTimeoutBootListener implements BootListener {\n   public static final String ENABLE_TIMEOUT_CHECK = \"servicecomb.invocation.enableTimeoutCheck\";\n \n   public static boolean timeoutCheckEnabled() {\n-    return DynamicPropertyFactory.getInstance().getBooleanProperty(ENABLE_TIMEOUT_CHECK, true).get();\n+    return DynamicPropertyFactory.getInstance().getBooleanProperty(ENABLE_TIMEOUT_CHECK, true)\n+                                               .get();\n   }\n \n   @Override\n@@ -100,21 +100,23 @@ public class InvocationTimeoutBootListener implements BootListener {\n    * @throws InvocationException if timeout, throw an exception. Will not throw exception twice if this method called\n    *  after timeout.\n    */\n+\n   private void ensureInvocationNotTimeout(Invocation invocation) {\n-    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n-        invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n+    if (invocation.getOperationMeta().getConfig()\n+                                     .getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) > invocation.getOperationMeta().getConfig()\n+                                                                                                                                        .getNanoInvocationTimeout()) {\n       if (invocation.getLocalContext(Const.CONTEXT_TIMED_OUT) != null) {\n         // already timed out, do not throw exception again\n         return;\n       }\n+\n       invocation.addLocalContext(Const.CONTEXT_TIMED_OUT, true);\n       throw new InvocationException(REQUEST_TIMEOUT, ExceptionCodes.INVOCATION_TIMEOUT, \"Invocation Timeout.\");\n     }\n   }\n \n   private long calculateElapsedTime(Invocation invocation) {\n-    return System.nanoTime() - (long) invocation.getLocalContext(Const.CONTEXT_TIME_CURRENT)\n-        + (long) invocation.getLocalContext(Const.CONTEXT_TIME_ELAPSED);\n+    return System.nanoTime() - (long) invocation.getLocalContext(Const.CONTEXT_TIME_CURRENT) + (long) invocation.getLocalContext(Const.CONTEXT_TIME_ELAPSED);\n   }\n \n   @Subscribe\n@@ -148,4 +150,4 @@ public class InvocationTimeoutBootListener implements BootListener {\n     ensureInvocationNotTimeout(invocation);\n     invocation.addContext(Const.CONTEXT_TIME_ELAPSED, Long.toString(calculateElapsedTime(invocation)));\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/374/InvocationTimeoutBootListener.java\nindex 86fed1914ce..2c781ff95ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/374/InvocationTimeoutBootListener.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/374/InvocationTimeoutBootListener.java\n@@ -101,8 +101,8 @@ public class InvocationTimeoutBootListener implements BootListener {\n    *  after timeout.\n    */\n   private void ensureInvocationNotTimeout(Invocation invocation) {\n-    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation) >\n-        invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n+    if (invocation.getOperationMeta().getConfig().getNanoInvocationTimeout() > 0 && calculateElapsedTime(invocation)\n+        > invocation.getOperationMeta().getConfig().getNanoInvocationTimeout()) {\n       if (invocation.getLocalContext(Const.CONTEXT_TIMED_OUT) != null) {\n         // already timed out, do not throw exception again\n         return;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "104",
+                    "column": "118",
+                    "severity": "warning",
+                    "message": "'>' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

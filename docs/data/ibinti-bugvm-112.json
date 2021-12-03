@@ -1,0 +1,63 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "112",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "1",
+                "severity": "error",
+                "message": "'{' at column 1 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic abstract class PLocalName extends Node\n{\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/112/PLocalName.java\nindex 047c9009aa0..b7b54dd248f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/112/PLocalName.java\n@@ -2,6 +2,5 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n+public abstract class PLocalName extends Node {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/112/PLocalName.java\nindex 047c9009aa0..b7b54dd248f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/112/PLocalName.java\n@@ -2,6 +2,5 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n+public abstract class PLocalName extends Node {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/112/PLocalName.java\nindex 047c9009aa0..e487fa344e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/112/PLocalName.java\n@@ -2,6 +2,5 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n-}\n+public abstract class PLocalName extends Node {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/112/PLocalName.java\nindex 047c9009aa0..e6ed94de02b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/112/PLocalName.java\n@@ -2,6 +2,6 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n-}\n+\n+public abstract class PLocalName extends Node {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/112/PLocalName.java\nindex 047c9009aa0..b7b54dd248f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/112/PLocalName.java\n@@ -2,6 +2,5 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n+public abstract class PLocalName extends Node {\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/112/PLocalName.java\nindex 047c9009aa0..b7b54dd248f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/112/PLocalName.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/112/PLocalName.java\n@@ -2,6 +2,5 @@\n \n package soot.jimple.parser.node;\n \n-public abstract class PLocalName extends Node\n-{\n+public abstract class PLocalName extends Node {\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

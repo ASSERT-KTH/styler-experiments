@@ -1,0 +1,96 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "135",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/135/BufferedBitSetWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/135/BufferedBitSetWriter.java\nindex 6345f251f15..8ff742168e9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/135/BufferedBitSetWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/135/BufferedBitSetWriter.java\n@@ -19,57 +19,57 @@ package com.tencent.angel.spark.ml.tree.util;\n \n public class BufferedBitSetWriter {\n \n-  //private final SerializableBuffer bytes;\n-  //private final ByteBuffer bytes;\n-  private final byte[] bytes;\n-  private int writeIndex;\n-  private int writeOffset;\n-  private int writeBuffer;\n+    //private final SerializableBuffer bytes;\n+    //private final ByteBuffer bytes;\n+    private final byte[] bytes;\n+    private int writeIndex;\n+    private int writeOffset;\n+    private int writeBuffer;\n \n-  public BufferedBitSetWriter(int capacity) {\n-    int numBytes = (int) Math.ceil(1.0 * capacity / 8);\n-    //this.bytes = ByteBuffer.allocate(numBytes);\n-    this.bytes = new byte[numBytes];\n-  }\n-\n-  //public BufferedBitSetWriter(ByteBuffer bytes) {\n-  //    this.bytes = bytes;\n-  //}\n+    public BufferedBitSetWriter(int capacity) {\n+        int numBytes = (int) Math.ceil(1.0 * capacity / 8);\n+        //this.bytes = ByteBuffer.allocate(numBytes);\n+        this.bytes = new byte[numBytes];\n+    }\n \n-  public BufferedBitSetWriter(byte[] bytes) {\n-    this.bytes = bytes;\n-  }\n+    //public BufferedBitSetWriter(ByteBuffer bytes) {\n+    //    this.bytes = bytes;\n+    //}\n \n-  public void write(boolean bit) {\n-    writeBuffer = writeBuffer << 1;\n-    if (bit) {\n-      writeBuffer |= 1;\n+    public BufferedBitSetWriter(byte[] bytes) {\n+        this.bytes = bytes;\n     }\n-    if (++writeOffset == 8) {\n-      writeToBuffer();\n+\n+    public void write(boolean bit) {\n+        writeBuffer = writeBuffer << 1;\n+        if (bit) {\n+            writeBuffer |= 1;\n+        }\n+        if (++writeOffset == 8) {\n+            writeToBuffer();\n+        }\n     }\n-  }\n \n-  private void writeToBuffer() {\n-    //bytes.put(writeIndex++, (byte) writeBuffer);\n-    bytes[writeIndex++] = (byte) writeBuffer;\n-    writeOffset = 0;\n-    writeBuffer = 0;\n-  }\n+    private void writeToBuffer() {\n+        //bytes.put(writeIndex++, (byte) writeBuffer);\n+        bytes[writeIndex++] = (byte) writeBuffer;\n+        writeOffset = 0;\n+        writeBuffer = 0;\n+    }\n \n-  public void complete() {\n-    if (writeOffset != 0) {\n-      writeBuffer <<= 8 - writeOffset;\n-      writeToBuffer();\n+    public void complete() {\n+        if (writeOffset != 0) {\n+            writeBuffer <<= 8 - writeOffset;\n+            writeToBuffer();\n+        }\n     }\n-  }\n \n-  //public ByteBuffer getBytes() {\n-  //    return bytes;\n-  //}\n+    //public ByteBuffer getBytes() {\n+    //    return bytes;\n+    //}\n \n \n-  public byte[] getBytes() {\n-    return bytes;\n-  }\n+    public byte[] getBytes() {\n+        return bytes;\n+    }\n }\n",
+            "diff_size": 50
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/135/BufferedBitSetWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/135/BufferedBitSetWriter.java\nindex 6345f251f15..8ec8586f86f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/135/BufferedBitSetWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/135/BufferedBitSetWriter.java\n@@ -17,10 +17,13 @@\n \n package com.tencent.angel.spark.ml.tree.util;\n \n+\n+\n public class BufferedBitSetWriter {\n \n   //private final SerializableBuffer bytes;\n   //private final ByteBuffer bytes;\n+\n   private final byte[] bytes;\n   private int writeIndex;\n   private int writeOffset;\n@@ -45,6 +48,7 @@ public class BufferedBitSetWriter {\n     if (bit) {\n       writeBuffer |= 1;\n     }\n+\n     if (++writeOffset == 8) {\n       writeToBuffer();\n     }\n@@ -68,8 +72,7 @@ public class BufferedBitSetWriter {\n   //    return bytes;\n   //}\n \n-\n   public byte[] getBytes() {\n     return bytes;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

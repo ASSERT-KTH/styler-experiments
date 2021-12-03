@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1047",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1047/TFloatMatrix.java\nindex 0db82a2c280..07a89e03b89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1047/TFloatMatrix.java\n@@ -25,59 +25,59 @@ import com.tencent.angel.ml.math.TVector;\n  */\n public abstract class TFloatMatrix extends TMatrix {\n \n-  /**\n-   * Create a new float matrix.\n-   *\n-   * @param row the row\n-   * @param col the col\n-   */\n-  public TFloatMatrix(int row, int col) {\n-    super(row, col);\n-  }\n+    /**\n+     * Create a new float matrix.\n+     *\n+     * @param row the row\n+     * @param col the col\n+     */\n+    public TFloatMatrix(int row, int col) {\n+        super(row, col);\n+    }\n \n-  /**\n-   * Increases specified element by value.\n-   *\n-   * @param rowId the row id\n-   * @param colId the col id\n-   * @param value the value\n-   */\n-  public abstract void inc(int rowId, int colId, float value);\n+    /**\n+     * Increases specified element by value.\n+     *\n+     * @param rowId the row id\n+     * @param colId the col id\n+     * @param value the value\n+     */\n+    public abstract void inc(int rowId, int colId, float value);\n \n-  /**\n-   * Plus by other matrix.\n-   *\n-   * @param other the other\n-   */\n-  public abstract void plusBy(TMatrix other);\n+    /**\n+     * Plus by other matrix.\n+     *\n+     * @param other the other\n+     */\n+    public abstract void plusBy(TMatrix other);\n \n-  /**\n-   * Plus by other vector\n-   *\n-   * @param other the other\n-   */\n-  public abstract void plusBy(TVector other);\n+    /**\n+     * Plus by other vector\n+     *\n+     * @param other the other\n+     */\n+    public abstract void plusBy(TVector other);\n \n-  /**\n-   * Get specified value.\n-   *\n-   * @param rowId the row id\n-   * @param colId the col id\n-   * @return the value\n-   */\n-  public abstract float get(int rowId, int colId);\n+    /**\n+     * Get specified value.\n+     *\n+     * @param rowId the row id\n+     * @param colId the col id\n+     * @return the value\n+     */\n+    public abstract float get(int rowId, int colId);\n \n-  /**\n-   * Gets specified vector.\n-   *\n-   * @param rowId the row id\n-   * @return the vector\n-   */\n-  public abstract TFloatVector getTFloatVector(int rowId);\n+    /**\n+     * Gets specified vector.\n+     *\n+     * @param rowId the row id\n+     * @return the vector\n+     */\n+    public abstract TFloatVector getTFloatVector(int rowId);\n \n-  @Override\n-  public TVector getTVector(int rowId) {\n-    return getTFloatVector(rowId);\n-  }\n+    @Override\n+    public TVector getTVector(int rowId) {\n+        return getTFloatVector(rowId);\n+    }\n \n }\n",
+            "diff_size": 48
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1047/TFloatMatrix.java\nindex 0db82a2c280..ebdea695f27 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1047/TFloatMatrix.java\n@@ -80,4 +80,4 @@ public abstract class TFloatMatrix extends TMatrix {\n     return getTFloatVector(rowId);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1047/TFloatMatrix.java\nindex 0db82a2c280..3f0ce3a5475 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1047/TFloatMatrix.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1047/TFloatMatrix.java\n@@ -23,6 +23,7 @@ import com.tencent.angel.ml.math.TVector;\n /**\n  * Created by leleyu on 2016/2/17.\n  */\n+\n public abstract class TFloatMatrix extends TMatrix {\n \n   /**\n@@ -31,6 +32,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    * @param row the row\n    * @param col the col\n    */\n+\n   public TFloatMatrix(int row, int col) {\n     super(row, col);\n   }\n@@ -42,6 +44,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    * @param colId the col id\n    * @param value the value\n    */\n+\n   public abstract void inc(int rowId, int colId, float value);\n \n   /**\n@@ -49,6 +52,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    *\n    * @param other the other\n    */\n+\n   public abstract void plusBy(TMatrix other);\n \n   /**\n@@ -56,6 +60,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    *\n    * @param other the other\n    */\n+\n   public abstract void plusBy(TVector other);\n \n   /**\n@@ -65,6 +70,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    * @param colId the col id\n    * @return the value\n    */\n+\n   public abstract float get(int rowId, int colId);\n \n   /**\n@@ -73,6 +79,7 @@ public abstract class TFloatMatrix extends TMatrix {\n    * @param rowId the row id\n    * @return the vector\n    */\n+\n   public abstract TFloatVector getTFloatVector(int rowId);\n \n   @Override\n@@ -80,4 +87,4 @@ public abstract class TFloatMatrix extends TMatrix {\n     return getTFloatVector(rowId);\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "HuygensING-timbuctoo",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "259",
+                "severity": "error",
+                "message": "'catch' child has incorrect indentation level 10, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "          );\n        } catch (\n          PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n          throw new DataStoreCreationException(e);\n        }\n      }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/21/DataSetRepository.java\nindex c47844b41f2..3533550eeda 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/21/DataSetRepository.java\n@@ -255,8 +255,7 @@ public class DataSetRepository {\n               () -> onUpdated.accept(dataSet.getCombinedId())\n             )\n           );\n-        } catch (\n-          PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n+        } catch (PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n           throw new DataStoreCreationException(e);\n         }\n       }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "259",
+                    "severity": "error",
+                    "message": "'catch' child has incorrect indentation level 10, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/checkstyle_idea/21/DataSetRepository.java\nindex c47844b41f2..c6d9f3b8d93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/checkstyle_idea/21/DataSetRepository.java\n@@ -274,7 +274,7 @@ public class DataSetRepository {\n       ownerId, dataSetName);\n     try {\n       if (dataSet.isPresent() &&\n-        permissionFetcher.getPermissions(user,dataSet.get().getMetadata()).contains(Permission.ADMIN)) {\n+        permissionFetcher.getPermissions(user, dataSet.get().getMetadata()).contains(Permission.ADMIN)) {\n         DataSetMetaData dataSetMetaData = dataSet.get().getMetadata();\n \n         dataSetMetaData.publish();\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "259",
+                    "severity": "error",
+                    "message": "'catch' child has incorrect indentation level 10, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "259",
+                    "column": "113",
+                    "severity": "error",
+                    "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/random/files-repaired/21/DataSetRepository.java\nindex c47844b41f2..41a3039e356 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/random/files-repaired/21/DataSetRepository.java\n@@ -256,7 +256,7 @@ public class DataSetRepository {\n             )\n           );\n         } catch (\n-          PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n+          PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e ){\n           throw new DataStoreCreationException(e);\n         }\n       }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/21/DataSetRepository.java\nindex c47844b41f2..3533550eeda 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/21/DataSetRepository.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/21/DataSetRepository.java\n@@ -255,8 +255,7 @@ public class DataSetRepository {\n               () -> onUpdated.accept(dataSet.getCombinedId())\n             )\n           );\n-        } catch (\n-          PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n+        } catch (PermissionFetchingException | AuthorizationCreationException | IOException | ResourceSyncException e) {\n           throw new DataStoreCreationException(e);\n         }\n       }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

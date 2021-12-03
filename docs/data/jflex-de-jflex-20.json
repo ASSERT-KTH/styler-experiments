@@ -1,0 +1,70 @@
+{
+    "project_name": "jflex-de-jflex",
+    "violation_id": "20",
+    "information": {
+        "violations": [
+            {
+                "line": "9",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *                                                                         *\n * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\npackage de.jflex.plugin.maven;\n\nimport java.io.File;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/jflex-de-jflex/styler/05_predictions/final/files-repaired/20/ClassInfo.java\nindex 67620211c75..2da42ac39fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/jflex-de-jflex/styler/05_predictions/final/files-repaired/20/ClassInfo.java\n@@ -6,6 +6,7 @@\n  * License: BSD                                                            *\n  *                                                                         *\n  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\n+\n package de.jflex.plugin.maven;\n \n import java.io.File;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/checkstyle_idea/20/ClassInfo.java\nindex 67620211c75..2da42ac39fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/checkstyle_idea/20/ClassInfo.java\n@@ -6,6 +6,7 @@\n  * License: BSD                                                            *\n  *                                                                         *\n  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\n+\n package de.jflex.plugin.maven;\n \n import java.io.File;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/naturalize/20/ClassInfo.java\nindex 67620211c75..6379505e2b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/naturalize/20/ClassInfo.java\n@@ -6,6 +6,7 @@\n  * License: BSD                                                            *\n  *                                                                         *\n  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\n+\n package de.jflex.plugin.maven;\n \n import java.io.File;\n@@ -31,4 +32,4 @@ class ClassInfo {\n     }\n     return packageDir + className + \".java\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/codebuff/20/ClassInfo.java\nindex 67620211c75..a447dceaf93 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/codebuff/20/ClassInfo.java\n@@ -10,7 +10,9 @@ package de.jflex.plugin.maven;\n \n import java.io.File;\n \n+\n class ClassInfo {\n+\n   String className = null;\n   String packageName = null;\n \n@@ -26,9 +28,10 @@ class ClassInfo {\n     if (packageName != null) {\n       packageDir += packageName.replace('.', File.separatorChar);\n     }\n+\n     if (packageDir.length() > 0) {\n       packageDir += File.separatorChar;\n     }\n     return packageDir + className + \".java\";\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/random/files-repaired/20/ClassInfo.java\nindex 67620211c75..2da42ac39fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/random/files-repaired/20/ClassInfo.java\n@@ -6,6 +6,7 @@\n  * License: BSD                                                            *\n  *                                                                         *\n  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\n+\n package de.jflex.plugin.maven;\n \n import java.io.File;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/three_grams/files-repaired/20/ClassInfo.java\nindex 67620211c75..2da42ac39fc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/violations/20/ClassInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/jflex-de-jflex/styler/05_predictions/three_grams/files-repaired/20/ClassInfo.java\n@@ -6,6 +6,7 @@\n  * License: BSD                                                            *\n  *                                                                         *\n  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */\n+\n package de.jflex.plugin.maven;\n \n import java.io.File;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

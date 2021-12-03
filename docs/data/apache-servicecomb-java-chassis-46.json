@@ -1,0 +1,128 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "46",
+    "information": {
+        "violations": [
+            {
+                "line": "59",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 124).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  public static final String SERVER_LIST_FILTERS = \"cse.loadbalance.serverListFilters\";\n\n  //Class name of each filter: e.g cse.loadbalance.serverListFilter.a.className=org.apache.servicecomb.MyServerListFilterExt\n  public static final String SERVER_LIST_FILTER_CLASS_HOLDER = \"cse.loadbalance.serverListFilter.%s.className\";\n\n  //Property of the class: e.g cse.loadbalance.serverListFilter.a.myproperty=sample",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "58",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/46/Configuration.java\nindex b3abd2a3986..01094db54d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/46/Configuration.java\n@@ -25,7 +25,6 @@ import com.netflix.config.DynamicPropertyFactory;\n \n /**\n  * configuration items\n- *\n  */\n public final class Configuration {\n   //// 2.1 configuration items\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/46/Configuration.java\nindex b3abd2a3986..22e2f3d1496 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/46/Configuration.java\n@@ -273,4 +273,4 @@ public final class Configuration {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "62",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "85",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "149",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "164",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "263",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 195).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/46/Configuration.java\nindex b3abd2a3986..1e27935595e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/46/Configuration.java\n@@ -18,15 +18,14 @@\n package org.apache.servicecomb.loadbalance;\n \n import java.util.Map;\n-\n import org.apache.servicecomb.serviceregistry.config.ConfigurePropertyUtils;\n-\n import com.netflix.config.DynamicPropertyFactory;\n \n /**\n  * configuration items\n  *\n  */\n+\n public final class Configuration {\n   //// 2.1 configuration items\n   public static final String PROP_ROOT = \"cse.loadbalance.\";\n@@ -36,9 +35,11 @@ public final class Configuration {\n   public static final String PROP_RULE_STRATEGY_NAME = \"strategy.name\";\n \n   // 2.0 configuration items\n+\n   public static final String PROP_ROOT_20 = \"ribbon.\";\n \n   // retry configurations\n+\n   public static final String PROP_RETRY_HANDLER = \"retryHandler\";\n \n   public static final String PROP_RETRY_ENABLED = \"retryEnabled\";\n@@ -48,18 +49,22 @@ public final class Configuration {\n   public static final String PROP_RETRY_ONSAME = \"retryOnSame\";\n \n   // SessionStickinessRule configruation\n+\n   public static final String SESSION_TIMEOUT_IN_SECONDS = \"SessionStickinessRule.sessionTimeoutInSeconds\";\n \n   public static final String SUCCESSIVE_FAILED_TIMES = \"SessionStickinessRule.successiveFailedTimes\";\n \n   // Begin: ServerListFilters configurations\n   //Enabled filter lists, e.g cse.loadbalance.serverListFilters=a,b,c\n+\n   public static final String SERVER_LIST_FILTERS = \"cse.loadbalance.serverListFilters\";\n \n   //Class name of each filter: e.g cse.loadbalance.serverListFilter.a.className=org.apache.servicecomb.MyServerListFilterExt\n+\n   public static final String SERVER_LIST_FILTER_CLASS_HOLDER = \"cse.loadbalance.serverListFilter.%s.className\";\n \n   //Property of the class: e.g cse.loadbalance.serverListFilter.a.myproperty=sample\n+\n   public static final String SERVER_LIST_FILTER_PROPERTY_HOLDER = \"cse.loadbalance.serverListFilter.%s.%s\";\n   //End: ServerListFilters configurations\n \n@@ -77,8 +82,7 @@ public final class Configuration {\n \n   public static final String FILTER_CONTINUOUS_FAILURE_THRESHOLD = \"continuousFailureThreshold\";\n \n-  public static final String TRANSACTIONCONTROL_OPTIONS_PREFIX_PATTERN =\n-      \"cse.loadbalance.%s.transactionControl.options\";\n+  public static final String TRANSACTIONCONTROL_OPTIONS_PREFIX_PATTERN = \"cse.loadbalance.%s.transactionControl.options\";\n \n   public static final String TRANSACTIONCONTROL_POLICY_KEY_PATTERN = \"cse.loadbalance.%s.transactionControl.policy\";\n \n@@ -89,24 +93,24 @@ public final class Configuration {\n \n   public String getPolicy(String microservice) {\n     return getStringProperty(null,\n-        PROP_ROOT + microservice + \".\" + PROP_POLICY,\n-        PROP_ROOT_20 + microservice + \".\" + PROP_POLICY,\n-        PROP_ROOT + PROP_POLICY,\n-        PROP_ROOT_20 + PROP_POLICY);\n+PROP_ROOT + microservice + \".\" + PROP_POLICY,\n+PROP_ROOT_20 + microservice + \".\" + PROP_POLICY,\n+PROP_ROOT + PROP_POLICY,\n+PROP_ROOT_20 + PROP_POLICY);\n   }\n \n   public String getRuleStrategyName(String microservice) {\n     return getStringProperty(null,\n-        PROP_ROOT + microservice + \".\" + PROP_RULE_STRATEGY_NAME,\n-        PROP_ROOT + PROP_RULE_STRATEGY_NAME);\n+PROP_ROOT + microservice + \".\" + PROP_RULE_STRATEGY_NAME,\n+PROP_ROOT + PROP_RULE_STRATEGY_NAME);\n   }\n \n   public int getSessionTimeoutInSeconds(String microservice) {\n     final int defaultValue = 30;\n     // do not support MicroService level now\n     String p = getStringProperty(\"30\",\n-        PROP_ROOT + microservice + \".\" + SESSION_TIMEOUT_IN_SECONDS,\n-        PROP_ROOT + SESSION_TIMEOUT_IN_SECONDS);\n+PROP_ROOT + microservice + \".\" + SESSION_TIMEOUT_IN_SECONDS,\n+PROP_ROOT + SESSION_TIMEOUT_IN_SECONDS);\n     try {\n       return Integer.parseInt(p); // can be negative\n     } catch (NumberFormatException e) {\n@@ -118,8 +122,8 @@ public final class Configuration {\n     final int defaultValue = 5;\n     // do not support MicroService level now\n     String p = getStringProperty(\"5\",\n-        PROP_ROOT + microservice + \".\" + SUCCESSIVE_FAILED_TIMES,\n-        PROP_ROOT + SUCCESSIVE_FAILED_TIMES);\n+PROP_ROOT + microservice + \".\" + SUCCESSIVE_FAILED_TIMES,\n+PROP_ROOT + SUCCESSIVE_FAILED_TIMES);\n     try {\n       return Integer.parseInt(p); // can be negative\n     } catch (NumberFormatException e) {\n@@ -129,22 +133,20 @@ public final class Configuration {\n \n   public String getRetryHandler(String microservice) {\n     return getStringProperty(\"default\",\n-        PROP_ROOT + microservice + \".\" + PROP_RETRY_HANDLER,\n-        PROP_ROOT + PROP_RETRY_HANDLER);\n+PROP_ROOT + microservice + \".\" + PROP_RETRY_HANDLER,\n+PROP_ROOT + PROP_RETRY_HANDLER);\n   }\n \n   public boolean isRetryEnabled(String microservice) {\n     String p = getStringProperty(\"false\",\n-        PROP_ROOT + microservice + \".\" + PROP_RETRY_ENABLED,\n-        PROP_ROOT + PROP_RETRY_ENABLED);\n+PROP_ROOT + microservice + \".\" + PROP_RETRY_ENABLED,\n+PROP_ROOT + PROP_RETRY_ENABLED);\n     return Boolean.parseBoolean(p);\n   }\n \n   public int getRetryOnNext(String microservice) {\n     final int defaultValue = 0;\n-    String p = getStringProperty(\"0\",\n-        PROP_ROOT + microservice + \".\" + PROP_RETRY_ONNEXT,\n-        PROP_ROOT + PROP_RETRY_ONNEXT);\n+    String p = getStringProperty(\"0\", PROP_ROOT + microservice + \".\" + PROP_RETRY_ONNEXT, PROP_ROOT + PROP_RETRY_ONNEXT);\n     try {\n       int result = Integer.parseInt(p);\n       if (result > 0) {\n@@ -159,9 +161,7 @@ public final class Configuration {\n \n   public int getRetryOnSame(String microservice) {\n     final int defaultValue = 0;\n-    String p = getStringProperty(\"0\",\n-        PROP_ROOT + microservice + \".\" + PROP_RETRY_ONSAME,\n-        PROP_ROOT + PROP_RETRY_ONSAME);\n+    String p = getStringProperty(\"0\", PROP_ROOT + microservice + \".\" + PROP_RETRY_ONSAME, PROP_ROOT + PROP_RETRY_ONSAME);\n     try {\n       int result = Integer.parseInt(p);\n       if (result > 0) {\n@@ -176,16 +176,16 @@ public final class Configuration {\n \n   public boolean isIsolationFilterOpen(String microservice) {\n     String p = getStringProperty(\"false\",\n-        PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_OPEN,\n-        PROP_ROOT + FILTER_ISOLATION + FILTER_OPEN);\n+PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_OPEN,\n+PROP_ROOT + FILTER_ISOLATION + FILTER_OPEN);\n     return Boolean.parseBoolean(p);\n   }\n \n   public int getErrorThresholdPercentage(String microservice) {\n     final int defaultValue = 20;\n     String p = getStringProperty(\"20\",\n-        PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_ERROR_PERCENTAGE,\n-        PROP_ROOT + FILTER_ISOLATION + FILTER_ERROR_PERCENTAGE);\n+PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_ERROR_PERCENTAGE,\n+PROP_ROOT + FILTER_ISOLATION + FILTER_ERROR_PERCENTAGE);\n     try {\n       int result = Integer.parseInt(p);\n       if (result <= PERCENT && result > 0) {\n@@ -201,8 +201,8 @@ public final class Configuration {\n   public int getEnableRequestThreshold(String microservice) {\n     final int defaultValue = 20;\n     String p = getStringProperty(\"20\",\n-        PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_ENABLE_REQUEST,\n-        PROP_ROOT + FILTER_ISOLATION + FILTER_ENABLE_REQUEST);\n+PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_ENABLE_REQUEST,\n+PROP_ROOT + FILTER_ISOLATION + FILTER_ENABLE_REQUEST);\n     try {\n       int result = Integer.parseInt(p);\n       if (result > 0) {\n@@ -218,8 +218,8 @@ public final class Configuration {\n   public int getSingleTestTime(String microservice) {\n     final int defaultValue = 10000;\n     String p = getStringProperty(\"10000\",\n-        PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_SINGLE_TEST,\n-        PROP_ROOT + FILTER_ISOLATION + FILTER_SINGLE_TEST);\n+PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_SINGLE_TEST,\n+PROP_ROOT + FILTER_ISOLATION + FILTER_SINGLE_TEST);\n     try {\n       int result = Integer.parseInt(p);\n       if (result > 0) {\n@@ -244,7 +244,8 @@ public final class Configuration {\n   public static String getStringProperty(String defaultValue, String... keys) {\n     String property = null;\n     for (String key : keys) {\n-      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null).get();\n+      property = DynamicPropertyFactory.getInstance().getStringProperty(key, null)\n+                                                     .get();\n       if (property != null) {\n         break;\n       }\n@@ -259,9 +260,7 @@ public final class Configuration {\n \n   public int getContinuousFailureThreshold(String microservice) {\n     final int defaultValue = 0;\n-    String p = getStringProperty(\"0\",\n-        PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_CONTINUOUS_FAILURE_THRESHOLD,\n-        PROP_ROOT + FILTER_ISOLATION + FILTER_CONTINUOUS_FAILURE_THRESHOLD);\n+    String p = getStringProperty(\"0\", PROP_ROOT + microservice + \".\" + FILTER_ISOLATION + FILTER_CONTINUOUS_FAILURE_THRESHOLD, PROP_ROOT + FILTER_ISOLATION + FILTER_CONTINUOUS_FAILURE_THRESHOLD);\n     try {\n       int result = Integer.parseInt(p);\n       if (result > 0) {\n@@ -273,4 +272,4 @@ public final class Configuration {\n       return defaultValue;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 45
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "59",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/46/Configuration.java\nindex b3abd2a3986..1bcbe39e67c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/46/Configuration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/46/Configuration.java\n@@ -57,7 +57,8 @@ public final class Configuration {\n   public static final String SERVER_LIST_FILTERS = \"cse.loadbalance.serverListFilters\";\n \n   //Class name of each filter: e.g cse.loadbalance.serverListFilter.a.className=org.apache.servicecomb.MyServerListFilterExt\n-  public static final String SERVER_LIST_FILTER_CLASS_HOLDER = \"cse.loadbalance.serverListFilter.%s.className\";\n+  public\n+  static final String SERVER_LIST_FILTER_CLASS_HOLDER = \"cse.loadbalance.serverListFilter.%s.className\";\n \n   //Property of the class: e.g cse.loadbalance.serverListFilter.a.myproperty=sample\n   public static final String SERVER_LIST_FILTER_PROPERTY_HOLDER = \"cse.loadbalance.serverListFilter.%s.%s\";\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

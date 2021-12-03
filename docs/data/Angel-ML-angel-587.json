@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "587",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/587/PartContext.java\nindex 7375caddcf2..3cb8e973607 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/587/PartContext.java\n@@ -20,68 +20,68 @@ package com.tencent.angel.ml.matrix;\n import java.io.Serializable;\n \n public class PartContext implements Serializable {\n-  private int startRow;\n-  private int endRow;\n-  private long startCol;\n-  private long endCol;\n-  private int indexNum;\n+    private int startRow;\n+    private int endRow;\n+    private long startCol;\n+    private long endCol;\n+    private int indexNum;\n \n-  public PartContext(int startRow, int endRow, long startCol, long endCol, int indexNum) {\n-    this.startRow = startRow;\n-    this.endRow = endRow;\n-    this.startCol = startCol;\n-    this.endCol = endCol;\n-    this.indexNum = indexNum;\n-  }\n+    public PartContext(int startRow, int endRow, long startCol, long endCol, int indexNum) {\n+        this.startRow = startRow;\n+        this.endRow = endRow;\n+        this.startCol = startCol;\n+        this.endCol = endCol;\n+        this.indexNum = indexNum;\n+    }\n \n-  public int getStartRow() {\n-    return startRow;\n-  }\n+    public int getStartRow() {\n+        return startRow;\n+    }\n \n-  public void setStartRow(int startRow) {\n-    this.startRow = startRow;\n-  }\n+    public void setStartRow(int startRow) {\n+        this.startRow = startRow;\n+    }\n \n-  public int getEndRow() {\n-    return endRow;\n-  }\n+    public int getEndRow() {\n+        return endRow;\n+    }\n \n-  public void setEndRow(int endRow) {\n-    this.endRow = endRow;\n-  }\n+    public void setEndRow(int endRow) {\n+        this.endRow = endRow;\n+    }\n \n-  public long getStartCol() {\n-    return startCol;\n-  }\n+    public long getStartCol() {\n+        return startCol;\n+    }\n \n-  public void setStartCol(long startCol) {\n-    this.startCol = startCol;\n-  }\n+    public void setStartCol(long startCol) {\n+        this.startCol = startCol;\n+    }\n \n-  public long getEndCol() {\n-    return endCol;\n-  }\n+    public long getEndCol() {\n+        return endCol;\n+    }\n \n-  public void setEndCol(long endCol) {\n-    this.endCol = endCol;\n-  }\n+    public void setEndCol(long endCol) {\n+        this.endCol = endCol;\n+    }\n \n-  public int getIndexNum() {\n-    return indexNum;\n-  }\n+    public int getIndexNum() {\n+        return indexNum;\n+    }\n \n-  public void setIndexNum(int indexNum) {\n-    this.indexNum = indexNum;\n-  }\n+    public void setIndexNum(int indexNum) {\n+        this.indexNum = indexNum;\n+    }\n \n-  @Override\n-  public String toString() {\n-    return \"PartContext{\" +\n-        \"startRow=\" + startRow +\n-        \", endRow=\" + endRow +\n-        \", startCol=\" + startCol +\n-        \", endCol=\" + endCol +\n-        \", indexNum=\" + indexNum +\n-        '}';\n-  }\n+    @Override\n+    public String toString() {\n+        return \"PartContext{\" +\n+                \"startRow=\" + startRow +\n+                \", endRow=\" + endRow +\n+                \", startCol=\" + startCol +\n+                \", endCol=\" + endCol +\n+                \", indexNum=\" + indexNum +\n+                '}';\n+    }\n }\n",
+            "diff_size": 52
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "79",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/587/PartContext.java\nindex 7375caddcf2..615068d3891 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/587/PartContext.java\n@@ -76,12 +76,6 @@ public class PartContext implements Serializable {\n \n   @Override\n   public String toString() {\n-    return \"PartContext{\" +\n-        \"startRow=\" + startRow +\n-        \", endRow=\" + endRow +\n-        \", startCol=\" + startCol +\n-        \", endCol=\" + endCol +\n-        \", indexNum=\" + indexNum +\n-        '}';\n+    return \"PartContext{\" + \"startRow=\" + startRow + \", endRow=\" + endRow + \", startCol=\" + startCol + \", endCol=\" + endCol + \", indexNum=\" + indexNum + '}';\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "80",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/587/PartContext.java\nindex 7375caddcf2..3fe143457dc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/587/PartContext.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/587/PartContext.java\n@@ -20,6 +20,7 @@ package com.tencent.angel.ml.matrix;\n import java.io.Serializable;\n \n public class PartContext implements Serializable {\n+\n   private int startRow;\n   private int endRow;\n   private long startCol;\n@@ -76,12 +77,7 @@ public class PartContext implements Serializable {\n \n   @Override\n   public String toString() {\n-    return \"PartContext{\" +\n-        \"startRow=\" + startRow +\n-        \", endRow=\" + endRow +\n-        \", startCol=\" + startCol +\n-        \", endCol=\" + endCol +\n-        \", indexNum=\" + indexNum +\n-        '}';\n+    return \"PartContext{\" + \"startRow=\" + startRow + \", endRow=\" + endRow + \", startCol=\" + startCol + \", endCol=\" + endCol + \", indexNum=\" + indexNum + '}';\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

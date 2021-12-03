@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "174",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "58",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " * @n\n * @ingroup Main_Services_group */\npublic interface SessionInfoService extends JaggerService{\n\n    /** Returns current session comment\n     * @author Gribov Kirill",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/174/SessionInfoService.java\nindex 41cc67a67cc..7b9d8c699ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/174/SessionInfoService.java\n@@ -22,7 +22,7 @@ import java.util.Set;\n  * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n  * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+public interface SessionInfoService extends JaggerService {\n \n     /** Returns current session comment\n      * @author Gribov Kirill\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/174/SessionInfoService.java\nindex 41cc67a67cc..d08a9435f42 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/174/SessionInfoService.java\n@@ -2,7 +2,9 @@ package com.griddynamics.jagger.engine.e1.services;\n \n import java.util.Set;\n \n-/** Service gives ability to create and modify session metadata(such as session comment)\n+/**\n+ * Service gives ability to create and modify session metadata(such as session comment)\n+ *\n  * @author Gribov Kirill\n  * @n\n  * @par Details:\n@@ -10,53 +12,63 @@ import java.util.Set;\n  * @n\n  * @par Example - working with session comments:\n  * @dontinclude ProviderOfLoadScenarioListener.java\n- * @skip  begin: following section is used for docu generation - work with session comments\n+ * @skip begin: following section is used for docu generation - work with session comments\n  * @until end: following section is used for docu generation - work with session comments\n  * @n\n  * @par Example - working with session tags:\n  * @dontinclude ProviderOfLoadScenarioListener.java\n- * @skip  begin: following section is used for docu generation - work with session tags\n+ * @skip begin: following section is used for docu generation - work with session tags\n  * @until end: following section is used for docu generation - work with session tags\n- *\n- * @n\n- * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n+ * @n Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n- * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+ * @ingroup Main_Services_group\n+ */\n+public interface SessionInfoService extends JaggerService {\n \n-    /** Returns current session comment\n-     * @author Gribov Kirill\n+    /**\n+     * Returns current session comment\n      *\n+     * @return session comment\n+     * @author Gribov Kirill\n      * @n\n-     *@return session comment */\n+     */\n     String getComment();\n \n-    /** Set new session comment. Null value will be ignored.\n+    /**\n+     * Set new session comment. Null value will be ignored.\n+     *\n+     * @param comment - new session comment\n      * @author Gribov Kirill\n      * @n\n-     * @param comment - new session comment */\n+     */\n     void setComment(String comment);\n \n-    /** Append string to current session comment. Null value will be ignored.\n+    /**\n+     * Append string to current session comment. Null value will be ignored.\n+     *\n+     * @param st - string to append\n      * @author Gribov Kirill\n      * @n\n-     * @param st - string to append */\n+     */\n     void appendToComment(String st);\n \n-    /** Creates new or update existing tag\n+    /**\n+     * Creates new or update existing tag\n      *\n-     * @param tagName - a tag name which should be created or updated\n+     * @param tagName        - a tag name which should be created or updated\n      * @param tagDescription - a description of the tag\n      */\n     void saveOrUpdateTag(String tagName, String tagDescription);\n \n-    /** Marks session with tag. Previously set tags are not influenced\n+    /**\n+     * Marks session with tag. Previously set tags are not influenced\n      *\n      * @param tagName - a tag name which should be used to mark a session\n      */\n     void markSessionWithTag(String tagName);\n \n-    /** Returns tags which already marked the session\n+    /**\n+     * Returns tags which already marked the session\n      *\n      * @return set names of tags\n      */\n",
+            "diff_size": 33
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/174/SessionInfoService.java\nindex 41cc67a67cc..742c4f3735d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/174/SessionInfoService.java\n@@ -22,7 +22,7 @@ import java.util.Set;\n  * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n  * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+public interface SessionInfoService extends JaggerService {\n \n     /** Returns current session comment\n      * @author Gribov Kirill\n@@ -62,4 +62,4 @@ public interface SessionInfoService extends JaggerService{\n      */\n     Set<String> getSessionTags();\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/174/SessionInfoService.java\nindex 41cc67a67cc..1fcc169c635 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/174/SessionInfoService.java\n@@ -22,25 +22,30 @@ import java.util.Set;\n  * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n  * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+\n+\n+public interface SessionInfoService extends JaggerService {\n \n     /** Returns current session comment\n      * @author Gribov Kirill\n      *\n      * @n\n      *@return session comment */\n+\n     String getComment();\n \n     /** Set new session comment. Null value will be ignored.\n      * @author Gribov Kirill\n      * @n\n      * @param comment - new session comment */\n+\n     void setComment(String comment);\n \n     /** Append string to current session comment. Null value will be ignored.\n      * @author Gribov Kirill\n      * @n\n      * @param st - string to append */\n+\n     void appendToComment(String st);\n \n     /** Creates new or update existing tag\n@@ -48,18 +53,20 @@ public interface SessionInfoService extends JaggerService{\n      * @param tagName - a tag name which should be created or updated\n      * @param tagDescription - a description of the tag\n      */\n+\n     void saveOrUpdateTag(String tagName, String tagDescription);\n \n     /** Marks session with tag. Previously set tags are not influenced\n      *\n      * @param tagName - a tag name which should be used to mark a session\n      */\n+\n     void markSessionWithTag(String tagName);\n \n     /** Returns tags which already marked the session\n      *\n      * @return set names of tags\n      */\n-    Set<String> getSessionTags();\n \n-}\n+    Set<String> getSessionTags();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/174/SessionInfoService.java\nindex 41cc67a67cc..7b9d8c699ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/174/SessionInfoService.java\n@@ -22,7 +22,7 @@ import java.util.Set;\n  * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n  * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+public interface SessionInfoService extends JaggerService {\n \n     /** Returns current session comment\n      * @author Gribov Kirill\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/174/SessionInfoService.java\nindex 41cc67a67cc..7b9d8c699ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/174/SessionInfoService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/174/SessionInfoService.java\n@@ -22,7 +22,7 @@ import java.util.Set;\n  * Full example code you can find in chapter @ref Main_CustomListenersExamples_group @n\n  * @n\n  * @ingroup Main_Services_group */\n-public interface SessionInfoService extends JaggerService{\n+public interface SessionInfoService extends JaggerService {\n \n     /** Returns current session comment\n      * @author Gribov Kirill\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,96 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "379",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string name = 1;</code>\n   */\n  com.google.protobuf.ByteString\n      getNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "'getNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/379/DeleteDeviceRequestOrBuilder.java\nindex 054f7032d32..a481826035a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/379/DeleteDeviceRequestOrBuilder.java\n@@ -17,6 +17,7 @@ public interface DeleteDeviceRequestOrBuilder extends\n    * <code>string name = 1;</code>\n    */\n   java.lang.String getName();\n+\n   /**\n    * <pre>\n    * The name of the device. For example,\n@@ -27,5 +28,5 @@ public interface DeleteDeviceRequestOrBuilder extends\n    * <code>string name = 1;</code>\n    */\n   com.google.protobuf.ByteString\n-      getNameBytes();\n+  getNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/379/DeleteDeviceRequestOrBuilder.java\nindex 054f7032d32..2e474c121d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/379/DeleteDeviceRequestOrBuilder.java\n@@ -17,7 +17,8 @@ public interface DeleteDeviceRequestOrBuilder extends\n    * <code>string name = 1;</code>\n    */\n   java.lang.String getName();\n-  /**\n+\n+/**\n    * <pre>\n    * The name of the device. For example,\n    * `projects/p0/locations/us-central1/registries/registry0/devices/device0` or\n@@ -26,6 +27,5 @@ public interface DeleteDeviceRequestOrBuilder extends\n    *\n    * <code>string name = 1;</code>\n    */\n-  com.google.protobuf.ByteString\n-      getNameBytes();\n-}\n+  com.google.protobuf.ByteString getNameBytes();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "'getNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/379/DeleteDeviceRequestOrBuilder.java\nindex 054f7032d32..7b2941be0db 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/379/DeleteDeviceRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/379/DeleteDeviceRequestOrBuilder.java\n@@ -27,5 +27,5 @@ public interface DeleteDeviceRequestOrBuilder extends\n    * <code>string name = 1;</code>\n    */\n   com.google.protobuf.ByteString\n-      getNameBytes();\n+  getNameBytes();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

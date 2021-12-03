@@ -1,0 +1,172 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "170",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "46",
+                    "column": "36",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "47",
+                    "column": "97",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "50",
+                    "column": "71",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "50",
+                    "column": "92",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "55",
+                    "column": "60",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "56",
+                    "column": "25",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "75",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "66",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "73",
+                    "column": "59",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "73",
+                    "column": "86",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/170/ReadOnlyTransactionStore.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/170/ReadOnlyTransactionStore.java\nindex 09080b63e44..314ae336521 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/170/ReadOnlyTransactionStore.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/170/ReadOnlyTransactionStore.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.impl.transaction.log;\n \n import java.io.IOException;\n@@ -42,36 +43,36 @@ public class ReadOnlyTransactionStore implements Lifecycle, LogicalTransactionSt\n     private final LifeSupport life = new LifeSupport();\n     private final LogicalTransactionStore physicalStore;\n \n-    public ReadOnlyTransactionStore( PageCache pageCache, FileSystemAbstraction fs, DatabaseLayout fromDatabaseLayout, Config config,\n-            Monitors monitors, CommandReaderFactory commandReaderFactory ) throws IOException\n+    public ReadOnlyTransactionStore(PageCache pageCache, FileSystemAbstraction fs, DatabaseLayout fromDatabaseLayout, Config config,\n+                                    Monitors monitors, CommandReaderFactory commandReaderFactory) throws IOException\n     {\n         TransactionMetadataCache transactionMetadataCache = new TransactionMetadataCache();\n-        LogEntryReader logEntryReader = new VersionAwareLogEntryReader( commandReaderFactory );\n+        LogEntryReader logEntryReader = new VersionAwareLogEntryReader(commandReaderFactory);\n         LogFiles logFiles = LogFilesBuilder\n-                .activeFilesBuilder( fromDatabaseLayout, fs, pageCache ).withLogEntryReader( logEntryReader )\n-                .withConfig( config )\n-                .build();\n-        physicalStore = new PhysicalLogicalTransactionStore( logFiles, transactionMetadataCache, logEntryReader,\n-                monitors, true );\n+          .activeFilesBuilder(fromDatabaseLayout, fs, pageCache).withLogEntryReader(logEntryReader)\n+          .withConfig(config)\n+          .build();\n+        physicalStore = new PhysicalLogicalTransactionStore(logFiles, transactionMetadataCache, logEntryReader,\n+          monitors, true);\n     }\n \n     @Override\n-    public TransactionCursor getTransactions( long transactionIdToStartFrom )\n-            throws IOException\n+    public TransactionCursor getTransactions(long transactionIdToStartFrom)\n+      throws IOException\n     {\n-        return physicalStore.getTransactions( transactionIdToStartFrom );\n+        return physicalStore.getTransactions(transactionIdToStartFrom);\n     }\n \n     @Override\n-    public TransactionCursor getTransactions( LogPosition position ) throws IOException\n+    public TransactionCursor getTransactions(LogPosition position) throws IOException\n     {\n-        return physicalStore.getTransactions( position );\n+        return physicalStore.getTransactions(position);\n     }\n \n     @Override\n-    public TransactionCursor getTransactionsInReverseOrder( LogPosition backToPosition ) throws IOException\n+    public TransactionCursor getTransactionsInReverseOrder(LogPosition backToPosition) throws IOException\n     {\n-        return physicalStore.getTransactionsInReverseOrder( backToPosition );\n+        return physicalStore.getTransactionsInReverseOrder(backToPosition);\n     }\n \n     @Override\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "447",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.mail;\n\nimport javax.mail.Address;\nimport javax.mail.internet.MimeMessage;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/447/MailSender.java\nindex 24249577280..b8afa6fb822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/447/MailSender.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mail;\n \n import javax.mail.Address;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/447/MailSender.java\nindex 24249577280..554ee6e78eb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/447/MailSender.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mail;\n \n import javax.mail.Address;\n@@ -34,12 +35,13 @@ import javax.mail.internet.MimeMessage;\n  */\n public interface MailSender extends MailClient {\n \n-    /**\n-     * Send a mime message.\n-     * @param recipients of the message.\n-     * @param message to be sent.\n-     * @throws MailClientException if the mail client fails.\n-     */\n-    void send(Address[] recipients, MimeMessage message) throws MailClientException;\n+  /**\n+   * Send a mime message.\n+   *\n+   * @param recipients of the message.\n+   * @param message    to be sent.\n+   * @throws MailClientException if the mail client fails.\n+   */\n+  void send(Address[] recipients, MimeMessage message) throws MailClientException;\n \n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/447/MailSender.java\nindex 24249577280..0df544e2906 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/447/MailSender.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mail;\n \n import javax.mail.Address;\n@@ -42,4 +43,4 @@ public interface MailSender extends MailClient {\n      */\n     void send(Address[] recipients, MimeMessage message) throws MailClientException;\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/447/MailSender.java\nindex 24249577280..9658a8b859f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/447/MailSender.java\n@@ -32,7 +32,10 @@ import javax.mail.internet.MimeMessage;\n /**\n  * Responsible for sending messages using Javamail.\n  */\n-public interface MailSender extends MailClient {\n+\n+\n+public interface MailSender extends\n+    MailClient {\n \n     /**\n      * Send a mime message.\n@@ -40,6 +43,9 @@ public interface MailSender extends MailClient {\n      * @param message to be sent.\n      * @throws MailClientException if the mail client fails.\n      */\n-    void send(Address[] recipients, MimeMessage message) throws MailClientException;\n \n-}\n+\n+    void send(Address\n+                  [ ] recipients, MimeMessage message) throws MailClientException;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/447/MailSender.java\nindex 24249577280..b8afa6fb822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/447/MailSender.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/447/MailSender.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mail;\n \n import javax.mail.Address;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

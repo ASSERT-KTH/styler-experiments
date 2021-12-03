@@ -1,0 +1,100 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "349",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.read.controller;\n\nimport org.apache.iotdb.tsfile.common.cache.LRUCache;\nimport org.apache.iotdb.tsfile.file.metadata.ChunkMetadata;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/349/CachedChunkLoaderImpl.java\nindex 5ad9dc0e039..432c0000230 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/349/CachedChunkLoaderImpl.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.controller;\n \n import org.apache.iotdb.tsfile.common.cache.LRUCache;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/349/CachedChunkLoaderImpl.java\nindex 5ad9dc0e039..ac1220835df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/349/CachedChunkLoaderImpl.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.controller;\n \n import org.apache.iotdb.tsfile.common.cache.LRUCache;\n@@ -25,7 +26,9 @@ import org.apache.iotdb.tsfile.read.common.Chunk;\n \n import java.io.IOException;\n \n-/** Read one Chunk and cache it into a LRUCache, only used in tsfile module. */\n+/**\n+ * Read one Chunk and cache it into a LRUCache, only used in tsfile module.\n+ */\n public class CachedChunkLoaderImpl implements IChunkLoader {\n \n   private static final int DEFAULT_CHUNK_CACHE_SIZE = 1000;\n@@ -40,7 +43,7 @@ public class CachedChunkLoaderImpl implements IChunkLoader {\n    * constructor of ChunkLoaderImpl.\n    *\n    * @param fileSequenceReader file sequence reader\n-   * @param cacheSize cache size\n+   * @param cacheSize          cache size\n    */\n   public CachedChunkLoaderImpl(TsFileSequenceReader fileSequenceReader, int cacheSize) {\n \n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "warning",
+                    "message": "'method def modifier' has incorrect indentation level 19, expected level should be one of the following: 6, 8, 10.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 21, expected level should be one of the following: 8, 10, 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "53",
+                    "severity": "warning",
+                    "message": "'method def rcurly' has incorrect indentation level 19, expected level should be one of the following: 6, 8, 10.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "54",
+                    "severity": "warning",
+                    "message": "'object def rcurly' has incorrect indentation level 17, expected level should be one of the following: 4, 6, 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/349/CachedChunkLoaderImpl.java\nindex 5ad9dc0e039..2ca05fc9a6e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/349/CachedChunkLoaderImpl.java\n@@ -22,10 +22,10 @@ import org.apache.iotdb.tsfile.common.cache.LRUCache;\n import org.apache.iotdb.tsfile.file.metadata.ChunkMetadata;\n import org.apache.iotdb.tsfile.read.TsFileSequenceReader;\n import org.apache.iotdb.tsfile.read.common.Chunk;\n-\n import java.io.IOException;\n \n /** Read one Chunk and cache it into a LRUCache, only used in tsfile module. */\n+\n public class CachedChunkLoaderImpl implements IChunkLoader {\n \n   private static final int DEFAULT_CHUNK_CACHE_SIZE = 1000;\n@@ -42,32 +42,30 @@ public class CachedChunkLoaderImpl implements IChunkLoader {\n    * @param fileSequenceReader file sequence reader\n    * @param cacheSize cache size\n    */\n-  public CachedChunkLoaderImpl(TsFileSequenceReader fileSequenceReader, int cacheSize) {\n \n+  public CachedChunkLoaderImpl(TsFileSequenceReader fileSequenceReader, int cacheSize) {\n     this.reader = fileSequenceReader;\n+    chunkCache = new LRUCache<ChunkMetadata, Chunk>(cacheSize) {\n \n-    chunkCache =\n-        new LRUCache<ChunkMetadata, Chunk>(cacheSize) {\n-\n-          @Override\n-          public Chunk loadObjectByKey(ChunkMetadata metaData) throws IOException {\n-            return reader.readMemChunk(metaData);\n-          }\n-        };\n+                   @Override\n+                   public Chunk loadObjectByKey(ChunkMetadata metaData) throws IOException {\n+                     return reader.readMemChunk(metaData);\n+                   }\n+                 };\n   }\n \n   @Override\n   public Chunk loadChunk(ChunkMetadata chunkMetaData) throws IOException {\n     Chunk chunk = chunkCache.get(chunkMetaData);\n     return new Chunk(\n-        chunk.getHeader(),\n-        chunk.getData().duplicate(),\n-        chunk.getDeleteIntervalList(),\n-        chunkMetaData.getStatistics());\n+               chunk.getHeader(),\n+               chunk.getData().duplicate(),\n+               chunk.getDeleteIntervalList(),\n+               chunkMetaData.getStatistics());\n   }\n \n   @Override\n   public void close() throws IOException {\n     reader.close();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/349/CachedChunkLoaderImpl.java\nindex 5ad9dc0e039..432c0000230 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/349/CachedChunkLoaderImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/349/CachedChunkLoaderImpl.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.read.controller;\n \n import org.apache.iotdb.tsfile.common.cache.LRUCache;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "95",
+    "information": {
+        "violations": [
+            {
+                "line": "49",
+                "column": "11",
+                "severity": "warning",
+                "message": "WhitespaceAround: 'if' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    public BigDecimal get(long time) {\n        if(startTime == -1) {\n            startTime = time;\n            warmUpTime += time;\n            k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/95/RumpUpTps.java\nindex 6f4dcac8100..519d6d11af0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/95/RumpUpTps.java\n@@ -46,7 +46,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/95/RumpUpTps.java\nindex 6f4dcac8100..78b59bc2860 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/95/RumpUpTps.java\n@@ -29,9 +29,9 @@ import java.math.RoundingMode;\n \n /**\n  * @author Nikolay Musienko\n- *         Date: 01.07.13\n+ * Date: 01.07.13\n  */\n-public class RumpUpTps  implements DesiredTps {\n+public class RumpUpTps implements DesiredTps {\n     Logger log = LoggerFactory.getLogger(RumpUpTps.class);\n \n     private final BigDecimal tps;\n@@ -46,7 +46,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/95/RumpUpTps.java\nindex 6f4dcac8100..0df8da13890 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/95/RumpUpTps.java\n@@ -31,7 +31,7 @@ import java.math.RoundingMode;\n  * @author Nikolay Musienko\n  *         Date: 01.07.13\n  */\n-public class RumpUpTps  implements DesiredTps {\n+public class RumpUpTps implements DesiredTps {\n     Logger log = LoggerFactory.getLogger(RumpUpTps.class);\n \n     private final BigDecimal tps;\n@@ -46,7 +46,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n@@ -73,4 +73,4 @@ public class RumpUpTps  implements DesiredTps {\n                 \", startTime=\" + startTime +\n                 '}';\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "72",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "73",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "74",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "75",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 8, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/95/RumpUpTps.java\nindex 6f4dcac8100..96ead05ba4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/95/RumpUpTps.java\n@@ -23,7 +23,6 @@ package com.griddynamics.jagger.engine.e1.scenario;\n import org.bouncycastle.x509.NoSuchStoreException;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.math.BigDecimal;\n import java.math.RoundingMode;\n \n@@ -31,9 +30,11 @@ import java.math.RoundingMode;\n  * @author Nikolay Musienko\n  *         Date: 01.07.13\n  */\n-public class RumpUpTps  implements DesiredTps {\n-    Logger log = LoggerFactory.getLogger(RumpUpTps.class);\n \n+\n+public class RumpUpTps implements DesiredTps {\n+\n+    Logger log = LoggerFactory.getLogger(RumpUpTps.class);\n     private final BigDecimal tps;\n     private long warmUpTime;\n     private long startTime = -1;\n@@ -46,7 +47,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n@@ -54,6 +55,7 @@ public class RumpUpTps  implements DesiredTps {\n         if (time > warmUpTime) {\n             return tps;\n         }\n+\n         BigDecimal currentTps = k.multiply(new BigDecimal(time - startTime));\n         log.debug(\"Changing rate up to: {}\", currentTps);\n         return currentTps;\n@@ -67,10 +69,9 @@ public class RumpUpTps  implements DesiredTps {\n     @Override\n     public String toString() {\n         return \"RumpUpTps{\" +\n-                \"log=\" + log +\n-                \", tps=\" + tps +\n-                \", warmUpTime=\" + warmUpTime +\n-                \", startTime=\" + startTime +\n-                '}';\n+        \"log=\" + log +\n+        \", tps=\" + tps +\n+        \", warmUpTime=\" + warmUpTime +\n+        \", startTime=\" + startTime + '}';\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/95/RumpUpTps.java\nindex 6f4dcac8100..519d6d11af0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/95/RumpUpTps.java\n@@ -46,7 +46,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/95/RumpUpTps.java\nindex 6f4dcac8100..519d6d11af0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/95/RumpUpTps.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/95/RumpUpTps.java\n@@ -46,7 +46,7 @@ public class RumpUpTps  implements DesiredTps {\n \n     @Override\n     public BigDecimal get(long time) {\n-        if(startTime == -1) {\n+        if (startTime == -1) {\n             startTime = time;\n             warmUpTime += time;\n             k = tps.divide(new BigDecimal(warmUpTime - startTime), 10, RoundingMode.CEILING);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

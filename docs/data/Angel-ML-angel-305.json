@@ -1,0 +1,113 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "305",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 112).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n    GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n\n    long[] nodes = param.getNodes();\n    Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/305/GetHyperLogLog.java\nindex b6233aaa462..36d6694d1f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/305/GetHyperLogLog.java\n@@ -12,47 +12,48 @@ import java.util.List;\n \n public class GetHyperLogLog extends GetFunc {\n \n-  public GetHyperLogLog(GetHyperLogLogParam param) {\n-    super(param);\n-  }\n-\n-  public GetHyperLogLog(int matrixId, long[] nodes) {\n-    super(new GetHyperLogLogParam(matrixId, nodes, 0L));\n-  }\n-\n-  public GetHyperLogLog() {\n-    super(null);\n-  }\n-\n-  @Override\n-  public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n-    GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n-\n-    long[] nodes = param.getNodes();\n-    Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n-    row.startRead(20000);\n-    try {\n-      for (int i = 0; i < nodes.length; i++) {\n-        HyperLogLogPlusElement hllElem = (HyperLogLogPlusElement) row.get(nodes[i]);\n-        if (hllElem.isActive()) {\n-          logs.put(nodes[i], hllElem.getHyperLogLogPlus());\n-        }\n-      }\n-    } finally {\n-      row.endRead();\n+    public GetHyperLogLog(GetHyperLogLogParam param) {\n+        super(param);\n+    }\n+\n+    public GetHyperLogLog(int matrixId, long[] nodes) {\n+        super(new GetHyperLogLogParam(matrixId, nodes, 0L));\n+    }\n+\n+    public GetHyperLogLog() {\n+        super(null);\n     }\n-    return new GetHyperLogLogPartResult(logs);\n-  }\n-\n-  @Override\n-  public GetResult merge(List<PartitionGetResult> partResults) {\n-    Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n-    for (PartitionGetResult r: partResults) {\n-      GetHyperLogLogPartResult rr = (GetHyperLogLogPartResult) r;\n-      logs.putAll(rr.getLogs());\n+\n+    @Override\n+    public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n+        GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n+        ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager()\n+                .getRow(param.getPartKey(), 0);\n+\n+        long[] nodes = param.getNodes();\n+        Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n+        row.startRead(20000);\n+        try {\n+            for (int i = 0; i < nodes.length; i++) {\n+                HyperLogLogPlusElement hllElem = (HyperLogLogPlusElement) row.get(nodes[i]);\n+                if (hllElem.isActive()) {\n+                    logs.put(nodes[i], hllElem.getHyperLogLogPlus());\n+                }\n+            }\n+        } finally {\n+            row.endRead();\n+        }\n+        return new GetHyperLogLogPartResult(logs);\n     }\n \n-    return new GetHyperLogLogResult(logs);\n-  }\n+    @Override\n+    public GetResult merge(List<PartitionGetResult> partResults) {\n+        Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n+        for (PartitionGetResult r : partResults) {\n+            GetHyperLogLogPartResult rr = (GetHyperLogLogPartResult) r;\n+            logs.putAll(rr.getLogs());\n+        }\n+\n+        return new GetHyperLogLogResult(logs);\n+    }\n }\n",
+            "diff_size": 60
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/305/GetHyperLogLog.java\nindex b6233aaa462..67607ed7f8a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/305/GetHyperLogLog.java\n@@ -28,8 +28,7 @@ public class GetHyperLogLog extends GetFunc {\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n     ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n-\n-    long[] nodes = param.getNodes();\n+long[] nodes = param.getNodes();\n     Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n     row.startRead(20000);\n     try {\n@@ -55,4 +54,4 @@ public class GetHyperLogLog extends GetFunc {\n \n     return new GetHyperLogLogResult(logs);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/305/GetHyperLogLog.java\nindex b6233aaa462..86a9a473457 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/305/GetHyperLogLog.java\n@@ -7,7 +7,6 @@ import com.tencent.angel.ml.matrix.psf.get.base.PartitionGetParam;\n import com.tencent.angel.ml.matrix.psf.get.base.PartitionGetResult;\n import com.tencent.angel.ps.storage.vector.ServerLongAnyRow;\n import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;\n-\n import java.util.List;\n \n public class GetHyperLogLog extends GetFunc {\n@@ -28,7 +27,6 @@ public class GetHyperLogLog extends GetFunc {\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n     ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n-\n     long[] nodes = param.getNodes();\n     Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n     row.startRead(20000);\n@@ -48,11 +46,11 @@ public class GetHyperLogLog extends GetFunc {\n   @Override\n   public GetResult merge(List<PartitionGetResult> partResults) {\n     Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n-    for (PartitionGetResult r: partResults) {\n+    for (PartitionGetResult r : partResults) {\n       GetHyperLogLogPartResult rr = (GetHyperLogLogPartResult) r;\n       logs.putAll(rr.getLogs());\n     }\n-\n     return new GetHyperLogLogResult(logs);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "92",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "26",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/305/GetHyperLogLog.java\nindex b6233aaa462..7f982853272 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/305/GetHyperLogLog.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/305/GetHyperLogLog.java\n@@ -27,7 +27,9 @@ public class GetHyperLogLog extends GetFunc {\n   @Override\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n+    ServerLongAnyRow row =(ServerLongAnyRow)psContext. getMatrixStorageManager ( ) .getRow (\n+      param . getPartKey (),0\n+    ) ;\n \n     long[] nodes = param.getNodes();\n     Long2ObjectOpenHashMap<HyperLogLogPlus> logs = new Long2ObjectOpenHashMap<>();\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

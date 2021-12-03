@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "934",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/934/GetCSRIntPartitionRequest.java\nindex 50f1724263a..755dec780b2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/934/GetCSRIntPartitionRequest.java\n@@ -18,16 +18,16 @@ package com.tencent.angel.ml.matrix.transport;\n \n public class GetCSRIntPartitionRequest extends PartitionRequest {\n \n-  @Override\n-  public int getEstimizeDataSize() {\n-    // TODO Auto-generated method stub\n-    return 0;\n-  }\n+    @Override\n+    public int getEstimizeDataSize() {\n+        // TODO Auto-generated method stub\n+        return 0;\n+    }\n \n-  @Override\n-  public TransportMethod getType() {\n-    // TODO Auto-generated method stub\n-    return null;\n-  }\n+    @Override\n+    public TransportMethod getType() {\n+        // TODO Auto-generated method stub\n+        return null;\n+    }\n \n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/934/GetCSRIntPartitionRequest.java\nindex 50f1724263a..7fb5d560b2d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/934/GetCSRIntPartitionRequest.java\n@@ -17,7 +17,6 @@\n package com.tencent.angel.ml.matrix.transport;\n \n public class GetCSRIntPartitionRequest extends PartitionRequest {\n-\n   @Override\n   public int getEstimizeDataSize() {\n     // TODO Auto-generated method stub\n@@ -30,4 +29,4 @@ public class GetCSRIntPartitionRequest extends PartitionRequest {\n     return null;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/934/GetCSRIntPartitionRequest.java\nindex 50f1724263a..41bbc69f4f3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/934/GetCSRIntPartitionRequest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/934/GetCSRIntPartitionRequest.java\n@@ -16,8 +16,11 @@\n \n package com.tencent.angel.ml.matrix.transport;\n \n+\n+\n public class GetCSRIntPartitionRequest extends PartitionRequest {\n \n+\n   @Override\n   public int getEstimizeDataSize() {\n     // TODO Auto-generated method stub\n@@ -29,5 +32,4 @@ public class GetCSRIntPartitionRequest extends PartitionRequest {\n     // TODO Auto-generated method stub\n     return null;\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2938",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2018 \"Neo Technology,\"\n * Network Engine for Objects in Lund AB [http://neotechnology.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "110",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "9",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "45",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "129",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "58",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "98",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "53",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "53",
+                    "column": "62",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2938/CoreGraphDatabase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2938/CoreGraphDatabase.java\nindex 3a9fc1d7aec..451711e7fa9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2938/CoreGraphDatabase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2938/CoreGraphDatabase.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU Affero General Public License\n  * along with this program. If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.causalclustering.core;\n \n import java.io.File;\n@@ -35,30 +36,30 @@ import org.neo4j.kernel.impl.factory.PlatformModule;\n \n public class CoreGraphDatabase extends GraphDatabaseFacade\n {\n-    protected CoreGraphDatabase()\n-    {\n-    }\n+  protected CoreGraphDatabase()\n+  {\n+  }\n \n-    public CoreGraphDatabase( File storeDir, Config config, GraphDatabaseFacadeFactory.Dependencies dependencies )\n-    {\n-        this( storeDir, config, dependencies, new HazelcastDiscoveryServiceFactory() );\n-    }\n+  public CoreGraphDatabase(File storeDir, Config config, GraphDatabaseFacadeFactory.Dependencies dependencies)\n+  {\n+    this(storeDir, config, dependencies, new HazelcastDiscoveryServiceFactory());\n+  }\n \n-    public CoreGraphDatabase( File storeDir, Config config,\n-            GraphDatabaseFacadeFactory.Dependencies dependencies, DiscoveryServiceFactory discoveryServiceFactory )\n-    {\n-        Function<PlatformModule,EditionModule> factory =\n-                platformModule -> new EnterpriseCoreEditionModule( platformModule, discoveryServiceFactory );\n-        new GraphDatabaseFacadeFactory( DatabaseInfo.CORE, factory ).initFacade( storeDir, config, dependencies, this );\n-    }\n+  public CoreGraphDatabase(File storeDir, Config config,\n+                           GraphDatabaseFacadeFactory.Dependencies dependencies, DiscoveryServiceFactory discoveryServiceFactory)\n+  {\n+    Function<PlatformModule, EditionModule> factory =\n+        platformModule -> new EnterpriseCoreEditionModule(platformModule, discoveryServiceFactory);\n+    new GraphDatabaseFacadeFactory(DatabaseInfo.CORE, factory).initFacade(storeDir, config, dependencies, this);\n+  }\n \n-    public Role getRole()\n-    {\n-        return getDependencyResolver().resolveDependency( RaftMachine.class ).currentRole();\n-    }\n+  public Role getRole()\n+  {\n+    return getDependencyResolver().resolveDependency(RaftMachine.class).currentRole();\n+  }\n \n-    public void disableCatchupServer() throws Throwable\n-    {\n-        ((EnterpriseCoreEditionModule) editionModule).disableCatchupServer();\n-    }\n+  public void disableCatchupServer() throws Throwable\n+  {\n+    ((EnterpriseCoreEditionModule) editionModule).disableCatchupServer();\n+  }\n }\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2938/CoreGraphDatabase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2938/CoreGraphDatabase.java\nindex 3a9fc1d7aec..3249b45cb08 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2938/CoreGraphDatabase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2938/CoreGraphDatabase.java\n@@ -49,7 +49,7 @@ public class CoreGraphDatabase extends GraphDatabaseFacade\n     {\n         Function<PlatformModule,EditionModule> factory =\n                 platformModule -> new EnterpriseCoreEditionModule( platformModule, discoveryServiceFactory );\n-        new GraphDatabaseFacadeFactory( DatabaseInfo.CORE, factory ).initFacade( storeDir, config, dependencies, this );\n+    new GraphDatabaseFacadeFactory( DatabaseInfo.CORE, factory ).initFacade( storeDir, config, dependencies, this );\n     }\n \n     public Role getRole()\n@@ -61,4 +61,4 @@ public class CoreGraphDatabase extends GraphDatabaseFacade\n     {\n         ((EnterpriseCoreEditionModule) editionModule).disableCatchupServer();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

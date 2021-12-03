@@ -1,0 +1,63 @@
+{
+    "project_name": "fangjinuo-easyjson",
+    "violation_id": "60",
+    "information": {
+        "violations": [
+            {
+                "line": "39",
+                "column": "5",
+                "severity": "warning",
+                "message": "'{' at column 5 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "    public static void verifyMustOverride(Class<?> expType, Object instance,\n                                          String method)\n    {\n        if (instance.getClass() != expType) {\n            throw new IllegalStateException(String.format(\n                    \"Sub-class %s (of class %s) must override method '%s'\",",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/60/JacksonMigrates.java\nindex a3ea37a6d1c..1b8cdf27e9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/fangjinuo-easyjson/styler/05_predictions/final/files-repaired/60/JacksonMigrates.java\n@@ -35,9 +35,8 @@ public class JacksonMigrates {\n      * @return\n      */\n     public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n-        if (instance.getClass() != expType) {\n+                                          String method) {\n+                                              if (instance.getClass() != expType) {\n             throw new IllegalStateException(String.format(\n                     \"Sub-class %s (of class %s) must override method '%s'\",\n                     instance.getClass().getName(), expType.getName(), method));\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/60/JacksonMigrates.java\nindex a3ea37a6d1c..3b8862b44bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/checkstyle_idea/60/JacksonMigrates.java\n@@ -19,6 +19,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;\n public class JacksonMigrates {\n     /**\n      * \u8fc1\u79fb\u81ea ClassUtil \uff0c\u4ece\u9ad8\u7248\u672c\u8fc1\u79fb\n+     *\n      * @param t\n      * @return\n      */\n@@ -31,16 +32,16 @@ public class JacksonMigrates {\n \n     /**\n      * \u8fc1\u79fb\u81ea ClassUtil \uff0c\u4ece\u9ad8\u7248\u672c\u8fc1\u79fb\n+     *\n      * @param t\n      * @return\n      */\n     public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n+                                          String method) {\n         if (instance.getClass() != expType) {\n             throw new IllegalStateException(String.format(\n-                    \"Sub-class %s (of class %s) must override method '%s'\",\n-                    instance.getClass().getName(), expType.getName(), method));\n+                \"Sub-class %s (of class %s) must override method '%s'\",\n+                instance.getClass().getName(), expType.getName(), method));\n         }\n     }\n }\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/60/JacksonMigrates.java\nindex a3ea37a6d1c..4147e3aefcd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/naturalize/60/JacksonMigrates.java\n@@ -34,13 +34,11 @@ public class JacksonMigrates {\n      * @param t\n      * @return\n      */\n-    public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n+    public static void verifyMustOverride(Class<?> expType, Object instance, String method) {\n         if (instance.getClass() != expType) {\n             throw new IllegalStateException(String.format(\n                     \"Sub-class %s (of class %s) must override method '%s'\",\n                     instance.getClass().getName(), expType.getName(), method));\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/60/JacksonMigrates.java\nindex a3ea37a6d1c..9d2b692b14d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/codebuff/60/JacksonMigrates.java\n@@ -34,13 +34,10 @@ public class JacksonMigrates {\n      * @param t\n      * @return\n      */\n-    public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n+\n+    public static void verifyMustOverride(Class<?> expType, Object instance, String method) {\n         if (instance.getClass() != expType) {\n-            throw new IllegalStateException(String.format(\n-                    \"Sub-class %s (of class %s) must override method '%s'\",\n-                    instance.getClass().getName(), expType.getName(), method));\n+            throw new IllegalStateException(String.format(\"Sub-class %s (of class %s) must override method '%s'\", instance.getClass().getName(), expType.getName(), method));\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/60/JacksonMigrates.java\nindex a3ea37a6d1c..1b8cdf27e9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/random/files-repaired/60/JacksonMigrates.java\n@@ -35,9 +35,8 @@ public class JacksonMigrates {\n      * @return\n      */\n     public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n-        if (instance.getClass() != expType) {\n+                                          String method) {\n+                                              if (instance.getClass() != expType) {\n             throw new IllegalStateException(String.format(\n                     \"Sub-class %s (of class %s) must override method '%s'\",\n                     instance.getClass().getName(), expType.getName(), method));\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/60/JacksonMigrates.java\nindex a3ea37a6d1c..1b8cdf27e9c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/violations/60/JacksonMigrates.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/fangjinuo-easyjson/styler/05_predictions/three_grams/files-repaired/60/JacksonMigrates.java\n@@ -35,9 +35,8 @@ public class JacksonMigrates {\n      * @return\n      */\n     public static void verifyMustOverride(Class<?> expType, Object instance,\n-                                          String method)\n-    {\n-        if (instance.getClass() != expType) {\n+                                          String method) {\n+                                              if (instance.getClass() != expType) {\n             throw new IllegalStateException(String.format(\n                     \"Sub-class %s (of class %s) must override method '%s'\",\n                     instance.getClass().getName(), expType.getName(), method));\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

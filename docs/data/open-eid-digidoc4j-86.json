@@ -1,0 +1,106 @@
+{
+    "project_name": "open-eid-digidoc4j",
+    "violation_id": "86",
+    "information": {
+        "violations": [
+            {
+                "line": "88",
+                "severity": "error",
+                "message": "Line is longer than 120 characters (found 143).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "      throw e;\n    } catch (Exception e) {\n      throw new NetworkException(\"Unable to process <\" + getServiceType() + \"> POST call for service <\" + url + \">\", url, getServiceType(), e);\n    } finally {\n      try {\n        if (httpRequest != null) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "88",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/checkstyle_idea/86/SkDataLoader.java\nindex 409c242d31e..a426a8395ec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/checkstyle_idea/86/SkDataLoader.java\n@@ -1,12 +1,12 @@\n /* DigiDoc4J library\n-*\n-* This software is released under either the GNU Library General Public\n-* License (see LICENSE.LGPL).\n-*\n-* Note that the only valid version of the LGPL license as far as this\n-* project is concerned is the original GNU Library General Public License\n-* Version 2.1, February 1999\n-*/\n+ *\n+ * This software is released under either the GNU Library General Public\n+ * License (see LICENSE.LGPL).\n+ *\n+ * Note that the only valid version of the LGPL license as far as this\n+ * project is concerned is the original GNU Library General Public License\n+ * Version 2.1, February 1999\n+ */\n \n package org.digidoc4j.impl;\n \n@@ -85,7 +85,8 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n     } catch (NetworkException e) {\n       throw e;\n     } catch (Exception e) {\n-      throw new NetworkException(\"Unable to process <\" + getServiceType() + \"> POST call for service <\" + url + \">\", url, getServiceType(), e);\n+      throw new NetworkException(\"Unable to process <\" + getServiceType() + \"> POST call for service <\" + url + \">\",\n+          url, getServiceType(), e);\n     } finally {\n       try {\n         if (httpRequest != null) {\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "87",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/naturalize/86/SkDataLoader.java\nindex 409c242d31e..d966586ec66 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/naturalize/86/SkDataLoader.java\n@@ -77,8 +77,7 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n       httpResponse = this.getHttpResponse(client, httpRequest);\n       validateHttpResponse(httpResponse, url);\n       return readHttpResponse(httpResponse);\n-\n-    } catch (UnknownHostException e) {\n+  } catch (UnknownHostException e) {\n       throw new InvalidServiceUrlException(url, getServiceType());\n     } catch (InterruptedIOException e) {\n       throw new ConnectionTimedOutException(url, getServiceType());\n@@ -121,4 +120,4 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n   public String getUserAgent() {\n     return userAgent;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "88",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/codebuff/86/SkDataLoader.java\nindex 409c242d31e..c6a57b502cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/codebuff/86/SkDataLoader.java\n@@ -31,7 +31,6 @@ import org.digidoc4j.exceptions.TechnicalException;\n import org.digidoc4j.impl.asic.DataLoaderDecorator;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.ByteArrayInputStream;\n import java.io.InterruptedIOException;\n import java.net.URI;\n@@ -40,6 +39,8 @@ import java.net.UnknownHostException;\n /**\n  * Data loader implementation for SK ID Solutions AS\n  */\n+\n+\n public abstract class SkDataLoader extends CommonsDataLoader {\n \n   protected static final Logger LOGGER = LoggerFactory.getLogger(SkDataLoader.class);\n@@ -77,7 +78,6 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n       httpResponse = this.getHttpResponse(client, httpRequest);\n       validateHttpResponse(httpResponse, url);\n       return readHttpResponse(httpResponse);\n-\n     } catch (UnknownHostException e) {\n       throw new InvalidServiceUrlException(url, getServiceType());\n     } catch (InterruptedIOException e) {\n@@ -114,6 +114,7 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n    * ACCESSORS\n    */\n \n+\n   public void setUserAgent(String userAgent) {\n     this.userAgent = userAgent;\n   }\n@@ -121,4 +122,4 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n   public String getUserAgent() {\n     return userAgent;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "88",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "88",
+                    "column": "56",
+                    "severity": "error",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                },
+                {
+                    "line": "89",
+                    "column": "26",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/styler/05_predictions/three_grams/files-repaired/86/SkDataLoader.java\nindex 409c242d31e..7e6bab882ac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/violations/86/SkDataLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/open-eid-digidoc4j/styler/05_predictions/three_grams/files-repaired/86/SkDataLoader.java\n@@ -85,8 +85,9 @@ public abstract class SkDataLoader extends CommonsDataLoader {\n     } catch (NetworkException e) {\n       throw e;\n     } catch (Exception e) {\n-      throw new NetworkException(\"Unable to process <\" + getServiceType() + \"> POST call for service <\" + url + \">\", url, getServiceType(), e);\n-    } finally {\n+      throw new NetworkException(\"Unable to process <\" +\n+          getServiceType () + \"> POST call for service <\" + url + \">\", url, getServiceType(), e);\n+     } finally {\n       try {\n         if (httpRequest != null) {\n           httpRequest.releaseConnection();\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

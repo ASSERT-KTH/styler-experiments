@@ -1,0 +1,83 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "105",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.apache.metron.rest;\n\nimport org.apache.metron.rest.util.ParserIndex;\nimport org.springframework.boot.SpringApplication;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/105/MetronRestApplication.java\nindex cc065eafdc6..02ed39285dd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/105/MetronRestApplication.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.metron.rest;\n \n import org.apache.metron.rest.util.ParserIndex;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/105/MetronRestApplication.java\nindex cc065eafdc6..08edc49faae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/105/MetronRestApplication.java\n@@ -6,15 +6,16 @@\n  * to you under the Apache License, Version 2.0 (the\n  * \"License\"); you may not use this file except in compliance\n  * with the License.  You may obtain a copy of the License at\n- *\n- *     http://www.apache.org/licenses/LICENSE-2.0\n- *\n+ * <p>\n+ * http://www.apache.org/licenses/LICENSE-2.0\n+ * <p>\n  * Unless required by applicable law or agreed to in writing, software\n  * distributed under the License is distributed on an \"AS IS\" BASIS,\n  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.metron.rest;\n \n import org.apache.metron.rest.util.ParserIndex;\n@@ -25,7 +26,7 @@ import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;\n import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;\n \n @SpringBootApplication\n-@EnableAutoConfiguration(exclude = { GsonAutoConfiguration.class, KafkaAutoConfiguration.class })\n+@EnableAutoConfiguration(exclude = {GsonAutoConfiguration.class, KafkaAutoConfiguration.class})\n public class MetronRestApplication {\n \n   public static void main(String[] args) {\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "'GsonAutoConfiguration' has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/105/MetronRestApplication.java\nindex cc065eafdc6..78b9975360c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/105/MetronRestApplication.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.metron.rest;\n \n import org.apache.metron.rest.util.ParserIndex;\n@@ -25,11 +26,12 @@ import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;\n import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;\n \n @SpringBootApplication\n-@EnableAutoConfiguration(exclude = { GsonAutoConfiguration.class, KafkaAutoConfiguration.class })\n+@EnableAutoConfiguration(exclude = {\n+  GsonAutoConfiguration.class, KafkaAutoConfiguration.class })\n public class MetronRestApplication {\n \n   public static void main(String[] args) {\n     ParserIndex.reload();\n     SpringApplication.run(MetronRestApplication.class, args);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Annotation 'EnableAutoConfiguration' should be alone on line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationLocationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/105/MetronRestApplication.java\nindex cc065eafdc6..6209b5a6823 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/105/MetronRestApplication.java\n@@ -24,12 +24,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;\n import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;\n import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;\n \n-@SpringBootApplication\n-@EnableAutoConfiguration(exclude = { GsonAutoConfiguration.class, KafkaAutoConfiguration.class })\n+@SpringBootApplication @EnableAutoConfiguration(exclude = {GsonAutoConfiguration.class,\n+                                               KafkaAutoConfiguration.class\n+                                                })\n public class MetronRestApplication {\n \n   public static void main(String[] args) {\n     ParserIndex.reload();\n     SpringApplication.run(MetronRestApplication.class, args);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/105/MetronRestApplication.java\nindex cc065eafdc6..02ed39285dd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/105/MetronRestApplication.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.metron.rest;\n \n import org.apache.metron.rest.util.ParserIndex;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/105/MetronRestApplication.java\nindex cc065eafdc6..02ed39285dd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/105/MetronRestApplication.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/105/MetronRestApplication.java\n@@ -15,6 +15,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.metron.rest;\n \n import org.apache.metron.rest.util.ParserIndex;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

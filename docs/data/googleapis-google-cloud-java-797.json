@@ -1,0 +1,96 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "797",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * </pre>\n   */\n  com.google.protobuf.ByteString\n      getServiceNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'getServiceNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/797/ListLogServiceSinksRequestOrBuilder.java\nindex 61c14f78325..03b542bed5f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/797/ListLogServiceSinksRequestOrBuilder.java\n@@ -15,6 +15,7 @@ public interface ListLogServiceSinksRequestOrBuilder extends\n    * </pre>\n    */\n   java.lang.String getServiceName();\n+\n   /**\n    * <code>optional string service_name = 1;</code>\n    *\n@@ -23,5 +24,5 @@ public interface ListLogServiceSinksRequestOrBuilder extends\n    * </pre>\n    */\n   com.google.protobuf.ByteString\n-      getServiceNameBytes();\n+  getServiceNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/797/ListLogServiceSinksRequestOrBuilder.java\nindex 61c14f78325..1b459efa411 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/797/ListLogServiceSinksRequestOrBuilder.java\n@@ -15,13 +15,13 @@ public interface ListLogServiceSinksRequestOrBuilder extends\n    * </pre>\n    */\n   java.lang.String getServiceName();\n-  /**\n+\n+/**\n    * <code>optional string service_name = 1;</code>\n    *\n    * <pre>\n    * The log service whose sinks are wanted.\n    * </pre>\n    */\n-  com.google.protobuf.ByteString\n-      getServiceNameBytes();\n-}\n+  com.google.protobuf.ByteString getServiceNameBytes();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "'getServiceNameBytes' has incorrect indentation level 2, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/797/ListLogServiceSinksRequestOrBuilder.java\nindex 61c14f78325..76cb7607f31 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/797/ListLogServiceSinksRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/797/ListLogServiceSinksRequestOrBuilder.java\n@@ -23,5 +23,5 @@ public interface ListLogServiceSinksRequestOrBuilder extends\n    * </pre>\n    */\n   com.google.protobuf.ByteString\n-      getServiceNameBytes();\n+  getServiceNameBytes();\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

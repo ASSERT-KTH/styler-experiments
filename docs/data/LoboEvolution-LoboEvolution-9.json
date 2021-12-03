@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n\n\t/** {@inheritDoc} */\n\t@Override\n\tpublic short getPathSegType() {\n\t\treturn PATHSEG_CLOSEPATH;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "15",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/9/SVGPathSegClosePathImpl.java\nindex 3ba65e161d9..f74d10a8706 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/9/SVGPathSegClosePathImpl.java\n@@ -10,8 +10,8 @@ import org.loboevolution.html.dom.svg.SVGPathSegClosePath;\n  */\n public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n \n-\t/** {@inheritDoc} */\n-\t@Override\n+/** {@inheritDoc} */\n+ @Override\n \tpublic short getPathSegType() {\n \t\treturn PATHSEG_CLOSEPATH;\n \t}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/9/SVGPathSegClosePathImpl.java\nindex 3ba65e161d9..e5ef4e8e06f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/9/SVGPathSegClosePathImpl.java\n@@ -10,15 +10,19 @@ import org.loboevolution.html.dom.svg.SVGPathSegClosePath;\n  */\n public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n \n-\t/** {@inheritDoc} */\n-\t@Override\n-\tpublic short getPathSegType() {\n-\t\treturn PATHSEG_CLOSEPATH;\n-\t}\n+    /**\n+     * {@inheritDoc}\n+     */\n+    @Override\n+    public short getPathSegType() {\n+        return PATHSEG_CLOSEPATH;\n+    }\n \n-\t/** {@inheritDoc} */\n-\t@Override\n-\tpublic String getPathSegTypeAsLetter() {\n-\t\treturn \"z\";\n-\t}\n+    /**\n+     * {@inheritDoc}\n+     */\n+    @Override\n+    public String getPathSegTypeAsLetter() {\n+        return \"z\";\n+    }\n }\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/9/SVGPathSegClosePathImpl.java\nindex 3ba65e161d9..2ae9aa7073b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/9/SVGPathSegClosePathImpl.java\n@@ -8,17 +8,22 @@ import org.loboevolution.html.dom.svg.SVGPathSegClosePath;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n \n-\t/** {@inheritDoc} */\n-\t@Override\n-\tpublic short getPathSegType() {\n-\t\treturn PATHSEG_CLOSEPATH;\n-\t}\n-\n-\t/** {@inheritDoc} */\n-\t@Override\n-\tpublic String getPathSegTypeAsLetter() {\n-\t\treturn \"z\";\n-\t}\n-}\n+    /** {@inheritDoc} */\n+\n+    @Override\n+    public short getPathSegType() {\n+        return PATHSEG_CLOSEPATH;\n+    }\n+\n+    /** {@inheritDoc} */\n+\n+\n+    @Override\n+    public String getPathSegTypeAsLetter() {\n+        return \"z\";\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "15",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/9/SVGPathSegClosePathImpl.java\nindex 3ba65e161d9..f74d10a8706 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/9/SVGPathSegClosePathImpl.java\n@@ -10,8 +10,8 @@ import org.loboevolution.html.dom.svg.SVGPathSegClosePath;\n  */\n public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n \n-\t/** {@inheritDoc} */\n-\t@Override\n+/** {@inheritDoc} */\n+ @Override\n \tpublic short getPathSegType() {\n \t\treturn PATHSEG_CLOSEPATH;\n \t}\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "15",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/9/SVGPathSegClosePathImpl.java\nindex 3ba65e161d9..a5cc10dd24f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/9/SVGPathSegClosePathImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/9/SVGPathSegClosePathImpl.java\n@@ -10,8 +10,8 @@ import org.loboevolution.html.dom.svg.SVGPathSegClosePath;\n  */\n public class SVGPathSegClosePathImpl implements SVGPathSegClosePath {\n \n-\t/** {@inheritDoc} */\n-\t@Override\n+    /** {@inheritDoc} */\n+ @Override\n \tpublic short getPathSegType() {\n \t\treturn PATHSEG_CLOSEPATH;\n \t}\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

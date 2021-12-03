@@ -1,0 +1,104 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "19",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "     * Declare serial version UID\n     */\n    private static final long serialVersionUID = 4019648364692469900L;\n\n    /**\n     * Implicit constructor.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/19/CosmoException.java\nindex cc44ab43b46..0a68327a048 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/19/CosmoException.java\n@@ -15,7 +15,7 @@ public class CosmoException extends RuntimeException {\n     /**\n      * Declare serial version UID\n      */\n-    private static final long serialVersionUID = 4019648364692469900L;\n+        private static final long serialVersionUID =4019648364692469900L;\n \n     /**\n      * Implicit constructor.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/19/CosmoException.java\nindex cc44ab43b46..ca2455a5217 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/19/CosmoException.java\n@@ -1,14 +1,15 @@\n /*\n  * CosmoIOException.java Apr 18, 2012\n- * \n+ *\n  * Copyright (c) 2012 1&1 Internet AG. All rights reserved.\n- * \n+ *\n  * $Id$\n  */\n package org.unitedinternet.cosmo;\n \n /**\n  * An instance of {@link java.lang.RuntimeException}.\n+ *\n  * @author ccoman\n  */\n public class CosmoException extends RuntimeException {\n@@ -21,10 +22,12 @@ public class CosmoException extends RuntimeException {\n      * Implicit constructor.\n      */\n     public CosmoException() {\n-        \n+\n     }\n+\n     /**\n      * Constructor.\n+     *\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n     public CosmoException(Throwable cause) {\n@@ -32,9 +35,8 @@ public class CosmoException extends RuntimeException {\n     }\n \n     /**\n-     * \n      * @param message The message exception.\n-     * @param cause - If somethig is wrong this exception is thrown.\n+     * @param cause   - If somethig is wrong this exception is thrown.\n      */\n     public CosmoException(String message, Throwable cause) {\n         super(message, cause);\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/19/CosmoException.java\nindex cc44ab43b46..a9244a1245b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/19/CosmoException.java\n@@ -23,7 +23,9 @@ public class CosmoException extends RuntimeException {\n     public CosmoException() {\n         \n     }\n-    /**\n+\n+\n+/**\n      * Constructor.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n@@ -39,4 +41,4 @@ public class CosmoException extends RuntimeException {\n     public CosmoException(String message, Throwable cause) {\n         super(message, cause);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/19/CosmoException.java\nindex cc44ab43b46..0f492ee64ea 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/19/CosmoException.java\n@@ -11,22 +11,26 @@ package org.unitedinternet.cosmo;\n  * An instance of {@link java.lang.RuntimeException}.\n  * @author ccoman\n  */\n+\n+\n public class CosmoException extends RuntimeException {\n     /**\n      * Declare serial version UID\n      */\n+\n     private static final long serialVersionUID = 4019648364692469900L;\n \n     /**\n      * Implicit constructor.\n      */\n-    public CosmoException() {\n-        \n-    }\n+\n+    public CosmoException() {}\n     /**\n      * Constructor.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n+\n+\n     public CosmoException(Throwable cause) {\n         super(cause);\n     }\n@@ -36,7 +40,9 @@ public class CosmoException extends RuntimeException {\n      * @param message The message exception.\n      * @param cause - If somethig is wrong this exception is thrown.\n      */\n+\n+\n     public CosmoException(String message, Throwable cause) {\n         super(message, cause);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/19/CosmoException.java\nindex cc44ab43b46..4e2d8acab59 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/19/CosmoException.java\n@@ -15,12 +15,10 @@ public class CosmoException extends RuntimeException {\n     /**\n      * Declare serial version UID\n      */\n-    private static final long serialVersionUID = 4019648364692469900L;\n-\n-    /**\n+    private static final long serialVersionUID = 4019648364692469900L ; /**\n      * Implicit constructor.\n      */\n-    public CosmoException() {\n+        public CosmoException() {\n         \n     }\n     /**\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/19/CosmoException.java\nindex cc44ab43b46..0a68327a048 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/19/CosmoException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/19/CosmoException.java\n@@ -15,7 +15,7 @@ public class CosmoException extends RuntimeException {\n     /**\n      * Declare serial version UID\n      */\n-    private static final long serialVersionUID = 4019648364692469900L;\n+        private static final long serialVersionUID =4019648364692469900L;\n \n     /**\n      * Implicit constructor.\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "GourdErwa-MyNote",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "severity": "error",
+                "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface ImageClient {\n    String getImagePath();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "'getImagePath' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/21/ImageClient.java\nindex 2b7cb0eac97..831340ff850 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GourdErwa-MyNote/styler/05_predictions/final/files-repaired/21/ImageClient.java\n@@ -25,6 +25,7 @@ package com.iluwatar.api.gateway;\n /**\n  * An interface used to communicate with the Image microservice\n  */\n-public interface ImageClient {\n-    String getImagePath();\n+public interface ImageClient { String\n+\n+getImagePath();\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/21/ImageClient.java\nindex 2b7cb0eac97..e3da5298a9a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/checkstyle_idea/21/ImageClient.java\n@@ -20,11 +20,12 @@\n  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n  * THE SOFTWARE.\n  */\n+\n package com.iluwatar.api.gateway;\n \n /**\n  * An interface used to communicate with the Image microservice\n  */\n public interface ImageClient {\n-    String getImagePath();\n+  String getImagePath();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 4, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/21/ImageClient.java\nindex 2b7cb0eac97..6db17140bec 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/naturalize/21/ImageClient.java\n@@ -27,4 +27,4 @@ package com.iluwatar.api.gateway;\n  */\n public interface ImageClient {\n     String getImagePath();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/21/ImageClient.java\nindex 2b7cb0eac97..73d31fa3b23 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/codebuff/21/ImageClient.java\n@@ -25,6 +25,9 @@ package com.iluwatar.api.gateway;\n /**\n  * An interface used to communicate with the Image microservice\n  */\n-public interface ImageClient {\n-    String getImagePath();\n-}\n+\n+\n+public interface ImageClient { String getImagePath()\n+;\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "'getImagePath' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/21/ImageClient.java\nindex 2b7cb0eac97..831340ff850 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/random/files-repaired/21/ImageClient.java\n@@ -25,6 +25,7 @@ package com.iluwatar.api.gateway;\n /**\n  * An interface used to communicate with the Image microservice\n  */\n-public interface ImageClient {\n-    String getImagePath();\n+public interface ImageClient { String\n+\n+getImagePath();\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "error",
+                    "message": "'method def modifier' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "error",
+                    "message": "'getImagePath' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/21/ImageClient.java\nindex 2b7cb0eac97..0e3ea105a08 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/violations/21/ImageClient.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GourdErwa-MyNote/styler/05_predictions/three_grams/files-repaired/21/ImageClient.java\n@@ -26,5 +26,6 @@ package com.iluwatar.api.gateway;\n  * An interface used to communicate with the Image microservice\n  */\n public interface ImageClient {\n-    String getImagePath();\n+String\n+getImagePath ( ) ;\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

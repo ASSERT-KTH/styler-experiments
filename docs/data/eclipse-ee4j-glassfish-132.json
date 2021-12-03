@@ -1,0 +1,79 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "132",
+    "information": {
+        "violations": [
+            {
+                "line": "62",
+                "column": "25",
+                "severity": "warning",
+                "message": "'new lparen' has incorrect indentation level 24, expected level should be 16.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "            } catch(Throwable t) {\n                NamingException ne = new NamingException\n                        (\"Error resolving java:comp/HandleDelegate lookup\");\n                ne.initCause(t);\n                throw ne;\n            }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/132/HandleDelegateNamingProxy.java\nindex 3725d3d2d31..40d1b263f84 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/132/HandleDelegateNamingProxy.java\n@@ -58,8 +58,7 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n                 delegate = facade.getHandleDelegate();\n \n             } catch(Throwable t) {\n-                NamingException ne = new NamingException\n-                        (\"Error resolving java:comp/HandleDelegate lookup\");\n+                NamingException ne = new NamingException(\"Error resolving java:comp/HandleDelegate lookup\");\n                 ne.initCause(t);\n                 throw ne;\n             }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "61",
+                    "column": "21",
+                    "severity": "warning",
+                    "message": "'new lparen' has incorrect indentation level 20, expected level should be 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/132/HandleDelegateNamingProxy.java\nindex 3725d3d2d31..50e162c4aa2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/132/HandleDelegateNamingProxy.java\n@@ -30,7 +30,6 @@ import javax.naming.NamingException;\n /**\n  * Proxy for java:comp/ORB lookups\n  *\n- *\n  * @author Ken Saks\n  */\n @Service\n@@ -38,7 +37,7 @@ import javax.naming.NamingException;\n public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n \n     static final String HANDLE_DELEGATE\n-            = \"java:comp/HandleDelegate\";\n+        = \"java:comp/HandleDelegate\";\n \n     @Inject\n     private Provider<HandleDelegateFacade> handleDelegateFacadeProvider;\n@@ -57,9 +56,9 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n                 }\n                 delegate = facade.getHandleDelegate();\n \n-            } catch(Throwable t) {\n+            } catch (Throwable t) {\n                 NamingException ne = new NamingException\n-                        (\"Error resolving java:comp/HandleDelegate lookup\");\n+                    (\"Error resolving java:comp/HandleDelegate lookup\");\n                 ne.initCause(t);\n                 throw ne;\n             }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "43",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'member def modifier' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/132/HandleDelegateNamingProxy.java\nindex 3725d3d2d31..0ef6aab6cd3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/132/HandleDelegateNamingProxy.java\n@@ -40,7 +40,7 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n     static final String HANDLE_DELEGATE\n             = \"java:comp/HandleDelegate\";\n \n-    @Inject\n+@Inject\n     private Provider<HandleDelegateFacade> handleDelegateFacadeProvider;\n \n     private volatile HandleDelegateFacade facade;\n@@ -58,8 +58,7 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n                 delegate = facade.getHandleDelegate();\n \n             } catch(Throwable t) {\n-                NamingException ne = new NamingException\n-                        (\"Error resolving java:comp/HandleDelegate lookup\");\n+                NamingException ne = new NamingException(\"Error resolving java:comp/HandleDelegate lookup\");\n                 ne.initCause(t);\n                 throw ne;\n             }\n@@ -69,4 +68,4 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n     }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/132/HandleDelegateNamingProxy.java\nindex 3725d3d2d31..40d1b263f84 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/132/HandleDelegateNamingProxy.java\n@@ -58,8 +58,7 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n                 delegate = facade.getHandleDelegate();\n \n             } catch(Throwable t) {\n-                NamingException ne = new NamingException\n-                        (\"Error resolving java:comp/HandleDelegate lookup\");\n+                NamingException ne = new NamingException(\"Error resolving java:comp/HandleDelegate lookup\");\n                 ne.initCause(t);\n                 throw ne;\n             }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/132/HandleDelegateNamingProxy.java\nindex 3725d3d2d31..40d1b263f84 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/132/HandleDelegateNamingProxy.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/132/HandleDelegateNamingProxy.java\n@@ -58,8 +58,7 @@ public class HandleDelegateNamingProxy implements NamedNamingObjectProxy {\n                 delegate = facade.getHandleDelegate();\n \n             } catch(Throwable t) {\n-                NamingException ne = new NamingException\n-                        (\"Error resolving java:comp/HandleDelegate lookup\");\n+                NamingException ne = new NamingException(\"Error resolving java:comp/HandleDelegate lookup\");\n                 ne.initCause(t);\n                 throw ne;\n             }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

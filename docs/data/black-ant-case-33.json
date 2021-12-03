@@ -1,0 +1,102 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "33",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic class XxlJobLogGlue {\n\t\n\tprivate int id;\n\tprivate int jobId;\t\t\t\t// \u4efb\u52a1\u4e3b\u952eID\n\tprivate String glueType;\t\t// GLUE\u7c7b\u578b\t#com.xxl.job.core.glue.GlueTypeEnum",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "12",
+                    "column": "46",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/33/XxlJobLogGlue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/33/XxlJobLogGlue.java\nindex 3a89f1cd100..e0e0e9a8325 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/33/XxlJobLogGlue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/33/XxlJobLogGlue.java\n@@ -2,72 +2,73 @@ package com.xxl.job.admin.core.model;\n \n /**\n  * xxl-job log for glue, used to track job code process\n+ *\n  * @author xuxueli 2016-5-19 17:57:46\n  */\n public class XxlJobLogGlue {\n-\t\n-\tprivate int id;\n-\tprivate int jobId;\t\t\t\t// \u4efb\u52a1\u4e3b\u952eID\n-\tprivate String glueType;\t\t// GLUE\u7c7b\u578b\t#com.xxl.job.core.glue.GlueTypeEnum\n-\tprivate String glueSource;\n-\tprivate String glueRemark;\n-\tprivate String addTime;\n-\tprivate String updateTime;\n-\n-\tpublic int getId() {\n-\t\treturn id;\n-\t}\n-\n-\tpublic void setId(int id) {\n-\t\tthis.id = id;\n-\t}\n-\n-\tpublic int getJobId() {\n-\t\treturn jobId;\n-\t}\n-\n-\tpublic void setJobId(int jobId) {\n-\t\tthis.jobId = jobId;\n-\t}\n-\n-\tpublic String getGlueType() {\n-\t\treturn glueType;\n-\t}\n-\n-\tpublic void setGlueType(String glueType) {\n-\t\tthis.glueType = glueType;\n-\t}\n-\n-\tpublic String getGlueSource() {\n-\t\treturn glueSource;\n-\t}\n-\n-\tpublic void setGlueSource(String glueSource) {\n-\t\tthis.glueSource = glueSource;\n-\t}\n-\n-\tpublic String getGlueRemark() {\n-\t\treturn glueRemark;\n-\t}\n-\n-\tpublic void setGlueRemark(String glueRemark) {\n-\t\tthis.glueRemark = glueRemark;\n-\t}\n-\n-\tpublic String getAddTime() {\n-\t\treturn addTime;\n-\t}\n-\n-\tpublic void setAddTime(String addTime) {\n-\t\tthis.addTime = addTime;\n-\t}\n-\n-\tpublic String getUpdateTime() {\n-\t\treturn updateTime;\n-\t}\n-\n-\tpublic void setUpdateTime(String updateTime) {\n-\t\tthis.updateTime = updateTime;\n-\t}\n+\n+    private int id;\n+    private int jobId;                // \u4efb\u52a1\u4e3b\u952eID\n+    private String glueType;        // GLUE\u7c7b\u578b\t#com.xxl.job.core.glue.GlueTypeEnum\n+    private String glueSource;\n+    private String glueRemark;\n+    private String addTime;\n+    private String updateTime;\n+\n+    public int getId() {\n+        return id;\n+    }\n+\n+    public void setId(int id) {\n+        this.id = id;\n+    }\n+\n+    public int getJobId() {\n+        return jobId;\n+    }\n+\n+    public void setJobId(int jobId) {\n+        this.jobId = jobId;\n+    }\n+\n+    public String getGlueType() {\n+        return glueType;\n+    }\n+\n+    public void setGlueType(String glueType) {\n+        this.glueType = glueType;\n+    }\n+\n+    public String getGlueSource() {\n+        return glueSource;\n+    }\n+\n+    public void setGlueSource(String glueSource) {\n+        this.glueSource = glueSource;\n+    }\n+\n+    public String getGlueRemark() {\n+        return glueRemark;\n+    }\n+\n+    public void setGlueRemark(String glueRemark) {\n+        this.glueRemark = glueRemark;\n+    }\n+\n+    public String getAddTime() {\n+        return addTime;\n+    }\n+\n+    public void setAddTime(String addTime) {\n+        this.addTime = addTime;\n+    }\n+\n+    public String getUpdateTime() {\n+        return updateTime;\n+    }\n+\n+    public void setUpdateTime(String updateTime) {\n+        this.updateTime = updateTime;\n+    }\n \n }\n",
+            "diff_size": 65
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "14",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/33/XxlJobLogGlue.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/33/XxlJobLogGlue.java\nindex 3a89f1cd100..e781be3c153 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/33/XxlJobLogGlue.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/33/XxlJobLogGlue.java\n@@ -5,69 +5,74 @@ package com.xxl.job.admin.core.model;\n  * @author xuxueli 2016-5-19 17:57:46\n  */\n public class XxlJobLogGlue {\n-\t\n-\tprivate int id;\n-\tprivate int jobId;\t\t\t\t// \u4efb\u52a1\u4e3b\u952eID\n-\tprivate String glueType;\t\t// GLUE\u7c7b\u578b\t#com.xxl.job.core.glue.GlueTypeEnum\n+\n+    private int id;\n+private int jobId;\n+\n+\n+// \u4efb\u52a1\u4e3b\u952eID\n+\tprivate String glueType;\n+\n+\n+// GLUE\u7c7b\u578b\t#com.xxl.job.core.glue.GlueTypeEnum\n \tprivate String glueSource;\n \tprivate String glueRemark;\n \tprivate String addTime;\n \tprivate String updateTime;\n \n \tpublic int getId() {\n-\t\treturn id;\n-\t}\n+    return id;\n+    }\n \n \tpublic void setId(int id) {\n-\t\tthis.id = id;\n-\t}\n+    this.id = id;\n+    }\n \n \tpublic int getJobId() {\n-\t\treturn jobId;\n-\t}\n+    return jobId;\n+    }\n \n \tpublic void setJobId(int jobId) {\n-\t\tthis.jobId = jobId;\n-\t}\n+    this.jobId = jobId;\n+    }\n \n \tpublic String getGlueType() {\n-\t\treturn glueType;\n-\t}\n+    return glueType;\n+    }\n \n \tpublic void setGlueType(String glueType) {\n-\t\tthis.glueType = glueType;\n-\t}\n+    this.glueType = glueType;\n+    }\n \n \tpublic String getGlueSource() {\n-\t\treturn glueSource;\n-\t}\n+    return glueSource;\n+    }\n \n \tpublic void setGlueSource(String glueSource) {\n-\t\tthis.glueSource = glueSource;\n-\t}\n+    this.glueSource = glueSource;\n+    }\n \n \tpublic String getGlueRemark() {\n-\t\treturn glueRemark;\n-\t}\n+    return glueRemark;\n+    }\n \n \tpublic void setGlueRemark(String glueRemark) {\n-\t\tthis.glueRemark = glueRemark;\n-\t}\n+    this.glueRemark = glueRemark;\n+    }\n \n \tpublic String getAddTime() {\n-\t\treturn addTime;\n-\t}\n+    return addTime;\n+    }\n \n \tpublic void setAddTime(String addTime) {\n-\t\tthis.addTime = addTime;\n-\t}\n+    this.addTime = addTime;\n+    }\n \n \tpublic String getUpdateTime() {\n-\t\treturn updateTime;\n-\t}\n+    return updateTime;\n+    }\n \n \tpublic void setUpdateTime(String updateTime) {\n-\t\tthis.updateTime = updateTime;\n-\t}\n-\n-}\n+    this.updateTime = updateTime;\n+    }\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 40
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

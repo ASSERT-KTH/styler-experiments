@@ -1,0 +1,158 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "2116",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "84",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "109",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "13",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "53",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "99",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "100",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "86",
+                    "column": "40",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "86",
+                    "column": "76",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2116/LogHeaderWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2116/LogHeaderWriter.java\nindex d5a02d177fd..3418153e0d0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2116/LogHeaderWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2116/LogHeaderWriter.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.impl.transaction.log.entry;\n \n import java.io.IOException;\n@@ -31,7 +32,7 @@ import static org.neo4j.kernel.impl.transaction.log.entry.LogVersions.CURRENT_FO\n \n /**\n  * Write the transaction log file header.\n- *\n+ * <p>\n  * Current format is\n  * <pre>\n  *  log version    7 bytes\n@@ -50,39 +51,39 @@ public class LogHeaderWriter\n     {\n     }\n \n-    public static void writeLogHeader( FlushableChannel channel, LogHeader logHeader ) throws IOException\n+    public static void writeLogHeader(FlushableChannel channel, LogHeader logHeader) throws IOException\n     {\n-        channel.putLong( encodeLogVersion( logHeader.getLogVersion(), logHeader.getLogFormatVersion() ) );\n-        channel.putLong( logHeader.getLastCommittedTxId() );\n+        channel.putLong(encodeLogVersion(logHeader.getLogVersion(), logHeader.getLogFormatVersion()));\n+        channel.putLong(logHeader.getLastCommittedTxId());\n         StoreId storeId = logHeader.getStoreId();\n-        channel.putLong( storeId.getCreationTime() );\n-        channel.putLong( storeId.getRandomId() );\n-        channel.putLong( storeId.getStoreVersion() );\n-        channel.putLong( storeId.getUpgradeTime() );\n-        channel.putLong( storeId.getUpgradeTxId() );\n-        channel.putLong( 0 /* reserved */ );\n+        channel.putLong(storeId.getCreationTime());\n+        channel.putLong(storeId.getRandomId());\n+        channel.putLong(storeId.getStoreVersion());\n+        channel.putLong(storeId.getUpgradeTime());\n+        channel.putLong(storeId.getUpgradeTxId());\n+        channel.putLong(0 /* reserved */);\n     }\n \n-    public static void writeLogHeader( StoreChannel channel, LogHeader logHeader, MemoryTracker memoryTracker ) throws IOException\n+    public static void writeLogHeader(StoreChannel channel, LogHeader logHeader, MemoryTracker memoryTracker) throws IOException\n     {\n-        try ( var scopedBuffer = new HeapScopedBuffer( CURRENT_FORMAT_LOG_HEADER_SIZE, memoryTracker ) )\n+        try (var scopedBuffer = new HeapScopedBuffer(CURRENT_FORMAT_LOG_HEADER_SIZE, memoryTracker))\n         {\n             var buffer = scopedBuffer.getBuffer();\n-            buffer.putLong( encodeLogVersion( logHeader.getLogVersion(), logHeader.getLogFormatVersion() ) );\n-            buffer.putLong( logHeader.getLastCommittedTxId() );\n+            buffer.putLong(encodeLogVersion(logHeader.getLogVersion(), logHeader.getLogFormatVersion()));\n+            buffer.putLong(logHeader.getLastCommittedTxId());\n             StoreId storeId = logHeader.getStoreId();\n-            buffer.putLong( storeId.getCreationTime() );\n-            buffer.putLong( storeId.getRandomId() );\n-            buffer.putLong( storeId.getStoreVersion() );\n-            buffer.putLong( storeId.getUpgradeTime() );\n-            buffer.putLong( storeId.getUpgradeTxId() );\n-            buffer.putLong( 0 /* reserved */ );\n+            buffer.putLong(storeId.getCreationTime());\n+            buffer.putLong(storeId.getRandomId());\n+            buffer.putLong(storeId.getStoreVersion());\n+            buffer.putLong(storeId.getUpgradeTime());\n+            buffer.putLong(storeId.getUpgradeTxId());\n+            buffer.putLong(0 /* reserved */);\n             buffer.flip();\n-            channel.writeAll( buffer );\n+            channel.writeAll(buffer);\n         }\n     }\n \n-    public static long encodeLogVersion( long logVersion, long formatVersion )\n+    public static long encodeLogVersion(long logVersion, long formatVersion)\n     {\n         return (logVersion & LOG_VERSION_MASK) | (formatVersion << LOG_VERSION_BITS);\n     }\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "project_name": "DaGeRe-peass",
+    "violation_id": "55",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "severity": "error",
+                "message": "Line is longer than 200 characters (found 210).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n    */\n   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n      this.usedRecord = usedRecord;\n      this.sample = sample;\n      this.includedPatterns = includedPatterns;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 200 characters (found 214).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/55/InstrumentationConfiguration.java\nindex f3f666646bf..717e7a77a9f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DaGeRe-peass/styler/05_predictions/final/files-repaired/55/InstrumentationConfiguration.java\n@@ -14,8 +14,7 @@ public class InstrumentationConfiguration {\n    \n    /**\n     * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n-    */\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n+    */ public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n       this.usedRecord = usedRecord;\n       this.sample = sample;\n       this.includedPatterns = includedPatterns;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/55/InstrumentationConfiguration.java\nindex f3f666646bf..96fe04de257 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/checkstyle_idea/55/InstrumentationConfiguration.java\n@@ -5,57 +5,58 @@ import java.util.Set;\n import de.peass.dependency.execution.AllowedKiekerRecord;\n \n public class InstrumentationConfiguration {\n-   private final AllowedKiekerRecord usedRecord;\n-   private final boolean sample;\n-   private final boolean enableDeactivation;\n-   private final boolean createDefaultConstructor;\n-   private final boolean enableAdaptiveMonitoring;\n-   private final Set<String> includedPatterns;\n-   \n-   /**\n-    * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n-    */\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n-      this.usedRecord = usedRecord;\n-      this.sample = sample;\n-      this.includedPatterns = includedPatterns;\n-      this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n-      this.createDefaultConstructor = true;\n-      this.enableDeactivation = enableDecativation;\n-   }\n-\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final boolean createDefaultConstructor, final boolean enableAdaptiveMonitoring,\n-         final Set<String> includedPatterns, final boolean enableDecativation) {\n-      this.usedRecord = usedRecord;\n-      this.sample = sample;\n-      this.createDefaultConstructor = createDefaultConstructor;\n-      this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n-      this.includedPatterns = includedPatterns;\n-      this.enableDeactivation = enableDecativation;\n-   }\n-\n-   public AllowedKiekerRecord getUsedRecord() {\n-      return usedRecord;\n-   }\n-\n-   public boolean isSample() {\n-      return sample;\n-   }\n-\n-   public boolean isCreateDefaultConstructor() {\n-      return createDefaultConstructor;\n-   }\n-\n-   public Set<String> getIncludedPatterns() {\n-      return includedPatterns;\n-   }\n-   \n-   public boolean isEnableAdaptiveMonitoring() {\n-      return enableAdaptiveMonitoring;\n-   }\n-   \n-   public boolean isEnableDeactivation() {\n-      return enableDeactivation;\n-   }\n+  private final AllowedKiekerRecord usedRecord;\n+  private final boolean sample;\n+  private final boolean enableDeactivation;\n+  private final boolean createDefaultConstructor;\n+  private final boolean enableAdaptiveMonitoring;\n+  private final Set<String> includedPatterns;\n+\n+  /**\n+   * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n+   */\n+  public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring,\n+                                      final boolean enableDecativation) {\n+    this.usedRecord = usedRecord;\n+    this.sample = sample;\n+    this.includedPatterns = includedPatterns;\n+    this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n+    this.createDefaultConstructor = true;\n+    this.enableDeactivation = enableDecativation;\n+  }\n+\n+  public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final boolean createDefaultConstructor, final boolean enableAdaptiveMonitoring,\n+                                      final Set<String> includedPatterns, final boolean enableDecativation) {\n+    this.usedRecord = usedRecord;\n+    this.sample = sample;\n+    this.createDefaultConstructor = createDefaultConstructor;\n+    this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n+    this.includedPatterns = includedPatterns;\n+    this.enableDeactivation = enableDecativation;\n+  }\n+\n+  public AllowedKiekerRecord getUsedRecord() {\n+    return usedRecord;\n+  }\n+\n+  public boolean isSample() {\n+    return sample;\n+  }\n+\n+  public boolean isCreateDefaultConstructor() {\n+    return createDefaultConstructor;\n+  }\n+\n+  public Set<String> getIncludedPatterns() {\n+    return includedPatterns;\n+  }\n+\n+  public boolean isEnableAdaptiveMonitoring() {\n+    return enableAdaptiveMonitoring;\n+  }\n+\n+  public boolean isEnableDeactivation() {\n+    return enableDeactivation;\n+  }\n \n }\n\\ No newline at end of file\n",
+            "diff_size": 53
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "Line is longer than 200 characters (found 208).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "Line is longer than 200 characters (found 248).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/55/InstrumentationConfiguration.java\nindex f3f666646bf..db21f2f85b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/codebuff/55/InstrumentationConfiguration.java\n@@ -1,61 +1,61 @@\n package de.peass.kiekerInstrument;\n \n import java.util.Set;\n-\n import de.peass.dependency.execution.AllowedKiekerRecord;\n \n+\n public class InstrumentationConfiguration {\n-   private final AllowedKiekerRecord usedRecord;\n-   private final boolean sample;\n-   private final boolean enableDeactivation;\n-   private final boolean createDefaultConstructor;\n-   private final boolean enableAdaptiveMonitoring;\n-   private final Set<String> includedPatterns;\n+ private final AllowedKiekerRecord usedRecord;\n+ private final boolean sample;\n+ private final boolean enableDeactivation;\n+ private final boolean createDefaultConstructor;\n+ private final boolean enableAdaptiveMonitoring;\n+ private final Set<String> includedPatterns;\n    \n    /**\n     * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n     */\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n-      this.usedRecord = usedRecord;\n-      this.sample = sample;\n-      this.includedPatterns = includedPatterns;\n-      this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n-      this.createDefaultConstructor = true;\n-      this.enableDeactivation = enableDecativation;\n-   }\n-\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final boolean createDefaultConstructor, final boolean enableAdaptiveMonitoring,\n-         final Set<String> includedPatterns, final boolean enableDecativation) {\n-      this.usedRecord = usedRecord;\n-      this.sample = sample;\n-      this.createDefaultConstructor = createDefaultConstructor;\n-      this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n-      this.includedPatterns = includedPatterns;\n-      this.enableDeactivation = enableDecativation;\n-   }\n-\n-   public AllowedKiekerRecord getUsedRecord() {\n-      return usedRecord;\n-   }\n-\n-   public boolean isSample() {\n-      return sample;\n-   }\n-\n-   public boolean isCreateDefaultConstructor() {\n-      return createDefaultConstructor;\n-   }\n-\n-   public Set<String> getIncludedPatterns() {\n-      return includedPatterns;\n-   }\n-   \n-   public boolean isEnableAdaptiveMonitoring() {\n-      return enableAdaptiveMonitoring;\n-   }\n-   \n-   public boolean isEnableDeactivation() {\n-      return enableDeactivation;\n-   }\n \n+ public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n+  this.usedRecord = usedRecord;\n+  this.sample = sample;\n+  this.includedPatterns = includedPatterns;\n+  this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n+  this.createDefaultConstructor = true;\n+  this.enableDeactivation = enableDecativation;\n+ }\n+\n+ public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final boolean createDefaultConstructor, final boolean enableAdaptiveMonitoring, final Set<String> includedPatterns, final boolean enableDecativation) {\n+  this.usedRecord = usedRecord;\n+  this.sample = sample;\n+  this.createDefaultConstructor = createDefaultConstructor;\n+  this.enableAdaptiveMonitoring = enableAdaptiveMonitoring;\n+  this.includedPatterns = includedPatterns;\n+  this.enableDeactivation = enableDecativation;\n+ }\n+\n+\n+ public AllowedKiekerRecord getUsedRecord() {\n+  return usedRecord;\n+ }\n+\n+ public boolean isSample() {\n+  return sample;\n+ }\n+\n+ public boolean isCreateDefaultConstructor() {\n+  return createDefaultConstructor;\n+ }\n+\n+ public Set<String> getIncludedPatterns() {\n+  return includedPatterns;\n+ }\n+\n+ public boolean isEnableAdaptiveMonitoring() {\n+  return enableAdaptiveMonitoring;\n+ }\n+\n+ public boolean isEnableDeactivation() {\n+  return enableDeactivation;\n+ }\n }\n\\ No newline at end of file\n",
+            "diff_size": 92
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 200 characters (found 214).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/55/InstrumentationConfiguration.java\nindex f3f666646bf..717e7a77a9f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/violations/55/InstrumentationConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DaGeRe-peass/styler/05_predictions/three_grams/files-repaired/55/InstrumentationConfiguration.java\n@@ -14,8 +14,7 @@ public class InstrumentationConfiguration {\n    \n    /**\n     * Simple constructor, setting default values for everything except usedRecord, sample and includedPatterns\n-    */\n-   public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n+    */ public InstrumentationConfiguration(final AllowedKiekerRecord usedRecord, final boolean sample, final Set<String> includedPatterns, final boolean enableAdaptiveMonitoring, final boolean enableDecativation) {\n       this.usedRecord = usedRecord;\n       this.sample = sample;\n       this.includedPatterns = includedPatterns;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

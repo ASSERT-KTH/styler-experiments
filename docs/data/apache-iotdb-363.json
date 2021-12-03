@@ -1,0 +1,88 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "363",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.rpc;\n\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/363/AutoResizingBuffer.java\nindex 134c41bcadc..9295dfe9646 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/363/AutoResizingBuffer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.rpc;\n \n import org.slf4j.Logger;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/363/AutoResizingBuffer.java\nindex 134c41bcadc..9295dfe9646 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/363/AutoResizingBuffer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.rpc;\n \n import org.slf4j.Logger;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "58",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "'&&' has incorrect indentation level 6, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/363/AutoResizingBuffer.java\nindex 134c41bcadc..ca02b8d74d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/363/AutoResizingBuffer.java\n@@ -20,7 +20,6 @@ package org.apache.iotdb.rpc;\n \n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.util.Arrays;\n \n /**\n@@ -33,13 +32,13 @@ import java.util.Arrays;\n  * required size < current capacity * 0.6, and such small requests last for more than 5 times,\n  * shrink to the middle of the required size and current capacity.\n  */\n+\n class AutoResizingBuffer {\n \n   private byte[] array;\n   private int bufTooLargeCounter = RpcUtils.MAX_BUFFER_OVERSIZE_TIME;\n   private final int initialCapacity;\n   private long lastShrinkTime;\n-\n   private static final Logger logger = LoggerFactory.getLogger(AutoResizingBuffer.class);\n \n   public AutoResizingBuffer(int initialCapacity) {\n@@ -56,12 +55,11 @@ class AutoResizingBuffer {\n       int newCapacity = Math.max(growCapacity, size);\n       this.array = Arrays.copyOf(array, newCapacity);\n       bufTooLargeCounter = RpcUtils.MAX_BUFFER_OVERSIZE_TIME;\n-      logger.debug(\n-          \"{} expand from {} to {}, request: {}\", this, currentCapacity, newCapacity, size);\n+      logger.debug(\"{} expand from {} to {}, request: {}\", this, currentCapacity, newCapacity, size);\n     } else if (size > initialCapacity\n-        && currentCapacity * loadFactor > size\n-        && bufTooLargeCounter-- <= 0\n-        && System.currentTimeMillis() - lastShrinkTime > RpcUtils.MIN_SHRINK_INTERVAL) {\n+      && currentCapacity * loadFactor > size\n+               && bufTooLargeCounter-- <= 0\n+               && System.currentTimeMillis() - lastShrinkTime > RpcUtils.MIN_SHRINK_INTERVAL) {\n       // do not resize if it is reading the request size and do not shrink too often\n       array = Arrays.copyOf(array, size + (currentCapacity - size) / 2);\n       bufTooLargeCounter = RpcUtils.MAX_BUFFER_OVERSIZE_TIME;\n@@ -73,4 +71,4 @@ class AutoResizingBuffer {\n   public byte[] array() {\n     return this.array;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/363/AutoResizingBuffer.java\nindex 134c41bcadc..9295dfe9646 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/363/AutoResizingBuffer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/363/AutoResizingBuffer.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.rpc;\n \n import org.slf4j.Logger;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

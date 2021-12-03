@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "102",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/102/MultinomialLogisticLoss.java\nindex 7aaf0a4a27f..1fa9d15c56b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/102/MultinomialLogisticLoss.java\n@@ -24,94 +24,94 @@ import javax.inject.Singleton;\n @Singleton\n public class MultinomialLogisticLoss implements MultiLoss {\n \n-  private static MultinomialLogisticLoss instance;\n+    private static MultinomialLogisticLoss instance;\n \n-  private MultinomialLogisticLoss() {\n-  }\n-\n-  @Override\n-  public Kind getKind() {\n-    return Kind.MultiLogistic;\n-  }\n+    private MultinomialLogisticLoss() {\n+    }\n \n-  @Override\n-  public EvalMetric.Kind defaultEvalMetric() {\n-    return EvalMetric.Kind.CROSS_ENTROPY;\n-  }\n+    @Override\n+    public Kind getKind() {\n+        return Kind.MultiLogistic;\n+    }\n \n-  @Override\n-  public double[] firOrderGrad(float[] pred, float label) {\n-    double[] prob = Maths.floatArrayToDoubleArray(pred);\n-    Maths.softmax(prob);\n-    int trueLabel = (int) label;\n-    double[] grad = prob;\n-    for (int i = 0; i < grad.length; i++) {\n-      grad[i] = (trueLabel == i ? prob[i] - 1.0 : prob[i]);\n+    @Override\n+    public EvalMetric.Kind defaultEvalMetric() {\n+        return EvalMetric.Kind.CROSS_ENTROPY;\n     }\n-    return grad;\n-  }\n \n-  @Override\n-  public double[] secOrderGradDiag(float[] pred, float label) {\n-    double[] prob = Maths.floatArrayToDoubleArray(pred);\n-    Maths.softmax(prob);\n-    double[] hess = prob;\n-    for (int i = 0; i < hess.length; i++) {\n-      hess[i] = Math.max(prob[i] * (1.0f - prob[i]), Maths.EPSILON);\n+    @Override\n+    public double[] firOrderGrad(float[] pred, float label) {\n+        double[] prob = Maths.floatArrayToDoubleArray(pred);\n+        Maths.softmax(prob);\n+        int trueLabel = (int) label;\n+        double[] grad = prob;\n+        for (int i = 0; i < grad.length; i++) {\n+            grad[i] = (trueLabel == i ? prob[i] - 1.0 : prob[i]);\n+        }\n+        return grad;\n     }\n-    return hess;\n-  }\n \n-  @Override\n-  public double[] secOrderGradDiag(float[] pred, float label, double[] firGrad) {\n-    int trueLabel = (int) label;\n-    double[] hess = new double[pred.length];\n-    for (int i = 0; i < hess.length; i++) {\n-      double prob = trueLabel == i ? firGrad[i] + 1.0 : firGrad[i];\n-      hess[i] = Math.max(prob * (1.0 - prob), Maths.EPSILON);\n+    @Override\n+    public double[] secOrderGradDiag(float[] pred, float label) {\n+        double[] prob = Maths.floatArrayToDoubleArray(pred);\n+        Maths.softmax(prob);\n+        double[] hess = prob;\n+        for (int i = 0; i < hess.length; i++) {\n+            hess[i] = Math.max(prob[i] * (1.0f - prob[i]), Maths.EPSILON);\n+        }\n+        return hess;\n     }\n-    return hess;\n-  }\n \n-  @Override\n-  public double[] secOrderGradFull(float[] pred, float label) {\n-    double[] prob = Maths.floatArrayToDoubleArray(pred);\n-    Maths.softmax(prob);\n-    int numLabel = pred.length;\n-    double[] hess = new double[numLabel * (numLabel + 1) / 2];\n-    for (int i = 0; i < numLabel; i++) {\n-      int rowI = Maths.indexOfLowerTriangularMatrix(i, 0);\n-      for (int j = 0; j < i; j++) {\n-        hess[rowI + j] = Math.min(-prob[i] * prob[j], -Maths.EPSILON);\n-      }\n-      hess[rowI + i] = Math.max(prob[i] * (1.0 - prob[i]), Maths.EPSILON);\n+    @Override\n+    public double[] secOrderGradDiag(float[] pred, float label, double[] firGrad) {\n+        int trueLabel = (int) label;\n+        double[] hess = new double[pred.length];\n+        for (int i = 0; i < hess.length; i++) {\n+            double prob = trueLabel == i ? firGrad[i] + 1.0 : firGrad[i];\n+            hess[i] = Math.max(prob * (1.0 - prob), Maths.EPSILON);\n+        }\n+        return hess;\n     }\n-    return hess;\n-  }\n \n-  @Override\n-  public double[] secOrderGradFull(float[] pred, float label, double[] firGrad) {\n-    int numLabel = pred.length;\n-    int trueLabel = (int) label;\n-    double[] prob = new double[numLabel];\n-    for (int i = 0; i < numLabel; i++) {\n-      prob[i] = trueLabel == i ? firGrad[i] + 1.0 : firGrad[i];\n+    @Override\n+    public double[] secOrderGradFull(float[] pred, float label) {\n+        double[] prob = Maths.floatArrayToDoubleArray(pred);\n+        Maths.softmax(prob);\n+        int numLabel = pred.length;\n+        double[] hess = new double[numLabel * (numLabel + 1) / 2];\n+        for (int i = 0; i < numLabel; i++) {\n+            int rowI = Maths.indexOfLowerTriangularMatrix(i, 0);\n+            for (int j = 0; j < i; j++) {\n+                hess[rowI + j] = Math.min(-prob[i] * prob[j], -Maths.EPSILON);\n+            }\n+            hess[rowI + i] = Math.max(prob[i] * (1.0 - prob[i]), Maths.EPSILON);\n+        }\n+        return hess;\n     }\n-    double[] hess = new double[numLabel * (numLabel + 1) / 2];\n-    for (int i = 0; i < numLabel; i++) {\n-      int rowI = Maths.indexOfLowerTriangularMatrix(i, 0);\n-      for (int j = 0; j < i; j++) {\n-        hess[rowI + j] = Math.min(-prob[i] * prob[j], -Maths.EPSILON);\n-      }\n-      hess[rowI + i] = Math.max(prob[i] * (1.0 - prob[i]), Maths.EPSILON);\n+\n+    @Override\n+    public double[] secOrderGradFull(float[] pred, float label, double[] firGrad) {\n+        int numLabel = pred.length;\n+        int trueLabel = (int) label;\n+        double[] prob = new double[numLabel];\n+        for (int i = 0; i < numLabel; i++) {\n+            prob[i] = trueLabel == i ? firGrad[i] + 1.0 : firGrad[i];\n+        }\n+        double[] hess = new double[numLabel * (numLabel + 1) / 2];\n+        for (int i = 0; i < numLabel; i++) {\n+            int rowI = Maths.indexOfLowerTriangularMatrix(i, 0);\n+            for (int j = 0; j < i; j++) {\n+                hess[rowI + j] = Math.min(-prob[i] * prob[j], -Maths.EPSILON);\n+            }\n+            hess[rowI + i] = Math.max(prob[i] * (1.0 - prob[i]), Maths.EPSILON);\n+        }\n+        return hess;\n     }\n-    return hess;\n-  }\n \n-  public static MultinomialLogisticLoss getInstance() {\n-    if (instance == null) {\n-      instance = new MultinomialLogisticLoss();\n+    public static MultinomialLogisticLoss getInstance() {\n+        if (instance == null) {\n+            instance = new MultinomialLogisticLoss();\n+        }\n+        return instance;\n     }\n-    return instance;\n-  }\n }\n",
+            "diff_size": 100
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/102/MultinomialLogisticLoss.java\nindex 7aaf0a4a27f..1d78b60aa4e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/102/MultinomialLogisticLoss.java\n@@ -114,4 +114,4 @@ public class MultinomialLogisticLoss implements MultiLoss {\n     }\n     return instance;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/102/MultinomialLogisticLoss.java\nindex 7aaf0a4a27f..c2ace1824df 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/102/MultinomialLogisticLoss.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/102/MultinomialLogisticLoss.java\n@@ -26,8 +26,7 @@ public class MultinomialLogisticLoss implements MultiLoss {\n \n   private static MultinomialLogisticLoss instance;\n \n-  private MultinomialLogisticLoss() {\n-  }\n+  private MultinomialLogisticLoss() {}\n \n   @Override\n   public Kind getKind() {\n@@ -43,6 +42,7 @@ public class MultinomialLogisticLoss implements MultiLoss {\n   public double[] firOrderGrad(float[] pred, float label) {\n     double[] prob = Maths.floatArrayToDoubleArray(pred);\n     Maths.softmax(prob);\n+\n     int trueLabel = (int) label;\n     double[] grad = prob;\n     for (int i = 0; i < grad.length; i++) {\n@@ -77,6 +77,7 @@ public class MultinomialLogisticLoss implements MultiLoss {\n   public double[] secOrderGradFull(float[] pred, float label) {\n     double[] prob = Maths.floatArrayToDoubleArray(pred);\n     Maths.softmax(prob);\n+\n     int numLabel = pred.length;\n     double[] hess = new double[numLabel * (numLabel + 1) / 2];\n     for (int i = 0; i < numLabel; i++) {\n@@ -97,6 +98,7 @@ public class MultinomialLogisticLoss implements MultiLoss {\n     for (int i = 0; i < numLabel; i++) {\n       prob[i] = trueLabel == i ? firGrad[i] + 1.0 : firGrad[i];\n     }\n+\n     double[] hess = new double[numLabel * (numLabel + 1) / 2];\n     for (int i = 0; i < numLabel; i++) {\n       int rowI = Maths.indexOfLowerTriangularMatrix(i, 0);\n@@ -114,4 +116,4 @@ public class MultinomialLogisticLoss implements MultiLoss {\n     }\n     return instance;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

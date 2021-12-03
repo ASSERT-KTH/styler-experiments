@@ -1,0 +1,63 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "384",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/384/SVGPolygonElement.java\nindex 9890ca1ca80..890d7f9549e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/384/SVGPolygonElement.java\n@@ -26,5 +26,5 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+  SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/384/SVGPolygonElement.java\nindex 9890ca1ca80..dcddba737e1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/384/SVGPolygonElement.java\n@@ -17,14 +17,12 @@\n  *\n  * Contact info: ivan.difrancesco@yahoo.it\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n  * <p>SVGPolygonElement interface.</p>\n- *\n- *\n- *\n  */\n public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+    SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/384/SVGPolygonElement.java\nindex 9890ca1ca80..afe7252a479 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/naturalize/384/SVGPolygonElement.java\n@@ -25,6 +25,5 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n-public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n-}\n+public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/384/SVGPolygonElement.java\nindex 9890ca1ca80..cd2ba690d01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/384/SVGPolygonElement.java\n@@ -25,6 +25,7 @@ package org.loboevolution.html.dom.svg;\n  *\n  *\n  */\n-public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n-}\n+\n+\n+public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/384/SVGPolygonElement.java\nindex 9890ca1ca80..890d7f9549e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/384/SVGPolygonElement.java\n@@ -26,5 +26,5 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+  SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/384/SVGPolygonElement.java\nindex 9890ca1ca80..92f02049049 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/384/SVGPolygonElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/384/SVGPolygonElement.java\n@@ -26,5 +26,5 @@ package org.loboevolution.html.dom.svg;\n  *\n  */\n public interface SVGPolygonElement extends SVGElement, SVGTests, SVGLangSpace, SVGExternalResourcesRequired,\n-\t\tSVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n+    SVGStylable, SVGTransformable, SVGAnimatedPoints, Drawable {\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

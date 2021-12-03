@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "70",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "column": "41",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "public class BootMSContextAutoConfig extends BootWebCommonAutoConfig {\n\t\n\tpublic BootMSContextAutoConfig(){\n\t}\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/70/BootMSContextAutoConfig.java\nindex 4b97b0e675e..df248d074bb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/70/BootMSContextAutoConfig.java\n@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Import;\n //@ConditionalOnProperty(name=BootJFishConfig.ENABLE_JFISH_AUTO_CONFIG, havingValue=BootJFishConfig.VALUE_AUTO_CONFIG_WEB_MS)\n public class BootMSContextAutoConfig extends BootWebCommonAutoConfig {\n \t\n-\tpublic BootMSContextAutoConfig(){\n-\t}\n+\tpublic BootMSContextAutoConfig() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/70/BootMSContextAutoConfig.java\nindex 4b97b0e675e..bcda6ae79a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/70/BootMSContextAutoConfig.java\n@@ -19,8 +19,8 @@ import org.springframework.context.annotation.Import;\n //@Import({BootContextConfig.class})\n //@ConditionalOnProperty(name=BootJFishConfig.ENABLE_JFISH_AUTO_CONFIG, havingValue=BootJFishConfig.VALUE_AUTO_CONFIG_WEB_MS)\n public class BootMSContextAutoConfig extends BootWebCommonAutoConfig {\n-\t\n-\tpublic BootMSContextAutoConfig(){\n-\t}\n+\n+  public BootMSContextAutoConfig() {\n+  }\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/70/BootMSContextAutoConfig.java\nindex 4b97b0e675e..df248d074bb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/70/BootMSContextAutoConfig.java\n@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Import;\n //@ConditionalOnProperty(name=BootJFishConfig.ENABLE_JFISH_AUTO_CONFIG, havingValue=BootJFishConfig.VALUE_AUTO_CONFIG_WEB_MS)\n public class BootMSContextAutoConfig extends BootWebCommonAutoConfig {\n \t\n-\tpublic BootMSContextAutoConfig(){\n-\t}\n+\tpublic BootMSContextAutoConfig() {\n+ }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/70/BootMSContextAutoConfig.java\nindex 4b97b0e675e..df248d074bb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/70/BootMSContextAutoConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/70/BootMSContextAutoConfig.java\n@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Import;\n //@ConditionalOnProperty(name=BootJFishConfig.ENABLE_JFISH_AUTO_CONFIG, havingValue=BootJFishConfig.VALUE_AUTO_CONFIG_WEB_MS)\n public class BootMSContextAutoConfig extends BootWebCommonAutoConfig {\n \t\n-\tpublic BootMSContextAutoConfig(){\n-\t}\n+\tpublic BootMSContextAutoConfig() {\n+ }\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

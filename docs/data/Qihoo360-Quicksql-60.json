@@ -1,0 +1,89 @@
+{
+    "project_name": "Qihoo360-Quicksql",
+    "violation_id": "60",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage com.qihoo.qsql.org.apache.calcite.linq4j;\n\n/**\n * Provides functionality to evaluate queries against a specific data source",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/60/Queryable.java\nindex f667d8dbe85..2d459b364ce 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/60/Queryable.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n /**\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/60/Queryable.java\nindex f667d8dbe85..2d459b364ce 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/60/Queryable.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n /**\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/60/Queryable.java\nindex f667d8dbe85..46a8d7acb15 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/60/Queryable.java\n@@ -24,7 +24,8 @@ package com.qihoo.qsql.org.apache.calcite.linq4j;\n  *\n  * @param <T> Element type\n  */\n+\n+\n public interface Queryable<T> extends RawQueryable<T>, ExtendedQueryable<T> {\n-}\n \n-// End Queryable.java\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "18",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'.' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "error",
+                    "message": "'linq4j' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/random/files-repaired/60/Queryable.java\nindex f667d8dbe85..e8573ec83a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/random/files-repaired/60/Queryable.java\n@@ -14,7 +14,10 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n-package com.qihoo.qsql.org.apache.calcite.linq4j;\n+\n+package com.qihoo.qsql.org.apache.calcite.\n+linq4j\n+;\n \n /**\n  * Provides functionality to evaluate queries against a specific data source\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/60/Queryable.java\nindex f667d8dbe85..2d459b364ce 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/60/Queryable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/60/Queryable.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package com.qihoo.qsql.org.apache.calcite.linq4j;\n \n /**\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

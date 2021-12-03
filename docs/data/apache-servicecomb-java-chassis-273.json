@@ -1,0 +1,132 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "273",
+    "information": {
+        "violations": [
+            {
+                "line": "142",
+                "column": "29",
+                "severity": "warning",
+                "message": "'(' is followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+            }
+        ]
+    },
+    "source_code": "    // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n    // hence, we do not need duplicate copy it.\n    config.addConfiguration( new DynamicConfiguration(\n            new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n        \"configFromYamlFile\");\n    duplicateCseConfigToServicecombAtFront(config,",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/273/ConfigUtil.java\nindex 4c1b65fd773..d4752b2856d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/273/ConfigUtil.java\n@@ -139,7 +139,7 @@ public final class ConfigUtil {\n             configMapEntry.getKey()));\n     // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n+    config.addConfiguration(new DynamicConfiguration(\n             new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n         \"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/273/ConfigUtil.java\nindex 4c1b65fd773..d6a537aab00 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/273/ConfigUtil.java\n@@ -139,7 +139,7 @@ public final class ConfigUtil {\n             configMapEntry.getKey()));\n     // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n+    config.addConfiguration(new DynamicConfiguration(\n             new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n         \"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n@@ -184,16 +184,16 @@ public final class ConfigUtil {\n   }\n \n   private static void duplicateCseConfigToServicecomb(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+                                                      AbstractConfiguration source,\n+                                                      String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n \n     compositeConfiguration.addConfiguration(source, sourceName);\n   }\n \n   private static void duplicateCseConfigToServicecombAtFront(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+                                                             AbstractConfiguration source,\n+                                                             String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n \n     compositeConfiguration.addConfigurationAtFront(source, sourceName);\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "143",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "218",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/273/ConfigUtil.java\nindex 4c1b65fd773..dd64735b1cb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/273/ConfigUtil.java\n@@ -130,17 +130,17 @@ public final class ConfigUtil {\n     duplicateCseConfigToServicecomb(config,\n         convertEnvVariable(new ConcurrentMapConfiguration(new EnvironmentConfiguration())),\n         \"configFromEnvironment\");\n-    // If there is extra configurations, add it into config.\n+// If there is extra configurations, add it into config.\n     EXTRA_CONFIG_MAP.entrySet()\n         .stream()\n         .filter(mapEntry -> !mapEntry.getValue().isEmpty())\n         .forEachOrdered(configMapEntry -> duplicateCseConfigToServicecomb(config,\n             new ConcurrentMapConfiguration(configMapEntry.getValue()),\n             configMapEntry.getKey()));\n-    // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n+\n+// we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n-            new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n+    config.addConfiguration(new DynamicConfiguration(new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n         \"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n         new ConcurrentMapConfiguration(ConfigMapping.getConvertedMap(config)),\n@@ -184,16 +184,14 @@ public final class ConfigUtil {\n   }\n \n   private static void duplicateCseConfigToServicecomb(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+      AbstractConfiguration source, String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n \n     compositeConfiguration.addConfiguration(source, sourceName);\n   }\n \n   private static void duplicateCseConfigToServicecombAtFront(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+      AbstractConfiguration source, String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n \n     compositeConfiguration.addConfigurationAtFront(source, sourceName);\n@@ -217,8 +215,7 @@ public final class ConfigUtil {\n   }\n \n   private static void createDynamicWatchedConfiguration(\n-      ConcurrentCompositeConfiguration localConfiguration,\n-      ConfigCenterConfigurationSource configCenterConfigurationSource) {\n+      ConcurrentCompositeConfiguration localConfiguration, ConfigCenterConfigurationSource configCenterConfigurationSource) {\n     ConcurrentMapConfiguration injectConfig = new ConcurrentMapConfiguration();\n     localConfiguration.addConfigurationAtFront(injectConfig, \"extraInjectConfig\");\n     configCenterConfigurationSource.addUpdateListener(new ServiceCombPropertyUpdateListener(injectConfig));\n@@ -317,4 +314,4 @@ public final class ConfigUtil {\n       }\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "133",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "183",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "188",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 168).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "193",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "194",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 142).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "207",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "212",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "219",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "233",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/273/ConfigUtil.java\nindex 4c1b65fd773..b2e00abf62e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/273/ConfigUtil.java\n@@ -26,7 +26,6 @@ import java.util.Iterator;\n import java.util.LinkedHashMap;\n import java.util.List;\n import java.util.Map;\n-\n import org.apache.commons.configuration.AbstractConfiguration;\n import org.apache.commons.configuration.Configuration;\n import org.apache.commons.configuration.EnvironmentConfiguration;\n@@ -39,7 +38,6 @@ import org.apache.servicecomb.config.spi.ConfigCenterConfigurationSource;\n import org.apache.servicecomb.foundation.common.utils.SPIServiceUtils;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.netflix.config.ConcurrentCompositeConfiguration;\n import com.netflix.config.ConcurrentMapConfiguration;\n import com.netflix.config.ConfigurationManager;\n@@ -64,6 +62,7 @@ public final class ConfigUtil {\n    * this can help {@link ConfigUtil} load config correctly.\n    * </p>\n    */\n+\n   private static final Map<String, Map<String, Object>> EXTRA_CONFIG_MAP = new LinkedHashMap<>();\n \n   private ConfigUtil() {\n@@ -123,27 +122,24 @@ public final class ConfigUtil {\n \n   public static ConcurrentCompositeConfiguration createLocalConfig(List<ConfigModel> configModelList) {\n     ConcurrentCompositeConfiguration config = new ConcurrentCompositeConfiguration();\n-\n     duplicateCseConfigToServicecomb(config,\n-        new ConcurrentMapConfiguration(new SystemConfiguration()),\n+      new ConcurrentMapConfiguration(new SystemConfiguration()),\n         \"configFromSystem\");\n     duplicateCseConfigToServicecomb(config,\n-        convertEnvVariable(new ConcurrentMapConfiguration(new EnvironmentConfiguration())),\n+      convertEnvVariable(new ConcurrentMapConfiguration(new EnvironmentConfiguration())),\n         \"configFromEnvironment\");\n     // If there is extra configurations, add it into config.\n-    EXTRA_CONFIG_MAP.entrySet()\n-        .stream()\n-        .filter(mapEntry -> !mapEntry.getValue().isEmpty())\n-        .forEachOrdered(configMapEntry -> duplicateCseConfigToServicecomb(config,\n-            new ConcurrentMapConfiguration(configMapEntry.getValue()),\n-            configMapEntry.getKey()));\n+    EXTRA_CONFIG_MAP.entrySet().stream()\n+                               .filter(mapEntry -> !mapEntry.getValue().isEmpty()).forEachOrdered(configMapEntry -> duplicateCseConfigToServicecomb(config,\n+new ConcurrentMapConfiguration(configMapEntry.getValue()),\n+configMapEntry.getKey()));\n     // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n-            new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n-        \"configFromYamlFile\");\n+    config.addConfiguration(new DynamicConfiguration(new MicroserviceConfigurationSource(configModelList),\n+      new NeverStartPollingScheduler()),\n+\"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n-        new ConcurrentMapConfiguration(ConfigMapping.getConvertedMap(config)),\n+      new ConcurrentMapConfiguration(ConfigMapping.getConvertedMap(config)),\n         \"configFromMapping\");\n     return config;\n   }\n@@ -156,6 +152,7 @@ public final class ConfigUtil {\n       if (separatedKey.length == 1) {\n         continue;\n       }\n+\n       String newKey = String.join(\".\", separatedKey);\n       source.addProperty(newKey, source.getProperty(key));\n     }\n@@ -163,6 +160,7 @@ public final class ConfigUtil {\n   }\n \n   //inject a copy of servicecomb.xxx for cse.xxx\n+\n   private static void duplicateCseConfigToServicecomb(AbstractConfiguration source) {\n     Iterator<String> keys = source.getKeys();\n     while (keys.hasNext()) {\n@@ -175,37 +173,27 @@ public final class ConfigUtil {\n       if (!source.containsKey(servicecombKey)) {\n         source.addProperty(servicecombKey, source.getProperty(key));\n       } else {\n-        LOGGER\n-            .warn(\n-                \"Key {} with an ambiguous item {} exists, it's recommended to use only one of them.\",\n-                key, servicecombKey);\n+        LOGGER.warn(\"Key {} with an ambiguous item {} exists, it's recommended to use only one of them.\",\n+key,\n+servicecombKey);\n       }\n     }\n   }\n \n-  private static void duplicateCseConfigToServicecomb(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+  private static void duplicateCseConfigToServicecomb(ConcurrentCompositeConfiguration compositeConfiguration, AbstractConfiguration source, String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n-\n     compositeConfiguration.addConfiguration(source, sourceName);\n   }\n \n-  private static void duplicateCseConfigToServicecombAtFront(ConcurrentCompositeConfiguration compositeConfiguration,\n-      AbstractConfiguration source,\n-      String sourceName) {\n+  private static void duplicateCseConfigToServicecombAtFront(ConcurrentCompositeConfiguration compositeConfiguration, AbstractConfiguration source, String sourceName) {\n     duplicateCseConfigToServicecomb(source);\n-\n     compositeConfiguration.addConfigurationAtFront(source, sourceName);\n   }\n \n-  private static ConfigCenterConfigurationSource createConfigCenterConfigurationSource(\n-      Configuration localConfiguration) {\n-    ConfigCenterConfigurationSource configCenterConfigurationSource =\n-        SPIServiceUtils.getTargetService(ConfigCenterConfigurationSource.class);\n+  private static ConfigCenterConfigurationSource createConfigCenterConfigurationSource(Configuration localConfiguration) {\n+    ConfigCenterConfigurationSource configCenterConfigurationSource = SPIServiceUtils.getTargetService(ConfigCenterConfigurationSource.class);\n     if (null == configCenterConfigurationSource) {\n-      LOGGER.info(\n-          \"config center SPI service can not find, skip to load configuration from config center\");\n+      LOGGER.info(\"config center SPI service can not find, skip to load configuration from config center\");\n       return null;\n     }\n \n@@ -216,23 +204,19 @@ public final class ConfigUtil {\n     return configCenterConfigurationSource;\n   }\n \n-  private static void createDynamicWatchedConfiguration(\n-      ConcurrentCompositeConfiguration localConfiguration,\n-      ConfigCenterConfigurationSource configCenterConfigurationSource) {\n+  private static void createDynamicWatchedConfiguration(ConcurrentCompositeConfiguration localConfiguration, ConfigCenterConfigurationSource configCenterConfigurationSource) {\n     ConcurrentMapConfiguration injectConfig = new ConcurrentMapConfiguration();\n     localConfiguration.addConfigurationAtFront(injectConfig, \"extraInjectConfig\");\n     configCenterConfigurationSource.addUpdateListener(new ServiceCombPropertyUpdateListener(injectConfig));\n \n-    DynamicWatchedConfiguration configFromConfigCenter =\n-        new DynamicWatchedConfiguration(configCenterConfigurationSource);\n+    DynamicWatchedConfiguration configFromConfigCenter = new DynamicWatchedConfiguration(configCenterConfigurationSource);\n     duplicateCseConfigToServicecomb(configFromConfigCenter);\n     localConfiguration.addConfigurationAtFront(configFromConfigCenter, \"configCenterConfig\");\n   }\n \n   public static AbstractConfiguration createDynamicConfig() {\n     ConcurrentCompositeConfiguration compositeConfig = ConfigUtil.createLocalConfig();\n-    ConfigCenterConfigurationSource configCenterConfigurationSource =\n-        createConfigCenterConfigurationSource(compositeConfig);\n+    ConfigCenterConfigurationSource configCenterConfigurationSource = createConfigCenterConfigurationSource(compositeConfig);\n     if (configCenterConfigurationSource != null) {\n       createDynamicWatchedConfiguration(compositeConfig, configCenterConfigurationSource);\n     }\n@@ -246,14 +230,12 @@ public final class ConfigUtil {\n     }\n \n     ConcurrentCompositeConfiguration compositeConfig = ConfigUtil.createLocalConfig();\n-    ConfigCenterConfigurationSource configCenterConfigurationSource =\n-        createConfigCenterConfigurationSource(compositeConfig);\n+    ConfigCenterConfigurationSource configCenterConfigurationSource = createConfigCenterConfigurationSource(compositeConfig);\n     if (configCenterConfigurationSource != null) {\n       createDynamicWatchedConfiguration(compositeConfig, configCenterConfigurationSource);\n     }\n \n     ConfigurationManager.install(compositeConfig);\n-\n     if (configCenterConfigurationSource != null) {\n       configCenterConfigurationSource.init(compositeConfig);\n     }\n@@ -278,7 +260,6 @@ public final class ConfigUtil {\n   }\n \n   private static class ServiceCombPropertyUpdateListener implements WatchedUpdateListener {\n-\n     private final ConcurrentMapConfiguration injectConfig;\n \n     ServiceCombPropertyUpdateListener(ConcurrentMapConfiguration injectConfig) {\n@@ -317,4 +298,4 @@ public final class ConfigUtil {\n       }\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 48
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/273/ConfigUtil.java\nindex 4c1b65fd773..d4752b2856d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/273/ConfigUtil.java\n@@ -139,7 +139,7 @@ public final class ConfigUtil {\n             configMapEntry.getKey()));\n     // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n+    config.addConfiguration(new DynamicConfiguration(\n             new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n         \"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/273/ConfigUtil.java\nindex 4c1b65fd773..d4752b2856d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/273/ConfigUtil.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/273/ConfigUtil.java\n@@ -139,7 +139,7 @@ public final class ConfigUtil {\n             configMapEntry.getKey()));\n     // we have already copy the cse config to the serviceComb config when we load the config from local yaml files\n     // hence, we do not need duplicate copy it.\n-    config.addConfiguration( new DynamicConfiguration(\n+    config.addConfiguration(new DynamicConfiguration(\n             new MicroserviceConfigurationSource(configModelList), new NeverStartPollingScheduler()),\n         \"configFromYamlFile\");\n     duplicateCseConfigToServicecombAtFront(config,\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

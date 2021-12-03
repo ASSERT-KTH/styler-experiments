@@ -1,0 +1,88 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "164",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.qp.physical.crud;\n\nimport org.apache.iotdb.db.metadata.PartialPath;\nimport org.apache.iotdb.db.qp.logical.Operator;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/164/AlignByDevicePlan.java\nindex be6ed9809a8..3c7a67d2ec9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/164/AlignByDevicePlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/164/AlignByDevicePlan.java\nindex be6ed9809a8..3c7a67d2ec9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/164/AlignByDevicePlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/164/AlignByDevicePlan.java\nindex be6ed9809a8..8ac9eebe52f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/164/AlignByDevicePlan.java\n@@ -23,16 +23,13 @@ import org.apache.iotdb.db.qp.logical.Operator;\n import org.apache.iotdb.db.qp.logical.Operator.OperatorType;\n import org.apache.iotdb.tsfile.file.metadata.enums.TSDataType;\n import org.apache.iotdb.tsfile.read.expression.IExpression;\n-\n import java.util.List;\n import java.util.Map;\n \n public class AlignByDevicePlan extends QueryPlan {\n \n-  private List<String>\n-      measurements; // to record result measurement columns, e.g. temperature, status, speed\n-  private Map<String, String>\n-      measurementAliasMap; // select s1, s2 as speed from root, then s2 -> speed\n+  private List<String> measurements; // to record result measurement columns, e.g. temperature, status, speed\n+  private Map<String, String> measurementAliasMap; // select s1, s2 as speed from root, then s2 -> speed\n   // to check data type consistency for the same name sensor of different devices\n   private List<PartialPath> devices;\n   // to record the datatype of the column in the result set\n@@ -43,9 +40,7 @@ public class AlignByDevicePlan extends QueryPlan {\n \n   // to record the real type of the measurement\n   private Map<String, TSDataType> measurementDataTypeMap;\n-\n   private GroupByTimePlan groupByTimePlan;\n-\n   private FillQueryPlan fillQueryPlan;\n   private AggregationPlan aggregationPlan;\n \n@@ -142,9 +137,10 @@ public class AlignByDevicePlan extends QueryPlan {\n    * null. Constant: the measurements that have quotation mark. e.g. \"abc\",'11'. The data type is\n    * considered as String and the value is the measurement name.\n    */\n+\n   public enum MeasurementType {\n     Exist,\n     NonExist,\n     Constant\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/164/AlignByDevicePlan.java\nindex be6ed9809a8..3c7a67d2ec9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/164/AlignByDevicePlan.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/164/AlignByDevicePlan.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.qp.physical.crud;\n \n import org.apache.iotdb.db.metadata.PartialPath;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

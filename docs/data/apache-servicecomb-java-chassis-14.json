@@ -1,0 +1,145 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "14",
+    "information": {
+        "violations": [
+            {
+                "line": "80",
+                "column": "10",
+                "severity": "warning",
+                "message": "',' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "          operationGenerator.getProviderMethod().getName(),\n          paramIdx)\n          , e);\n    }\n\n    // set swagger params into operationGenerator, in declared field order",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..2fcc25f94a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/14/BeanParamAnnotationProcessor.java\n@@ -76,8 +76,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n           \"Processing param failed, method=%s:%s, beanParamIdx=%d\",\n           operationGenerator.getProviderMethod().getDeclaringClass().getName(),\n           operationGenerator.getProviderMethod().getName(),\n-          paramIdx)\n-          , e);\n+          paramIdx),\n+          e);\n     }\n \n     // set swagger params into operationGenerator, in declared field order\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "80",
+                    "column": "10",
+                    "severity": "warning",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "96",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..17ff2f6e8af 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/14/BeanParamAnnotationProcessor.java\n@@ -93,10 +93,10 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * generate swagger params according to JAX-RS param annotations and set them into {@code swaggerParamMap}.\n    *\n    * @param swaggerParamMap the map contains the generated swagger param,\n-   * key is the name defined by source code(the declared field name) and value is the swagger param\n+   *                        key is the name defined by source code(the declared field name) and value is the swagger param\n    */\n   private void traversalParamField(OperationGenerator operationGenerator, Class<?> beanParamClazz,\n-      Map<String, Parameter> swaggerParamMap) throws IntrospectionException {\n+                                   Map<String, Parameter> swaggerParamMap) throws IntrospectionException {\n     for (Field beanParamField : beanParamClazz.getDeclaredFields()) {\n       // ignore synthetic member to avoid build failure\n       // see https://github.com/jacoco/jacoco/issues/168\n@@ -130,7 +130,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @throws IntrospectionException see {@linkplain PropertyDescriptor#PropertyDescriptor(String, Class)}\n    */\n   private Parameter processFieldSetter(OperationGenerator operationGenerator, Class<?> beanParamClazz,\n-      Field beanParamField) throws IntrospectionException {\n+                                       Field beanParamField) throws IntrospectionException {\n     Parameter swaggerParam = null;\n     PropertyDescriptor propertyDescriptor = new PropertyDescriptor(beanParamField.getName(), beanParamClazz);\n     Method writeMethod = propertyDescriptor.getWriteMethod();\n@@ -145,8 +145,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * Generate a swagger parameter according to {@code annotations} and {@code genericType}.\n    *\n    * @param operationGenerator operationGenerator\n-   * @param annotations annotations on fields or setter methods\n-   * @param genericType type of the fields, or the param type of the setter methods\n+   * @param annotations        annotations on fields or setter methods\n+   * @param genericType        type of the fields, or the param type of the setter methods\n    * @return a swagger param, or null if there is no JAX-RS annotation in {@code annotations}\n    */\n   private Parameter generateSwaggerParam(\n@@ -171,9 +171,9 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * Generate swagger parameter, set default value, and return it.\n    *\n    * @param operationGenerator operationGenerator\n-   * @param fieldAnnotation JAX-RS param annotation\n-   * @param genericParamType type of the parameter\n-   * @param defaultValue default value, can be null\n+   * @param fieldAnnotation    JAX-RS param annotation\n+   * @param genericParamType   type of the parameter\n+   * @param defaultValue       default value, can be null\n    * @return the generated swagger Parameter\n    */\n   private Parameter setUpParameter(\n@@ -196,8 +196,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * Generate a swagger parameter, set up name and type info.\n    *\n    * @param swaggerGeneratorContext context data carried by {@linkplain OperationGenerator}\n-   * @param fieldAnnotation JAX-RS param annotation\n-   * @param genericParamType default value, can be null\n+   * @param fieldAnnotation         JAX-RS param annotation\n+   * @param genericParamType        default value, can be null\n    * @return the generated swagger parameter\n    */\n   private AbstractSerializableParameter<?> createParameter(\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..c8bb24edb6c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/14/BeanParamAnnotationProcessor.java\n@@ -76,8 +76,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n           \"Processing param failed, method=%s:%s, beanParamIdx=%d\",\n           operationGenerator.getProviderMethod().getDeclaringClass().getName(),\n           operationGenerator.getProviderMethod().getName(),\n-          paramIdx)\n-          , e);\n+          paramIdx), e);\n     }\n \n     // set swagger params into operationGenerator, in declared field order\n@@ -114,8 +113,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n       if (null == swaggerParam) {\n         throw new IllegalArgumentException(String.format(\n             \"There is a field[%s] cannot be mapped to swagger param. Maybe you should tag @JsonIgnore on it.\",\n-            beanParamField.getName())\n-        );\n+            beanParamField.getName()));\n       }\n       swaggerParamMap.put(beanParamField.getName(), swaggerParam);\n     }\n@@ -151,8 +149,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    */\n   private Parameter generateSwaggerParam(\n       OperationGenerator operationGenerator,\n-      Annotation[] annotations,\n-      Type genericType) {\n+      Annotation[] annotations, Type genericType) {\n     String defaultValue = null;\n     for (Annotation fieldAnnotation : annotations) {\n       if (!SUPPORTED_PARAM_ANNOTATIONS.contains(fieldAnnotation.annotationType())) {\n@@ -177,10 +174,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @return the generated swagger Parameter\n    */\n   private Parameter setUpParameter(\n-      OperationGenerator operationGenerator,\n-      Annotation fieldAnnotation,\n-      Type genericParamType,\n-      String defaultValue) {\n+      OperationGenerator operationGenerator, Annotation fieldAnnotation, Type genericParamType, String defaultValue) {\n     AbstractSerializableParameter<?> parameter = createParameter(\n         operationGenerator.getContext(),\n         fieldAnnotation,\n@@ -201,9 +195,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @return the generated swagger parameter\n    */\n   private AbstractSerializableParameter<?> createParameter(\n-      SwaggerGeneratorContext swaggerGeneratorContext,\n-      Annotation fieldAnnotation,\n-      Type genericParamType) {\n+      SwaggerGeneratorContext swaggerGeneratorContext, Annotation fieldAnnotation, Type genericParamType) {\n     // find the corresponding ParameterProcessor and process the parameter\n     final AbstractParameterProcessor<?> parameterAnnotationProcessor =\n         (AbstractParameterProcessor<?>) swaggerGeneratorContext\n@@ -226,4 +218,4 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n     }\n     return false;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "72",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "73",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 208).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "79",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "91",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 170).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "109",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 155).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "126",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "147",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 125).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "171",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "172",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 133).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "188",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 160).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "190",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 194).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..fbc7006678f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/14/BeanParamAnnotationProcessor.java\n@@ -29,28 +29,25 @@ import java.util.HashSet;\n import java.util.Map;\n import java.util.Objects;\n import java.util.Set;\n-\n import javax.ws.rs.CookieParam;\n import javax.ws.rs.DefaultValue;\n import javax.ws.rs.FormParam;\n import javax.ws.rs.HeaderParam;\n import javax.ws.rs.PathParam;\n import javax.ws.rs.QueryParam;\n-\n import org.apache.servicecomb.swagger.generator.core.OperationGenerator;\n import org.apache.servicecomb.swagger.generator.core.ParameterAnnotationProcessor;\n import org.apache.servicecomb.swagger.generator.core.SwaggerGeneratorContext;\n import org.apache.servicecomb.swagger.generator.core.processor.parameter.AbstractParameterProcessor;\n import org.apache.servicecomb.swagger.generator.core.utils.ParamUtils;\n-\n import com.fasterxml.jackson.annotation.JsonIgnore;\n-\n import io.swagger.models.parameters.AbstractSerializableParameter;\n import io.swagger.models.parameters.Parameter;\n \n /**\n  * For {@link javax.ws.rs.BeanParam}\n  */\n+\n public class BeanParamAnnotationProcessor implements ParameterAnnotationProcessor {\n   public static final Set<Class<?>> SUPPORTED_PARAM_ANNOTATIONS = new HashSet<>();\n \n@@ -72,20 +69,15 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n       // traversal fields, get those JAX-RS params\n       traversalParamField(operationGenerator, beanParamClazz, swaggerParamMap);\n     } catch (IllegalArgumentException | IntrospectionException e) {\n-      throw new Error(String.format(\n-          \"Processing param failed, method=%s:%s, beanParamIdx=%d\",\n-          operationGenerator.getProviderMethod().getDeclaringClass().getName(),\n-          operationGenerator.getProviderMethod().getName(),\n-          paramIdx)\n-          , e);\n+      throw new Error(String.format(\"Processing param failed, method=%s:%s, beanParamIdx=%d\", operationGenerator.getProviderMethod().getDeclaringClass()\n+                                                                                                                                    .getName(), operationGenerator.getProviderMethod().getName(), paramIdx), e);\n     }\n \n     // set swagger params into operationGenerator, in declared field order\n+\n     Field[] declaredProducerFields = beanParamClazz.getDeclaredFields();\n-    Arrays.stream(declaredProducerFields)\n-        .map(declaredProducerField -> swaggerParamMap.get(declaredProducerField.getName()))\n-        .filter(Objects::nonNull)\n-        .forEach(operationGenerator::addProviderParameter);\n+    Arrays.stream(declaredProducerFields).map(declaredProducerField -> swaggerParamMap.get(declaredProducerField.getName()))\n+                                         .filter(Objects::nonNull).forEach(operationGenerator::addProviderParameter);\n   }\n \n   /**\n@@ -95,8 +87,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @param swaggerParamMap the map contains the generated swagger param,\n    * key is the name defined by source code(the declared field name) and value is the swagger param\n    */\n-  private void traversalParamField(OperationGenerator operationGenerator, Class<?> beanParamClazz,\n-      Map<String, Parameter> swaggerParamMap) throws IntrospectionException {\n+\n+  private void traversalParamField(OperationGenerator operationGenerator, Class<?> beanParamClazz, Map<String, Parameter> swaggerParamMap) throws IntrospectionException {\n     for (Field beanParamField : beanParamClazz.getDeclaredFields()) {\n       // ignore synthetic member to avoid build failure\n       // see https://github.com/jacoco/jacoco/issues/168\n@@ -104,19 +96,20 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n         continue;\n       }\n       // try to process this field directly\n-      Parameter swaggerParam = generateSwaggerParam(operationGenerator, beanParamField.getAnnotations(),\n-          beanParamField.getGenericType());\n+\n+      Parameter swaggerParam = generateSwaggerParam(operationGenerator,\n+beanParamField.getAnnotations(),\n+beanParamField.getGenericType());\n       if (null == swaggerParam) {\n         // if swaggerParam is null, maybe the JAX-RS param annotation is tagged onto the write method\n         swaggerParam = processFieldSetter(operationGenerator, beanParamClazz, beanParamField);\n       }\n \n       if (null == swaggerParam) {\n-        throw new IllegalArgumentException(String.format(\n-            \"There is a field[%s] cannot be mapped to swagger param. Maybe you should tag @JsonIgnore on it.\",\n-            beanParamField.getName())\n-        );\n+        throw new IllegalArgumentException(String.format(\"There is a field[%s] cannot be mapped to swagger param. Maybe you should tag @JsonIgnore on it.\",\n+beanParamField.getName()));\n       }\n+\n       swaggerParamMap.put(beanParamField.getName(), swaggerParam);\n     }\n   }\n@@ -129,14 +122,15 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @return the generated swagger param, or null if the setter method is not tagged by JAX-RS param annotations\n    * @throws IntrospectionException see {@linkplain PropertyDescriptor#PropertyDescriptor(String, Class)}\n    */\n-  private Parameter processFieldSetter(OperationGenerator operationGenerator, Class<?> beanParamClazz,\n-      Field beanParamField) throws IntrospectionException {\n+\n+  private Parameter processFieldSetter(OperationGenerator operationGenerator, Class<?> beanParamClazz, Field beanParamField) throws IntrospectionException {\n     Parameter swaggerParam = null;\n     PropertyDescriptor propertyDescriptor = new PropertyDescriptor(beanParamField.getName(), beanParamClazz);\n     Method writeMethod = propertyDescriptor.getWriteMethod();\n     if (null != writeMethod) {\n-      swaggerParam = generateSwaggerParam(operationGenerator, writeMethod.getAnnotations(),\n-          beanParamField.getGenericType());\n+      swaggerParam = generateSwaggerParam(operationGenerator,\n+writeMethod.getAnnotations(),\n+beanParamField.getGenericType());\n     }\n     return swaggerParam;\n   }\n@@ -149,10 +143,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @param genericType type of the fields, or the param type of the setter methods\n    * @return a swagger param, or null if there is no JAX-RS annotation in {@code annotations}\n    */\n-  private Parameter generateSwaggerParam(\n-      OperationGenerator operationGenerator,\n-      Annotation[] annotations,\n-      Type genericType) {\n+\n+  private Parameter generateSwaggerParam(OperationGenerator operationGenerator, Annotation[] annotations, Type genericType) {\n     String defaultValue = null;\n     for (Annotation fieldAnnotation : annotations) {\n       if (!SUPPORTED_PARAM_ANNOTATIONS.contains(fieldAnnotation.annotationType())) {\n@@ -161,7 +153,6 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n         }\n         continue;\n       }\n-\n       return setUpParameter(operationGenerator, fieldAnnotation, genericType, defaultValue);\n     }\n     return null;\n@@ -176,16 +167,9 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @param defaultValue default value, can be null\n    * @return the generated swagger Parameter\n    */\n-  private Parameter setUpParameter(\n-      OperationGenerator operationGenerator,\n-      Annotation fieldAnnotation,\n-      Type genericParamType,\n-      String defaultValue) {\n-    AbstractSerializableParameter<?> parameter = createParameter(\n-        operationGenerator.getContext(),\n-        fieldAnnotation,\n-        genericParamType);\n \n+  private Parameter setUpParameter(OperationGenerator operationGenerator, Annotation fieldAnnotation, Type genericParamType, String defaultValue) {\n+    AbstractSerializableParameter<?> parameter = createParameter(operationGenerator.getContext(), fieldAnnotation, genericParamType);\n     if (null != defaultValue) {\n       parameter.setDefaultValue(defaultValue);\n     }\n@@ -200,14 +184,10 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n    * @param genericParamType default value, can be null\n    * @return the generated swagger parameter\n    */\n-  private AbstractSerializableParameter<?> createParameter(\n-      SwaggerGeneratorContext swaggerGeneratorContext,\n-      Annotation fieldAnnotation,\n-      Type genericParamType) {\n+\n+  private AbstractSerializableParameter<?> createParameter(SwaggerGeneratorContext swaggerGeneratorContext, Annotation fieldAnnotation, Type genericParamType) {\n     // find the corresponding ParameterProcessor and process the parameter\n-    final AbstractParameterProcessor<?> parameterAnnotationProcessor =\n-        (AbstractParameterProcessor<?>) swaggerGeneratorContext\n-            .findParameterAnnotationProcessor(fieldAnnotation.annotationType());\n+    final AbstractParameterProcessor<?> parameterAnnotationProcessor = (AbstractParameterProcessor<?>) swaggerGeneratorContext.findParameterAnnotationProcessor(fieldAnnotation.annotationType());\n     AbstractSerializableParameter<?> parameter = parameterAnnotationProcessor.createParameter();\n     String paramName = parameterAnnotationProcessor.getAnnotationParameterName(fieldAnnotation);\n     parameter.setName(paramName);\n@@ -218,6 +198,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n   /**\n    * Those fields tagged by @JsonIgnore should be ignored.\n    */\n+\n   private boolean fieldShouldIgnore(Field beanParamField) {\n     for (Annotation annotation : beanParamField.getAnnotations()) {\n       if (annotation instanceof JsonIgnore) {\n@@ -226,4 +207,4 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n     }\n     return false;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 57
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..2fcc25f94a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/14/BeanParamAnnotationProcessor.java\n@@ -76,8 +76,8 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n           \"Processing param failed, method=%s:%s, beanParamIdx=%d\",\n           operationGenerator.getProviderMethod().getDeclaringClass().getName(),\n           operationGenerator.getProviderMethod().getName(),\n-          paramIdx)\n-          , e);\n+          paramIdx),\n+          e);\n     }\n \n     // set swagger params into operationGenerator, in declared field order\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/14/BeanParamAnnotationProcessor.java\nindex 0d7f32d5fa6..893b6bf4c56 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/14/BeanParamAnnotationProcessor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/14/BeanParamAnnotationProcessor.java\n@@ -76,8 +76,7 @@ public class BeanParamAnnotationProcessor implements ParameterAnnotationProcesso\n           \"Processing param failed, method=%s:%s, beanParamIdx=%d\",\n           operationGenerator.getProviderMethod().getDeclaringClass().getName(),\n           operationGenerator.getProviderMethod().getName(),\n-          paramIdx)\n-          , e);\n+          paramIdx), e);\n     }\n \n     // set swagger params into operationGenerator, in declared field order\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

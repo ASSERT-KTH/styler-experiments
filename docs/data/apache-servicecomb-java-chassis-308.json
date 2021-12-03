@@ -1,0 +1,98 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "308",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 153).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private boolean enabled;\n\n  @InjectProperty(keys = \"swagger.html.asciidoctorCss\", defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n  private String asciidoctorCss;\n\n  public boolean isEnabled() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/308/InspectorConfig.java\nindex 70683fc6a93..facbb2bd115 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/308/InspectorConfig.java\n@@ -24,8 +24,9 @@ public class InspectorConfig {\n   @InjectProperty(keys = \"enabled\", defaultValue = \"true\")\n   private boolean enabled;\n \n-  @InjectProperty(keys = \"swagger.html.asciidoctorCss\", defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n-  private String asciidoctorCss;\n+  @ InjectProperty(keys = \"swagger.html.asciidoctorCss\",\n+  defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n+   private String asciidoctorCss;\n \n   public boolean isEnabled() {\n     return enabled;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 153).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/308/InspectorConfig.java\nindex 70683fc6a93..82944c0c873 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/308/InspectorConfig.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.inspector.internal;\n \n import org.apache.servicecomb.config.inject.InjectProperties;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 153).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/308/InspectorConfig.java\nindex 70683fc6a93..21ba73513ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/308/InspectorConfig.java\n@@ -42,4 +42,4 @@ public class InspectorConfig {\n   public void setAsciidoctorCss(String asciidoctorCss) {\n     this.asciidoctorCss = asciidoctorCss;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 153).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/308/InspectorConfig.java\nindex 70683fc6a93..21ba73513ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/308/InspectorConfig.java\n@@ -42,4 +42,4 @@ public class InspectorConfig {\n   public void setAsciidoctorCss(String asciidoctorCss) {\n     this.asciidoctorCss = asciidoctorCss;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 177).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "25",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/308/InspectorConfig.java\nindex 70683fc6a93..5568c5b1180 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/308/InspectorConfig.java\n@@ -22,9 +22,7 @@ import org.apache.servicecomb.config.inject.InjectProperty;\n @InjectProperties(prefix = \"servicecomb.inspector\")\n public class InspectorConfig {\n   @InjectProperty(keys = \"enabled\", defaultValue = \"true\")\n-  private boolean enabled;\n-\n-  @InjectProperty(keys = \"swagger.html.asciidoctorCss\", defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n+  private boolean enabled;@InjectProperty(keys = \"swagger.html.asciidoctorCss\", defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n   private String asciidoctorCss;\n \n   public boolean isEnabled() {\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/308/InspectorConfig.java\nindex 70683fc6a93..facbb2bd115 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/308/InspectorConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/308/InspectorConfig.java\n@@ -24,8 +24,9 @@ public class InspectorConfig {\n   @InjectProperty(keys = \"enabled\", defaultValue = \"true\")\n   private boolean enabled;\n \n-  @InjectProperty(keys = \"swagger.html.asciidoctorCss\", defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n-  private String asciidoctorCss;\n+  @ InjectProperty(keys = \"swagger.html.asciidoctorCss\",\n+  defaultValue = \"https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.css\")\n+   private String asciidoctorCss;\n \n   public boolean isEnabled() {\n     return enabled;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "177",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "38",
+                "severity": "warning",
+                "message": "'(' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n        if (!isStepIdUnique(userScenarioStep.getStepId())) {\n            throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/177/JHttpUserScenario.java\nindex f1975b7aa7c..7cd7a82d42d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/177/JHttpUserScenario.java\n@@ -30,7 +30,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/177/JHttpUserScenario.java\nindex f1975b7aa7c..7cd7a82d42d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/177/JHttpUserScenario.java\n@@ -30,7 +30,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/177/JHttpUserScenario.java\nindex f1975b7aa7c..2eabe7ed00c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/177/JHttpUserScenario.java\n@@ -30,7 +30,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n@@ -63,4 +63,4 @@ public class JHttpUserScenario {\n     public JHttpScenarioGlobalContext getScenarioGlobalContext() {\n         return scenarioGlobalContext;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/177/JHttpUserScenario.java\nindex f1975b7aa7c..c6600841c61 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/177/JHttpUserScenario.java\n@@ -13,7 +13,9 @@ import static java.lang.String.format;\n  * @see JHttpUserScenarioInvoker\n  * @see JHttpUserScenarioInvocationListener\n  */\n+\n public class JHttpUserScenario {\n+\n     private Integer stepsCounter = 0;\n     private final String scenarioId;\n     private final String scenarioDisplayName;\n@@ -30,7 +32,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n@@ -41,7 +43,8 @@ public class JHttpUserScenario {\n     }\n \n     private boolean isStepIdUnique(String id) {\n-        return userScenarioSteps.stream().map(JHttpUserScenarioStep::getStepId).noneMatch(stepId -> stepId.equals(id));\n+        return userScenarioSteps.stream().map(JHttpUserScenarioStep::getStepId)\n+                                         .noneMatch(stepId -> stepId.equals(id));\n     }\n \n     public String getScenarioId() {\n@@ -63,4 +66,4 @@ public class JHttpUserScenario {\n     public JHttpScenarioGlobalContext getScenarioGlobalContext() {\n         return scenarioGlobalContext;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/177/JHttpUserScenario.java\nindex f1975b7aa7c..7cd7a82d42d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/177/JHttpUserScenario.java\n@@ -30,7 +30,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/177/JHttpUserScenario.java\nindex f1975b7aa7c..7cd7a82d42d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/177/JHttpUserScenario.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/177/JHttpUserScenario.java\n@@ -30,7 +30,7 @@ public class JHttpUserScenario {\n         return this;\n     }\n \n-    public JHttpUserScenario addStep (JHttpUserScenarioStep userScenarioStep) {\n+    public JHttpUserScenario addStep(JHttpUserScenarioStep userScenarioStep) {\n         if (!isStepIdUnique(userScenarioStep.getStepId())) {\n             throw new IllegalArgumentException(format(\"Step id '%s' is not unique!\", userScenarioStep.getStepId()));\n         }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

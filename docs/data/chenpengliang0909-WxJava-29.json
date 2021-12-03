@@ -1,0 +1,84 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 123).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Created by ecoolper on 2017/5/5.\n */\npublic class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n  public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n    super(requestHttp);\n  }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..36b742cd94b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -26,9 +26,9 @@ import java.util.Map;\n \n /**\n  * Created by ecoolper on 2017/5/5.\n- */\n-public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n-  public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n+ */ public\n+class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n+   public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n     super(requestHttp);\n   }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..19b3c28ec9f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -27,7 +27,8 @@ import java.util.Map;\n /**\n  * Created by ecoolper on 2017/5/5.\n  */\n-public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n+public class MaterialUploadApacheHttpRequestExecutor\n+    extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n   public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n     super(requestHttp);\n   }\n@@ -51,12 +52,12 @@ public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadReque\n \n     MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();\n     multipartEntityBuilder\n-      .addBinaryBody(\"media\", file)\n-      .setMode(HttpMultipartMode.RFC6532);\n+        .addBinaryBody(\"media\", file)\n+        .setMode(HttpMultipartMode.RFC6532);\n     Map<String, String> form = material.getForm();\n     if (material.getForm() != null) {\n       multipartEntityBuilder.addPart(\"description\",\n-        new StringBody(WxGsonBuilder.create().toJson(form), ContentType.create(\"text/plain\", Consts.UTF_8)));\n+          new StringBody(WxGsonBuilder.create().toJson(form), ContentType.create(\"text/plain\", Consts.UTF_8)));\n     }\n \n     httpPost.setEntity(multipartEntityBuilder.build());\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..ea542fdff42 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -74,4 +74,4 @@ public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadReque\n       httpPost.releaseConnection();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..229a45e1c38 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -18,7 +18,6 @@ import org.apache.http.entity.mime.HttpMultipartMode;\n import org.apache.http.entity.mime.MultipartEntityBuilder;\n import org.apache.http.entity.mime.content.StringBody;\n import org.apache.http.impl.client.CloseableHttpClient;\n-\n import java.io.File;\n import java.io.FileNotFoundException;\n import java.io.IOException;\n@@ -27,6 +26,8 @@ import java.util.Map;\n /**\n  * Created by ecoolper on 2017/5/5.\n  */\n+\n+\n public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n   public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n     super(requestHttp);\n@@ -50,18 +51,17 @@ public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadReque\n     }\n \n     MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();\n-    multipartEntityBuilder\n-      .addBinaryBody(\"media\", file)\n-      .setMode(HttpMultipartMode.RFC6532);\n+    multipartEntityBuilder.addBinaryBody(\"media\", file).setMode(HttpMultipartMode.RFC6532);\n+\n     Map<String, String> form = material.getForm();\n     if (material.getForm() != null) {\n-      multipartEntityBuilder.addPart(\"description\",\n-        new StringBody(WxGsonBuilder.create().toJson(form), ContentType.create(\"text/plain\", Consts.UTF_8)));\n+      multipartEntityBuilder.addPart(\"description\", new StringBody(\n+                                       WxGsonBuilder.create().toJson(form),\n+                                       ContentType.create(\"text/plain\", Consts.UTF_8)\n+                                                    ));\n     }\n-\n     httpPost.setEntity(multipartEntityBuilder.build());\n     httpPost.setHeader(\"Content-Type\", ContentType.MULTIPART_FORM_DATA.toString());\n-\n     try (CloseableHttpResponse response = requestHttp.getRequestHttpClient().execute(httpPost)) {\n       String responseContent = Utf8ResponseHandler.INSTANCE.handleResponse(response);\n       WxError error = WxError.fromJson(responseContent, WxType.MP);\n@@ -74,4 +74,4 @@ public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadReque\n       httpPost.releaseConnection();\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..36b742cd94b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -26,9 +26,9 @@ import java.util.Map;\n \n /**\n  * Created by ecoolper on 2017/5/5.\n- */\n-public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n-  public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n+ */ public\n+class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n+   public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n     super(requestHttp);\n   }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\nindex d2e1029f9c0..bf6e7712b2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/29/MaterialUploadApacheHttpRequestExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/29/MaterialUploadApacheHttpRequestExecutor.java\n@@ -26,8 +26,7 @@ import java.util.Map;\n \n /**\n  * Created by ecoolper on 2017/5/5.\n- */\n-public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n+ */ public class MaterialUploadApacheHttpRequestExecutor extends MaterialUploadRequestExecutor<CloseableHttpClient, HttpHost> {\n   public MaterialUploadApacheHttpRequestExecutor(RequestHttp requestHttp) {\n     super(requestHttp);\n   }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

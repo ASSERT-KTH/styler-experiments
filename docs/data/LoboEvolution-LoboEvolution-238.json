@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "238",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface EventListenerInitializer {\n\n\t/**\n\t * This method is called by the SVG viewer when the scripts are loaded to\n\t * register the listener needed.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/238/EventListenerInitializer.java\nindex ea3107b91bf..f44c556d98b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/238/EventListenerInitializer.java\n@@ -30,11 +30,11 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface EventListenerInitializer {\n \n-\t/**\n+    /**\n \t * This method is called by the SVG viewer when the scripts are loaded to\n \t * register the listener needed.\n \t *\n \t * @param doc The current document.\n \t */\n-\tvoid initializeEventListeners(SVGDocument doc);\n+ void initializeEventListeners(SVGDocument doc);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/238/EventListenerInitializer.java\nindex ea3107b91bf..7fb34fd95f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/238/EventListenerInitializer.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -30,11 +31,11 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface EventListenerInitializer {\n \n-\t/**\n-\t * This method is called by the SVG viewer when the scripts are loaded to\n-\t * register the listener needed.\n-\t *\n-\t * @param doc The current document.\n-\t */\n-\tvoid initializeEventListeners(SVGDocument doc);\n+    /**\n+     * This method is called by the SVG viewer when the scripts are loaded to\n+     * register the listener needed.\n+     *\n+     * @param doc The current document.\n+     */\n+    void initializeEventListeners(SVGDocument doc);\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/238/EventListenerInitializer.java\nindex ea3107b91bf..4a80d782b91 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/238/EventListenerInitializer.java\n@@ -28,13 +28,17 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface EventListenerInitializer {\n \n-\t/**\n-\t * This method is called by the SVG viewer when the scripts are loaded to\n-\t * register the listener needed.\n-\t *\n-\t * @param doc The current document.\n-\t */\n-\tvoid initializeEventListeners(SVGDocument doc);\n-}\n+    /**\n+     * This method is called by the SVG viewer when the scripts are loaded to\n+     * register the listener needed.\n+     *\n+     * @param doc The current document.\n+     */\n+\n+\n+    void initializeEventListeners(SVGDocument doc);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/238/EventListenerInitializer.java\nindex ea3107b91bf..f44c556d98b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/238/EventListenerInitializer.java\n@@ -30,11 +30,11 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface EventListenerInitializer {\n \n-\t/**\n+    /**\n \t * This method is called by the SVG viewer when the scripts are loaded to\n \t * register the listener needed.\n \t *\n \t * @param doc The current document.\n \t */\n-\tvoid initializeEventListeners(SVGDocument doc);\n+ void initializeEventListeners(SVGDocument doc);\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/238/EventListenerInitializer.java\nindex ea3107b91bf..f44c556d98b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/238/EventListenerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/238/EventListenerInitializer.java\n@@ -30,11 +30,11 @@ package org.loboevolution.html.dom.svg;\n  */\n public interface EventListenerInitializer {\n \n-\t/**\n+    /**\n \t * This method is called by the SVG viewer when the scripts are loaded to\n \t * register the listener needed.\n \t *\n \t * @param doc The current document.\n \t */\n-\tvoid initializeEventListeners(SVGDocument doc);\n+ void initializeEventListeners(SVGDocument doc);\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

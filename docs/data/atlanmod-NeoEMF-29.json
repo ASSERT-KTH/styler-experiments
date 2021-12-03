@@ -1,0 +1,71 @@
+{
+    "project_name": "atlanmod-NeoEMF",
+    "violation_id": "29",
+    "information": {
+        "violations": [
+            {
+                "line": "63",
+                "column": "5",
+                "severity": "warning",
+                "message": "'{' at column 5 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception\n    {\n        final boolean isReadOnly = config.isReadOnly();\n\n        //This will not throw any exception even if the connection failed",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/atlanmod-NeoEMF/styler/05_predictions/final/files-repaired/29/MongoDbBackendFactory.java\nindex 49aca19a469..1af23228ed9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/atlanmod-NeoEMF/styler/05_predictions/final/files-repaired/29/MongoDbBackendFactory.java\n@@ -59,8 +59,7 @@ public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig>\n \n     @Nonnull\n     @Override\n-    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception\n-    {\n+    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception {\n         final boolean isReadOnly = config.isReadOnly();\n \n         //This will not throw any exception even if the connection failed\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "63",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'{' at column 5 should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/naturalize/29/MongoDbBackendFactory.java\nindex 49aca19a469..cb4fff273c1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/naturalize/29/MongoDbBackendFactory.java\n@@ -59,8 +59,7 @@ public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig>\n \n     @Nonnull\n     @Override\n-    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception\n-    {\n+    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception {\n         final boolean isReadOnly = config.isReadOnly();\n \n         //This will not throw any exception even if the connection failed\n@@ -85,4 +84,4 @@ public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig>\n          */\n         static final BackendFactory INSTANCE = new MongoDbBackendFactory();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/random/files-repaired/29/MongoDbBackendFactory.java\nindex 49aca19a469..1af23228ed9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/random/files-repaired/29/MongoDbBackendFactory.java\n@@ -59,8 +59,7 @@ public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig>\n \n     @Nonnull\n     @Override\n-    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception\n-    {\n+    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception {\n         final boolean isReadOnly = config.isReadOnly();\n \n         //This will not throw any exception even if the connection failed\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/three_grams/files-repaired/29/MongoDbBackendFactory.java\nindex 49aca19a469..1af23228ed9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/29/MongoDbBackendFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/three_grams/files-repaired/29/MongoDbBackendFactory.java\n@@ -59,8 +59,7 @@ public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig>\n \n     @Nonnull\n     @Override\n-    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception\n-    {\n+    protected Backend createRemoteBackend(URL url, MongoDbConfig config) throws Exception {\n         final boolean isReadOnly = config.isReadOnly();\n \n         //This will not throw any exception even if the connection failed\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "953",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/953/TVectorBuilder.java\nindex 5f9e1d23d07..742ab095d9b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/953/TVectorBuilder.java\n@@ -24,34 +24,34 @@ import com.tencent.angel.ml.math.vector.SparseIntVector;\n \n public interface TVectorBuilder {\n \n-  TVector build(int dimention);\n+    TVector build(int dimention);\n }\n \n \n class DenseDoubleVectorBuilder implements TVectorBuilder {\n \n-  public TVector build(int dimension) {\n-    return new DenseDoubleVector(dimension);\n-  }\n+    public TVector build(int dimension) {\n+        return new DenseDoubleVector(dimension);\n+    }\n }\n \n \n class SparseDoubleVectorBuilder implements TVectorBuilder {\n-  public TVector build(int dimension) {\n-    return new SparseDoubleVector(dimension);\n-  }\n+    public TVector build(int dimension) {\n+        return new SparseDoubleVector(dimension);\n+    }\n }\n \n \n class DenseIntVectorBuilder implements TVectorBuilder {\n-  public TVector build(int dimension) {\n-    return new DenseIntVector(dimension);\n-  }\n+    public TVector build(int dimension) {\n+        return new DenseIntVector(dimension);\n+    }\n }\n \n \n class SparseIntVectorBuilder implements TVectorBuilder {\n-  public TVector build(int dimension) {\n-    return new SparseIntVector(dimension);\n-  }\n+    public TVector build(int dimension) {\n+        return new SparseIntVector(dimension);\n+    }\n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/953/TVectorBuilder.java\nindex 5f9e1d23d07..70bd2746a87 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/953/TVectorBuilder.java\n@@ -25,33 +25,21 @@ import com.tencent.angel.ml.math.vector.SparseIntVector;\n public interface TVectorBuilder {\n \n   TVector build(int dimention);\n-}\n-\n-\n-class DenseDoubleVectorBuilder implements TVectorBuilder {\n+} class DenseDoubleVectorBuilder implements TVectorBuilder {\n \n   public TVector build(int dimension) {\n     return new DenseDoubleVector(dimension);\n   }\n-}\n-\n-\n-class SparseDoubleVectorBuilder implements TVectorBuilder {\n+} class SparseDoubleVectorBuilder implements TVectorBuilder {\n   public TVector build(int dimension) {\n     return new SparseDoubleVector(dimension);\n   }\n-}\n-\n-\n-class DenseIntVectorBuilder implements TVectorBuilder {\n+} class DenseIntVectorBuilder implements TVectorBuilder {\n   public TVector build(int dimension) {\n     return new DenseIntVector(dimension);\n   }\n-}\n-\n-\n-class SparseIntVectorBuilder implements TVectorBuilder {\n+} class SparseIntVectorBuilder implements TVectorBuilder {\n   public TVector build(int dimension) {\n     return new SparseIntVector(dimension);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/953/TVectorBuilder.java\nindex 5f9e1d23d07..a36cdebd859 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/953/TVectorBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/953/TVectorBuilder.java\n@@ -22,36 +22,39 @@ import com.tencent.angel.ml.math.vector.DenseIntVector;\n import com.tencent.angel.ml.math.vector.SparseDoubleVector;\n import com.tencent.angel.ml.math.vector.SparseIntVector;\n \n-public interface TVectorBuilder {\n \n+public interface TVectorBuilder {\n   TVector build(int dimention);\n }\n \n-\n class DenseDoubleVectorBuilder implements TVectorBuilder {\n \n   public TVector build(int dimension) {\n     return new DenseDoubleVector(dimension);\n   }\n-}\n \n+}\n \n class SparseDoubleVectorBuilder implements TVectorBuilder {\n+\n   public TVector build(int dimension) {\n     return new SparseDoubleVector(dimension);\n   }\n-}\n \n+}\n \n class DenseIntVectorBuilder implements TVectorBuilder {\n+\n   public TVector build(int dimension) {\n     return new DenseIntVector(dimension);\n   }\n-}\n \n+}\n \n class SparseIntVectorBuilder implements TVectorBuilder {\n+\n   public TVector build(int dimension) {\n     return new SparseIntVector(dimension);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

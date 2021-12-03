@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "247",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/247/MomentUpdate.java\nindex acd246890de..a709ac4f306 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/247/MomentUpdate.java\n@@ -14,74 +14,75 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.ml.math2.ufuncs.expression;\n \n import com.tencent.angel.ml.math2.utils.Constant;\n \n public class MomentUpdate extends Binary {\n \n-  private double momentum;\n-  private double eta;\n-\n-  public MomentUpdate(boolean inplace, double momentum, double eta) {\n-    setInplace(inplace);\n-    setKeepStorage(Constant.keepStorage);\n-    this.momentum = momentum;\n-    this.eta = eta;\n-  }\n-\n-  @Override\n-  public OpType getOpType() {\n-    return OpType.UNION;\n-  }\n-\n-  @Override\n-  public double apply(double ele1, double ele2) {\n-    return ele1 * momentum + ele2 * eta;\n-  }\n-\n-  @Override\n-  public double apply(double ele1, float ele2) {\n-    return ele1 * momentum + ele2 * eta;\n-  }\n-\n-  @Override\n-  public double apply(double ele1, long ele2) {\n-    return ele1 * momentum + ele2 * eta;\n-  }\n-\n-  @Override\n-  public double apply(double ele1, int ele2) {\n-    return ele1 * momentum + ele2 * eta;\n-  }\n-\n-  @Override\n-  public float apply(float ele1, float ele2) {\n-    return (float) (ele1 * momentum + ele2 * eta);\n-  }\n-\n-  @Override\n-  public float apply(float ele1, long ele2) {\n-    return (float) (ele1 * momentum + ele2 * eta);\n-  }\n-\n-  @Override\n-  public float apply(float ele1, int ele2) {\n-    return (float) (ele1 * momentum + ele2 * eta);\n-  }\n-\n-  @Override\n-  public long apply(long ele1, long ele2) {\n-    return (long) (ele1 * momentum + ele2 * eta);\n-  }\n-\n-  @Override\n-  public long apply(long ele1, int ele2) {\n-    return (long) (ele1 * momentum + ele2 * eta);\n-  }\n-\n-  @Override\n-  public int apply(int ele1, int ele2) {\n-    return (int) (ele1 * momentum + ele2 * eta);\n-  }\n+    private double momentum;\n+    private double eta;\n+\n+    public MomentUpdate(boolean inplace, double momentum, double eta) {\n+        setInplace(inplace);\n+        setKeepStorage(Constant.keepStorage);\n+        this.momentum = momentum;\n+        this.eta = eta;\n+    }\n+\n+    @Override\n+    public OpType getOpType() {\n+        return OpType.UNION;\n+    }\n+\n+    @Override\n+    public double apply(double ele1, double ele2) {\n+        return ele1 * momentum + ele2 * eta;\n+    }\n+\n+    @Override\n+    public double apply(double ele1, float ele2) {\n+        return ele1 * momentum + ele2 * eta;\n+    }\n+\n+    @Override\n+    public double apply(double ele1, long ele2) {\n+        return ele1 * momentum + ele2 * eta;\n+    }\n+\n+    @Override\n+    public double apply(double ele1, int ele2) {\n+        return ele1 * momentum + ele2 * eta;\n+    }\n+\n+    @Override\n+    public float apply(float ele1, float ele2) {\n+        return (float) (ele1 * momentum + ele2 * eta);\n+    }\n+\n+    @Override\n+    public float apply(float ele1, long ele2) {\n+        return (float) (ele1 * momentum + ele2 * eta);\n+    }\n+\n+    @Override\n+    public float apply(float ele1, int ele2) {\n+        return (float) (ele1 * momentum + ele2 * eta);\n+    }\n+\n+    @Override\n+    public long apply(long ele1, long ele2) {\n+        return (long) (ele1 * momentum + ele2 * eta);\n+    }\n+\n+    @Override\n+    public long apply(long ele1, int ele2) {\n+        return (long) (ele1 * momentum + ele2 * eta);\n+    }\n+\n+    @Override\n+    public int apply(int ele1, int ele2) {\n+        return (int) (ele1 * momentum + ele2 * eta);\n+    }\n }\n",
+            "diff_size": 65
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/247/MomentUpdate.java\nindex acd246890de..23799ed0cdc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/247/MomentUpdate.java\n@@ -84,4 +84,4 @@ public class MomentUpdate extends Binary {\n   public int apply(int ele1, int ele2) {\n     return (int) (ele1 * momentum + ele2 * eta);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/247/MomentUpdate.java\nindex acd246890de..9c27d3b43ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/247/MomentUpdate.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/247/MomentUpdate.java\n@@ -84,4 +84,5 @@ public class MomentUpdate extends Binary {\n   public int apply(int ele1, int ele2) {\n     return (int) (ele1 * momentum + ele2 * eta);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

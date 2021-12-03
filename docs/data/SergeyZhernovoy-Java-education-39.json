@@ -1,0 +1,63 @@
+{
+    "project_name": "SergeyZhernovoy-Java-education",
+    "violation_id": "39",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "78",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n    }\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/39/MainController.java\nindex d4111933d53..cb639f7d00d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/final/files-repaired/39/MainController.java\n@@ -14,7 +14,7 @@ public class MainController extends HttpServlet {\n \n     @Override\n     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n+          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req, resp);\n     }\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/39/MainController.java\nindex d4111933d53..6a94c6ea416 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/checkstyle_idea/39/MainController.java\n@@ -13,8 +13,10 @@ import java.io.IOException;\n public class MainController extends HttpServlet {\n \n     @Override\n-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)\n+        throws ServletException, IOException {\n+        req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\")\n+            .forward(req, resp);\n     }\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/39/MainController.java\nindex d4111933d53..3b7adead73f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/naturalize/39/MainController.java\n@@ -14,7 +14,7 @@ public class MainController extends HttpServlet {\n \n     @Override\n     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n+    req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req, resp);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/39/MainController.java\nindex d4111933d53..cb639f7d00d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/random/files-repaired/39/MainController.java\n@@ -14,7 +14,7 @@ public class MainController extends HttpServlet {\n \n     @Override\n     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n+          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req, resp);\n     }\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/39/MainController.java\nindex d4111933d53..cb639f7d00d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/violations/39/MainController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/SergeyZhernovoy-Java-education/styler/05_predictions/three_grams/files-repaired/39/MainController.java\n@@ -14,7 +14,7 @@ public class MainController extends HttpServlet {\n \n     @Override\n     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {\n-          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req,resp);\n+          req.getRequestDispatcher(\"/WEB-INF/views/MainView.jsp\").forward(req, resp);\n     }\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

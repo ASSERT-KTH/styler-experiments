@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "878",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/878/PSMatrixFilesUtils.java\nindex eea11e280c0..490641ac0f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/878/PSMatrixFilesUtils.java\n@@ -27,27 +27,27 @@ import org.apache.hadoop.conf.Configuration;\n \n public class PSMatrixFilesUtils {\n \n-  /**\n-   * Init loader/saver according to matrix format\n-   *\n-   * @param format matrix format\n-   * @param conf configuration\n-   * @return PS loader/saver\n-   */\n-  public static PSMatrixLoaderSaver initLoaderSaver(Format format, Configuration conf) {\n-    if (format instanceof ElementFormat) {\n-      return new PSRowElementLoaderSaver((ElementFormat) format, conf);\n-    } else if (format instanceof ColumnFormat) {\n-      return new PSColumnLoaderSaver((ColumnFormat) format, conf);\n-    } else if (format instanceof RowFormat) {\n-      return new PSRowLoaderSaver((RowFormat) format, conf);\n-    } else if (format instanceof ComplexRowFormat) {\n-      return new PSComplexRowLoaderSaver((ComplexRowFormat) format, conf);\n-    } else if(format instanceof SnapshotFormat) {\n-      return new SnapshotLoaderSaver((SnapshotFormat)format, conf);\n-    } else {\n-      throw new UnsupportedOperationException(\n-          \"format \" + format.getClass().getName() + \" not support now!\");\n+    /**\n+     * Init loader/saver according to matrix format\n+     *\n+     * @param format matrix format\n+     * @param conf   configuration\n+     * @return PS loader/saver\n+     */\n+    public static PSMatrixLoaderSaver initLoaderSaver(Format format, Configuration conf) {\n+        if (format instanceof ElementFormat) {\n+            return new PSRowElementLoaderSaver((ElementFormat) format, conf);\n+        } else if (format instanceof ColumnFormat) {\n+            return new PSColumnLoaderSaver((ColumnFormat) format, conf);\n+        } else if (format instanceof RowFormat) {\n+            return new PSRowLoaderSaver((RowFormat) format, conf);\n+        } else if (format instanceof ComplexRowFormat) {\n+            return new PSComplexRowLoaderSaver((ComplexRowFormat) format, conf);\n+        } else if (format instanceof SnapshotFormat) {\n+            return new SnapshotLoaderSaver((SnapshotFormat) format, conf);\n+        } else {\n+            throw new UnsupportedOperationException(\n+                    \"format \" + format.getClass().getName() + \" not support now!\");\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/878/PSMatrixFilesUtils.java\nindex eea11e280c0..14bbfcbf6cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/878/PSMatrixFilesUtils.java\n@@ -43,11 +43,10 @@ public class PSMatrixFilesUtils {\n       return new PSRowLoaderSaver((RowFormat) format, conf);\n     } else if (format instanceof ComplexRowFormat) {\n       return new PSComplexRowLoaderSaver((ComplexRowFormat) format, conf);\n-    } else if(format instanceof SnapshotFormat) {\n+    } else if (format instanceof SnapshotFormat) {\n       return new SnapshotLoaderSaver((SnapshotFormat)format, conf);\n     } else {\n-      throw new UnsupportedOperationException(\n-          \"format \" + format.getClass().getName() + \" not support now!\");\n+      throw new UnsupportedOperationException(\"format \" + format.getClass().getName() + \" not support now!\");\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "50",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/878/PSMatrixFilesUtils.java\nindex eea11e280c0..4bce194023a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/878/PSMatrixFilesUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/878/PSMatrixFilesUtils.java\n@@ -34,20 +34,21 @@ public class PSMatrixFilesUtils {\n    * @param conf configuration\n    * @return PS loader/saver\n    */\n+\n   public static PSMatrixLoaderSaver initLoaderSaver(Format format, Configuration conf) {\n     if (format instanceof ElementFormat) {\n       return new PSRowElementLoaderSaver((ElementFormat) format, conf);\n     } else if (format instanceof ColumnFormat) {\n-      return new PSColumnLoaderSaver((ColumnFormat) format, conf);\n+             return new PSColumnLoaderSaver((ColumnFormat) format, conf);\n     } else if (format instanceof RowFormat) {\n-      return new PSRowLoaderSaver((RowFormat) format, conf);\n-    } else if (format instanceof ComplexRowFormat) {\n-      return new PSComplexRowLoaderSaver((ComplexRowFormat) format, conf);\n-    } else if(format instanceof SnapshotFormat) {\n-      return new SnapshotLoaderSaver((SnapshotFormat)format, conf);\n-    } else {\n-      throw new UnsupportedOperationException(\n-          \"format \" + format.getClass().getName() + \" not support now!\");\n-    }\n+             return new PSRowLoaderSaver((RowFormat) format, conf);\n+           } else if (format instanceof ComplexRowFormat) {\n+                    return new PSComplexRowLoaderSaver((ComplexRowFormat) format, conf);\n+           } else if (format instanceof SnapshotFormat) {\n+                    return new SnapshotLoaderSaver((SnapshotFormat) format, conf);\n+                  } else {\n+                    throw new UnsupportedOperationException(\"format \" + format.getClass().getName() + \" not support now!\");\n+                  }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

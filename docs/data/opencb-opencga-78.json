@@ -1,0 +1,188 @@
+{
+    "project_name": "opencb-opencga",
+    "violation_id": "78",
+    "information": {
+        "violations": [
+            {
+                "line": "48",
+                "severity": "error",
+                "message": "Line is longer than 140 characters (found 146).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "                for (Individual individual : getIndividuals()) {\n                    // Sample is never null, it was checked previously\n                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n\n                    // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n                    double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "48",
+                    "column": "98",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 234).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "20",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "52",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\nindex 7f105507e07..8b0ec9f1b67 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\n@@ -45,10 +45,9 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n                 List<InferredSexReport> sexReportList = new ArrayList<>();\n                 for (Individual individual : getIndividuals()) {\n                     // Sample is never null, it was checked previously\n-                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n-\n-                    // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n-                    double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(),individual.getId()\n+                    , catalogManager , getToken());// Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chromsdouble[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                            double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n                             alignmentStorageManager, getToken());\n \n                     // Add sex report to the list\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/78/GeneticChecksLocalAnalysisExecutor.java\nindex 7f105507e07..dbe9a9d0e5a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/78/GeneticChecksLocalAnalysisExecutor.java\n@@ -18,86 +18,86 @@ import org.opencb.opencga.core.tools.variant.GeneticChecksAnalysisExecutor;\n import java.util.ArrayList;\n import java.util.List;\n \n-@ToolExecutor(id=\"opencga-local\", tool = GeneticChecksAnalysis.ID,\n-        framework = ToolExecutor.Framework.LOCAL, source = ToolExecutor.Source.STORAGE)\n+@ToolExecutor(id = \"opencga-local\", tool = GeneticChecksAnalysis.ID,\n+    framework = ToolExecutor.Framework.LOCAL, source = ToolExecutor.Source.STORAGE)\n public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExecutor implements StorageToolExecutor {\n \n-    @Override\n-    public void run() throws ToolException {\n-        switch (getGeneticCheck()) {\n-\n-            case INFERRED_SEX: {\n-\n-                // Get managers\n-                AlignmentStorageManager alignmentStorageManager = getAlignmentStorageManager();\n-                CatalogManager catalogManager = alignmentStorageManager.getCatalogManager();\n-                FileManager fileManager = catalogManager.getFileManager();\n-\n-                // Get assembly\n-                String assembly;\n-                try {\n-                    assembly = GeneticChecksUtils.getAssembly(getStudyId(), alignmentStorageManager.getCatalogManager(), getToken());\n-                } catch (CatalogException e) {\n-                    throw new ToolException(e);\n-                }\n-\n-                // Infer the sex for each individual\n-                List<InferredSexReport> sexReportList = new ArrayList<>();\n-                for (Individual individual : getIndividuals()) {\n-                    // Sample is never null, it was checked previously\n-                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n-\n-                    // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n-                    double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n-                            alignmentStorageManager, getToken());\n-\n-                    // Add sex report to the list\n-                    // TODO infer sex from ratios\n-                    sexReportList.add(new InferredSexReport(individual.getId(), sample.getId(), individual.getSex().name(),\n-                            individual.getKaryotypicSex().name(), ratios[0], ratios[1], \"\"));\n-                }\n-\n-                // Set sex report\n-                getReport().setInferredSexReport(sexReportList);\n-                break;\n-            }\n-            case RELATEDNESS: {\n-\n-                // Get managers\n-                VariantStorageManager variantStorageManager = getVariantStorageManager();\n-                CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n-\n-                // Get sample IDs from individuals\n-                List<String> sampleIds = GeneticChecksUtils.getSampleIds(getStudyId(), getIndividuals(), catalogManager, getToken());\n-\n-                // Run IBD/IBS computation using PLINK in docker\n-                RelatednessReport relatednessReport = IBDComputation.compute(getStudyId(), sampleIds, getMinorAlleleFreq(), getOutDir(),\n-                        variantStorageManager, getToken());\n-\n-                // Set relatedness report\n-                getReport().setRelatednessReport(relatednessReport);\n-                break;\n-            }\n-            case MENDELIAN_ERRORS: {\n-\n-                // Get managers\n-                VariantStorageManager variantStorageManager = getVariantStorageManager();\n-                CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n-\n-                // Get sample IDs from individuals\n-                List<String> sampleIds = GeneticChecksUtils.getSampleIds(getStudyId(), getIndividuals(), catalogManager, getToken());\n-\n-                // Compute mendelian inconsitencies\n-                MendelianErrorsReport mendelianErrorsReport = MendelianInconsistenciesComputation.compute(getStudyId(), sampleIds,\n-                        getOutDir(), variantStorageManager, getToken());\n-\n-                // Set relatedness report\n-                getReport().setMendelianErrorsReport(mendelianErrorsReport);\n-                break;\n-            }\n-            default: {\n-                throw new ToolException(\"Unknown genetic check: \" + getGeneticCheck());\n-            }\n+  @Override\n+  public void run() throws ToolException {\n+    switch (getGeneticCheck()) {\n+\n+      case INFERRED_SEX: {\n+\n+        // Get managers\n+        AlignmentStorageManager alignmentStorageManager = getAlignmentStorageManager();\n+        CatalogManager catalogManager = alignmentStorageManager.getCatalogManager();\n+        FileManager fileManager = catalogManager.getFileManager();\n+\n+        // Get assembly\n+        String assembly;\n+        try {\n+          assembly = GeneticChecksUtils.getAssembly(getStudyId(), alignmentStorageManager.getCatalogManager(), getToken());\n+        } catch (CatalogException e) {\n+          throw new ToolException(e);\n+        }\n+\n+        // Infer the sex for each individual\n+        List<InferredSexReport> sexReportList = new ArrayList<>();\n+        for (Individual individual : getIndividuals()) {\n+          // Sample is never null, it was checked previously\n+          Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n+\n+          // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n+          double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+              alignmentStorageManager, getToken());\n+\n+          // Add sex report to the list\n+          // TODO infer sex from ratios\n+          sexReportList.add(new InferredSexReport(individual.getId(), sample.getId(), individual.getSex().name(),\n+              individual.getKaryotypicSex().name(), ratios[0], ratios[1], \"\"));\n         }\n+\n+        // Set sex report\n+        getReport().setInferredSexReport(sexReportList);\n+        break;\n+      }\n+      case RELATEDNESS: {\n+\n+        // Get managers\n+        VariantStorageManager variantStorageManager = getVariantStorageManager();\n+        CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n+\n+        // Get sample IDs from individuals\n+        List<String> sampleIds = GeneticChecksUtils.getSampleIds(getStudyId(), getIndividuals(), catalogManager, getToken());\n+\n+        // Run IBD/IBS computation using PLINK in docker\n+        RelatednessReport relatednessReport = IBDComputation.compute(getStudyId(), sampleIds, getMinorAlleleFreq(), getOutDir(),\n+            variantStorageManager, getToken());\n+\n+        // Set relatedness report\n+        getReport().setRelatednessReport(relatednessReport);\n+        break;\n+      }\n+      case MENDELIAN_ERRORS: {\n+\n+        // Get managers\n+        VariantStorageManager variantStorageManager = getVariantStorageManager();\n+        CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n+\n+        // Get sample IDs from individuals\n+        List<String> sampleIds = GeneticChecksUtils.getSampleIds(getStudyId(), getIndividuals(), catalogManager, getToken());\n+\n+        // Compute mendelian inconsitencies\n+        MendelianErrorsReport mendelianErrorsReport = MendelianInconsistenciesComputation.compute(getStudyId(), sampleIds,\n+            getOutDir(), variantStorageManager, getToken());\n+\n+        // Set relatedness report\n+        getReport().setMendelianErrorsReport(mendelianErrorsReport);\n+        break;\n+      }\n+      default: {\n+        throw new ToolException(\"Unknown genetic check: \" + getGeneticCheck());\n+      }\n     }\n+  }\n }\n",
+            "diff_size": 121
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/78/GeneticChecksLocalAnalysisExecutor.java\nindex 7f105507e07..83bb6efa6bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/78/GeneticChecksLocalAnalysisExecutor.java\n@@ -18,17 +18,15 @@ import org.opencb.opencga.core.tools.variant.GeneticChecksAnalysisExecutor;\n import java.util.ArrayList;\n import java.util.List;\n \n-@ToolExecutor(id=\"opencga-local\", tool = GeneticChecksAnalysis.ID,\n+@ToolExecutor(id = \"opencga-local\", tool = GeneticChecksAnalysis.ID,\n         framework = ToolExecutor.Framework.LOCAL, source = ToolExecutor.Source.STORAGE)\n public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExecutor implements StorageToolExecutor {\n \n     @Override\n     public void run() throws ToolException {\n         switch (getGeneticCheck()) {\n-\n-            case INFERRED_SEX: {\n-\n-                // Get managers\n+    case INFERRED_SEX: {\n+    // Get managers\n                 AlignmentStorageManager alignmentStorageManager = getAlignmentStorageManager();\n                 CatalogManager catalogManager = alignmentStorageManager.getCatalogManager();\n                 FileManager fileManager = catalogManager.getFileManager();\n@@ -62,8 +60,7 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n                 break;\n             }\n             case RELATEDNESS: {\n-\n-                // Get managers\n+    // Get managers\n                 VariantStorageManager variantStorageManager = getVariantStorageManager();\n                 CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n \n@@ -79,8 +76,7 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n                 break;\n             }\n             case MENDELIAN_ERRORS: {\n-\n-                // Get managers\n+    // Get managers\n                 VariantStorageManager variantStorageManager = getVariantStorageManager();\n                 CatalogManager catalogManager = variantStorageManager.getCatalogManager();\n \n@@ -100,4 +96,4 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n             }\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "48",
+                    "column": "98",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 234).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "20",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "52",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\nindex 7f105507e07..8b0ec9f1b67 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\n@@ -45,10 +45,9 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n                 List<InferredSexReport> sexReportList = new ArrayList<>();\n                 for (Individual individual : getIndividuals()) {\n                     // Sample is never null, it was checked previously\n-                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n-\n-                    // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n-                    double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(),individual.getId()\n+                    , catalogManager , getToken());// Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chromsdouble[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                            double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n                             alignmentStorageManager, getToken());\n \n                     // Add sex report to the list\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "48",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 329).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "54",
+                    "severity": "error",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "84",
+                    "severity": "error",
+                    "message": "'(' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "97",
+                    "severity": "error",
+                    "message": "',' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "99",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "135",
+                    "severity": "error",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "147",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\nindex 7f105507e07..8aba055510a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/78/GeneticChecksLocalAnalysisExecutor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/78/GeneticChecksLocalAnalysisExecutor.java\n@@ -45,10 +45,8 @@ public class GeneticChecksLocalAnalysisExecutor extends GeneticChecksAnalysisExe\n                 List<InferredSexReport> sexReportList = new ArrayList<>();\n                 for (Individual individual : getIndividuals()) {\n                     // Sample is never null, it was checked previously\n-                    Sample sample = GeneticChecksUtils.getValidSampleByIndividualId(getStudyId(), individual.getId(), catalogManager, getToken());\n-\n-                    // Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chroms\n-                    double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                    Sample sample=GeneticChecksUtils. getValidSampleByIndividualId( getStudyId() ,individual .getId(), catalogManager,getToken());// Compute ratios: X-chrom / autosomic-chroms and Y-chrom / autosomic-chromsdouble[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n+                            double[] ratios = InferredSexComputation.computeRatios(getStudyId(), sample.getId(), assembly, fileManager,\n                             alignmentStorageManager, getToken());\n \n                     // Add sex report to the list\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

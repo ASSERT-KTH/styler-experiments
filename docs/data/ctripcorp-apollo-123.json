@@ -1,0 +1,105 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "123",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 113).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public enum Code {\n    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n    SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n\n    private int value;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/123/TextResolverResult.java\nindex 97aabc3934f..655c70821a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/123/TextResolverResult.java\n@@ -37,8 +37,7 @@ public class TextResolverResult {\n   }\n \n   public enum Code {\n-    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n-    SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n+    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001 ,\"item pattern must key:value##comment.pelease check!\") ,SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n \n     private int value;\n     private String baseMsg;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/123/TextResolverResult.java\nindex 97aabc3934f..e0288c00d9d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/123/TextResolverResult.java\n@@ -37,7 +37,8 @@ public class TextResolverResult {\n   }\n \n   public enum Code {\n-    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n+    OK(200, \"success\"),\n+    SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n     SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n \n     private int value;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "warning",
+                    "message": "Block comment has incorrect indentation level 0, expected is 2, indentation should be the same level as line 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 113).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/123/TextResolverResult.java\nindex 97aabc3934f..799b3348865 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/123/TextResolverResult.java\n@@ -5,7 +5,8 @@ import com.ctrip.apollo.core.dto.ItemChangeSets;\n public class TextResolverResult {\n \n   private Code code;\n-  /**\n+\n+/**\n    * extension msg. for example line number.\n    */\n   private String extensionMsg = \"\";\n@@ -64,4 +65,4 @@ public class TextResolverResult {\n       this.baseMsg = baseMsg;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/123/TextResolverResult.java\nindex 97aabc3934f..b1af647517d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/123/TextResolverResult.java\n@@ -2,15 +2,16 @@ package com.ctrip.apollo.portal.service.txtresolver;\n \n import com.ctrip.apollo.core.dto.ItemChangeSets;\n \n-public class TextResolverResult {\n \n+public class TextResolverResult {\n   private Code code;\n   /**\n    * extension msg. for example line number.\n    */\n+\n   private String extensionMsg = \"\";\n-  private ItemChangeSets changeSets;\n \n+  private ItemChangeSets changeSets;\n \n   public Code getCode() {\n     return code;\n@@ -37,10 +38,10 @@ public class TextResolverResult {\n   }\n \n   public enum Code {\n-    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n-    SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n+    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"), SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n \n     private int value;\n+\n     private String baseMsg;\n \n     Code(int value, String msg) {\n@@ -64,4 +65,4 @@ public class TextResolverResult {\n       this.baseMsg = baseMsg;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/123/TextResolverResult.java\nindex 97aabc3934f..655c70821a0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/123/TextResolverResult.java\n@@ -37,8 +37,7 @@ public class TextResolverResult {\n   }\n \n   public enum Code {\n-    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n-    SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n+    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001 ,\"item pattern must key:value##comment.pelease check!\") ,SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n \n     private int value;\n     private String baseMsg;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "41",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "',' should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.SeparatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/123/TextResolverResult.java\nindex 97aabc3934f..21a48790620 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/123/TextResolverResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/123/TextResolverResult.java\n@@ -37,7 +37,8 @@ public class TextResolverResult {\n   }\n \n   public enum Code {\n-    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001, \"item pattern must key:value##comment.pelease check!\"),\n+    OK(200, \"success\"), SIMPLTE_KVC_INVALID_FORMAT(40001\n+, \"item pattern must key:value##comment.pelease check!\"),\n     SIMPLE_KVC_TEXT_EMPTY(40002, \"config text empty\");\n \n     private int value;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "3",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "50",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n\npublic class MyException extends RuntimeException{\n    private static final long serialVersionUID = 1L;\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/3/MyException.java\nindex c8e897ab121..b100a21dd03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/3/MyException.java\n@@ -3,7 +3,7 @@ package com.chapterJPA.demo.service;\n \n \n \n-public class MyException extends RuntimeException{\n+public class MyException extends RuntimeException {\n     private static final long serialVersionUID = 1L;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/3/MyException.java\nindex c8e897ab121..c1641d33946 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/3/MyException.java\n@@ -1,9 +1,7 @@\n package com.chapterJPA.demo.service;\n \n \n-\n-\n-public class MyException extends RuntimeException{\n+public class MyException extends RuntimeException {\n     private static final long serialVersionUID = 1L;\n \n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/3/MyException.java\nindex c8e897ab121..c24a1af9525 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/3/MyException.java\n@@ -1,9 +1,6 @@\n package com.chapterJPA.demo.service;\n \n-\n-\n-\n-public class MyException extends RuntimeException{\n+public class MyException extends RuntimeException {\n     private static final long serialVersionUID = 1L;\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/3/MyException.java\nindex c8e897ab121..b100a21dd03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/3/MyException.java\n@@ -3,7 +3,7 @@ package com.chapterJPA.demo.service;\n \n \n \n-public class MyException extends RuntimeException{\n+public class MyException extends RuntimeException {\n     private static final long serialVersionUID = 1L;\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/3/MyException.java\nindex c8e897ab121..b100a21dd03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/3/MyException.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/3/MyException.java\n@@ -3,7 +3,7 @@ package com.chapterJPA.demo.service;\n \n \n \n-public class MyException extends RuntimeException{\n+public class MyException extends RuntimeException {\n     private static final long serialVersionUID = 1L;\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

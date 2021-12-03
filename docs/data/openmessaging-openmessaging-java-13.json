@@ -1,0 +1,104 @@
+{
+    "project_name": "openmessaging-openmessaging-java",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "severity": "error",
+                "message": "Recommended remove @author tag in javadoc!",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": " * with the message id and some attributes.\n *\n * @author yukon@apache.org\n * @version OMS 1.0\n * @since OMS 1.0\n */",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/final/files-repaired/13/SendResult.java\nindex 438d686df18..4e3bedcfe0f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/final/files-repaired/13/SendResult.java\n@@ -27,6 +27,7 @@ import io.openmessaging.KeyValue;\n  * @version OMS 1.0\n  * @since OMS 1.0\n  */\n+\n public interface SendResult {\n     /**\n      * The unique message id related to the {@code SendResult} instance.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/naturalize/13/SendResult.java\nindex 438d686df18..ceadc3c0207 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/naturalize/13/SendResult.java\n@@ -41,4 +41,4 @@ public interface SendResult {\n      * @return the attributes\n      */\n     KeyValue properties();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/codebuff/13/SendResult.java\nindex 438d686df18..09651b1e2a5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/codebuff/13/SendResult.java\n@@ -27,6 +27,7 @@ import io.openmessaging.KeyValue;\n  * @version OMS 1.0\n  * @since OMS 1.0\n  */\n+\n public interface SendResult {\n     /**\n      * The unique message id related to the {@code SendResult} instance.\n@@ -40,5 +41,6 @@ public interface SendResult {\n      *\n      * @return the attributes\n      */\n+\n     KeyValue properties();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/random/files-repaired/13/SendResult.java\nindex 438d686df18..4e3bedcfe0f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/random/files-repaired/13/SendResult.java\n@@ -27,6 +27,7 @@ import io.openmessaging.KeyValue;\n  * @version OMS 1.0\n  * @since OMS 1.0\n  */\n+\n public interface SendResult {\n     /**\n      * The unique message id related to the {@code SendResult} instance.\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Recommended remove @author tag in javadoc!",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/three_grams/files-repaired/13/SendResult.java\nindex 438d686df18..eff6935a303 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/violations/13/SendResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/openmessaging-openmessaging-java/styler/05_predictions/three_grams/files-repaired/13/SendResult.java\n@@ -18,8 +18,7 @@\n package io.openmessaging.producer;\n \n import io.openmessaging.KeyValue;\n-\n-/**\n+    /**\n  * The result of sending a OMS message to server\n  * with the message id and some attributes.\n  *\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

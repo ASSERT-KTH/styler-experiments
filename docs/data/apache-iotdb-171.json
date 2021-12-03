@@ -1,0 +1,95 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "171",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.db.query.externalsort.adapter;\n\nimport org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\nimport org.apache.iotdb.tsfile.read.TimeValuePair;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/171/ByTimestampReaderAdapter.java\nindex ba482c4ac16..5933bb1f4b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/171/ByTimestampReaderAdapter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.query.externalsort.adapter;\n \n import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/171/ByTimestampReaderAdapter.java\nindex ba482c4ac16..5e4877ffa43 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/171/ByTimestampReaderAdapter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.query.externalsort.adapter;\n \n import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n@@ -24,7 +25,9 @@ import org.apache.iotdb.tsfile.read.reader.IPointReader;\n \n import java.io.IOException;\n \n-/** This class is an adapter which makes IPointReader implement IReaderByTimestamp interface. */\n+/**\n+ * This class is an adapter which makes IPointReader implement IReaderByTimestamp interface.\n+ */\n public class ByTimestampReaderAdapter implements IReaderByTimestamp {\n \n   private IPointReader pointReader;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/171/ByTimestampReaderAdapter.java\nindex ba482c4ac16..65b300912a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/171/ByTimestampReaderAdapter.java\n@@ -21,10 +21,10 @@ package org.apache.iotdb.db.query.externalsort.adapter;\n import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n import org.apache.iotdb.tsfile.read.TimeValuePair;\n import org.apache.iotdb.tsfile.read.reader.IPointReader;\n-\n import java.io.IOException;\n \n /** This class is an adapter which makes IPointReader implement IReaderByTimestamp interface. */\n+\n public class ByTimestampReaderAdapter implements IReaderByTimestamp {\n \n   private IPointReader pointReader;\n@@ -49,7 +49,6 @@ public class ByTimestampReaderAdapter implements IReaderByTimestamp {\n         return null;\n       }\n     }\n-\n     while (pointReader.hasNextTimeValuePair()) {\n       pair = pointReader.nextTimeValuePair();\n       if (pair.getTimestamp() == timestamp) {\n@@ -59,7 +58,6 @@ public class ByTimestampReaderAdapter implements IReaderByTimestamp {\n         return null;\n       }\n     }\n-\n     return null;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "21",
+                    "column": "68",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/171/ByTimestampReaderAdapter.java\nindex ba482c4ac16..f0857a4d4d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/171/ByTimestampReaderAdapter.java\n@@ -16,9 +16,9 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n-package org.apache.iotdb.db.query.externalsort.adapter;\n+package org.apache.iotdb.db.query.externalsort.adapter\n \n-import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n+; import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n import org.apache.iotdb.tsfile.read.TimeValuePair;\n import org.apache.iotdb.tsfile.read.reader.IPointReader;\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/171/ByTimestampReaderAdapter.java\nindex ba482c4ac16..5933bb1f4b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/171/ByTimestampReaderAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/171/ByTimestampReaderAdapter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.db.query.externalsort.adapter;\n \n import org.apache.iotdb.db.query.reader.series.IReaderByTimestamp;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

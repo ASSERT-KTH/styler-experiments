@@ -1,0 +1,96 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "25",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public interface ReflectionModel {\n\n\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n\n\tvoid classNewInstance(SootMethod source, Stmt s);\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "10",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/25/ReflectionModel.java\nindex 13a9f5fd009..2083d688294 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/25/ReflectionModel.java\n@@ -5,7 +5,7 @@ import soot.jimple.Stmt;\n \n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n+    void methodInvoke(SootMethod container, Stmt invokeStmt);\n \n \tvoid classNewInstance(SootMethod source, Stmt s);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/25/ReflectionModel.java\nindex 13a9f5fd009..db716eb41a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/25/ReflectionModel.java\n@@ -5,12 +5,12 @@ import soot.jimple.Stmt;\n \n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n+  void methodInvoke(SootMethod container, Stmt invokeStmt);\n \n-\tvoid classNewInstance(SootMethod source, Stmt s);\n+  void classNewInstance(SootMethod source, Stmt s);\n \n-\tvoid contructorNewInstance(SootMethod source, Stmt s);\n+  void contructorNewInstance(SootMethod source, Stmt s);\n \n-\tvoid classForName(SootMethod source, Stmt s);\n+  void classForName(SootMethod source, Stmt s);\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "10",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/25/ReflectionModel.java\nindex 13a9f5fd009..e448332179e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/25/ReflectionModel.java\n@@ -5,12 +5,11 @@ import soot.jimple.Stmt;\n \n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n+    void methodInvoke(SootMethod container, Stmt invokeStmt);\n \n \tvoid classNewInstance(SootMethod source, Stmt s);\n \n \tvoid contructorNewInstance(SootMethod source, Stmt s);\n \n \tvoid classForName(SootMethod source, Stmt s);\n-\n-}\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/25/ReflectionModel.java\nindex 13a9f5fd009..105982a54ba 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/25/ReflectionModel.java\n@@ -3,14 +3,19 @@ package soot.jimple.toolkits.callgraph;\n import soot.SootMethod;\n import soot.jimple.Stmt;\n \n+\n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n \n-\tvoid classNewInstance(SootMethod source, Stmt s);\n+    void methodInvoke(SootMethod container, Stmt invokeStmt);\n+\n+\n+    void classNewInstance(SootMethod source, Stmt s);\n+\n+\n+    void contructorNewInstance(SootMethod source, Stmt s);\n \n-\tvoid contructorNewInstance(SootMethod source, Stmt s);\n \n-\tvoid classForName(SootMethod source, Stmt s);\n+    void classForName(SootMethod source, Stmt s);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "10",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/25/ReflectionModel.java\nindex 13a9f5fd009..2083d688294 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/25/ReflectionModel.java\n@@ -5,7 +5,7 @@ import soot.jimple.Stmt;\n \n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n+    void methodInvoke(SootMethod container, Stmt invokeStmt);\n \n \tvoid classNewInstance(SootMethod source, Stmt s);\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "10",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/25/ReflectionModel.java\nindex 13a9f5fd009..2083d688294 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/25/ReflectionModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/25/ReflectionModel.java\n@@ -5,7 +5,7 @@ import soot.jimple.Stmt;\n \n public interface ReflectionModel {\n \n-\tvoid methodInvoke(SootMethod container, Stmt invokeStmt);\n+    void methodInvoke(SootMethod container, Stmt invokeStmt);\n \n \tvoid classNewInstance(SootMethod source, Stmt s);\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

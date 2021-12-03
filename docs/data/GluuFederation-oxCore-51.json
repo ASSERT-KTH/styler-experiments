@@ -1,0 +1,102 @@
+{
+    "project_name": "GluuFederation-oxCore",
+    "violation_id": "51",
+    "information": {
+        "violations": [
+            {
+                "line": "59",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Override\n\tpublic String toString() {\n\t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n\t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n\t}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "60",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GluuFederation-oxCore/styler/05_predictions/final/files-repaired/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..6bde75f0d81 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/GluuFederation-oxCore/styler/05_predictions/final/files-repaired/51/NativePersistenceCacheEntity.java\n@@ -56,7 +56,7 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n+public String toString() {\n \t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n \t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n \t}\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/checkstyle_idea/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..243d7440138 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/checkstyle_idea/51/NativePersistenceCacheEntity.java\n@@ -56,8 +56,8 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n-\t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n-\t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n-\t}\n+    public String toString() {\n+        return \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n+            + \", toString()=\" + super.toString() + \"]\";\n+    }\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/naturalize/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..c56f239ba29 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/naturalize/51/NativePersistenceCacheEntity.java\n@@ -56,8 +56,8 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n-\t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n-\t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n-\t}\n-}\n+public String toString() {\n+    return \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data + \", toString()=\" + super.toString() + \"]\";\n+    }\n+\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "63",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 168).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/codebuff/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..bb606dfe00d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/codebuff/51/NativePersistenceCacheEntity.java\n@@ -6,20 +6,23 @@ import org.gluu.persist.annotation.AttributeName;\n import org.gluu.persist.annotation.DN;\n import org.gluu.persist.annotation.DataEntry;\n import org.gluu.persist.annotation.ObjectClass;\n-\n import java.io.Serializable;\n import java.util.Date;\n \n+\n @DataEntry\n @ObjectClass(value = \"cache\")\n public class NativePersistenceCacheEntity extends DeletableEntity implements Serializable, Deletable {\n \n     @DN\n     private String dn;\n+\n     @AttributeName(name = \"uuid\")\n     private String id;\n+\n     @AttributeName(name = \"iat\")\n     private Date creationDate;\n+\n     @AttributeName(name = \"dat\")\n     private String data;\n \n@@ -56,8 +59,8 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n-\t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n-\t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n-\t}\n-}\n+    public String toString() {\n+        return \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data + \", toString()=\" + super.toString() + \"]\";\n+    }\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "60",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/random/files-repaired/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..6bde75f0d81 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/random/files-repaired/51/NativePersistenceCacheEntity.java\n@@ -56,7 +56,7 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n+public String toString() {\n \t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n \t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n \t}\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "60",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/three_grams/files-repaired/51/NativePersistenceCacheEntity.java\nindex 98e24d80333..6bde75f0d81 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/violations/51/NativePersistenceCacheEntity.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/GluuFederation-oxCore/styler/05_predictions/three_grams/files-repaired/51/NativePersistenceCacheEntity.java\n@@ -56,7 +56,7 @@ public class NativePersistenceCacheEntity extends DeletableEntity implements Ser\n     }\n \n     @Override\n-\tpublic String toString() {\n+public String toString() {\n \t\treturn \"NativePersistenceCacheEntity [dn=\" + dn + \", id=\" + id + \", creationDate=\" + creationDate + \", data=\" + data\n \t\t\t\t+ \", toString()=\" + super.toString() + \"]\";\n \t}\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

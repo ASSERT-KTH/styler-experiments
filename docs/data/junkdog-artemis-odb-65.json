@@ -1,0 +1,77 @@
+{
+    "project_name": "junkdog-artemis-odb",
+    "violation_id": "65",
+    "information": {
+        "violations": [
+            {
+                "line": "28",
+                "severity": "error",
+                "message": "Line is longer than 105 characters (found 127).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n\t\t\n\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n\t\t\n\t\tList<MethodNode> methods = cn.methods;\n\t\tfor (MethodNode method : methods) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/junkdog-artemis-odb/styler/05_predictions/final/files-repaired/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..b93978e17a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/junkdog-artemis-odb/styler/05_predictions/final/files-repaired/65/ExternalFieldClassTransformer.java\n@@ -24,10 +24,9 @@ public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes\n \tpublic ClassNode transform(ClassReader cr) {\n \t\tClassNode cn = new ClassNode(ASM4);\n \t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n-\t\t\n-\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n-\t\t\n-\t\tList<MethodNode> methods = cn.methods;\n+\n+  ExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name\n+  , packedComponents ) ;List<MethodNode> methods = cn.methods;\n \t\tfor (MethodNode method : methods) {\n \t\t\tneedsWriteToDisk |= methodTransformer.transform(method);\n \t\t}\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/checkstyle_idea/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..03afbe963b2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/checkstyle_idea/65/ExternalFieldClassTransformer.java\n@@ -13,29 +13,31 @@ import com.artemis.transformer.ClassTransformer;\n \n public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes {\n \n-\tprivate final List<ClassMetadata> packedComponents;\n-\tprivate boolean needsWriteToDisk;\n-\n-\tpublic ExternalFieldClassTransformer(ClassVisitor ct, List<ClassMetadata> packedComponents) {\n-\t\tthis.packedComponents = packedComponents;\n-\t}\n-\n-\t@Override @SuppressWarnings(\"unchecked\")\n-\tpublic ClassNode transform(ClassReader cr) {\n-\t\tClassNode cn = new ClassNode(ASM4);\n-\t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n-\t\t\n-\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n-\t\t\n-\t\tList<MethodNode> methods = cn.methods;\n-\t\tfor (MethodNode method : methods) {\n-\t\t\tneedsWriteToDisk |= methodTransformer.transform(method);\n-\t\t}\n-\t\t\n-\t\treturn cn;\n-\t}\n-\n-\tpublic boolean isComponentAccessChanged() {\n-\t\treturn needsWriteToDisk;\n-\t}\n+  private final List<ClassMetadata> packedComponents;\n+  private boolean needsWriteToDisk;\n+\n+  public ExternalFieldClassTransformer(ClassVisitor ct, List<ClassMetadata> packedComponents) {\n+    this.packedComponents = packedComponents;\n+  }\n+\n+  @Override\n+  @SuppressWarnings(\"unchecked\")\n+  public ClassNode transform(ClassReader cr) {\n+    ClassNode cn = new ClassNode(ASM4);\n+    cr.accept(cn, ClassReader.EXPAND_FRAMES);\n+\n+    ExternalFieldMethodTransformer methodTransformer =\n+        new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n+\n+    List<MethodNode> methods = cn.methods;\n+    for (MethodNode method : methods) {\n+      needsWriteToDisk |= methodTransformer.transform(method);\n+    }\n+\n+    return cn;\n+  }\n+\n+  public boolean isComponentAccessChanged() {\n+    return needsWriteToDisk;\n+  }\n }\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/naturalize/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..f96155d62ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/naturalize/65/ExternalFieldClassTransformer.java\n@@ -20,10 +20,11 @@ public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes\n \t\tthis.packedComponents = packedComponents;\n \t}\n \n-\t@Override @SuppressWarnings(\"unchecked\")\n+\t@Override\n+@SuppressWarnings(\"unchecked\")\n \tpublic ClassNode transform(ClassReader cr) {\n \t\tClassNode cn = new ClassNode(ASM4);\n-\t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n+\t\tcr.accept(cn, ClassReader.EXPAND_FRAMES);\n \t\t\n \t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n \t\t\n@@ -38,4 +39,4 @@ public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes\n \tpublic boolean isComponentAccessChanged() {\n \t\treturn needsWriteToDisk;\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "Line is longer than 105 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/codebuff/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..891320da1c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/codebuff/65/ExternalFieldClassTransformer.java\n@@ -1,41 +1,40 @@\n package com.artemis.weaver.packed;\n \n import java.util.List;\n-\n import org.objectweb.asm.ClassReader;\n import org.objectweb.asm.ClassVisitor;\n import org.objectweb.asm.Opcodes;\n import org.objectweb.asm.tree.ClassNode;\n import org.objectweb.asm.tree.MethodNode;\n-\n import com.artemis.meta.ClassMetadata;\n import com.artemis.transformer.ClassTransformer;\n \n public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes {\n+ private final List<ClassMetadata> packedComponents;\n+\n+ private boolean needsWriteToDisk;\n+\n+ public ExternalFieldClassTransformer(ClassVisitor ct, List<ClassMetadata> packedComponents) {\n+  this.packedComponents = packedComponents;\n+ }\n+\n+ @Override\n+ @SuppressWarnings(\"unchecked\")\n+ public ClassNode transform(ClassReader cr) {\n+  ClassNode cn = new ClassNode(ASM4);\n+  cr.accept(cn, ClassReader.EXPAND_FRAMES);\n+\n+  ExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n+  List<MethodNode> methods = cn.methods;\n+  for (MethodNode method : methods) {\n+   needsWriteToDisk |= methodTransformer.transform(method);\n+  }\n+\n+  return cn;\n+ }\n+\n \n-\tprivate final List<ClassMetadata> packedComponents;\n-\tprivate boolean needsWriteToDisk;\n-\n-\tpublic ExternalFieldClassTransformer(ClassVisitor ct, List<ClassMetadata> packedComponents) {\n-\t\tthis.packedComponents = packedComponents;\n-\t}\n-\n-\t@Override @SuppressWarnings(\"unchecked\")\n-\tpublic ClassNode transform(ClassReader cr) {\n-\t\tClassNode cn = new ClassNode(ASM4);\n-\t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n-\t\t\n-\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n-\t\t\n-\t\tList<MethodNode> methods = cn.methods;\n-\t\tfor (MethodNode method : methods) {\n-\t\t\tneedsWriteToDisk |= methodTransformer.transform(method);\n-\t\t}\n-\t\t\n-\t\treturn cn;\n-\t}\n-\n-\tpublic boolean isComponentAccessChanged() {\n-\t\treturn needsWriteToDisk;\n-\t}\n-}\n+ public boolean isComponentAccessChanged() {\n+  return needsWriteToDisk;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 51
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/random/files-repaired/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..b93978e17a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/random/files-repaired/65/ExternalFieldClassTransformer.java\n@@ -24,10 +24,9 @@ public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes\n \tpublic ClassNode transform(ClassReader cr) {\n \t\tClassNode cn = new ClassNode(ASM4);\n \t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n-\t\t\n-\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n-\t\t\n-\t\tList<MethodNode> methods = cn.methods;\n+\n+  ExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name\n+  , packedComponents ) ;List<MethodNode> methods = cn.methods;\n \t\tfor (MethodNode method : methods) {\n \t\t\tneedsWriteToDisk |= methodTransformer.transform(method);\n \t\t}\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/three_grams/files-repaired/65/ExternalFieldClassTransformer.java\nindex 032a6d097f8..db184dc41fd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/violations/65/ExternalFieldClassTransformer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/junkdog-artemis-odb/styler/05_predictions/three_grams/files-repaired/65/ExternalFieldClassTransformer.java\n@@ -24,10 +24,8 @@ public class ExternalFieldClassTransformer implements ClassTransformer, Opcodes\n \tpublic ClassNode transform(ClassReader cr) {\n \t\tClassNode cn = new ClassNode(ASM4);\n \t\tcr.accept(cn,  ClassReader.EXPAND_FRAMES);\n-\t\t\n-\t\tExternalFieldMethodTransformer methodTransformer = new ExternalFieldMethodTransformer(null, cn.name, packedComponents);\n-\t\t\n-\t\tList<MethodNode> methods = cn.methods;\n+\t\t\tExternalFieldMethodTransformer methodTransformer = newExternalFieldMethodTransformer(null,cn.\n+  name , packedComponents );List<<MethodNode> methods = cn.methods;\n \t\tfor (MethodNode method : methods) {\n \t\t\tneedsWriteToDisk |= methodTransformer.transform(method);\n \t\t}\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

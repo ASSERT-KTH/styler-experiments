@@ -1,0 +1,128 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "674",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "42",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/674/ServerRowUtils.java\nindex 32ee3f4754a..f682f545e4d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/674/ServerRowUtils.java\n@@ -39,130 +39,132 @@ import com.tencent.angel.ps.storage.vector.storage.LongLongVectorStorage;\n  * Server row utilization\n  */\n public class ServerRowUtils {\n-  /////////////////////////////////////////////////////////////////////////////////////////////////\n-  // Notice: Basic type ServerRow only support Vector as inner storage now, so you can use methods\n-  // to get inner vector for basic type ServerRow.\n-  /////////////////////////////////////////////////////////////////////////////////////////////////\n-\n-  /**\n-   * Get inner vector from server row\n-   *\n-   * @param row server row\n-   * @return inner vector\n-   */\n-  public static Vector getVector(ServerRow row) {\n-    if (row instanceof ServerIntFloatRow) {\n-      return getVector((ServerIntFloatRow) row);\n-    } else if (row instanceof ServerIntDoubleRow) {\n-      return getVector((ServerIntDoubleRow) row);\n-    } else if (row instanceof ServerIntIntRow) {\n-      return getVector((ServerIntIntRow) row);\n-    } else if (row instanceof ServerIntLongRow) {\n-      return getVector((ServerIntLongRow) row);\n-    } else if (row instanceof ServerLongFloatRow) {\n-      return getVector((ServerLongFloatRow) row);\n-    } else if (row instanceof ServerLongDoubleRow) {\n-      return getVector((ServerLongDoubleRow) row);\n-    } else if (row instanceof ServerLongIntRow) {\n-      return getVector((ServerLongIntRow) row);\n-    } else if (row instanceof ServerLongLongRow) {\n-      return getVector((ServerLongLongRow) row);\n-    } else {\n-      throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n-    }\n-  }\n-\n-  /**\n-   * Set inner vector to server row\n-   *\n-   * @param row server row\n-   * @param vector vector\n-   */\n-  public static void setVector(ServerRow row, Vector vector) {\n-    if (row instanceof ServerIntFloatRow) {\n-      setVector((ServerIntFloatRow) row, (IntFloatVector) vector);\n-    } else if (row instanceof ServerIntDoubleRow) {\n-      setVector((ServerIntDoubleRow) row, (IntDoubleVector) vector);\n-    } else if (row instanceof ServerIntIntRow) {\n-      setVector((ServerIntIntRow) row, (IntIntVector) vector);\n-    } else if (row instanceof ServerIntLongRow) {\n-      setVector((ServerIntLongRow) row, (IntLongVector) vector);\n-    } else if (row instanceof ServerLongFloatRow) {\n-      setVector((ServerLongFloatRow) row, (FloatVector) vector);\n-    } else if (row instanceof ServerLongDoubleRow) {\n-      setVector((ServerLongDoubleRow) row, (DoubleVector) vector);\n-    } else if (row instanceof ServerLongIntRow) {\n-      setVector((ServerLongIntRow) row, (IntVector) vector);\n-    } else if (row instanceof ServerLongLongRow) {\n-      setVector((ServerLongLongRow) row, (LongVector) vector);\n-    } else {\n-      throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n-    }\n-  }\n-\n-  public static IntDoubleVector getVector(ServerIntDoubleRow row) {\n-    return ((IntDoubleVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static IntFloatVector getVector(ServerIntFloatRow row) {\n-    return ((IntFloatVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static IntIntVector getVector(ServerIntIntRow row) {\n-    return ((IntIntVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static IntLongVector getVector(ServerIntLongRow row) {\n-    return ((IntLongVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static DoubleVector getVector(ServerLongDoubleRow row) {\n-    return ((LongDoubleVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static FloatVector getVector(ServerLongFloatRow row) {\n-    return ((LongFloatVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static IntVector getVector(ServerLongIntRow row) {\n-    return ((LongIntVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-  public static LongVector getVector(ServerLongLongRow row) {\n-    return ((LongLongVectorStorage) (row.getStorage())).getVector();\n-  }\n-\n-\n-  public static void setVector(ServerIntDoubleRow row, IntDoubleVector vector) {\n-    ((IntDoubleVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-\n-  public static void setVector(ServerIntFloatRow row, IntFloatVector vector) {\n-    ((IntFloatVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerIntIntRow row, IntIntVector vector) {\n-    ((IntIntVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerIntLongRow row, IntLongVector vector) {\n-    ((IntLongVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerLongDoubleRow row, DoubleVector vector) {\n-    ((LongDoubleVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerLongFloatRow row, FloatVector vector) {\n-    ((LongFloatVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerLongIntRow row, IntVector vector) {\n-    ((LongIntVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n-\n-  public static void setVector(ServerLongLongRow row, LongVector vector) {\n-    ((LongLongVectorStorage) (row.getStorage())).setVector(vector);\n-  }\n+    /////////////////////////////////////////////////////////////////////////////////////////////////\n+    // Notice: Basic type ServerRow only support Vector as inner storage now, so you can use methods\n+    // to get inner vector for basic type ServerRow.\n+    /////////////////////////////////////////////////////////////////////////////////////////////////\n+\n+    /**\n+     * Get inner vector from server row\n+     *\n+     * @param row server row\n+     * @return inner vector\n+     */\n+    public static Vector getVector(ServerRow row) {\n+        if (row instanceof ServerIntFloatRow) {\n+            return getVector((ServerIntFloatRow) row);\n+        } else if (row instanceof ServerIntDoubleRow) {\n+            return getVector((ServerIntDoubleRow) row);\n+        } else if (row instanceof ServerIntIntRow) {\n+            return getVector((ServerIntIntRow) row);\n+        } else if (row instanceof ServerIntLongRow) {\n+            return getVector((ServerIntLongRow) row);\n+        } else if (row instanceof ServerLongFloatRow) {\n+            return getVector((ServerLongFloatRow) row);\n+        } else if (row instanceof ServerLongDoubleRow) {\n+            return getVector((ServerLongDoubleRow) row);\n+        } else if (row instanceof ServerLongIntRow) {\n+            return getVector((ServerLongIntRow) row);\n+        } else if (row instanceof ServerLongLongRow) {\n+            return getVector((ServerLongLongRow) row);\n+        } else {\n+            throw new UnsupportedOperationException(\n+                    \"Only basic value type row use vector as storage\");\n+        }\n+    }\n+\n+    /**\n+     * Set inner vector to server row\n+     *\n+     * @param row    server row\n+     * @param vector vector\n+     */\n+    public static void setVector(ServerRow row, Vector vector) {\n+        if (row instanceof ServerIntFloatRow) {\n+            setVector((ServerIntFloatRow) row, (IntFloatVector) vector);\n+        } else if (row instanceof ServerIntDoubleRow) {\n+            setVector((ServerIntDoubleRow) row, (IntDoubleVector) vector);\n+        } else if (row instanceof ServerIntIntRow) {\n+            setVector((ServerIntIntRow) row, (IntIntVector) vector);\n+        } else if (row instanceof ServerIntLongRow) {\n+            setVector((ServerIntLongRow) row, (IntLongVector) vector);\n+        } else if (row instanceof ServerLongFloatRow) {\n+            setVector((ServerLongFloatRow) row, (FloatVector) vector);\n+        } else if (row instanceof ServerLongDoubleRow) {\n+            setVector((ServerLongDoubleRow) row, (DoubleVector) vector);\n+        } else if (row instanceof ServerLongIntRow) {\n+            setVector((ServerLongIntRow) row, (IntVector) vector);\n+        } else if (row instanceof ServerLongLongRow) {\n+            setVector((ServerLongLongRow) row, (LongVector) vector);\n+        } else {\n+            throw new UnsupportedOperationException(\n+                    \"Only basic value type row use vector as storage\");\n+        }\n+    }\n+\n+    public static IntDoubleVector getVector(ServerIntDoubleRow row) {\n+        return ((IntDoubleVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static IntFloatVector getVector(ServerIntFloatRow row) {\n+        return ((IntFloatVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static IntIntVector getVector(ServerIntIntRow row) {\n+        return ((IntIntVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static IntLongVector getVector(ServerIntLongRow row) {\n+        return ((IntLongVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static DoubleVector getVector(ServerLongDoubleRow row) {\n+        return ((LongDoubleVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static FloatVector getVector(ServerLongFloatRow row) {\n+        return ((LongFloatVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static IntVector getVector(ServerLongIntRow row) {\n+        return ((LongIntVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+    public static LongVector getVector(ServerLongLongRow row) {\n+        return ((LongLongVectorStorage) (row.getStorage())).getVector();\n+    }\n+\n+\n+    public static void setVector(ServerIntDoubleRow row, IntDoubleVector vector) {\n+        ((IntDoubleVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+\n+    public static void setVector(ServerIntFloatRow row, IntFloatVector vector) {\n+        ((IntFloatVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerIntIntRow row, IntIntVector vector) {\n+        ((IntIntVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerIntLongRow row, IntLongVector vector) {\n+        ((IntLongVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerLongDoubleRow row, DoubleVector vector) {\n+        ((LongDoubleVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerLongFloatRow row, FloatVector vector) {\n+        ((LongFloatVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerLongIntRow row, IntVector vector) {\n+        ((LongIntVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n+\n+    public static void setVector(ServerLongLongRow row, LongVector vector) {\n+        ((LongLongVectorStorage) (row.getStorage())).setVector(vector);\n+    }\n }\n",
+            "diff_size": 128
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/674/ServerRowUtils.java\nindex 32ee3f4754a..f4bb42d6522 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/674/ServerRowUtils.java\n@@ -165,4 +165,4 @@ public class ServerRowUtils {\n   public static void setVector(ServerLongLongRow row, LongVector vector) {\n     ((LongLongVectorStorage) (row.getStorage())).setVector(vector);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "73",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 118).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "102",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 118).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/674/ServerRowUtils.java\nindex 32ee3f4754a..4a6bc87f208 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/674/ServerRowUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/674/ServerRowUtils.java\n@@ -38,6 +38,7 @@ import com.tencent.angel.ps.storage.vector.storage.LongLongVectorStorage;\n /**\n  * Server row utilization\n  */\n+\n public class ServerRowUtils {\n   /////////////////////////////////////////////////////////////////////////////////////////////////\n   // Notice: Basic type ServerRow only support Vector as inner storage now, so you can use methods\n@@ -50,26 +51,27 @@ public class ServerRowUtils {\n    * @param row server row\n    * @return inner vector\n    */\n+\n   public static Vector getVector(ServerRow row) {\n     if (row instanceof ServerIntFloatRow) {\n       return getVector((ServerIntFloatRow) row);\n     } else if (row instanceof ServerIntDoubleRow) {\n-      return getVector((ServerIntDoubleRow) row);\n+             return getVector((ServerIntDoubleRow) row);\n     } else if (row instanceof ServerIntIntRow) {\n-      return getVector((ServerIntIntRow) row);\n-    } else if (row instanceof ServerIntLongRow) {\n-      return getVector((ServerIntLongRow) row);\n-    } else if (row instanceof ServerLongFloatRow) {\n-      return getVector((ServerLongFloatRow) row);\n-    } else if (row instanceof ServerLongDoubleRow) {\n-      return getVector((ServerLongDoubleRow) row);\n-    } else if (row instanceof ServerLongIntRow) {\n-      return getVector((ServerLongIntRow) row);\n-    } else if (row instanceof ServerLongLongRow) {\n-      return getVector((ServerLongLongRow) row);\n-    } else {\n-      throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n-    }\n+             return getVector((ServerIntIntRow) row);\n+           } else if (row instanceof ServerIntLongRow) {\n+                    return getVector((ServerIntLongRow) row);\n+           } else if (row instanceof ServerLongFloatRow) {\n+                    return getVector((ServerLongFloatRow) row);\n+                  } else if (row instanceof ServerLongDoubleRow) {\n+                           return getVector((ServerLongDoubleRow) row);\n+                  } else if (row instanceof ServerLongIntRow) {\n+                           return getVector((ServerLongIntRow) row);\n+                         } else if (row instanceof ServerLongLongRow) {\n+                                  return getVector((ServerLongLongRow) row);\n+                         } else {\n+                           throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n+                         }\n   }\n \n   /**\n@@ -78,26 +80,27 @@ public class ServerRowUtils {\n    * @param row server row\n    * @param vector vector\n    */\n+\n   public static void setVector(ServerRow row, Vector vector) {\n     if (row instanceof ServerIntFloatRow) {\n       setVector((ServerIntFloatRow) row, (IntFloatVector) vector);\n     } else if (row instanceof ServerIntDoubleRow) {\n-      setVector((ServerIntDoubleRow) row, (IntDoubleVector) vector);\n+             setVector((ServerIntDoubleRow) row, (IntDoubleVector) vector);\n     } else if (row instanceof ServerIntIntRow) {\n-      setVector((ServerIntIntRow) row, (IntIntVector) vector);\n-    } else if (row instanceof ServerIntLongRow) {\n-      setVector((ServerIntLongRow) row, (IntLongVector) vector);\n-    } else if (row instanceof ServerLongFloatRow) {\n-      setVector((ServerLongFloatRow) row, (FloatVector) vector);\n-    } else if (row instanceof ServerLongDoubleRow) {\n-      setVector((ServerLongDoubleRow) row, (DoubleVector) vector);\n-    } else if (row instanceof ServerLongIntRow) {\n-      setVector((ServerLongIntRow) row, (IntVector) vector);\n-    } else if (row instanceof ServerLongLongRow) {\n-      setVector((ServerLongLongRow) row, (LongVector) vector);\n-    } else {\n-      throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n-    }\n+             setVector((ServerIntIntRow) row, (IntIntVector) vector);\n+           } else if (row instanceof ServerIntLongRow) {\n+                    setVector((ServerIntLongRow) row, (IntLongVector) vector);\n+           } else if (row instanceof ServerLongFloatRow) {\n+                    setVector((ServerLongFloatRow) row, (FloatVector) vector);\n+                  } else if (row instanceof ServerLongDoubleRow) {\n+                           setVector((ServerLongDoubleRow) row, (DoubleVector) vector);\n+                  } else if (row instanceof ServerLongIntRow) {\n+                           setVector((ServerLongIntRow) row, (IntVector) vector);\n+                         } else if (row instanceof ServerLongLongRow) {\n+                                  setVector((ServerLongLongRow) row, (LongVector) vector);\n+                         } else {\n+                           throw new UnsupportedOperationException(\"Only basic value type row use vector as storage\");\n+                         }\n   }\n \n   public static IntDoubleVector getVector(ServerIntDoubleRow row) {\n@@ -132,12 +135,10 @@ public class ServerRowUtils {\n     return ((LongLongVectorStorage) (row.getStorage())).getVector();\n   }\n \n-\n   public static void setVector(ServerIntDoubleRow row, IntDoubleVector vector) {\n     ((IntDoubleVectorStorage) (row.getStorage())).setVector(vector);\n   }\n \n-\n   public static void setVector(ServerIntFloatRow row, IntFloatVector vector) {\n     ((IntFloatVectorStorage) (row.getStorage())).setVector(vector);\n   }\n@@ -165,4 +166,4 @@ public class ServerRowUtils {\n   public static void setVector(ServerLongLongRow row, LongVector vector) {\n     ((LongLongVectorStorage) (row.getStorage())).setVector(vector);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 36
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

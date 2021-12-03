@@ -1,0 +1,109 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "363",
+    "information": {
+        "violations": [
+            {
+                "line": "173",
+                "column": "58",
+                "severity": "warning",
+                "message": "'&&' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    Map<String, Method> visibleMethods = new HashMap<>();\n    for (Method method : clazz.getMethods()) {\n      if (method.isAnnotationPresent(ApiOperation.class) &&\n          method.getAnnotation(ApiOperation.class).hidden()) {\n        continue;\n      }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/363/SwaggerEnvironment.java\nindex b80dc539f98..295371cf838 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/363/SwaggerEnvironment.java\n@@ -170,8 +170,7 @@ public class SwaggerEnvironment {\n   private Map<String, Method> retrieveVisibleMethods(Class<?> clazz) {\n     Map<String, Method> visibleMethods = new HashMap<>();\n     for (Method method : clazz.getMethods()) {\n-      if (method.isAnnotationPresent(ApiOperation.class) &&\n-          method.getAnnotation(ApiOperation.class).hidden()) {\n+      if (method.isAnnotationPresent(ApiOperation.class) && method.getAnnotation(ApiOperation.class).hidden()) {\n         continue;\n       }\n       visibleMethods.put(method.getName(), method);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "174",
+                    "column": "58",
+                    "severity": "warning",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/363/SwaggerEnvironment.java\nindex b80dc539f98..c4b196c96cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/363/SwaggerEnvironment.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package io.servicecomb.swagger.engine;\n \n import java.lang.reflect.Method;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/363/SwaggerEnvironment.java\nindex b80dc539f98..c3deded1845 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/363/SwaggerEnvironment.java\n@@ -170,12 +170,11 @@ public class SwaggerEnvironment {\n   private Map<String, Method> retrieveVisibleMethods(Class<?> clazz) {\n     Map<String, Method> visibleMethods = new HashMap<>();\n     for (Method method : clazz.getMethods()) {\n-      if (method.isAnnotationPresent(ApiOperation.class) &&\n-          method.getAnnotation(ApiOperation.class).hidden()) {\n-        continue;\n+      if (method.isAnnotationPresent(ApiOperation.class) && method.getAnnotation(ApiOperation.class).hidden()) {\n+  continue;\n       }\n       visibleMethods.put(method.getName(), method);\n     }\n     return visibleMethods;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 156).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "98",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "129",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "130",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/363/SwaggerEnvironment.java\nindex b80dc539f98..7cd8d0c5b9e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/363/SwaggerEnvironment.java\n@@ -19,11 +19,8 @@ package io.servicecomb.swagger.engine;\n import java.lang.reflect.Method;\n import java.util.HashMap;\n import java.util.Map;\n-\n import javax.inject.Inject;\n-\n import org.springframework.stereotype.Component;\n-\n import io.servicecomb.foundation.common.utils.BeanUtils;\n import io.servicecomb.foundation.common.utils.ReflectUtils;\n import io.servicecomb.swagger.generator.core.SwaggerGenerator;\n@@ -47,14 +44,12 @@ public class SwaggerEnvironment {\n   @Inject\n   private ProducerArgumentsMapperFactory producerArgumentsFactory;\n \n-  private ResponseMapperFactorys<ProducerResponseMapper> producerResponseMapperFactorys =\n-      new ResponseMapperFactorys<>(ProducerResponseMapperFactory.class);\n+  private ResponseMapperFactorys<ProducerResponseMapper> producerResponseMapperFactorys = new ResponseMapperFactorys<>(ProducerResponseMapperFactory.class);\n \n   @Inject\n   private ConsumerArgumentsMapperFactory consumerArgumentsFactory;\n \n-  private ResponseMapperFactorys<ConsumerResponseMapper> consumerResponseMapperFactorys =\n-      new ResponseMapperFactorys<>(ConsumerResponseMapperFactory.class);\n+  private ResponseMapperFactorys<ConsumerResponseMapper> consumerResponseMapperFactorys = new ResponseMapperFactorys<>(ConsumerResponseMapperFactory.class);\n \n   @Inject\n   public void setConverterMgr(ConverterMgr converterMgr) {\n@@ -94,27 +89,21 @@ public class SwaggerEnvironment {\n       if (swaggerMethod == null) {\n         // consumer\u5927\u4e8e\u5951\u7ea6\uff0c\u975e\u6cd5\n         String msg = String.format(\"consumer method %s:%s not exist in swagger.\",\n-            consumerIntf.getName(),\n-            consumerMethod.getName());\n+consumerIntf.getName(),\n+consumerMethod.getName());\n         throw new Error(msg);\n       }\n \n-      ConsumerArgumentsMapper argsMapper =\n-          consumerArgumentsFactory.createArgumentsMapper(swaggerMethod, consumerMethod);\n-      ConsumerResponseMapper responseMapper = consumerResponseMapperFactorys.createResponseMapper(\n-          swaggerMethod.getGenericReturnType(),\n-          consumerMethod.getGenericReturnType());\n-\n+      ConsumerArgumentsMapper argsMapper = consumerArgumentsFactory.createArgumentsMapper(swaggerMethod, consumerMethod);\n+      ConsumerResponseMapper responseMapper = consumerResponseMapperFactorys.createResponseMapper(swaggerMethod.getGenericReturnType(), consumerMethod.getGenericReturnType());\n       SwaggerConsumerOperation op = new SwaggerConsumerOperation();\n       op.setName(methodName);\n       op.setConsumerMethod(consumerMethod);\n       op.setSwaggerMethod(swaggerMethod);\n       op.setArgumentsMapper(argsMapper);\n       op.setResponseMapper(responseMapper);\n-\n       consumer.addOperation(op);\n     }\n-\n     return consumer;\n   }\n \n@@ -122,7 +111,6 @@ public class SwaggerEnvironment {\n     Class<?> producerCls = BeanUtils.getImplClassFromBean(producerInstance);\n     Map<String, Method> visibleProducerMethods = retrieveVisibleMethods(producerCls);\n     Class<?> swaggerIntf = ClassUtils.getOrCreateInterface(swagger, null, null);\n-\n     SwaggerProducer producer = new SwaggerProducer();\n     producer.setProducerCls(producerCls);\n     producer.setSwaggerIntf(swaggerIntf);\n@@ -133,17 +121,13 @@ public class SwaggerEnvironment {\n       if (producerMethod == null) {\n         // producer\u672a\u5b9e\u73b0\u5951\u7ea6\uff0c\u975e\u6cd5\n         String msg = String.format(\"swagger method %s:%s not exist in producer.\",\n-            swaggerIntf.getClass().getName(),\n-            methodName);\n+swaggerIntf.getClass().getName(),\n+methodName);\n         throw new Error(msg);\n       }\n \n-      ProducerArgumentsMapper argsMapper = producerArgumentsFactory.createArgumentsMapper(swaggerMethod,\n-          producerMethod);\n-      ProducerResponseMapper responseMapper = producerResponseMapperFactorys.createResponseMapper(\n-          swaggerMethod.getGenericReturnType(),\n-          producerMethod.getGenericReturnType());\n-\n+      ProducerArgumentsMapper argsMapper = producerArgumentsFactory.createArgumentsMapper(swaggerMethod, producerMethod);\n+      ProducerResponseMapper responseMapper = producerResponseMapperFactorys.createResponseMapper(swaggerMethod.getGenericReturnType(), producerMethod.getGenericReturnType());\n       SwaggerProducerOperation op = new SwaggerProducerOperation();\n       op.setName(methodName);\n       op.setProducerClass(producerCls);\n@@ -152,10 +136,8 @@ public class SwaggerEnvironment {\n       op.setSwaggerMethod(swaggerMethod);\n       op.setArgumentsMapper(argsMapper);\n       op.setResponseMapper(responseMapper);\n-\n       producer.addOperation(op);\n     }\n-\n     return producer;\n   }\n \n@@ -163,19 +145,18 @@ public class SwaggerEnvironment {\n     Class<?> producerCls = BeanUtils.getImplClassFromBean(producerInstance);\n     SwaggerGenerator producerGenerator = UnitTestSwaggerUtils.generateSwagger(producerCls);\n     Swagger swagger = producerGenerator.getSwagger();\n-\n     return createProducer(producerInstance, swagger);\n   }\n \n   private Map<String, Method> retrieveVisibleMethods(Class<?> clazz) {\n     Map<String, Method> visibleMethods = new HashMap<>();\n     for (Method method : clazz.getMethods()) {\n-      if (method.isAnnotationPresent(ApiOperation.class) &&\n-          method.getAnnotation(ApiOperation.class).hidden()) {\n+      if (method.isAnnotationPresent(ApiOperation.class) && method.getAnnotation(ApiOperation.class).hidden()) {\n         continue;\n       }\n+\n       visibleMethods.put(method.getName(), method);\n     }\n     return visibleMethods;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 33
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/363/SwaggerEnvironment.java\nindex b80dc539f98..295371cf838 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/363/SwaggerEnvironment.java\n@@ -170,8 +170,7 @@ public class SwaggerEnvironment {\n   private Map<String, Method> retrieveVisibleMethods(Class<?> clazz) {\n     Map<String, Method> visibleMethods = new HashMap<>();\n     for (Method method : clazz.getMethods()) {\n-      if (method.isAnnotationPresent(ApiOperation.class) &&\n-          method.getAnnotation(ApiOperation.class).hidden()) {\n+      if (method.isAnnotationPresent(ApiOperation.class) && method.getAnnotation(ApiOperation.class).hidden()) {\n         continue;\n       }\n       visibleMethods.put(method.getName(), method);\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/363/SwaggerEnvironment.java\nindex b80dc539f98..295371cf838 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/363/SwaggerEnvironment.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/363/SwaggerEnvironment.java\n@@ -170,8 +170,7 @@ public class SwaggerEnvironment {\n   private Map<String, Method> retrieveVisibleMethods(Class<?> clazz) {\n     Map<String, Method> visibleMethods = new HashMap<>();\n     for (Method method : clazz.getMethods()) {\n-      if (method.isAnnotationPresent(ApiOperation.class) &&\n-          method.getAnnotation(ApiOperation.class).hidden()) {\n+      if (method.isAnnotationPresent(ApiOperation.class) && method.getAnnotation(ApiOperation.class).hidden()) {\n         continue;\n       }\n       visibleMethods.put(method.getName(), method);\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

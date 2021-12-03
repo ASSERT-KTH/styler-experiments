@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "387",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 150).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  /**\n   * Load the {@link ExceptionToResponseConverter} implementations. Ensure that those converters whose {@link ExceptionToResponseConverter#getOrder()}\n   * return smaller value takes higher priority.\n   */\n  @SuppressWarnings(\"unchecked\")",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/387/ExceptionToResponseConverters.java\nindex 3c78cdf7f31..a1130630a6b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/387/ExceptionToResponseConverters.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.swagger.invocation.exception;\n \n import java.util.HashMap;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/387/ExceptionToResponseConverters.java\nindex 3c78cdf7f31..0da4f79ce86 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/387/ExceptionToResponseConverters.java\n@@ -62,4 +62,4 @@ public class ExceptionToResponseConverters {\n     }\n     return converter.convert(swaggerInvocation, e);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/387/ExceptionToResponseConverters.java\nindex 3c78cdf7f31..66cc1efa104 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/387/ExceptionToResponseConverters.java\n@@ -18,14 +18,12 @@ package org.apache.servicecomb.swagger.invocation.exception;\n \n import java.util.HashMap;\n import java.util.Map;\n-\n import org.apache.servicecomb.foundation.common.utils.SPIServiceUtils;\n import org.apache.servicecomb.swagger.invocation.Response;\n import org.apache.servicecomb.swagger.invocation.SwaggerInvocation;\n \n public class ExceptionToResponseConverters {\n-  private Map<Class<?>, ExceptionToResponseConverter<Throwable>> exceptionToResponseConverters =\n-      new HashMap<>();\n+  private Map<Class<?>, ExceptionToResponseConverter<Throwable>> exceptionToResponseConverters = new HashMap<>();\n \n   private ExceptionToResponseConverter<Throwable> defaultConverter;\n \n@@ -33,6 +31,7 @@ public class ExceptionToResponseConverters {\n    * Load the {@link ExceptionToResponseConverter} implementations. Ensure that those converters whose {@link ExceptionToResponseConverter#getOrder()}\n    * return smaller value takes higher priority.\n    */\n+\n   @SuppressWarnings(\"unchecked\")\n   public ExceptionToResponseConverters() {\n     SPIServiceUtils.getSortedService(ExceptionToResponseConverter.class).forEach(converter -> {\n@@ -55,11 +54,13 @@ public class ExceptionToResponseConverters {\n       if (clazz == Throwable.class) {\n         break;\n       }\n+\n       clazz = clazz.getSuperclass();\n     }\n+\n     if (converter == null) {\n       converter = defaultConverter;\n     }\n     return converter.convert(swaggerInvocation, e);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 150).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/387/ExceptionToResponseConverters.java\nindex 3c78cdf7f31..57858541f2c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/387/ExceptionToResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/387/ExceptionToResponseConverters.java\n@@ -32,8 +32,8 @@ public class ExceptionToResponseConverters {\n   /**\n    * Load the {@link ExceptionToResponseConverter} implementations. Ensure that those converters whose {@link ExceptionToResponseConverter#getOrder()}\n    * return smaller value takes higher priority.\n-   */\n-  @SuppressWarnings(\"unchecked\")\n+   */@SuppressWarnings(\"unchecked\")\n+@SuppressWarnings(\"unchecked\")\n   public ExceptionToResponseConverters() {\n     SPIServiceUtils.getSortedService(ExceptionToResponseConverter.class).forEach(converter -> {\n       if (converter.getExceptionClass() == null) {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

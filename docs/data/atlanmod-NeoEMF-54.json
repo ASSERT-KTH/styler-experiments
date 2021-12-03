@@ -1,0 +1,60 @@
+{
+    "project_name": "atlanmod-NeoEMF",
+    "violation_id": "54",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "/**\n */\npackage org.eclipse.gmt.modisco.java;\n\n\n/**",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/atlanmod-NeoEMF/styler/05_predictions/final/files-repaired/54/UnresolvedType.java\nindex 7d2b02ebc73..90570d2f51a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/atlanmod-NeoEMF/styler/05_predictions/final/files-repaired/54/UnresolvedType.java\n@@ -1,7 +1,7 @@\n /**\n  */\n-package org.eclipse.gmt.modisco.java;\n \n+package org.eclipse.gmt.modisco.java;\n \n /**\n  * <!-- begin-user-doc -->\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/checkstyle_idea/54/UnresolvedType.java\nindex 7d2b02ebc73..15e80a8c5e7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/checkstyle_idea/54/UnresolvedType.java\n@@ -1,5 +1,7 @@\n /**\n+ *\n  */\n+\n package org.eclipse.gmt.modisco.java;\n \n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/three_grams/files-repaired/54/UnresolvedType.java\nindex 7d2b02ebc73..90570d2f51a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/violations/54/UnresolvedType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/atlanmod-NeoEMF/styler/05_predictions/three_grams/files-repaired/54/UnresolvedType.java\n@@ -1,7 +1,7 @@\n /**\n  */\n-package org.eclipse.gmt.modisco.java;\n \n+package org.eclipse.gmt.modisco.java;\n \n /**\n  * <!-- begin-user-doc -->\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

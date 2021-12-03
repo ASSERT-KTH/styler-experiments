@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "131",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "80",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "public interface BeanCloneable {\n\t\n\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties){\n\t\tif (LangUtils.isEmpty(excludeProperties)) {\n\t\t\treturn CopyUtils.copy(targetClass, this);\n\t\t} else {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/131/BeanCloneable.java\nindex 66f043d91fd..d5578368431 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/131/BeanCloneable.java\n@@ -8,7 +8,7 @@ import org.onetwo.common.utils.LangUtils;\n  */\n public interface BeanCloneable {\n \t\n-\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties){\n+\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties) {\n \t\tif (LangUtils.isEmpty(excludeProperties)) {\n \t\t\treturn CopyUtils.copy(targetClass, this);\n \t\t} else {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/131/BeanCloneable.java\nindex 66f043d91fd..4a27762195c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/131/BeanCloneable.java\n@@ -7,13 +7,13 @@ import org.onetwo.common.utils.LangUtils;\n  * <br/>\n  */\n public interface BeanCloneable {\n-\t\n-\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties){\n-\t\tif (LangUtils.isEmpty(excludeProperties)) {\n-\t\t\treturn CopyUtils.copy(targetClass, this);\n-\t\t} else {\n-\t\t\treturn CopyUtils.copyIgnoreProperties(targetClass, this, excludeProperties);\n-\t\t}\n-\t}\n+\n+  default <T> T asBean(Class<T> targetClass, String... excludeProperties) {\n+    if (LangUtils.isEmpty(excludeProperties)) {\n+      return CopyUtils.copy(targetClass, this);\n+    } else {\n+      return CopyUtils.copyIgnoreProperties(targetClass, this, excludeProperties);\n+    }\n+  }\n \n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/131/BeanCloneable.java\nindex 66f043d91fd..d5578368431 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/131/BeanCloneable.java\n@@ -8,7 +8,7 @@ import org.onetwo.common.utils.LangUtils;\n  */\n public interface BeanCloneable {\n \t\n-\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties){\n+\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties) {\n \t\tif (LangUtils.isEmpty(excludeProperties)) {\n \t\t\treturn CopyUtils.copy(targetClass, this);\n \t\t} else {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/131/BeanCloneable.java\nindex 66f043d91fd..d5578368431 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/131/BeanCloneable.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/131/BeanCloneable.java\n@@ -8,7 +8,7 @@ import org.onetwo.common.utils.LangUtils;\n  */\n public interface BeanCloneable {\n \t\n-\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties){\n+\tdefault <T> T asBean(Class<T> targetClass, String... excludeProperties) {\n \t\tif (LangUtils.isEmpty(excludeProperties)) {\n \t\t\treturn CopyUtils.copy(targetClass, this);\n \t\t} else {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "project_name": "Chaklader-Multi-threading",
+    "violation_id": "33",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "error",
+                "message": "Line has trailing spaces.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic class GoodWriter extends Writer {\n    \n    private Queue<Object> queue;\n    public boolean okToGo;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/33/GoodWriter.java\nindex 2b521666e72..4a71e215934 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Multi-threading/styler/05_predictions/final/files-repaired/33/GoodWriter.java\n@@ -5,7 +5,7 @@ import utils.Util;\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n     public boolean okToGo;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/33/GoodWriter.java\nindex 2b521666e72..cba780e819b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/checkstyle_idea/33/GoodWriter.java\n@@ -5,7 +5,7 @@ import utils.Util;\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n     public boolean okToGo;\n \n@@ -26,8 +26,9 @@ public class GoodWriter extends Writer {\n             }\n         }\n         synchronized (this) {\n-            if (!okToGo)\n+            if (!okToGo) {\n                 Util.wait(this);\n+            }\n         }\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/33/GoodWriter.java\nindex 2b521666e72..b2fd931ca11 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/naturalize/33/GoodWriter.java\n@@ -5,9 +5,10 @@ import utils.Util;\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n-    public boolean okToGo;\n+\n+public boolean okToGo;\n \n     public GoodWriter(int id, Driver driver, Queue<Object> queue) {\n         super(id, driver);\n@@ -26,9 +27,8 @@ public class GoodWriter extends Writer {\n             }\n         }\n         synchronized (this) {\n-            if (!okToGo)\n-                Util.wait(this);\n-        }\n+            if (!okToGo) Util.wait(this);\n+    }\n     }\n \n     public void endWrite() {\n@@ -56,4 +56,4 @@ public class GoodWriter extends Writer {\n             }\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/33/GoodWriter.java\nindex 2b521666e72..9347d6738d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/codebuff/33/GoodWriter.java\n@@ -1,12 +1,12 @@\n package ReaderWriter;\n \n import utils.Util;\n-\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n+\n     public boolean okToGo;\n \n     public GoodWriter(int id, Driver driver, Queue<Object> queue) {\n@@ -26,8 +26,7 @@ public class GoodWriter extends Writer {\n             }\n         }\n         synchronized (this) {\n-            if (!okToGo)\n-                Util.wait(this);\n+            if (!okToGo) Util.wait(this);\n         }\n     }\n \n@@ -38,6 +37,7 @@ public class GoodWriter extends Writer {\n             if (!queue.isEmpty()) {\n                 if (queue.peek() instanceof GoodWriter) {\n                     driver.numWriter++;\n+\n                     GoodWriter request = (GoodWriter) queue.remove();\n                     synchronized (request) {\n                         request.okToGo = true;\n@@ -46,6 +46,7 @@ public class GoodWriter extends Writer {\n                 } else {\n                     while (!queue.isEmpty() && queue.peek() instanceof Reader) {\n                         driver.numReader++;\n+\n                         GoodReader request = (GoodReader) queue.remove();\n                         synchronized (request) {\n                             request.okToGo = true;\n@@ -56,4 +57,4 @@ public class GoodWriter extends Writer {\n             }\n         }\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/33/GoodWriter.java\nindex 2b521666e72..4a71e215934 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/random/files-repaired/33/GoodWriter.java\n@@ -5,7 +5,7 @@ import utils.Util;\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n     public boolean okToGo;\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/33/GoodWriter.java\nindex 2b521666e72..4a71e215934 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/violations/33/GoodWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Multi-threading/styler/05_predictions/three_grams/files-repaired/33/GoodWriter.java\n@@ -5,7 +5,7 @@ import utils.Util;\n import java.util.Queue;\n \n public class GoodWriter extends Writer {\n-    \n+\n     private Queue<Object> queue;\n     public boolean okToGo;\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,82 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "258",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * under the License.\n */\npackage org.apache.iotdb.tsfile.write.writer;\n\nimport org.apache.iotdb.tsfile.exception.write.TsFileNotCompleteException;\nimport org.apache.iotdb.tsfile.file.metadata.ChunkGroupMetadata;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/258/ForceAppendTsFileWriter.java\nindex 83ee04eed42..7db8da46e5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/258/ForceAppendTsFileWriter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.writer;\n \n import org.apache.iotdb.tsfile.exception.write.TsFileNotCompleteException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/258/ForceAppendTsFileWriter.java\nindex 83ee04eed42..7db8da46e5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/258/ForceAppendTsFileWriter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.writer;\n \n import org.apache.iotdb.tsfile.exception.write.TsFileNotCompleteException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "45",
+                    "severity": "warning",
+                    "message": "'throws' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/258/ForceAppendTsFileWriter.java\nindex 83ee04eed42..c46eda36344 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/258/ForceAppendTsFileWriter.java\n@@ -24,10 +24,8 @@ import org.apache.iotdb.tsfile.file.metadata.ChunkMetadata;\n import org.apache.iotdb.tsfile.file.metadata.TsFileMetadata;\n import org.apache.iotdb.tsfile.fileSystem.FSFactoryProducer;\n import org.apache.iotdb.tsfile.read.TsFileSequenceReader;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import java.io.File;\n import java.io.IOException;\n import java.util.ArrayList;\n@@ -37,12 +35,14 @@ import java.util.List;\n  * ForceAppendTsFileWriter opens a COMPLETE TsFile, reads and truncate its metadata to support\n  * appending new data.\n  */\n+\n public class ForceAppendTsFileWriter extends TsFileIOWriter {\n \n   private long truncatePosition;\n   private static Logger logger = LoggerFactory.getLogger(ForceAppendTsFileWriter.class);\n \n-  public ForceAppendTsFileWriter(File file) throws IOException {\n+  public ForceAppendTsFileWriter(File file)\n+    throws IOException {\n     if (logger.isDebugEnabled()) {\n       logger.debug(\"{} writer is opened.\", file.getName());\n     }\n@@ -51,20 +51,19 @@ public class ForceAppendTsFileWriter extends TsFileIOWriter {\n \n     // file doesn't exist\n     if (file.length() == 0 || !file.exists()) {\n-      throw new TsFileNotCompleteException(\"File \" + file.getPath() + \" is not a complete TsFile\");\n+      throw new TsFileNotCompleteException(\"File \" + file.getPath()\n+      + \" is not a complete TsFile\");\n     }\n-\n     try (TsFileSequenceReader reader = new TsFileSequenceReader(file.getAbsolutePath(), true)) {\n \n       // this tsfile is not complete\n       if (!reader.isComplete()) {\n-        throw new TsFileNotCompleteException(\n-            \"File \" + file.getPath() + \" is not a complete TsFile\");\n+        throw new TsFileNotCompleteException(\"File \" + file.getPath()\n+        + \" is not a complete TsFile\");\n       }\n       TsFileMetadata tsFileMetadata = reader.readFileMetadata();\n       // truncate metadata and marker\n       truncatePosition = tsFileMetadata.getMetaOffset();\n-\n       canWrite = true;\n       List<String> devices = reader.getAllDevices();\n       for (String device : devices) {\n@@ -83,4 +82,4 @@ public class ForceAppendTsFileWriter extends TsFileIOWriter {\n   public long getTruncatePosition() {\n     return truncatePosition;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/258/ForceAppendTsFileWriter.java\nindex 83ee04eed42..7db8da46e5c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/258/ForceAppendTsFileWriter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/258/ForceAppendTsFileWriter.java\n@@ -16,6 +16,7 @@\n  * specific language governing permissions and limitations\n  * under the License.\n  */\n+\n package org.apache.iotdb.tsfile.write.writer;\n \n import org.apache.iotdb.tsfile.exception.write.TsFileNotCompleteException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

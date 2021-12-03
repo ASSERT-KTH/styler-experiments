@@ -1,0 +1,71 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "254",
+    "information": {
+        "violations": [
+            {
+                "line": "55",
+                "column": "7",
+                "severity": "warning",
+                "message": "'if' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public String getConfigServer() {\n    if(configServerAddresses.isEmpty()) {\n      throw new IllegalStateException(\"Config center address is not available.\");\n    }\n    int index = Math.abs(counter.get() % configServerAddresses.size());",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/254/MemberDiscovery.java\nindex 6db80e6f04e..59f66b84759 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/254/MemberDiscovery.java\n@@ -52,7 +52,7 @@ public class MemberDiscovery {\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/254/MemberDiscovery.java\nindex 6db80e6f04e..59f66b84759 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/254/MemberDiscovery.java\n@@ -52,7 +52,7 @@ public class MemberDiscovery {\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/254/MemberDiscovery.java\nindex 6db80e6f04e..aa3eeb005b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/254/MemberDiscovery.java\n@@ -52,7 +52,7 @@ public class MemberDiscovery {\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n@@ -78,4 +78,4 @@ public class MemberDiscovery {\n     Collections.shuffle(configServerAddresses);\n     LOGGER.info(\"config center members: {}\", configServerAddresses);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "73",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/254/MemberDiscovery.java\nindex 6db80e6f04e..c7fa4c3896b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/254/MemberDiscovery.java\n@@ -21,20 +21,17 @@ import java.util.ArrayList;\n import java.util.Collections;\n import java.util.List;\n import java.util.concurrent.atomic.AtomicInteger;\n-\n import org.apache.servicecomb.foundation.common.event.EventManager;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.google.common.eventbus.Subscribe;\n-\n import io.vertx.core.json.JsonObject;\n \n /**\n  * Created by on 2016/11/19.\n  */\n-public class MemberDiscovery {\n \n+public class MemberDiscovery {\n   private static final Logger LOGGER = LoggerFactory.getLogger(MemberDiscovery.class);\n \n   private static final String SCHEMA_SEPRATOR = \"://\";\n@@ -47,14 +44,16 @@ public class MemberDiscovery {\n     if (configCenterUri != null && !configCenterUri.isEmpty()) {\n       configServerAddresses.addAll(configCenterUri);\n     }\n+\n     Collections.shuffle(configServerAddresses);\n     EventManager.register(this);\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n+\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n     return configServerAddresses.get(index);\n   }\n@@ -71,11 +70,10 @@ public class MemberDiscovery {\n       if (\"UP\".equals(instance.getString(\"status\", \"UP\"))) {\n         String endpoint = instance.getJsonArray(\"endpoints\").getString(0);\n         String scheme = instance.getBoolean(\"isHttps\", false) ? \"https\" : \"http\";\n-        configServerAddresses.add(scheme + SCHEMA_SEPRATOR\n-            + endpoint.substring(endpoint.indexOf(SCHEMA_SEPRATOR) + SCHEMA_SEPRATOR.length()));\n+        configServerAddresses.add(scheme + SCHEMA_SEPRATOR + endpoint.substring(endpoint.indexOf(SCHEMA_SEPRATOR) + SCHEMA_SEPRATOR.length()));\n       }\n     });\n     Collections.shuffle(configServerAddresses);\n     LOGGER.info(\"config center members: {}\", configServerAddresses);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/254/MemberDiscovery.java\nindex 6db80e6f04e..59f66b84759 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/254/MemberDiscovery.java\n@@ -52,7 +52,7 @@ public class MemberDiscovery {\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/254/MemberDiscovery.java\nindex 6db80e6f04e..59f66b84759 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/254/MemberDiscovery.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/254/MemberDiscovery.java\n@@ -52,7 +52,7 @@ public class MemberDiscovery {\n   }\n \n   public String getConfigServer() {\n-    if(configServerAddresses.isEmpty()) {\n+    if (configServerAddresses.isEmpty()) {\n       throw new IllegalStateException(\"Config center address is not available.\");\n     }\n     int index = Math.abs(counter.get() % configServerAddresses.size());\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

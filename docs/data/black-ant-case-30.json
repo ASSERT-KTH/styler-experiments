@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "30",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "28",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @Bean\n    public TransactionRes(){\n        return new RedisTransactionRepository();\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/30/TCCTransactionConfig.java\nindex a29b5a55b3e..6250ace6b2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/30/TCCTransactionConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class TCCTransactionConfig {\n \n     @Bean\n-    public TransactionRes(){\n+    public TransactionRes() {\n         return new RedisTransactionRepository();\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/30/TCCTransactionConfig.java\nindex a29b5a55b3e..6250ace6b2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/30/TCCTransactionConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class TCCTransactionConfig {\n \n     @Bean\n-    public TransactionRes(){\n+    public TransactionRes() {\n         return new RedisTransactionRepository();\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/30/TCCTransactionConfig.java\nindex a29b5a55b3e..2f5353daa01 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/30/TCCTransactionConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class TCCTransactionConfig {\n \n     @Bean\n-    public TransactionRes(){\n+    public TransactionRes() {\n         return new RedisTransactionRepository();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/30/TCCTransactionConfig.java\nindex a29b5a55b3e..6250ace6b2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/30/TCCTransactionConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class TCCTransactionConfig {\n \n     @Bean\n-    public TransactionRes(){\n+    public TransactionRes() {\n         return new RedisTransactionRepository();\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/30/TCCTransactionConfig.java\nindex a29b5a55b3e..6250ace6b2f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/30/TCCTransactionConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/30/TCCTransactionConfig.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class TCCTransactionConfig {\n \n     @Bean\n-    public TransactionRes(){\n+    public TransactionRes() {\n         return new RedisTransactionRepository();\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

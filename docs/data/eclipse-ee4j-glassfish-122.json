@@ -1,0 +1,71 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "122",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "3",
+                "severity": "warning",
+                "message": "'method def modifier' has incorrect indentation level 2, expected level should be 4.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "public interface SolarisCLibrary extends CLibrary {\n\n  SolarisPasswd getpwnam(String username);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/122/SolarisCLibrary.java\nindex 3c5a34e29fb..34ab3a1d285 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/122/SolarisCLibrary.java\n@@ -22,6 +22,6 @@ package org.jvnet.libpam.impl;\n  */\n public interface SolarisCLibrary extends CLibrary {\n \n-  SolarisPasswd getpwnam(String username);\n+    SolarisPasswd getpwnam(String username);\n \n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/122/SolarisCLibrary.java\nindex 3c5a34e29fb..dedba99da76 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/122/SolarisCLibrary.java\n@@ -17,11 +17,10 @@\n package org.jvnet.libpam.impl;\n \n /**\n- *\n  * @author Sebastian Sdorra\n  */\n public interface SolarisCLibrary extends CLibrary {\n \n-  SolarisPasswd getpwnam(String username);\n+    SolarisPasswd getpwnam(String username);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/122/SolarisCLibrary.java\nindex 3c5a34e29fb..acc881f63c4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/122/SolarisCLibrary.java\n@@ -22,6 +22,5 @@ package org.jvnet.libpam.impl;\n  */\n public interface SolarisCLibrary extends CLibrary {\n \n-  SolarisPasswd getpwnam(String username);\n-\n-}\n+    SolarisPasswd getpwnam(String username);\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/122/SolarisCLibrary.java\nindex 3c5a34e29fb..c7da8ec571b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/122/SolarisCLibrary.java\n@@ -22,6 +22,7 @@ package org.jvnet.libpam.impl;\n  */\n public interface SolarisCLibrary extends CLibrary {\n \n-  SolarisPasswd getpwnam(String username);\n+\n+    SolarisPasswd getpwnam(String username);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/122/SolarisCLibrary.java\nindex 3c5a34e29fb..34ab3a1d285 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/122/SolarisCLibrary.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/122/SolarisCLibrary.java\n@@ -22,6 +22,6 @@ package org.jvnet.libpam.impl;\n  */\n public interface SolarisCLibrary extends CLibrary {\n \n-  SolarisPasswd getpwnam(String username);\n+    SolarisPasswd getpwnam(String username);\n \n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

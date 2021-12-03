@@ -1,0 +1,62 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "4",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "column": "28",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @GetMapping(\"hello\")\n    public String success(){\n        return  \"maven son springboot success\";\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/4/HomeControlelr.java\nindex 46f7756b83c..aed356e31cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/4/HomeControlelr.java\n@@ -8,7 +8,7 @@ public class HomeControlelr {\n \n \n     @GetMapping(\"hello\")\n-    public String success(){\n+    public String success() {\n         return  \"maven son springboot success\";\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/4/HomeControlelr.java\nindex 46f7756b83c..6fed3b324ca 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/4/HomeControlelr.java\n@@ -8,8 +8,8 @@ public class HomeControlelr {\n \n \n     @GetMapping(\"hello\")\n-    public String success(){\n-        return  \"maven son springboot success\";\n+    public String success() {\n+        return \"maven son springboot success\";\n     }\n \n }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/4/HomeControlelr.java\nindex 46f7756b83c..aed356e31cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/4/HomeControlelr.java\n@@ -8,7 +8,7 @@ public class HomeControlelr {\n \n \n     @GetMapping(\"hello\")\n-    public String success(){\n+    public String success() {\n         return  \"maven son springboot success\";\n     }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/4/HomeControlelr.java\nindex 46f7756b83c..aed356e31cd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/4/HomeControlelr.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/4/HomeControlelr.java\n@@ -8,7 +8,7 @@ public class HomeControlelr {\n \n \n     @GetMapping(\"hello\")\n-    public String success(){\n+    public String success() {\n         return  \"maven son springboot success\";\n     }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

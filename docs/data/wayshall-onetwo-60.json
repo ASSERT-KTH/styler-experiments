@@ -1,0 +1,62 @@
+{
+    "project_name": "wayshall-onetwo",
+    "violation_id": "60",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "89",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n\t@Bean\n\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker(){\n\t\treturn new FeignClientPluginContextPathChecker();\n\t}\n\t",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/60/LocalFeignConfiguration.java\nindex 61adbda3342..58f16c167bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/wayshall-onetwo/styler/05_predictions/final/files-repaired/60/LocalFeignConfiguration.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class LocalFeignConfiguration {\n \n \t@Bean\n-\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker(){\n+\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker() {\n \t\treturn new FeignClientPluginContextPathChecker();\n \t}\n \t\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/60/LocalFeignConfiguration.java\nindex 61adbda3342..4e323a34fac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/checkstyle_idea/60/LocalFeignConfiguration.java\n@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Configuration;\n //@AutoConfigureBefore(FeignAutoConfiguration.classS)\n public class LocalFeignConfiguration {\n \n-\t@Bean\n-\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker(){\n-\t\treturn new FeignClientPluginContextPathChecker();\n-\t}\n-\t\n+  @Bean\n+  public FeignClientPluginContextPathChecker feignClientPluginContextPathChecker() {\n+    return new FeignClientPluginContextPathChecker();\n+  }\n+\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/60/LocalFeignConfiguration.java\nindex 61adbda3342..58f16c167bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/random/files-repaired/60/LocalFeignConfiguration.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class LocalFeignConfiguration {\n \n \t@Bean\n-\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker(){\n+\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker() {\n \t\treturn new FeignClientPluginContextPathChecker();\n \t}\n \t\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/60/LocalFeignConfiguration.java\nindex 61adbda3342..58f16c167bf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/violations/60/LocalFeignConfiguration.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/wayshall-onetwo/styler/05_predictions/three_grams/files-repaired/60/LocalFeignConfiguration.java\n@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;\n public class LocalFeignConfiguration {\n \n \t@Bean\n-\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker(){\n+\tpublic FeignClientPluginContextPathChecker feignClientPluginContextPathChecker() {\n \t\treturn new FeignClientPluginContextPathChecker();\n \t}\n \t\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

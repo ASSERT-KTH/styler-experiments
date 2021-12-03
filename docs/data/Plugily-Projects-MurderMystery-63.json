@@ -1,0 +1,63 @@
+{
+    "project_name": "Plugily-Projects-MurderMystery",
+    "violation_id": "63",
+    "information": {
+        "violations": [
+            {
+                "line": "99",
+                "column": "37",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n  private void onCauldronClick(PlayerInteractEvent e) {\n    if (e.getClickedBlock() == null){\n      return;\n    }\n    if (e.getClickedBlock().getType() != Material.CAULDRON) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/final/files-repaired/63/SpecialBlockEvents.java\nindex 5daa01347eb..5c06ec8b30c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/final/files-repaired/63/SpecialBlockEvents.java\n@@ -96,7 +96,7 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/checkstyle_idea/63/SpecialBlockEvents.java\nindex 5daa01347eb..5c06ec8b30c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/checkstyle_idea/63/SpecialBlockEvents.java\n@@ -96,7 +96,7 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/naturalize/63/SpecialBlockEvents.java\nindex 5daa01347eb..540e2e0fea2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/naturalize/63/SpecialBlockEvents.java\n@@ -96,7 +96,7 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n@@ -168,4 +168,4 @@ public class SpecialBlockEvents implements Listener {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/codebuff/63/SpecialBlockEvents.java\nindex 5daa01347eb..d4ae8446c70 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/codebuff/63/SpecialBlockEvents.java\n@@ -48,6 +48,8 @@ import plugily.projects.murdermystery.utils.Utils;\n  * <p>\n  * Created at 16.10.2018\n  */\n+\n+\n public class SpecialBlockEvents implements Listener {\n \n   private final Main plugin;\n@@ -96,14 +98,14 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n       return;\n     }\n     User user = plugin.getUserManager().getUser(e.getPlayer());\n-    if (e.getPlayer().getInventory().getItem(/* same for all roles */ ItemPosition.POTION.getOtherRolesItemPosition()) != null) {\n+    if (e.getPlayer().getInventory().getItem(/* same for all roles */ItemPosition.POTION.getOtherRolesItemPosition()) != null) {\n       e.getPlayer().sendMessage(chatManager.getPrefix() + chatManager.colorMessage(\"In-Game.Messages.Special-Blocks.Cauldron-Drink-Potion\", e.getPlayer()));\n       return;\n     }\n@@ -168,4 +170,4 @@ public class SpecialBlockEvents implements Listener {\n     }\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/random/files-repaired/63/SpecialBlockEvents.java\nindex 5daa01347eb..5c06ec8b30c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/random/files-repaired/63/SpecialBlockEvents.java\n@@ -96,7 +96,7 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/three_grams/files-repaired/63/SpecialBlockEvents.java\nindex 5daa01347eb..5c06ec8b30c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/violations/63/SpecialBlockEvents.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Plugily-Projects-MurderMystery/styler/05_predictions/three_grams/files-repaired/63/SpecialBlockEvents.java\n@@ -96,7 +96,7 @@ public class SpecialBlockEvents implements Listener {\n   }\n \n   private void onCauldronClick(PlayerInteractEvent e) {\n-    if (e.getClickedBlock() == null){\n+    if (e.getClickedBlock() == null) {\n       return;\n     }\n     if (e.getClickedBlock().getType() != Material.CAULDRON) {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

@@ -1,0 +1,83 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "35",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *\n */\npackage com.ctrip.framework.apollo.common.datasource;\n\nimport com.ctrip.framework.apollo.core.utils.StringUtils;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/35/TitanCondition.java\nindex 7b6f8243e05..f5d4ae51da4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/35/TitanCondition.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\n  *\n  */\n+\n package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/35/TitanCondition.java\nindex 7b6f8243e05..f5d4ae51da4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/35/TitanCondition.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\n  *\n  */\n+\n package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "warning",
+                    "message": "Block comment has incorrect indentation level 0, expected is 3, indentation should be the same level as line 16.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/35/TitanCondition.java\nindex 7b6f8243e05..066adf7e2b6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/35/TitanCondition.java\n@@ -13,8 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  *\n- */\n-package com.ctrip.framework.apollo.common.datasource;\n+ */package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n \n@@ -38,4 +37,4 @@ public class TitanCondition implements Condition {\n     return false;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/35/TitanCondition.java\nindex 7b6f8243e05..8491a3a3b2a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/35/TitanCondition.java\n@@ -17,11 +17,11 @@\n package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n-\n import org.springframework.context.annotation.Condition;\n import org.springframework.context.annotation.ConditionContext;\n import org.springframework.core.type.AnnotatedTypeMetadata;\n \n+\n public class TitanCondition implements Condition {\n \n   @Override\n@@ -29,13 +29,14 @@ public class TitanCondition implements Condition {\n     if (!StringUtils.isEmpty(context.getEnvironment().getProperty(\"fat.titan.url\"))) {\n       return true;\n     }\n+\n     if (!StringUtils.isEmpty(context.getEnvironment().getProperty(\"uat.titan.url\"))) {\n       return true;\n     }\n+\n     if (!StringUtils.isEmpty(context.getEnvironment().getProperty(\"pro.titan.url\"))) {\n       return true;\n     }\n     return false;\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/35/TitanCondition.java\nindex 7b6f8243e05..f5d4ae51da4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/35/TitanCondition.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\n  *\n  */\n+\n package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/35/TitanCondition.java\nindex 7b6f8243e05..f5d4ae51da4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/35/TitanCondition.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/35/TitanCondition.java\n@@ -14,6 +14,7 @@\n  * limitations under the License.\n  *\n  */\n+\n package com.ctrip.framework.apollo.common.datasource;\n \n import com.ctrip.framework.apollo.core.utils.StringUtils;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

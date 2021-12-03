@@ -1,0 +1,62 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "747",
+    "information": {
+        "violations": [
+            {
+                "line": "24",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public abstract class TSplitValueHelper {\n\n  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/747/TSplitValueHelper.java\nindex 039e9b794ab..1e5aa016235 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/747/TSplitValueHelper.java\n@@ -20,7 +20,6 @@ import com.tencent.angel.ml.RegTree.RegTDataStore;\n \n \n public abstract class TSplitValueHelper {\n-\n-  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n+static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/747/TSplitValueHelper.java\nindex 039e9b794ab..9fc47da50e6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/747/TSplitValueHelper.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.ml.tree;\n \n import com.tencent.angel.ml.RegTree.RegTDataStore;\n@@ -21,6 +22,8 @@ import com.tencent.angel.ml.RegTree.RegTDataStore;\n \n public abstract class TSplitValueHelper {\n \n-  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n+    static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) {\n+        return new float[0][];\n+    }\n \n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/747/TSplitValueHelper.java\nindex 039e9b794ab..3937fe65653 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/747/TSplitValueHelper.java\n@@ -21,6 +21,8 @@ import com.tencent.angel.ml.RegTree.RegTDataStore;\n \n public abstract class TSplitValueHelper {\n \n-  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n+  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) {\n+  return new float[0][];\n+  }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/747/TSplitValueHelper.java\nindex 039e9b794ab..c9c2cd15ac8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/747/TSplitValueHelper.java\n@@ -18,9 +18,10 @@ package com.tencent.angel.ml.tree;\n \n import com.tencent.angel.ml.RegTree.RegTDataStore;\n \n-\n public abstract class TSplitValueHelper {\n \n-  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n+  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) {\n+    return new float[0][];\n+  }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/747/TSplitValueHelper.java\nindex 039e9b794ab..1e5aa016235 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/747/TSplitValueHelper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/747/TSplitValueHelper.java\n@@ -20,7 +20,6 @@ import com.tencent.angel.ml.RegTree.RegTDataStore;\n \n \n public abstract class TSplitValueHelper {\n-\n-  static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n+static float[][] getSplitValue(RegTDataStore regTDataStore, int splitNum) { return new float[0][]; }\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "styler_random"
+    ]
+}

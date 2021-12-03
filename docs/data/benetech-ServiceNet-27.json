@@ -1,0 +1,71 @@
+{
+    "project_name": "benetech-ServiceNet",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "5",
+                "severity": "error",
+                "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "\n\n    public UUID getId() {\n        return id;\n    }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/27/BeneficiaryDTO.java\nindex 16f014abdd3..17a6d995b3f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/27/BeneficiaryDTO.java\n@@ -15,7 +15,6 @@ public class BeneficiaryDTO implements Serializable {\n \n     private String phoneNumber;\n \n-\n     public UUID getId() {\n         return id;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "5",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/27/BeneficiaryDTO.java\nindex 16f014abdd3..d7728b024d6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/27/BeneficiaryDTO.java\n@@ -15,8 +15,7 @@ public class BeneficiaryDTO implements Serializable {\n \n     private String phoneNumber;\n \n-\n-    public UUID getId() {\n+public UUID getId() {\n         return id;\n     }\n \n@@ -60,4 +59,4 @@ public class BeneficiaryDTO implements Serializable {\n             \", phoneNumber='\" + getPhoneNumber() + \"'\" +\n             \"}\";\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/random/files-repaired/27/BeneficiaryDTO.java\nindex 16f014abdd3..17a6d995b3f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/random/files-repaired/27/BeneficiaryDTO.java\n@@ -15,7 +15,6 @@ public class BeneficiaryDTO implements Serializable {\n \n     private String phoneNumber;\n \n-\n     public UUID getId() {\n         return id;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/27/BeneficiaryDTO.java\nindex 16f014abdd3..17a6d995b3f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/27/BeneficiaryDTO.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/27/BeneficiaryDTO.java\n@@ -15,7 +15,6 @@ public class BeneficiaryDTO implements Serializable {\n \n     private String phoneNumber;\n \n-\n     public UUID getId() {\n         return id;\n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

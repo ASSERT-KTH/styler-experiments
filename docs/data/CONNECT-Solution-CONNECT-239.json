@@ -1,0 +1,90 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "239",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.proxy.service;\n\nimport gov.hhs.fha.nhinc.adaptercoresecured.AdapterCORETransactionSecuredPortType;\nimport gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\nindex e781287d803..cf732041656 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.proxy.service;\n+\n+package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.\n+\n+proxy .service;\n \n import gov.hhs.fha.nhinc.adaptercoresecured.AdapterCORETransactionSecuredPortType;\n import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\nindex e781287d803..fb7a9f43ab4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n@@ -24,25 +24,25 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercoresecured.AdapterCORETransactionSecuredPortType;\n import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n \n /**\n- *\n  * @author cmay\n  */\n public class AdapterX12RealTimeSecuredServicePortDescriptor\n     extends SOAP12ServicePortDescriptor<AdapterCORETransactionSecuredPortType> {\n \n-    @Override\n-    public String getWSAddressingAction() {\n-        return \"urn:ihe:iti:xdr:2007:X12RealTimeRequestMessageSecured\";\n-    }\n+  @Override\n+  public String getWSAddressingAction() {\n+    return \"urn:ihe:iti:xdr:2007:X12RealTimeRequestMessageSecured\";\n+  }\n \n-    @Override\n-    public Class<AdapterCORETransactionSecuredPortType> getPortClass() {\n-        return AdapterCORETransactionSecuredPortType.class;\n-    }\n+  @Override\n+  public Class<AdapterCORETransactionSecuredPortType> getPortClass() {\n+    return AdapterCORETransactionSecuredPortType.class;\n+  }\n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 136).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\nindex e781287d803..5fd558c32c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercoresecured.AdapterCORETransactionSecuredPortType;\n@@ -33,8 +34,7 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  *\n  * @author cmay\n  */\n-public class AdapterX12RealTimeSecuredServicePortDescriptor\n-    extends SOAP12ServicePortDescriptor<AdapterCORETransactionSecuredPortType> {\n+public class AdapterX12RealTimeSecuredServicePortDescriptor extends SOAP12ServicePortDescriptor<AdapterCORETransactionSecuredPortType> {\n \n     @Override\n     public String getWSAddressingAction() {\n@@ -45,4 +45,4 @@ public class AdapterX12RealTimeSecuredServicePortDescriptor\n     public Class<AdapterCORETransactionSecuredPortType> getPortClass() {\n         return AdapterCORETransactionSecuredPortType.class;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\nindex e781287d803..cfb747b6504 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n@@ -33,16 +33,21 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  *\n  * @author cmay\n  */\n-public class AdapterX12RealTimeSecuredServicePortDescriptor\n-    extends SOAP12ServicePortDescriptor<AdapterCORETransactionSecuredPortType> {\n+\n+\n+public class AdapterX12RealTimeSecuredServicePortDescriptor extends\n+    SOAP12ServicePortDescriptor<AdapterCORETransactionSecuredPortType> {\n+\n \n     @Override\n     public String getWSAddressingAction() {\n         return \"urn:ihe:iti:xdr:2007:X12RealTimeRequestMessageSecured\";\n     }\n \n+\n     @Override\n     public Class<AdapterCORETransactionSecuredPortType> getPortClass() {\n         return AdapterCORETransactionSecuredPortType.class;\n     }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\nindex e781287d803..cf732041656 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/239/AdapterX12RealTimeSecuredServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.proxy.service;\n+\n+package gov.hhs.fha.nhinc.corex12.ds.realtime.adapter.\n+\n+proxy .service;\n \n import gov.hhs.fha.nhinc.adaptercoresecured.AdapterCORETransactionSecuredPortType;\n import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

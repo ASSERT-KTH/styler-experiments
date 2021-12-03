@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "931",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/931/AggrResult.java\nindex a3e1de09c43..1d84e08e3cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/931/AggrResult.java\n@@ -22,21 +22,21 @@ import com.tencent.angel.psagent.matrix.Result;\n /**\n  * The aggregation result.\n  */\n-public class AggrResult extends Result{\n+public class AggrResult extends Result {\n \n-  /**\n-   * Create a new result.\n-   *\n-   * @param responseType the response type\n-   */\n-  public AggrResult(ResponseType responseType) {\n-    super(responseType);\n-  }\n+    /**\n+     * Create a new result.\n+     *\n+     * @param responseType the response type\n+     */\n+    public AggrResult(ResponseType responseType) {\n+        super(responseType);\n+    }\n \n-  /**\n-   * Create a new result.\n-   */\n-  public AggrResult() {\n-    super(ResponseType.SUCCESS);\n-  }\n+    /**\n+     * Create a new result.\n+     */\n+    public AggrResult() {\n+        super(ResponseType.SUCCESS);\n+    }\n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/931/AggrResult.java\nindex a3e1de09c43..0ee31e6e7ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/931/AggrResult.java\n@@ -22,7 +22,7 @@ import com.tencent.angel.psagent.matrix.Result;\n /**\n  * The aggregation result.\n  */\n-public class AggrResult extends Result{\n+public class AggrResult extends Result {\n \n   /**\n    * Create a new result.\n@@ -39,4 +39,4 @@ public class AggrResult extends Result{\n   public AggrResult() {\n     super(ResponseType.SUCCESS);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/931/AggrResult.java\nindex a3e1de09c43..ab64ce4d678 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/931/AggrResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/931/AggrResult.java\n@@ -22,13 +22,15 @@ import com.tencent.angel.psagent.matrix.Result;\n /**\n  * The aggregation result.\n  */\n-public class AggrResult extends Result{\n+\n+public class AggrResult extends Result {\n \n   /**\n    * Create a new result.\n    *\n    * @param responseType the response type\n    */\n+\n   public AggrResult(ResponseType responseType) {\n     super(responseType);\n   }\n@@ -36,7 +38,8 @@ public class AggrResult extends Result{\n   /**\n    * Create a new result.\n    */\n+\n   public AggrResult() {\n     super(ResponseType.SUCCESS);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

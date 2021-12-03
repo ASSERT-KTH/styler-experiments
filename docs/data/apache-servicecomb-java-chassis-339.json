@@ -1,0 +1,100 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "339",
+    "information": {
+        "violations": [
+            {
+                "line": "147",
+                "column": "1",
+                "severity": "warning",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "  public Invocation() {\n    // An empty invocation, used to mock or some other scenario do not need operation information.\n\ttraceIdLogger = new TraceIdLogger(this);\n  }\n\n  public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/339/Invocation.java\nindex 049316c4a09..8a36c660f4b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/339/Invocation.java\n@@ -144,7 +144,7 @@ public class Invocation extends SwaggerInvocation {\n \n   public Invocation() {\n     // An empty invocation, used to mock or some other scenario do not need operation information.\n-\ttraceIdLogger = new TraceIdLogger(this);\n+    traceIdLogger = new TraceIdLogger(this);\n   }\n \n   public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/339/Invocation.java\nindex 049316c4a09..16d0ce421a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/339/Invocation.java\n@@ -144,11 +144,11 @@ public class Invocation extends SwaggerInvocation {\n \n   public Invocation() {\n     // An empty invocation, used to mock or some other scenario do not need operation information.\n-\ttraceIdLogger = new TraceIdLogger(this);\n+    traceIdLogger = new TraceIdLogger(this);\n   }\n \n   public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,\n-      Map<String, Object> swaggerArguments) {\n+                    Map<String, Object> swaggerArguments) {\n     this.invocationType = InvocationType.CONSUMER;\n     this.referenceConfig = referenceConfig;\n     this.responsesMeta = operationMeta.getResponsesMeta();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "156",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "181",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "187",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 182).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "237",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "257",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 138).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "340",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/339/Invocation.java\nindex 049316c4a09..60f641b45b2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/339/Invocation.java\n@@ -25,7 +25,6 @@ import java.util.List;\n import java.util.Map;\n import java.util.concurrent.Executor;\n import java.util.concurrent.atomic.AtomicLong;\n-\n import org.apache.commons.lang3.StringUtils;\n import org.apache.servicecomb.core.definition.MicroserviceMeta;\n import org.apache.servicecomb.core.definition.OperationMeta;\n@@ -46,7 +45,6 @@ import org.apache.servicecomb.swagger.invocation.InvocationType;\n import org.apache.servicecomb.swagger.invocation.Response;\n import org.apache.servicecomb.swagger.invocation.SwaggerInvocation;\n import org.apache.servicecomb.swagger.invocation.response.ResponsesMeta;\n-\n import com.fasterxml.jackson.databind.JavaType;\n \n public class Invocation extends SwaggerInvocation {\n@@ -63,25 +61,31 @@ public class Invocation extends SwaggerInvocation {\n   private ResponsesMeta responsesMeta;\n \n   // \u672c\u6b21\u8c03\u7528\u5bf9\u5e94\u7684schemaMeta\n+\n   private SchemaMeta schemaMeta;\n \n   // \u672c\u6b21\u8c03\u7528\u5bf9\u5e94\u7684operationMeta\n+\n   private OperationMeta operationMeta;\n \n   // loadbalance\u67e5\u8be2\u5f97\u5230\u7684\u5730\u5740\uff0c\u7531transport client\u4f7f\u7528\n   // \u4e4b\u6240\u4ee5\u4e0d\u653e\u5728handlerContext\u4e2d\uff0c\u662f\u56e0\u4e3a\u8fd9\u5c5e\u4e8e\u6838\u5fc3\u6570\u636e\uff0c\u6ca1\u5fc5\u8981\u8d70\u90a3\u6837\u7684\u673a\u5236\n+\n   private Endpoint endpoint;\n \n   // \u53ea\u7528\u4e8ehandler\u4e4b\u95f4\u4f20\u9012\u6570\u636e\uff0c\u662f\u672c\u5730\u6570\u636e\n+\n   private Map<String, Object> handlerContext = localContext;\n \n   // handler\u94fe\uff0c\u662farrayList\uff0c\u53ef\u4ee5\u9ad8\u6548\u5730\u901a\u8fc7index\u8bbf\u95ee\n+\n   private List<Handler> handlerList;\n \n   private int handlerIndex;\n \n   // \u5e94\u7b54\u7684\u5904\u7406\u5668\n   // \u540c\u6b65\u6a21\u5f0f\uff1a\u907f\u514d\u5e94\u7b54\u5728\u7f51\u7edc\u7ebf\u7a0b\u4e2d\u5904\u7406\u89e3\u7801\u7b49\u7b49\u4e1a\u52a1\u7ea7\u903b\u8f91\n+\n   private Executor responseExecutor;\n \n   private boolean sync = true;\n@@ -94,10 +98,12 @@ public class Invocation extends SwaggerInvocation {\n \n   // not extend InvocationType\n   // because isEdge() only affect to apm/metrics output, no need to change so many logic\n+\n   private boolean edge;\n \n   // Check if consumer invocation without types info. e.g. using RestTemplate to invoke provider\n   // or using InvokerUtils to invoke provider and only provide operation id and arguments\n+\n   private boolean weakInvoke;\n \n   private long invocationId;\n@@ -144,11 +150,10 @@ public class Invocation extends SwaggerInvocation {\n \n   public Invocation() {\n     // An empty invocation, used to mock or some other scenario do not need operation information.\n-\ttraceIdLogger = new TraceIdLogger(this);\n+    traceIdLogger = new TraceIdLogger(this);\n   }\n \n-  public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,\n-      Map<String, Object> swaggerArguments) {\n+  public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta, Map<String, Object> swaggerArguments) {\n     this.invocationType = InvocationType.CONSUMER;\n     this.referenceConfig = referenceConfig;\n     this.responsesMeta = operationMeta.getResponsesMeta();\n@@ -173,15 +178,13 @@ public class Invocation extends SwaggerInvocation {\n \n   public Transport getTransport() {\n     if (endpoint == null) {\n-      throw new IllegalStateException(\n-          \"Endpoint is empty. Forget to configure \\\"loadbalance\\\" in consumer handler chain?\");\n+      throw new IllegalStateException(\"Endpoint is empty. Forget to configure \\\"loadbalance\\\" in consumer handler chain?\");\n     }\n     return endpoint.getTransport();\n   }\n \n   public List<Handler> getHandlerChain() {\n-    return (InvocationType.CONSUMER.equals(invocationType)) ? schemaMeta.getMicroserviceMeta().getConsumerHandlerChain()\n-        : schemaMeta.getMicroserviceMeta().getProviderHandlerChain();\n+    return (InvocationType.CONSUMER.equals(invocationType)) ? schemaMeta.getMicroserviceMeta().getConsumerHandlerChain() : schemaMeta.getMicroserviceMeta().getProviderHandlerChain();\n   }\n \n   public Executor getResponseExecutor() {\n@@ -222,8 +225,8 @@ public class Invocation extends SwaggerInvocation {\n       this.invocationArguments = new HashMap<>(0);\n       return;\n     }\n-    this.invocationArguments = invocationArguments;\n \n+    this.invocationArguments = invocationArguments;\n     buildSwaggerArguments();\n   }\n \n@@ -231,8 +234,7 @@ public class Invocation extends SwaggerInvocation {\n     if (operationMeta.getSwaggerConsumerOperation() != null && !isEdge()\n         && !isWeakInvoke()) {\n       this.swaggerArguments = operationMeta.getSwaggerConsumerOperation().getArgumentsMapper()\n-          .invocationArgumentToSwaggerArguments(this,\n-              this.invocationArguments);\n+                                                                         .invocationArgumentToSwaggerArguments(this, this.invocationArguments);\n     } else {\n       this.swaggerArguments = invocationArguments;\n     }\n@@ -244,16 +246,15 @@ public class Invocation extends SwaggerInvocation {\n       this.swaggerArguments = new HashMap<>(0);\n       return;\n     }\n-    this.swaggerArguments = swaggerArguments;\n \n+    this.swaggerArguments = swaggerArguments;\n     buildInvocationArguments();\n   }\n \n   private void buildInvocationArguments() {\n     if (operationMeta.getSwaggerProducerOperation() != null && !isEdge()) {\n       this.invocationArguments = operationMeta.getSwaggerProducerOperation().getArgumentsMapper()\n-          .swaggerArgumentToInvocationArguments(this,\n-              swaggerArguments);\n+                                                                            .swaggerArgumentToInvocationArguments(this, swaggerArguments);\n     } else {\n       this.invocationArguments = swaggerArguments;\n     }\n@@ -336,8 +337,7 @@ public class Invocation extends SwaggerInvocation {\n   }\n \n   public String getInvocationQualifiedName() {\n-    return invocationType.name() + \" \" + getRealTransportName() + \" \"\n-        + getOperationMeta().getMicroserviceQualifiedName();\n+    return invocationType.name() + \" \" + getRealTransportName() + \" \" + getOperationMeta().getMicroserviceQualifiedName();\n   }\n \n   public String getMicroserviceQualifiedName() {\n@@ -370,6 +370,7 @@ public class Invocation extends SwaggerInvocation {\n     }\n \n     // if traceId not found, generate a traceId\n+\n     addContext(traceIdGenerator.getTraceIdKeyName(), traceIdGenerator.generate());\n   }\n \n@@ -450,4 +451,4 @@ public class Invocation extends SwaggerInvocation {\n   public boolean isThirdPartyInvocation() {\n     return referenceConfig.is3rdPartyService();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 29
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/339/Invocation.java\nindex 049316c4a09..8a36c660f4b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/339/Invocation.java\n@@ -144,7 +144,7 @@ public class Invocation extends SwaggerInvocation {\n \n   public Invocation() {\n     // An empty invocation, used to mock or some other scenario do not need operation information.\n-\ttraceIdLogger = new TraceIdLogger(this);\n+    traceIdLogger = new TraceIdLogger(this);\n   }\n \n   public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/339/Invocation.java\nindex 049316c4a09..8a36c660f4b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/339/Invocation.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/339/Invocation.java\n@@ -144,7 +144,7 @@ public class Invocation extends SwaggerInvocation {\n \n   public Invocation() {\n     // An empty invocation, used to mock or some other scenario do not need operation information.\n-\ttraceIdLogger = new TraceIdLogger(this);\n+    traceIdLogger = new TraceIdLogger(this);\n   }\n \n   public Invocation(ReferenceConfig referenceConfig, OperationMeta operationMeta,\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

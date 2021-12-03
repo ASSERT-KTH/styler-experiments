@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "182",
+    "information": {
+        "violations": [
+            {
+                "line": "22",
+                "column": "68",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n        this.testGroup = testGroup;\n        this.sessionId = sessionId;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/182/TestGroupInfo.java\nindex f9c2619090a..a3d4cc4144e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/182/TestGroupInfo.java\n@@ -19,7 +19,7 @@ public class TestGroupInfo {\n     public TestGroupInfo(){\n     }\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/182/TestGroupInfo.java\nindex f9c2619090a..9c51bdfca1c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/182/TestGroupInfo.java\n@@ -2,12 +2,13 @@ package com.griddynamics.jagger.engine.e1.collector.testgroup;\n \n import com.griddynamics.jagger.master.CompositeTask;\n \n-/** Class, which contains information about test-group execution\n+/**\n+ * Class, which contains information about test-group execution\n+ *\n  * @author Gribov Kirill\n  * @n\n  * @par Details:\n  * @details\n- *\n  * @ingroup Main_Listeners_group\n  */\n public class TestGroupInfo {\n@@ -16,15 +17,17 @@ public class TestGroupInfo {\n \n     private long duration;\n \n-    public TestGroupInfo(){\n+    public TestGroupInfo() {\n     }\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n \n-    /** Returns full information about current test-group */\n+    /**\n+     * Returns full information about current test-group\n+     */\n     public CompositeTask getTestGroup() {\n         return testGroup;\n     }\n@@ -33,7 +36,9 @@ public class TestGroupInfo {\n         this.testGroup = testGroup;\n     }\n \n-    /** Returns test-group execution duration */\n+    /**\n+     * Returns test-group execution duration\n+     */\n     public long getDuration() {\n         return duration;\n     }\n@@ -42,7 +47,9 @@ public class TestGroupInfo {\n         this.duration = duration;\n     }\n \n-    /** Returns session id */\n+    /**\n+     * Returns session id\n+     */\n     public String getSessionId() {\n         return sessionId;\n     }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/182/TestGroupInfo.java\nindex f9c2619090a..b8628d520f0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/182/TestGroupInfo.java\n@@ -19,7 +19,7 @@ public class TestGroupInfo {\n     public TestGroupInfo(){\n     }\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n@@ -50,4 +50,4 @@ public class TestGroupInfo {\n     public void setSessionId(String sessionId) {\n         this.sessionId = sessionId;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/182/TestGroupInfo.java\nindex f9c2619090a..923da8fb6a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/182/TestGroupInfo.java\n@@ -10,21 +10,23 @@ import com.griddynamics.jagger.master.CompositeTask;\n  *\n  * @ingroup Main_Listeners_group\n  */\n+\n+\n public class TestGroupInfo {\n+\n     private CompositeTask testGroup;\n     private String sessionId;\n-\n     private long duration;\n \n-    public TestGroupInfo(){\n-    }\n+    public TestGroupInfo() {}\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n \n     /** Returns full information about current test-group */\n+\n     public CompositeTask getTestGroup() {\n         return testGroup;\n     }\n@@ -34,6 +36,7 @@ public class TestGroupInfo {\n     }\n \n     /** Returns test-group execution duration */\n+\n     public long getDuration() {\n         return duration;\n     }\n@@ -43,6 +46,7 @@ public class TestGroupInfo {\n     }\n \n     /** Returns session id */\n+\n     public String getSessionId() {\n         return sessionId;\n     }\n@@ -50,4 +54,4 @@ public class TestGroupInfo {\n     public void setSessionId(String sessionId) {\n         this.sessionId = sessionId;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/182/TestGroupInfo.java\nindex f9c2619090a..a3d4cc4144e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/182/TestGroupInfo.java\n@@ -19,7 +19,7 @@ public class TestGroupInfo {\n     public TestGroupInfo(){\n     }\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/182/TestGroupInfo.java\nindex f9c2619090a..a3d4cc4144e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/182/TestGroupInfo.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/182/TestGroupInfo.java\n@@ -19,7 +19,7 @@ public class TestGroupInfo {\n     public TestGroupInfo(){\n     }\n \n-    public TestGroupInfo(CompositeTask testGroup, String sessionId){\n+    public TestGroupInfo(CompositeTask testGroup, String sessionId) {\n         this.testGroup = testGroup;\n         this.sessionId = sessionId;\n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

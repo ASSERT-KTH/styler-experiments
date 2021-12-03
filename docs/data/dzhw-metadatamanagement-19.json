@@ -1,0 +1,93 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "19",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "61",
+                "severity": "error",
+                "message": "'}' at column 61 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(StudyExists constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/19/StudyExistsValidator.java\nindex 4e8db1a8fe5..626a83f6b50 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/19/StudyExistsValidator.java\n@@ -22,7 +22,9 @@ public class StudyExistsValidator implements ConstraintValidator<StudyExists, St\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(StudyExists constraintAnnotation) {}\n+  public void initialize(StudyExists constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/19/StudyExistsValidator.java\nindex 4e8db1a8fe5..cf2ee38c0c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/19/StudyExistsValidator.java\n@@ -8,30 +8,31 @@ import lombok.RequiredArgsConstructor;\n \n /**\n  * Validator which ensures that there is a study with the given id.\n- * \n+ *\n  * @author Ren\u00e9 Reitmann\n  */\n @RequiredArgsConstructor\n public class StudyExistsValidator implements ConstraintValidator<StudyExists, String> {\n \n   private final StudyRepository studyRepository;\n-  \n+\n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(StudyExists constraintAnnotation) {}\n+  public void initialize(StudyExists constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n   @Override\n-  public boolean isValid(String studyId, ConstraintValidatorContext context) {   \n+  public boolean isValid(String studyId, ConstraintValidatorContext context) {\n     return studyRepository.existsById(studyId);\n   }\n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "61",
+                    "severity": "error",
+                    "message": "'}' at column 61 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'method def' child has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/19/StudyExistsValidator.java\nindex 4e8db1a8fe5..27028f5ce1f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/19/StudyExistsValidator.java\n@@ -31,7 +31,7 @@ public class StudyExistsValidator implements ConstraintValidator<StudyExists, St\n    * javax.validation.ConstraintValidatorContext)\n    */\n   @Override\n-  public boolean isValid(String studyId, ConstraintValidatorContext context) {   \n-    return studyRepository.existsById(studyId);\n+  public boolean isValid(String studyId, ConstraintValidatorContext context) {\n+  return studyRepository.existsById(studyId);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/19/StudyExistsValidator.java\nindex 4e8db1a8fe5..215329cf549 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/19/StudyExistsValidator.java\n@@ -2,7 +2,6 @@ package eu.dzhw.fdz.metadatamanagement.relatedpublicationmanagement.domain.valid\n \n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import eu.dzhw.fdz.metadatamanagement.studymanagement.repository.StudyRepository;\n import lombok.RequiredArgsConstructor;\n \n@@ -11,9 +10,10 @@ import lombok.RequiredArgsConstructor;\n  * \n  * @author Ren\u00e9 Reitmann\n  */\n+\n+\n @RequiredArgsConstructor\n public class StudyExistsValidator implements ConstraintValidator<StudyExists, String> {\n-\n   private final StudyRepository studyRepository;\n   \n   /*\n@@ -21,8 +21,11 @@ public class StudyExistsValidator implements ConstraintValidator<StudyExists, St\n    * \n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(StudyExists constraintAnnotation) {}\n+  public void initialize(StudyExists constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n@@ -30,8 +33,11 @@ public class StudyExistsValidator implements ConstraintValidator<StudyExists, St\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n+\n+\n   @Override\n-  public boolean isValid(String studyId, ConstraintValidatorContext context) {   \n+  public boolean isValid(String studyId,\n+    ConstraintValidatorContext context) {\n     return studyRepository.existsById(studyId);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/19/StudyExistsValidator.java\nindex 4e8db1a8fe5..626a83f6b50 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/19/StudyExistsValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/19/StudyExistsValidator.java\n@@ -22,7 +22,9 @@ public class StudyExistsValidator implements ConstraintValidator<StudyExists, St\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(StudyExists constraintAnnotation) {}\n+  public void initialize(StudyExists constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "61",
+                    "severity": "error",
+                    "message": "'}' at column 61 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

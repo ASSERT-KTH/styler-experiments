@@ -1,0 +1,71 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "31",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "5",
+                "severity": "warning",
+                "message": "'testGetSetEnabled' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public void\n    testGetSetEnabled() {\n        final Set<Enabled> all = getTestUtil().getAllAMX(Enabled.class);\n\n        for (final Enabled e : all) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/31/EnabledTest.java\nindex 04245313948..e00b75861b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/31/EnabledTest.java\n@@ -29,7 +29,7 @@ public final class EnabledTest\n     }\n \n     public void\n-    testGetSetEnabled() {\n+                 testGetSetEnabled() {\n         final Set<Enabled> all = getTestUtil().getAllAMX(Enabled.class);\n \n         for (final Enabled e : all) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'testGetSetEnabled' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/31/EnabledTest.java\nindex 04245313948..ab86a51757e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/31/EnabledTest.java\n@@ -22,9 +22,10 @@ import org.glassfish.admin.amxtest.AMXTestBase;\n import java.util.Set;\n \n /**\n+ *\n  */\n public final class EnabledTest\n-        extends AMXTestBase {\n+    extends AMXTestBase {\n     public EnabledTest() {\n     }\n \n@@ -35,7 +36,7 @@ public final class EnabledTest\n         for (final Enabled e : all) {\n             final String value = e.getEnabled();\n \n-            e.setEnabled( value );\n+            e.setEnabled(value);\n         }\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/31/EnabledTest.java\nindex 04245313948..8d74829564b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/31/EnabledTest.java\n@@ -25,11 +25,11 @@ import java.util.Set;\n  */\n public final class EnabledTest\n         extends AMXTestBase {\n+\n     public EnabledTest() {\n     }\n \n-    public void\n-    testGetSetEnabled() {\n+    public void testGetSetEnabled() {\n         final Set<Enabled> all = getTestUtil().getAllAMX(Enabled.class);\n \n         for (final Enabled e : all) {\n@@ -39,6 +39,4 @@ public final class EnabledTest\n         }\n     }\n \n-}\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/31/EnabledTest.java\nindex 04245313948..e00b75861b0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/31/EnabledTest.java\n@@ -29,7 +29,7 @@ public final class EnabledTest\n     }\n \n     public void\n-    testGetSetEnabled() {\n+                 testGetSetEnabled() {\n         final Set<Enabled> all = getTestUtil().getAllAMX(Enabled.class);\n \n         for (final Enabled e : all) {\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/31/EnabledTest.java\nindex 04245313948..5cf111efe0e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/31/EnabledTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/31/EnabledTest.java\n@@ -29,7 +29,7 @@ public final class EnabledTest\n     }\n \n     public void\n-    testGetSetEnabled() {\n+        testGetSetEnabled() {\n         final Set<Enabled> all = getTestUtil().getAllAMX(Enabled.class);\n \n         for (final Enabled e : all) {\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

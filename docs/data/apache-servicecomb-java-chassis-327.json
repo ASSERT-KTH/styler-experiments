@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "327",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 126).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n/**\n * Consumer interface can be different than provider interface. This feature is quite useful in microservices and devops where\n * every developers can work independently at his own work.\n */\npublic interface SpringmvcBasicService {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/327/SpringmvcBasicService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/327/SpringmvcBasicService.java\nindex 41ade4ab79d..72c7b2572d7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/327/SpringmvcBasicService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/327/SpringmvcBasicService.java\n@@ -27,4 +27,4 @@ public interface SpringmvcBasicService {\n   SpringmvcBasicResponseModel postObject(SpringmvcBasicRequestModel requestModel);\n \n   List<SpringmvcBasicResponseModel> postListObject(SpringmvcBasicRequestModel requestModel);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/327/SpringmvcBasicService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/327/SpringmvcBasicService.java\nindex 41ade4ab79d..a6557e8ebb0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/327/SpringmvcBasicService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/327/SpringmvcBasicService.java\n@@ -23,8 +23,9 @@ import java.util.List;\n  * Consumer interface can be different than provider interface. This feature is quite useful in microservices and devops where\n  * every developers can work independently at his own work.\n  */\n+\n public interface SpringmvcBasicService {\n   SpringmvcBasicResponseModel postObject(SpringmvcBasicRequestModel requestModel);\n \n   List<SpringmvcBasicResponseModel> postListObject(SpringmvcBasicRequestModel requestModel);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

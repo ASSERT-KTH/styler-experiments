@@ -1,0 +1,158 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "3352",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "55",
+                    "column": "22",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "55",
+                    "column": "110",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "62",
+                    "column": "43",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "63",
+                    "column": "137",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "66",
+                    "column": "65",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "44",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "69",
+                    "column": "54",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "32",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "74",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3352/TransactionFacade.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3352/TransactionFacade.java\nindex daf7b075e48..506bbcb02dd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/3352/TransactionFacade.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/3352/TransactionFacade.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.server.http.cypher;\n \n import org.neo4j.internal.kernel.api.connectioninfo.ClientConnectionInfo;\n@@ -51,27 +52,27 @@ class TransactionFacade\n     private final QueryExecutionEngine engine;\n     private final TransactionRegistry registry;\n \n-    TransactionFacade( GraphDatabaseAPI databaseAPI, QueryExecutionEngine engine, TransactionRegistry registry )\n+    TransactionFacade(GraphDatabaseAPI databaseAPI, QueryExecutionEngine engine, TransactionRegistry registry)\n     {\n         this.databaseAPI = databaseAPI;\n         this.engine = engine;\n         this.registry = registry;\n     }\n \n-    TransactionHandle newTransactionHandle( TransactionUriScheme uriScheme, boolean implicitTransaction,\n-            LoginContext loginContext, ClientConnectionInfo connectionInfo, long customTransactionTimeout )\n+    TransactionHandle newTransactionHandle(TransactionUriScheme uriScheme, boolean implicitTransaction,\n+                                           LoginContext loginContext, ClientConnectionInfo connectionInfo, long customTransactionTimeout)\n     {\n-        return new TransactionHandle( databaseAPI, engine, registry, uriScheme, implicitTransaction,\n-                loginContext, connectionInfo, customTransactionTimeout );\n+        return new TransactionHandle(databaseAPI, engine, registry, uriScheme, implicitTransaction,\n+          loginContext, connectionInfo, customTransactionTimeout);\n     }\n \n-    TransactionHandle findTransactionHandle( long txId ) throws TransactionLifecycleException\n+    TransactionHandle findTransactionHandle(long txId) throws TransactionLifecycleException\n     {\n-        return registry.acquire( txId );\n+        return registry.acquire(txId);\n     }\n \n-    TransactionHandle terminate( long txId ) throws TransactionLifecycleException\n+    TransactionHandle terminate(long txId) throws TransactionLifecycleException\n     {\n-        return registry.terminate( txId );\n+        return registry.terminate(txId);\n     }\n }\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

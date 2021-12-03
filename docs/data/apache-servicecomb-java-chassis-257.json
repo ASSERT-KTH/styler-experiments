@@ -1,0 +1,116 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "257",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 166).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  /**\n   * Load the {@link ExceptionToProducerResponseConverter} implementations. Ensure that those converters whose {@link ExceptionToProducerResponseConverter#getOrder()}\n   * return smaller value takes higher priority.\n   */\n  @SuppressWarnings(\"unchecked\")",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "38",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/257/ExceptionToProducerResponseConverters.java\nindex 7b1d8ed97df..4d270b45a43 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/257/ExceptionToProducerResponseConverters.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.swagger.invocation.exception;\n \n import java.util.HashMap;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "71",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 122).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/257/ExceptionToProducerResponseConverters.java\nindex 7b1d8ed97df..dee13ce1175 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/257/ExceptionToProducerResponseConverters.java\n@@ -68,10 +68,9 @@ public class ExceptionToProducerResponseConverters {\n       return converter.convert(swaggerInvocation, e);\n     } catch (Throwable throwable) {\n       // In case users do not implement correctly and maybe discovered at runtime to cause asycResponse callback hang.\n-      LOGGER\n-          .error(\"ExceptionToProducerResponseConverter {} cannot throw exception, please fix it.\", converter.getClass(),\n+      LOGGER.error(\"ExceptionToProducerResponseConverter {} cannot throw exception, please fix it.\", converter.getClass(),\n               throwable);\n       return Response.failResp(swaggerInvocation.getInvocationType(), e);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 129).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/257/ExceptionToProducerResponseConverters.java\nindex 7b1d8ed97df..87046e7cec2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/257/ExceptionToProducerResponseConverters.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/257/ExceptionToProducerResponseConverters.java\n@@ -18,7 +18,6 @@ package org.apache.servicecomb.swagger.invocation.exception;\n \n import java.util.HashMap;\n import java.util.Map;\n-\n import org.apache.servicecomb.foundation.common.utils.SPIServiceUtils;\n import org.apache.servicecomb.swagger.invocation.Response;\n import org.apache.servicecomb.swagger.invocation.SwaggerInvocation;\n@@ -28,8 +27,7 @@ import org.slf4j.LoggerFactory;\n public class ExceptionToProducerResponseConverters {\n   private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionToProducerResponseConverters.class);\n \n-  private Map<Class<?>, ExceptionToProducerResponseConverter<Throwable>> exceptionToProducerResponseConverters =\n-      new HashMap<>();\n+  private Map<Class<?>, ExceptionToProducerResponseConverter<Throwable>> exceptionToProducerResponseConverters = new HashMap<>();\n \n   private ExceptionToProducerResponseConverter<Throwable> defaultConverter;\n \n@@ -37,6 +35,7 @@ public class ExceptionToProducerResponseConverters {\n    * Load the {@link ExceptionToProducerResponseConverter} implementations. Ensure that those converters whose {@link ExceptionToProducerResponseConverter#getOrder()}\n    * return smaller value takes higher priority.\n    */\n+\n   @SuppressWarnings(\"unchecked\")\n   public ExceptionToProducerResponseConverters() {\n     SPIServiceUtils.getSortedService(ExceptionToProducerResponseConverter.class).forEach(converter -> {\n@@ -59,19 +58,22 @@ public class ExceptionToProducerResponseConverters {\n       if (clazz == Throwable.class) {\n         break;\n       }\n+\n       clazz = clazz.getSuperclass();\n     }\n+\n     if (converter == null) {\n       converter = defaultConverter;\n     }\n+\n     try {\n       return converter.convert(swaggerInvocation, e);\n     } catch (Throwable throwable) {\n       // In case users do not implement correctly and maybe discovered at runtime to cause asycResponse callback hang.\n-      LOGGER\n-          .error(\"ExceptionToProducerResponseConverter {} cannot throw exception, please fix it.\", converter.getClass(),\n-              throwable);\n+      LOGGER.error(\"ExceptionToProducerResponseConverter {} cannot throw exception, please fix it.\",\n+converter.getClass(),\n+throwable);\n       return Response.failResp(swaggerInvocation.getInvocationType(), e);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 166).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

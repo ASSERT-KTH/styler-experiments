@@ -1,0 +1,75 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "912",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.runtime.api.event.impl;\n\nimport org.activiti.api.process.model.ProcessInstance;\nimport org.activiti.api.process.model.events.ProcessRuntimeEvent;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/912/ProcessResumedEventImpl.java\nindex 0398b092fbe..1187d6b8c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/912/ProcessResumedEventImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.process.model.ProcessInstance;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/912/ProcessResumedEventImpl.java\nindex 0398b092fbe..1187d6b8c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/912/ProcessResumedEventImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.process.model.ProcessInstance;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "error",
+                    "message": "'CLASS_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/912/ProcessResumedEventImpl.java\nindex 0398b092fbe..25e73ae1abd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/912/ProcessResumedEventImpl.java\n@@ -20,15 +20,15 @@ import org.activiti.api.process.model.events.ProcessRuntimeEvent;\n import org.activiti.api.process.runtime.events.ProcessResumedEvent;\n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n \n-public class ProcessResumedEventImpl extends RuntimeEventImpl<ProcessInstance, ProcessRuntimeEvent.ProcessEvents>\n-        implements ProcessResumedEvent {\n \n-    public ProcessResumedEventImpl(ProcessInstance entity) {\n-        super(entity);\n-    }\n+public class ProcessResumedEventImpl extends RuntimeEventImpl<ProcessInstance, ProcessRuntimeEvent.ProcessEvents> implements ProcessResumedEvent {\n \n-    @Override\n-    public ProcessRuntimeEvent.ProcessEvents getEventType() {\n-        return ProcessRuntimeEvent.ProcessEvents.PROCESS_RESUMED;\n-    }\n-}\n+  public ProcessResumedEventImpl(ProcessInstance entity) {\n+                                                                                                                  super(entity);\n+  }\n+\n+  @Override\n+  public ProcessRuntimeEvent.ProcessEvents getEventType() {\n+    return ProcessRuntimeEvent.ProcessEvents.PROCESS_RESUMED;\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/912/ProcessResumedEventImpl.java\nindex 0398b092fbe..1187d6b8c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/912/ProcessResumedEventImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.process.model.ProcessInstance;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/912/ProcessResumedEventImpl.java\nindex 0398b092fbe..1187d6b8c3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/912/ProcessResumedEventImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/912/ProcessResumedEventImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.process.model.ProcessInstance;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

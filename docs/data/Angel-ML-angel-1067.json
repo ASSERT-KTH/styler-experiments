@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1067",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1067/PositiveAtomicCounter.java\nindex 50df51a72b4..cfa91902d83 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1067/PositiveAtomicCounter.java\n@@ -22,19 +22,19 @@ import java.util.concurrent.atomic.AtomicInteger;\n  * A simple atomic counter.\n  */\n public class PositiveAtomicCounter {\n-  private final AtomicInteger atom;\n-  private static final int mask = 0x7FFFFFFF;\n+    private final AtomicInteger atom;\n+    private static final int mask = 0x7FFFFFFF;\n \n-  public PositiveAtomicCounter() {\n-    atom = new AtomicInteger(0);\n-  }\n+    public PositiveAtomicCounter() {\n+        atom = new AtomicInteger(0);\n+    }\n \n-  public final int incrementAndGet() {\n-    final int rt = atom.incrementAndGet();\n-    return rt & mask;\n-  }\n+    public final int incrementAndGet() {\n+        final int rt = atom.incrementAndGet();\n+        return rt & mask;\n+    }\n \n-  public int intValue() {\n-    return atom.intValue();\n-  }\n+    public int intValue() {\n+        return atom.intValue();\n+    }\n }\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1067/PositiveAtomicCounter.java\nindex 50df51a72b4..f6ff7b92469 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1067/PositiveAtomicCounter.java\n@@ -37,4 +37,4 @@ public class PositiveAtomicCounter {\n   public int intValue() {\n     return atom.intValue();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1067/PositiveAtomicCounter.java\nindex 50df51a72b4..c0a6d408d5f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1067/PositiveAtomicCounter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1067/PositiveAtomicCounter.java\n@@ -21,7 +21,9 @@ import java.util.concurrent.atomic.AtomicInteger;\n /**\n  * A simple atomic counter.\n  */\n+\n public class PositiveAtomicCounter {\n+\n   private final AtomicInteger atom;\n   private static final int mask = 0x7FFFFFFF;\n \n@@ -37,4 +39,5 @@ public class PositiveAtomicCounter {\n   public int intValue() {\n     return atom.intValue();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

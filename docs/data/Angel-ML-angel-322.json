@@ -1,0 +1,102 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "322",
+    "information": {
+        "violations": [
+            {
+                "line": "21",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 110).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private IElement[] values;\n\n  public RangeViewLongKeysAnyValuesPart(int rowId, long[] keys, IElement[] values, int startPos, int endPos) {\n    super(rowId, startPos, endPos);\n    this.keys = keys;\n    this.values = values;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/322/RangeViewLongKeysAnyValuesPart.java\nindex 4c9ebfe9991..8d3f002d3bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/322/RangeViewLongKeysAnyValuesPart.java\n@@ -7,112 +7,114 @@ import com.tencent.angel.psagent.matrix.transport.router.operator.ILongKeyAnyVal\n import io.netty.buffer.ByteBuf;\n \n public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n-    ILongKeyAnyValuePartOp {\n-  /**\n-   * Whole key array before serialization, sorted by asc\n-   */\n-  private long[] keys;\n+        ILongKeyAnyValuePartOp {\n+    /**\n+     * Whole key array before serialization, sorted by asc\n+     */\n+    private long[] keys;\n \n-  /**\n-   * Whole value array before serialization\n-   */\n-  private IElement[] values;\n+    /**\n+     * Whole value array before serialization\n+     */\n+    private IElement[] values;\n \n-  public RangeViewLongKeysAnyValuesPart(int rowId, long[] keys, IElement[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n-    this.keys = keys;\n-    this.values = values;\n-  }\n+    public RangeViewLongKeysAnyValuesPart(int rowId, long[] keys, IElement[] values, int startPos,\n+                                          int endPos) {\n+        super(rowId, startPos, endPos);\n+        this.keys = keys;\n+        this.values = values;\n+    }\n \n-  public RangeViewLongKeysAnyValuesPart(long[] keys, IElement[] values, int startPos, int endPos) {\n-    this(-1, keys, values, startPos, endPos);\n-  }\n+    public RangeViewLongKeysAnyValuesPart(long[] keys, IElement[] values, int startPos,\n+                                          int endPos) {\n+        this(-1, keys, values, startPos, endPos);\n+    }\n \n-  public RangeViewLongKeysAnyValuesPart() {\n-    this(-1, null, null, -1, -1);\n-  }\n+    public RangeViewLongKeysAnyValuesPart() {\n+        this(-1, null, null, -1, -1);\n+    }\n \n-  @Override\n-  public long[] getKeys() {\n-    return keys;\n-  }\n+    @Override\n+    public long[] getKeys() {\n+        return keys;\n+    }\n \n-  @Override\n-  public IElement[] getValues() {\n-    return values;\n-  }\n+    @Override\n+    public IElement[] getValues() {\n+        return values;\n+    }\n \n-  @Override\n-  public void add(long key, IElement value) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n+    @Override\n+    public void add(long key, IElement value) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n \n-  @Override\n-  public void add(long[] keys, IElement[] values) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n+    @Override\n+    public void add(long[] keys, IElement[] values) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n \n-  @Override\n-  public int size() {\n-    if(endPos != -1) {\n-      return endPos - startPos;\n-    } else {\n-      return keys.length;\n+    @Override\n+    public int size() {\n+        if (endPos != -1) {\n+            return endPos - startPos;\n+        } else {\n+            return keys.length;\n+        }\n     }\n-  }\n \n-  @Override\n-  public RowType getKeyValueType() {\n-    return RowType.T_ANY_LONGKEY_SPARSE;\n-  }\n+    @Override\n+    public RowType getKeyValueType() {\n+        return RowType.T_ANY_LONGKEY_SPARSE;\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n-    super.serialize(output);\n-    ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    if(endPos - startPos > 0) {\n-      // IElement class name\n-      ByteBufSerdeUtils.serializeUTF8(output, values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n-        ByteBufSerdeUtils.serializeLong(output, keys[i]);\n-        values[i].serialize(output);\n-      }\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        super.serialize(output);\n+        ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n+        if (endPos - startPos > 0) {\n+            // IElement class name\n+            ByteBufSerdeUtils.serializeUTF8(output, values[startPos].getClass().getName());\n+            for (int i = startPos; i < endPos; i++) {\n+                ByteBufSerdeUtils.serializeLong(output, keys[i]);\n+                values[i].serialize(output);\n+            }\n+        }\n     }\n-  }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    super.deserialize(input);\n-    int len = ByteBufSerdeUtils.deserializeInt(input);\n-    if(len > 0) {\n-      keys = new long[len];\n-      values = new IElement[len];\n-      try {\n-        String valueClassName = ByteBufSerdeUtils.deserializeUTF8(input);\n-        Class valueClass = Class.forName(valueClassName);\n-        for(int i = 0; i < len; i++) {\n-          keys[i] = ByteBufSerdeUtils.deserializeLong(input);\n-          values[i] = (IElement) valueClass.newInstance();\n-          values[i].deserialize(input);\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        super.deserialize(input);\n+        int len = ByteBufSerdeUtils.deserializeInt(input);\n+        if (len > 0) {\n+            keys = new long[len];\n+            values = new IElement[len];\n+            try {\n+                String valueClassName = ByteBufSerdeUtils.deserializeUTF8(input);\n+                Class valueClass = Class.forName(valueClassName);\n+                for (int i = 0; i < len; i++) {\n+                    keys[i] = ByteBufSerdeUtils.deserializeLong(input);\n+                    values[i] = (IElement) valueClass.newInstance();\n+                    values[i].deserialize(input);\n+                }\n+            } catch (Throwable e) {\n+                throw new RuntimeException(e);\n+            }\n         }\n-      } catch (Throwable e) {\n-        throw new RuntimeException(e);\n-      }\n     }\n-  }\n \n-  @Override\n-  public int bufferLen() {\n-    int len = super.bufferLen();\n-    len += ByteBufSerdeUtils.INT_LENGTH;\n-    if(endPos - startPos > 0) {\n-      // IElement class name\n-      len += ByteBufSerdeUtils.serializedUTF8Len(values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n-        len += ByteBufSerdeUtils.LONG_LENGTH;\n-        len += values[i].bufferLen();\n-      }\n+    @Override\n+    public int bufferLen() {\n+        int len = super.bufferLen();\n+        len += ByteBufSerdeUtils.INT_LENGTH;\n+        if (endPos - startPos > 0) {\n+            // IElement class name\n+            len += ByteBufSerdeUtils.serializedUTF8Len(values[startPos].getClass().getName());\n+            for (int i = startPos; i < endPos; i++) {\n+                len += ByteBufSerdeUtils.LONG_LENGTH;\n+                len += values[i].bufferLen();\n+            }\n+        }\n+        return len;\n     }\n-    return len;\n-  }\n }\n",
+            "diff_size": 100
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/322/RangeViewLongKeysAnyValuesPart.java\nindex 4c9ebfe9991..e89acf1da0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/322/RangeViewLongKeysAnyValuesPart.java\n@@ -6,8 +6,7 @@ import com.tencent.angel.ps.storage.vector.element.IElement;\n import com.tencent.angel.psagent.matrix.transport.router.operator.ILongKeyAnyValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n-    ILongKeyAnyValuePartOp {\n+public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements ILongKeyAnyValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n@@ -70,10 +69,10 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    if(endPos - startPos > 0) {\n+    if (endPos - startPos > 0) {\n       // IElement class name\n       ByteBufSerdeUtils.serializeUTF8(output, values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n+      for (int i = startPos; i < endPos; i++) {\n         ByteBufSerdeUtils.serializeLong(output, keys[i]);\n         values[i].serialize(output);\n       }\n@@ -84,13 +83,13 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   public void deserialize(ByteBuf input) {\n     super.deserialize(input);\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n-    if(len > 0) {\n+    if (len > 0) {\n       keys = new long[len];\n       values = new IElement[len];\n       try {\n         String valueClassName = ByteBufSerdeUtils.deserializeUTF8(input);\n         Class valueClass = Class.forName(valueClassName);\n-        for(int i = 0; i < len; i++) {\n+        for (int i = 0; i < len; i++) {\n           keys[i] = ByteBufSerdeUtils.deserializeLong(input);\n           values[i] = (IElement) valueClass.newInstance();\n           values[i].deserialize(input);\n@@ -105,14 +104,14 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   public int bufferLen() {\n     int len = super.bufferLen();\n     len += ByteBufSerdeUtils.INT_LENGTH;\n-    if(endPos - startPos > 0) {\n+    if (endPos - startPos > 0) {\n       // IElement class name\n       len += ByteBufSerdeUtils.serializedUTF8Len(values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n+      for (int i = startPos; i < endPos; i++) {\n         len += ByteBufSerdeUtils.LONG_LENGTH;\n         len += values[i].bufferLen();\n       }\n     }\n     return len;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/322/RangeViewLongKeysAnyValuesPart.java\nindex 4c9ebfe9991..d8dfc695058 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/322/RangeViewLongKeysAnyValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/322/RangeViewLongKeysAnyValuesPart.java\n@@ -6,11 +6,11 @@ import com.tencent.angel.ps.storage.vector.element.IElement;\n import com.tencent.angel.psagent.matrix.transport.router.operator.ILongKeyAnyValuePartOp;\n import io.netty.buffer.ByteBuf;\n \n-public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n-    ILongKeyAnyValuePartOp {\n+public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements ILongKeyAnyValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n+\n   private long[] keys;\n \n   /**\n@@ -54,7 +54,7 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n \n   @Override\n   public int size() {\n-    if(endPos != -1) {\n+    if (endPos != -1) {\n       return endPos - startPos;\n     } else {\n       return keys.length;\n@@ -70,10 +70,10 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    if(endPos - startPos > 0) {\n+    if (endPos - startPos > 0) {\n       // IElement class name\n       ByteBufSerdeUtils.serializeUTF8(output, values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n+      for (int i = startPos; i < endPos; i++) {\n         ByteBufSerdeUtils.serializeLong(output, keys[i]);\n         values[i].serialize(output);\n       }\n@@ -83,14 +83,15 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   @Override\n   public void deserialize(ByteBuf input) {\n     super.deserialize(input);\n+\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n-    if(len > 0) {\n+    if (len > 0) {\n       keys = new long[len];\n       values = new IElement[len];\n       try {\n         String valueClassName = ByteBufSerdeUtils.deserializeUTF8(input);\n         Class valueClass = Class.forName(valueClassName);\n-        for(int i = 0; i < len; i++) {\n+        for (int i = 0; i < len; i++) {\n           keys[i] = ByteBufSerdeUtils.deserializeLong(input);\n           values[i] = (IElement) valueClass.newInstance();\n           values[i].deserialize(input);\n@@ -105,14 +106,15 @@ public class RangeViewLongKeysAnyValuesPart extends RangeKeyValuePart implements\n   public int bufferLen() {\n     int len = super.bufferLen();\n     len += ByteBufSerdeUtils.INT_LENGTH;\n-    if(endPos - startPos > 0) {\n+    if (endPos - startPos > 0) {\n       // IElement class name\n       len += ByteBufSerdeUtils.serializedUTF8Len(values[startPos].getClass().getName());\n-      for(int i = startPos; i < endPos; i++) {\n+      for (int i = startPos; i < endPos; i++) {\n         len += ByteBufSerdeUtils.LONG_LENGTH;\n         len += values[i].bufferLen();\n       }\n     }\n     return len;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "21",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 110).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

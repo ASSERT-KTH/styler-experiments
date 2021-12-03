@@ -1,0 +1,96 @@
+{
+    "project_name": "HuygensING-timbuctoo",
+    "violation_id": "40",
+    "information": {
+        "violations": [
+            {
+                "line": "14",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "import java.util.stream.Stream;\n\nimport static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n  .getPaginatedList;\n\npublic class RelationsOfSubjectDataFetcher implements CollectionFetcher {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/40/RelationsOfSubjectDataFetcher.java\nindex e8078111053..47f117817f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HuygensING-timbuctoo/styler/05_predictions/final/files-repaired/40/RelationsOfSubjectDataFetcher.java\n@@ -11,8 +11,7 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n \n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/naturalize/40/RelationsOfSubjectDataFetcher.java\nindex e8078111053..e783789e7be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/naturalize/40/RelationsOfSubjectDataFetcher.java\n@@ -11,8 +11,7 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n \n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n \n@@ -44,4 +43,4 @@ public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n     }\n \n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'block' child has incorrect indentation level 15, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 139).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "error",
+                    "message": "'block' child has incorrect indentation level 15, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/codebuff/40/RelationsOfSubjectDataFetcher.java\nindex e8078111053..5b4cdd5486e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/codebuff/40/RelationsOfSubjectDataFetcher.java\n@@ -8,14 +8,11 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.dto.LazyType\n import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.PaginatedList;\n import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.PaginationArguments;\n import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n-\n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n-\n   private final String source;\n   private final String predicate;\n   private final Direction direction;\n@@ -30,18 +27,10 @@ public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n   public PaginatedList<SubjectReference> getList(PaginationArguments arguments, DataSet dataSet) {\n     String cursor = arguments.getCursor();\n     try (Stream<CursorQuad> q = dataSet.getQuadStore().getQuads(source, predicate, direction, cursor)) {\n-      return getPaginatedList(\n-        q,\n-        cursorSubject -> {\n-          final LazyTypeSubjectReference lazyTypeSubjectReference = new LazyTypeSubjectReference(\n-            cursorSubject.getSubject(),\n-            dataSet\n-          );\n-          return lazyTypeSubjectReference;\n-        },\n-        arguments\n-      );\n+      return getPaginatedList(q, cursorSubject -> {\n+               final LazyTypeSubjectReference lazyTypeSubjectReference = new LazyTypeSubjectReference(cursorSubject.getSubject(), dataSet);\n+               return lazyTypeSubjectReference;\n+      }, arguments);\n     }\n-\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/random/files-repaired/40/RelationsOfSubjectDataFetcher.java\nindex e8078111053..6c63eaffb6c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/random/files-repaired/40/RelationsOfSubjectDataFetcher.java\n@@ -12,7 +12,7 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n import java.util.stream.Stream;\n \n import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+.getPaginatedList;\n \n public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/40/RelationsOfSubjectDataFetcher.java\nindex e8078111053..47f117817f5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/violations/40/RelationsOfSubjectDataFetcher.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HuygensING-timbuctoo/styler/05_predictions/three_grams/files-repaired/40/RelationsOfSubjectDataFetcher.java\n@@ -11,8 +11,7 @@ import nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.dto.SubjectReference;\n \n import java.util.stream.Stream;\n \n-import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper\n-  .getPaginatedList;\n+import static nl.knaw.huygens.timbuctoo.v5.graphql.datafetchers.berkeleydb.datafetchers.PaginationHelper.getPaginatedList;\n \n public class RelationsOfSubjectDataFetcher implements CollectionFetcher {\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random"
+    ]
+}

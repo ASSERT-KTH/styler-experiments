@@ -1,0 +1,128 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "967",
+    "information": {
+        "violations": [
+            {
+                "line": "47",
+                "severity": "error",
+                "message": "No trailing whitespace allowed.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "   * Get split value of each feature of a node in a tree. currently, we generate all the features\n   * Todo: generate sampled features\n   * \n   * @param dataMeta the data meta info\n   * @param treeMaker the tree maker\n   * @param nid the node id in the tree",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "No trailing whitespace allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/967/TDensitySplit.java\nindex 312c7787809..c84f5f8078b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/967/TDensitySplit.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.ml.tree;\n \n import com.tencent.angel.ml.RegTree.DataMeta;\n@@ -32,113 +33,114 @@ import java.util.List;\n \n public class TDensitySplit implements TSplitValueHelper {\n \n-  private static final Log LOG = LogFactory.getLog(TDensitySplit.class);\n-  private int splitCandidNum;\n-  private int splitNum;\n-\n-  public TDensitySplit(int splitCandidNum, int splitNum) {\n-    this.splitCandidNum = splitCandidNum;\n-    this.splitNum = splitNum;\n-  }\n-\n-  /**\n-   * Get split value of each feature of a node in a tree. currently, we generate all the features\n-   * Todo: generate sampled features\n-   * \n-   * @param dataMeta the data meta info\n-   * @param treeMaker the tree maker\n-   * @param nid the node id in the tree\n-   * @return the float[][] split value, one row for one feature\n-   */\n-  @Override\n-  public float[][] getSplitValue(DataMeta dataMeta, RegTMaker treeMaker, int nid) {\n-    int numFeature = dataMeta.featureMeta.numFeature;\n-    float[][] splitSet = new float[numFeature][splitNum];\n-    int[][] counts = new int[numFeature][splitCandidNum];\n-\n-    double[] binWidths = new double[numFeature];\n-\n-    for (int i = 0; i < numFeature; i++) {\n-      int fid = i;\n-      binWidths[i] =\n-          (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid])\n-              / (splitCandidNum + 1);\n+    private static final Log LOG = LogFactory.getLog(TDensitySplit.class);\n+    private int splitCandidNum;\n+    private int splitNum;\n+\n+    public TDensitySplit(int splitCandidNum, int splitNum) {\n+        this.splitCandidNum = splitCandidNum;\n+        this.splitNum = splitNum;\n     }\n \n-    // insIdx is the index of instances\n-    for (int insIdx = 0; insIdx < dataMeta.numRow; insIdx++) {\n-      if (treeMaker.ins2Node.get(insIdx) == nid) {\n-        int[] indices = dataMeta.instances.get(insIdx).getIndices();\n-        double[] values = dataMeta.instances.get(insIdx).getValues();\n-        for (int i = 0; i < indices.length; i++) {\n-          int findex = indices[i]; // feature index\n-          double binWidth = binWidths[findex]; // bin width\n-          double fvalue = (float) values[i]; // feature value\n-          int binIndex =\n-              (int) Math.floor((fvalue - dataMeta.featureMeta.minFeatures[findex]) / binWidth);\n-          counts[findex][binIndex]++;\n+    /**\n+     * Get split value of each feature of a node in a tree. currently, we generate all the features\n+     * Todo: generate sampled features\n+     *\n+     * @param dataMeta  the data meta info\n+     * @param treeMaker the tree maker\n+     * @param nid       the node id in the tree\n+     * @return the float[][] split value, one row for one feature\n+     */\n+    @Override\n+    public float[][] getSplitValue(DataMeta dataMeta, RegTMaker treeMaker, int nid) {\n+        int numFeature = dataMeta.featureMeta.numFeature;\n+        float[][] splitSet = new float[numFeature][splitNum];\n+        int[][] counts = new int[numFeature][splitCandidNum];\n+\n+        double[] binWidths = new double[numFeature];\n+\n+        for (int i = 0; i < numFeature; i++) {\n+            int fid = i;\n+            binWidths[i] =\n+                    (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid])\n+                            / (splitCandidNum + 1);\n+        }\n+\n+        // insIdx is the index of instances\n+        for (int insIdx = 0; insIdx < dataMeta.numRow; insIdx++) {\n+            if (treeMaker.ins2Node.get(insIdx) == nid) {\n+                int[] indices = dataMeta.instances.get(insIdx).getIndices();\n+                double[] values = dataMeta.instances.get(insIdx).getValues();\n+                for (int i = 0; i < indices.length; i++) {\n+                    int findex = indices[i]; // feature index\n+                    double binWidth = binWidths[findex]; // bin width\n+                    double fvalue = (float) values[i]; // feature value\n+                    int binIndex =\n+                            (int) Math.floor(\n+                                    (fvalue - dataMeta.featureMeta.minFeatures[findex]) / binWidth);\n+                    counts[findex][binIndex]++;\n+                }\n+            }\n+        }\n+\n+        // loop over features\n+        for (int fid = 0; fid < numFeature; fid++) {\n+            int[] minCandid = findMinCandid(counts[fid], splitNum);\n+            for (int i = 0; i < minCandid.length; i++) {\n+                splitSet[fid][i] = minCandid[i];\n+            }\n         }\n-      }\n-    }\n \n-    // loop over features\n-    for (int fid = 0; fid < numFeature; fid++) {\n-      int[] minCandid = findMinCandid(counts[fid], splitNum);\n-      for (int i = 0; i < minCandid.length; i++) {\n-        splitSet[fid][i] = minCandid[i];\n-      }\n+        return splitSet;\n     }\n \n-    return splitSet;\n-  }\n-\n-  public static int[] findMinCandid(int[] counts, int splitNum) {\n-\n-    int[] nzzIdxes = findNzzIndex(counts);\n-\n-\n-    if (nzzIdxes.length <= splitNum) {\n-      int[] minCandid = new int[nzzIdxes.length - 1];\n-      int[] nzzCounts = new int[nzzIdxes.length];\n-      for (int i = 0; i < nzzCounts.length; i++) {\n-        nzzCounts[i] = counts[nzzIdxes[i]];\n-      }\n-      Sort.quickSort(nzzCounts, nzzIdxes, 0, nzzCounts.length - 1);\n-      for (int i = 0; i < nzzIdxes.length - 1; i++) {\n-        minCandid[i] = nzzIdxes[i];\n-      }\n-      return minCandid;\n-    } else {\n-      int[] minCandid = new int[splitNum];\n-      int[] idxes = new int[counts.length];\n-      for (int i = 0; i < counts.length; i++) {\n-        idxes[i] = i + 1;\n-      }\n-      Sort.quickSort(counts, idxes, 0, counts.length - 1);\n-      for (int i = 0; i < splitNum; i++) {\n-        minCandid[i] = idxes[i];\n-      }\n-      return minCandid;\n+    public static int[] findMinCandid(int[] counts, int splitNum) {\n+\n+        int[] nzzIdxes = findNzzIndex(counts);\n+\n+\n+        if (nzzIdxes.length <= splitNum) {\n+            int[] minCandid = new int[nzzIdxes.length - 1];\n+            int[] nzzCounts = new int[nzzIdxes.length];\n+            for (int i = 0; i < nzzCounts.length; i++) {\n+                nzzCounts[i] = counts[nzzIdxes[i]];\n+            }\n+            Sort.quickSort(nzzCounts, nzzIdxes, 0, nzzCounts.length - 1);\n+            for (int i = 0; i < nzzIdxes.length - 1; i++) {\n+                minCandid[i] = nzzIdxes[i];\n+            }\n+            return minCandid;\n+        } else {\n+            int[] minCandid = new int[splitNum];\n+            int[] idxes = new int[counts.length];\n+            for (int i = 0; i < counts.length; i++) {\n+                idxes[i] = i + 1;\n+            }\n+            Sort.quickSort(counts, idxes, 0, counts.length - 1);\n+            for (int i = 0; i < splitNum; i++) {\n+                minCandid[i] = idxes[i];\n+            }\n+            return minCandid;\n+        }\n     }\n-  }\n-\n-  public static int[] findNzzIndex(int[] counts) {\n-    List<Integer> nzzIdxes = new ArrayList<Integer>();\n-    for (int i = 0; i < counts.length; i++) {\n-      if (counts[i] > 0) {\n-        nzzIdxes.add(i);\n-      }\n+\n+    public static int[] findNzzIndex(int[] counts) {\n+        List<Integer> nzzIdxes = new ArrayList<Integer>();\n+        for (int i = 0; i < counts.length; i++) {\n+            if (counts[i] > 0) {\n+                nzzIdxes.add(i);\n+            }\n+        }\n+        return MathUtils.intList2Arr(nzzIdxes);\n     }\n-    return MathUtils.intList2Arr(nzzIdxes);\n-  }\n-\n-  public static void main(String[] argv) {\n-    int[] counts = {10, 11, 2, 21, 8, 3, 13, 5};\n-    // int[] counts = {10, 2, 1, 2, 0, 3, 0, 5};\n-    int splitNum = 3;\n-    int[] idxes = findMinCandid(counts, splitNum);\n-    for (int idx : idxes) {\n-      System.out.println(idx);\n+\n+    public static void main(String[] argv) {\n+        int[] counts = {10, 11, 2, 21, 8, 3, 13, 5};\n+        // int[] counts = {10, 2, 1, 2, 0, 3, 0, 5};\n+        int splitNum = 3;\n+        int[] idxes = findMinCandid(counts, splitNum);\n+        for (int idx : idxes) {\n+            System.out.println(idx);\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 137
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "No trailing whitespace allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 113).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "74",
+                    "severity": "error",
+                    "message": "Comment has incorrect indentation level 0, expected is 10, indentation should be the same level as line 75.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                },
+                {
+                    "line": "76",
+                    "severity": "error",
+                    "message": "Comment has incorrect indentation level 0, expected is 10, indentation should be the same level as line 77.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/967/TDensitySplit.java\nindex 312c7787809..dc154267c2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/967/TDensitySplit.java\n@@ -61,9 +61,8 @@ public class TDensitySplit implements TSplitValueHelper {\n     for (int i = 0; i < numFeature; i++) {\n       int fid = i;\n       binWidths[i] =\n-          (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid])\n-              / (splitCandidNum + 1);\n-    }\n+          (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid]) / (splitCandidNum + 1);\n+  }\n \n     // insIdx is the index of instances\n     for (int insIdx = 0; insIdx < dataMeta.numRow; insIdx++) {\n@@ -71,12 +70,14 @@ public class TDensitySplit implements TSplitValueHelper {\n         int[] indices = dataMeta.instances.get(insIdx).getIndices();\n         double[] values = dataMeta.instances.get(insIdx).getValues();\n         for (int i = 0; i < indices.length; i++) {\n-          int findex = indices[i]; // feature index\n-          double binWidth = binWidths[findex]; // bin width\n+          int findex = indices[i];\n+// feature index\n+          double binWidth = binWidths[findex];\n+// bin width\n           double fvalue = (float) values[i]; // feature value\n           int binIndex =\n               (int) Math.floor((fvalue - dataMeta.featureMeta.minFeatures[findex]) / binWidth);\n-          counts[findex][binIndex]++;\n+counts[findex][binIndex]++;\n         }\n       }\n     }\n@@ -93,11 +94,8 @@ public class TDensitySplit implements TSplitValueHelper {\n   }\n \n   public static int[] findMinCandid(int[] counts, int splitNum) {\n-\n-    int[] nzzIdxes = findNzzIndex(counts);\n-\n-\n-    if (nzzIdxes.length <= splitNum) {\n+  int[] nzzIdxes = findNzzIndex(counts);\n+if (nzzIdxes.length <= splitNum) {\n       int[] minCandid = new int[nzzIdxes.length - 1];\n       int[] nzzCounts = new int[nzzIdxes.length];\n       for (int i = 0; i < nzzCounts.length; i++) {\n@@ -141,4 +139,4 @@ public class TDensitySplit implements TSplitValueHelper {\n       System.out.println(idx);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "No trailing whitespace allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "62",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "75",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 106).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/967/TDensitySplit.java\nindex 312c7787809..9241f66a1c5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/967/TDensitySplit.java\n@@ -22,7 +22,6 @@ import com.tencent.angel.ml.utils.MathUtils;\n import com.tencent.angel.utils.Sort;\n import org.apache.commons.logging.Log;\n import org.apache.commons.logging.LogFactory;\n-\n import java.util.ArrayList;\n import java.util.List;\n \n@@ -50,22 +49,21 @@ public class TDensitySplit implements TSplitValueHelper {\n    * @param nid the node id in the tree\n    * @return the float[][] split value, one row for one feature\n    */\n+\n   @Override\n-  public float[][] getSplitValue(DataMeta dataMeta, RegTMaker treeMaker, int nid) {\n+  public float[][] getSplitValue(\n+    DataMeta dataMeta, RegTMaker treeMaker, int nid) {\n     int numFeature = dataMeta.featureMeta.numFeature;\n     float[][] splitSet = new float[numFeature][splitNum];\n     int[][] counts = new int[numFeature][splitCandidNum];\n-\n     double[] binWidths = new double[numFeature];\n-\n     for (int i = 0; i < numFeature; i++) {\n       int fid = i;\n-      binWidths[i] =\n-          (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid])\n-              / (splitCandidNum + 1);\n+      binWidths[i] = (dataMeta.featureMeta.maxFeatures[fid] - dataMeta.featureMeta.minFeatures[fid]) / (splitCandidNum + 1);\n     }\n \n     // insIdx is the index of instances\n+\n     for (int insIdx = 0; insIdx < dataMeta.numRow; insIdx++) {\n       if (treeMaker.ins2Node.get(insIdx) == nid) {\n         int[] indices = dataMeta.instances.get(insIdx).getIndices();\n@@ -74,29 +72,25 @@ public class TDensitySplit implements TSplitValueHelper {\n           int findex = indices[i]; // feature index\n           double binWidth = binWidths[findex]; // bin width\n           double fvalue = (float) values[i]; // feature value\n-          int binIndex =\n-              (int) Math.floor((fvalue - dataMeta.featureMeta.minFeatures[findex]) / binWidth);\n+          int binIndex = (int) Math.floor((fvalue - dataMeta.featureMeta.minFeatures[findex]) / binWidth);\n           counts[findex][binIndex]++;\n         }\n       }\n     }\n \n     // loop over features\n+\n     for (int fid = 0; fid < numFeature; fid++) {\n       int[] minCandid = findMinCandid(counts[fid], splitNum);\n       for (int i = 0; i < minCandid.length; i++) {\n         splitSet[fid][i] = minCandid[i];\n       }\n     }\n-\n     return splitSet;\n   }\n \n   public static int[] findMinCandid(int[] counts, int splitNum) {\n-\n     int[] nzzIdxes = findNzzIndex(counts);\n-\n-\n     if (nzzIdxes.length <= splitNum) {\n       int[] minCandid = new int[nzzIdxes.length - 1];\n       int[] nzzCounts = new int[nzzIdxes.length];\n@@ -141,4 +135,4 @@ public class TDensitySplit implements TSplitValueHelper {\n       System.out.println(idx);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "No trailing whitespace allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "46",
+                    "severity": "error",
+                    "message": "No trailing whitespace allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/967/TDensitySplit.java\nindex 312c7787809..77a09a060a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/967/TDensitySplit.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/967/TDensitySplit.java\n@@ -40,7 +40,6 @@ public class TDensitySplit implements TSplitValueHelper {\n     this.splitCandidNum = splitCandidNum;\n     this.splitNum = splitNum;\n   }\n-\n   /**\n    * Get split value of each feature of a node in a tree. currently, we generate all the features\n    * Todo: generate sampled features\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

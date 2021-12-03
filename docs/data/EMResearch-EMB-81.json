@@ -1,0 +1,156 @@
+{
+    "project_name": "EMResearch-EMB",
+    "violation_id": "81",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 143).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public Word2VecModel(String path) throws FileNotFoundException {\n    Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n    Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n    this.embedding = new Embedding(dictionary, embedding);\n    this.path = new File(path);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "'+' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "'+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/81/Word2VecModel.java\nindex 8f0539795ad..1972045741f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/81/Word2VecModel.java\n@@ -28,8 +28,9 @@ public class Word2VecModel {\n   private final File path;\n \n   public Word2VecModel(String path) throws FileNotFoundException {\n-    Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n-    Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n+    Dictionary dictionary =neworg.languagetool.rules.neuralnetwork.Dictionary(newFileInputStream(path+File.\n+    separator + \"dictionary.txt\"));\n+    Matrix embedding = embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n     this.embedding = new Embedding(dictionary, embedding);\n     this.path = new File(path);\n   }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/81/Word2VecModel.java\nindex 8f0539795ad..0a1a3cf3d9a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/81/Word2VecModel.java\n@@ -16,6 +16,7 @@\n  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301\n  * USA\n  */\n+\n package org.languagetool.rules.neuralnetwork;\n \n import java.io.File;\n@@ -24,22 +25,23 @@ import java.io.FileNotFoundException;\n \n public class Word2VecModel {\n \n-  private final Embedding embedding;\n-  private final File path;\n+    private final Embedding embedding;\n+    private final File path;\n \n-  public Word2VecModel(String path) throws FileNotFoundException {\n-    Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n-    Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n-    this.embedding = new Embedding(dictionary, embedding);\n-    this.path = new File(path);\n-  }\n+    public Word2VecModel(String path) throws FileNotFoundException {\n+        Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(\n+            new FileInputStream(path + File.separator + \"dictionary.txt\"));\n+        Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n+        this.embedding = new Embedding(dictionary, embedding);\n+        this.path = new File(path);\n+    }\n \n-  public Embedding getEmbedding() {\n-    return embedding;\n-  }\n+    public Embedding getEmbedding() {\n+        return embedding;\n+    }\n \n-  public File getPath() {\n-    return path;\n-  }\n+    public File getPath() {\n+        return path;\n+    }\n \n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/81/Word2VecModel.java\nindex 8f0539795ad..5e4536e2a20 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/81/Word2VecModel.java\n@@ -42,4 +42,4 @@ public class Word2VecModel {\n     return path;\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 143).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/81/Word2VecModel.java\nindex 8f0539795ad..9c6c8538e3f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/81/Word2VecModel.java\n@@ -22,24 +22,24 @@ import java.io.File;\n import java.io.FileInputStream;\n import java.io.FileNotFoundException;\n \n+\n public class Word2VecModel {\n \n-  private final Embedding embedding;\n-  private final File path;\n+    private final Embedding embedding;\n+    private final File path;\n \n-  public Word2VecModel(String path) throws FileNotFoundException {\n+    public Word2VecModel(String path) throws FileNotFoundException {\n     Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n     Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n     this.embedding = new Embedding(dictionary, embedding);\n     this.path = new File(path);\n-  }\n-\n-  public Embedding getEmbedding() {\n-    return embedding;\n-  }\n+    }\n \n-  public File getPath() {\n-    return path;\n-  }\n+    public Embedding getEmbedding() {\n+        return embedding;\n+    }\n \n-}\n+    public File getPath() {\n+        return path;\n+    }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "56",
+                    "severity": "warning",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "72",
+                    "severity": "warning",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 159).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "32",
+                    "column": "17",
+                    "severity": "warning",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "32",
+                    "column": "49",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/81/Word2VecModel.java\nindex 8f0539795ad..01e78706a90 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/81/Word2VecModel.java\n@@ -28,8 +28,8 @@ public class Word2VecModel {\n   private final File path;\n \n   public Word2VecModel(String path) throws FileNotFoundException {\n-    Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n-    Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n+    Dictionary dictionary = new org.languagetool.rules . neuralnetwork . Dictionary(newFileInputStream(\n+    path + File . separator + \"dictionary.txt\"));Matrixembedding = embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n     this.embedding = new Embedding(dictionary, embedding);\n     this.path = new File(path);\n   }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "31",
+                    "column": "27",
+                    "severity": "warning",
+                    "message": "'=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "'+' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "'+' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/81/Word2VecModel.java\nindex 8f0539795ad..1972045741f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/81/Word2VecModel.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/81/Word2VecModel.java\n@@ -28,8 +28,9 @@ public class Word2VecModel {\n   private final File path;\n \n   public Word2VecModel(String path) throws FileNotFoundException {\n-    Dictionary dictionary = new org.languagetool.rules.neuralnetwork.Dictionary(new FileInputStream(path + File.separator + \"dictionary.txt\"));\n-    Matrix embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n+    Dictionary dictionary =neworg.languagetool.rules.neuralnetwork.Dictionary(newFileInputStream(path+File.\n+    separator + \"dictionary.txt\"));\n+    Matrix embedding = embedding = new Matrix(new FileInputStream(path + File.separator + \"final_embeddings.txt\"));\n     this.embedding = new Embedding(dictionary, embedding);\n     this.path = new File(path);\n   }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

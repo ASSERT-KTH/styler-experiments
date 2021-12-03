@@ -1,0 +1,166 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "2901",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "28",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "33",
+                    "column": "53",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "42",
+                    "column": "9",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "42",
+                    "column": "45",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "43",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "66",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "9",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "54",
+                    "column": "38",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "63",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2901/FusionIndexSampler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2901/FusionIndexSampler.java\nindex d7c0468f0d3..c2f41af69b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2901/FusionIndexSampler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/2901/FusionIndexSampler.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.impl.index.schema.fusion;\n \n import org.neo4j.kernel.api.exceptions.index.IndexNotFoundKernelException;\n@@ -27,41 +28,41 @@ import static org.neo4j.io.IOUtils.closeAllSilently;\n \n public class FusionIndexSampler implements IndexSampler\n {\n-    private final IndexSampler[] samplers;\n+  private final IndexSampler[] samplers;\n \n-    public FusionIndexSampler( IndexSampler... samplers )\n-    {\n-        this.samplers = samplers;\n-    }\n+  public FusionIndexSampler(IndexSampler... samplers)\n+  {\n+    this.samplers = samplers;\n+  }\n \n-    @Override\n-    public IndexSample sampleIndex() throws IndexNotFoundKernelException\n+  @Override\n+  public IndexSample sampleIndex() throws IndexNotFoundKernelException\n+  {\n+    IndexSample[] samples = new IndexSample[samplers.length];\n+    for (int i = 0; i < samplers.length; i++)\n     {\n-        IndexSample[] samples = new IndexSample[samplers.length];\n-        for ( int i = 0; i < samplers.length; i++ )\n-        {\n-            samples[i] = samplers[i].sampleIndex();\n-        }\n-        return combineSamples( samples );\n+      samples[i] = samplers[i].sampleIndex();\n     }\n+    return combineSamples(samples);\n+  }\n \n-    public static IndexSample combineSamples( IndexSample... samples )\n+  public static IndexSample combineSamples(IndexSample... samples)\n+  {\n+    long indexSize = 0;\n+    long uniqueValues = 0;\n+    long sampleSize = 0;\n+    for (IndexSample sample : samples)\n     {\n-        long indexSize = 0;\n-        long uniqueValues = 0;\n-        long sampleSize = 0;\n-        for ( IndexSample sample : samples )\n-        {\n-            indexSize += sample.indexSize();\n-            uniqueValues += sample.uniqueValues();\n-            sampleSize += sample.sampleSize();\n-        }\n-        return new IndexSample( indexSize, uniqueValues, sampleSize );\n+      indexSize += sample.indexSize();\n+      uniqueValues += sample.uniqueValues();\n+      sampleSize += sample.sampleSize();\n     }\n+    return new IndexSample(indexSize, uniqueValues, sampleSize);\n+  }\n \n-    @Override\n-    public void close()\n-    {\n-        closeAllSilently( samplers );\n-    }\n+  @Override\n+  public void close()\n+  {\n+    closeAllSilently(samplers);\n+  }\n }\n",
+            "diff_size": 42
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2901/FusionIndexSampler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2901/FusionIndexSampler.java\nindex d7c0468f0d3..e1e1f3e52f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/2901/FusionIndexSampler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/2901/FusionIndexSampler.java\n@@ -42,7 +42,8 @@ public class FusionIndexSampler implements IndexSampler\n         {\n             samples[i] = samplers[i].sampleIndex();\n         }\n-        return combineSamples( samples );\n+\n+return combineSamples( samples );\n     }\n \n     public static IndexSample combineSamples( IndexSample... samples )\n@@ -64,4 +65,4 @@ public class FusionIndexSampler implements IndexSampler\n     {\n         closeAllSilently( samplers );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

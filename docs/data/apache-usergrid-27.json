@@ -1,0 +1,132 @@
+{
+    "project_name": "apache-usergrid",
+    "violation_id": "27",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "warning",
+                "message": "Use of @author javadoc keyword is prohibited.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": " * <=,\n *\n * @author tnine\n */\npublic abstract class BooleanOperand extends Operand {\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "17",
+                    "severity": "warning",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck"
+                },
+                {
+                    "line": "43",
+                    "column": "24",
+                    "severity": "warning",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "17",
+                    "severity": "warning",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck"
+                },
+                {
+                    "line": "48",
+                    "column": "24",
+                    "severity": "warning",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.TypecastParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/27/BooleanOperand.java\nindex 22a6b965eaf..473c46a910d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/checkstyle_idea/27/BooleanOperand.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.usergrid.persistence.query.tree;\n \n \n@@ -33,17 +34,17 @@ public abstract class BooleanOperand extends Operand {\n      * @param property\n      * @param literal\n      */\n-    public BooleanOperand( Token t ) {\n-        super( t );\n+    public BooleanOperand(Token t) {\n+        super(t);\n     }\n \n \n     public Operand getLeft() {\n-        return ( Operand ) this.children.get( 0 );\n+        return (Operand) this.children.get(0);\n     }\n \n \n     public Operand getRight() {\n-        return ( Operand ) this.children.get( 1 );\n+        return (Operand) this.children.get(1);\n     }\n }\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/27/BooleanOperand.java\nindex 22a6b965eaf..091e3f14fb8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/naturalize/27/BooleanOperand.java\n@@ -28,7 +28,6 @@ import org.antlr.runtime.Token;\n  */\n public abstract class BooleanOperand extends Operand {\n \n-\n     /**\n      * @param property\n      * @param literal\n@@ -46,4 +45,4 @@ public abstract class BooleanOperand extends Operand {\n     public Operand getRight() {\n         return ( Operand ) this.children.get( 1 );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/27/BooleanOperand.java\nindex 22a6b965eaf..6463518cca6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/violations/27/BooleanOperand.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-usergrid/codebuff/27/BooleanOperand.java\n@@ -26,6 +26,8 @@ import org.antlr.runtime.Token;\n  *\n  * @author tnine\n  */\n+\n+\n public abstract class BooleanOperand extends Operand {\n \n \n@@ -33,6 +35,7 @@ public abstract class BooleanOperand extends Operand {\n      * @param property\n      * @param literal\n      */\n+\n     public BooleanOperand( Token t ) {\n         super( t );\n     }\n@@ -46,4 +49,4 @@ public abstract class BooleanOperand extends Operand {\n     public Operand getRight() {\n         return ( Operand ) this.children.get( 1 );\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Use of @author javadoc keyword is prohibited.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

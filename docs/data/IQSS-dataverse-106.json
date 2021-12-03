@@ -1,0 +1,87 @@
+{
+    "project_name": "IQSS-dataverse",
+    "violation_id": "106",
+    "information": {
+        "violations": [
+            {
+                "line": "18",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "@Target(ElementType.TYPE)\npublic @interface RequiredPermissions {\n\tPermission[] value();\n\tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/IQSS-dataverse/styler/05_predictions/final/files-repaired/106/RequiredPermissions.java\nindex 9e68c4f5068..927cdaff445 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/IQSS-dataverse/styler/05_predictions/final/files-repaired/106/RequiredPermissions.java\n@@ -15,6 +15,6 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.RUNTIME)\n @Target(ElementType.TYPE)\n public @interface RequiredPermissions {\n-\tPermission[] value();\n+Permission[] value();\n \tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/checkstyle_idea/106/RequiredPermissions.java\nindex 9e68c4f5068..a43a6924810 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/checkstyle_idea/106/RequiredPermissions.java\n@@ -8,13 +8,13 @@ import java.lang.annotation.RetentionPolicy;\n import java.lang.annotation.Target;\n \n /**\n- *\n  * @author michael\n  */\n @Documented\n @Retention(RetentionPolicy.RUNTIME)\n @Target(ElementType.TYPE)\n public @interface RequiredPermissions {\n-\tPermission[] value();\n-\tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n+  Permission[] value();\n+\n+  String dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/codebuff/106/RequiredPermissions.java\nindex 9e68c4f5068..d643540dc84 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/codebuff/106/RequiredPermissions.java\n@@ -11,10 +11,14 @@ import java.lang.annotation.Target;\n  *\n  * @author michael\n  */\n+\n @Documented\n @Retention(RetentionPolicy.RUNTIME)\n @Target(ElementType.TYPE)\n public @interface RequiredPermissions {\n-\tPermission[] value();\n-\tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n-}\n+\n+    Permission[] value();\n+\n+    String dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/random/files-repaired/106/RequiredPermissions.java\nindex 9e68c4f5068..927cdaff445 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/random/files-repaired/106/RequiredPermissions.java\n@@ -15,6 +15,6 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.RUNTIME)\n @Target(ElementType.TYPE)\n public @interface RequiredPermissions {\n-\tPermission[] value();\n+Permission[] value();\n \tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "19",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/three_grams/files-repaired/106/RequiredPermissions.java\nindex 9e68c4f5068..b81bae0cdc1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/violations/106/RequiredPermissions.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/IQSS-dataverse/styler/05_predictions/three_grams/files-repaired/106/RequiredPermissions.java\n@@ -15,6 +15,6 @@ import java.lang.annotation.Target;\n @Retention(RetentionPolicy.RUNTIME)\n @Target(ElementType.TYPE)\n public @interface RequiredPermissions {\n-\tPermission[] value();\n+  Permission[] value();\n \tString dataverseName() default \"\"; // TODO change to \"dvObjectName\"\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

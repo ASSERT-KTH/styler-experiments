@@ -1,0 +1,110 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "124",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/124/W2VPullParatitionParam.java\nindex e441ba81bcb..49feefa07a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/124/W2VPullParatitionParam.java\n@@ -23,52 +23,53 @@ import io.netty.buffer.ByteBuf;\n \n public class W2VPullParatitionParam extends PartitionGetParam {\n \n-  int[] indices;\n-  int numNodePerRow;\n-  int dimension;\n-  int start;\n-  int length;\n+    int[] indices;\n+    int numNodePerRow;\n+    int dimension;\n+    int start;\n+    int length;\n \n-  public W2VPullParatitionParam(int matrixId,\n-                                PartitionKey partKey,\n-                                int[] indices,\n-                                int numNodePerRow,\n-                                int start,\n-                                int length,\n-                                int dimension) {\n-    super(matrixId, partKey);\n-    this.indices = indices;\n-    this.numNodePerRow = numNodePerRow;\n-    this.start = start;\n-    this.dimension = dimension;\n-    this.length = length;\n-  }\n+    public W2VPullParatitionParam(int matrixId,\n+                                  PartitionKey partKey,\n+                                  int[] indices,\n+                                  int numNodePerRow,\n+                                  int start,\n+                                  int length,\n+                                  int dimension) {\n+        super(matrixId, partKey);\n+        this.indices = indices;\n+        this.numNodePerRow = numNodePerRow;\n+        this.start = start;\n+        this.dimension = dimension;\n+        this.length = length;\n+    }\n \n-  public W2VPullParatitionParam() { }\n+    public W2VPullParatitionParam() {\n+    }\n \n-  @Override\n-  public void deserialize(ByteBuf buf) {\n-    super.deserialize(buf);\n-    numNodePerRow = buf.readInt();\n-    start = buf.readInt();\n-    dimension = buf.readInt();\n-    length = buf.readInt();\n-    indices = new int[length];\n-    for (int i = 0; i < length; i ++) indices[i] = buf.readInt();\n-  }\n+    @Override\n+    public void deserialize(ByteBuf buf) {\n+        super.deserialize(buf);\n+        numNodePerRow = buf.readInt();\n+        start = buf.readInt();\n+        dimension = buf.readInt();\n+        length = buf.readInt();\n+        indices = new int[length];\n+        for (int i = 0; i < length; i++) indices[i] = buf.readInt();\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf buf) {\n-    super.serialize(buf);\n-    buf.writeInt(numNodePerRow);\n-    buf.writeInt(start);\n-    buf.writeInt(dimension);\n-    buf.writeInt(length);\n-    for (int i = 0; i < length; i ++) buf.writeInt(indices[i + start]);\n-  }\n+    @Override\n+    public void serialize(ByteBuf buf) {\n+        super.serialize(buf);\n+        buf.writeInt(numNodePerRow);\n+        buf.writeInt(start);\n+        buf.writeInt(dimension);\n+        buf.writeInt(length);\n+        for (int i = 0; i < length; i++) buf.writeInt(indices[i + start]);\n+    }\n \n-  @Override\n-  public int bufferLen() {\n-    return super.bufferLen() + 4 + 4 * indices.length;\n-  }\n+    @Override\n+    public int bufferLen() {\n+        return super.bufferLen() + 4 + 4 * indices.length;\n+    }\n }\n",
+            "diff_size": 44
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/124/W2VPullParatitionParam.java\nindex e441ba81bcb..5329ed8daae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/124/W2VPullParatitionParam.java\n@@ -29,14 +29,13 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n   int start;\n   int length;\n \n-  public W2VPullParatitionParam(int matrixId,\n-                                PartitionKey partKey,\n+  public W2VPullParatitionParam(int matrixId, PartitionKey partKey,\n                                 int[] indices,\n                                 int numNodePerRow,\n                                 int start,\n                                 int length,\n                                 int dimension) {\n-    super(matrixId, partKey);\n+  super(matrixId, partKey);\n     this.indices = indices;\n     this.numNodePerRow = numNodePerRow;\n     this.start = start;\n@@ -44,7 +43,7 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n     this.length = length;\n   }\n \n-  public W2VPullParatitionParam() { }\n+  public W2VPullParatitionParam() {}\n \n   @Override\n   public void deserialize(ByteBuf buf) {\n@@ -71,4 +70,4 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n   public int bufferLen() {\n     return super.bufferLen() + 4 + 4 * indices.length;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 141).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/124/W2VPullParatitionParam.java\nindex e441ba81bcb..6341a7bf075 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/124/W2VPullParatitionParam.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/124/W2VPullParatitionParam.java\n@@ -24,18 +24,20 @@ import io.netty.buffer.ByteBuf;\n public class W2VPullParatitionParam extends PartitionGetParam {\n \n   int[] indices;\n+\n+\n   int numNodePerRow;\n+\n+\n   int dimension;\n+\n+\n   int start;\n+\n+\n   int length;\n \n-  public W2VPullParatitionParam(int matrixId,\n-                                PartitionKey partKey,\n-                                int[] indices,\n-                                int numNodePerRow,\n-                                int start,\n-                                int length,\n-                                int dimension) {\n+  public W2VPullParatitionParam(int matrixId, PartitionKey partKey, int[] indices, int numNodePerRow, int start, int length, int dimension) {\n     super(matrixId, partKey);\n     this.indices = indices;\n     this.numNodePerRow = numNodePerRow;\n@@ -44,7 +46,7 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n     this.length = length;\n   }\n \n-  public W2VPullParatitionParam() { }\n+  public W2VPullParatitionParam() {}\n \n   @Override\n   public void deserialize(ByteBuf buf) {\n@@ -54,7 +56,8 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n     dimension = buf.readInt();\n     length = buf.readInt();\n     indices = new int[length];\n-    for (int i = 0; i < length; i ++) indices[i] = buf.readInt();\n+    for (int i = 0; i < length; i++)\n+      indices[i] = buf.readInt();\n   }\n \n   @Override\n@@ -64,11 +67,12 @@ public class W2VPullParatitionParam extends PartitionGetParam {\n     buf.writeInt(start);\n     buf.writeInt(dimension);\n     buf.writeInt(length);\n-    for (int i = 0; i < length; i ++) buf.writeInt(indices[i + start]);\n+    for (int i = 0; i < length; i++)\n+      buf.writeInt(indices[i + start]);\n   }\n \n   @Override\n   public int bufferLen() {\n     return super.bufferLen() + 4 + 4 * indices.length;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

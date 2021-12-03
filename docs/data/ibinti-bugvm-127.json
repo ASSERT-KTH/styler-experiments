@@ -1,0 +1,71 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "127",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "error",
+                "message": "'{' at column 1 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "\npublic interface BcDigestProvider\n{\n    ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n        throws OperatorCreationException;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/127/BcDigestProvider.java\nindex 95387ed5c0f..59980a7bec1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/127/BcDigestProvider.java\n@@ -4,8 +4,7 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n+public interface BcDigestProvider {\n     ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n         throws OperatorCreationException;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/127/BcDigestProvider.java\nindex 95387ed5c0f..7ec09521387 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/127/BcDigestProvider.java\n@@ -4,8 +4,7 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n-    ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n-        throws OperatorCreationException;\n+public interface BcDigestProvider {\n+  ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n+    throws OperatorCreationException;\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/127/BcDigestProvider.java\nindex 95387ed5c0f..6290dd6a784 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/127/BcDigestProvider.java\n@@ -4,8 +4,7 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n+public interface BcDigestProvider {\n     ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n         throws OperatorCreationException;\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/127/BcDigestProvider.java\nindex 95387ed5c0f..16a90054320 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/127/BcDigestProvider.java\n@@ -4,8 +4,9 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n-    ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n-        throws OperatorCreationException;\n-}\n+\n+public interface BcDigestProvider {\n+\n+\n+    ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier) throws OperatorCreationException;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/127/BcDigestProvider.java\nindex 95387ed5c0f..59980a7bec1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/127/BcDigestProvider.java\n@@ -4,8 +4,7 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n+public interface BcDigestProvider {\n     ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n         throws OperatorCreationException;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/127/BcDigestProvider.java\nindex 95387ed5c0f..59980a7bec1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/127/BcDigestProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/127/BcDigestProvider.java\n@@ -4,8 +4,7 @@ import com.android.org.bouncycastle.asn1.x509.AlgorithmIdentifier;\n import com.android.org.bouncycastle.crypto.ExtendedDigest;\n import com.android.org.bouncycastle.operator.OperatorCreationException;\n \n-public interface BcDigestProvider\n-{\n+public interface BcDigestProvider {\n     ExtendedDigest get(AlgorithmIdentifier digestAlgorithmIdentifier)\n         throws OperatorCreationException;\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

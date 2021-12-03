@@ -1,0 +1,83 @@
+{
+    "project_name": "opencb-opencga",
+    "violation_id": "213",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "severity": "error",
+                "message": "Line is longer than 140 characters (found 145).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n\n    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n        // Look for the bam file for each sample\n        OpenCGAResult<File> fileQueryResult;\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/213/AnalysisUtils.java\nindex 6ead4556ffa..9dd167dc81f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/opencb-opencga/styler/05_predictions/final/files-repaired/213/AnalysisUtils.java\n@@ -36,10 +36,10 @@ public class AnalysisUtils {\n \n         return fileQueryResult.first();\n     }\n-\n-    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n-        // Look for the bam file for each sample\n-        OpenCGAResult<File> fileQueryResult;\n+    public\n+static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n+         // Look for the bam file for each sample\n+         OpenCGAResult<File> fileQueryResult;\n \n         Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n         QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/213/AnalysisUtils.java\nindex 6ead4556ffa..f3f709ea08d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/checkstyle_idea/213/AnalysisUtils.java\n@@ -11,77 +11,78 @@ import org.opencb.opencga.core.response.OpenCGAResult;\n \n public class AnalysisUtils {\n \n-    public static File getBamFileBySampleId(String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n-        // Look for the bam file for each sample\n-        OpenCGAResult<File> fileQueryResult;\n-\n-        Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n-        QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n-\n-        query.put(FileDBAdaptor.QueryParams.SAMPLES.key(), sampleId);\n-        try {\n-            fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n-        } catch (\n-                CatalogException e) {\n-            throw new ToolException(e);\n-        }\n-\n-        // Sanity check\n-        if (fileQueryResult.getNumResults() == 0) {\n-            throw new ToolException(\"BAM file not found for sample \" + sampleId);\n-        }\n-        if (fileQueryResult.getNumResults() > 1) {\n-            throw new ToolException(\"Found more than one BAM files (\" + fileQueryResult.getNumResults() + \") for sample \" + sampleId);\n-        }\n-\n-        return fileQueryResult.first();\n+  public static File getBamFileBySampleId(String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n+    // Look for the bam file for each sample\n+    OpenCGAResult<File> fileQueryResult;\n+\n+    Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n+    QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n+\n+    query.put(FileDBAdaptor.QueryParams.SAMPLES.key(), sampleId);\n+    try {\n+      fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n+    } catch (\n+        CatalogException e) {\n+      throw new ToolException(e);\n     }\n \n-    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n-        // Look for the bam file for each sample\n-        OpenCGAResult<File> fileQueryResult;\n-\n-        Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n-        QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n-\n-        query.put(FileDBAdaptor.QueryParams.SAMPLES.key(), sampleId);\n-        try {\n-            fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n-        } catch (CatalogException e) {\n-            throw new ToolException(e);\n-        }\n-\n-        // Sanity check\n-        if (fileQueryResult.getNumResults() == 0) {\n-            throw new ToolException(\"No BAM files found for sample \" + sampleId);\n-        }\n-        for (File file : fileQueryResult.getResults()) {\n-            if (filename.equals(file.getId()) || filename.equals(file.getPath()) || filename.equals(file.getName())\n-                    || filename.equals(file.getUuid())) {\n-                return file;\n-            }\n-        }\n-\n-        throw new ToolException(\"BAM file \" + filename + \" not found for sample \" + sampleId);\n+    // Sanity check\n+    if (fileQueryResult.getNumResults() == 0) {\n+      throw new ToolException(\"BAM file not found for sample \" + sampleId);\n+    }\n+    if (fileQueryResult.getNumResults() > 1) {\n+      throw new ToolException(\"Found more than one BAM files (\" + fileQueryResult.getNumResults() + \") for sample \" + sampleId);\n     }\n \n-    public static File getCatalogFile(String baitFile, String studyId, FileManager fileManager, String token) {\n-        OpenCGAResult<File> fileQueryResult;\n+    return fileQueryResult.first();\n+  }\n \n-        Query query = new Query(FileDBAdaptor.QueryParams.ID.key(), baitFile);\n-        QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n+  public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token)\n+      throws ToolException {\n+    // Look for the bam file for each sample\n+    OpenCGAResult<File> fileQueryResult;\n \n-        try {\n-            fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n-        } catch (CatalogException e) {\n-            return null;\n-        }\n+    Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n+    QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n \n-        // Sanity check\n-        if (fileQueryResult.getNumResults() != 1) {\n-            return null;\n-        }\n+    query.put(FileDBAdaptor.QueryParams.SAMPLES.key(), sampleId);\n+    try {\n+      fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n+    } catch (CatalogException e) {\n+      throw new ToolException(e);\n+    }\n \n-        return fileQueryResult.first();\n+    // Sanity check\n+    if (fileQueryResult.getNumResults() == 0) {\n+      throw new ToolException(\"No BAM files found for sample \" + sampleId);\n+    }\n+    for (File file : fileQueryResult.getResults()) {\n+      if (filename.equals(file.getId()) || filename.equals(file.getPath()) || filename.equals(file.getName())\n+          || filename.equals(file.getUuid())) {\n+        return file;\n+      }\n     }\n+\n+    throw new ToolException(\"BAM file \" + filename + \" not found for sample \" + sampleId);\n+  }\n+\n+  public static File getCatalogFile(String baitFile, String studyId, FileManager fileManager, String token) {\n+    OpenCGAResult<File> fileQueryResult;\n+\n+    Query query = new Query(FileDBAdaptor.QueryParams.ID.key(), baitFile);\n+    QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n+\n+    try {\n+      fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n+    } catch (CatalogException e) {\n+      return null;\n+    }\n+\n+    // Sanity check\n+    if (fileQueryResult.getNumResults() != 1) {\n+      return null;\n+    }\n+\n+    return fileQueryResult.first();\n+  }\n }\n",
+            "diff_size": 99
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 145).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/213/AnalysisUtils.java\nindex 6ead4556ffa..8efda64343b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/naturalize/213/AnalysisUtils.java\n@@ -21,8 +21,7 @@ public class AnalysisUtils {\n         query.put(FileDBAdaptor.QueryParams.SAMPLES.key(), sampleId);\n         try {\n             fileQueryResult = fileManager.search(studyId, query, queryOptions, token);\n-        } catch (\n-                CatalogException e) {\n+        } catch (CatalogException e) {\n             throw new ToolException(e);\n         }\n \n@@ -84,4 +83,4 @@ public class AnalysisUtils {\n \n         return fileQueryResult.first();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "Line is longer than 140 characters (found 222).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "40",
+                    "column": "144",
+                    "severity": "error",
+                    "message": "'{' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/213/AnalysisUtils.java\nindex 6ead4556ffa..4a651454687 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/random/files-repaired/213/AnalysisUtils.java\n@@ -37,9 +37,9 @@ public class AnalysisUtils {\n         return fileQueryResult.first();\n     }\n \n-    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n-        // Look for the bam file for each sample\n-        OpenCGAResult<File> fileQueryResult;\n+    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException{ // Look for the bam file for each sample OpenCGAResult<File> fileQueryResult;\n+\n+    OpenCGAResult<File> fileQueryResult;\n \n         Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n         QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/213/AnalysisUtils.java\nindex 6ead4556ffa..9dd167dc81f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/violations/213/AnalysisUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/opencb-opencga/styler/05_predictions/three_grams/files-repaired/213/AnalysisUtils.java\n@@ -36,10 +36,10 @@ public class AnalysisUtils {\n \n         return fileQueryResult.first();\n     }\n-\n-    public static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n-        // Look for the bam file for each sample\n-        OpenCGAResult<File> fileQueryResult;\n+    public\n+static File getBamFile(String filename, String sampleId, String studyId, FileManager fileManager, String token) throws ToolException {\n+         // Look for the bam file for each sample\n+         OpenCGAResult<File> fileQueryResult;\n \n         Query query = new Query(FileDBAdaptor.QueryParams.FORMAT.key(), File.Format.BAM);\n         QueryOptions queryOptions = new QueryOptions(QueryOptions.INCLUDE, FileDBAdaptor.QueryParams.UUID.key());\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

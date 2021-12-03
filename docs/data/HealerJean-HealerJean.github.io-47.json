@@ -1,0 +1,63 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "47",
+    "information": {
+        "violations": [
+            {
+                "line": "33",
+                "column": "51",
+                "severity": "error",
+                "message": "';' is preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+            }
+        ]
+    },
+    "source_code": "     * @return\n     */\n    List<DemoEntity> procedureGetOneList(Map map) ;\n\n\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/47/DemoEntityMapper.java\nindex 9502aa85564..6e94ecb1868 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/47/DemoEntityMapper.java\n@@ -30,8 +30,7 @@ public interface DemoEntityMapper {\n      * @param map\n      * @return\n      */\n-    List<DemoEntity> procedureGetOneList(Map map) ;\n-\n+    List<DemoEntity> procedureGetOneList(Map map);\n \n \n     /**\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/47/DemoEntityMapper.java\nindex 9502aa85564..6d874c25e99 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/47/DemoEntityMapper.java\n@@ -19,6 +19,7 @@ public interface DemoEntityMapper {\n \n     /**\n      * 1\u3001\u83b7\u53d6 \u5b58\u50a8\u8fc7\u7a0bout\u53c2\u6570\u503c\n+     *\n      * @param map\n      * @return\n      */\n@@ -27,15 +28,16 @@ public interface DemoEntityMapper {\n \n     /**\n      * 2\u3001\u83b7\u53d6 \u5b58\u50a8\u8fc7\u7a0b\u7684\u7ed3\u679c\u96c6\u5408-\u53ea\u6709\u4e00\u4e2a\n+     *\n      * @param map\n      * @return\n      */\n-    List<DemoEntity> procedureGetOneList(Map map) ;\n-\n+    List<DemoEntity> procedureGetOneList(Map map);\n \n \n     /**\n      * 3\u3001\u83b7\u53d6 \u5b58\u50a8\u8fc7\u7a0b\u7684 \u83b7\u53d6\u591a\u4e2a\u96c6\u5408 \u4f7f\u7528\u4e86\u6cdb\u578b\uff0c\u6709\u53ef\u80fd\u96c6\u5408\u4e2d\u662f\u4e0d\u540c\u7684\n+     *\n      * @param\n      * @return\n      */\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/47/DemoEntityMapper.java\nindex 9502aa85564..27727ca0dd2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/naturalize/47/DemoEntityMapper.java\n@@ -30,11 +30,8 @@ public interface DemoEntityMapper {\n      * @param map\n      * @return\n      */\n-    List<DemoEntity> procedureGetOneList(Map map) ;\n-\n-\n-\n-    /**\n+    List<DemoEntity> procedureGetOneList(Map map);\n+/**\n      * 3\u3001\u83b7\u53d6 \u5b58\u50a8\u8fc7\u7a0b\u7684 \u83b7\u53d6\u591a\u4e2a\u96c6\u5408 \u4f7f\u7528\u4e86\u6cdb\u578b\uff0c\u6709\u53ef\u80fd\u96c6\u5408\u4e2d\u662f\u4e0d\u540c\u7684\n      * @param\n      * @return\n@@ -42,4 +39,4 @@ public interface DemoEntityMapper {\n     List<List<?>> procedureGetManyList(Map map);\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/47/DemoEntityMapper.java\nindex 9502aa85564..6e94ecb1868 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/47/DemoEntityMapper.java\n@@ -30,8 +30,7 @@ public interface DemoEntityMapper {\n      * @param map\n      * @return\n      */\n-    List<DemoEntity> procedureGetOneList(Map map) ;\n-\n+    List<DemoEntity> procedureGetOneList(Map map);\n \n \n     /**\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/47/DemoEntityMapper.java\nindex 9502aa85564..e5acdc8d7ae 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/47/DemoEntityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/47/DemoEntityMapper.java\n@@ -30,11 +30,10 @@ public interface DemoEntityMapper {\n      * @param map\n      * @return\n      */\n-    List<DemoEntity> procedureGetOneList(Map map) ;\n+    List<DemoEntity> procedureGetOneList(Map map);\n \n \n-\n-    /**\n+/**\n      * 3\u3001\u83b7\u53d6 \u5b58\u50a8\u8fc7\u7a0b\u7684 \u83b7\u53d6\u591a\u4e2a\u96c6\u5408 \u4f7f\u7528\u4e86\u6cdb\u578b\uff0c\u6709\u53ef\u80fd\u96c6\u5408\u4e2d\u662f\u4e0d\u540c\u7684\n      * @param\n      * @return\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

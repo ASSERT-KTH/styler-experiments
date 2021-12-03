@@ -1,0 +1,94 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "120",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "column": "27",
+                "severity": "error",
+                "message": "'}' at column 27 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   * Constructor with no first error dto. The list will be empty after this constructor.\n   */\n  public ErrorListDto() { }\n  \n  /**\n   * Add an Error Dto to the ErrorDtoList.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'}' at column 27 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/120/ErrorListDto.java\nindex 4eb4b183344..750326fbe29 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/120/ErrorListDto.java\n@@ -28,7 +28,7 @@ public class ErrorListDto {\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n   public ErrorListDto() { }\n-  \n+\n   /**\n    * Add an Error Dto to the ErrorDtoList.\n    * \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/120/ErrorListDto.java\nindex 4eb4b183344..a343b58c41f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/120/ErrorListDto.java\n@@ -8,37 +8,39 @@ import com.fasterxml.jackson.annotation.JsonProperty;\n /**\n  * Error DTO which is returned when a client sends a json which cannot be converted to a Java\n  * Object.\n- * \n+ *\n  * @author Ren\u00e9 Reitmann\n  * @author Daniel Katzberg\n  */\n public class ErrorListDto {\n   /* A List for ErrorDtos */\n   private List<ErrorDto> errorDtos = new ArrayList<>();\n-  \n+\n   /**\n    * A constructor with a first errorDto.\n+   *\n    * @param errorDto A first errorDto for the List of errorDtos.\n    */\n   public ErrorListDto(ErrorDto errorDto) {\n     errorDtos.add(errorDto);\n   }\n-  \n+\n   /**\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n-  public ErrorListDto() { }\n-  \n+  public ErrorListDto() {\n+  }\n+\n   /**\n    * Add an Error Dto to the ErrorDtoList.\n-   * \n+   *\n    * @param errorDto An Error Dto.\n    * @return Returns the boolean value from the List.add Command.\n    */\n   public boolean add(ErrorDto errorDto) {\n     return this.errorDtos.add(errorDto);\n   }\n-  \n+\n   @JsonProperty(\"errors\")\n   public List<ErrorDto> getErrors() {\n     return this.errorDtos;\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "'ctor def rcurly' has incorrect indentation level 0, expected level should be 2.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/120/ErrorListDto.java\nindex 4eb4b183344..bb2fb7cb8b6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/120/ErrorListDto.java\n@@ -27,7 +27,8 @@ public class ErrorListDto {\n   /**\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n-  public ErrorListDto() { }\n+  public ErrorListDto() {\n+}\n   \n   /**\n    * Add an Error Dto to the ErrorDtoList.\n@@ -40,7 +41,7 @@ public class ErrorListDto {\n   }\n   \n   @JsonProperty(\"errors\")\n-  public List<ErrorDto> getErrors() {\n+public List<ErrorDto> getErrors() {\n     return this.errorDtos;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/120/ErrorListDto.java\nindex 4eb4b183344..60c3776cc12 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/120/ErrorListDto.java\n@@ -2,7 +2,6 @@ package eu.dzhw.fdz.metadatamanagement.common.rest.errors;\n \n import java.util.ArrayList;\n import java.util.List;\n-\n import com.fasterxml.jackson.annotation.JsonProperty;\n \n /**\n@@ -12,6 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;\n  * @author Ren\u00e9 Reitmann\n  * @author Daniel Katzberg\n  */\n+\n+\n public class ErrorListDto {\n   /* A List for ErrorDtos */\n   private List<ErrorDto> errorDtos = new ArrayList<>();\n@@ -20,6 +21,7 @@ public class ErrorListDto {\n    * A constructor with a first errorDto.\n    * @param errorDto A first errorDto for the List of errorDtos.\n    */\n+\n   public ErrorListDto(ErrorDto errorDto) {\n     errorDtos.add(errorDto);\n   }\n@@ -27,7 +29,10 @@ public class ErrorListDto {\n   /**\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n-  public ErrorListDto() { }\n+\n+\n+  public ErrorListDto() {\n+  }\n   \n   /**\n    * Add an Error Dto to the ErrorDtoList.\n@@ -35,12 +40,14 @@ public class ErrorListDto {\n    * @param errorDto An Error Dto.\n    * @return Returns the boolean value from the List.add Command.\n    */\n+\n   public boolean add(ErrorDto errorDto) {\n     return this.errorDtos.add(errorDto);\n   }\n-  \n+\n+\n   @JsonProperty(\"errors\")\n   public List<ErrorDto> getErrors() {\n     return this.errorDtos;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "27",
+                    "severity": "error",
+                    "message": "'}' at column 27 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/120/ErrorListDto.java\nindex 4eb4b183344..750326fbe29 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/120/ErrorListDto.java\n@@ -28,7 +28,7 @@ public class ErrorListDto {\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n   public ErrorListDto() { }\n-  \n+\n   /**\n    * Add an Error Dto to the ErrorDtoList.\n    * \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/120/ErrorListDto.java\nindex 4eb4b183344..81baf2adb5f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/120/ErrorListDto.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/three_grams/files-repaired/120/ErrorListDto.java\n@@ -27,8 +27,9 @@ public class ErrorListDto {\n   /**\n    * Constructor with no first error dto. The list will be empty after this constructor.\n    */\n-  public ErrorListDto() { }\n-  \n+  public ErrorListDto() {\n+\n+  }\n   /**\n    * Add an Error Dto to the ErrorDtoList.\n    * \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

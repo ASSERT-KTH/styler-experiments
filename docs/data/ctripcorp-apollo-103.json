@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "103",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "column": "31",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  private String msg;\n\n  public SimpleMsg(String msg){\n    this.msg = msg;\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/103/SimpleMsg.java\nindex 4dca0b8218a..b474c79aec6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/103/SimpleMsg.java\n@@ -4,7 +4,7 @@ public class SimpleMsg {\n \n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/103/SimpleMsg.java\nindex 4dca0b8218a..b474c79aec6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/103/SimpleMsg.java\n@@ -4,7 +4,7 @@ public class SimpleMsg {\n \n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/103/SimpleMsg.java\nindex 4dca0b8218a..8010a4731db 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/103/SimpleMsg.java\n@@ -4,7 +4,7 @@ public class SimpleMsg {\n \n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n@@ -15,4 +15,4 @@ public class SimpleMsg {\n   public void setMsg(String msg) {\n     this.msg = msg;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/103/SimpleMsg.java\nindex 4dca0b8218a..a69d37c81a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/103/SimpleMsg.java\n@@ -1,10 +1,9 @@\n package com.ctrip.apollo.portal.entity;\n \n public class SimpleMsg {\n-\n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n@@ -15,4 +14,4 @@ public class SimpleMsg {\n   public void setMsg(String msg) {\n     this.msg = msg;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/103/SimpleMsg.java\nindex 4dca0b8218a..b474c79aec6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/103/SimpleMsg.java\n@@ -4,7 +4,7 @@ public class SimpleMsg {\n \n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/103/SimpleMsg.java\nindex 4dca0b8218a..b474c79aec6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/103/SimpleMsg.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/103/SimpleMsg.java\n@@ -4,7 +4,7 @@ public class SimpleMsg {\n \n   private String msg;\n \n-  public SimpleMsg(String msg){\n+  public SimpleMsg(String msg) {\n     this.msg = msg;\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

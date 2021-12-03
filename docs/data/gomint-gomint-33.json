@@ -1,0 +1,90 @@
+{
+    "project_name": "gomint-gomint",
+    "violation_id": "33",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "error",
+                "message": "Line is longer than 180 characters (found 209).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class StainedGlass extends Block implements BlockStainedGlass {\n\n    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>(v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()));\n\n    @Override\n    public String getBlockId() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 209).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/33/StainedGlass.java\nindex e7845b94e76..ad813643971 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/33/StainedGlass.java\n@@ -17,7 +17,8 @@ import java.util.List;\n @RegisterInfo(sId = \"minecraft:stained_glass\")\n public class StainedGlass extends Block implements BlockStainedGlass {\n \n-    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>(v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()));\n+    private static final EnumBlockState<BlockColor, String> COLOR =\n+        new EnumBlockState<>(v -> new String[] {\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()));\n \n     @Override\n     public String getBlockId() {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 209).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/33/StainedGlass.java\nindex e7845b94e76..ce652407708 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/33/StainedGlass.java\n@@ -64,4 +64,4 @@ public class StainedGlass extends Block implements BlockStainedGlass {\n         COLOR.setState(this, color);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 209).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "18",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 302).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/33/StainedGlass.java\nindex e7845b94e76..f75a41eac60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/33/StainedGlass.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/33/StainedGlass.java\n@@ -15,11 +15,7 @@ import java.util.List;\n  * @version 1.0\n  */\n @RegisterInfo(sId = \"minecraft:stained_glass\")\n-public class StainedGlass extends Block implements BlockStainedGlass {\n-\n-    private static final EnumBlockState<BlockColor, String> COLOR = new EnumBlockState<>(v -> new String[]{\"color\"}, BlockColor.values(), e -> e.name().toLowerCase(), v -> BlockColor.valueOf(v.toUpperCase()));\n-\n-    @Override\n+public class StainedGlass extends Block implements BlockStainedGlass {private static final EnumBlockState<BlockColor, String >COLOR= new EnumBlockState<>( v -> new String []{\"color\"} , BlockColor . values ( ),e-> e . name ( ) .toLowerCase() , v -> BlockColor . valueOf(v. toUpperCase ( ) ) ) ;@Override\n     public String getBlockId() {\n         return \"minecraft:stained_glass\";\n     }\n",
+            "diff_size": 5
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1034",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1034/TMatrixPoolableObjectFactory.java\nindex b8d79f5d3c7..89e60ef3853 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1034/TMatrixPoolableObjectFactory.java\n@@ -20,43 +20,43 @@ import com.tencent.angel.ml.math.TMatrix;\n import org.apache.commons.pool.PoolableObjectFactory;\n \n public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements\n-    PoolableObjectFactory {\n-\n-  private final int row, col;\n-  private final TVF factory;\n-\n-  public TMatrixPoolableObjectFactory(int row, int col, TVF factory) {\n-    this.row = row;\n-    this.col = col;\n-    this.factory = factory;\n-  }\n-\n-  @Override\n-  public Object makeObject() throws Exception {\n-    TMatrix matrix = factory.build(row, col);\n-    return matrix;\n-  }\n-\n-  @Override\n-  public void destroyObject(Object obj) throws Exception {\n-    TMatrix matrix = (TMatrix) obj;\n-    matrix.clear();\n-  }\n-\n-  @Override\n-  public boolean validateObject(Object obj) {\n-    return true;\n-  }\n-\n-  @Override\n-  public void activateObject(Object obj) throws Exception {\n-    return;\n-  }\n-\n-  @Override\n-  public void passivateObject(Object obj) throws Exception {\n-    TMatrix matrix = (TMatrix) obj;\n-    matrix.clear();\n-  }\n+        PoolableObjectFactory {\n+\n+    private final int row, col;\n+    private final TVF factory;\n+\n+    public TMatrixPoolableObjectFactory(int row, int col, TVF factory) {\n+        this.row = row;\n+        this.col = col;\n+        this.factory = factory;\n+    }\n+\n+    @Override\n+    public Object makeObject() throws Exception {\n+        TMatrix matrix = factory.build(row, col);\n+        return matrix;\n+    }\n+\n+    @Override\n+    public void destroyObject(Object obj) throws Exception {\n+        TMatrix matrix = (TMatrix) obj;\n+        matrix.clear();\n+    }\n+\n+    @Override\n+    public boolean validateObject(Object obj) {\n+        return true;\n+    }\n+\n+    @Override\n+    public void activateObject(Object obj) throws Exception {\n+        return;\n+    }\n+\n+    @Override\n+    public void passivateObject(Object obj) throws Exception {\n+        TMatrix matrix = (TMatrix) obj;\n+        matrix.clear();\n+    }\n \n }\n",
+            "diff_size": 38
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1034/TMatrixPoolableObjectFactory.java\nindex b8d79f5d3c7..37dec68abeb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1034/TMatrixPoolableObjectFactory.java\n@@ -19,8 +19,7 @@ package com.tencent.angel.ml.math.factory;\n import com.tencent.angel.ml.math.TMatrix;\n import org.apache.commons.pool.PoolableObjectFactory;\n \n-public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements\n-    PoolableObjectFactory {\n+public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements PoolableObjectFactory {\n \n   private final int row, col;\n   private final TVF factory;\n@@ -59,4 +58,4 @@ public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements\n     matrix.clear();\n   }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 104).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1034/TMatrixPoolableObjectFactory.java\nindex b8d79f5d3c7..676d0d72ff3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1034/TMatrixPoolableObjectFactory.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1034/TMatrixPoolableObjectFactory.java\n@@ -19,8 +19,7 @@ package com.tencent.angel.ml.math.factory;\n import com.tencent.angel.ml.math.TMatrix;\n import org.apache.commons.pool.PoolableObjectFactory;\n \n-public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements\n-    PoolableObjectFactory {\n+public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements PoolableObjectFactory {\n \n   private final int row, col;\n   private final TVF factory;\n@@ -58,5 +57,4 @@ public class TMatrixPoolableObjectFactory<TVF extends TMatrixBuilder> implements\n     TMatrix matrix = (TMatrix) obj;\n     matrix.clear();\n   }\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

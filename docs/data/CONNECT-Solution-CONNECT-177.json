@@ -1,0 +1,82 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "177",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.mpi.adapter;\n\nimport javax.annotation.Resource;\nimport javax.xml.ws.BindingType;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/177/AdapterMpi.java\nindex 62f8c04a769..d5ec68409f1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/177/AdapterMpi.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mpi.adapter;\n \n import javax.annotation.Resource;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/177/AdapterMpi.java\nindex 62f8c04a769..15784051164 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/177/AdapterMpi.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mpi.adapter;\n \n import javax.annotation.Resource;\n@@ -41,21 +42,21 @@ import org.hl7.v3.RespondingGatewayPRPAIN201305UV02RequestType;\n @BindingType(value = javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)\n public class AdapterMpi implements gov.hhs.fha.nhinc.adaptermpi.AdapterMpiPortType {\n \n-    @Resource\n-    private WebServiceContext context;\n+  @Resource\n+  private WebServiceContext context;\n \n-    /**\n-     * This method takes the input and peforms a query against the MPI via the AdapterComponentMpi services and returns\n-     * the response.\n-     *\n-     * @param findCandidatesRequest The query data.\n-     * @return The results from the MPI query.\n-     */\n-    public PRPAIN201306UV02 findCandidates(RespondingGatewayPRPAIN201305UV02RequestType findCandidatesRequest) {\n-        AdapterMpiImpl oImpl = new AdapterMpiImpl();\n-        PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(),\n-                findCandidatesRequest.getAssertion());\n-        return oResponse;\n-    }\n+  /**\n+   * This method takes the input and peforms a query against the MPI via the AdapterComponentMpi services and returns\n+   * the response.\n+   *\n+   * @param findCandidatesRequest The query data.\n+   * @return The results from the MPI query.\n+   */\n+  public PRPAIN201306UV02 findCandidates(RespondingGatewayPRPAIN201305UV02RequestType findCandidatesRequest) {\n+    AdapterMpiImpl oImpl = new AdapterMpiImpl();\n+    PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(),\n+        findCandidatesRequest.getAssertion());\n+    return oResponse;\n+  }\n \n }\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "57",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 132).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/177/AdapterMpi.java\nindex 62f8c04a769..9b284b7319a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/177/AdapterMpi.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mpi.adapter;\n \n import javax.annotation.Resource;\n@@ -53,9 +54,9 @@ public class AdapterMpi implements gov.hhs.fha.nhinc.adaptermpi.AdapterMpiPortTy\n      */\n     public PRPAIN201306UV02 findCandidates(RespondingGatewayPRPAIN201305UV02RequestType findCandidatesRequest) {\n         AdapterMpiImpl oImpl = new AdapterMpiImpl();\n-        PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(),\n-                findCandidatesRequest.getAssertion());\n-        return oResponse;\n+        PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(), findCandidatesRequest.getAssertion());\n+\n+return oResponse;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "59",
+                    "severity": "error",
+                    "message": "Line is longer than 120 characters (found 132).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/177/AdapterMpi.java\nindex 62f8c04a769..1f76f705ebe 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/177/AdapterMpi.java\n@@ -29,7 +29,6 @@ package gov.hhs.fha.nhinc.mpi.adapter;\n import javax.annotation.Resource;\n import javax.xml.ws.BindingType;\n import javax.xml.ws.WebServiceContext;\n-\n import org.hl7.v3.PRPAIN201306UV02;\n import org.hl7.v3.RespondingGatewayPRPAIN201305UV02RequestType;\n \n@@ -38,11 +37,13 @@ import org.hl7.v3.RespondingGatewayPRPAIN201305UV02RequestType;\n  *\n  * @author Sai Valluripalli, Les Westberg\n  */\n+\n+\n @BindingType(value = javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)\n public class AdapterMpi implements gov.hhs.fha.nhinc.adaptermpi.AdapterMpiPortType {\n \n-    @Resource\n-    private WebServiceContext context;\n+\n+    @Resource private WebServiceContext context;\n \n     /**\n      * This method takes the input and peforms a query against the MPI via the AdapterComponentMpi services and returns\n@@ -51,11 +52,12 @@ public class AdapterMpi implements gov.hhs.fha.nhinc.adaptermpi.AdapterMpiPortTy\n      * @param findCandidatesRequest The query data.\n      * @return The results from the MPI query.\n      */\n+\n+\n     public PRPAIN201306UV02 findCandidates(RespondingGatewayPRPAIN201305UV02RequestType findCandidatesRequest) {\n         AdapterMpiImpl oImpl = new AdapterMpiImpl();\n-        PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(),\n-                findCandidatesRequest.getAssertion());\n+        PRPAIN201306UV02 oResponse = oImpl.query(findCandidatesRequest.getPRPAIN201305UV02(), findCandidatesRequest.getAssertion());\n         return oResponse;\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/177/AdapterMpi.java\nindex 62f8c04a769..d5ec68409f1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/177/AdapterMpi.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/177/AdapterMpi.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.mpi.adapter;\n \n import javax.annotation.Resource;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

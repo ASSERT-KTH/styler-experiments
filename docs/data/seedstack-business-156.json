@@ -1,0 +1,80 @@
+{
+    "project_name": "seedstack-business",
+    "violation_id": "156",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "column": "1",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.business.internal.migrate;\n\nimport org.seedstack.business.assembler.Assembler;\nimport org.seedstack.business.assembler.LegacyAssembler;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..80a7edf9fd8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-business/styler/05_predictions/final/files-repaired/156/LegacyAssemblerAdapter.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.migrate;\n \n import org.seedstack.business.assembler.Assembler;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..80a7edf9fd8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/checkstyle_idea/156/LegacyAssemblerAdapter.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.migrate;\n \n import org.seedstack.business.assembler.Assembler;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..5b4a3391dbf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/naturalize/156/LegacyAssemblerAdapter.java\n@@ -11,6 +11,7 @@ import org.seedstack.business.assembler.Assembler;\n import org.seedstack.business.assembler.LegacyAssembler;\n \n class LegacyAssemblerAdapter<A, D> implements LegacyAssembler<A, D> {\n+\n     private final Assembler<A, D> assembler;\n \n     LegacyAssemblerAdapter(Assembler<A, D> assembler) {\n@@ -41,4 +42,4 @@ class LegacyAssemblerAdapter<A, D> implements LegacyAssembler<A, D> {\n     public Class<D> getDtoClass() {\n         return assembler.getDtoClass();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "8",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..891a40bc22b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/codebuff/156/LegacyAssemblerAdapter.java\n@@ -10,7 +10,9 @@ package org.seedstack.business.internal.migrate;\n import org.seedstack.business.assembler.Assembler;\n import org.seedstack.business.assembler.LegacyAssembler;\n \n+\n class LegacyAssemblerAdapter<A, D> implements LegacyAssembler<A, D> {\n+\n     private final Assembler<A, D> assembler;\n \n     LegacyAssemblerAdapter(Assembler<A, D> assembler) {\n@@ -41,4 +43,4 @@ class LegacyAssemblerAdapter<A, D> implements LegacyAssembler<A, D> {\n     public Class<D> getDtoClass() {\n         return assembler.getDtoClass();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..80a7edf9fd8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/random/files-repaired/156/LegacyAssemblerAdapter.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.migrate;\n \n import org.seedstack.business.assembler.Assembler;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/156/LegacyAssemblerAdapter.java\nindex 8cba5b84942..80a7edf9fd8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/violations/156/LegacyAssemblerAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-business/styler/05_predictions/three_grams/files-repaired/156/LegacyAssemblerAdapter.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.business.internal.migrate;\n \n import org.seedstack.business.assembler.Assembler;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

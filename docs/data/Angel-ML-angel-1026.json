@@ -1,0 +1,116 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "1026",
+    "information": {
+        "violations": [
+            {
+                "line": "11",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 103).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * https://opensource.org/licenses/BSD-3-Clause\n *\n * Unless required by applicable law or agreed to in writing, software distributed under the License is\n * distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n * either express or implied. See the License for the specific language governing permissions and\n * limitations under the License.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1026/PSAgentClientTest.java\nindex b8e91215d35..8db3037d149 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/1026/PSAgentClientTest.java\n@@ -27,96 +27,96 @@ import java.util.concurrent.CountDownLatch;\n \n \n public class PSAgentClientTest {\n-  private static final Log LOG = LogFactory.getLog(AngelClient.class);\n-  private static final String matrixPrefix = \"w_\";\n+    private static final Log LOG = LogFactory.getLog(AngelClient.class);\n+    private static final String matrixPrefix = \"w_\";\n \n-  public static void main(String[] args) {\n-    String masterIp = args[0];\n-    int masterPort = Integer.valueOf(args[1]);\n-    int matrixNum = Integer.valueOf(args[2]);\n-    int matrixDim = Integer.valueOf(args[3]);\n-    int taskNum = Integer.valueOf(args[4]);\n-    int iteration = Integer.valueOf(args[5]);\n-    LOG.debug(\"master ip=\" + masterIp + \", master port=\" + masterPort + \", matrix number=\"\n-        + matrixNum + \", matrix dimension=\" + matrixDim + \", task number=\" + taskNum\n-        + \", iteration=\" + iteration);\n-    PSAgent psAgent = new PSAgent(masterIp, masterPort, 0);\n-    try {\n-      psAgent.initAndStart();\n-    } catch (Exception e) {\n-      LOG.debug(\"init psAgent faliled, \", e);\n-      return;\n-    }\n-    CountDownLatch counter = new CountDownLatch(taskNum);\n-    Task[] tasks = new Task[taskNum];\n-    for (int i = 0; i < taskNum; i++) {\n-      tasks[i] = new Task(matrixNum, matrixDim, iteration, psAgent, i);\n-      tasks[i].setName(\"usertask-\" + i);\n-      tasks[i].start();\n-    }\n+    public static void main(String[] args) {\n+        String masterIp = args[0];\n+        int masterPort = Integer.valueOf(args[1]);\n+        int matrixNum = Integer.valueOf(args[2]);\n+        int matrixDim = Integer.valueOf(args[3]);\n+        int taskNum = Integer.valueOf(args[4]);\n+        int iteration = Integer.valueOf(args[5]);\n+        LOG.debug(\"master ip=\" + masterIp + \", master port=\" + masterPort + \", matrix number=\"\n+                + matrixNum + \", matrix dimension=\" + matrixDim + \", task number=\" + taskNum\n+                + \", iteration=\" + iteration);\n+        PSAgent psAgent = new PSAgent(masterIp, masterPort, 0);\n+        try {\n+            psAgent.initAndStart();\n+        } catch (Exception e) {\n+            LOG.debug(\"init psAgent faliled, \", e);\n+            return;\n+        }\n+        CountDownLatch counter = new CountDownLatch(taskNum);\n+        Task[] tasks = new Task[taskNum];\n+        for (int i = 0; i < taskNum; i++) {\n+            tasks[i] = new Task(matrixNum, matrixDim, iteration, psAgent, i);\n+            tasks[i].setName(\"usertask-\" + i);\n+            tasks[i].start();\n+        }\n \n-    try {\n-      counter.await();\n-    } catch (InterruptedException e) {\n-      // TODO Auto-generated catch block\n-      e.printStackTrace();\n+        try {\n+            counter.await();\n+        } catch (InterruptedException e) {\n+            // TODO Auto-generated catch block\n+            e.printStackTrace();\n+        }\n+        LOG.info(\"all task run over\");\n+        psAgent.stop();\n+        psAgent = null;\n     }\n-    LOG.info(\"all task run over\");\n-    psAgent.stop();\n-    psAgent = null;\n-  }\n \n-  public static class Task extends Thread {\n-    private final int matrixNum;\n-    private final int matrixDim;\n-    private final int iteration;\n-    private final PSAgent psAgent;\n-    private final int index;\n+    public static class Task extends Thread {\n+        private final int matrixNum;\n+        private final int matrixDim;\n+        private final int iteration;\n+        private final PSAgent psAgent;\n+        private final int index;\n \n-    public Task(int matrixNum, int matrixDim, int iteration, PSAgent psAgent, int index) {\n-      this.matrixNum = matrixNum;\n-      this.matrixDim = matrixDim;\n-      this.iteration = iteration;\n-      this.psAgent = psAgent;\n-      this.index = index;\n-    }\n+        public Task(int matrixNum, int matrixDim, int iteration, PSAgent psAgent, int index) {\n+            this.matrixNum = matrixNum;\n+            this.matrixDim = matrixDim;\n+            this.iteration = iteration;\n+            this.psAgent = psAgent;\n+            this.index = index;\n+        }\n \n-    @Override\n-    public void run() {\n-      double[] delta = new double[matrixDim];\n-      for (int i = 0; i < matrixDim; i++) {\n-        delta[i] = 1;\n-      }\n+        @Override\n+        public void run() {\n+            double[] delta = new double[matrixDim];\n+            for (int i = 0; i < matrixDim; i++) {\n+                delta[i] = 1;\n+            }\n \n-      for (int i = 0; i < iteration; i++) {\n-        LOG.info(\"task-\" + index + \" start to run iteration \" + i);\n-        for (int j = 0; j < matrixNum; j++) {\n-          try {\n-            MatrixClient client = psAgent.getMatrixClient(matrixPrefix + j, index);\n-            DenseDoubleVector row = (DenseDoubleVector) client.getRow(0);\n-            LOG.info(\"matrix name=\" + matrixPrefix + j + \", rowIndex=0, length=\"\n-                + row.getValues().length + \" sum=\" + sum(row.getValues()));\n+            for (int i = 0; i < iteration; i++) {\n+                LOG.info(\"task-\" + index + \" start to run iteration \" + i);\n+                for (int j = 0; j < matrixNum; j++) {\n+                    try {\n+                        MatrixClient client = psAgent.getMatrixClient(matrixPrefix + j, index);\n+                        DenseDoubleVector row = (DenseDoubleVector) client.getRow(0);\n+                        LOG.info(\"matrix name=\" + matrixPrefix + j + \", rowIndex=0, length=\"\n+                                + row.getValues().length + \" sum=\" + sum(row.getValues()));\n \n-            DenseDoubleVector deltaRow = new DenseDoubleVector(matrixDim, delta);\n-            deltaRow.setRowId(0);\n-            client.increment(deltaRow);\n-            client.clock();\n-            LOG.info(\"matrix name=\" + matrixPrefix + j + \" clocked!\");\n-          } catch (Exception e) {\n-            // TODO Auto-generated catch block\n-            e.printStackTrace();\n-          }\n-        }\n+                        DenseDoubleVector deltaRow = new DenseDoubleVector(matrixDim, delta);\n+                        deltaRow.setRowId(0);\n+                        client.increment(deltaRow);\n+                        client.clock();\n+                        LOG.info(\"matrix name=\" + matrixPrefix + j + \" clocked!\");\n+                    } catch (Exception e) {\n+                        // TODO Auto-generated catch block\n+                        e.printStackTrace();\n+                    }\n+                }\n \n-      }\n-    }\n+            }\n+        }\n \n-    public double sum(double[] args) {\n-      double sum = 0.0;\n-      for (int i = 0; i < args.length; i++) {\n-        sum += args[i];\n-      }\n-      return sum;\n+        public double sum(double[] args) {\n+            double sum = 0.0;\n+            for (int i = 0; i < args.length; i++) {\n+                sum += args[i];\n+            }\n+            return sum;\n+        }\n     }\n-  }\n }\n",
+            "diff_size": 86
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1026/PSAgentClientTest.java\nindex b8e91215d35..ba02b83a7e1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/1026/PSAgentClientTest.java\n@@ -96,8 +96,7 @@ public class PSAgentClientTest {\n             DenseDoubleVector row = (DenseDoubleVector) client.getRow(0);\n             LOG.info(\"matrix name=\" + matrixPrefix + j + \", rowIndex=0, length=\"\n                 + row.getValues().length + \" sum=\" + sum(row.getValues()));\n-\n-            DenseDoubleVector deltaRow = new DenseDoubleVector(matrixDim, delta);\n+DenseDoubleVector deltaRow = new DenseDoubleVector(matrixDim, delta);\n             deltaRow.setRowId(0);\n             client.increment(deltaRow);\n             client.clock();\n@@ -119,4 +118,4 @@ public class PSAgentClientTest {\n       return sum;\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "39",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 198).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "95",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 140).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1026/PSAgentClientTest.java\nindex b8e91215d35..01e51344181 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/1026/PSAgentClientTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/1026/PSAgentClientTest.java\n@@ -22,11 +22,10 @@ import com.tencent.angel.psagent.PSAgent;\n import com.tencent.angel.psagent.matrix.MatrixClient;\n import org.apache.commons.logging.Log;\n import org.apache.commons.logging.LogFactory;\n-\n import java.util.concurrent.CountDownLatch;\n \n-\n public class PSAgentClientTest {\n+\n   private static final Log LOG = LogFactory.getLog(AngelClient.class);\n   private static final String matrixPrefix = \"w_\";\n \n@@ -37,9 +36,7 @@ public class PSAgentClientTest {\n     int matrixDim = Integer.valueOf(args[3]);\n     int taskNum = Integer.valueOf(args[4]);\n     int iteration = Integer.valueOf(args[5]);\n-    LOG.debug(\"master ip=\" + masterIp + \", master port=\" + masterPort + \", matrix number=\"\n-        + matrixNum + \", matrix dimension=\" + matrixDim + \", task number=\" + taskNum\n-        + \", iteration=\" + iteration);\n+    LOG.debug(\"master ip=\" + masterIp + \", master port=\" + masterPort + \", matrix number=\" + matrixNum + \", matrix dimension=\" + matrixDim + \", task number=\" + taskNum + \", iteration=\" + iteration);\n     PSAgent psAgent = new PSAgent(masterIp, masterPort, 0);\n     try {\n       psAgent.initAndStart();\n@@ -47,6 +44,7 @@ public class PSAgentClientTest {\n       LOG.debug(\"init psAgent faliled, \", e);\n       return;\n     }\n+\n     CountDownLatch counter = new CountDownLatch(taskNum);\n     Task[] tasks = new Task[taskNum];\n     for (int i = 0; i < taskNum; i++) {\n@@ -54,7 +52,6 @@ public class PSAgentClientTest {\n       tasks[i].setName(\"usertask-\" + i);\n       tasks[i].start();\n     }\n-\n     try {\n       counter.await();\n     } catch (InterruptedException e) {\n@@ -67,6 +64,7 @@ public class PSAgentClientTest {\n   }\n \n   public static class Task extends Thread {\n+\n     private final int matrixNum;\n     private final int matrixDim;\n     private final int iteration;\n@@ -94,9 +92,7 @@ public class PSAgentClientTest {\n           try {\n             MatrixClient client = psAgent.getMatrixClient(matrixPrefix + j, index);\n             DenseDoubleVector row = (DenseDoubleVector) client.getRow(0);\n-            LOG.info(\"matrix name=\" + matrixPrefix + j + \", rowIndex=0, length=\"\n-                + row.getValues().length + \" sum=\" + sum(row.getValues()));\n-\n+            LOG.info(\"matrix name=\" + matrixPrefix + j + \", rowIndex=0, length=\" + row.getValues().length + \" sum=\" + sum(row.getValues()));\n             DenseDoubleVector deltaRow = new DenseDoubleVector(matrixDim, delta);\n             deltaRow.setRowId(0);\n             client.increment(deltaRow);\n@@ -107,7 +103,6 @@ public class PSAgentClientTest {\n             e.printStackTrace();\n           }\n         }\n-\n       }\n     }\n \n@@ -119,4 +114,5 @@ public class PSAgentClientTest {\n       return sum;\n     }\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 103).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

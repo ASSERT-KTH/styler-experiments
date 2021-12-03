@@ -1,0 +1,63 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "364",
+    "information": {
+        "violations": [
+            {
+                "line": "61",
+                "column": "71",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "  @Override\n  public boolean isValidSource(Configuration localConfiguration) {\n    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n      LOGGER.warn(\"Apollo configuration source is not configured!\");\n      return false;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..171cfb6e914 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/364/ApolloConfigurationSourceImpl.java\n@@ -58,7 +58,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..171cfb6e914 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/364/ApolloConfigurationSourceImpl.java\n@@ -58,7 +58,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..23e0449ffa9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/364/ApolloConfigurationSourceImpl.java\n@@ -58,7 +58,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n@@ -137,4 +137,4 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n       LOGGER.warn(\"Config value cache changed: action:{}; item:{}\", action.name(), configuration.keySet());\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..98fa2ea5ce2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/364/ApolloConfigurationSourceImpl.java\n@@ -26,9 +26,7 @@ import java.util.List;\n import java.util.Map;\n import java.util.concurrent.ConcurrentHashMap;\n import java.util.concurrent.CopyOnWriteArrayList;\n-\n import javax.validation.constraints.NotNull;\n-\n import org.apache.commons.configuration.Configuration;\n import org.apache.servicecomb.config.ConfigMapping;\n import org.apache.servicecomb.config.client.ApolloClient;\n@@ -37,7 +35,6 @@ import org.apache.servicecomb.config.client.ConfigurationAction;\n import org.apache.servicecomb.config.spi.ConfigCenterConfigurationSource;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n-\n import com.google.common.collect.ImmutableMap;\n import com.netflix.config.WatchedUpdateListener;\n import com.netflix.config.WatchedUpdateResult;\n@@ -58,7 +55,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n@@ -110,31 +107,28 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n       if (config == null || config.isEmpty()) {\n         return;\n       }\n+\n       Map<String, Object> configuration = ConfigMapping.getConvertedMap(config);\n       if (CREATE.equals(action)) {\n         valueCache.putAll(configuration);\n-\n-        updateConfiguration(createIncremental(ImmutableMap.copyOf(configuration),\n-            null,\n-            null));\n+        updateConfiguration(createIncremental(ImmutableMap.copyOf(configuration), null, null));\n       } else if (SET.equals(action)) {\n         valueCache.putAll(configuration);\n-\n-        updateConfiguration(createIncremental(null,\n-            ImmutableMap.copyOf(configuration),\n-            null));\n+        updateConfiguration(createIncremental(null, ImmutableMap.copyOf(configuration), null));\n       } else if (DELETE.equals(action)) {\n         for (String itemKey : configuration.keySet()) {\n           valueCache.remove(itemKey);\n         }\n-        updateConfiguration(createIncremental(null,\n-            null,\n-            ImmutableMap.copyOf(configuration)));\n-      } else {\n-        LOGGER.error(\"action: {} is invalid.\", action.name());\n-        return;\n-      }\n-      LOGGER.warn(\"Config value cache changed: action:{}; item:{}\", action.name(), configuration.keySet());\n+\n+        updateConfiguration(createIncremental(null, null, ImmutableMap.copyOf(configuration)));\n+             } else {\n+               LOGGER.error(\"action: {} is invalid.\", action.name());\n+               return;\n+             }\n+\n+      LOGGER.warn(\"Config value cache changed: action:{}; item:{}\",\n+action.name(),\n+configuration.keySet());\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..171cfb6e914 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/364/ApolloConfigurationSourceImpl.java\n@@ -58,7 +58,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/364/ApolloConfigurationSourceImpl.java\nindex 0093c80c24e..171cfb6e914 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/364/ApolloConfigurationSourceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/364/ApolloConfigurationSourceImpl.java\n@@ -58,7 +58,7 @@ public class ApolloConfigurationSourceImpl implements ConfigCenterConfigurationS\n \n   @Override\n   public boolean isValidSource(Configuration localConfiguration) {\n-    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null){\n+    if (localConfiguration.getProperty(APOLLO_CONFIG_URL_KEY) == null) {\n       LOGGER.warn(\"Apollo configuration source is not configured!\");\n       return false;\n     }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

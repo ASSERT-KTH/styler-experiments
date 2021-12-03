@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "599",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string name = 3;</code>\n   */\n  com.google.protobuf.ByteString getNameBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\nindex 40aafdda5d4..10b5d6e1a41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\n@@ -29,5 +29,7 @@ public interface GetAlertPolicyRequestOrBuilder\n    *\n    * <code>string name = 3;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/599/GetAlertPolicyRequestOrBuilder.java\nindex 40aafdda5d4..9ea3e223923 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/599/GetAlertPolicyRequestOrBuilder.java\n@@ -9,8 +9,6 @@ public interface GetAlertPolicyRequestOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The alerting policy to retrieve. The format is\n    *     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]\n@@ -19,9 +17,8 @@ public interface GetAlertPolicyRequestOrBuilder\n    * <code>string name = 3;</code>\n    */\n   java.lang.String getName();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * The alerting policy to retrieve. The format is\n    *     projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/599/GetAlertPolicyRequestOrBuilder.java\nindex 40aafdda5d4..4033da50a2d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/599/GetAlertPolicyRequestOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.monitoring.v3;\n \n-public interface GetAlertPolicyRequestOrBuilder\n-    extends\n+public interface GetAlertPolicyRequestOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.monitoring.v3.GetAlertPolicyRequest)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -19,7 +18,8 @@ public interface GetAlertPolicyRequestOrBuilder\n    * <code>string name = 3;</code>\n    */\n   java.lang.String getName();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -30,4 +30,4 @@ public interface GetAlertPolicyRequestOrBuilder\n    * <code>string name = 3;</code>\n    */\n   com.google.protobuf.ByteString getNameBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\nindex 40aafdda5d4..795377f6e4d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\n@@ -29,5 +29,6 @@ public interface GetAlertPolicyRequestOrBuilder\n    *\n    * <code>string name = 3;</code>\n    */\n-  com.google.protobuf.ByteString getNameBytes();\n-}\n+  com.google.protobuf.ByteString getNameBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\nindex 40aafdda5d4..10b5d6e1a41 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/599/GetAlertPolicyRequestOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/599/GetAlertPolicyRequestOrBuilder.java\n@@ -29,5 +29,7 @@ public interface GetAlertPolicyRequestOrBuilder\n    *\n    * <code>string name = 3;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getNameBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

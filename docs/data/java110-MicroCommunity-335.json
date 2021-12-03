@@ -1,0 +1,63 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "335",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "column": "21",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "     */\n    public AppMerchantEvent(Object source, AppContext context) {\n        super(source,context);\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/335/AppMerchantEvent.java\nindex 2f29d14c046..208742e39a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/335/AppMerchantEvent.java\n@@ -16,6 +16,6 @@ public class AppMerchantEvent extends AppEvent {\n      * @throws IllegalArgumentException if source is null.\n      */\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/335/AppMerchantEvent.java\nindex 2f29d14c046..208742e39a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/335/AppMerchantEvent.java\n@@ -16,6 +16,6 @@ public class AppMerchantEvent extends AppEvent {\n      * @throws IllegalArgumentException if source is null.\n      */\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/335/AppMerchantEvent.java\nindex 2f29d14c046..6eea573b32c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/335/AppMerchantEvent.java\n@@ -16,6 +16,6 @@ public class AppMerchantEvent extends AppEvent {\n      * @throws IllegalArgumentException if source is null.\n      */\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/335/AppMerchantEvent.java\nindex 2f29d14c046..97a705e8186 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/335/AppMerchantEvent.java\n@@ -7,6 +7,8 @@ import com.java110.core.event.app.AppEvent;\n  * \u5546\u6237\u4e8b\u4ef6\n  * Created by wuxw on 2017/4/14.\n  */\n+\n+\n public class AppMerchantEvent extends AppEvent {\n \n     /**\n@@ -15,7 +17,8 @@ public class AppMerchantEvent extends AppEvent {\n      * @param source The object on which the Event initially occurred.\n      * @throws IllegalArgumentException if source is null.\n      */\n+\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/335/AppMerchantEvent.java\nindex 2f29d14c046..208742e39a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/335/AppMerchantEvent.java\n@@ -16,6 +16,6 @@ public class AppMerchantEvent extends AppEvent {\n      * @throws IllegalArgumentException if source is null.\n      */\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/335/AppMerchantEvent.java\nindex 2f29d14c046..208742e39a9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/335/AppMerchantEvent.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/335/AppMerchantEvent.java\n@@ -16,6 +16,6 @@ public class AppMerchantEvent extends AppEvent {\n      * @throws IllegalArgumentException if source is null.\n      */\n     public AppMerchantEvent(Object source, AppContext context) {\n-        super(source,context);\n+        super(source, context);\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

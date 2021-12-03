@@ -1,0 +1,111 @@
+{
+    "project_name": "intuit-Tank",
+    "violation_id": "87",
+    "information": {
+        "violations": [
+            {
+                "line": "84",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 124).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "     */\n    public String buildHeaderString(String prefix, List<Header> headers) {\n        return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n    }\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "84",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/checkstyle_idea/87/Transaction.java\nindex 7808c61eebf..146afef631c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/checkstyle_idea/87/Transaction.java\n@@ -14,74 +14,72 @@ import javax.xml.bind.annotation.XmlType;\n @XmlAccessorType(XmlAccessType.FIELD)\n public class Transaction {\n \n-    /**\n-     * \n-     */\n-    private static final char NEWLINE = '\\n';\n-    @XmlElement(namespace = Namespace.NAMESPACE_V1)\n-    private Request request;\n-    @XmlElement(namespace = Namespace.NAMESPACE_V1)\n-    private Response response;\n+  /**\n+   *\n+   */\n+  private static final char NEWLINE = '\\n';\n+  @XmlElement(namespace = Namespace.NAMESPACE_V1)\n+  private Request request;\n+  @XmlElement(namespace = Namespace.NAMESPACE_V1)\n+  private Response response;\n \n-    /**\n-     * @return the request\n-     */\n-    public Request getRequest() {\n-        return request;\n-    }\n+  /**\n+   * @return the request\n+   */\n+  public Request getRequest() {\n+    return request;\n+  }\n \n-    /**\n-     * @param request\n-     *            the request to set\n-     */\n-    public void setRequest(Request request) {\n-        this.request = request;\n-    }\n+  /**\n+   * @param request the request to set\n+   */\n+  public void setRequest(Request request) {\n+    this.request = request;\n+  }\n \n-    /**\n-     * @return the response\n-     */\n-    public Response getResponse() {\n-        return response;\n-    }\n+  /**\n+   * @return the response\n+   */\n+  public Response getResponse() {\n+    return response;\n+  }\n \n-    /**\n-     * @param response\n-     *            the response to set\n-     */\n-    public void setResponse(Response response) {\n-        this.response = response;\n-    }\n+  /**\n+   * @param response the response to set\n+   */\n+  public void setResponse(Response response) {\n+    this.response = response;\n+  }\n \n-    /**\n-     * @inheritDoc\n-     */\n-    @Override\n-    public String toString() {\n-        StringBuilder sb = new StringBuilder();\n-        if (request != null) {\n-            sb.append(\"------------ Request ------------\").append(NEWLINE)\n-                    .append(\"    \").append(request.getFirstLine()).append(NEWLINE);\n-            sb.append(buildHeaderString(\"    \", request.getHeaders())).append(NEWLINE);\n-            sb.append(\"------------ Body ------------\").append(NEWLINE);\n-            sb.append(request.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n-        }\n-        if (response != null) {\n-            sb.append(\"------------ Response ------------\").append(NEWLINE)\n-                    .append(\"    \").append(response.getFirstLine()).append(NEWLINE);\n-            sb.append(buildHeaderString(\"    \", response.getHeaders())).append(NEWLINE);\n-            sb.append(\"------------ Body ------------\").append(NEWLINE);\n-            sb.append(response.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n-        }\n-        return sb.toString();\n+  /**\n+   * @inheritDoc\n+   */\n+  @Override\n+  public String toString() {\n+    StringBuilder sb = new StringBuilder();\n+    if (request != null) {\n+      sb.append(\"------------ Request ------------\").append(NEWLINE)\n+        .append(\"    \").append(request.getFirstLine()).append(NEWLINE);\n+      sb.append(buildHeaderString(\"    \", request.getHeaders())).append(NEWLINE);\n+      sb.append(\"------------ Body ------------\").append(NEWLINE);\n+      sb.append(request.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n     }\n-\n-    /**\n-     * @param headers\n-     * @return\n-     */\n-    public String buildHeaderString(String prefix, List<Header> headers) {\n-        return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n+    if (response != null) {\n+      sb.append(\"------------ Response ------------\").append(NEWLINE)\n+        .append(\"    \").append(response.getFirstLine()).append(NEWLINE);\n+      sb.append(buildHeaderString(\"    \", response.getHeaders())).append(NEWLINE);\n+      sb.append(\"------------ Body ------------\").append(NEWLINE);\n+      sb.append(response.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n     }\n+    return sb.toString();\n+  }\n+\n+  /**\n+   * @param headers\n+   * @return\n+   */\n+  public String buildHeaderString(String prefix, List<Header> headers) {\n+    return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n+  }\n \n }\n",
+            "diff_size": 72
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "84",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/naturalize/87/Transaction.java\nindex 7808c61eebf..13e1c53bdf2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/naturalize/87/Transaction.java\n@@ -84,4 +84,4 @@ public class Transaction {\n         return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 137).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "82",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 139).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/codebuff/87/Transaction.java\nindex 7808c61eebf..f45820bd67c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/codebuff/87/Transaction.java\n@@ -1,8 +1,9 @@\n package com.intuit.tank.conversation;\n \n+\n+\n import java.util.List;\n import java.util.stream.Collectors;\n-\n import javax.xml.bind.annotation.XmlAccessType;\n import javax.xml.bind.annotation.XmlAccessorType;\n import javax.xml.bind.annotation.XmlElement;\n@@ -17,15 +18,20 @@ public class Transaction {\n     /**\n      * \n      */\n+\n     private static final char NEWLINE = '\\n';\n+\n     @XmlElement(namespace = Namespace.NAMESPACE_V1)\n     private Request request;\n+\n     @XmlElement(namespace = Namespace.NAMESPACE_V1)\n     private Response response;\n \n     /**\n      * @return the request\n      */\n+\n+\n     public Request getRequest() {\n         return request;\n     }\n@@ -34,6 +40,8 @@ public class Transaction {\n      * @param request\n      *            the request to set\n      */\n+\n+\n     public void setRequest(Request request) {\n         this.request = request;\n     }\n@@ -41,6 +49,8 @@ public class Transaction {\n     /**\n      * @return the response\n      */\n+\n+\n     public Response getResponse() {\n         return response;\n     }\n@@ -49,6 +59,8 @@ public class Transaction {\n      * @param response\n      *            the response to set\n      */\n+\n+\n     public void setResponse(Response response) {\n         this.response = response;\n     }\n@@ -56,19 +68,18 @@ public class Transaction {\n     /**\n      * @inheritDoc\n      */\n+\n     @Override\n     public String toString() {\n         StringBuilder sb = new StringBuilder();\n         if (request != null) {\n-            sb.append(\"------------ Request ------------\").append(NEWLINE)\n-                    .append(\"    \").append(request.getFirstLine()).append(NEWLINE);\n+            sb.append(\"------------ Request ------------\").append(NEWLINE).append(\"    \").append(request.getFirstLine()).append(NEWLINE);\n             sb.append(buildHeaderString(\"    \", request.getHeaders())).append(NEWLINE);\n             sb.append(\"------------ Body ------------\").append(NEWLINE);\n             sb.append(request.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n         }\n         if (response != null) {\n-            sb.append(\"------------ Response ------------\").append(NEWLINE)\n-                    .append(\"    \").append(response.getFirstLine()).append(NEWLINE);\n+            sb.append(\"------------ Response ------------\").append(NEWLINE).append(\"    \").append(response.getFirstLine()).append(NEWLINE);\n             sb.append(buildHeaderString(\"    \", response.getHeaders())).append(NEWLINE);\n             sb.append(\"------------ Body ------------\").append(NEWLINE);\n             sb.append(response.getBodyAsString()).append(NEWLINE).append(NEWLINE);\n@@ -80,8 +91,10 @@ public class Transaction {\n      * @param headers\n      * @return\n      */\n+\n+\n     public String buildHeaderString(String prefix, List<Header> headers) {\n-        return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n+        return headers.stream().map(h-> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "84",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "84",
+                    "column": "24",
+                    "severity": "warning",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/three_grams/files-repaired/87/Transaction.java\nindex 7808c61eebf..54827ffa09f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/violations/87/Transaction.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/intuit-Tank/styler/05_predictions/three_grams/files-repaired/87/Transaction.java\n@@ -81,7 +81,9 @@ public class Transaction {\n      * @return\n      */\n     public String buildHeaderString(String prefix, List<Header> headers) {\n-        return headers.stream().map(h -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n-    }\n+        return headers . stream().map(\n+    h\n+    -> prefix + h.getKey() + \": \" + h.getValue() + NEWLINE).collect(Collectors.joining());\n+     }\n \n-}\n+ }\n",
+            "diff_size": 5
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

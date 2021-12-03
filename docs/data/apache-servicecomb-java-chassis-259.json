@@ -1,0 +1,63 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "259",
+    "information": {
+        "violations": [
+            {
+                "line": "50",
+                "column": "21",
+                "severity": "warning",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n\n  public void call(){\n    lastUpdateValues = this.getCallback.call();\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/259/BackgroundMetric.java\nindex d97b2573eea..855a466d2c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/259/BackgroundMetric.java\n@@ -47,7 +47,7 @@ public class BackgroundMetric extends AbstractMetric {\n   }\n \n \n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/259/BackgroundMetric.java\nindex d97b2573eea..855a466d2c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/259/BackgroundMetric.java\n@@ -47,7 +47,7 @@ public class BackgroundMetric extends AbstractMetric {\n   }\n \n \n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/259/BackgroundMetric.java\nindex d97b2573eea..9fb74432628 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/259/BackgroundMetric.java\n@@ -47,11 +47,11 @@ public class BackgroundMetric extends AbstractMetric {\n   }\n \n \n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n   public Map<String, Number> getAll() {\n     return lastUpdateValues;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/259/BackgroundMetric.java\nindex d97b2573eea..81d692a2036 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/259/BackgroundMetric.java\n@@ -18,12 +18,10 @@ package io.servicecomb.metrics.core.metric;\n \n import java.util.HashMap;\n import java.util.Map;\n-\n import io.servicecomb.foundation.common.exceptions.ServiceCombException;\n import rx.functions.Func0;\n \n public class BackgroundMetric extends AbstractMetric {\n-\n   private Map<String, Number> lastUpdateValues = new HashMap<>();\n \n   private final Func0<Map<String, Number>> getCallback;\n@@ -46,12 +44,11 @@ public class BackgroundMetric extends AbstractMetric {\n     }\n   }\n \n-\n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n   public Map<String, Number> getAll() {\n     return lastUpdateValues;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/259/BackgroundMetric.java\nindex d97b2573eea..855a466d2c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/259/BackgroundMetric.java\n@@ -47,7 +47,7 @@ public class BackgroundMetric extends AbstractMetric {\n   }\n \n \n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/259/BackgroundMetric.java\nindex d97b2573eea..855a466d2c3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/259/BackgroundMetric.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/259/BackgroundMetric.java\n@@ -47,7 +47,7 @@ public class BackgroundMetric extends AbstractMetric {\n   }\n \n \n-  public void call(){\n+  public void call() {\n     lastUpdateValues = this.getCallback.call();\n   }\n \n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

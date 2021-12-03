@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "528",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/528/Edge.java\nindex 1acee46467d..f9b16a6c614 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/528/Edge.java\n@@ -14,6 +14,7 @@\n  * the License.\n  *\n  */\n+\n package com.tencent.angel.graph.client.node2vec.data;\n \n import com.tencent.angel.ml.math2.vector.IntFloatVector;\n@@ -25,143 +26,143 @@ import java.io.IOException;\n \n public class Edge implements IElement {\n \n-  private long[] srcdst;\n-  private IntFloatVector feats;\n-  private int[] types;\n-  private float[] attrs;\n-\n-  public Edge(long src, long dst, IntFloatVector feats, int[] types, float[] attrs) {\n-    srcdst = new long[2];\n-    srcdst[0] = src;\n-    srcdst[1] = dst;\n-    this.feats = feats;\n-    this.types = types;\n-    this.attrs = attrs;\n-  }\n-\n-  public Edge(long src, long dst, float weight) {\n-    srcdst = new long[2];\n-    srcdst[0] = src;\n-    srcdst[1] = dst;\n-    this.attrs = new float[3];\n-    this.attrs[0] = weight;\n-  }\n-\n-  public Edge(float weight) {\n-    this.attrs = new float[3];\n-    this.attrs[0] = weight;\n-  }\n-\n-  public Edge(long src, long dst, int[] types, float[] attrs) {\n-    this(src, dst, null, types, attrs);\n-  }\n-\n-  public void setSrc(long src) {\n-    if (srcdst == null) {\n-      srcdst = new long[2];\n-      srcdst[0] = src;\n-    } else {\n-      srcdst[0] = src;\n+    private long[] srcdst;\n+    private IntFloatVector feats;\n+    private int[] types;\n+    private float[] attrs;\n+\n+    public Edge(long src, long dst, IntFloatVector feats, int[] types, float[] attrs) {\n+        srcdst = new long[2];\n+        srcdst[0] = src;\n+        srcdst[1] = dst;\n+        this.feats = feats;\n+        this.types = types;\n+        this.attrs = attrs;\n+    }\n+\n+    public Edge(long src, long dst, float weight) {\n+        srcdst = new long[2];\n+        srcdst[0] = src;\n+        srcdst[1] = dst;\n+        this.attrs = new float[3];\n+        this.attrs[0] = weight;\n+    }\n+\n+    public Edge(float weight) {\n+        this.attrs = new float[3];\n+        this.attrs[0] = weight;\n+    }\n+\n+    public Edge(long src, long dst, int[] types, float[] attrs) {\n+        this(src, dst, null, types, attrs);\n+    }\n+\n+    public void setSrc(long src) {\n+        if (srcdst == null) {\n+            srcdst = new long[2];\n+            srcdst[0] = src;\n+        } else {\n+            srcdst[0] = src;\n+        }\n+    }\n+\n+    public long getSrc() {\n+        if (srcdst != null) {\n+            return srcdst[0];\n+        } else {\n+            return -1L;\n+        }\n+    }\n+\n+    public void setDst(long dst) {\n+        if (srcdst == null) {\n+            srcdst = new long[2];\n+            srcdst[1] = dst;\n+        } else {\n+            srcdst[1] = dst;\n+        }\n+    }\n+\n+    public long getDst() {\n+        if (srcdst != null) {\n+            return srcdst[1];\n+        } else {\n+            return -1L;\n+        }\n+    }\n+\n+    public IntFloatVector getFeats() {\n+        return feats;\n+    }\n+\n+    public void setFeats(IntFloatVector feats) {\n+        this.feats = feats;\n+    }\n+\n+    public int[] getTypes() {\n+        return types;\n     }\n-  }\n-\n-  public long getSrc() {\n-    if (srcdst != null) {\n-      return srcdst[0];\n-    } else {\n-      return -1L;\n-    }\n-  }\n-\n-  public void setDst(long dst) {\n-    if (srcdst == null) {\n-      srcdst = new long[2];\n-      srcdst[1] = dst;\n-    } else {\n-      srcdst[1] = dst;\n-    }\n-  }\n-\n-  public long getDst() {\n-    if (srcdst != null) {\n-      return srcdst[1];\n-    } else {\n-      return -1L;\n-    }\n-  }\n-\n-  public IntFloatVector getFeats() {\n-    return feats;\n-  }\n-\n-  public void setFeats(IntFloatVector feats) {\n-    this.feats = feats;\n-  }\n-\n-  public int[] getTypes() {\n-    return types;\n-  }\n-\n-  public void setTypes(int[] types) {\n-    this.types = types;\n-  }\n-\n-  public float getWeight() {\n-    return attrs[0];\n-  }\n-\n-  public void setWeight(float attrW) {\n-    attrs[0] = attrW;\n-  }\n-\n-  public float getJ() {\n-    return attrs[1];\n-  }\n-\n-  public void setJ(float sttr_j) {\n-    attrs[1] = sttr_j;\n-  }\n-\n-  public float getP() {\n-    return attrs[2];\n-  }\n-\n-  public void setP(float sttr_p) {\n-    attrs[2] = sttr_p;\n-  }\n \n-  @Override\n-  public Object deepClone() {\n-    return null;\n-  }\n+    public void setTypes(int[] types) {\n+        this.types = types;\n+    }\n \n-  @Override\n-  public void serialize(ByteBuf output) {\n+    public float getWeight() {\n+        return attrs[0];\n+    }\n \n-  }\n+    public void setWeight(float attrW) {\n+        attrs[0] = attrW;\n+    }\n \n-  @Override\n-  public void deserialize(ByteBuf input) {\n+    public float getJ() {\n+        return attrs[1];\n+    }\n \n-  }\n+    public void setJ(float sttr_j) {\n+        attrs[1] = sttr_j;\n+    }\n \n-  @Override\n-  public int bufferLen() {\n-    return 0;\n-  }\n+    public float getP() {\n+        return attrs[2];\n+    }\n \n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n+    public void setP(float sttr_p) {\n+        attrs[2] = sttr_p;\n+    }\n \n-  }\n+    @Override\n+    public Object deepClone() {\n+        return null;\n+    }\n \n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n+    @Override\n+    public void serialize(ByteBuf output) {\n \n-  }\n+    }\n \n-  @Override\n-  public int dataLen() {\n-    return 0;\n-  }\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return 0;\n+    }\n+\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+\n+    }\n+\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+\n+    }\n+\n+    @Override\n+    public int dataLen() {\n+        return 0;\n+    }\n }\n",
+            "diff_size": 196
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/528/Edge.java\nindex 1acee46467d..700ab9a89a7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/528/Edge.java\n@@ -164,4 +164,4 @@ public class Edge implements IElement {\n   public int dataLen() {\n     return 0;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/528/Edge.java\nindex 1acee46467d..d0365ca78f2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/528/Edge.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/528/Edge.java\n@@ -136,14 +136,10 @@ public class Edge implements IElement {\n   }\n \n   @Override\n-  public void serialize(ByteBuf output) {\n-\n-  }\n+  public void serialize(ByteBuf output) {}\n \n   @Override\n-  public void deserialize(ByteBuf input) {\n-\n-  }\n+  public void deserialize(ByteBuf input) {}\n \n   @Override\n   public int bufferLen() {\n@@ -151,17 +147,14 @@ public class Edge implements IElement {\n   }\n \n   @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-\n-  }\n+  public void serialize(DataOutputStream output) throws IOException {}\n \n   @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-\n-  }\n+  public void deserialize(DataInputStream input) throws IOException {}\n \n   @Override\n   public int dataLen() {\n     return 0;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

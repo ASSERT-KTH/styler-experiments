@@ -1,0 +1,86 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "225",
+    "information": {
+        "violations": [
+            {
+                "line": "76",
+                "column": "85",
+                "severity": "warning",
+                "message": "'&&' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "\n  private boolean deployClient() {\n    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n  }\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/225/ServletRestTransport.java\nindex f7c195a3b3e..08db28012de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/225/ServletRestTransport.java\n@@ -73,8 +73,8 @@ public class ServletRestTransport extends AbstractTransport {\n   }\n \n   private boolean deployClient() {\n-    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n+    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null\n+        && RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n   }\n \n   @Override\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "76",
+                    "column": "85",
+                    "severity": "warning",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "76",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/225/ServletRestTransport.java\nindex f7c195a3b3e..328f99b8031 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/225/ServletRestTransport.java\n@@ -73,8 +73,7 @@ public class ServletRestTransport extends AbstractTransport {\n   }\n \n   private boolean deployClient() {\n-    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n+    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null && RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n   }\n \n   @Override\n@@ -84,4 +83,4 @@ public class ServletRestTransport extends AbstractTransport {\n         RestTransportClientManager.INSTANCE.getRestTransportClient(endpoint.isSslEnabled());\n     client.send(invocation, asyncResp);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "73",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/225/ServletRestTransport.java\nindex f7c195a3b3e..a2fadf96fcb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/225/ServletRestTransport.java\n@@ -19,12 +19,10 @@ package io.servicecomb.transport.rest.servlet;\n \n import java.util.HashMap;\n import java.util.Map;\n-\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n import org.springframework.stereotype.Component;\n import org.springframework.util.StringUtils;\n-\n import io.servicecomb.core.Invocation;\n import io.servicecomb.core.transport.AbstractTransport;\n import io.servicecomb.foundation.common.net.URIEndpointObject;\n@@ -51,10 +49,10 @@ public class ServletRestTransport extends AbstractTransport {\n     }\n \n     if (!ServletUtils.canPublishEndpoint(listenAddress)) {\n-      LOGGER.info(\"ignore transport {}.\", this.getClass().getName());\n+      LOGGER.info(\"ignore transport {}.\", this.getClass()\n+                                              .getName());\n       return false;\n     }\n-\n     return true;\n   }\n \n@@ -68,20 +66,17 @@ public class ServletRestTransport extends AbstractTransport {\n \n     String listenAddress = ServletConfig.getLocalServerAddress();\n     setListenAddressWithoutSchema(listenAddress, queryMap);\n-\n     return deployClient();\n   }\n \n   private boolean deployClient() {\n-    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n+    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null && RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n   }\n \n   @Override\n   public void send(Invocation invocation, AsyncResponse asyncResp) throws Exception {\n     URIEndpointObject endpoint = (URIEndpointObject) invocation.getEndpoint().getAddress();\n-    RestTransportClient client =\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(endpoint.isSslEnabled());\n+    RestTransportClient client = RestTransportClientManager.INSTANCE.getRestTransportClient(endpoint.isSslEnabled());\n     client.send(invocation, asyncResp);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 11
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/225/ServletRestTransport.java\nindex f7c195a3b3e..08db28012de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/225/ServletRestTransport.java\n@@ -73,8 +73,8 @@ public class ServletRestTransport extends AbstractTransport {\n   }\n \n   private boolean deployClient() {\n-    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n+    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null\n+        && RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n   }\n \n   @Override\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/225/ServletRestTransport.java\nindex f7c195a3b3e..08db28012de 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/225/ServletRestTransport.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/225/ServletRestTransport.java\n@@ -73,8 +73,8 @@ public class ServletRestTransport extends AbstractTransport {\n   }\n \n   private boolean deployClient() {\n-    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null &&\n-        RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n+    return RestTransportClientManager.INSTANCE.getRestTransportClient(true) != null\n+        && RestTransportClientManager.INSTANCE.getRestTransportClient(false) != null;\n   }\n \n   @Override\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

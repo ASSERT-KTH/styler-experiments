@@ -1,0 +1,216 @@
+{
+    "project_name": "EMResearch-EMB",
+    "violation_id": "97",
+    "information": {
+        "violations": [
+            {
+                "line": "29",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 174).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "                .findFirst()\n                .orElse(Role.limited_user);\n        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n    }\n\n    public String getName() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 196).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "92",
+                    "severity": "warning",
+                    "message": "'>=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "92",
+                    "severity": "warning",
+                    "message": "'>=' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "170",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "171",
+                    "severity": "warning",
+                    "message": "'}' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "171",
+                    "severity": "warning",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/97/UserProfileView.java\nindex 6def8bc1d1c..26575eec2a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/EMResearch-EMB/styler/05_predictions/final/files-repaired/97/UserProfileView.java\n@@ -26,10 +26,7 @@ public class UserProfileView {\n                 .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n                 .findFirst()\n                 .orElse(Role.limited_user);\n-        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n-    }\n-\n-    public String getName() {\n+        rolePermissions = Stream.of(Permission.values()).filter(permission->role.getLevel()>=permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());}public String getName() {\n         return name;\n     }\n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/97/UserProfileView.java\nindex 6def8bc1d1c..47295c7454f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/checkstyle_idea/97/UserProfileView.java\n@@ -22,11 +22,12 @@ public class UserProfileView {\n     public UserProfileView(User user) {\n         name = user.getName();\n         role = Stream.of(Role.values())\n-                .sorted((o1, o2) -> Integer.compare(o2.getLevel(), o1.getLevel()))\n-                .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n-                .findFirst()\n-                .orElse(Role.limited_user);\n-        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n+            .sorted((o1, o2) -> Integer.compare(o2.getLevel(), o1.getLevel()))\n+            .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n+            .findFirst()\n+            .orElse(Role.limited_user);\n+        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel())\n+            .map(Enum::name).sorted().collect(Collectors.toList());\n     }\n \n     public String getName() {\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 174).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/97/UserProfileView.java\nindex 6def8bc1d1c..70da604bd35 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/naturalize/97/UserProfileView.java\n@@ -40,4 +40,4 @@ public class UserProfileView {\n     public List<String> getRolePermissions() {\n         return rolePermissions;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 208).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 174).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/97/UserProfileView.java\nindex 6def8bc1d1c..5b6aa6f0c09 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/codebuff/97/UserProfileView.java\n@@ -5,27 +5,25 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;\n import se.devscout.scoutapi.auth.Permission;\n import se.devscout.scoutapi.auth.Role;\n import se.devscout.scoutapi.model.User;\n-\n import java.util.List;\n import java.util.stream.Collectors;\n import java.util.stream.Stream;\n \n+\n @JsonNaming(value = PropertyNamingStrategy.LowerCaseWithUnderscoresStrategy.class)\n public class UserProfileView {\n+\n     private List<String> rolePermissions;\n     private String name;\n     private Role role;\n \n     public UserProfileView() {\n+\n     }\n \n     public UserProfileView(User user) {\n         name = user.getName();\n-        role = Stream.of(Role.values())\n-                .sorted((o1, o2) -> Integer.compare(o2.getLevel(), o1.getLevel()))\n-                .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n-                .findFirst()\n-                .orElse(Role.limited_user);\n+        role = Stream.of(Role.values()).sorted((o1, o2) -> Integer.compare(o2.getLevel(), o1.getLevel())).filter(role -> role.getLevel() <= user.getAuthorizationLevel()).findFirst().orElse(Role.limited_user);\n         rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n     }\n \n@@ -40,4 +38,4 @@ public class UserProfileView {\n     public List<String> getRolePermissions() {\n         return rolePermissions;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 198).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "34",
+                    "severity": "warning",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "94",
+                    "severity": "warning",
+                    "message": "'>=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "94",
+                    "severity": "warning",
+                    "message": "'>=' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "172",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "173",
+                    "severity": "warning",
+                    "message": "'}' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "30",
+                    "column": "173",
+                    "severity": "warning",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/97/UserProfileView.java\nindex 6def8bc1d1c..42cbee2ecb2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/random/files-repaired/97/UserProfileView.java\n@@ -26,10 +26,8 @@ public class UserProfileView {\n                 .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n                 .findFirst()\n                 .orElse(Role.limited_user);\n-        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n-    }\n \n-    public String getName() {\n+        rolePermissions = Stream . of(Permission.values()).filter(permission->role.getLevel()>=permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());}public String getName() {\n         return name;\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 196).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "92",
+                    "severity": "warning",
+                    "message": "'>=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "92",
+                    "severity": "warning",
+                    "message": "'>=' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "170",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "171",
+                    "severity": "warning",
+                    "message": "'}' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "29",
+                    "column": "171",
+                    "severity": "warning",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/97/UserProfileView.java\nindex 6def8bc1d1c..26575eec2a2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/violations/97/UserProfileView.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/EMResearch-EMB/styler/05_predictions/three_grams/files-repaired/97/UserProfileView.java\n@@ -26,10 +26,7 @@ public class UserProfileView {\n                 .filter(role -> role.getLevel() <= user.getAuthorizationLevel())\n                 .findFirst()\n                 .orElse(Role.limited_user);\n-        rolePermissions = Stream.of(Permission.values()).filter(permission -> role.getLevel() >= permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());\n-    }\n-\n-    public String getName() {\n+        rolePermissions = Stream.of(Permission.values()).filter(permission->role.getLevel()>=permission.getLevel()).map(Enum::name).sorted().collect(Collectors.toList());}public String getName() {\n         return name;\n     }\n \n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

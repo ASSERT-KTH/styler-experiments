@@ -1,0 +1,98 @@
+{
+    "project_name": "chenpengliang0909-WxJava",
+    "violation_id": "11",
+    "information": {
+        "violations": [
+            {
+                "line": "23",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 154).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n  @Override\n  public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n    WxMpCardResult cardResult = new WxMpCardResult();\n\n    JsonObject jsonObject = jsonElement.getAsJsonObject();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..aa56bdef9d7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/final/files-repaired/11/WxMpCardResultGsonAdapter.java\n@@ -19,8 +19,7 @@ import me.chanjar.weixin.mp.bean.card.WxMpCardResult;\n  * @version 15/11/11\n  */\n public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n-  @Override\n-  public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n+  @Override public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n     WxMpCardResult cardResult = new WxMpCardResult();\n \n     JsonObject jsonObject = jsonElement.getAsJsonObject();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..c8f69e2a1b4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/checkstyle_idea/11/WxMpCardResultGsonAdapter.java\n@@ -20,7 +20,8 @@ import me.chanjar.weixin.mp.bean.card.WxMpCardResult;\n  */\n public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n   @Override\n-  public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n+  public WxMpCardResult deserialize(JsonElement jsonElement, Type type,\n+                                    JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n     WxMpCardResult cardResult = new WxMpCardResult();\n \n     JsonObject jsonObject = jsonElement.getAsJsonObject();\n@@ -35,8 +36,8 @@ public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResul\n     cardResult.setUnionid(GsonHelper.getString(jsonObject, \"unionid\"));\n \n     WxMpCard card = WxMpGsonBuilder.create().fromJson(jsonObject.get(\"card\"),\n-      new TypeToken<WxMpCard>() {\n-      }.getType());\n+        new TypeToken<WxMpCard>() {\n+        }.getType());\n \n     cardResult.setCard(card);\n \n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..e18e3680746 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/naturalize/11/WxMpCardResultGsonAdapter.java\n@@ -37,9 +37,8 @@ public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResul\n     WxMpCard card = WxMpGsonBuilder.create().fromJson(jsonObject.get(\"card\"),\n       new TypeToken<WxMpCard>() {\n       }.getType());\n-\n-    cardResult.setCard(card);\n+cardResult.setCard(card);\n \n     return cardResult;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 154).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..c47099cf98f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/codebuff/11/WxMpCardResultGsonAdapter.java\n@@ -1,7 +1,6 @@\n package me.chanjar.weixin.mp.util.json;\n \n import java.lang.reflect.Type;\n-\n import com.google.gson.JsonDeserializationContext;\n import com.google.gson.JsonDeserializer;\n import com.google.gson.JsonElement;\n@@ -18,13 +17,13 @@ import me.chanjar.weixin.mp.bean.card.WxMpCardResult;\n  * @author YuJian\n  * @version 15/11/11\n  */\n+\n+\n public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n   @Override\n   public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n     WxMpCardResult cardResult = new WxMpCardResult();\n-\n     JsonObject jsonObject = jsonElement.getAsJsonObject();\n-\n     cardResult.setOpenId(GsonHelper.getString(jsonObject, \"openid\"));\n     cardResult.setErrorCode(GsonHelper.getString(jsonObject, \"errcode\"));\n     cardResult.setErrorMsg(GsonHelper.getString(jsonObject, \"errmsg\"));\n@@ -34,12 +33,10 @@ public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResul\n     cardResult.setBackgroundPicUrl(GsonHelper.getString(jsonObject, \"background_pic_url\"));\n     cardResult.setUnionid(GsonHelper.getString(jsonObject, \"unionid\"));\n \n-    WxMpCard card = WxMpGsonBuilder.create().fromJson(jsonObject.get(\"card\"),\n-      new TypeToken<WxMpCard>() {\n-      }.getType());\n-\n+    WxMpCard card = WxMpGsonBuilder.create().fromJson(jsonObject.get(\"card\"), new TypeToken<WxMpCard>() {\n+                                                                              }.getType());\n     cardResult.setCard(card);\n-\n     return cardResult;\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 147).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..56dbbb73bb2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/random/files-repaired/11/WxMpCardResultGsonAdapter.java\n@@ -19,9 +19,9 @@ import me.chanjar.weixin.mp.bean.card.WxMpCardResult;\n  * @version 15/11/11\n  */\n public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n-  @Override\n-  public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n-    WxMpCardResult cardResult = new WxMpCardResult();\n+  @Override public\n+  WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n+     WxMpCardResult cardResult = new WxMpCardResult();\n \n     JsonObject jsonObject = jsonElement.getAsJsonObject();\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/11/WxMpCardResultGsonAdapter.java\nindex defe8822bb8..aa56bdef9d7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/violations/11/WxMpCardResultGsonAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/chenpengliang0909-WxJava/styler/05_predictions/three_grams/files-repaired/11/WxMpCardResultGsonAdapter.java\n@@ -19,8 +19,7 @@ import me.chanjar.weixin.mp.bean.card.WxMpCardResult;\n  * @version 15/11/11\n  */\n public class WxMpCardResultGsonAdapter implements JsonDeserializer<WxMpCardResult> {\n-  @Override\n-  public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n+  @Override public WxMpCardResult deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {\n     WxMpCardResult cardResult = new WxMpCardResult();\n \n     JsonObject jsonObject = jsonElement.getAsJsonObject();\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

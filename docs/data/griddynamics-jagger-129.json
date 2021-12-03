@@ -1,0 +1,104 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "129",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "warning",
+                "message": "Line is longer than 150 characters (found 165).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    private Decision decisionWhenNoBaselineForMetric;\n\n    /** What decision should be taken when several limits match same metric (f.e. 'mon_cpu' & 'mon_cpu_user' will match 'mon_cpu_user|agent_007 [127.0.1.1]|-avg') */\n    private Decision decisionWhenSeveralLimitsMatchSingleMetric;\n\n    public Decision getDecisionWhenNoMetricForLimit() {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "41",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 161).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/129/LimitSetConfig.java\nindex c447fe6783b..cc1154ebb5e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/129/LimitSetConfig.java\n@@ -23,15 +23,23 @@ package com.griddynamics.jagger.engine.e1.collector.limits;\n import com.griddynamics.jagger.util.Decision;\n import org.springframework.beans.factory.annotation.Required;\n \n-/** Class is used to describe setup for @ref LimitSet */\n+/**\n+ * Class is used to describe setup for @ref LimitSet\n+ */\n public class LimitSetConfig {\n-    /** What decision should be taken when limit is specified, but no metric in the test matches metricName of this Limit */\n+    /**\n+     * What decision should be taken when limit is specified, but no metric in the test matches metricName of this Limit\n+     */\n     private Decision decisionWhenNoMetricForLimit;\n \n-    /** What decision should be taken when baseline value can't be fetched for some metric (f.e. test or metric doesn't exist in baseline session) */\n+    /**\n+     * What decision should be taken when baseline value can't be fetched for some metric (f.e. test or metric doesn't exist in baseline session)\n+     */\n     private Decision decisionWhenNoBaselineForMetric;\n \n-    /** What decision should be taken when several limits match same metric (f.e. 'mon_cpu' & 'mon_cpu_user' will match 'mon_cpu_user|agent_007 [127.0.1.1]|-avg') */\n+    /**\n+     * What decision should be taken when several limits match same metric (f.e. 'mon_cpu' & 'mon_cpu_user' will match 'mon_cpu_user|agent_007 [127.0.1.1]|-avg')\n+     */\n     private Decision decisionWhenSeveralLimitsMatchSingleMetric;\n \n     public Decision getDecisionWhenNoMetricForLimit() {\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/129/LimitSetConfig.java\nindex c447fe6783b..e7c58461b83 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/129/LimitSetConfig.java\n@@ -61,5 +61,4 @@ public class LimitSetConfig {\n         this.decisionWhenSeveralLimitsMatchSingleMetric = decisionWhenSeveralLimitsMatchSingleMetric;\n     }\n \n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/129/LimitSetConfig.java\nindex c447fe6783b..a7c26bf82f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/129/LimitSetConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/129/LimitSetConfig.java\n@@ -24,8 +24,11 @@ import com.griddynamics.jagger.util.Decision;\n import org.springframework.beans.factory.annotation.Required;\n \n /** Class is used to describe setup for @ref LimitSet */\n+\n+\n public class LimitSetConfig {\n     /** What decision should be taken when limit is specified, but no metric in the test matches metricName of this Limit */\n+\n     private Decision decisionWhenNoMetricForLimit;\n \n     /** What decision should be taken when baseline value can't be fetched for some metric (f.e. test or metric doesn't exist in baseline session) */\n@@ -60,6 +63,4 @@ public class LimitSetConfig {\n     public void setDecisionWhenSeveralLimitsMatchSingleMetric(Decision decisionWhenSeveralLimitsMatchSingleMetric) {\n         this.decisionWhenSeveralLimitsMatchSingleMetric = decisionWhenSeveralLimitsMatchSingleMetric;\n     }\n-\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "Line is longer than 150 characters (found 165).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

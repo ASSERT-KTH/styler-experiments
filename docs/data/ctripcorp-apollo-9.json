@@ -1,0 +1,63 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "9",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "column": "57",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "import com.ctrip.framework.apollo.portal.spi.EmailService;\n\npublic class DefaultEmailService implements EmailService{\n\n  @Override\n  public void send(Email email){",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/9/DefaultEmailService.java\nindex b2c9879af18..860625bcd0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/9/DefaultEmailService.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n   public void send(Email email){\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/9/DefaultEmailService.java\nindex b2c9879af18..270cbd9ffcd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/9/DefaultEmailService.java\n@@ -3,10 +3,10 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n-  public void send(Email email){\n+  public void send(Email email) {\n     //do nothing\n   }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/9/DefaultEmailService.java\nindex b2c9879af18..b772a81612a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/9/DefaultEmailService.java\n@@ -3,10 +3,10 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n-  public void send(Email email){\n+  public void send(Email email) {\n     //do nothing\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/9/DefaultEmailService.java\nindex b2c9879af18..19ba89ff018 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/9/DefaultEmailService.java\n@@ -3,10 +3,11 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n-  public void send(Email email){\n+  public void send(Email email) {\n     //do nothing\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/9/DefaultEmailService.java\nindex b2c9879af18..860625bcd0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/9/DefaultEmailService.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n   public void send(Email email){\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/9/DefaultEmailService.java\nindex b2c9879af18..860625bcd0a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/9/DefaultEmailService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/9/DefaultEmailService.java\n@@ -3,7 +3,7 @@ package com.ctrip.framework.apollo.portal.spi.defaultimpl;\n import com.ctrip.framework.apollo.portal.entity.bo.Email;\n import com.ctrip.framework.apollo.portal.spi.EmailService;\n \n-public class DefaultEmailService implements EmailService{\n+public class DefaultEmailService implements EmailService {\n \n   @Override\n   public void send(Email email){\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

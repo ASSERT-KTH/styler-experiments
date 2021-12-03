@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "column": "21",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "    ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n    ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n\n    private int psuhCode;\n    private String msg;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/18/PushError.java\nindex 04164753d24..28272ba4a4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/18/PushError.java\n@@ -10,7 +10,7 @@ public enum PushError {\n     SUCCESS(200, \"SUCCESS\"),\n     ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n     ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n-    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n+    ERROR_NOGID(404, \"GroupdID\u9519\u8bef\");\n \n     private int psuhCode;\n     private String msg;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/18/PushError.java\nindex 04164753d24..28272ba4a4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/18/PushError.java\n@@ -10,7 +10,7 @@ public enum PushError {\n     SUCCESS(200, \"SUCCESS\"),\n     ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n     ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n-    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n+    ERROR_NOGID(404, \"GroupdID\u9519\u8bef\");\n \n     private int psuhCode;\n     private String msg;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/18/PushError.java\nindex 04164753d24..50e79a99300 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/18/PushError.java\n@@ -10,7 +10,7 @@ public enum PushError {\n     SUCCESS(200, \"SUCCESS\"),\n     ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n     ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n-    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n+    ERROR_NOGID(404, \"GroupdID\u9519\u8bef\");\n \n     private int psuhCode;\n     private String msg;\n@@ -35,4 +35,4 @@ public enum PushError {\n     public void setMsg(String msg) {\n         this.msg = msg;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/18/PushError.java\nindex 04164753d24..28272ba4a4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/18/PushError.java\n@@ -10,7 +10,7 @@ public enum PushError {\n     SUCCESS(200, \"SUCCESS\"),\n     ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n     ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n-    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n+    ERROR_NOGID(404, \"GroupdID\u9519\u8bef\");\n \n     private int psuhCode;\n     private String msg;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/18/PushError.java\nindex 04164753d24..28272ba4a4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/18/PushError.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/18/PushError.java\n@@ -10,7 +10,7 @@ public enum PushError {\n     SUCCESS(200, \"SUCCESS\"),\n     ERROR_PSUHTYPE(400, \"PUSH\u7c7b\u578b\u9519\u8bef\"),\n     ERROR_MISS(401, \"\u53c2\u6570\u7f3a\u5931\"),\n-    ERROR_NOGID(404,\"GroupdID\u9519\u8bef\");\n+    ERROR_NOGID(404, \"GroupdID\u9519\u8bef\");\n \n     private int psuhCode;\n     private String msg;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

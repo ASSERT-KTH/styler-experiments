@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "90",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 157).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n/*\n * Forked from https://github.com/swagger-api/swagger-core/blob/master/modules/swagger-models/src/main/java/io/swagger/models/properties/IntegerProperty.java\n */\n\npackage org.apache.servicecomb.swagger.extend.property;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/90/AbstractBaseIntegerProperty.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/90/AbstractBaseIntegerProperty.java\nindex 8fe2690d9e5..b4414b720f8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/90/AbstractBaseIntegerProperty.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/90/AbstractBaseIntegerProperty.java\n@@ -128,4 +128,4 @@ public abstract class AbstractBaseIntegerProperty<T> extends BaseIntegerProperty\n     }\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/90/AbstractBaseIntegerProperty.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/90/AbstractBaseIntegerProperty.java\nindex 8fe2690d9e5..15a8f072757 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/90/AbstractBaseIntegerProperty.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/90/AbstractBaseIntegerProperty.java\n@@ -20,7 +20,6 @@ package org.apache.servicecomb.swagger.extend.property;\n \n import java.util.ArrayList;\n import java.util.List;\n-\n import io.swagger.models.Xml;\n import io.swagger.models.properties.BaseIntegerProperty;\n \n@@ -37,6 +36,7 @@ public abstract class AbstractBaseIntegerProperty<T> extends BaseIntegerProperty\n     if (this.enumNames == null) {\n       this.enumNames = new ArrayList<>();\n     }\n+\n     if (!enumNames.contains(value)) {\n       enumNames.add(value);\n     }\n@@ -66,6 +66,7 @@ public abstract class AbstractBaseIntegerProperty<T> extends BaseIntegerProperty\n         this.defaultValue = parseNumber(defaultValue);\n       } catch (NumberFormatException e) {\n         // continue;\n+\n       }\n     }\n     return this;\n@@ -114,9 +115,11 @@ public abstract class AbstractBaseIntegerProperty<T> extends BaseIntegerProperty\n     if (!super.equals(obj)) {\n       return false;\n     }\n+\n     if (!(obj instanceof AbstractBaseIntegerProperty)) {\n       return false;\n     }\n+\n     @SuppressWarnings(\"unchecked\")\n     AbstractBaseIntegerProperty<T> other = (AbstractBaseIntegerProperty<T>) obj;\n     if (defaultValue == null) {\n@@ -124,8 +127,8 @@ public abstract class AbstractBaseIntegerProperty<T> extends BaseIntegerProperty\n         return false;\n       }\n     } else if (!defaultValue.equals(other.defaultValue)) {\n-      return false;\n+             return false;\n     }\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 157).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

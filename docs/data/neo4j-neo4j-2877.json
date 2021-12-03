@@ -1,0 +1,158 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "2877",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "39",
+                    "column": "41",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "39",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "41",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "52",
+                    "column": "73",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "46",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "78",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "35",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "65",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "67",
+                    "column": "42",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "70",
+                    "column": "29",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2877/CommunityDatabaseStateService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2877/CommunityDatabaseStateService.java\nindex 742f7033bad..a055dede703 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/2877/CommunityDatabaseStateService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/2877/CommunityDatabaseStateService.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.dbms;\n \n import java.util.Map;\n@@ -35,37 +36,37 @@ public final class CommunityDatabaseStateService implements DatabaseStateService\n {\n     private final DatabaseManager<StandaloneDatabaseContext> databaseManager;\n \n-    public CommunityDatabaseStateService( DefaultDatabaseManager databaseManager )\n+    public CommunityDatabaseStateService(DefaultDatabaseManager databaseManager)\n     {\n         this.databaseManager = databaseManager;\n     }\n \n     @Override\n-    public Map<NamedDatabaseId,DatabaseState> stateOfAllDatabases()\n+    public Map<NamedDatabaseId, DatabaseState> stateOfAllDatabases()\n     {\n         return databaseManager.registeredDatabases().entrySet().stream()\n-                .collect( Collectors.toUnmodifiableMap( Map.Entry::getKey, entry -> getState( entry.getValue() ) ) );\n+          .collect(Collectors.toUnmodifiableMap(Map.Entry::getKey, entry -> getState(entry.getValue())));\n     }\n \n     @Override\n-    public DatabaseState stateOfDatabase( NamedDatabaseId namedDatabaseId )\n+    public DatabaseState stateOfDatabase(NamedDatabaseId namedDatabaseId)\n     {\n-        return databaseManager.getDatabaseContext( namedDatabaseId )\n-                .map( this::getState )\n-                .orElse( CommunityDatabaseState.unknown( namedDatabaseId ) );\n+        return databaseManager.getDatabaseContext(namedDatabaseId)\n+          .map(this::getState)\n+          .orElse(CommunityDatabaseState.unknown(namedDatabaseId));\n     }\n \n     @Override\n-    public Optional<Throwable> causeOfFailure( NamedDatabaseId namedDatabaseId )\n+    public Optional<Throwable> causeOfFailure(NamedDatabaseId namedDatabaseId)\n     {\n-        return databaseManager.getDatabaseContext( namedDatabaseId ).map( StandaloneDatabaseContext::failureCause );\n+        return databaseManager.getDatabaseContext(namedDatabaseId).map(StandaloneDatabaseContext::failureCause);\n     }\n \n-    private DatabaseState getState( StandaloneDatabaseContext ctx )\n+    private DatabaseState getState(StandaloneDatabaseContext ctx)\n     {\n-        return new CommunityDatabaseState( ctx.database().getNamedDatabaseId(),\n-                                           ctx.database().isStarted(),\n-                                           ctx.isFailed(),\n-                                           ctx.failureCause() );\n+        return new CommunityDatabaseState(ctx.database().getNamedDatabaseId(),\n+          ctx.database().isStarted(),\n+          ctx.isFailed(),\n+          ctx.failureCause());\n     }\n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

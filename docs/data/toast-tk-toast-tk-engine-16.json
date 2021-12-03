@@ -1,0 +1,77 @@
+{
+    "project_name": "toast-tk-toast-tk-engine",
+    "violation_id": "16",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "severity": "info",
+                "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "\tpublic Set<String> value;\n\n\tpublic String b64ScreenShot;\n\n\n\t/**",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/16/ScanResponse.java\nindex 17ee912fb46..4a5d3a064c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/final/files-repaired/16/ScanResponse.java\n@@ -10,13 +10,12 @@ public class ScanResponse implements IIdRequest {\n \n \tpublic Set<String> value;\n \n-\tpublic String b64ScreenShot;\n+ public String b64ScreenShot;\n \n-\n-\t/**\n+ /**\n \t * serialization only\n \t */\n-\tpublic ScanResponse() {\n+ public ScanResponse() {\n \t}\n \n \tpublic ScanResponse(\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "info",
+                    "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/16/ScanResponse.java\nindex 17ee912fb46..e76bcf8faf6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/checkstyle_idea/16/ScanResponse.java\n@@ -6,37 +6,37 @@ import com.synaptix.toast.core.net.request.IIdRequest;\n \n public class ScanResponse implements IIdRequest {\n \n-\tprivate String id;\n+    private String id;\n \n-\tpublic Set<String> value;\n+    public Set<String> value;\n \n-\tpublic String b64ScreenShot;\n+    public String b64ScreenShot;\n \n \n-\t/**\n-\t * serialization only\n-\t */\n-\tpublic ScanResponse() {\n-\t}\n+    /**\n+     * serialization only\n+     */\n+    public ScanResponse() {\n+    }\n \n-\tpublic ScanResponse(\n-\t\tString id,\n-\t\tSet<String> componentList) {\n-\t\tthis.id = id;\n-\t\tthis.value = componentList;\n-\t}\n+    public ScanResponse(\n+        String id,\n+        Set<String> componentList) {\n+        this.id = id;\n+        this.value = componentList;\n+    }\n \n-\t@Override\n-\tpublic String getId() {\n-\t\treturn id;\n-\t}\n+    @Override\n+    public String getId() {\n+        return id;\n+    }\n \n-\tpublic Set<String> getComponents() {\n-\t\treturn value;\n-\t}\n+    public Set<String> getComponents() {\n+        return value;\n+    }\n \n-\t@Override\n-\tpublic String getBase64ScreenShot() {\n-\t\treturn b64ScreenShot;\n-\t}\n+    @Override\n+    public String getBase64ScreenShot() {\n+        return b64ScreenShot;\n+    }\n }\n",
+            "diff_size": 25
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/16/ScanResponse.java\nindex 17ee912fb46..5e1dfcd0826 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/naturalize/16/ScanResponse.java\n@@ -12,8 +12,7 @@ public class ScanResponse implements IIdRequest {\n \n \tpublic String b64ScreenShot;\n \n-\n-\t/**\n+/**\n \t * serialization only\n \t */\n \tpublic ScanResponse() {\n@@ -39,4 +38,4 @@ public class ScanResponse implements IIdRequest {\n \tpublic String getBase64ScreenShot() {\n \t\treturn b64ScreenShot;\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "info",
+                    "message": "La ligne correspond au motif ill\u00e9gal 'more than one blank line'.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/16/ScanResponse.java\nindex 17ee912fb46..6edf03ebb4e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/codebuff/16/ScanResponse.java\n@@ -1,42 +1,42 @@\n package com.synaptix.toast.core.net.response;\n \n import java.util.Set;\n-\n import com.synaptix.toast.core.net.request.IIdRequest;\n \n public class ScanResponse implements IIdRequest {\n \n-\tprivate String id;\n+ private String id;\n+\n+ public Set<String> value;\n \n-\tpublic Set<String> value;\n+ public String b64ScreenShot;\n \n-\tpublic String b64ScreenShot;\n \n+ /**\n+  * serialization only\n+  */\n \n-\t/**\n-\t * serialization only\n-\t */\n-\tpublic ScanResponse() {\n-\t}\n+ public ScanResponse() {\n+ }\n \n-\tpublic ScanResponse(\n-\t\tString id,\n-\t\tSet<String> componentList) {\n-\t\tthis.id = id;\n-\t\tthis.value = componentList;\n-\t}\n+ public ScanResponse(\n+  String id,\n+  Set<String> componentList) {\n+  this.id = id;\n+  this.value = componentList;\n+ }\n \n-\t@Override\n-\tpublic String getId() {\n-\t\treturn id;\n-\t}\n+ @Override\n+ public String getId() {\n+  return id;\n+ }\n \n-\tpublic Set<String> getComponents() {\n-\t\treturn value;\n-\t}\n+ public Set<String> getComponents() {\n+  return value;\n+ }\n \n-\t@Override\n-\tpublic String getBase64ScreenShot() {\n-\t\treturn b64ScreenShot;\n-\t}\n-}\n+ @Override\n+ public String getBase64ScreenShot() {\n+  return b64ScreenShot;\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 32
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/16/ScanResponse.java\nindex 17ee912fb46..fcf56b0ac6c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/random/files-repaired/16/ScanResponse.java\n@@ -10,13 +10,11 @@ public class ScanResponse implements IIdRequest {\n \n \tpublic Set<String> value;\n \n-\tpublic String b64ScreenShot;\n-\n-\n-\t/**\n+ public String b64ScreenShot ;/**\n \t * serialization only\n \t */\n-\tpublic ScanResponse() {\n+\n+ public ScanResponse() {\n \t}\n \n \tpublic ScanResponse(\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/16/ScanResponse.java\nindex 17ee912fb46..4a5d3a064c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/violations/16/ScanResponse.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/toast-tk-toast-tk-engine/styler/05_predictions/three_grams/files-repaired/16/ScanResponse.java\n@@ -10,13 +10,12 @@ public class ScanResponse implements IIdRequest {\n \n \tpublic Set<String> value;\n \n-\tpublic String b64ScreenShot;\n+ public String b64ScreenShot;\n \n-\n-\t/**\n+ /**\n \t * serialization only\n \t */\n-\tpublic ScanResponse() {\n+ public ScanResponse() {\n \t}\n \n \tpublic ScanResponse(\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

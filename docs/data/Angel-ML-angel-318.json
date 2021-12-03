@@ -1,0 +1,94 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "318",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 107).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n\n  public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos, int endPos) {\n    super(rowId, startPos, endPos);\n    this.keys = keys;\n    this.values = values;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/318/RangeViewIntKeysFloatValuesPart.java\nindex bcdb7055ec4..95d8235c600 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/318/RangeViewIntKeysFloatValuesPart.java\n@@ -21,9 +21,10 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n    */\n   private float[] values;\n \n-\n-  public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n+    public RangeViewIntKeysFloatValuesPart(\n+      int rowId, int [] keys ,float [ ]values ,\n+int startPos, int endPos) {\n+     super(rowId, startPos, endPos);\n     this.keys = keys;\n     this.values = values;\n   }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/318/RangeViewIntKeysFloatValuesPart.java\nindex bcdb7055ec4..5ddd3bbae37 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/318/RangeViewIntKeysFloatValuesPart.java\n@@ -9,94 +9,95 @@ import io.netty.buffer.ByteBuf;\n  * Int keys and float values data partition view, it is only be used in Range partition\n  */\n public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implements\n-    IIntKeyFloatValuePartOp {\n-\n-  /**\n-   * Whole key array before serialization, sorted by asc\n-   */\n-  private int[] keys;\n-\n-  /**\n-   * Whole value array before serialization\n-   */\n-  private float[] values;\n-\n-\n-  public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n-    this.keys = keys;\n-    this.values = values;\n-  }\n-\n-  public RangeViewIntKeysFloatValuesPart(int[] keys, float[] values, int startPos, int endPos) {\n-    this(-1, keys, values, startPos, endPos);\n-  }\n-\n-  public RangeViewIntKeysFloatValuesPart() {\n-    this(-1, null, null, -1, -1);\n-  }\n-\n-  @Override\n-  public int[] getKeys() {\n-    return keys;\n-  }\n-\n-  @Override\n-  public float[] getValues() {\n-    return values;\n-  }\n-\n-  @Override\n-  public void add(int key, float value) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n-\n-  @Override\n-  public void add(int[] keys, float[] values) {\n-    throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n-  }\n-\n-  @Override\n-  public int size() {\n-    if(endPos != -1) {\n-      return endPos - startPos;\n-    } else {\n-      return keys.length;\n+        IIntKeyFloatValuePartOp {\n+\n+    /**\n+     * Whole key array before serialization, sorted by asc\n+     */\n+    private int[] keys;\n+\n+    /**\n+     * Whole value array before serialization\n+     */\n+    private float[] values;\n+\n+\n+    public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos,\n+                                           int endPos) {\n+        super(rowId, startPos, endPos);\n+        this.keys = keys;\n+        this.values = values;\n+    }\n+\n+    public RangeViewIntKeysFloatValuesPart(int[] keys, float[] values, int startPos, int endPos) {\n+        this(-1, keys, values, startPos, endPos);\n+    }\n+\n+    public RangeViewIntKeysFloatValuesPart() {\n+        this(-1, null, null, -1, -1);\n+    }\n+\n+    @Override\n+    public int[] getKeys() {\n+        return keys;\n+    }\n+\n+    @Override\n+    public float[] getValues() {\n+        return values;\n     }\n-  }\n-\n-  @Override\n-  public RowType getKeyValueType() {\n-    return RowType.T_FLOAT_SPARSE;\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    super.serialize(output);\n-    ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n-      ByteBufSerdeUtils.serializeInt(output, keys[i]);\n-      ByteBufSerdeUtils.serializeFloat(output, values[i]);\n+\n+    @Override\n+    public void add(int key, float value) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n+\n+    @Override\n+    public void add(int[] keys, float[] values) {\n+        throw new UnsupportedOperationException(\"Unsupport dynamic add for range view part now\");\n+    }\n+\n+    @Override\n+    public int size() {\n+        if (endPos != -1) {\n+            return endPos - startPos;\n+        } else {\n+            return keys.length;\n+        }\n+    }\n+\n+    @Override\n+    public RowType getKeyValueType() {\n+        return RowType.T_FLOAT_SPARSE;\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        super.serialize(output);\n+        ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n+        for (int i = startPos; i < endPos; i++) {\n+            ByteBufSerdeUtils.serializeInt(output, keys[i]);\n+            ByteBufSerdeUtils.serializeFloat(output, values[i]);\n+        }\n     }\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    super.deserialize(input);\n-    int len = ByteBufSerdeUtils.deserializeInt(input);\n-    keys = new int[len];\n-    values = new float[len];\n-    for(int i = 0; i < len; i++) {\n-      keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n-      values[i] = ByteBufSerdeUtils.deserializeFloat(input);\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        super.deserialize(input);\n+        int len = ByteBufSerdeUtils.deserializeInt(input);\n+        keys = new int[len];\n+        values = new float[len];\n+        for (int i = 0; i < len; i++) {\n+            keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n+            values[i] = ByteBufSerdeUtils.deserializeFloat(input);\n+        }\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return super.bufferLen()\n+                + ByteBufSerdeUtils.INT_LENGTH\n+                + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n+                + ByteBufSerdeUtils.FLOAT_LENGTH * (endPos - startPos);\n     }\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    return super.bufferLen()\n-        + ByteBufSerdeUtils.INT_LENGTH\n-        + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n-        + ByteBufSerdeUtils.FLOAT_LENGTH * (endPos - startPos);\n-  }\n }\n",
+            "diff_size": 114
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "11",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "23",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/318/RangeViewIntKeysFloatValuesPart.java\nindex bcdb7055ec4..db53d573eeb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/318/RangeViewIntKeysFloatValuesPart.java\n@@ -8,9 +8,7 @@ import io.netty.buffer.ByteBuf;\n /**\n  * Int keys and float values data partition view, it is only be used in Range partition\n  */\n-public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implements\n-    IIntKeyFloatValuePartOp {\n-\n+public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implements IIntKeyFloatValuePartOp {\n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n@@ -74,7 +72,7 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n+    for (int i = startPos; i < endPos; i++) {\n       ByteBufSerdeUtils.serializeInt(output, keys[i]);\n       ByteBufSerdeUtils.serializeFloat(output, values[i]);\n     }\n@@ -86,7 +84,7 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n     keys = new int[len];\n     values = new float[len];\n-    for(int i = 0; i < len; i++) {\n+    for (int i = 0; i < len; i++) {\n       keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n       values[i] = ByteBufSerdeUtils.deserializeFloat(input);\n     }\n@@ -99,4 +97,4 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n         + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n         + ByteBufSerdeUtils.FLOAT_LENGTH * (endPos - startPos);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "12",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 107).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "98",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 168).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/318/RangeViewIntKeysFloatValuesPart.java\nindex bcdb7055ec4..84baaa0c465 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/318/RangeViewIntKeysFloatValuesPart.java\n@@ -8,12 +8,13 @@ import io.netty.buffer.ByteBuf;\n /**\n  * Int keys and float values data partition view, it is only be used in Range partition\n  */\n-public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implements\n-    IIntKeyFloatValuePartOp {\n+\n+public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implements IIntKeyFloatValuePartOp {\n \n   /**\n    * Whole key array before serialization, sorted by asc\n    */\n+\n   private int[] keys;\n \n   /**\n@@ -21,7 +22,6 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n    */\n   private float[] values;\n \n-\n   public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos, int endPos) {\n     super(rowId, startPos, endPos);\n     this.keys = keys;\n@@ -58,7 +58,7 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n \n   @Override\n   public int size() {\n-    if(endPos != -1) {\n+    if (endPos != -1) {\n       return endPos - startPos;\n     } else {\n       return keys.length;\n@@ -74,7 +74,7 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n   public void serialize(ByteBuf output) {\n     super.serialize(output);\n     ByteBufSerdeUtils.serializeInt(output, endPos - startPos);\n-    for(int i = startPos; i < endPos; i++) {\n+    for (int i = startPos; i < endPos; i++) {\n       ByteBufSerdeUtils.serializeInt(output, keys[i]);\n       ByteBufSerdeUtils.serializeFloat(output, values[i]);\n     }\n@@ -83,10 +83,11 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n   @Override\n   public void deserialize(ByteBuf input) {\n     super.deserialize(input);\n+\n     int len = ByteBufSerdeUtils.deserializeInt(input);\n     keys = new int[len];\n     values = new float[len];\n-    for(int i = 0; i < len; i++) {\n+    for (int i = 0; i < len; i++) {\n       keys[i] = ByteBufSerdeUtils.deserializeInt(input);\n       values[i] = ByteBufSerdeUtils.deserializeFloat(input);\n     }\n@@ -94,9 +95,7 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n \n   @Override\n   public int bufferLen() {\n-    return super.bufferLen()\n-        + ByteBufSerdeUtils.INT_LENGTH\n-        + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos)\n-        + ByteBufSerdeUtils.FLOAT_LENGTH * (endPos - startPos);\n+    return super.bufferLen() + ByteBufSerdeUtils.INT_LENGTH + ByteBufSerdeUtils.INT_LENGTH * (endPos - startPos) + ByteBufSerdeUtils.FLOAT_LENGTH * (endPos - startPos);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 14
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/318/RangeViewIntKeysFloatValuesPart.java\nindex bcdb7055ec4..95d8235c600 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/318/RangeViewIntKeysFloatValuesPart.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/318/RangeViewIntKeysFloatValuesPart.java\n@@ -21,9 +21,10 @@ public class RangeViewIntKeysFloatValuesPart extends RangeKeyValuePart implement\n    */\n   private float[] values;\n \n-\n-  public RangeViewIntKeysFloatValuesPart(int rowId, int[] keys, float[] values, int startPos, int endPos) {\n-    super(rowId, startPos, endPos);\n+    public RangeViewIntKeysFloatValuesPart(\n+      int rowId, int [] keys ,float [ ]values ,\n+int startPos, int endPos) {\n+     super(rowId, startPos, endPos);\n     this.keys = keys;\n     this.values = values;\n   }\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

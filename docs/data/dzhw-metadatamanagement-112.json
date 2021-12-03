@@ -1,0 +1,105 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "112",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "column": "77",
+                "severity": "error",
+                "message": "'}' at column 77 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/112/ValidUniqueInstrumentNumberValidator.java\nindex 11233e216d8..64cdace8899 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/112/ValidUniqueInstrumentNumberValidator.java\n@@ -27,7 +27,9 @@ public class ValidUniqueInstrumentNumberValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {}\n+  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/112/ValidUniqueInstrumentNumberValidator.java\nindex 11233e216d8..b31fd042d82 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/112/ValidUniqueInstrumentNumberValidator.java\n@@ -17,21 +17,22 @@ import eu.dzhw.fdz.metadatamanagement.instrumentmanagement.repository.Instrument\n  */\n public class ValidUniqueInstrumentNumberValidator\n     implements ConstraintValidator<ValidUniqueInstrumentNumber, Instrument> {\n-  \n+\n   @Autowired\n   private InstrumentRepository instrumentRepository;\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {}\n+  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "'}' at column 77 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "'if' has incorrect indentation level 0, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/112/ValidUniqueInstrumentNumberValidator.java\nindex 11233e216d8..ef333129229 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/112/ValidUniqueInstrumentNumberValidator.java\n@@ -44,7 +44,7 @@ public class ValidUniqueInstrumentNumberValidator\n     List<IdAndVersionProjection> instruments = instrumentRepository\n         .findIdsByNumberAndDataAcquisitionProjectId(instrument.getNumber(),\n             instrument.getDataAcquisitionProjectId());\n-    if (instruments.size() > 1) {\n+if (instruments.size() > 1) {\n       return false;\n     }\n     if (instruments.size() == 1) {\n@@ -52,4 +52,4 @@ public class ValidUniqueInstrumentNumberValidator\n     }\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "43",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "48",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 177).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/112/ValidUniqueInstrumentNumberValidator.java\nindex 11233e216d8..b3f54eddc17 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/112/ValidUniqueInstrumentNumberValidator.java\n@@ -1,13 +1,10 @@\n package eu.dzhw.fdz.metadatamanagement.instrumentmanagement.domain.validation;\n \n import java.util.List;\n-\n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.util.StringUtils;\n-\n import eu.dzhw.fdz.metadatamanagement.common.domain.projections.IdAndVersionProjection;\n import eu.dzhw.fdz.metadatamanagement.instrumentmanagement.domain.Instrument;\n import eu.dzhw.fdz.metadatamanagement.instrumentmanagement.repository.InstrumentRepository;\n@@ -15,9 +12,10 @@ import eu.dzhw.fdz.metadatamanagement.instrumentmanagement.repository.Instrument\n /**\n  * Validates the uniqueness of number.\n  */\n-public class ValidUniqueInstrumentNumberValidator\n-    implements ConstraintValidator<ValidUniqueInstrumentNumber, Instrument> {\n-  \n+\n+\n+public class ValidUniqueInstrumentNumberValidator implements ConstraintValidator<ValidUniqueInstrumentNumber, Instrument> {\n+\n   @Autowired\n   private InstrumentRepository instrumentRepository;\n \n@@ -26,8 +24,11 @@ public class ValidUniqueInstrumentNumberValidator\n    * \n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {}\n+  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n@@ -35,21 +36,24 @@ public class ValidUniqueInstrumentNumberValidator\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n+\n+\n   @Override\n-  public boolean isValid(Instrument instrument, ConstraintValidatorContext context) {\n+  public boolean isValid(Instrument instrument,\n+    ConstraintValidatorContext context) {\n     if (instrument.getNumber() == null\n         || StringUtils.isEmpty(instrument.getDataAcquisitionProjectId())) {\n       return true;\n     }\n-    List<IdAndVersionProjection> instruments = instrumentRepository\n-        .findIdsByNumberAndDataAcquisitionProjectId(instrument.getNumber(),\n-            instrument.getDataAcquisitionProjectId());\n+    List<IdAndVersionProjection> instruments = instrumentRepository.findIdsByNumberAndDataAcquisitionProjectId(instrument.getNumber(), instrument.getDataAcquisitionProjectId());\n     if (instruments.size() > 1) {\n       return false;\n     }\n     if (instruments.size() == 1) {\n-      return instruments.get(0).getId().equals(instrument.getId());\n+      return instruments.get(0).getId()\n+                               .equals(instrument.getId());\n     }\n+\n     return true;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/112/ValidUniqueInstrumentNumberValidator.java\nindex 11233e216d8..64cdace8899 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/112/ValidUniqueInstrumentNumberValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/112/ValidUniqueInstrumentNumberValidator.java\n@@ -27,7 +27,9 @@ public class ValidUniqueInstrumentNumberValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {}\n+  public void initialize(ValidUniqueInstrumentNumber constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "30",
+                    "column": "77",
+                    "severity": "error",
+                    "message": "'}' at column 77 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "project_name": "apache-metron",
+    "violation_id": "81",
+    "information": {
+        "violations": [
+            {
+                "line": "19",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *\n */\npackage org.apache.metron.profiler.storm;\n\n/**\n * Signals that a flush should occur.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/81/ManualFlushSignal.java\nindex 81feb8e72e6..175985057e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-metron/styler/05_predictions/final/files-repaired/81/ManualFlushSignal.java\n@@ -16,6 +16,7 @@\n  *  limitations under the License.\n  *\n  */\n+\n package org.apache.metron.profiler.storm;\n \n /**\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/81/ManualFlushSignal.java\nindex 81feb8e72e6..175985057e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/checkstyle_idea/81/ManualFlushSignal.java\n@@ -16,6 +16,7 @@\n  *  limitations under the License.\n  *\n  */\n+\n package org.apache.metron.profiler.storm;\n \n /**\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/81/ManualFlushSignal.java\nindex 81feb8e72e6..701cd6f9590 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/naturalize/81/ManualFlushSignal.java\n@@ -16,6 +16,7 @@\n  *  limitations under the License.\n  *\n  */\n+\n package org.apache.metron.profiler.storm;\n \n /**\n@@ -51,4 +52,4 @@ public class ManualFlushSignal implements FlushSignal {\n     // not needed\n     return 0;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/81/ManualFlushSignal.java\nindex 81feb8e72e6..3c1e5036713 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/codebuff/81/ManualFlushSignal.java\n@@ -23,6 +23,7 @@ package org.apache.metron.profiler.storm;\n  *\n  * <p>The flush signal can be turned on or off like a switch as needed.  Most useful for testing.\n  */\n+\n public class ManualFlushSignal implements FlushSignal {\n \n   private boolean flushNow = false;\n@@ -51,4 +52,4 @@ public class ManualFlushSignal implements FlushSignal {\n     // not needed\n     return 0;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "19",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "'CLASS_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/81/ManualFlushSignal.java\nindex 81feb8e72e6..537966c1612 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/random/files-repaired/81/ManualFlushSignal.java\n@@ -16,8 +16,9 @@\n  *  limitations under the License.\n  *\n  */\n-package org.apache.metron.profiler.storm;\n+package org .apache.metron.profiler.storm\n \n+;\n /**\n  * Signals that a flush should occur.\n  *\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/81/ManualFlushSignal.java\nindex 81feb8e72e6..175985057e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/violations/81/ManualFlushSignal.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-metron/styler/05_predictions/three_grams/files-repaired/81/ManualFlushSignal.java\n@@ -16,6 +16,7 @@\n  *  limitations under the License.\n  *\n  */\n+\n package org.apache.metron.profiler.storm;\n \n /**\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

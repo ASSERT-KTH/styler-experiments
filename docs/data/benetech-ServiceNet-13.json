@@ -1,0 +1,124 @@
+{
+    "project_name": "benetech-ServiceNet",
+    "violation_id": "13",
+    "information": {
+        "violations": [
+            {
+                "line": "60",
+                "severity": "error",
+                "message": "Line is longer than 125 characters (found 126).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "            report = data.getReport();\n        } else {\n            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData.class));\n\n            report = persistLinkForCareData(entities, data);\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "error",
+                    "message": "Line is longer than 125 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "118",
+                    "severity": "error",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "128",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "135",
+                    "severity": "error",
+                    "message": "'=' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/13/LinkForCareDataAdapter.java\nindex 975bfb11d61..5bae2d032ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/13/LinkForCareDataAdapter.java\n@@ -57,9 +57,7 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n             }\n             report = data.getReport();\n         } else {\n-            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData.class));\n-\n-            report = persistLinkForCareData(entities, data);\n+            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData. class ));report= persistLinkForCareData(entities, data);\n         }\n         transactionSynchronizationService.updateOrganizationMatchesWithoutSynchronization();\n         return report;\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/13/LinkForCareDataAdapter.java\nindex 975bfb11d61..e36a4276a1d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/13/LinkForCareDataAdapter.java\n@@ -38,7 +38,8 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n     @Autowired\n     private ImportManager importManager;\n \n-    @Autowired private TransactionSynchronizationService transactionSynchronizationService;\n+    @Autowired\n+    private TransactionSynchronizationService transactionSynchronizationService;\n \n     @Override\n     public DataImportReport importData(SingleImportData data) {\n@@ -57,7 +58,8 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n             }\n             report = data.getReport();\n         } else {\n-            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData.class));\n+            List<LinkForCareData> entities =\n+                gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData.class));\n \n             report = persistLinkForCareData(entities, data);\n         }\n@@ -87,7 +89,7 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n     }\n \n     private Organization getOrganizationToPersist(LinkForCareDataMapper mapper, LinkForCareData entity,\n-        Location location, Service service, Set<Phone> phones) {\n+                                                  Location location, Service service, Set<Phone> phones) {\n         Organization organization = mapper.extractOrganization(entity);\n         organization.setLocations(location != null ? Set.of(location) : new HashSet<>());\n         organization.setServices(Set.of(service));\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "61",
+                    "severity": "error",
+                    "message": "Line is longer than 125 characters (found 126).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/13/LinkForCareDataAdapter.java\nindex 975bfb11d61..a35e09bdccd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/13/LinkForCareDataAdapter.java\n@@ -38,7 +38,8 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n     @Autowired\n     private ImportManager importManager;\n \n-    @Autowired private TransactionSynchronizationService transactionSynchronizationService;\n+    @Autowired\n+private TransactionSynchronizationService transactionSynchronizationService;\n \n     @Override\n     public DataImportReport importData(SingleImportData data) {\n@@ -142,4 +143,4 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n \n         return serviceTaxonomies;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "error",
+                    "message": "Line is longer than 125 characters (found 175).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "118",
+                    "severity": "error",
+                    "message": "'.' is followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "128",
+                    "severity": "error",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "60",
+                    "column": "135",
+                    "severity": "error",
+                    "message": "'=' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/13/LinkForCareDataAdapter.java\nindex 975bfb11d61..5bae2d032ad 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/13/LinkForCareDataAdapter.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/13/LinkForCareDataAdapter.java\n@@ -57,9 +57,7 @@ public class LinkForCareDataAdapter extends SingleDataAdapter {\n             }\n             report = data.getReport();\n         } else {\n-            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData.class));\n-\n-            report = persistLinkForCareData(entities, data);\n+            List<LinkForCareData> entities = gson.fromJson(data.getSingleObjectData(), new ListType<>(LinkForCareData. class ));report= persistLinkForCareData(entities, data);\n         }\n         transactionSynchronizationService.updateOrganizationMatchesWithoutSynchronization();\n         return report;\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "99",
+    "information": {
+        "violations": [
+            {
+                "line": "98",
+                "column": "109",
+                "severity": "warning",
+                "message": "'+' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "    }\n    throw new InvocationException(BAD_REQUEST,\n        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n            Strings.join(\",\", getAppliedWindowTime().iterator()));\n  }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/99/DefaultDataSource.java\nindex 30241c8c21e..cb58e7c9701 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/99/DefaultDataSource.java\n@@ -95,7 +95,7 @@ public class DefaultDataSource implements DataSource {\n       return registryMonitor.measure(index, calculateLatency);\n     }\n     throw new InvocationException(BAD_REQUEST,\n-        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n-            Strings.join(\",\", getAppliedWindowTime().iterator()));\n+        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \"\n+            + Strings.join(\",\", getAppliedWindowTime().iterator()));\n   }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "98",
+                    "column": "109",
+                    "severity": "warning",
+                    "message": "'+' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "98",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/99/DefaultDataSource.java\nindex 30241c8c21e..179c8ee7e66 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/99/DefaultDataSource.java\n@@ -95,7 +95,6 @@ public class DefaultDataSource implements DataSource {\n       return registryMonitor.measure(index, calculateLatency);\n     }\n     throw new InvocationException(BAD_REQUEST,\n-        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n-            Strings.join(\",\", getAppliedWindowTime().iterator()));\n+        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" + Strings.join(\",\", getAppliedWindowTime().iterator()));\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 121).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "96",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 203).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/99/DefaultDataSource.java\nindex 30241c8c21e..dedf573f037 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/99/DefaultDataSource.java\n@@ -24,13 +24,11 @@ import java.util.HashSet;\n import java.util.List;\n import java.util.Map;\n import java.util.Set;\n-\n import org.apache.servicecomb.foundation.common.exceptions.ServiceCombException;\n import org.apache.servicecomb.metrics.core.monitor.RegistryMonitor;\n import org.apache.servicecomb.swagger.invocation.exception.InvocationException;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.stereotype.Component;\n-\n import com.google.common.collect.Lists;\n import com.netflix.config.DynamicPropertyFactory;\n import com.netflix.servo.util.Strings;\n@@ -44,7 +42,8 @@ public class DefaultDataSource implements DataSource {\n   @Autowired\n   public DefaultDataSource(RegistryMonitor registryMonitor) {\n     this(registryMonitor,\n-        DynamicPropertyFactory.getInstance().getStringProperty(MetricsConfig.METRICS_POLLING_TIME, \"5000\").get());\n+      DynamicPropertyFactory.getInstance().getStringProperty(MetricsConfig.METRICS_POLLING_TIME, \"5000\")\n+                                          .get());\n   }\n \n   public DefaultDataSource(RegistryMonitor registryMonitor, String pollingSettings) {\n@@ -58,8 +57,7 @@ public class DefaultDataSource implements DataSource {\n         if (settingValue > 0) {\n           parsePollingSettings.add(settingValue);\n         } else {\n-          throw new ServiceCombException(\n-              \"bad format servicecomb.metrics.window_time : \" + String.valueOf(settingValue));\n+          throw new ServiceCombException(\"bad format servicecomb.metrics.window_time : \" + String.valueOf(settingValue));\n         }\n       } catch (NumberFormatException e) {\n         throw new ServiceCombException(\"bad format servicecomb.metrics.window_time\", e);\n@@ -94,8 +92,7 @@ public class DefaultDataSource implements DataSource {\n     if (index != null) {\n       return registryMonitor.measure(index, calculateLatency);\n     }\n-    throw new InvocationException(BAD_REQUEST,\n-        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n-            Strings.join(\",\", getAppliedWindowTime().iterator()));\n+\n+    throw new InvocationException(BAD_REQUEST, \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" + Strings.join(\",\", getAppliedWindowTime().iterator()));\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/99/DefaultDataSource.java\nindex 30241c8c21e..cb58e7c9701 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/99/DefaultDataSource.java\n@@ -95,7 +95,7 @@ public class DefaultDataSource implements DataSource {\n       return registryMonitor.measure(index, calculateLatency);\n     }\n     throw new InvocationException(BAD_REQUEST,\n-        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n-            Strings.join(\",\", getAppliedWindowTime().iterator()));\n+        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \"\n+            + Strings.join(\",\", getAppliedWindowTime().iterator()));\n   }\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/99/DefaultDataSource.java\nindex 30241c8c21e..cb58e7c9701 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/99/DefaultDataSource.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/99/DefaultDataSource.java\n@@ -95,7 +95,7 @@ public class DefaultDataSource implements DataSource {\n       return registryMonitor.measure(index, calculateLatency);\n     }\n     throw new InvocationException(BAD_REQUEST,\n-        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \" +\n-            Strings.join(\",\", getAppliedWindowTime().iterator()));\n+        \"windowTime : \" + windowTime + \" unset in servicecomb.metrics.window_time,current available are : \"\n+            + Strings.join(\",\", getAppliedWindowTime().iterator()));\n   }\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff"
+    ]
+}

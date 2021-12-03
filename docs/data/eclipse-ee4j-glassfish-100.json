@@ -1,0 +1,79 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "100",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "column": "5",
+                "severity": "warning",
+                "message": "'testMessageTrace' has incorrect indentation level 4, expected level should be 8.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "\n    public void\n    testMessageTrace()\n            throws ClassNotFoundException {\n        final Set<WebServiceEndpoint> s =\n                getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/100/WSMsgTraceTest.java\nindex 598d271e1c3..609d7fa5f3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/100/WSMsgTraceTest.java\n@@ -34,7 +34,7 @@ public final class WSMsgTraceTest\n     }\n \n     public void\n-    testMessageTrace()\n+                 testMessageTrace()\n             throws ClassNotFoundException {\n         final Set<WebServiceEndpoint> s =\n                 getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "38",
+                    "column": "5",
+                    "severity": "warning",
+                    "message": "'testMessageTrace' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/100/WSMsgTraceTest.java\nindex 598d271e1c3..2531b49bfbf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/100/WSMsgTraceTest.java\n@@ -26,18 +26,19 @@ import java.util.Set;\n \n \n /**\n+ *\n  */\n public final class WSMsgTraceTest\n-        extends AMXTestBase {\n+    extends AMXTestBase {\n     public WSMsgTraceTest()\n-            throws IOException {\n+        throws IOException {\n     }\n \n     public void\n     testMessageTrace()\n-            throws ClassNotFoundException {\n+        throws ClassNotFoundException {\n         final Set<WebServiceEndpoint> s =\n-                getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n+            getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n \n         for (final WebServiceEndpoint wsp : s) {\n             MessageTrace[] msgs = wsp.getMessagesInHistory();\n@@ -55,17 +56,17 @@ public final class WSMsgTraceTest\n                 System.out.println(\" response size \" + msg.getResponseSize());\n                 System.out.println(\" request size \" + msg.getRequestSize());\n                 System.out.println(\" transport type is \" +\n-                        msg.getTransportType());\n+                    msg.getTransportType());\n                 System.out.println(\" request headers are \" +\n-                        msg.getHTTPRequestHeaders());\n+                    msg.getHTTPRequestHeaders());\n                 System.out.println(\" response headers are \" +\n-                        msg.getHTTPResponseHeaders());\n+                    msg.getHTTPResponseHeaders());\n                 System.out.println(\" fault code is  \" + msg.getFaultCode());\n                 System.out.println(\" fault string is  \" + msg.getFaultString());\n                 System.out.println(\" fault actor is \" + msg.getFaultActor());\n                 System.out.println(\" client host is  \" + msg.getClientHost());\n                 System.out.println(\" principal name is \" +\n-                        msg.getPrincipalName());\n+                    msg.getPrincipalName());\n             }\n         }\n     }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/100/WSMsgTraceTest.java\nindex 598d271e1c3..81672afc198 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/100/WSMsgTraceTest.java\n@@ -29,12 +29,12 @@ import java.util.Set;\n  */\n public final class WSMsgTraceTest\n         extends AMXTestBase {\n+\n     public WSMsgTraceTest()\n             throws IOException {\n     }\n \n-    public void\n-    testMessageTrace()\n+    public void testMessageTrace()\n             throws ClassNotFoundException {\n         final Set<WebServiceEndpoint> s =\n                 getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n@@ -71,6 +71,4 @@ public final class WSMsgTraceTest\n     }\n \n \n-}\n-\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/100/WSMsgTraceTest.java\nindex 598d271e1c3..609d7fa5f3b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/100/WSMsgTraceTest.java\n@@ -34,7 +34,7 @@ public final class WSMsgTraceTest\n     }\n \n     public void\n-    testMessageTrace()\n+                 testMessageTrace()\n             throws ClassNotFoundException {\n         final Set<WebServiceEndpoint> s =\n                 getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "column": "1",
+                    "severity": "warning",
+                    "message": "'testMessageTrace' has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/100/WSMsgTraceTest.java\nindex 598d271e1c3..7e7c3e7f852 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/100/WSMsgTraceTest.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/100/WSMsgTraceTest.java\n@@ -34,7 +34,7 @@ public final class WSMsgTraceTest\n     }\n \n     public void\n-    testMessageTrace()\n+testMessageTrace()\n             throws ClassNotFoundException {\n         final Set<WebServiceEndpoint> s =\n                 getQueryMgr().queryJ2EETypeSet(J2EETypes.WEB_SERVICE_ENDPOINT);\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

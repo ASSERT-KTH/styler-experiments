@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "348",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/348/DynamicNeighborElement.java\nindex 80cc399dbe3..08af07abc91 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/348/DynamicNeighborElement.java\n@@ -34,70 +34,70 @@ import java.util.Arrays;\n  */\n public class DynamicNeighborElement implements IElement {\n \n-  private byte[] data;\n-  private DynamicLongArray dynamicData;\n-\n-  public DynamicNeighborElement(byte[] data) {\n-    this.data = data;\n-    this.dynamicData = null;\n-  }\n-\n-  public DynamicNeighborElement() {\n-    this.dynamicData = new DynamicLongArray(-1);\n-    this.data = new byte[0];\n-  }\n-\n-  public byte[] getData() {\n-    return data;\n-  }\n-\n-  public void trans() {\n-    long[] temp = dynamicData.getData();\n-    Arrays.sort(temp);\n-    this.data = ScalaKryoInstantiator.defaultPool().toBytesWithoutClass(temp);\n-    this.dynamicData = null;\n-  }\n-\n-  public void add(long[] in) {\n-    for (int i = 0; i < in.length; i ++) {\n-      this.dynamicData.add(in[i]);\n+    private byte[] data;\n+    private DynamicLongArray dynamicData;\n+\n+    public DynamicNeighborElement(byte[] data) {\n+        this.data = data;\n+        this.dynamicData = null;\n+    }\n+\n+    public DynamicNeighborElement() {\n+        this.dynamicData = new DynamicLongArray(-1);\n+        this.data = new byte[0];\n+    }\n+\n+    public byte[] getData() {\n+        return data;\n+    }\n+\n+    public void trans() {\n+        long[] temp = dynamicData.getData();\n+        Arrays.sort(temp);\n+        this.data = ScalaKryoInstantiator.defaultPool().toBytesWithoutClass(temp);\n+        this.dynamicData = null;\n+    }\n+\n+    public void add(long[] in) {\n+        for (int i = 0; i < in.length; i++) {\n+            this.dynamicData.add(in[i]);\n+        }\n+    }\n+\n+    @Override\n+    public DynamicNeighborElement deepClone() {\n+        byte[] newData = new byte[data.length];\n+        System.arraycopy(data, 0, newData, 0, data.length);\n+        return new DynamicNeighborElement(newData);\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        ByteBufSerdeUtils.serializeBytes(output, data);\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        data = ByteBufSerdeUtils.deserializeBytes(input);\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return 4 + data.length;\n+    }\n+\n+    @Override\n+    public void serialize(DataOutputStream output) throws IOException {\n+        StreamSerdeUtils.serializeBytes(output, data);\n+    }\n+\n+    @Override\n+    public void deserialize(DataInputStream input) throws IOException {\n+        data = StreamSerdeUtils.deserializeBytes(input);\n+    }\n+\n+    @Override\n+    public int dataLen() {\n+        return bufferLen();\n     }\n-  }\n-\n-  @Override\n-  public DynamicNeighborElement deepClone() {\n-    byte[] newData = new byte[data.length];\n-    System.arraycopy(data, 0, newData, 0, data.length);\n-    return new DynamicNeighborElement(newData);\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    ByteBufSerdeUtils.serializeBytes(output, data);\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    data = ByteBufSerdeUtils.deserializeBytes(input);\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    return 4 + data.length;\n-  }\n-\n-  @Override\n-  public void serialize(DataOutputStream output) throws IOException {\n-    StreamSerdeUtils.serializeBytes(output, data);\n-  }\n-\n-  @Override\n-  public void deserialize(DataInputStream input) throws IOException {\n-    data = StreamSerdeUtils.deserializeBytes(input);\n-  }\n-\n-  @Override\n-  public int dataLen() {\n-    return bufferLen();\n-  }\n }\n",
+            "diff_size": 103
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/348/DynamicNeighborElement.java\nindex 80cc399dbe3..aab12f37324 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/348/DynamicNeighborElement.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.graph.model.neighbor.dynamic;\n \n import com.tencent.angel.common.ByteBufSerdeUtils;\n@@ -100,4 +99,4 @@ public class DynamicNeighborElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/348/DynamicNeighborElement.java\nindex 80cc399dbe3..a1eb9c91d60 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/348/DynamicNeighborElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/348/DynamicNeighborElement.java\n@@ -32,6 +32,7 @@ import java.util.Arrays;\n /**\n  * The complex object that contains a integer array,, it can be stored in PS\n  */\n+\n public class DynamicNeighborElement implements IElement {\n \n   private byte[] data;\n@@ -59,7 +60,7 @@ public class DynamicNeighborElement implements IElement {\n   }\n \n   public void add(long[] in) {\n-    for (int i = 0; i < in.length; i ++) {\n+    for (int i = 0; i < in.length; i++) {\n       this.dynamicData.add(in[i]);\n     }\n   }\n@@ -100,4 +101,5 @@ public class DynamicNeighborElement implements IElement {\n   public int dataLen() {\n     return bufferLen();\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

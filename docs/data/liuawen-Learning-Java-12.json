@@ -1,0 +1,71 @@
+{
+    "project_name": "liuawen-Learning-Java",
+    "violation_id": "12",
+    "information": {
+        "violations": [
+            {
+                "line": "3",
+                "column": "1",
+                "severity": "error",
+                "message": "import statement should not be line-wrapped.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+            }
+        ]
+    },
+    "source_code": "package com.itheima.ioc;\nimport org.springframework.context.ApplicationContext;\nimport \n    org.springframework.context.support.ClassPathXmlApplicationContext;\npublic class TestDI {\n\tpublic static void main(String[] args) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/12/TestDI.java\nindex d34621baa6f..c0f9367e8e3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/liuawen-Learning-Java/styler/05_predictions/final/files-repaired/12/TestDI.java\n@@ -1,7 +1,6 @@\n package com.itheima.ioc;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class TestDI {\r\n \tpublic static void main(String[] args) {\r\n \t\t//1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "4",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "import statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/12/TestDI.java\nindex d34621baa6f..b3f0ec34e23 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/checkstyle_idea/12/TestDI.java\n@@ -1,16 +1,18 @@\n package com.itheima.ioc;\r\n+\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n+import\r\n     org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+\r\n public class TestDI {\r\n-\tpublic static void main(String[] args) {\r\n-\t\t//1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n-\t\tApplicationContext applicationContext = \r\n-             new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n-\t\t//2.\u901a\u8fc7\u5bb9\u5668\u83b7\u53d6UserService\u5b9e\u4f8b\r\n-\t\tUserService userService = \r\n+    public static void main(String[] args) {\r\n+        //1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n+        ApplicationContext applicationContext =\r\n+            new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n+        //2.\u901a\u8fc7\u5bb9\u5668\u83b7\u53d6UserService\u5b9e\u4f8b\r\n+        UserService userService =\r\n             (UserService) applicationContext.getBean(\"userService\");\r\n-\t\t//3.\u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684say()\u65b9\u6cd5\r\n-\t\tuserService.say();\r\n-\t}\r\n+        //3.\u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684say()\u65b9\u6cd5\r\n+        userService.say();\r\n+    }\r\n }\r\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/12/TestDI.java\nindex d34621baa6f..e4df4b89242 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/naturalize/12/TestDI.java\n@@ -1,16 +1,14 @@\n package com.itheima.ioc;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\n+\n public class TestDI {\r\n \tpublic static void main(String[] args) {\r\n \t\t//1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n-\t\tApplicationContext applicationContext = \r\n-             new ClassPathXmlApplicationContext(\"applicationContext.xml\");\r\n-\t\t//2.\u901a\u8fc7\u5bb9\u5668\u83b7\u53d6UserService\u5b9e\u4f8b\r\n-\t\tUserService userService = \r\n-            (UserService) applicationContext.getBean(\"userService\");\r\n-\t\t//3.\u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684say()\u65b9\u6cd5\r\n+\t\tApplicationContext applicationContext = new ClassPathXmlApplicationContext(\"applicationContext.xml\");\n+//2.\u901a\u8fc7\u5bb9\u5668\u83b7\u53d6UserService\u5b9e\u4f8b\r\n+\t\tUserService userService = (UserService) applicationContext.getBean(\"userService\");\n+//3.\u8c03\u7528\u5b9e\u4f8b\u4e2d\u7684say()\u65b9\u6cd5\r\n \t\tuserService.say();\r\n \t}\r\n-}\r\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/12/TestDI.java\nindex d34621baa6f..c0f9367e8e3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/random/files-repaired/12/TestDI.java\n@@ -1,7 +1,6 @@\n package com.itheima.ioc;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class TestDI {\r\n \tpublic static void main(String[] args) {\r\n \t\t//1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/12/TestDI.java\nindex d34621baa6f..c0f9367e8e3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/violations/12/TestDI.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/liuawen-Learning-Java/styler/05_predictions/three_grams/files-repaired/12/TestDI.java\n@@ -1,7 +1,6 @@\n package com.itheima.ioc;\r\n import org.springframework.context.ApplicationContext;\r\n-import \r\n-    org.springframework.context.support.ClassPathXmlApplicationContext;\r\n+import org.springframework.context.support.ClassPathXmlApplicationContext;\r\n public class TestDI {\r\n \tpublic static void main(String[] args) {\r\n \t\t//1.\u521d\u59cb\u5316spring\u5bb9\u5668\uff0c\u52a0\u8f7d\u914d\u7f6e\u6587\u4ef6\r\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

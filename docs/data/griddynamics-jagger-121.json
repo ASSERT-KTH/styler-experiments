@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "121",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "column": "22",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "                trendsActivity = new Trends(resources);\n            }\n            if (!was){\n                trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n                was = true;\n            }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/121/JaggerActivityMapper.java\nindex aa6fad35431..cebc3a0d1b5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/121/JaggerActivityMapper.java\n@@ -27,7 +27,7 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n+            if (!was) {\n                 trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n                 was = true;\n             }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/121/JaggerActivityMapper.java\nindex aa6fad35431..68a5d457f3a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/121/JaggerActivityMapper.java\n@@ -27,8 +27,8 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n-                trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n+            if (!was) {\n+                trendsActivity.getPropertiesUpdatePlace((TrendsPlace) place);\n                 was = true;\n             }\n             return trendsActivity;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/121/JaggerActivityMapper.java\nindex aa6fad35431..4bb4ff8c3cc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/121/JaggerActivityMapper.java\n@@ -27,7 +27,7 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n+            if (!was) {\n                 trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n                 was = true;\n             }\n@@ -36,4 +36,4 @@ public class JaggerActivityMapper implements ActivityMapper {\n \n         return null;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/121/JaggerActivityMapper.java\nindex aa6fad35431..4347098b89d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/121/JaggerActivityMapper.java\n@@ -11,10 +11,14 @@ import com.griddynamics.jagger.webclient.client.trends.TrendsPlace;\n  * @author \"Artem Kirillov\" (akirillov@griddynamics.com)\n  * @since 6/20/12\n  */\n+\n+\n public class JaggerActivityMapper implements ActivityMapper {\n+\n     JaggerResources resources;\n \n     Trends trendsActivity;\n+\n     boolean was = false;\n \n     public JaggerActivityMapper(JaggerResources resources) {\n@@ -27,13 +31,12 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n-                trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n+            if (!was) {\n+                trendsActivity.getPropertiesUpdatePlace((TrendsPlace) place);\n                 was = true;\n             }\n             return trendsActivity;\n         }\n-\n         return null;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/121/JaggerActivityMapper.java\nindex aa6fad35431..cebc3a0d1b5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/121/JaggerActivityMapper.java\n@@ -27,7 +27,7 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n+            if (!was) {\n                 trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n                 was = true;\n             }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/121/JaggerActivityMapper.java\nindex aa6fad35431..cebc3a0d1b5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/121/JaggerActivityMapper.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/121/JaggerActivityMapper.java\n@@ -27,7 +27,7 @@ public class JaggerActivityMapper implements ActivityMapper {\n             if (trendsActivity == null) {\n                 trendsActivity = new Trends(resources);\n             }\n-            if (!was){\n+            if (!was) {\n                 trendsActivity.getPropertiesUpdatePlace((TrendsPlace)place);\n                 was = true;\n             }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

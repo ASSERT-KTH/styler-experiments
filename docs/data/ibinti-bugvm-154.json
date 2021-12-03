@@ -1,0 +1,79 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "154",
+    "information": {
+        "violations": [
+            {
+                "line": "7",
+                "column": "1",
+                "severity": "error",
+                "message": "'{' at column 1 should be on the previous line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "public interface ASN1ApplicationSpecificParser\n    extends ASN1Encodable, InMemoryRepresentable\n{\n    ASN1Encodable readObject()\n        throws IOException;\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..a67eda1b417 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/154/ASN1ApplicationSpecificParser.java\n@@ -3,8 +3,7 @@ package com.android.org.bouncycastle.asn1;\n import java.io.IOException;\n \n public interface ASN1ApplicationSpecificParser\n-    extends ASN1Encodable, InMemoryRepresentable\n-{\n-    ASN1Encodable readObject()\n+    extends ASN1Encodable, InMemoryRepresentable {\n+        ASN1Encodable readObject()\n         throws IOException;\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..c4e5f267830 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/154/ASN1ApplicationSpecificParser.java\n@@ -3,8 +3,7 @@ package com.android.org.bouncycastle.asn1;\n import java.io.IOException;\n \n public interface ASN1ApplicationSpecificParser\n-    extends ASN1Encodable, InMemoryRepresentable\n-{\n-    ASN1Encodable readObject()\n-        throws IOException;\n+  extends ASN1Encodable, InMemoryRepresentable {\n+  ASN1Encodable readObject()\n+    throws IOException;\n }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..8932947ca54 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/154/ASN1ApplicationSpecificParser.java\n@@ -3,8 +3,7 @@ package com.android.org.bouncycastle.asn1;\n import java.io.IOException;\n \n public interface ASN1ApplicationSpecificParser\n-    extends ASN1Encodable, InMemoryRepresentable\n-{\n+    extends ASN1Encodable, InMemoryRepresentable {\n     ASN1Encodable readObject()\n         throws IOException;\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 93).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..8b05d63141b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/codebuff/154/ASN1ApplicationSpecificParser.java\n@@ -2,9 +2,9 @@ package com.android.org.bouncycastle.asn1;\n \n import java.io.IOException;\n \n-public interface ASN1ApplicationSpecificParser\n-    extends ASN1Encodable, InMemoryRepresentable\n-{\n-    ASN1Encodable readObject()\n-        throws IOException;\n-}\n+\n+public interface ASN1ApplicationSpecificParser extends ASN1Encodable, InMemoryRepresentable {\n+\n+\n+    ASN1Encodable readObject() throws IOException;\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "7",
+                    "column": "9",
+                    "severity": "error",
+                    "message": "'{' at column 9 should be on the previous line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..13ec6809914 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/154/ASN1ApplicationSpecificParser.java\n@@ -4,7 +4,6 @@ import java.io.IOException;\n \n public interface ASN1ApplicationSpecificParser\n     extends ASN1Encodable, InMemoryRepresentable\n-{\n-    ASN1Encodable readObject()\n+        { ASN1Encodable readObject()\n         throws IOException;\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/154/ASN1ApplicationSpecificParser.java\nindex 3e2cf790112..a67eda1b417 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/154/ASN1ApplicationSpecificParser.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/154/ASN1ApplicationSpecificParser.java\n@@ -3,8 +3,7 @@ package com.android.org.bouncycastle.asn1;\n import java.io.IOException;\n \n public interface ASN1ApplicationSpecificParser\n-    extends ASN1Encodable, InMemoryRepresentable\n-{\n-    ASN1Encodable readObject()\n+    extends ASN1Encodable, InMemoryRepresentable {\n+        ASN1Encodable readObject()\n         throws IOException;\n }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,199 @@
+{
+    "project_name": "apache-shardingsphere",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "82",
+                "severity": "warning",
+                "message": "'else' child has incorrect indentation level 13, expected level should be 12.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "            ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n        } else {\n             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n        }\n        return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "82",
+                    "column": "32",
+                    "severity": "warning",
+                    "message": "'=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-shardingsphere/styler/05_predictions/final/files-repaired/18/LogicSchema.java\nindex 9a379fbf510..acd89168a91 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-shardingsphere/styler/05_predictions/final/files-repaired/18/LogicSchema.java\n@@ -79,7 +79,9 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n+            ruleSchemaMetaData =ShardingOrchestrationFacade\n+    .\n+        getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n         }\n         return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/checkstyle_idea/18/LogicSchema.java\nindex 9a379fbf510..095fc189b1f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/checkstyle_idea/18/LogicSchema.java\n@@ -50,15 +50,15 @@ import java.util.stream.Collectors;\n  */\n @Getter\n public abstract class LogicSchema {\n-    \n+\n     private final String name;\n-    \n+\n     private final SQLParserEngine sqlParserEngine;\n-    \n+\n     private JDBCBackendDataSource backendDataSource;\n-    \n+\n     private ShardingSphereMetaData metaData;\n-    \n+\n     public LogicSchema(final String name, final Map<String, YamlDataSourceParameter> dataSources, final Collection<BaseRule> rules) throws SQLException {\n         this.name = name;\n         sqlParserEngine = SQLParserEngineFactory.getSQLParserEngine(DatabaseTypes.getTrunkDatabaseTypeName(LogicSchemas.getInstance().getDatabaseType()));\n@@ -66,7 +66,7 @@ public abstract class LogicSchema {\n         metaData = loadOrCreateMetaData(name, rules);\n         ShardingOrchestrationEventBus.getInstance().register(this);\n     }\n-    \n+\n     private ShardingSphereMetaData loadOrCreateMetaData(final String name, final Collection<BaseRule> rules) throws SQLException {\n         boolean isOverwrite = null != ShardingOrchestrationFacade.getInstance() && ShardingOrchestrationFacade.getInstance().isOverwrite();\n         DatabaseType databaseType = LogicSchemas.getInstance().getDatabaseType();\n@@ -79,37 +79,37 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n+            ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n         }\n         return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n-    \n+\n     private RuleSchemaMetaData loadRuleSchemaMetaData(final DatabaseType databaseType, final Collection<BaseRule> rules) throws SQLException {\n         return new RuleSchemaMetaDataLoader(rules).load(databaseType, getBackendDataSource().getDataSources(), ShardingProxyContext.getInstance().getProperties());\n     }\n-    \n+\n     private Map<String, DatabaseAccessConfiguration> getDatabaseAccessConfigurationMap() {\n         return backendDataSource.getDataSourceParameters().entrySet().stream()\n-                .collect(Collectors.toMap(entry -> entry.getKey(), entry -> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n+            .collect(Collectors.toMap(entry -> entry.getKey(), entry -> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n     }\n-    \n+\n     /**\n      * Get Sharding rule.\n-     * \n+     *\n      * @return sharding rule\n      */\n     // TODO : It is used in many places, but we can consider how to optimize it because of being irrational for logic schema.\n     public abstract ShardingRule getShardingRule();\n-    \n+\n     /**\n      * Get data source parameters.\n-     * \n+     *\n      * @return data source parameters\n      */\n     public Map<String, YamlDataSourceParameter> getDataSources() {\n         return backendDataSource.getDataSourceParameters();\n     }\n-    \n+\n     /**\n      * Renew meta data of the schema.\n      *\n@@ -123,7 +123,7 @@ public abstract class LogicSchema {\n             }\n         }\n     }\n-    \n+\n     /**\n      * Renew data source configuration.\n      *\n@@ -136,10 +136,10 @@ public abstract class LogicSchema {\n             backendDataSource.renew(DataSourceConverter.getDataSourceParameterMap(dataSourceChangedEvent.getDataSourceConfigurations()));\n         }\n     }\n-    \n+\n     /**\n      * Refresh table meta data.\n-     * \n+     *\n      * @param sqlStatementContext SQL statement context\n      * @throws SQLException SQL exception\n      */\n",
+            "diff_size": 18
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "82",
+                    "severity": "warning",
+                    "message": "'else' child has incorrect indentation level 4, expected level should be 12.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "83",
+                    "severity": "warning",
+                    "message": "'else rcurly' has incorrect indentation level 4, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "92",
+                    "severity": "warning",
+                    "message": "Line is longer than 200 characters (found 211).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/naturalize/18/LogicSchema.java\nindex 9a379fbf510..e1499162c6e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/naturalize/18/LogicSchema.java\n@@ -79,8 +79,8 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n-        }\n+    ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n+    }\n         return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n     \n@@ -89,8 +89,7 @@ public abstract class LogicSchema {\n     }\n     \n     private Map<String, DatabaseAccessConfiguration> getDatabaseAccessConfigurationMap() {\n-        return backendDataSource.getDataSourceParameters().entrySet().stream()\n-                .collect(Collectors.toMap(entry -> entry.getKey(), entry -> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n+        return backendDataSource.getDataSourceParameters().entrySet().stream().collect(Collectors.toMap(entry -> entry.getKey(), entry -> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n     }\n     \n     /**\n@@ -145,4 +144,4 @@ public abstract class LogicSchema {\n      */\n     public void refreshTableMetaData(final SQLStatementContext sqlStatementContext) throws SQLException {\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "52",
+                    "severity": "warning",
+                    "message": "'CLASS_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "93",
+                    "severity": "warning",
+                    "message": "Line is longer than 200 characters (found 209).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "93",
+                    "column": "110",
+                    "severity": "warning",
+                    "message": "'->' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "93",
+                    "column": "134",
+                    "severity": "warning",
+                    "message": "'->' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "104",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "153",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' has more than 1 empty lines before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/codebuff/18/LogicSchema.java\nindex 9a379fbf510..c2fb794da3e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/codebuff/18/LogicSchema.java\n@@ -39,7 +39,6 @@ import org.apache.shardingsphere.underlying.common.metadata.datasource.DataSourc\n import org.apache.shardingsphere.underlying.common.metadata.schema.RuleSchemaMetaData;\n import org.apache.shardingsphere.underlying.common.metadata.schema.RuleSchemaMetaDataLoader;\n import org.apache.shardingsphere.underlying.common.rule.BaseRule;\n-\n import java.sql.SQLException;\n import java.util.Collection;\n import java.util.Map;\n@@ -48,17 +47,19 @@ import java.util.stream.Collectors;\n /**\n  * Logic schema.\n  */\n+\n+\n @Getter\n public abstract class LogicSchema {\n-    \n+\n     private final String name;\n-    \n+\n     private final SQLParserEngine sqlParserEngine;\n-    \n+\n     private JDBCBackendDataSource backendDataSource;\n-    \n+\n     private ShardingSphereMetaData metaData;\n-    \n+\n     public LogicSchema(final String name, final Map<String, YamlDataSourceParameter> dataSources, final Collection<BaseRule> rules) throws SQLException {\n         this.name = name;\n         sqlParserEngine = SQLParserEngineFactory.getSQLParserEngine(DatabaseTypes.getTrunkDatabaseTypeName(LogicSchemas.getInstance().getDatabaseType()));\n@@ -66,7 +67,7 @@ public abstract class LogicSchema {\n         metaData = loadOrCreateMetaData(name, rules);\n         ShardingOrchestrationEventBus.getInstance().register(this);\n     }\n-    \n+\n     private ShardingSphereMetaData loadOrCreateMetaData(final String name, final Collection<BaseRule> rules) throws SQLException {\n         boolean isOverwrite = null != ShardingOrchestrationFacade.getInstance() && ShardingOrchestrationFacade.getInstance().isOverwrite();\n         DatabaseType databaseType = LogicSchemas.getInstance().getDatabaseType();\n@@ -79,18 +80,17 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n+            ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n         }\n         return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n-    \n+\n     private RuleSchemaMetaData loadRuleSchemaMetaData(final DatabaseType databaseType, final Collection<BaseRule> rules) throws SQLException {\n         return new RuleSchemaMetaDataLoader(rules).load(databaseType, getBackendDataSource().getDataSources(), ShardingProxyContext.getInstance().getProperties());\n     }\n-    \n+\n     private Map<String, DatabaseAccessConfiguration> getDatabaseAccessConfigurationMap() {\n-        return backendDataSource.getDataSourceParameters().entrySet().stream()\n-                .collect(Collectors.toMap(entry -> entry.getKey(), entry -> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n+        return backendDataSource.getDataSourceParameters().entrySet().stream().collect(Collectors.toMap(entry-> entry.getKey(), entry-> new DatabaseAccessConfiguration(entry.getValue().getUrl(), null, null)));\n     }\n     \n     /**\n@@ -99,6 +99,8 @@ public abstract class LogicSchema {\n      * @return sharding rule\n      */\n     // TODO : It is used in many places, but we can consider how to optimize it because of being irrational for logic schema.\n+\n+\n     public abstract ShardingRule getShardingRule();\n     \n     /**\n@@ -106,6 +108,7 @@ public abstract class LogicSchema {\n      * \n      * @return data source parameters\n      */\n+\n     public Map<String, YamlDataSourceParameter> getDataSources() {\n         return backendDataSource.getDataSourceParameters();\n     }\n@@ -115,6 +118,7 @@ public abstract class LogicSchema {\n      *\n      * @param event meta data changed event.\n      */\n+\n     @Subscribe\n     public final synchronized void renew(final MetaDataChangedEvent event) {\n         for (String each : event.getSchemaNames()) {\n@@ -130,6 +134,7 @@ public abstract class LogicSchema {\n      * @param dataSourceChangedEvent data source changed event.\n      * @throws Exception exception\n      */\n+\n     @Subscribe\n     public final synchronized void renew(final DataSourceChangedEvent dataSourceChangedEvent) throws Exception {\n         if (name.equals(dataSourceChangedEvent.getShardingSchemaName())) {\n@@ -143,6 +148,8 @@ public abstract class LogicSchema {\n      * @param sqlStatementContext SQL statement context\n      * @throws SQLException SQL exception\n      */\n+\n+\n     public void refreshTableMetaData(final SQLStatementContext sqlStatementContext) throws SQLException {\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "82",
+                    "column": "32",
+                    "severity": "warning",
+                    "message": "'=' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/styler/05_predictions/random/files-repaired/18/LogicSchema.java\nindex 9a379fbf510..acd89168a91 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/styler/05_predictions/random/files-repaired/18/LogicSchema.java\n@@ -79,7 +79,9 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n+            ruleSchemaMetaData =ShardingOrchestrationFacade\n+    .\n+        getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n         }\n         return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "82",
+                    "severity": "warning",
+                    "message": "'method def' child has incorrect indentation level 12, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "82",
+                    "severity": "warning",
+                    "message": "Line is longer than 200 characters (found 247).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "167",
+                    "severity": "warning",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "175",
+                    "severity": "warning",
+                    "message": "';' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "176",
+                    "severity": "warning",
+                    "message": "'}' at column 176 should have line break before.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "176",
+                    "severity": "warning",
+                    "message": "'}' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "176",
+                    "severity": "warning",
+                    "message": "'}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "177",
+                    "severity": "warning",
+                    "message": "'return' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                },
+                {
+                    "line": "82",
+                    "column": "247",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/styler/05_predictions/three_grams/files-repaired/18/LogicSchema.java\nindex 9a379fbf510..dd4e19e93c7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/violations/18/LogicSchema.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-shardingsphere/styler/05_predictions/three_grams/files-repaired/18/LogicSchema.java\n@@ -79,9 +79,7 @@ public abstract class LogicSchema {\n             ruleSchemaMetaData = loadRuleSchemaMetaData(databaseType, rules);\n             ShardingOrchestrationFacade.getInstance().getMetaDataCenter().persistMetaDataCenterNode(name, ruleSchemaMetaData);\n         } else {\n-             ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType, rules));\n-        }\n-        return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n+            ruleSchemaMetaData = ShardingOrchestrationFacade.getInstance().getMetaDataCenter().loadRuleSchemaMetaData(name).orElse(loadRuleSchemaMetaData(databaseType,rules));}return new ShardingSphereMetaData(dataSourceMetas, ruleSchemaMetaData);\n     }\n     \n     private RuleSchemaMetaData loadRuleSchemaMetaData(final DatabaseType databaseType, final Collection<BaseRule> rules) throws SQLException {\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

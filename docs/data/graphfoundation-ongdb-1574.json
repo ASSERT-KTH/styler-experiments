@@ -1,0 +1,124 @@
+{
+    "project_name": "graphfoundation-ongdb",
+    "violation_id": "1574",
+    "information": {
+        "violations": [
+            {
+                "line": "1",
+                "severity": "error",
+                "message": "Missing, wrong or duplicated license header",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+            }
+        ]
+    },
+    "source_code": "/*\n * Copyright (c) 2002-2020 \"Neo4j,\"\n * Neo4j Sweden AB [http://neo4j.com]\n *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "30",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "49",
+                    "column": "52",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "51",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "51",
+                    "column": "59",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1574/ExecutingQueryStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/1574/ExecutingQueryStatus.java\nindex 4a851656320..1e78ac92563 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1574/ExecutingQueryStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/checkstyle_idea/1574/ExecutingQueryStatus.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.kernel.api.query;\n \n import java.util.Collections;\n@@ -34,43 +35,45 @@ import org.neo4j.kernel.impl.locking.ActiveLock;\n  */\n abstract class ExecutingQueryStatus\n {\n-    static final String PLANNING_STATE = \"planning\";\n-    static final String RUNNING_STATE = \"running\";\n-    static final String WAITING_STATE = \"waiting\";\n-    /**\n-     * Time in nanoseconds that has been spent waiting in the current state.\n-     * This is the portion of wait time not included in the {@link ExecutingQuery#waitTimeNanos} field.\n-     *\n-     * @param currentTimeNanos\n-     *         the current timestamp on the nano clock.\n-     * @return the time between the time this state started waiting and the provided timestamp.\n-     */\n-    abstract long waitTimeNanos( long currentTimeNanos );\n+  static final String PLANNING_STATE = \"planning\";\n+  static final String RUNNING_STATE = \"running\";\n+  static final String WAITING_STATE = \"waiting\";\n+\n+  /**\n+   * Time in nanoseconds that has been spent waiting in the current state.\n+   * This is the portion of wait time not included in the {@link ExecutingQuery#waitTimeNanos} field.\n+   *\n+   * @param currentTimeNanos the current timestamp on the nano clock.\n+   * @return the time between the time this state started waiting and the provided timestamp.\n+   */\n+  abstract long waitTimeNanos(long currentTimeNanos);\n \n-    abstract Map<String,Object> toMap( long currentTimeNanos );\n+  abstract Map<String, Object> toMap(long currentTimeNanos);\n \n-    abstract String name();\n+  abstract String name();\n \n-    boolean isPlanning()\n-    {\n-        return false;\n-    }\n+  boolean isPlanning()\n+  {\n+    return false;\n+  }\n \n-    /**\n-     * Is query waiting on a locks\n-     * @return true if waiting on locks, false otherwise\n-     */\n-    boolean isWaitingOnLocks()\n-    {\n-        return false;\n-    }\n+  /**\n+   * Is query waiting on a locks\n+   *\n+   * @return true if waiting on locks, false otherwise\n+   */\n+  boolean isWaitingOnLocks()\n+  {\n+    return false;\n+  }\n \n-    /**\n-     * List of locks query is waiting on. Will be empty for all of the statuses except for {@link WaitingOnLock}.\n-     * @return list of locks query is waiting on, empty list if query is not waiting.\n-     */\n-    List<ActiveLock> waitingOnLocks()\n-    {\n-        return Collections.emptyList();\n-    }\n+  /**\n+   * List of locks query is waiting on. Will be empty for all of the statuses except for {@link WaitingOnLock}.\n+   *\n+   * @return list of locks query is waiting on, empty list if query is not waiting.\n+   */\n+  List<ActiveLock> waitingOnLocks()\n+  {\n+    return Collections.emptyList();\n+  }\n }\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1574/ExecutingQueryStatus.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/1574/ExecutingQueryStatus.java\nindex 4a851656320..955b938c270 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/violations/1574/ExecutingQueryStatus.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/graphfoundation-ongdb/naturalize/1574/ExecutingQueryStatus.java\n@@ -37,7 +37,8 @@ abstract class ExecutingQueryStatus\n     static final String PLANNING_STATE = \"planning\";\n     static final String RUNNING_STATE = \"running\";\n     static final String WAITING_STATE = \"waiting\";\n-    /**\n+\n+/**\n      * Time in nanoseconds that has been spent waiting in the current state.\n      * This is the portion of wait time not included in the {@link ExecutingQuery#waitTimeNanos} field.\n      *\n@@ -73,4 +74,4 @@ abstract class ExecutingQueryStatus\n     {\n         return Collections.emptyList();\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "1",
+                    "severity": "error",
+                    "message": "Missing, wrong or duplicated license header",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "110",
+    "information": {
+        "violations": [
+            {
+                "line": "13",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 109).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n\n  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "warning",
+                    "message": "'env' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/110/RoleInitializationService.java\nindex e43be4fe866..1697cd6624c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ctripcorp-apollo/styler/05_predictions/final/files-repaired/110/RoleInitializationService.java\n@@ -10,6 +10,7 @@ public interface RoleInitializationService {\n \n   public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n \n-  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n+  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String\n+    env, String operator);\n \n-}\n+ }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/110/RoleInitializationService.java\nindex e43be4fe866..e96d62b0ff3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/110/RoleInitializationService.java\n@@ -10,6 +10,7 @@ public interface RoleInitializationService {\n \n   public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n \n-  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n+  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env,\n+                                            String operator);\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/110/RoleInitializationService.java\nindex e43be4fe866..5945ad9ecb7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/110/RoleInitializationService.java\n@@ -12,4 +12,4 @@ public interface RoleInitializationService {\n \n   public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/110/RoleInitializationService.java\nindex e43be4fe866..dacd2948d43 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/110/RoleInitializationService.java\n@@ -2,6 +2,7 @@ package com.ctrip.framework.apollo.portal.service;\n \n import com.ctrip.framework.apollo.common.entity.App;\n \n+\n public interface RoleInitializationService {\n \n   public void initAppRoles(App app);\n@@ -11,5 +12,4 @@ public interface RoleInitializationService {\n   public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n \n   public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "warning",
+                    "message": "'env' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "16",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/110/RoleInitializationService.java\nindex e43be4fe866..1697cd6624c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/random/files-repaired/110/RoleInitializationService.java\n@@ -10,6 +10,7 @@ public interface RoleInitializationService {\n \n   public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n \n-  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n+  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String\n+    env, String operator);\n \n-}\n+ }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "warning",
+                    "message": "'operator' has incorrect indentation level 0, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "17",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 1, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/110/RoleInitializationService.java\nindex e43be4fe866..7be9c95eea3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/110/RoleInitializationService.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/110/RoleInitializationService.java\n@@ -10,6 +10,8 @@ public interface RoleInitializationService {\n \n   public void initNamespaceEnvRoles(String appId, String namespaceName, String operator);\n \n-  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env, String operator);\n+  public void initNamespaceSpecificEnvRoles(String appId, String namespaceName, String env,String\n+operator\n+  );\n \n-}\n+ }\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

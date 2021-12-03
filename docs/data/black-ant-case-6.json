@@ -1,0 +1,63 @@
+{
+    "project_name": "black-ant-case",
+    "violation_id": "6",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "column": "28",
+                "severity": "error",
+                "message": "'{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": "\n    @GetMapping(\"get\")\n    public String getInfo(){\n        return \"get is success\";\n    }\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/6/TestController.java\nindex 6de6ba1e63f..bbb2c44a1c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/black-ant-case/styler/05_predictions/final/files-repaired/6/TestController.java\n@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class TestController {\n \n     @GetMapping(\"get\")\n-    public String getInfo(){\n+    public String getInfo() {\n         return \"get is success\";\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/6/TestController.java\nindex 6de6ba1e63f..bbb2c44a1c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/checkstyle_idea/6/TestController.java\n@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class TestController {\n \n     @GetMapping(\"get\")\n-    public String getInfo(){\n+    public String getInfo() {\n         return \"get is success\";\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/6/TestController.java\nindex 6de6ba1e63f..e9b61743931 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/naturalize/6/TestController.java\n@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class TestController {\n \n     @GetMapping(\"get\")\n-    public String getInfo(){\n+    public String getInfo() {\n         return \"get is success\";\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/6/TestController.java\nindex 6de6ba1e63f..bbb2c44a1c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/random/files-repaired/6/TestController.java\n@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class TestController {\n \n     @GetMapping(\"get\")\n-    public String getInfo(){\n+    public String getInfo() {\n         return \"get is success\";\n     }\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/6/TestController.java\nindex 6de6ba1e63f..bbb2c44a1c2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/violations/6/TestController.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/black-ant-case/styler/05_predictions/three_grams/files-repaired/6/TestController.java\n@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;\n public class TestController {\n \n     @GetMapping(\"get\")\n-    public String getInfo(){\n+    public String getInfo() {\n         return \"get is success\";\n     }\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

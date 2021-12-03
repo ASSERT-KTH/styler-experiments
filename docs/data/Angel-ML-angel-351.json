@@ -1,0 +1,91 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "351",
+    "information": {
+        "violations": [
+            {
+                "line": "14",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 101).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  private IElement[] data;\n\n  public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n    this.dataClass = dataClass;\n    this.nodeIds = nodeIds;\n    this.data = data;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/351/PartGeneralGetResult.java\nindex f372fc0e364..369ccf9a09a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/351/PartGeneralGetResult.java\n@@ -11,7 +11,8 @@ public class PartGeneralGetResult extends PartitionGetResult {\n   private long[] nodeIds;\n   private IElement[] data;\n \n-  public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n+  public PartGeneralGetResult(Class<\n+      ? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n     this.dataClass = dataClass;\n     this.nodeIds = nodeIds;\n     this.data = data;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/351/PartGeneralGetResult.java\nindex f372fc0e364..7a5b9f8d4be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/351/PartGeneralGetResult.java\n@@ -7,51 +7,52 @@ import io.netty.buffer.ByteBuf;\n \n public class PartGeneralGetResult extends PartitionGetResult {\n \n-  private transient Class<? extends IElement> dataClass;\n-  private long[] nodeIds;\n-  private IElement[] data;\n-\n-  public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n-    this.dataClass = dataClass;\n-    this.nodeIds = nodeIds;\n-    this.data = data;\n-  }\n-\n-  public PartGeneralGetResult() {\n-\n-  }\n-\n-  @Override\n-  public void serialize(ByteBuf output) {\n-    ByteBufSerdeUtils.serializeLongs(output, nodeIds);\n-    ByteBufSerdeUtils.serializeObjects(output, dataClass, data);\n-  }\n-\n-  @Override\n-  public void deserialize(ByteBuf input) {\n-    nodeIds = ByteBufSerdeUtils.deserializeLongs(input);\n-    data = ByteBufSerdeUtils.deserializeObjects(input);\n-  }\n-\n-  @Override\n-  public int bufferLen() {\n-    return ByteBufSerdeUtils.serializedLongsLen(nodeIds) + ByteBufSerdeUtils\n-        .serializedObjectsLen(dataClass, data);\n-  }\n-\n-  public long[] getNodeIds() {\n-    return nodeIds;\n-  }\n-\n-  public void setNodeIds(long[] nodeIds) {\n-    this.nodeIds = nodeIds;\n-  }\n-\n-  public IElement[] getData() {\n-    return data;\n-  }\n-\n-  public void setData(IElement[] data) {\n-    this.data = data;\n-  }\n+    private transient Class<? extends IElement> dataClass;\n+    private long[] nodeIds;\n+    private IElement[] data;\n+\n+    public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds,\n+                                IElement[] data) {\n+        this.dataClass = dataClass;\n+        this.nodeIds = nodeIds;\n+        this.data = data;\n+    }\n+\n+    public PartGeneralGetResult() {\n+\n+    }\n+\n+    @Override\n+    public void serialize(ByteBuf output) {\n+        ByteBufSerdeUtils.serializeLongs(output, nodeIds);\n+        ByteBufSerdeUtils.serializeObjects(output, dataClass, data);\n+    }\n+\n+    @Override\n+    public void deserialize(ByteBuf input) {\n+        nodeIds = ByteBufSerdeUtils.deserializeLongs(input);\n+        data = ByteBufSerdeUtils.deserializeObjects(input);\n+    }\n+\n+    @Override\n+    public int bufferLen() {\n+        return ByteBufSerdeUtils.serializedLongsLen(nodeIds) + ByteBufSerdeUtils\n+                .serializedObjectsLen(dataClass, data);\n+    }\n+\n+    public long[] getNodeIds() {\n+        return nodeIds;\n+    }\n+\n+    public void setNodeIds(long[] nodeIds) {\n+        this.nodeIds = nodeIds;\n+    }\n+\n+    public IElement[] getData() {\n+        return data;\n+    }\n+\n+    public void setData(IElement[] data) {\n+        this.data = data;\n+    }\n }\n",
+            "diff_size": 48
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/351/PartGeneralGetResult.java\nindex f372fc0e364..8ff2c373867 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/351/PartGeneralGetResult.java\n@@ -54,4 +54,4 @@ public class PartGeneralGetResult extends PartitionGetResult {\n   public void setData(IElement[] data) {\n     this.data = data;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "14",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 115).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/351/PartGeneralGetResult.java\nindex f372fc0e364..ddee6f56f78 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/351/PartGeneralGetResult.java\n@@ -17,9 +17,7 @@ public class PartGeneralGetResult extends PartitionGetResult {\n     this.data = data;\n   }\n \n-  public PartGeneralGetResult() {\n-\n-  }\n+  public PartGeneralGetResult() {}\n \n   @Override\n   public void serialize(ByteBuf output) {\n@@ -35,8 +33,7 @@ public class PartGeneralGetResult extends PartitionGetResult {\n \n   @Override\n   public int bufferLen() {\n-    return ByteBufSerdeUtils.serializedLongsLen(nodeIds) + ByteBufSerdeUtils\n-        .serializedObjectsLen(dataClass, data);\n+    return ByteBufSerdeUtils.serializedLongsLen(nodeIds) + ByteBufSerdeUtils.serializedObjectsLen(dataClass, data);\n   }\n \n   public long[] getNodeIds() {\n@@ -54,4 +51,4 @@ public class PartGeneralGetResult extends PartitionGetResult {\n   public void setData(IElement[] data) {\n     this.data = data;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "14",
+                    "column": "36",
+                    "severity": "error",
+                    "message": "GenericWhitespace '<' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/351/PartGeneralGetResult.java\nindex f372fc0e364..d2656431bfb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/351/PartGeneralGetResult.java\n@@ -11,8 +11,8 @@ public class PartGeneralGetResult extends PartitionGetResult {\n   private long[] nodeIds;\n   private IElement[] data;\n \n-  public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n-    this.dataClass = dataClass;\n+  public PartGeneralGetResult(Class <? extends IElement> dataClass ,long [\n+    ]nodeIds,IElement[] data){ this.dataClass = dataClass;\n     this.nodeIds = nodeIds;\n     this.data = data;\n   }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/351/PartGeneralGetResult.java\nindex f372fc0e364..369ccf9a09a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/351/PartGeneralGetResult.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/351/PartGeneralGetResult.java\n@@ -11,7 +11,8 @@ public class PartGeneralGetResult extends PartitionGetResult {\n   private long[] nodeIds;\n   private IElement[] data;\n \n-  public PartGeneralGetResult(Class<? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n+  public PartGeneralGetResult(Class<\n+      ? extends IElement> dataClass, long[] nodeIds, IElement[] data) {\n     this.dataClass = dataClass;\n     this.nodeIds = nodeIds;\n     this.data = data;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

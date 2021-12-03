@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "67",
+    "information": {
+        "violations": [
+            {
+                "line": "46",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLDListElement extends HTMLElement {\n\t/**\n\t * Reduce spacing between list items. See the compact attribute definition in\n\t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/67/HTMLDListElement.java\nindex 45172952913..4a94f9878b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/67/HTMLDListElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLDListElement extends HTMLElement {\n-\t/**\n+/**\n \t * Reduce spacing between list items. See the compact attribute definition in\n \t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a boolean.\n \t */\n-\tboolean getCompact();\n+ boolean getCompact();\n \n \t/**\n \t * Reduce spacing between list items. See the compact attribute definition in\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/67/HTMLDListElement.java\nindex 45172952913..125b8ab19da 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/67/HTMLDListElement.java\n@@ -43,20 +43,20 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLDListElement extends HTMLElement {\n-\t/**\n-\t * Reduce spacing between list items. See the compact attribute definition in\n-\t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @return a boolean.\n-\t */\n-\tboolean getCompact();\n-\n-\t/**\n-\t * Reduce spacing between list items. See the compact attribute definition in\n-\t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @param compact a boolean.\n-\t */\n-\tvoid setCompact(boolean compact);\n+    /**\n+     * Reduce spacing between list items. See the compact attribute definition in\n+     * HTML 4.01. This attribute is deprecated in HTML 4.01.\n+     *\n+     * @return a boolean.\n+     */\n+    boolean getCompact();\n+\n+    /**\n+     * Reduce spacing between list items. See the compact attribute definition in\n+     * HTML 4.01. This attribute is deprecated in HTML 4.01.\n+     *\n+     * @param compact a boolean.\n+     */\n+    void setCompact(boolean compact);\n \n }\n",
+            "diff_size": 15
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/67/HTMLDListElement.java\nindex 45172952913..4bd7ad179a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/67/HTMLDListElement.java\n@@ -42,21 +42,26 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLDListElement extends HTMLElement {\n-\t/**\n-\t * Reduce spacing between list items. See the compact attribute definition in\n-\t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @return a boolean.\n-\t */\n-\tboolean getCompact();\n-\n-\t/**\n-\t * Reduce spacing between list items. See the compact attribute definition in\n-\t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n-\t *\n-\t * @param compact a boolean.\n-\t */\n-\tvoid setCompact(boolean compact);\n-\n-}\n+    /**\n+     * Reduce spacing between list items. See the compact attribute definition in\n+     * HTML 4.01. This attribute is deprecated in HTML 4.01.\n+     *\n+     * @return a boolean.\n+     */\n+\n+\n+    boolean getCompact();\n+\n+    /**\n+     * Reduce spacing between list items. See the compact attribute definition in\n+     * HTML 4.01. This attribute is deprecated in HTML 4.01.\n+     *\n+     * @param compact a boolean.\n+     */\n+\n+\n+    void setCompact(boolean compact);\n+}\n\\ No newline at end of file\n",
+            "diff_size": 22
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/67/HTMLDListElement.java\nindex 45172952913..4a94f9878b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/67/HTMLDListElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLDListElement extends HTMLElement {\n-\t/**\n+/**\n \t * Reduce spacing between list items. See the compact attribute definition in\n \t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a boolean.\n \t */\n-\tboolean getCompact();\n+ boolean getCompact();\n \n \t/**\n \t * Reduce spacing between list items. See the compact attribute definition in\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "47",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/67/HTMLDListElement.java\nindex 45172952913..643cc12e5ff 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/67/HTMLDListElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/67/HTMLDListElement.java\n@@ -43,13 +43,13 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLDListElement extends HTMLElement {\n-\t/**\n+    /**\n \t * Reduce spacing between list items. See the compact attribute definition in\n \t * HTML 4.01. This attribute is deprecated in HTML 4.01.\n \t *\n \t * @return a boolean.\n \t */\n-\tboolean getCompact();\n+ boolean getCompact();\n \n \t/**\n \t * Reduce spacing between list items. See the compact attribute definition in\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

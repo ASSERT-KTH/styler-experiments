@@ -1,0 +1,75 @@
+{
+    "project_name": "googleapis-google-cloud-java",
+    "violation_id": "753",
+    "information": {
+        "violations": [
+            {
+                "line": "34",
+                "severity": "warning",
+                "message": "'METHOD_DEF' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": "   * <code>string language_code = 1;</code>\n   */\n  com.google.protobuf.ByteString getLanguageCodeBytes();\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/753/TextMetadataOrBuilder.java\nindex cadce2c0848..2cfe88c62b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/googleapis-google-cloud-java/styler/05_predictions/final/files-repaired/753/TextMetadataOrBuilder.java\n@@ -31,5 +31,7 @@ public interface TextMetadataOrBuilder\n    *\n    * <code>string language_code = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getLanguageCodeBytes();\n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/753/TextMetadataOrBuilder.java\nindex cadce2c0848..45bd4f44b1e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/checkstyle_idea/753/TextMetadataOrBuilder.java\n@@ -9,8 +9,6 @@ public interface TextMetadataOrBuilder\n     com.google.protobuf.MessageOrBuilder {\n \n   /**\n-   *\n-   *\n    * <pre>\n    * The language of this text, as a\n    * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).\n@@ -20,9 +18,8 @@ public interface TextMetadataOrBuilder\n    * <code>string language_code = 1;</code>\n    */\n   java.lang.String getLanguageCode();\n+\n   /**\n-   *\n-   *\n    * <pre>\n    * The language of this text, as a\n    * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/753/TextMetadataOrBuilder.java\nindex cadce2c0848..289b5d52c47 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/naturalize/753/TextMetadataOrBuilder.java\n@@ -3,8 +3,7 @@\n \n package com.google.cloud.datalabeling.v1beta1;\n \n-public interface TextMetadataOrBuilder\n-    extends\n+public interface TextMetadataOrBuilder extends\n     // @@protoc_insertion_point(interface_extends:google.cloud.datalabeling.v1beta1.TextMetadata)\n     com.google.protobuf.MessageOrBuilder {\n \n@@ -20,7 +19,8 @@ public interface TextMetadataOrBuilder\n    * <code>string language_code = 1;</code>\n    */\n   java.lang.String getLanguageCode();\n-  /**\n+\n+/**\n    *\n    *\n    * <pre>\n@@ -32,4 +32,4 @@ public interface TextMetadataOrBuilder\n    * <code>string language_code = 1;</code>\n    */\n   com.google.protobuf.ByteString getLanguageCodeBytes();\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "34",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "'interface def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/753/TextMetadataOrBuilder.java\nindex cadce2c0848..aedca7936f3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/random/files-repaired/753/TextMetadataOrBuilder.java\n@@ -31,5 +31,6 @@ public interface TextMetadataOrBuilder\n    *\n    * <code>string language_code = 1;</code>\n    */\n-  com.google.protobuf.ByteString getLanguageCodeBytes();\n-}\n+  com.google.protobuf.ByteString getLanguageCodeBytes()\n+;\n+  }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/753/TextMetadataOrBuilder.java\nindex cadce2c0848..2cfe88c62b9 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/violations/753/TextMetadataOrBuilder.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/googleapis-google-cloud-java/styler/05_predictions/three_grams/files-repaired/753/TextMetadataOrBuilder.java\n@@ -31,5 +31,7 @@ public interface TextMetadataOrBuilder\n    *\n    * <code>string language_code = 1;</code>\n    */\n+\n+\n   com.google.protobuf.ByteString getLanguageCodeBytes();\n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff",
+        "styler_random"
+    ]
+}

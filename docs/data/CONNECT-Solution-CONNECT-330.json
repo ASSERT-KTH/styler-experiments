@@ -1,0 +1,83 @@
+{
+    "project_name": "CONNECT-Solution-CONNECT",
+    "violation_id": "330",
+    "information": {
+        "violations": [
+            {
+                "line": "27",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.response.proxy.service;\n\nimport gov.hhs.fha.nhinc.adaptercomponentxdrresponse.AdapterComponentXDRResponsePortType;\nimport gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\nindex 1afa4c41570..d1f683824a1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/final/files-repaired/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.response.proxy.service;\n+\n+package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.\n+\n+response .proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercomponentxdrresponse.AdapterComponentXDRResponsePortType;\n import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\nindex 1afa4c41570..50c0915c27e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/checkstyle_idea/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.response.proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercomponentxdrresponse.AdapterComponentXDRResponsePortType;\n@@ -31,30 +32,29 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n \n /**\n  * @author akong\n- *\n  */\n public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n-        SOAP12ServicePortDescriptor<AdapterComponentXDRResponsePortType> {\n-    private static final String NAMESPACE_URI = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdrresponse\";\n-    private static final String WS_ADDRESSING_ACTION = NAMESPACE_URI + \":\" + \"XDRResponseInputMessage\";\n+    SOAP12ServicePortDescriptor<AdapterComponentXDRResponsePortType> {\n+  private static final String NAMESPACE_URI = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdrresponse\";\n+  private static final String WS_ADDRESSING_ACTION = NAMESPACE_URI + \":\" + \"XDRResponseInputMessage\";\n \n-    /*\n-     * (non-Javadoc)\n-     *\n-     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n-     */\n-    @Override\n-    public String getWSAddressingAction() {\n-        return WS_ADDRESSING_ACTION;\n-    }\n+  /*\n+   * (non-Javadoc)\n+   *\n+   * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n+   */\n+  @Override\n+  public String getWSAddressingAction() {\n+    return WS_ADDRESSING_ACTION;\n+  }\n \n-    /*\n-     * (non-Javadoc)\n-     *\n-     * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n-     */\n-    @Override\n-    public Class<AdapterComponentXDRResponsePortType> getPortClass() {\n-        return AdapterComponentXDRResponsePortType.class;\n-    }\n+  /*\n+   * (non-Javadoc)\n+   *\n+   * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n+   */\n+  @Override\n+  public Class<AdapterComponentXDRResponsePortType> getPortClass() {\n+    return AdapterComponentXDRResponsePortType.class;\n+  }\n }\n",
+            "diff_size": 23
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\nindex 1afa4c41570..08e1c622e9d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/naturalize/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n@@ -24,6 +24,7 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n+\n package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.response.proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercomponentxdrresponse.AdapterComponentXDRResponsePortType;\n@@ -35,6 +36,7 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  */\n public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n         SOAP12ServicePortDescriptor<AdapterComponentXDRResponsePortType> {\n+\n     private static final String NAMESPACE_URI = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdrresponse\";\n     private static final String WS_ADDRESSING_ACTION = NAMESPACE_URI + \":\" + \"XDRResponseInputMessage\";\n \n@@ -57,4 +59,4 @@ public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n     public Class<AdapterComponentXDRResponsePortType> getPortClass() {\n         return AdapterComponentXDRResponsePortType.class;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "27",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\nindex 1afa4c41570..e0dd2b48afa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/codebuff/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n@@ -33,8 +33,11 @@ import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n  * @author akong\n  *\n  */\n+\n+\n public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n-        SOAP12ServicePortDescriptor<AdapterComponentXDRResponsePortType> {\n+    SOAP12ServicePortDescriptor<AdapterComponentXDRResponsePortType> {\n+\n     private static final String NAMESPACE_URI = \"urn:gov:hhs:fha:nhinc:adaptercomponentxdrresponse\";\n     private static final String WS_ADDRESSING_ACTION = NAMESPACE_URI + \":\" + \"XDRResponseInputMessage\";\n \n@@ -43,6 +46,8 @@ public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n      *\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getWSAddressingAction()\n      */\n+\n+\n     @Override\n     public String getWSAddressingAction() {\n         return WS_ADDRESSING_ACTION;\n@@ -53,8 +58,10 @@ public class AdapterComponentDocSubmissionResponseServicePortDescriptor extends\n      *\n      * @see gov.hhs.fha.nhinc.messaging.service.port.ServicePortDescriptor#getPortClass()\n      */\n+\n+\n     @Override\n     public Class<AdapterComponentXDRResponsePortType> getPortClass() {\n         return AdapterComponentXDRResponsePortType.class;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "28",
+                    "severity": "error",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\nindex 1afa4c41570..d1f683824a1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/violations/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CONNECT-Solution-CONNECT/styler/05_predictions/three_grams/files-repaired/330/AdapterComponentDocSubmissionResponseServicePortDescriptor.java\n@@ -24,7 +24,10 @@\n  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n  */\n-package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.response.proxy.service;\n+\n+package gov.hhs.fha.nhinc.docsubmission.adapter.component.deferred.\n+\n+response .proxy.service;\n \n import gov.hhs.fha.nhinc.adaptercomponentxdrresponse.AdapterComponentXDRResponsePortType;\n import gov.hhs.fha.nhinc.messaging.service.port.SOAP12ServicePortDescriptor;\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "naturalize"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

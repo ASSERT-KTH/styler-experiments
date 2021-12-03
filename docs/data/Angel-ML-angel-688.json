@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "688",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/688/Storage.java\nindex ea790ade794..5cbab279d45 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/688/Storage.java\n@@ -25,42 +25,42 @@ import java.io.IOException;\n \n public abstract class Storage implements IStorage {\n \n-  protected long indexOffset;\n+    protected long indexOffset;\n \n-  public Storage(long indexOffset) {\n-    this.indexOffset = indexOffset;\n-  }\n+    public Storage(long indexOffset) {\n+        this.indexOffset = indexOffset;\n+    }\n \n-  public long getIndexOffset() {\n-    return indexOffset;\n-  }\n+    public long getIndexOffset() {\n+        return indexOffset;\n+    }\n \n-  public void setIndexOffset(long indexOffset) {\n-    this.indexOffset = indexOffset;\n-  }\n+    public void setIndexOffset(long indexOffset) {\n+        this.indexOffset = indexOffset;\n+    }\n \n \n-  public void serialize(ByteBuf buf) {\n-    buf.writeLong(indexOffset);\n-  }\n+    public void serialize(ByteBuf buf) {\n+        buf.writeLong(indexOffset);\n+    }\n \n-  public void deserialize(ByteBuf buf) {\n-    indexOffset = buf.readLong();\n-  }\n+    public void deserialize(ByteBuf buf) {\n+        indexOffset = buf.readLong();\n+    }\n \n-  public int bufferLen() {\n-    return 8;\n-  }\n+    public int bufferLen() {\n+        return 8;\n+    }\n \n-  public void serialize(DataOutputStream output) throws IOException {\n-    output.writeLong(indexOffset);\n-  }\n+    public void serialize(DataOutputStream output) throws IOException {\n+        output.writeLong(indexOffset);\n+    }\n \n-  public void deserialize(DataInputStream input) throws IOException {\n-    indexOffset = input.readLong();\n-  }\n+    public void deserialize(DataInputStream input) throws IOException {\n+        indexOffset = input.readLong();\n+    }\n \n-  public int dataLen() {\n-    return 8;\n-  }\n+    public int dataLen() {\n+        return 8;\n+    }\n }\n",
+            "diff_size": 28
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/688/Storage.java\nindex ea790ade794..a6ace007bc0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/688/Storage.java\n@@ -15,7 +15,6 @@\n  *\n  */\n \n-\n package com.tencent.angel.ps.storage.vector.storage;\n \n import io.netty.buffer.ByteBuf;\n@@ -63,4 +62,4 @@ public abstract class Storage implements IStorage {\n   public int dataLen() {\n     return 8;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/688/Storage.java\nindex ea790ade794..9a0be64c1b1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/688/Storage.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/688/Storage.java\n@@ -39,7 +39,6 @@ public abstract class Storage implements IStorage {\n     this.indexOffset = indexOffset;\n   }\n \n-\n   public void serialize(ByteBuf buf) {\n     buf.writeLong(indexOffset);\n   }\n@@ -63,4 +62,4 @@ public abstract class Storage implements IStorage {\n   public int dataLen() {\n     return 8;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

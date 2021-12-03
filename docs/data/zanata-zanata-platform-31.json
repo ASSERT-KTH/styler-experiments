@@ -1,0 +1,80 @@
+{
+    "project_name": "zanata-zanata-platform",
+    "violation_id": "31",
+    "information": {
+        "violations": [
+            {
+                "line": "51",
+                "column": "28",
+                "severity": "error",
+                "message": "Don't use trailing comments.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+            }
+        ]
+    },
+    "source_code": "\n        String display;\n        boolean ascending; // default sort\n\n        SortOption(String display, boolean ascending) {\n            this.display = display;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/zanata-zanata-platform/styler/05_predictions/final/files-repaired/31/SortingType.java\nindex b34c2297aeb..25ad46cbca2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/zanata-zanata-platform/styler/05_predictions/final/files-repaired/31/SortingType.java\n@@ -48,9 +48,9 @@ public class SortingType implements Serializable {\n         public final static SortOption ROLE = new SortOption(\"Role\", true);\n \n         String display;\n-        boolean ascending; // default sort\n-\n-        SortOption(String display, boolean ascending) {\n+        boolean ascending;\n+        // default sortSortOption(String display, boolean ascending) {\n+             SortOption(String display, boolean ascending) {\n             this.display = display;\n             this.ascending = ascending;\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "51",
+                    "column": "24",
+                    "severity": "error",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/checkstyle_idea/31/SortingType.java\nindex b34c2297aeb..46dec3097d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/checkstyle_idea/31/SortingType.java\n@@ -9,70 +9,70 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;\n  * @author Alex Eng <a href=\"mailto:aeng@redhat.com\">aeng@redhat.com</a>\n  */\n public class SortingType implements Serializable {\n-    private static final long serialVersionUID = -5844701953054739028L;\n-    @SuppressFBWarnings(value = \"SE_BAD_FIELD\")\n-    private SortOption selectedSortOption = SortOption.ALPHABETICAL;\n-    @SuppressFBWarnings(value = \"SE_BAD_FIELD\")\n-    private List<SortOption> sortOptions = Lists.newArrayList();\n+  private static final long serialVersionUID = -5844701953054739028L;\n+  @SuppressFBWarnings(value = \"SE_BAD_FIELD\")\n+  private SortOption selectedSortOption = SortOption.ALPHABETICAL;\n+  @SuppressFBWarnings(value = \"SE_BAD_FIELD\")\n+  private List<SortOption> sortOptions = Lists.newArrayList();\n \n-    public SortingType(List<SortOption> sortOptions) {\n-        this.sortOptions = sortOptions;\n-    }\n+  public SortingType(List<SortOption> sortOptions) {\n+    this.sortOptions = sortOptions;\n+  }\n \n-    public SortingType(List<SortOption> sortOptions, SortOption defaultSort) {\n-        this.sortOptions = sortOptions;\n-        this.selectedSortOption = defaultSort;\n-    }\n+  public SortingType(List<SortOption> sortOptions, SortOption defaultSort) {\n+    this.sortOptions = sortOptions;\n+    this.selectedSortOption = defaultSort;\n+  }\n \n-    public void setSelectedSortOption(SortOption selectedSortOption) {\n-        if (this.selectedSortOption.equals(selectedSortOption)) {\n-            selectedSortOption.setAscending(!selectedSortOption.isAscending());\n-        }\n-        this.selectedSortOption = selectedSortOption;\n+  public void setSelectedSortOption(SortOption selectedSortOption) {\n+    if (this.selectedSortOption.equals(selectedSortOption)) {\n+      selectedSortOption.setAscending(!selectedSortOption.isAscending());\n     }\n+    this.selectedSortOption = selectedSortOption;\n+  }\n \n-    public static final class SortOption {\n-        public final static SortOption PERCENTAGE = new SortOption(\"Percent translated\", false);\n-        public final static SortOption HOURS = new SortOption(\"Hours remaining\", false);\n-        public final static SortOption WORDS = new SortOption(\"Words remaining\", false);\n-        public final static SortOption ALPHABETICAL = new SortOption(\"Alphabetical\", true);\n-        public final static SortOption LAST_ACTIVITY = new SortOption(\"Last activity\", false);\n-        public final static SortOption LAST_SOURCE_UPDATE = new SortOption(\"Last source updated\", false);\n-        public final static SortOption LAST_TRANSLATED = new SortOption(\"Last translated\", false);\n-        public final static SortOption LAST_UPDATED_BY_YOU = new SortOption(\"Last updated by you\", false);\n-        public final static SortOption Entry = new SortOption(\"Entry\", false);\n-        public final static SortOption LOCALE_ID = new SortOption(\"Locale code\", true);\n-        public final static SortOption MEMBERS = new SortOption(\"Members\", true);\n-        public final static SortOption CREATED_DATE = new SortOption(\"Created date\", true);\n-        public final static SortOption NAME = new SortOption(\"Name\", true);\n-        public final static SortOption ROLE = new SortOption(\"Role\", true);\n-\n-        String display;\n-        boolean ascending; // default sort\n-\n-        SortOption(String display, boolean ascending) {\n-            this.display = display;\n-            this.ascending = ascending;\n-        }\n+  public static final class SortOption {\n+    public final static SortOption PERCENTAGE = new SortOption(\"Percent translated\", false);\n+    public final static SortOption HOURS = new SortOption(\"Hours remaining\", false);\n+    public final static SortOption WORDS = new SortOption(\"Words remaining\", false);\n+    public final static SortOption ALPHABETICAL = new SortOption(\"Alphabetical\", true);\n+    public final static SortOption LAST_ACTIVITY = new SortOption(\"Last activity\", false);\n+    public final static SortOption LAST_SOURCE_UPDATE = new SortOption(\"Last source updated\", false);\n+    public final static SortOption LAST_TRANSLATED = new SortOption(\"Last translated\", false);\n+    public final static SortOption LAST_UPDATED_BY_YOU = new SortOption(\"Last updated by you\", false);\n+    public final static SortOption Entry = new SortOption(\"Entry\", false);\n+    public final static SortOption LOCALE_ID = new SortOption(\"Locale code\", true);\n+    public final static SortOption MEMBERS = new SortOption(\"Members\", true);\n+    public final static SortOption CREATED_DATE = new SortOption(\"Created date\", true);\n+    public final static SortOption NAME = new SortOption(\"Name\", true);\n+    public final static SortOption ROLE = new SortOption(\"Role\", true);\n \n-        public String getDisplay() {\n-            return this.display;\n-        }\n+    String display;\n+    boolean ascending; // default sort\n \n-        public boolean isAscending() {\n-            return this.ascending;\n-        }\n+    SortOption(String display, boolean ascending) {\n+      this.display = display;\n+      this.ascending = ascending;\n+    }\n \n-        public void setAscending(final boolean ascending) {\n-            this.ascending = ascending;\n-        }\n+    public String getDisplay() {\n+      return this.display;\n     }\n \n-    public SortOption getSelectedSortOption() {\n-        return this.selectedSortOption;\n+    public boolean isAscending() {\n+      return this.ascending;\n     }\n \n-    public List<SortOption> getSortOptions() {\n-        return this.sortOptions;\n+    public void setAscending(final boolean ascending) {\n+      this.ascending = ascending;\n     }\n+  }\n+\n+  public SortOption getSelectedSortOption() {\n+    return this.selectedSortOption;\n+  }\n+\n+  public List<SortOption> getSortOptions() {\n+    return this.sortOptions;\n+  }\n }\n",
+            "diff_size": 65
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/naturalize/31/SortingType.java\nindex b34c2297aeb..bc752b464bd 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/naturalize/31/SortingType.java\n@@ -48,7 +48,9 @@ public class SortingType implements Serializable {\n         public final static SortOption ROLE = new SortOption(\"Role\", true);\n \n         String display;\n-        boolean ascending; // default sort\n+        boolean ascending;\n+\n+// default sort\n \n         SortOption(String display, boolean ascending) {\n             this.display = display;\n@@ -75,4 +77,4 @@ public class SortingType implements Serializable {\n     public List<SortOption> getSortOptions() {\n         return this.sortOptions;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "52",
+                    "column": "28",
+                    "severity": "error",
+                    "message": "Don't use trailing comments.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/codebuff/31/SortingType.java\nindex b34c2297aeb..0b59acf0ab3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/codebuff/31/SortingType.java\n@@ -8,6 +8,8 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;\n /**\n  * @author Alex Eng <a href=\"mailto:aeng@redhat.com\">aeng@redhat.com</a>\n  */\n+\n+\n public class SortingType implements Serializable {\n     private static final long serialVersionUID = -5844701953054739028L;\n     @SuppressFBWarnings(value = \"SE_BAD_FIELD\")\n@@ -46,7 +48,6 @@ public class SortingType implements Serializable {\n         public final static SortOption CREATED_DATE = new SortOption(\"Created date\", true);\n         public final static SortOption NAME = new SortOption(\"Name\", true);\n         public final static SortOption ROLE = new SortOption(\"Role\", true);\n-\n         String display;\n         boolean ascending; // default sort\n \n@@ -75,4 +76,4 @@ public class SortingType implements Serializable {\n     public List<SortOption> getSortOptions() {\n         return this.sortOptions;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/styler/05_predictions/random/files-repaired/31/SortingType.java\nindex b34c2297aeb..25ad46cbca2 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/styler/05_predictions/random/files-repaired/31/SortingType.java\n@@ -48,9 +48,9 @@ public class SortingType implements Serializable {\n         public final static SortOption ROLE = new SortOption(\"Role\", true);\n \n         String display;\n-        boolean ascending; // default sort\n-\n-        SortOption(String display, boolean ascending) {\n+        boolean ascending;\n+        // default sortSortOption(String display, boolean ascending) {\n+             SortOption(String display, boolean ascending) {\n             this.display = display;\n             this.ascending = ascending;\n         }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/styler/05_predictions/three_grams/files-repaired/31/SortingType.java\nindex b34c2297aeb..c5581d496a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/violations/31/SortingType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/zanata-zanata-platform/styler/05_predictions/three_grams/files-repaired/31/SortingType.java\n@@ -48,9 +48,9 @@ public class SortingType implements Serializable {\n         public final static SortOption ROLE = new SortOption(\"Role\", true);\n \n         String display;\n-        boolean ascending; // default sort\n-\n-        SortOption(String display, boolean ascending) {\n+        boolean ascending;\n+            // default sortSortOption(String display, boolean ascending) {\n+             SortOption(String display, boolean ascending) {\n             this.display = display;\n             this.ascending = ascending;\n         }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

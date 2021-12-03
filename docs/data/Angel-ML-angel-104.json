@@ -1,0 +1,104 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "104",
+    "information": {
+        "violations": [
+            {
+                "line": "6",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 102).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * Copyright (C) 2017-2018 THL A29 Limited, a Tencent company. All rights reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in\n * compliance with the License. You may obtain a copy of the License at\n *\n * https://opensource.org/licenses/Apache-2.0",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/104/SplitPoint.java\nindex f2a7e01eca7..bfb1f8678b3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/104/SplitPoint.java\n@@ -21,48 +21,48 @@ import org.apache.spark.ml.linalg.Vector;\n \n public class SplitPoint extends SplitEntry {\n \n-  private float fvalue;\n+    private float fvalue;\n \n-  public SplitPoint() {\n-    this(-1, 0.0f, 0.0f);\n-  }\n+    public SplitPoint() {\n+        this(-1, 0.0f, 0.0f);\n+    }\n \n-  public SplitPoint(int fid, float fvalue, float gain) {\n-    super(fid, gain);\n-    this.fvalue = fvalue;\n-  }\n+    public SplitPoint(int fid, float fvalue, float gain) {\n+        super(fid, gain);\n+        this.fvalue = fvalue;\n+    }\n \n-  @Override\n-  public int flowTo(float x) {\n-    return x < fvalue ? 0 : 1;\n-  }\n+    @Override\n+    public int flowTo(float x) {\n+        return x < fvalue ? 0 : 1;\n+    }\n \n-  @Override\n-  public int flowTo(Vector x) {\n-    return x.apply(fid) < fvalue ? 0 : 1;\n-  }\n+    @Override\n+    public int flowTo(Vector x) {\n+        return x.apply(fid) < fvalue ? 0 : 1;\n+    }\n \n-  @Override\n-  public int defaultTo() {\n-    return fvalue > 0.0f ? 0 : 1;\n-  }\n+    @Override\n+    public int defaultTo() {\n+        return fvalue > 0.0f ? 0 : 1;\n+    }\n \n-  public float getFvalue() {\n-    return fvalue;\n-  }\n+    public float getFvalue() {\n+        return fvalue;\n+    }\n \n-  public void setFvalue(float fvalue) {\n-    this.fvalue = fvalue;\n-  }\n+    public void setFvalue(float fvalue) {\n+        this.fvalue = fvalue;\n+    }\n \n-  @Override\n-  public SplitType splitType() {\n-    return SplitType.SPLIT_POINT;\n-  }\n+    @Override\n+    public SplitType splitType() {\n+        return SplitType.SPLIT_POINT;\n+    }\n \n-  @Override\n-  public String toString() {\n-    return String.format(\"%s fid[%d] fvalue[%f] gain[%f]\",\n-        this.splitType(), fid, fvalue, gain);\n-  }\n+    @Override\n+    public String toString() {\n+        return String.format(\"%s fid[%d] fvalue[%f] gain[%f]\",\n+                this.splitType(), fid, fvalue, gain);\n+    }\n }\n",
+            "diff_size": 35
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/104/SplitPoint.java\nindex f2a7e01eca7..c9b453aa26f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/104/SplitPoint.java\n@@ -65,4 +65,4 @@ public class SplitPoint extends SplitEntry {\n     return String.format(\"%s fid[%d] fvalue[%f] gain[%f]\",\n         this.splitType(), fid, fvalue, gain);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/104/SplitPoint.java\nindex f2a7e01eca7..2e6d14e92d4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/104/SplitPoint.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/104/SplitPoint.java\n@@ -62,7 +62,6 @@ public class SplitPoint extends SplitEntry {\n \n   @Override\n   public String toString() {\n-    return String.format(\"%s fid[%d] fvalue[%f] gain[%f]\",\n-        this.splitType(), fid, fvalue, gain);\n+    return String.format(\"%s fid[%d] fvalue[%f] gain[%f]\", this.splitType(), fid, fvalue, gain);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

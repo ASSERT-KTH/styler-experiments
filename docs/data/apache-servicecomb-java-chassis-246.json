@@ -1,0 +1,135 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "246",
+    "information": {
+        "violations": [
+            {
+                "line": "65",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 124).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        LOGGER.warn(\"No URLs will be polled as dynamic configuration sources.\");\n        LOGGER.warn(\n            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n            ADDITIONAL_CONFIG_URL,\n            configFileFromClasspath);\n      }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "64",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 132).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/246/MicroserviceConfigLoader.java\nindex f0229782739..67c4c06c8bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/246/MicroserviceConfigLoader.java\n@@ -61,9 +61,8 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n \n       if (configModels.isEmpty()) {\n         LOGGER.warn(\"No URLs will be polled as dynamic configuration sources.\");\n-        LOGGER.warn(\n-            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n-            ADDITIONAL_CONFIG_URL,\n+        LOGGER.warn(\"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n+        ADDITIONAL_CONFIG_URL,\n             configFileFromClasspath);\n       }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "57",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 123).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "64",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/246/MicroserviceConfigLoader.java\nindex f0229782739..1f019f845b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/246/MicroserviceConfigLoader.java\n@@ -54,9 +54,8 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n   public void loadAndSort() {\n     try {\n       String configFileFromClasspath =\n-          System.getProperty(DEFAULT_FILE_NAME) == null ? DEFAULT_CONFIG_FILE_NAME\n-              : System.getProperty(DEFAULT_FILE_NAME);\n-      super.load(configFileFromClasspath);\n+          System.getProperty(DEFAULT_FILE_NAME) == null ? DEFAULT_CONFIG_FILE_NAME : System.getProperty(DEFAULT_FILE_NAME);\n+super.load(configFileFromClasspath);\n       loadAdditionalConfig();\n \n       if (configModels.isEmpty()) {\n@@ -85,4 +84,4 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n       configModels.add(configModel);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "45",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 176).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "49",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 172).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "55",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 152).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "60",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 181).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/246/MicroserviceConfigLoader.java\nindex f0229782739..97522ded96f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/246/MicroserviceConfigLoader.java\n@@ -19,7 +19,6 @@ package org.apache.servicecomb.config.archaius.sources;\n \n import java.io.IOException;\n import java.net.URL;\n-\n import org.apache.servicecomb.foundation.common.exceptions.ServiceCombException;\n import org.slf4j.Logger;\n import org.slf4j.LoggerFactory;\n@@ -37,34 +36,28 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n    * be on the classpath. The file name can be overridden by the value of system property\n    * <code>configurationSource.defaultFileName</code>\n    */\n+\n   private static final String DEFAULT_CONFIG_FILE_NAME = \"microservice.yaml\";\n \n   public MicroserviceConfigLoader() {\n     // Help to resolve incompatible changes. Can be deleted in future.\n     if (!StringUtils.isEmpty(System.getProperty(\"cse.configurationSource.additionalUrls\"))) {\n-      throw new IllegalArgumentException(\"-Dcse.configurationSource.additionalUrls\"\n-          + \" has been replaced with -D\" + ADDITIONAL_CONFIG_URL + \", please change it and restart.\");\n+      throw new IllegalArgumentException(\"-Dcse.configurationSource.additionalUrls\" + \" has been replaced with -D\" + ADDITIONAL_CONFIG_URL + \", please change it and restart.\");\n     }\n+\n     if (!StringUtils.isEmpty(System.getProperty(\"cse.configurationSource.defaultFileName\"))) {\n-      throw new IllegalArgumentException(\"-Dcse.configurationSource.additionalUrls\"\n-          + \" has been replaced with -D\" + DEFAULT_FILE_NAME + \", please change it and restart.\");\n+      throw new IllegalArgumentException(\"-Dcse.configurationSource.additionalUrls\" + \" has been replaced with -D\" + DEFAULT_FILE_NAME + \", please change it and restart.\");\n     }\n   }\n \n   public void loadAndSort() {\n     try {\n-      String configFileFromClasspath =\n-          System.getProperty(DEFAULT_FILE_NAME) == null ? DEFAULT_CONFIG_FILE_NAME\n-              : System.getProperty(DEFAULT_FILE_NAME);\n+      String configFileFromClasspath = System.getProperty(DEFAULT_FILE_NAME) == null ? DEFAULT_CONFIG_FILE_NAME : System.getProperty(DEFAULT_FILE_NAME);\n       super.load(configFileFromClasspath);\n       loadAdditionalConfig();\n-\n       if (configModels.isEmpty()) {\n         LOGGER.warn(\"No URLs will be polled as dynamic configuration sources.\");\n-        LOGGER.warn(\n-            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n-            ADDITIONAL_CONFIG_URL,\n-            configFileFromClasspath);\n+        LOGGER.warn(\"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\", ADDITIONAL_CONFIG_URL, configFileFromClasspath);\n       }\n \n       sort();\n@@ -85,4 +78,4 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n       configModels.add(configModel);\n     }\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 16
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "64",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 132).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/246/MicroserviceConfigLoader.java\nindex f0229782739..67c4c06c8bc 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/246/MicroserviceConfigLoader.java\n@@ -61,9 +61,8 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n \n       if (configModels.isEmpty()) {\n         LOGGER.warn(\"No URLs will be polled as dynamic configuration sources.\");\n-        LOGGER.warn(\n-            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n-            ADDITIONAL_CONFIG_URL,\n+        LOGGER.warn(\"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n+        ADDITIONAL_CONFIG_URL,\n             configFileFromClasspath);\n       }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 146).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "65",
+                    "column": "125",
+                    "severity": "warning",
+                    "message": "',' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/246/MicroserviceConfigLoader.java\nindex f0229782739..18cc47fb35d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/246/MicroserviceConfigLoader.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/246/MicroserviceConfigLoader.java\n@@ -62,8 +62,7 @@ public class MicroserviceConfigLoader extends YAMLConfigLoader {\n       if (configModels.isEmpty()) {\n         LOGGER.warn(\"No URLs will be polled as dynamic configuration sources.\");\n         LOGGER.warn(\n-            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",\n-            ADDITIONAL_CONFIG_URL,\n+            \"To enable URLs as dynamic configuration sources, define System property {} or make {} available on classpath.\",ADDITIONAL_CONFIG_URL,\n             configFileFromClasspath);\n       }\n \n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "330",
+    "information": {
+        "violations": [
+            {
+                "line": "26",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 112).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n    GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n\n    long n = param.getN();\n    long[] nodes = param.getNodes();",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/330/GetCloseness.java\nindex 29e7d9861c1..112e161fecf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/330/GetCloseness.java\n@@ -8,44 +8,45 @@ import java.util.List;\n \n public class GetCloseness extends GetFunc {\n \n-  public GetCloseness(int matrixId, long[] nodes, long n) {\n-    super(new GetHyperLogLogParam(matrixId, nodes, n));\n-  }\n-\n-  public GetCloseness(GetParam param) {\n-    super(param);\n-  }\n-\n-  public GetCloseness() {\n-    super(null);\n-  }\n-\n-  @Override\n-  public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n-    GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n-\n-    long n = param.getN();\n-    long[] nodes = param.getNodes();\n-    Long2DoubleOpenHashMap closenesses = new Long2DoubleOpenHashMap();\n-    for (int i = 0; i < nodes.length; i++) {\n-      HyperLogLogPlusElement hllElem = (HyperLogLogPlusElement) row.get(nodes[i]);\n-      if (hllElem.getCloseness() < n - 1) {\n-        closenesses.put(nodes[i], 0);\n-      } else {\n-        closenesses.put(nodes[i], (double)n / (double)hllElem.getCloseness());\n-      }\n+    public GetCloseness(int matrixId, long[] nodes, long n) {\n+        super(new GetHyperLogLogParam(matrixId, nodes, n));\n     }\n-    return new GetClosenessPartResult(closenesses);\n-  }\n-\n-  @Override\n-  public GetResult merge(List<PartitionGetResult> partResults) {\n-    Long2DoubleOpenHashMap closenesses = new Long2DoubleOpenHashMap();\n-    for (PartitionGetResult r : partResults) {\n-      GetClosenessPartResult rr = (GetClosenessPartResult) r;\n-      closenesses.putAll(rr.getClosenesses());\n+\n+    public GetCloseness(GetParam param) {\n+        super(param);\n+    }\n+\n+    public GetCloseness() {\n+        super(null);\n+    }\n+\n+    @Override\n+    public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n+        GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n+        ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager()\n+                .getRow(param.getPartKey(), 0);\n+\n+        long n = param.getN();\n+        long[] nodes = param.getNodes();\n+        Long2DoubleOpenHashMap closenesses = new Long2DoubleOpenHashMap();\n+        for (int i = 0; i < nodes.length; i++) {\n+            HyperLogLogPlusElement hllElem = (HyperLogLogPlusElement) row.get(nodes[i]);\n+            if (hllElem.getCloseness() < n - 1) {\n+                closenesses.put(nodes[i], 0);\n+            } else {\n+                closenesses.put(nodes[i], (double) n / (double) hllElem.getCloseness());\n+            }\n+        }\n+        return new GetClosenessPartResult(closenesses);\n+    }\n+\n+    @Override\n+    public GetResult merge(List<PartitionGetResult> partResults) {\n+        Long2DoubleOpenHashMap closenesses = new Long2DoubleOpenHashMap();\n+        for (PartitionGetResult r : partResults) {\n+            GetClosenessPartResult rr = (GetClosenessPartResult) r;\n+            closenesses.putAll(rr.getClosenesses());\n+        }\n+        return new GetClosenessResult(closenesses);\n     }\n-    return new GetClosenessResult(closenesses);\n-  }\n }\n",
+            "diff_size": 66
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/330/GetCloseness.java\nindex 29e7d9861c1..0d7cd0efc2d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/330/GetCloseness.java\n@@ -33,7 +33,7 @@ public class GetCloseness extends GetFunc {\n       if (hllElem.getCloseness() < n - 1) {\n         closenesses.put(nodes[i], 0);\n       } else {\n-        closenesses.put(nodes[i], (double)n / (double)hllElem.getCloseness());\n+        closenesses.put(nodes[i], (double) n / (double) hllElem.getCloseness());\n       }\n     }\n     return new GetClosenessPartResult(closenesses);\n@@ -48,4 +48,4 @@ public class GetCloseness extends GetFunc {\n     }\n     return new GetClosenessResult(closenesses);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/330/GetCloseness.java\nindex 29e7d9861c1..1b0cff9bf34 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/330/GetCloseness.java\n@@ -3,7 +3,6 @@ package com.tencent.angel.spark.ml.psf.hyperanf;\n import com.tencent.angel.ml.matrix.psf.get.base.*;\n import com.tencent.angel.ps.storage.vector.ServerLongAnyRow;\n import it.unimi.dsi.fastutil.longs.Long2DoubleOpenHashMap;\n-\n import java.util.List;\n \n public class GetCloseness extends GetFunc {\n@@ -24,7 +23,6 @@ public class GetCloseness extends GetFunc {\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n     ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n-\n     long n = param.getN();\n     long[] nodes = param.getNodes();\n     Long2DoubleOpenHashMap closenesses = new Long2DoubleOpenHashMap();\n@@ -33,7 +31,7 @@ public class GetCloseness extends GetFunc {\n       if (hllElem.getCloseness() < n - 1) {\n         closenesses.put(nodes[i], 0);\n       } else {\n-        closenesses.put(nodes[i], (double)n / (double)hllElem.getCloseness());\n+        closenesses.put(nodes[i], (double) n / (double) hllElem.getCloseness());\n       }\n     }\n     return new GetClosenessPartResult(closenesses);\n@@ -48,4 +46,5 @@ public class GetCloseness extends GetFunc {\n     }\n     return new GetClosenessResult(closenesses);\n   }\n-}\n+\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 109).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "26",
+                    "column": "80",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/330/GetCloseness.java\nindex 29e7d9861c1..b1308f0acc6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/330/GetCloseness.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/330/GetCloseness.java\n@@ -23,7 +23,8 @@ public class GetCloseness extends GetFunc {\n   @Override\n   public PartitionGetResult partitionGet(PartitionGetParam partParam) {\n     GetHyperLogLogPartParam param = (GetHyperLogLogPartParam) partParam;\n-    ServerLongAnyRow row = (ServerLongAnyRow) psContext.getMatrixStorageManager().getRow(param.getPartKey(), 0);\n+    ServerLongAnyRow row =(ServerLongAnyRow)psContext. getMatrixStorageManager ( ) . getRow(param.getPartKey(\n+    ) , 0);\n \n     long n = param.getN();\n     long[] nodes = param.getNodes();\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "26",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 112).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

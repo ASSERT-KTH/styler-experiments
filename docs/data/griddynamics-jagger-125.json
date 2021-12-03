@@ -1,0 +1,63 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "125",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "82",
+                "severity": "warning",
+                "message": "WhitespaceAround: '{' is not preceded with whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+            }
+        ]
+    },
+    "source_code": " * To change this template use File | Settings | File Templates.\n */\npublic abstract class ContextAware implements NodeSideInitializable, Serializable{\n    protected String sessionId;\n    protected String taskId;\n    protected NodeContext nodeContext;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/125/ContextAware.java\nindex a0953904a5b..6e0a0716e64 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/125/ContextAware.java\n@@ -14,7 +14,7 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/125/ContextAware.java\nindex a0953904a5b..15867226915 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/125/ContextAware.java\n@@ -14,7 +14,7 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n@@ -30,7 +30,7 @@ public abstract class ContextAware implements NodeSideInitializable, Serializabl\n \n         KeyValueStorage storage = nodeContext.getService(KeyValueStorage.class);\n         storage.put(Namespace.of(\n-                sessionId, taskId, \"metricDescription\"),\n+                        sessionId, taskId, \"metricDescription\"),\n                 metricDescription.getMetricId(),\n                 metricDescription\n         );\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/125/ContextAware.java\nindex a0953904a5b..cab179fe212 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/125/ContextAware.java\n@@ -14,7 +14,7 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n@@ -51,4 +51,4 @@ public abstract class ContextAware implements NodeSideInitializable, Serializabl\n     public MetricDescription getMetricDescriptions() {\n         return metricDescription;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/125/ContextAware.java\nindex a0953904a5b..f63f744cf0e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/125/ContextAware.java\n@@ -4,7 +4,6 @@ import com.griddynamics.jagger.coordinator.NodeContext;\n import com.griddynamics.jagger.engine.e1.scenario.NodeSideInitializable;\n import com.griddynamics.jagger.storage.KeyValueStorage;\n import com.griddynamics.jagger.storage.Namespace;\n-\n import java.io.Serializable;\n \n /**\n@@ -14,11 +13,13 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+\n+\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n+\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n-\n     protected String name;\n     protected MetricDescription metricDescription;\n \n@@ -29,11 +30,9 @@ public abstract class ContextAware implements NodeSideInitializable, Serializabl\n         this.nodeContext = nodeContext;\n \n         KeyValueStorage storage = nodeContext.getService(KeyValueStorage.class);\n-        storage.put(Namespace.of(\n-                sessionId, taskId, \"metricDescription\"),\n-                metricDescription.getMetricId(),\n-                metricDescription\n-        );\n+        storage.put(Namespace.of(sessionId, taskId, \"metricDescription\"),\n+                    metricDescription.getMetricId(),\n+                    metricDescription);\n     }\n \n     public void setName(String name) {\n@@ -51,4 +50,4 @@ public abstract class ContextAware implements NodeSideInitializable, Serializabl\n     public MetricDescription getMetricDescriptions() {\n         return metricDescription;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/125/ContextAware.java\nindex a0953904a5b..6e0a0716e64 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/125/ContextAware.java\n@@ -14,7 +14,7 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/125/ContextAware.java\nindex a0953904a5b..6e0a0716e64 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/125/ContextAware.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/125/ContextAware.java\n@@ -14,7 +14,7 @@ import java.io.Serializable;\n  * Time: 6:49 PM\n  * To change this template use File | Settings | File Templates.\n  */\n-public abstract class ContextAware implements NodeSideInitializable, Serializable{\n+public abstract class ContextAware implements NodeSideInitializable, Serializable {\n     protected String sessionId;\n     protected String taskId;\n     protected NodeContext nodeContext;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": []
+}

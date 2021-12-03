@@ -1,0 +1,77 @@
+{
+    "project_name": "Angel-ML-angel",
+    "violation_id": "36",
+    "information": {
+        "violations": [
+            {
+                "line": "50",
+                "severity": "error",
+                "message": "Line is longer than 100 characters (found 105).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "  @Override\n  public int getDimension() {\n    throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n  }\n\n  @Override",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..6abba434251 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Angel-ML-angel/styler/05_predictions/final/files-repaired/36/LongKeyDoubleVector.java\n@@ -47,10 +47,11 @@ public abstract class LongKeyDoubleVector extends TVector {\n \n   @Override\n   public int getDimension() {\n-    throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n-  }\n+    throw\n+    new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n+   }\n \n-  @Override\n+   @Override\n   public TVector plusBy(int index, double x) {\n     return plusBy((long) index, x);\n   }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..4341c929d43 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/checkstyle_idea/36/LongKeyDoubleVector.java\n@@ -6,52 +6,60 @@ import com.tencent.angel.ml.math.TVector;\n  * Base class for long key double vector.\n  */\n public abstract class LongKeyDoubleVector extends TVector {\n-  /** Vector dimension */\n-  protected long dim;\n-  public LongKeyDoubleVector(long dim) {\n-    super();\n-    this.dim = dim;\n-  }\n-\n-  /**\n-   * Get dimension for long key vector\n-   * @return long dimension\n-   */\n-  public long getLongDim(){\n-    return dim;\n-  }\n-\n-  /**\n-   * Plus a element by a update value\n-   * @param index element index\n-   * @param x update value\n-   * @return this\n-   */\n-  public abstract TVector plusBy(long index, double x);\n-\n-  /**\n-   * Set a element by a new value\n-   * @param index element index\n-   * @param x new value\n-   * @return this\n-   */\n-  public abstract TVector set(long index, double x);\n-\n-  /**\n-   * Get a element value by value index\n-   * @param index value index\n-   * @return\n-   */\n-  public abstract double get(long index);\n-\n-\n-  @Override\n-  public int getDimension() {\n-    throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n-  }\n-\n-  @Override\n-  public TVector plusBy(int index, double x) {\n-    return plusBy((long) index, x);\n-  }\n+    /**\n+     * Vector dimension\n+     */\n+    protected long dim;\n+\n+    public LongKeyDoubleVector(long dim) {\n+        super();\n+        this.dim = dim;\n+    }\n+\n+    /**\n+     * Get dimension for long key vector\n+     *\n+     * @return long dimension\n+     */\n+    public long getLongDim() {\n+        return dim;\n+    }\n+\n+    /**\n+     * Plus a element by a update value\n+     *\n+     * @param index element index\n+     * @param x     update value\n+     * @return this\n+     */\n+    public abstract TVector plusBy(long index, double x);\n+\n+    /**\n+     * Set a element by a new value\n+     *\n+     * @param index element index\n+     * @param x     new value\n+     * @return this\n+     */\n+    public abstract TVector set(long index, double x);\n+\n+    /**\n+     * Get a element value by value index\n+     *\n+     * @param index value index\n+     * @return\n+     */\n+    public abstract double get(long index);\n+\n+\n+    @Override\n+    public int getDimension() {\n+        throw new UnsupportedOperationException(\n+                \"Unsupportted operation, you should use getLongDim instead\");\n+    }\n+\n+    @Override\n+    public TVector plusBy(int index, double x) {\n+        return plusBy((long) index, x);\n+    }\n }\n",
+            "diff_size": 56
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "49",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..da3b139a818 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/naturalize/36/LongKeyDoubleVector.java\n@@ -17,7 +17,7 @@ public abstract class LongKeyDoubleVector extends TVector {\n    * Get dimension for long key vector\n    * @return long dimension\n    */\n-  public long getLongDim(){\n+  public long getLongDim() {\n     return dim;\n   }\n \n@@ -44,8 +44,7 @@ public abstract class LongKeyDoubleVector extends TVector {\n    */\n   public abstract double get(long index);\n \n-\n-  @Override\n+@Override\n   public int getDimension() {\n     throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n   }\n@@ -54,4 +53,4 @@ public abstract class LongKeyDoubleVector extends TVector {\n   public TVector plusBy(int index, double x) {\n     return plusBy((long) index, x);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "56",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 105).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..2b477a1b3a4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/codebuff/36/LongKeyDoubleVector.java\n@@ -5,9 +5,12 @@ import com.tencent.angel.ml.math.TVector;\n /**\n  * Base class for long key double vector.\n  */\n+\n public abstract class LongKeyDoubleVector extends TVector {\n   /** Vector dimension */\n+\n   protected long dim;\n+\n   public LongKeyDoubleVector(long dim) {\n     super();\n     this.dim = dim;\n@@ -17,7 +20,8 @@ public abstract class LongKeyDoubleVector extends TVector {\n    * Get dimension for long key vector\n    * @return long dimension\n    */\n-  public long getLongDim(){\n+\n+  public long getLongDim() {\n     return dim;\n   }\n \n@@ -27,6 +31,7 @@ public abstract class LongKeyDoubleVector extends TVector {\n    * @param x update value\n    * @return this\n    */\n+\n   public abstract TVector plusBy(long index, double x);\n \n   /**\n@@ -35,6 +40,7 @@ public abstract class LongKeyDoubleVector extends TVector {\n    * @param x new value\n    * @return this\n    */\n+\n   public abstract TVector set(long index, double x);\n \n   /**\n@@ -42,8 +48,8 @@ public abstract class LongKeyDoubleVector extends TVector {\n    * @param index value index\n    * @return\n    */\n-  public abstract double get(long index);\n \n+  public abstract double get(long index);\n \n   @Override\n   public int getDimension() {\n@@ -54,4 +60,4 @@ public abstract class LongKeyDoubleVector extends TVector {\n   public TVector plusBy(int index, double x) {\n     return plusBy((long) index, x);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..6abba434251 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/random/files-repaired/36/LongKeyDoubleVector.java\n@@ -47,10 +47,11 @@ public abstract class LongKeyDoubleVector extends TVector {\n \n   @Override\n   public int getDimension() {\n-    throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n-  }\n+    throw\n+    new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n+   }\n \n-  @Override\n+   @Override\n   public TVector plusBy(int index, double x) {\n     return plusBy((long) index, x);\n   }\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/36/LongKeyDoubleVector.java\nindex 04c0603e2c2..381401db71a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/violations/36/LongKeyDoubleVector.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Angel-ML-angel/styler/05_predictions/three_grams/files-repaired/36/LongKeyDoubleVector.java\n@@ -47,10 +47,11 @@ public abstract class LongKeyDoubleVector extends TVector {\n \n   @Override\n   public int getDimension() {\n-    throw new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n-  }\n+throw\n+  new UnsupportedOperationException(\"Unsupportted operation, you should use getLongDim instead\");\n+   }\n \n-  @Override\n+   @Override\n   public TVector plusBy(int index, double x) {\n     return plusBy((long) index, x);\n   }\n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

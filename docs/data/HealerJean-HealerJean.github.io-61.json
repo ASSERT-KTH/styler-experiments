@@ -1,0 +1,62 @@
+{
+    "project_name": "HealerJean-HealerJean.github.io",
+    "violation_id": "61",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "column": "20",
+                "severity": "error",
+                "message": "',' is not followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "public class SwaggerConfig {\n\n    @Profile({\"dev\",\"test\"})\n    @Bean\n    public Docket createRestApi() { //\u4e00\u822c\u53ea\u5728\u5f00\u53d1\u6216\u8005\u6d4b\u8bd5\u7684\u65f6\u5019\u7528\u5230\n        return new Docket(DocumentationType.SWAGGER_2)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/61/SwaggerConfig.java\nindex 9fb84bd2287..df9ae950d4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/final/files-repaired/61/SwaggerConfig.java\n@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;\n @Configuration\n public class SwaggerConfig {\n \n-    @Profile({\"dev\",\"test\"})\n+    @Profile({\"dev\", \"test\"})\n     @Bean\n     public Docket createRestApi() { //\u4e00\u822c\u53ea\u5728\u5f00\u53d1\u6216\u8005\u6d4b\u8bd5\u7684\u65f6\u5019\u7528\u5230\n         return new Docket(DocumentationType.SWAGGER_2)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/61/SwaggerConfig.java\nindex 9fb84bd2287..df9ae950d4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/checkstyle_idea/61/SwaggerConfig.java\n@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;\n @Configuration\n public class SwaggerConfig {\n \n-    @Profile({\"dev\",\"test\"})\n+    @Profile({\"dev\", \"test\"})\n     @Bean\n     public Docket createRestApi() { //\u4e00\u822c\u53ea\u5728\u5f00\u53d1\u6216\u8005\u6d4b\u8bd5\u7684\u65f6\u5019\u7528\u5230\n         return new Docket(DocumentationType.SWAGGER_2)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/61/SwaggerConfig.java\nindex 9fb84bd2287..df9ae950d4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/random/files-repaired/61/SwaggerConfig.java\n@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;\n @Configuration\n public class SwaggerConfig {\n \n-    @Profile({\"dev\",\"test\"})\n+    @Profile({\"dev\", \"test\"})\n     @Bean\n     public Docket createRestApi() { //\u4e00\u822c\u53ea\u5728\u5f00\u53d1\u6216\u8005\u6d4b\u8bd5\u7684\u65f6\u5019\u7528\u5230\n         return new Docket(DocumentationType.SWAGGER_2)\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/61/SwaggerConfig.java\nindex 9fb84bd2287..df9ae950d4a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/violations/61/SwaggerConfig.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/HealerJean-HealerJean.github.io/styler/05_predictions/three_grams/files-repaired/61/SwaggerConfig.java\n@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;\n @Configuration\n public class SwaggerConfig {\n \n-    @Profile({\"dev\",\"test\"})\n+    @Profile({\"dev\", \"test\"})\n     @Bean\n     public Docket createRestApi() { //\u4e00\u822c\u53ea\u5728\u5f00\u53d1\u6216\u8005\u6d4b\u8bd5\u7684\u65f6\u5019\u7528\u5230\n         return new Docket(DocumentationType.SWAGGER_2)\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

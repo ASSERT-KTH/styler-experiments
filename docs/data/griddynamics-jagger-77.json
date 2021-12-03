@@ -1,0 +1,71 @@
+{
+    "project_name": "griddynamics-jagger",
+    "violation_id": "77",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "warning",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic enum Nothing implements Serializable {\n\tINSTANCE\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/77/Nothing.java\nindex 8f2fdcade1c..571ae9fd931 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/griddynamics-jagger/styler/05_predictions/final/files-repaired/77/Nothing.java\n@@ -29,5 +29,5 @@ import java.io.Serializable;\n  * \n  */\n public enum Nothing implements Serializable {\n-\tINSTANCE\n+    INSTANCE\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/77/Nothing.java\nindex 8f2fdcade1c..7d8fae760e8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/checkstyle_idea/77/Nothing.java\n@@ -24,10 +24,9 @@ import java.io.Serializable;\n \n /**\n  * Could be used instead of <i>void</i> generics.\n- * \n+ *\n  * @author Mairbek Khadikov\n- * \n  */\n public enum Nothing implements Serializable {\n-\tINSTANCE\n+    INSTANCE\n }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "33",
+                    "severity": "warning",
+                    "message": "'enum def rcurly' has incorrect indentation level 4, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/77/Nothing.java\nindex 8f2fdcade1c..10250021829 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/naturalize/77/Nothing.java\n@@ -29,5 +29,5 @@ import java.io.Serializable;\n  * \n  */\n public enum Nothing implements Serializable {\n-\tINSTANCE\n-}\n+    INSTANCE\n+    }\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/77/Nothing.java\nindex 8f2fdcade1c..f31d7f57e5f 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/codebuff/77/Nothing.java\n@@ -28,6 +28,8 @@ import java.io.Serializable;\n  * @author Mairbek Khadikov\n  * \n  */\n+\n+\n public enum Nothing implements Serializable {\n-\tINSTANCE\n-}\n+    INSTANCE\n+}\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/77/Nothing.java\nindex 8f2fdcade1c..571ae9fd931 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/random/files-repaired/77/Nothing.java\n@@ -29,5 +29,5 @@ import java.io.Serializable;\n  * \n  */\n public enum Nothing implements Serializable {\n-\tINSTANCE\n+    INSTANCE\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/77/Nothing.java\nindex 8f2fdcade1c..571ae9fd931 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/violations/77/Nothing.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/griddynamics-jagger/styler/05_predictions/three_grams/files-repaired/77/Nothing.java\n@@ -29,5 +29,5 @@ import java.io.Serializable;\n  * \n  */\n public enum Nothing implements Serializable {\n-\tINSTANCE\n+    INSTANCE\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

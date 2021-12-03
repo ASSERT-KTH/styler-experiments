@@ -1,0 +1,162 @@
+{
+    "project_name": "DigitalMediaServer-DigitalMediaServer",
+    "violation_id": "23",
+    "information": {
+        "violations": [
+            {
+                "line": "30",
+                "column": "29",
+                "severity": "warning",
+                "message": "'{' is followed by whitespace.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+            }
+        ]
+    },
+    "source_code": "\t@Override\n\tpublic String[] getSupportedExtensions() {\n\t\treturn new String[] { \"srt\" };\n\t}\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/final/files-repaired/23/SubRip.java\nindex 597acdc411e..6a9d23b62a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/final/files-repaired/23/SubRip.java\n@@ -27,6 +27,6 @@ public class SubRip extends SubtitleBase {\n \n \t@Override\n \tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n+\t\treturn new String[] {\"srt\" };\n \t}\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "27",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "32",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/checkstyle_idea/23/SubRip.java\nindex 597acdc411e..21384a2c04a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/checkstyle_idea/23/SubRip.java\n@@ -16,17 +16,18 @@\n  * You should have received a copy of the GNU General Public License along with\n  * this program. If not, see http://www.gnu.org/licenses/.\n  */\n+\n package net.pms.formats.subtitle;\n \n public class SubRip extends SubtitleBase {\n \n-\t@Override\n-\tpublic Identifier getIdentifier() {\n-\t\treturn Identifier.SUBRIP;\n-\t}\n+    @Override\n+    public Identifier getIdentifier() {\n+        return Identifier.SUBRIP;\n+    }\n \n-\t@Override\n-\tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n-\t}\n+    @Override\n+    public String[] getSupportedExtensions() {\n+        return new String[] {\"srt\"};\n+    }\n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/naturalize/23/SubRip.java\nindex 597acdc411e..1e681755942 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/naturalize/23/SubRip.java\n@@ -27,6 +27,6 @@ public class SubRip extends SubtitleBase {\n \n \t@Override\n \tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n+\t\treturn new String[] {\"srt\" };\n \t}\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "23",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "24",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "25",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "26",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "28",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "29",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "30",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                },
+                {
+                    "line": "31",
+                    "severity": "warning",
+                    "message": "Indent must use tab characters",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/codebuff/23/SubRip.java\nindex 597acdc411e..206a61323cf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/codebuff/23/SubRip.java\n@@ -20,13 +20,13 @@ package net.pms.formats.subtitle;\n \n public class SubRip extends SubtitleBase {\n \n-\t@Override\n-\tpublic Identifier getIdentifier() {\n-\t\treturn Identifier.SUBRIP;\n-\t}\n+ @Override\n+ public Identifier getIdentifier() {\n+  return Identifier.SUBRIP;\n+ }\n \n-\t@Override\n-\tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n-\t}\n-}\n+ @Override\n+ public String[] getSupportedExtensions() {\n+  return new String[]{\"srt\"};\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/random/files-repaired/23/SubRip.java\nindex 597acdc411e..6a9d23b62a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/random/files-repaired/23/SubRip.java\n@@ -27,6 +27,6 @@ public class SubRip extends SubtitleBase {\n \n \t@Override\n \tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n+\t\treturn new String[] {\"srt\" };\n \t}\n }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/three_grams/files-repaired/23/SubRip.java\nindex 597acdc411e..6a9d23b62a8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/violations/23/SubRip.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/DigitalMediaServer-DigitalMediaServer/styler/05_predictions/three_grams/files-repaired/23/SubRip.java\n@@ -27,6 +27,6 @@ public class SubRip extends SubtitleBase {\n \n \t@Override\n \tpublic String[] getSupportedExtensions() {\n-\t\treturn new String[] { \"srt\" };\n+\t\treturn new String[] {\"srt\" };\n \t}\n }\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ]
+}

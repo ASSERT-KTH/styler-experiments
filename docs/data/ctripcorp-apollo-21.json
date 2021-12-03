@@ -1,0 +1,118 @@
+{
+    "project_name": "ctripcorp-apollo",
+    "violation_id": "21",
+    "information": {
+        "violations": [
+            {
+                "line": "37",
+                "severity": "warning",
+                "message": "Line is longer than 100 characters (found 101).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "\n  public static String buildReleaseDefaultNamespaceRoleName(String appId) {\n    return STRING_JOINER.join(RoleType.RELEASE_NAMESPACE, appId, ConfigConsts.NAMESPACE_APPLICATION);\n  }\n\n  public static String buildNamespaceTargetId(String appId, String namespaceName) {",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/21/RoleUtils.java\nindex b4384232454..da0f8dd49e5 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/checkstyle_idea/21/RoleUtils.java\n@@ -34,7 +34,8 @@ public class RoleUtils {\n   }\n \n   public static String buildReleaseDefaultNamespaceRoleName(String appId) {\n-    return STRING_JOINER.join(RoleType.RELEASE_NAMESPACE, appId, ConfigConsts.NAMESPACE_APPLICATION);\n+    return STRING_JOINER.join(RoleType.RELEASE_NAMESPACE, appId,\n+        ConfigConsts.NAMESPACE_APPLICATION);\n   }\n \n   public static String buildNamespaceTargetId(String appId, String namespaceName) {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/21/RoleUtils.java\nindex b4384232454..d2f7277e70b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/naturalize/21/RoleUtils.java\n@@ -46,4 +46,4 @@ public class RoleUtils {\n   }\n \n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "36",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/21/RoleUtils.java\nindex b4384232454..a2016511d48 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/codebuff/21/RoleUtils.java\n@@ -1,12 +1,11 @@\n package com.ctrip.framework.apollo.portal.util;\n \n import com.google.common.base.Joiner;\n-\n import com.ctrip.framework.apollo.core.ConfigConsts;\n import com.ctrip.framework.apollo.portal.constant.RoleType;\n \n-public class RoleUtils {\n \n+public class RoleUtils {\n   private static final Joiner STRING_JOINER = Joiner.on(ConfigConsts.CLUSTER_NAMESPACE_SEPARATOR);\n \n   public static String buildAppMasterRoleName(String appId) {\n@@ -44,6 +43,4 @@ public class RoleUtils {\n   public static String buildDefaultNamespaceTargetId(String appId) {\n     return STRING_JOINER.join(appId, ConfigConsts.NAMESPACE_APPLICATION);\n   }\n-\n-\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 101).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "'METHOD_DEF' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "37",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 184).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "'}' at column 102 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "102",
+                    "severity": "warning",
+                    "message": "WhitespaceAround: '}' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/21/RoleUtils.java\nindex b4384232454..943d6d7b329 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/violations/21/RoleUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ctripcorp-apollo/styler/05_predictions/three_grams/files-repaired/21/RoleUtils.java\n@@ -34,10 +34,7 @@ public class RoleUtils {\n   }\n \n   public static String buildReleaseDefaultNamespaceRoleName(String appId) {\n-    return STRING_JOINER.join(RoleType.RELEASE_NAMESPACE, appId, ConfigConsts.NAMESPACE_APPLICATION);\n-  }\n-\n-  public static String buildNamespaceTargetId(String appId, String namespaceName) {\n+    return STRING_JOINER.join(RoleType.RELEASE_NAMESPACE ,appId ,ConfigConsts.NAMESPACE_APPLICATION);} public static String buildNamespaceTargetId(String appId, String namespaceName) {\n     return STRING_JOINER.join(appId, namespaceName);\n   }\n \n",
+            "diff_size": 4
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

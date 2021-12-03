@@ -1,0 +1,62 @@
+{
+    "project_name": "CESNET-perun",
+    "violation_id": "308",
+    "information": {
+        "violations": [
+            {
+                "line": "38",
+                "severity": "error",
+                "message": "Line matches the illegal pattern 'Wrong number of tabs before space on next line. Indent must use tab characters.'.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpCheck"
+            }
+        ]
+    },
+    "source_code": "\t@Override\n\tpublic String getDescription() {\n\t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n\t}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\nindex 57bd62051ca..0daf7410760 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/CESNET-perun/styler/05_predictions/final/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n@@ -36,7 +36,7 @@ public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_\n \t@Override\n \tpublic String getDescription() {\n \t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n-\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n+\t\t\t\"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n \t}\n \n \t@Override\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\nindex 57bd62051ca..5c2165cee48 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/checkstyle_idea/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n@@ -8,44 +8,43 @@ import cz.metacentrum.perun.core.implApi.modules.attributes.UserPersistentShadow\n  *\n  * @author Sona Mastrakova <sona.mastrakova@gmail.com>\n  * @author Ondrej Velisek <ondrejvelisek@gmail.com>\n- *\n  * @date 06.07.2015\n  */\n public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow\n-\t\textends UserPersistentShadowAttribute {\n-\n-\tprivate final static String extSourceNameElixir = \"https://login.elixir-czech.org/idp/\";\n-\tprivate final static String domainNameElixir = \"elixir-europe.org\";\n-\tprivate final static String attrNameElixir = \"login-namespace:elixir-persistent-shadow\";\n-\n-\t@Override\n-\tpublic String getFriendlyName() {\n-\t\treturn attrNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getExtSourceName() {\n-\t\treturn extSourceNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getDomainName() {\n-\t\treturn domainNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getDescription() {\n-\t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n-\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n-\t}\n-\n-\t@Override\n-\tpublic String getDisplayName() {\n-\t\treturn \"ELIXIR login\";\n-\t}\n-\n-\t@Override\n-\tpublic String getFriendlyNameParameter() {\n-\t\treturn \"elixir-persistent-shadow\";\n-\t}\n+    extends UserPersistentShadowAttribute {\n+\n+    private final static String extSourceNameElixir = \"https://login.elixir-czech.org/idp/\";\n+    private final static String domainNameElixir = \"elixir-europe.org\";\n+    private final static String attrNameElixir = \"login-namespace:elixir-persistent-shadow\";\n+\n+    @Override\n+    public String getFriendlyName() {\n+        return attrNameElixir;\n+    }\n+\n+    @Override\n+    public String getExtSourceName() {\n+        return extSourceNameElixir;\n+    }\n+\n+    @Override\n+    public String getDomainName() {\n+        return domainNameElixir;\n+    }\n+\n+    @Override\n+    public String getDescription() {\n+        return \"Login to ELIXIR. Do not use it directly! \" +\n+            \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n+    }\n+\n+    @Override\n+    public String getDisplayName() {\n+        return \"ELIXIR login\";\n+    }\n+\n+    @Override\n+    public String getFriendlyNameParameter() {\n+        return \"elixir-persistent-shadow\";\n+    }\n }\n",
+            "diff_size": 37
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\nindex 57bd62051ca..79241db3c8c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/codebuff/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n@@ -11,41 +11,42 @@ import cz.metacentrum.perun.core.implApi.modules.attributes.UserPersistentShadow\n  *\n  * @date 06.07.2015\n  */\n-public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow\n-\t\textends UserPersistentShadowAttribute {\n-\n-\tprivate final static String extSourceNameElixir = \"https://login.elixir-czech.org/idp/\";\n-\tprivate final static String domainNameElixir = \"elixir-europe.org\";\n-\tprivate final static String attrNameElixir = \"login-namespace:elixir-persistent-shadow\";\n-\n-\t@Override\n-\tpublic String getFriendlyName() {\n-\t\treturn attrNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getExtSourceName() {\n-\t\treturn extSourceNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getDomainName() {\n-\t\treturn domainNameElixir;\n-\t}\n-\n-\t@Override\n-\tpublic String getDescription() {\n-\t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n-\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n-\t}\n-\n-\t@Override\n-\tpublic String getDisplayName() {\n-\t\treturn \"ELIXIR login\";\n-\t}\n-\n-\t@Override\n-\tpublic String getFriendlyNameParameter() {\n-\t\treturn \"elixir-persistent-shadow\";\n-\t}\n-}\n+\n+\n+public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow extends UserPersistentShadowAttribute {\n+\n+\n+ private final static String extSourceNameElixir = \"https://login.elixir-czech.org/idp/\";\n+ private final static String domainNameElixir = \"elixir-europe.org\";\n+ private final static String attrNameElixir = \"login-namespace:elixir-persistent-shadow\";\n+\n+ @Override\n+ public String getFriendlyName() {\n+  return attrNameElixir;\n+ }\n+\n+ @Override\n+ public String getExtSourceName() {\n+  return extSourceNameElixir;\n+ }\n+\n+ @Override\n+ public String getDomainName() {\n+  return domainNameElixir;\n+ }\n+\n+ @Override\n+ public String getDescription() {\n+  return \"Login to ELIXIR. Do not use it directly! \" + \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n+ }\n+\n+ @Override\n+ public String getDisplayName() {\n+  return \"ELIXIR login\";\n+ }\n+\n+ @Override\n+ public String getFriendlyNameParameter() {\n+  return \"elixir-persistent-shadow\";\n+ }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 39
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\nindex 57bd62051ca..9c7a08fb017 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/random/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n@@ -35,8 +35,7 @@ public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_\n \n \t@Override\n \tpublic String getDescription() {\n-\t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n-\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n+\t\treturn \"Login to ELIXIR. Do not use it directly! \" + \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n \t}\n \n \t@Override\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\nindex 57bd62051ca..0daf7410760 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/violations/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/CESNET-perun/styler/05_predictions/three_grams/files-repaired/308/urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_shadow.java\n@@ -36,7 +36,7 @@ public class urn_perun_user_attribute_def_def_login_namespace_elixir_persistent_\n \t@Override\n \tpublic String getDescription() {\n \t\treturn \"Login to ELIXIR. Do not use it directly! \" +\n-\t\t\t   \"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n+\t\t\t\"Use \\\"user:virt:login-namespace:elixir-persistent\\\" attribute instead.\";\n \t}\n \n \t@Override\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

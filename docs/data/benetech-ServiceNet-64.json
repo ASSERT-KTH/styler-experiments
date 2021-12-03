@@ -1,0 +1,74 @@
+{
+    "project_name": "benetech-ServiceNet",
+    "violation_id": "64",
+    "information": {
+        "violations": [
+            {
+                "line": "52",
+                "severity": "error",
+                "message": "Line is longer than 125 characters (found 130).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    @Override\n    @ConfidentialFilter\n    public void createOrUpdateGeocodinResults(List<GeocodingResult> geocodingResult, Location location, DataImportReport report) {\n        if (geocodingResult == null) {\n            return;\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/64/LocationBasedImportServiceImpl.java\nindex 7b2a743c3bc..03892546371 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/benetech-ServiceNet/styler/05_predictions/final/files-repaired/64/LocationBasedImportServiceImpl.java\n@@ -49,8 +49,9 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n \n     @Override\n     @ConfidentialFilter\n-    public void createOrUpdateGeocodinResults(List<GeocodingResult> geocodingResult, Location location, DataImportReport report) {\n-        if (geocodingResult == null) {\n+    public void createOrUpdateGeocodinResults(List <GeocodingResult > geocodingResult, Location location, DataImportReport\n+        report ) {\n+         if (geocodingResult == null) {\n             return;\n         }\n         Set<GeocodingResult> filtered = geocodingResult.stream()\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/64/LocationBasedImportServiceImpl.java\nindex 7b2a743c3bc..baa9fb43513 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/checkstyle_idea/64/LocationBasedImportServiceImpl.java\n@@ -49,7 +49,8 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n \n     @Override\n     @ConfidentialFilter\n-    public void createOrUpdateGeocodinResults(List<GeocodingResult> geocodingResult, Location location, DataImportReport report) {\n+    public void createOrUpdateGeocodinResults(List<GeocodingResult> geocodingResult, Location location,\n+                                              DataImportReport report) {\n         if (geocodingResult == null) {\n             return;\n         }\n@@ -119,7 +120,7 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n     @Override\n     @ConfidentialFilter\n     public void createOrUpdateHolidaySchedulesForLocation(Set<HolidaySchedule> schedules, Location location,\n-                                                         DataImportReport report) {\n+                                                          DataImportReport report) {\n         if (schedules != null) {\n             schedules.forEach(schedule -> {\n                 EntityValidator.validateAndFix(schedule, location.getOrganization(), report, location.getExternalDbId());\n@@ -133,7 +134,7 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n     @Override\n     public void createOrUpdateLangsForLocation(Set<Language> langs, Location location, DataImportReport report) {\n         Set<Language> filtered = langs.stream().filter(x -> BooleanUtils.isNotTrue(x.getIsConfidential())\n-            && isValid(x, report, location.getExternalDbId()))\n+                && isValid(x, report, location.getExternalDbId()))\n             .collect(Collectors.toSet());\n         createOrUpdateFilteredLangsForLocation(filtered, location);\n     }\n@@ -149,7 +150,7 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n     @Override\n     @ConfidentialFilter\n     public void createOrUpdateAccessibilities(Set<AccessibilityForDisabilities> accessibilities,\n-        Location location, DataImportReport report) {\n+                                              Location location, DataImportReport report) {\n         Set<AccessibilityForDisabilities> filtered = accessibilities.stream()\n             .filter(x -> BooleanUtils.isNotTrue(x.getIsConfidential()))\n             .collect(Collectors.toSet());\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "52",
+                    "severity": "error",
+                    "message": "Line is longer than 125 characters (found 130).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "121",
+                    "severity": "error",
+                    "message": "Line is longer than 125 characters (found 135).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/64/LocationBasedImportServiceImpl.java\nindex 7b2a743c3bc..c3db8ed5098 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/naturalize/64/LocationBasedImportServiceImpl.java\n@@ -118,9 +118,8 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n \n     @Override\n     @ConfidentialFilter\n-    public void createOrUpdateHolidaySchedulesForLocation(Set<HolidaySchedule> schedules, Location location,\n-                                                         DataImportReport report) {\n-        if (schedules != null) {\n+    public void createOrUpdateHolidaySchedulesForLocation(Set<HolidaySchedule> schedules, Location location, DataImportReport report) {\n+    if (schedules != null) {\n             schedules.forEach(schedule -> {\n                 EntityValidator.validateAndFix(schedule, location.getOrganization(), report, location.getExternalDbId());\n                 schedule.setLocation(location);\n@@ -162,7 +161,6 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n         updateCollection(em, location.getAccessibilities(), filtered, (x1, x2) ->\n             StringUtils.equals(x1.getAccessibility(), x2.getAccessibility())\n                 && StringUtils.equals(x1.getDetails(), x2.getDetails()));\n-\n     }\n \n     private void createOrUpdateFilteredLangsForLocation(Set<Language> langs, Location location) {\n@@ -181,4 +179,4 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n         sharedImportService.persistPhones(location.getPhones(), phones);\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/64/LocationBasedImportServiceImpl.java\nindex 7b2a743c3bc..03892546371 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/violations/64/LocationBasedImportServiceImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/benetech-ServiceNet/styler/05_predictions/three_grams/files-repaired/64/LocationBasedImportServiceImpl.java\n@@ -49,8 +49,9 @@ public class LocationBasedImportServiceImpl implements LocationBasedImportServic\n \n     @Override\n     @ConfidentialFilter\n-    public void createOrUpdateGeocodinResults(List<GeocodingResult> geocodingResult, Location location, DataImportReport report) {\n-        if (geocodingResult == null) {\n+    public void createOrUpdateGeocodinResults(List <GeocodingResult > geocodingResult, Location location, DataImportReport\n+        report ) {\n+         if (geocodingResult == null) {\n             return;\n         }\n         Set<GeocodingResult> filtered = geocodingResult.stream()\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

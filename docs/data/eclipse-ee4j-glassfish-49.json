@@ -1,0 +1,71 @@
+{
+    "project_name": "eclipse-ee4j-glassfish",
+    "violation_id": "49",
+    "information": {
+        "violations": [
+            {
+                "line": "40",
+                "column": "9",
+                "severity": "warning",
+                "message": "'annotation array initialization' child has incorrect indentation level 8, expected level should be one of the following: 4, 12, 15.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+            }
+        ]
+    },
+    "source_code": "@Startup\n@DependsOn({\"ejb-ejb31-singleton-threemodules-ejb1.jar#RootBean_Mod1\",\n        \"BeanA_Mod2\"})\npublic class RootBean_Mod2 {\n\n    @EJB",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/49/RootBean_Mod2.java\nindex 67787ca0ddb..7304002d8c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/final/files-repaired/49/RootBean_Mod2.java\n@@ -37,7 +37,7 @@ import jakarta.annotation.PostConstruct;\n @Singleton\n @Startup\n @DependsOn({\"ejb-ejb31-singleton-threemodules-ejb1.jar#RootBean_Mod1\",\n-        \"BeanA_Mod2\"})\n+    \"BeanA_Mod2\"})\n public class RootBean_Mod2 {\n \n     @EJB\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/49/RootBean_Mod2.java\nindex 67787ca0ddb..efc48cf9969 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/checkstyle_idea/49/RootBean_Mod2.java\n@@ -31,13 +31,12 @@ import jakarta.ejb.EJB;\n import jakarta.annotation.PostConstruct;\n \n /**\n- *\n  * @author Mahesh Kannan\n  */\n @Singleton\n @Startup\n @DependsOn({\"ejb-ejb31-singleton-threemodules-ejb1.jar#RootBean_Mod1\",\n-        \"BeanA_Mod2\"})\n+    \"BeanA_Mod2\"})\n public class RootBean_Mod2 {\n \n     @EJB\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "40",
+                    "column": "9",
+                    "severity": "warning",
+                    "message": "'annotation array initialization' child has incorrect indentation level 8, expected level should be one of the following: 4, 12, 15.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/49/RootBean_Mod2.java\nindex 67787ca0ddb..1b3581531c1 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/naturalize/49/RootBean_Mod2.java\n@@ -48,4 +48,4 @@ public class RootBean_Mod2 {\n         tracker.add(this.getClass().getName());\n     }\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/49/RootBean_Mod2.java\nindex 67787ca0ddb..7304002d8c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/random/files-repaired/49/RootBean_Mod2.java\n@@ -37,7 +37,7 @@ import jakarta.annotation.PostConstruct;\n @Singleton\n @Startup\n @DependsOn({\"ejb-ejb31-singleton-threemodules-ejb1.jar#RootBean_Mod1\",\n-        \"BeanA_Mod2\"})\n+    \"BeanA_Mod2\"})\n public class RootBean_Mod2 {\n \n     @EJB\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/49/RootBean_Mod2.java\nindex 67787ca0ddb..7304002d8c8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/violations/49/RootBean_Mod2.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/eclipse-ee4j-glassfish/styler/05_predictions/three_grams/files-repaired/49/RootBean_Mod2.java\n@@ -37,7 +37,7 @@ import jakarta.annotation.PostConstruct;\n @Singleton\n @Startup\n @DependsOn({\"ejb-ejb31-singleton-threemodules-ejb1.jar#RootBean_Mod1\",\n-        \"BeanA_Mod2\"})\n+    \"BeanA_Mod2\"})\n public class RootBean_Mod2 {\n \n     @EJB\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "195",
+    "information": {
+        "violations": [
+            {
+                "line": "97",
+                "severity": "warning",
+                "message": "Line is longer than 120 characters (found 127).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "   *    if connect to normal ServiceCenter, same with the method\n   *    {@linkplain org.apache.servicecomb.serviceregistry.ServiceRegistry#getRemoteMicroservice(String)}  }\n   *    if connect to ServiceCenter Aggregator, not only contain the target ServiceCenter but also other ServiceCenter clusters\n   * </p>\n   */\n  Microservice getAggregatedRemoteMicroservice(String microserviceId);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "98",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 124).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/195/ServiceRegistry.java\nindex dc00b4de988..bc24ca5d001 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/checkstyle_idea/195/ServiceRegistry.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.apache.servicecomb.serviceregistry;\n \n import java.util.List;\n@@ -74,10 +75,10 @@ public interface ServiceRegistry {\n   ServiceRegistryClient getServiceRegistryClient();\n \n   List<MicroserviceInstance> findServiceInstance(String appId, String microserviceName,\n-      String microserviceVersionRule);\n+                                                 String microserviceVersionRule);\n \n   MicroserviceInstances findServiceInstances(String appId, String microserviceName,\n-      String microserviceVersionRule);\n+                                             String microserviceVersionRule);\n \n   MicroserviceCache findMicroserviceCache(MicroserviceCacheKey microserviceCacheKey);\n \n@@ -92,9 +93,9 @@ public interface ServiceRegistry {\n \n   /**\n    * <p>\n-   *    if connect to normal ServiceCenter, same with the method\n-   *    {@linkplain org.apache.servicecomb.serviceregistry.ServiceRegistry#getRemoteMicroservice(String)}  }\n-   *    if connect to ServiceCenter Aggregator, not only contain the target ServiceCenter but also other ServiceCenter clusters\n+   * if connect to normal ServiceCenter, same with the method\n+   * {@linkplain org.apache.servicecomb.serviceregistry.ServiceRegistry#getRemoteMicroservice(String)}  }\n+   * if connect to ServiceCenter Aggregator, not only contain the target ServiceCenter but also other ServiceCenter clusters\n    * </p>\n    */\n   Microservice getAggregatedRemoteMicroservice(String microserviceId);\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/195/ServiceRegistry.java\nindex dc00b4de988..a5e9dfc9482 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/195/ServiceRegistry.java\n@@ -98,4 +98,4 @@ public interface ServiceRegistry {\n    * </p>\n    */\n   Microservice getAggregatedRemoteMicroservice(String microserviceId);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "102",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/195/ServiceRegistry.java\nindex dc00b4de988..66e2949c36b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/195/ServiceRegistry.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/195/ServiceRegistry.java\n@@ -20,25 +20,27 @@ import java.util.List;\n import java.util.Map;\n import java.util.Set;\n import java.util.regex.Pattern;\n-\n import org.apache.servicecomb.registry.api.registry.Microservice;\n import org.apache.servicecomb.registry.api.registry.MicroserviceInstance;\n import org.apache.servicecomb.registry.api.registry.MicroserviceInstances;\n import org.apache.servicecomb.serviceregistry.client.ServiceRegistryClient;\n import org.apache.servicecomb.serviceregistry.registry.cache.MicroserviceCache;\n import org.apache.servicecomb.serviceregistry.registry.cache.MicroserviceCacheKey;\n-\n import com.google.common.eventbus.EventBus;\n \n public interface ServiceRegistry {\n+\n   String DEFAULT_REGISTRY_NAME = \"Default\";\n+\n   String REGISTRY_NAME_FORMAT = \"[a-zA-Z]([-_]?[a-zA-Z0-9])+\";\n+\n   Pattern REGISTRY_NAME_PATTERN = Pattern.compile(REGISTRY_NAME_FORMAT);\n \n   /**\n    * Get a name representing this ServiceRegistry instance.\n    * The name should be unique.\n    */\n+\n   String getName();\n \n   void init();\n@@ -54,30 +56,32 @@ public interface ServiceRegistry {\n   /**\n    * Get the AppId of this microservice instance itself.\n    */\n+\n   String getAppId();\n \n   /**\n    * Get the {@link Microservice} of this microservice instance itself.\n    */\n+\n   Microservice getMicroservice();\n \n   /**\n    * Get all Microservices under this application\n    */\n+\n   List<Microservice> getAllMicroservices();\n \n   /**\n    * Get the {@link MicroserviceInstance} of this microservice instance itself.\n    */\n+\n   MicroserviceInstance getMicroserviceInstance();\n \n   ServiceRegistryClient getServiceRegistryClient();\n \n-  List<MicroserviceInstance> findServiceInstance(String appId, String microserviceName,\n-      String microserviceVersionRule);\n+  List<MicroserviceInstance> findServiceInstance(String appId, String microserviceName, String microserviceVersionRule);\n \n-  MicroserviceInstances findServiceInstances(String appId, String microserviceName,\n-      String microserviceVersionRule);\n+  MicroserviceInstances findServiceInstances(String appId, String microserviceName, String microserviceVersionRule);\n \n   MicroserviceCache findMicroserviceCache(MicroserviceCacheKey microserviceCacheKey);\n \n@@ -86,6 +90,7 @@ public interface ServiceRegistry {\n   /**\n    * full update, not increase update\n    */\n+\n   boolean updateInstanceProperties(Map<String, String> instanceProperties);\n \n   Microservice getRemoteMicroservice(String microserviceId);\n@@ -97,5 +102,6 @@ public interface ServiceRegistry {\n    *    if connect to ServiceCenter Aggregator, not only contain the target ServiceCenter but also other ServiceCenter clusters\n    * </p>\n    */\n+\n   Microservice getAggregatedRemoteMicroservice(String microserviceId);\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "97",
+                    "severity": "warning",
+                    "message": "Line is longer than 120 characters (found 127).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

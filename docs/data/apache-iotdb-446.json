@@ -1,0 +1,107 @@
+{
+    "project_name": "apache-iotdb",
+    "violation_id": "446",
+    "information": {
+        "violations": [
+            {
+                "line": "20",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " *\n */\npackage org.apache.iotdb.db.qp.logical.sys;\n\nimport org.apache.iotdb.db.exception.query.QueryProcessException;\nimport org.apache.iotdb.db.metadata.PartialPath;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/446/ShowTimeSeriesOperator.java\nindex d5466881aef..9d6d99c6703 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-iotdb/styler/05_predictions/final/files-repaired/446/ShowTimeSeriesOperator.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/446/ShowTimeSeriesOperator.java\nindex d5466881aef..9d6d99c6703 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/checkstyle_idea/446/ShowTimeSeriesOperator.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "40",
+                    "severity": "warning",
+                    "message": "'int' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                },
+                {
+                    "line": "95",
+                    "severity": "warning",
+                    "message": "Line is longer than 100 characters (found 102).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/446/ShowTimeSeriesOperator.java\nindex d5466881aef..215f2de5495 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/codebuff/446/ShowTimeSeriesOperator.java\n@@ -36,7 +36,8 @@ public class ShowTimeSeriesOperator extends ShowOperator {\n   // if is true, the result will be sorted according to the inserting frequency of the timeseries\n   private final boolean orderByHeat;\n \n-  public ShowTimeSeriesOperator(int tokeIntType, PartialPath path, boolean orderByHeat) {\n+  public ShowTimeSeriesOperator(\n+    int tokeIntType, PartialPath path, boolean orderByHeat) {\n     super(tokeIntType);\n     this.path = path;\n     this.orderByHeat = orderByHeat;\n@@ -91,8 +92,7 @@ public class ShowTimeSeriesOperator extends ShowOperator {\n   }\n \n   @Override\n-  public PhysicalPlan generatePhysicalPlan(PhysicalGenerator generator)\n-      throws QueryProcessException {\n+  public PhysicalPlan generatePhysicalPlan(PhysicalGenerator generator) throws QueryProcessException {\n     ShowTimeSeriesPlan showTimeSeriesPlan = new ShowTimeSeriesPlan(path, limit, offset);\n     showTimeSeriesPlan.setIsContains(isContains);\n     showTimeSeriesPlan.setKey(key);\n@@ -100,4 +100,4 @@ public class ShowTimeSeriesOperator extends ShowOperator {\n     showTimeSeriesPlan.setOrderByHeat(orderByHeat);\n     return showTimeSeriesPlan;\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 5
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "20",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "22",
+                    "severity": "warning",
+                    "message": "'import' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                },
+                {
+                    "line": "22",
+                    "column": "67",
+                    "severity": "warning",
+                    "message": "Only one statement per line allowed.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/446/ShowTimeSeriesOperator.java\nindex d5466881aef..82e15e918b8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/random/files-repaired/446/ShowTimeSeriesOperator.java\n@@ -17,9 +17,9 @@\n  * under the License.\n  *\n  */\n-package org.apache.iotdb.db.qp.logical.sys;\n+package org.apache.iotdb.db.qp.logical.sys\n \n-import org.apache.iotdb.db.exception.query.QueryProcessException;\n+; import org.apache.iotdb.db.exception.query.QueryProcessException;\n import org.apache.iotdb.db.metadata.PartialPath;\n import org.apache.iotdb.db.qp.physical.PhysicalPlan;\n import org.apache.iotdb.db.qp.physical.sys.ShowTimeSeriesPlan;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/446/ShowTimeSeriesOperator.java\nindex d5466881aef..9d6d99c6703 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/violations/446/ShowTimeSeriesOperator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-iotdb/styler/05_predictions/three_grams/files-repaired/446/ShowTimeSeriesOperator.java\n@@ -17,6 +17,7 @@\n  * under the License.\n  *\n  */\n+\n package org.apache.iotdb.db.qp.logical.sys;\n \n import org.apache.iotdb.db.exception.query.QueryProcessException;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "project_name": "Chaklader-Object-Oriented-Design",
+    "violation_id": "52",
+    "information": {
+        "violations": [
+            {
+                "line": "5",
+                "column": "1",
+                "severity": "error",
+                "message": "Line contains a tab character.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": "public enum UserStatusType {\n\n\tOffline, Away, Idle, Available, Busy\n}",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/52/UserStatusType.java\nindex 7c98bf0c132..22b50d2b48e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/final/files-repaired/52/UserStatusType.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum UserStatusType {\r\n \r\n-\tOffline, Away, Idle, Available, Busy\r\n+Offline, Away, Idle, Available, Busy\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/52/UserStatusType.java\nindex 7c98bf0c132..f9a79452f4c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/checkstyle_idea/52/UserStatusType.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum UserStatusType {\r\n \r\n-\tOffline, Away, Idle, Available, Busy\r\n+  Offline, Away, Idle, Available, Busy\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "6",
+                    "severity": "error",
+                    "message": "'enum def rcurly' has incorrect indentation level 2, expected level should be 0.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/52/UserStatusType.java\nindex 7c98bf0c132..30424ebdd82 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/naturalize/52/UserStatusType.java\n@@ -1,6 +1,6 @@\n package design.practice.chatServer;\r\n \r\n-public enum UserStatusType {\r\n-\r\n-\tOffline, Away, Idle, Available, Busy\r\n-}\r\n+public enum UserStatusType {\n+\n+  Offline, Away, Idle, Available, Busy\n+  }\n\\ No newline at end of file\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/52/UserStatusType.java\nindex 7c98bf0c132..135536ee304 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/codebuff/52/UserStatusType.java\n@@ -1,6 +1,7 @@\n-package design.practice.chatServer;\r\n-\r\n-public enum UserStatusType {\r\n-\r\n-\tOffline, Away, Idle, Available, Busy\r\n-}\r\n+package design.practice.chatServer;\n+\n+\n+public enum UserStatusType {\n+\n+  Offline, Away, Idle, Available, Busy\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/52/UserStatusType.java\nindex 7c98bf0c132..22b50d2b48e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/random/files-repaired/52/UserStatusType.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum UserStatusType {\r\n \r\n-\tOffline, Away, Idle, Available, Busy\r\n+Offline, Away, Idle, Available, Busy\r\n }\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/52/UserStatusType.java\nindex 7c98bf0c132..f9a79452f4c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/violations/52/UserStatusType.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Chaklader-Object-Oriented-Design/styler/05_predictions/three_grams/files-repaired/52/UserStatusType.java\n@@ -2,5 +2,5 @@ package design.practice.chatServer;\n \r\n public enum UserStatusType {\r\n \r\n-\tOffline, Away, Idle, Available, Busy\r\n+  Offline, Away, Idle, Available, Busy\r\n }\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize"
+    ]
+}

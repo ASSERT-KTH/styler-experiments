@@ -1,0 +1,80 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "34",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "column": "24",
+                "severity": "error",
+                "message": "'}' at column 24 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "  public static final String SYSTEM_ACCOUNT = \"system\";\n\n  private Constants() {}\n}\n",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/34/Constants.java\nindex e5e1f5b285e..9f246d4b852 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/34/Constants.java\n@@ -14,6 +14,7 @@ public final class Constants {\n \n   public static final String SYSTEM_ACCOUNT = \"system\";\n \n-  private Constants() {}\n+  private Constants() {\n+  }\n }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/34/Constants.java\nindex e5e1f5b285e..9f246d4b852 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/34/Constants.java\n@@ -14,6 +14,7 @@ public final class Constants {\n \n   public static final String SYSTEM_ACCOUNT = \"system\";\n \n-  private Constants() {}\n+  private Constants() {\n+  }\n }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "17",
+                    "column": "24",
+                    "severity": "error",
+                    "message": "'}' at column 24 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/34/Constants.java\nindex e5e1f5b285e..cb2a239ed1d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/34/Constants.java\n@@ -15,5 +15,4 @@ public final class Constants {\n   public static final String SYSTEM_ACCOUNT = \"system\";\n \n   private Constants() {}\n-}\n-\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/34/Constants.java\nindex e5e1f5b285e..471c79e8b15 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/34/Constants.java\n@@ -3,17 +3,17 @@ package eu.dzhw.fdz.metadatamanagement.common.config;\n /**\n  * Application constants.\n  */\n-public final class Constants {\n \n+\n+public final class Constants {\n   public static final String SPRING_PROFILE_LOCAL = \"local\";\n   public static final String SPRING_PROFILE_MINIFIED = \"minified\";\n   public static final String SPRING_PROFILE_DEVELOPMENT = \"dev\";\n   public static final String SPRING_PROFILE_TEST = \"test\";\n   public static final String SPRING_PROFILE_PROD = \"prod\";\n   public static final String SPRING_PROFILE_UNITTEST = \"unittest\";\n-\n   public static final String SYSTEM_ACCOUNT = \"system\";\n \n-  private Constants() {}\n-}\n-\n+  private Constants() {\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/34/Constants.java\nindex e5e1f5b285e..9f246d4b852 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/34/Constants.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/34/Constants.java\n@@ -14,6 +14,7 @@ public final class Constants {\n \n   public static final String SYSTEM_ACCOUNT = \"system\";\n \n-  private Constants() {}\n+  private Constants() {\n+  }\n }\n \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "17",
+                    "column": "24",
+                    "severity": "error",
+                    "message": "'}' at column 24 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "codebuff",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "styler_three_grams"
+    ]
+}

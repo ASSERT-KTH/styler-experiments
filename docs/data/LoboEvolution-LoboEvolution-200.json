@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "200",
+    "information": {
+        "violations": [
+            {
+                "line": "32",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface SVGAnimatedLengthList {\n\t/**\n\t * <p>getBaseVal.</p>\n\t *\n\t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/200/SVGAnimatedLengthList.java\nindex 4e7289972f7..3575057dc7c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/200/SVGAnimatedLengthList.java\n@@ -29,12 +29,12 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGAnimatedLengthList {\n-\t/**\n+/**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n \t */\n-\tSVGLengthList getBaseVal();\n+ SVGLengthList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/200/SVGAnimatedLengthList.java\nindex 4e7289972f7..2e6ecf91efb 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/200/SVGAnimatedLengthList.java\n@@ -20,6 +20,7 @@\n  *     Contact info: ivan.difrancesco@yahoo.it\n  *\n  */\n+\n package org.loboevolution.html.dom.svg;\n \n /**\n@@ -29,17 +30,17 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGAnimatedLengthList {\n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n-\t */\n-\tSVGLengthList getBaseVal();\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n+     */\n+    SVGLengthList getBaseVal();\n \n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n-\t */\n-\tSVGLengthList getAnimVal();\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n+     */\n+    SVGLengthList getAnimVal();\n }\n",
+            "diff_size": 13
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/200/SVGAnimatedLengthList.java\nindex 4e7289972f7..7e3aa742591 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/200/SVGAnimatedLengthList.java\n@@ -28,18 +28,24 @@ package org.loboevolution.html.dom.svg;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface SVGAnimatedLengthList {\n-\t/**\n-\t * <p>getBaseVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n-\t */\n-\tSVGLengthList getBaseVal();\n-\n-\t/**\n-\t * <p>getAnimVal.</p>\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n-\t */\n-\tSVGLengthList getAnimVal();\n-}\n+    /**\n+     * <p>getBaseVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n+     */\n+\n+\n+    SVGLengthList getBaseVal();\n+\n+    /**\n+     * <p>getAnimVal.</p>\n+     *\n+     * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n+     */\n+\n+\n+    SVGLengthList getAnimVal();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/200/SVGAnimatedLengthList.java\nindex 4e7289972f7..3575057dc7c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/200/SVGAnimatedLengthList.java\n@@ -29,12 +29,12 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGAnimatedLengthList {\n-\t/**\n+/**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n \t */\n-\tSVGLengthList getBaseVal();\n+ SVGLengthList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "33",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/200/SVGAnimatedLengthList.java\nindex 4e7289972f7..cc70f0db640 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/200/SVGAnimatedLengthList.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/200/SVGAnimatedLengthList.java\n@@ -29,12 +29,12 @@ package org.loboevolution.html.dom.svg;\n  * @version $Id: $Id\n  */\n public interface SVGAnimatedLengthList {\n-\t/**\n+    /**\n \t * <p>getBaseVal.</p>\n \t *\n \t * @return a {@link org.loboevolution.html.dom.svg.SVGLengthList} object.\n \t */\n-\tSVGLengthList getBaseVal();\n+ SVGLengthList getBaseVal();\n \n \t/**\n \t * <p>getAnimVal.</p>\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

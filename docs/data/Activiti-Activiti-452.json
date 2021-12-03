@@ -1,0 +1,70 @@
+{
+    "project_name": "Activiti-Activiti",
+    "violation_id": "452",
+    "information": {
+        "violations": [
+            {
+                "line": "16",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.activiti.runtime.api.event.impl;\n\nimport org.activiti.api.runtime.event.impl.RuntimeEventImpl;\nimport org.activiti.api.task.model.Task;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/452/TaskActivatedImpl.java\nindex a64d3068a30..a216f9c42be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Activiti-Activiti/styler/05_predictions/final/files-repaired/452/TaskActivatedImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/452/TaskActivatedImpl.java\nindex a64d3068a30..a216f9c42be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/checkstyle_idea/452/TaskActivatedImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/452/TaskActivatedImpl.java\nindex a64d3068a30..7d67a7ab87d 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/naturalize/452/TaskActivatedImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n@@ -34,4 +35,4 @@ public class TaskActivatedImpl extends RuntimeEventImpl<Task, TaskEvents> implem\n     public TaskEvents getEventType() {\n         return TaskEvents.TASK_ACTIVATED;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "16",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/452/TaskActivatedImpl.java\nindex a64d3068a30..bfbc7a9492e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/codebuff/452/TaskActivatedImpl.java\n@@ -23,15 +23,15 @@ import static org.activiti.api.task.model.events.TaskRuntimeEvent.TaskEvents;\n \n public class TaskActivatedImpl extends RuntimeEventImpl<Task, TaskEvents> implements TaskActivatedEvent {\n \n-    public TaskActivatedImpl() {\n-    }\n+  public TaskActivatedImpl() {\n+  }\n \n-    public TaskActivatedImpl(Task entity) {\n-        super(entity);\n-    }\n+  public TaskActivatedImpl(Task entity) {\n+    super(entity);\n+  }\n \n-    @Override\n-    public TaskEvents getEventType() {\n-        return TaskEvents.TASK_ACTIVATED;\n-    }\n-}\n+  @Override\n+  public TaskEvents getEventType() {\n+    return TaskEvents.TASK_ACTIVATED;\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/452/TaskActivatedImpl.java\nindex a64d3068a30..a216f9c42be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/random/files-repaired/452/TaskActivatedImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/452/TaskActivatedImpl.java\nindex a64d3068a30..a216f9c42be 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/violations/452/TaskActivatedImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Activiti-Activiti/styler/05_predictions/three_grams/files-repaired/452/TaskActivatedImpl.java\n@@ -13,6 +13,7 @@\n  * See the License for the specific language governing permissions and\n  * limitations under the License.\n  */\n+\n package org.activiti.runtime.api.event.impl;\n \n import org.activiti.api.runtime.event.impl.RuntimeEventImpl;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "codebuff"
+    ]
+}

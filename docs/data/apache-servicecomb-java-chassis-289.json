@@ -1,0 +1,72 @@
+{
+    "project_name": "apache-servicecomb-java-chassis",
+    "violation_id": "289",
+    "information": {
+        "violations": [
+            {
+                "line": "129",
+                "column": "55",
+                "severity": "warning",
+                "message": "'&&' should be on a new line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+            }
+        ]
+    },
+    "source_code": "\n      for (Parameter parameter : operation.getParameters()) {\n        if (BodyParameter.class.isInstance(parameter) &&\n            ((BodyParameter) parameter).getSchema() == null) {\n          throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n        }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/289/SwaggerUtils.java\nindex 83b608b4a5f..6ed61fe33f7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/final/files-repaired/289/SwaggerUtils.java\n@@ -126,8 +126,7 @@ public final class SwaggerUtils {\n       }\n \n       for (Parameter parameter : operation.getParameters()) {\n-        if (BodyParameter.class.isInstance(parameter) &&\n-            ((BodyParameter) parameter).getSchema() == null) {\n+        if (BodyParameter.class.isInstance(parameter) && ((BodyParameter) parameter).getSchema() == null) {\n           throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n         }\n       }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "129",
+                    "column": "55",
+                    "severity": "warning",
+                    "message": "'&&' should be on a new line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "naturalize",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/289/SwaggerUtils.java\nindex 83b608b4a5f..f92c29d27ef 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/naturalize/289/SwaggerUtils.java\n@@ -126,8 +126,7 @@ public final class SwaggerUtils {\n       }\n \n       for (Parameter parameter : operation.getParameters()) {\n-        if (BodyParameter.class.isInstance(parameter) &&\n-            ((BodyParameter) parameter).getSchema() == null) {\n+        if (BodyParameter.class.isInstance(parameter) && ((BodyParameter) parameter).getSchema() == null) {\n           throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n         }\n       }\n@@ -389,10 +388,7 @@ public final class SwaggerUtils {\n     }\n \n     return (cls != String.class\n-        && cls != Date.class\n-        && cls != LocalDate.class\n-        && cls != byte[].class\n-        && !Part.class.isAssignableFrom(cls));\n+        && cls != Date.class && cls != LocalDate.class && cls != byte[].class && !Part.class.isAssignableFrom(cls));\n   }\n \n   public static boolean isFileParameter(Parameter parameter) {\n@@ -412,4 +408,4 @@ public final class SwaggerUtils {\n \n     return FileProperty.isType(property.getType(), property.getFormat());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/289/SwaggerUtils.java\nindex 83b608b4a5f..91930cdfb7c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/codebuff/289/SwaggerUtils.java\n@@ -30,11 +30,9 @@ import java.util.List;\n import java.util.Map;\n import java.util.Map.Entry;\n import java.util.stream.Collectors;\n-\n import javax.servlet.http.Part;\n import javax.ws.rs.core.Response.Status;\n import javax.ws.rs.core.Response.Status.Family;\n-\n import org.apache.commons.io.IOUtils;\n import org.apache.commons.lang3.ClassUtils;\n import org.apache.commons.lang3.StringUtils;\n@@ -42,10 +40,8 @@ import org.apache.commons.lang3.math.NumberUtils;\n import org.apache.servicecomb.foundation.common.exceptions.ServiceCombException;\n import org.apache.servicecomb.foundation.common.utils.ReflectUtils;\n import org.apache.servicecomb.swagger.generator.SwaggerConst;\n-\n import com.fasterxml.jackson.databind.JavaType;\n import com.fasterxml.jackson.databind.type.TypeFactory;\n-\n import io.swagger.converter.ModelConverters;\n import io.swagger.models.Info;\n import io.swagger.models.Model;\n@@ -113,6 +109,7 @@ public final class SwaggerUtils {\n    * Provide a method to validate swagger. This method is now implemented to check common errors, and the logic\n    * will be changed when necessary. For internal use only.\n    */\n+\n   public static void validateSwagger(Swagger swagger) {\n     Map<String, Path> paths = swagger.getPaths();\n     if (paths == null) {\n@@ -126,8 +123,7 @@ public final class SwaggerUtils {\n       }\n \n       for (Parameter parameter : operation.getParameters()) {\n-        if (BodyParameter.class.isInstance(parameter) &&\n-            ((BodyParameter) parameter).getSchema() == null) {\n+        if (BodyParameter.class.isInstance(parameter) && ((BodyParameter) parameter).getSchema() == null) {\n           throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n         }\n       }\n@@ -144,7 +140,6 @@ public final class SwaggerUtils {\n     int okCode = Status.OK.getStatusCode();\n     String strOkCode = String.valueOf(okCode);\n     Response okResponse = null;\n-\n     for (Entry<String, Response> responseEntry : operation.getResponses().entrySet()) {\n       Response response = responseEntry.getValue();\n       if (StringUtils.isEmpty(response.getDescription())) {\n@@ -159,6 +154,7 @@ public final class SwaggerUtils {\n       if (\"default\".equals(responseEntry.getKey())) {\n         statusCode = okCode;\n       }\n+\n       if (Family.SUCCESSFUL.equals(Family.familyOf(statusCode))) {\n         okResponse = response;\n       }\n@@ -194,7 +190,6 @@ public final class SwaggerUtils {\n     if (model instanceof ModelImpl) {\n       return model.getProperties();\n     }\n-\n     return null;\n   }\n \n@@ -207,14 +202,16 @@ public final class SwaggerUtils {\n \n   public static void setParameterType(Swagger swagger, Type type, AbstractSerializableParameter<?> parameter) {\n     addDefinitions(swagger, type);\n-    Property property = ModelConverters.getInstance().readAsProperty(type);\n \n+    Property property = ModelConverters.getInstance().readAsProperty(type);\n     if (isComplexProperty(property)) {\n       // cannot set a simple parameter(header, query, etc.) as complex type\n-      String msg = String\n-          .format(\"not allow complex type for %s parameter, type=%s.\", parameter.getIn(), type.getTypeName());\n+      String msg = String.format(\"not allow complex type for %s parameter, type=%s.\",\n+parameter.getIn(),\n+type.getTypeName());\n       throw new IllegalStateException(msg);\n     }\n+\n     parameter.setProperty(property);\n   }\n \n@@ -234,7 +231,6 @@ public final class SwaggerUtils {\n     if (ArrayProperty.class.isInstance(property)) {\n       return isComplexProperty(((ArrayProperty) property).getItems());\n     }\n-\n     return false;\n   }\n \n@@ -284,10 +280,9 @@ public final class SwaggerUtils {\n   }\n \n   public static List<String> convertConsumesOrProduces(String... consumesOrProduces) {\n-    return Arrays.stream(consumesOrProduces)\n-        .map(String::trim)\n-        .filter(StringUtils::isNotEmpty)\n-        .collect(Collectors.toList());\n+    return Arrays.stream(consumesOrProduces).map(String::trim)\n+                                            .filter(StringUtils::isNotEmpty)\n+                                            .collect(Collectors.toList());\n   }\n \n   public static void setCommaProduces(Swagger swagger, String commaProduces) {\n@@ -330,7 +325,6 @@ public final class SwaggerUtils {\n         return true;\n       }\n     }\n-\n     return false;\n   }\n \n@@ -352,7 +346,6 @@ public final class SwaggerUtils {\n     if (StringUtils.isEmpty(name)) {\n       return null;\n     }\n-\n     return ReflectUtils.getClassByName(name);\n   }\n \n@@ -369,7 +362,6 @@ public final class SwaggerUtils {\n     if (vendorExtensions == null) {\n       return null;\n     }\n-\n     return (T) vendorExtensions.get(key);\n   }\n \n@@ -387,12 +379,8 @@ public final class SwaggerUtils {\n     if (ClassUtils.isPrimitiveOrWrapper(cls)) {\n       return false;\n     }\n-\n-    return (cls != String.class\n-        && cls != Date.class\n-        && cls != LocalDate.class\n-        && cls != byte[].class\n-        && !Part.class.isAssignableFrom(cls));\n+    return (cls != String.class && cls != Date.class && cls != LocalDate.class && cls != byte[].class\n+            && !Part.class.isAssignableFrom(cls));\n   }\n \n   public static boolean isFileParameter(Parameter parameter) {\n@@ -409,7 +397,6 @@ public final class SwaggerUtils {\n     if (!ArrayProperty.isType(formParameter.getType()) || property == null) {\n       return false;\n     }\n-\n     return FileProperty.isType(property.getType(), property.getFormat());\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 32
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/289/SwaggerUtils.java\nindex 83b608b4a5f..6ed61fe33f7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/random/files-repaired/289/SwaggerUtils.java\n@@ -126,8 +126,7 @@ public final class SwaggerUtils {\n       }\n \n       for (Parameter parameter : operation.getParameters()) {\n-        if (BodyParameter.class.isInstance(parameter) &&\n-            ((BodyParameter) parameter).getSchema() == null) {\n+        if (BodyParameter.class.isInstance(parameter) && ((BodyParameter) parameter).getSchema() == null) {\n           throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n         }\n       }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/289/SwaggerUtils.java\nindex 83b608b4a5f..6ed61fe33f7 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/violations/289/SwaggerUtils.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/apache-servicecomb-java-chassis/styler/05_predictions/three_grams/files-repaired/289/SwaggerUtils.java\n@@ -126,8 +126,7 @@ public final class SwaggerUtils {\n       }\n \n       for (Parameter parameter : operation.getParameters()) {\n-        if (BodyParameter.class.isInstance(parameter) &&\n-            ((BodyParameter) parameter).getSchema() == null) {\n+        if (BodyParameter.class.isInstance(parameter) && ((BodyParameter) parameter).getSchema() == null) {\n           throw new ServiceCombException(\"swagger validator: body parameter schema is empty.\");\n         }\n       }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea"
+    ]
+}

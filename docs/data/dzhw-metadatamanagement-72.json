@@ -1,0 +1,93 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "72",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "column": "65",
+                "severity": "error",
+                "message": "'}' at column 65 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(ValidScaleLevel constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/72/ValidScaleLevelValidator.java\nindex 1e6fbbbdd37..fd0c649da03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/72/ValidScaleLevelValidator.java\n@@ -22,7 +22,9 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidScaleLevel constraintAnnotation) {}\n+  public void initialize(ValidScaleLevel constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/72/ValidScaleLevelValidator.java\nindex 1e6fbbbdd37..394d1c34ca0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/72/ValidScaleLevelValidator.java\n@@ -10,23 +10,23 @@ import eu.dzhw.fdz.metadatamanagement.variablemanagement.domain.ScaleLevels;\n \n /**\n  * Validator of the scale level. Only values from the class {@link ScaleLevels} are allowed.\n- * \n- * @author Daniel Katzberg\n  *\n+ * @author Daniel Katzberg\n  */\n public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleLevel, I18nString> {\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidScaleLevel constraintAnnotation) {}\n+  public void initialize(ValidScaleLevel constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "65",
+                    "severity": "error",
+                    "message": "'}' at column 65 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                },
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "'if' has incorrect indentation level 2, expected level should be 4.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/72/ValidScaleLevelValidator.java\nindex 1e6fbbbdd37..2dc99dc0ff8 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/naturalize/72/ValidScaleLevelValidator.java\n@@ -32,8 +32,7 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n    */\n   @Override\n   public boolean isValid(I18nString scaleLevel, ConstraintValidatorContext context) {\n-\n-    if (scaleLevel == null) {\n+  if (scaleLevel == null) {\n       return true;\n     }\n \n@@ -44,4 +43,4 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n     // check for scale levels\n     return ScaleLevels.ALL.contains(scaleLevel);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "40",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/72/ValidScaleLevelValidator.java\nindex 1e6fbbbdd37..816274bfeac 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/72/ValidScaleLevelValidator.java\n@@ -2,9 +2,7 @@ package eu.dzhw.fdz.metadatamanagement.variablemanagement.domain.validation;\n \n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import com.google.common.base.Strings;\n-\n import eu.dzhw.fdz.metadatamanagement.common.domain.I18nString;\n import eu.dzhw.fdz.metadatamanagement.variablemanagement.domain.ScaleLevels;\n \n@@ -14,6 +12,8 @@ import eu.dzhw.fdz.metadatamanagement.variablemanagement.domain.ScaleLevels;\n  * @author Daniel Katzberg\n  *\n  */\n+\n+\n public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleLevel, I18nString> {\n \n   /*\n@@ -21,8 +21,11 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n    * \n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(ValidScaleLevel constraintAnnotation) {}\n+  public void initialize(ValidScaleLevel constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n@@ -30,18 +33,20 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n-  @Override\n-  public boolean isValid(I18nString scaleLevel, ConstraintValidatorContext context) {\n \n+\n+  @Override\n+  public boolean isValid(I18nString scaleLevel,\n+    ConstraintValidatorContext context) {\n     if (scaleLevel == null) {\n       return true;\n     }\n-\n     if (Strings.isNullOrEmpty(scaleLevel.getDe()) && Strings.isNullOrEmpty(scaleLevel.getEn())) {\n       return true;\n     }\n \n     // check for scale levels\n+\n     return ScaleLevels.ALL.contains(scaleLevel);\n   }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 17
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/72/ValidScaleLevelValidator.java\nindex 1e6fbbbdd37..fd0c649da03 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/72/ValidScaleLevelValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/72/ValidScaleLevelValidator.java\n@@ -22,7 +22,9 @@ public class ValidScaleLevelValidator implements ConstraintValidator<ValidScaleL\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(ValidScaleLevel constraintAnnotation) {}\n+  public void initialize(ValidScaleLevel constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "25",
+                    "column": "65",
+                    "severity": "error",
+                    "message": "'}' at column 65 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

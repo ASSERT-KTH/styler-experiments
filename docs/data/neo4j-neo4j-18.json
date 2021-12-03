@@ -1,0 +1,146 @@
+{
+    "project_name": "neo4j-neo4j",
+    "violation_id": "18",
+    "information": {
+        "violations": [
+            {
+                "line": "35",
+                "severity": "error",
+                "message": "Line is longer than 160 characters (found 164).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "    private final KnownCommunitySecurityComponentVersion previous;\n\n    public CommunitySecurityComponentVersion_2_41( AbstractSecurityLog securityLog, UserRepository userRepository, KnownCommunitySecurityComponentVersion previous )\n    {\n        super( COMMUNITY_SECURITY_41, securityLog, userRepository );\n        this.previous = previous;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "36",
+                    "column": "50",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "37",
+                    "column": "98",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "39",
+                    "column": "14",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "39",
+                    "column": "65",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "44",
+                    "column": "37",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "44",
+                    "column": "69",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "46",
+                    "column": "12",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "46",
+                    "column": "34",
+                    "severity": "error",
+                    "message": "')' is not preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/18/CommunitySecurityComponentVersion_2_41.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/18/CommunitySecurityComponentVersion_2_41.java\nindex a66e41986c6..c527128bc7c 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/18/CommunitySecurityComponentVersion_2_41.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/checkstyle_idea/18/CommunitySecurityComponentVersion_2_41.java\n@@ -17,6 +17,7 @@\n  * You should have received a copy of the GNU General Public License\n  * along with this program.  If not, see <http://www.gnu.org/licenses/>.\n  */\n+\n package org.neo4j.server.security.systemgraph.versions;\n \n import org.neo4j.graphdb.Transaction;\n@@ -32,20 +33,21 @@ public class CommunitySecurityComponentVersion_2_41 extends SupportedCommunitySe\n {\n     private final KnownCommunitySecurityComponentVersion previous;\n \n-    public CommunitySecurityComponentVersion_2_41( AbstractSecurityLog securityLog, UserRepository userRepository, KnownCommunitySecurityComponentVersion previous )\n+    public CommunitySecurityComponentVersion_2_41(AbstractSecurityLog securityLog, UserRepository userRepository,\n+                                                  KnownCommunitySecurityComponentVersion previous)\n     {\n-        super( COMMUNITY_SECURITY_41, securityLog, userRepository );\n+        super(COMMUNITY_SECURITY_41, securityLog, userRepository);\n         this.previous = previous;\n     }\n \n     @Override\n-    public void upgradeSecurityGraph( Transaction tx, int fromVersion ) throws Exception\n+    public void upgradeSecurityGraph(Transaction tx, int fromVersion) throws Exception\n     {\n-        if ( fromVersion < version )\n+        if (fromVersion < version)\n         {\n-            previous.upgradeSecurityGraph( tx, fromVersion );\n+            previous.upgradeSecurityGraph(tx, fromVersion);\n             // This version introduced the Version node\n-            this.setVersionProperty( tx, version );\n+            this.setVersionProperty(tx, version);\n         }\n     }\n }\n",
+            "diff_size": 8
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "35",
+                    "severity": "error",
+                    "message": "Line is longer than 160 characters (found 164).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "35",
+                    "column": "50",
+                    "severity": "error",
+                    "message": "'(' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"
+                },
+                {
+                    "line": "35",
+                    "column": "50",
+                    "severity": "error",
+                    "message": "'(' is preceded with whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/18/CommunitySecurityComponentVersion_2_41.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/styler/05_predictions/three_grams/files-repaired/18/CommunitySecurityComponentVersion_2_41.java\nindex a66e41986c6..0e92b5d6822 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/violations/18/CommunitySecurityComponentVersion_2_41.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/neo4j-neo4j/styler/05_predictions/three_grams/files-repaired/18/CommunitySecurityComponentVersion_2_41.java\n@@ -32,9 +32,12 @@ public class CommunitySecurityComponentVersion_2_41 extends SupportedCommunitySe\n {\n     private final KnownCommunitySecurityComponentVersion previous;\n \n-    public CommunitySecurityComponentVersion_2_41( AbstractSecurityLog securityLog, UserRepository userRepository, KnownCommunitySecurityComponentVersion previous )\n-    {\n-        super( COMMUNITY_SECURITY_41, securityLog, userRepository );\n+    publicCommunitySecurityComponentVersion_2_41 (AbstractSecurityLog securityLog, UserRepository userRepository,\n+    KnownCommunitySecurityComponentVersion\n+\n+    previous )\n+      {\n+          supersuper( COMMUNITY_SECURITY_41, securityLog, userRepository );\n         this.previous = previous;\n     }\n \n",
+            "diff_size": 6
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

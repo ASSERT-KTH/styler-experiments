@@ -1,0 +1,76 @@
+{
+    "project_name": "gomint-gomint",
+    "violation_id": "32",
+    "information": {
+        "violations": [
+            {
+                "line": "25",
+                "severity": "error",
+                "message": "Line is longer than 180 characters (found 182).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );\n\n            connection.entity().adventureSettings().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n            connection.entity().adventureSettings().update();\n        }\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/gomint-gomint/styler/05_predictions/final/files-repaired/32/PacketAdventureSettingsHandler.java\nindex fab621a6a0b..82e578beedf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/gomint-gomint/styler/05_predictions/final/files-repaired/32/PacketAdventureSettingsHandler.java\n@@ -20,9 +20,8 @@ public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdven\n             // Fire event\n             PlayerToggleFlyEvent playerToggleFlyEvent = new PlayerToggleFlyEvent( connection.entity(), adventureSettings.isFlying() );\n             playerToggleFlyEvent.cancelled( !connection.entity().adventureSettings().isCanFly() );\n-            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );\n-\n-            connection.entity().adventureSettings().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n+            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );connection.entity ( ) .\n+                adventureSettings ().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n             connection.entity().adventureSettings().update();\n         }\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/32/PacketAdventureSettingsHandler.java\nindex fab621a6a0b..b811dc3f2a3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/checkstyle_idea/32/PacketAdventureSettingsHandler.java\n@@ -10,21 +10,21 @@ import io.gomint.server.network.packet.PacketAdventureSettings;\n  * @version 1.0\n  */\n public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdventureSettings> {\n-    \n+\n     @Override\n-    public void handle( PacketAdventureSettings packet, long currentTimeMillis, PlayerConnection connection ) {\n+    public void handle(PacketAdventureSettings packet, long currentTimeMillis, PlayerConnection connection) {\n         // This is sent when the client wants a change to its flying status\n-        AdventureSettings adventureSettings = new AdventureSettings( packet.getFlags(), packet.getFlags2() );\n+        AdventureSettings adventureSettings = new AdventureSettings(packet.getFlags(), packet.getFlags2());\n \n-        if ( connection.entity().adventureSettings().isFlying() != adventureSettings.isFlying() ) {\n+        if (connection.entity().adventureSettings().isFlying() != adventureSettings.isFlying()) {\n             // Fire event\n-            PlayerToggleFlyEvent playerToggleFlyEvent = new PlayerToggleFlyEvent( connection.entity(), adventureSettings.isFlying() );\n-            playerToggleFlyEvent.cancelled( !connection.entity().adventureSettings().isCanFly() );\n-            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );\n+            PlayerToggleFlyEvent playerToggleFlyEvent = new PlayerToggleFlyEvent(connection.entity(), adventureSettings.isFlying());\n+            playerToggleFlyEvent.cancelled(!connection.entity().adventureSettings().isCanFly());\n+            connection.entity().world().server().pluginManager().callEvent(playerToggleFlyEvent);\n \n-            connection.entity().adventureSettings().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n+            connection.entity().adventureSettings().setFlying(playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying());\n             connection.entity().adventureSettings().update();\n         }\n     }\n-    \n+\n }\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 182).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/32/PacketAdventureSettingsHandler.java\nindex fab621a6a0b..df1d36b7a36 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/naturalize/32/PacketAdventureSettingsHandler.java\n@@ -10,9 +10,9 @@ import io.gomint.server.network.packet.PacketAdventureSettings;\n  * @version 1.0\n  */\n public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdventureSettings> {\n-    \n+\n     @Override\n-    public void handle( PacketAdventureSettings packet, long currentTimeMillis, PlayerConnection connection ) {\n+public void handle( PacketAdventureSettings packet, long currentTimeMillis, PlayerConnection connection ) {\n         // This is sent when the client wants a change to its flying status\n         AdventureSettings adventureSettings = new AdventureSettings( packet.getFlags(), packet.getFlags2() );\n \n@@ -27,4 +27,4 @@ public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdven\n         }\n     }\n     \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "25",
+                    "severity": "error",
+                    "message": "Line is longer than 180 characters (found 228).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/random/files-repaired/32/PacketAdventureSettingsHandler.java\nindex fab621a6a0b..ec855269ff0 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/random/files-repaired/32/PacketAdventureSettingsHandler.java\n@@ -22,8 +22,7 @@ public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdven\n             playerToggleFlyEvent.cancelled( !connection.entity().adventureSettings().isCanFly() );\n             connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );\n \n-            connection.entity().adventureSettings().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n-            connection.entity().adventureSettings().update();\n+            connection . entity ().adventureSettings().setFlying(playerToggleFlyEvent.cancelled()?connection.entity().adventureSettings().isFlying():adventureSettings.isFlying());connection.entity().adventureSettings().update();\n         }\n     }\n     \n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/32/PacketAdventureSettingsHandler.java\nindex fab621a6a0b..82e578beedf 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/violations/32/PacketAdventureSettingsHandler.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/gomint-gomint/styler/05_predictions/three_grams/files-repaired/32/PacketAdventureSettingsHandler.java\n@@ -20,9 +20,8 @@ public class PacketAdventureSettingsHandler implements PacketHandler<PacketAdven\n             // Fire event\n             PlayerToggleFlyEvent playerToggleFlyEvent = new PlayerToggleFlyEvent( connection.entity(), adventureSettings.isFlying() );\n             playerToggleFlyEvent.cancelled( !connection.entity().adventureSettings().isCanFly() );\n-            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );\n-\n-            connection.entity().adventureSettings().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n+            connection.entity().world().server().pluginManager().callEvent( playerToggleFlyEvent );connection.entity ( ) .\n+                adventureSettings ().setFlying( playerToggleFlyEvent.cancelled() ? connection.entity().adventureSettings().isFlying() : adventureSettings.isFlying() );\n             connection.entity().adventureSettings().update();\n         }\n     }\n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

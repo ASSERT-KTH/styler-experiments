@@ -1,0 +1,104 @@
+{
+    "project_name": "1and1-cosmo",
+    "violation_id": "16",
+    "information": {
+        "violations": [
+            {
+                "line": "43",
+                "severity": "warning",
+                "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+            }
+        ]
+    },
+    "source_code": "public class CosmoUserDetails implements UserDetails {\n    \n   private static final long serialVersionUID = 3034617040424768102L;\n   \n   @SuppressWarnings(\"unused\")\n   private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/16/CosmoUserDetails.java\nindex afc3a3894e3..39e6e116d37 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/1and1-cosmo/styler/05_predictions/final/files-repaired/16/CosmoUserDetails.java\n@@ -39,9 +39,8 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see GrantedAuthority\n  */\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n+    private static final long serialVersionUID =3034617040424768102L;\n+\n    @SuppressWarnings(\"unused\")\n    private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "43",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/16/CosmoUserDetails.java\nindex afc3a3894e3..3a5c1eaf745 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/checkstyle_idea/16/CosmoUserDetails.java\n@@ -39,11 +39,11 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see GrantedAuthority\n  */\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n-   @SuppressWarnings(\"unused\")\n-   private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n+\n+    private static final long serialVersionUID = 3034617040424768102L;\n+\n+    @SuppressWarnings(\"unused\")\n+    private static final Log LOG = LogFactory.getLog(CosmoUserDetails.class);\n \n     private User user;\n     private List<GrantedAuthority> authorities;\n@@ -59,7 +59,7 @@ public class CosmoUserDetails implements UserDetails {\n         if (user.getAdmin().booleanValue()) {\n             authorities.add(new SimpleGrantedAuthority(\"ROLE_ROOT\"));\n         }\n-        if (! user.isOverlord()) {\n+        if (!user.isOverlord()) {\n             authorities.add(new SimpleGrantedAuthority(\"ROLE_USER\"));\n         }\n \n@@ -71,7 +71,7 @@ public class CosmoUserDetails implements UserDetails {\n     /**\n      * Indicates whether the user's account has expired. An expired\n      * account can not be authenticated.\n-     *\n+     * <p>\n      * Note: since account expiration has not been implemented in\n      * Cosmo, this method always returns <code>true</code>.\n      *\n@@ -94,7 +94,7 @@ public class CosmoUserDetails implements UserDetails {\n         if (user.isOverlord()) {\n             return true;\n         }\n-        return ! user.isLocked().booleanValue();\n+        return !user.isLocked().booleanValue();\n     }\n \n     /**\n@@ -110,7 +110,7 @@ public class CosmoUserDetails implements UserDetails {\n     /**\n      * Indicates whether the users's credentials (password) has\n      * expired. Expired credentials prevent authentication.\n-     *\n+     * <p>\n      * Note: since credential expiration has not been implemented in\n      * Cosmo, this method always returns <code>true</code>.\n      *\n",
+            "diff_size": 9
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/16/CosmoUserDetails.java\nindex afc3a3894e3..2cf5932863a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/naturalize/16/CosmoUserDetails.java\n@@ -39,13 +39,12 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see GrantedAuthority\n  */\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n-   @SuppressWarnings(\"unused\")\n-   private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n+    private static final long serialVersionUID = 3034617040424768102L;\n \n-    private User user;\n+    @SuppressWarnings(\"unused\")\n+private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n+\n+private User user;\n     private List<GrantedAuthority> authorities;\n \n     /**\n@@ -163,4 +162,4 @@ public class CosmoUserDetails implements UserDetails {\n     public User getUser() {\n         return user;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 10
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "44",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/16/CosmoUserDetails.java\nindex afc3a3894e3..1fadbf57e32 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/codebuff/16/CosmoUserDetails.java\n@@ -17,7 +17,6 @@ package org.unitedinternet.cosmo.acegisecurity.userdetails;\n \n import java.util.ArrayList;\n import java.util.List;\n-\n import org.apache.commons.logging.Log;\n import org.apache.commons.logging.LogFactory;\n import org.unitedinternet.cosmo.model.User;\n@@ -38,13 +37,14 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see UserDetails\n  * @see GrantedAuthority\n  */\n+\n+\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n-   @SuppressWarnings(\"unused\")\n-   private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n \n+    private static final long serialVersionUID = 3034617040424768102L;\n+\n+    @SuppressWarnings(\"unused\")\n+    private static final Log LOG = LogFactory.getLog(CosmoUserDetails.class);\n     private User user;\n     private List<GrantedAuthority> authorities;\n \n@@ -52,6 +52,7 @@ public class CosmoUserDetails implements UserDetails {\n      * @param user the wrapped <code>User</code>\n      * @see User\n      */\n+\n     public CosmoUserDetails(User user) {\n         this.user = user;\n \n@@ -59,10 +60,9 @@ public class CosmoUserDetails implements UserDetails {\n         if (user.getAdmin().booleanValue()) {\n             authorities.add(new SimpleGrantedAuthority(\"ROLE_ROOT\"));\n         }\n-        if (! user.isOverlord()) {\n+        if (!user.isOverlord()) {\n             authorities.add(new SimpleGrantedAuthority(\"ROLE_USER\"));\n         }\n-\n         this.authorities = authorities;\n     }\n \n@@ -79,6 +79,8 @@ public class CosmoUserDetails implements UserDetails {\n      * non-expired), <code>false</code> if no longer valid (ie\n      * expired)\n      */\n+\n+\n     public boolean isAccountNonExpired() {\n         return true;\n     }\n@@ -90,11 +92,13 @@ public class CosmoUserDetails implements UserDetails {\n      * @return <code>true</code> if the user is not locked,\n      * <code>false</code> otherwise\n      */\n+\n     public boolean isAccountNonLocked() {\n         if (user.isOverlord()) {\n             return true;\n         }\n-        return ! user.isLocked().booleanValue();\n+\n+        return !user.isLocked().booleanValue();\n     }\n \n     /**\n@@ -103,6 +107,7 @@ public class CosmoUserDetails implements UserDetails {\n      *\n      * @return the authorities (never <code>null</code>)\n      */\n+\n     public List<GrantedAuthority> getAuthorities() {\n         return authorities;\n     }\n@@ -118,6 +123,7 @@ public class CosmoUserDetails implements UserDetails {\n      * valid (ie non-expired), <code>false</code> if no longer\n      * valid (ie expired)\n      */\n+\n     public boolean isCredentialsNonExpired() {\n         return true;\n     }\n@@ -129,6 +135,7 @@ public class CosmoUserDetails implements UserDetails {\n      * @return <code>true</code> if the user is enabled,\n      * <code>false</code> otherwise\n      */\n+\n     public boolean isEnabled() {\n         return user.isActivated();\n     }\n@@ -139,6 +146,7 @@ public class CosmoUserDetails implements UserDetails {\n      *\n      * @return the password (never <code>null</code>)\n      */\n+\n     public String getPassword() {\n         return user.getPassword();\n     }\n@@ -149,6 +157,7 @@ public class CosmoUserDetails implements UserDetails {\n      *\n      * @return the username (never <code>null</code>)\n      */\n+\n     public String getUsername() {\n         return user.getUsername();\n     }\n@@ -160,7 +169,8 @@ public class CosmoUserDetails implements UserDetails {\n      *\n      * @return the user\n      */\n+\n     public User getUser() {\n         return user;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 27
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "43",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/16/CosmoUserDetails.java\nindex afc3a3894e3..c6a01a4bc68 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/random/files-repaired/16/CosmoUserDetails.java\n@@ -39,10 +39,9 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see GrantedAuthority\n  */\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n-   @SuppressWarnings(\"unused\")\n+\n+    private static final long serialVersionUID = 3034617040424768102L ;\n+    @SuppressWarnings(\"unused\")\n    private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n \n     private User user;\n",
+            "diff_size": 4
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "42",
+                    "severity": "warning",
+                    "message": "Verwendung von serialVersionUID vorerst vermeiden. Details siehe http://development.webde.local/dev_wiki/JavaStyleGuide/BestPractise#serialVersionUID",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/16/CosmoUserDetails.java\nindex afc3a3894e3..39e6e116d37 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/violations/16/CosmoUserDetails.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/1and1-cosmo/styler/05_predictions/three_grams/files-repaired/16/CosmoUserDetails.java\n@@ -39,9 +39,8 @@ import org.springframework.security.core.userdetails.UserDetails;\n  * @see GrantedAuthority\n  */\n public class CosmoUserDetails implements UserDetails {\n-    \n-   private static final long serialVersionUID = 3034617040424768102L;\n-   \n+    private static final long serialVersionUID =3034617040424768102L;\n+\n    @SuppressWarnings(\"unused\")\n    private static final Log LOG =  LogFactory.getLog(CosmoUserDetails.class);\n \n",
+            "diff_size": 3
+        }
+    ],
+    "repaired_by": [],
+    "not_repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

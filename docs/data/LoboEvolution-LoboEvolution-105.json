@@ -1,0 +1,87 @@
+{
+    "project_name": "LoboEvolution-LoboEvolution",
+    "violation_id": "105",
+    "information": {
+        "violations": [
+            {
+                "line": "47",
+                "column": "1",
+                "severity": "error",
+                "message": "File contains tab characters (this is the first instance).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+            }
+        ]
+    },
+    "source_code": " */\npublic interface HTMLFieldSetElement extends HTMLElement {\n\t/**\n\t * Returns the FORM element containing this control. Returns\n\t * null if this control is not within the context of a form.\n\t *",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "48",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/105/HTMLFieldSetElement.java\nindex 910a7ac9e55..8f21f0b340a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/final/files-repaired/105/HTMLFieldSetElement.java\n@@ -44,12 +44,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+/**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/105/HTMLFieldSetElement.java\nindex 910a7ac9e55..7671c223e26 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/checkstyle_idea/105/HTMLFieldSetElement.java\n@@ -44,12 +44,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n-\t * Returns the FORM element containing this control. Returns\n-\t * null if this control is not within the context of a form.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n-\t */\n-\tHTMLFormElement getForm();\n+    /**\n+     * Returns the FORM element containing this control. Returns\n+     * null if this control is not within the context of a form.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n+     */\n+    HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 7
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/105/HTMLFieldSetElement.java\nindex 910a7ac9e55..7e321e7f285 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/codebuff/105/HTMLFieldSetElement.java\n@@ -43,13 +43,16 @@ package org.loboevolution.html.dom;\n  * @author utente\n  * @version $Id: $Id\n  */\n+\n+\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n-\t * Returns the FORM element containing this control. Returns\n-\t * null if this control is not within the context of a form.\n-\t *\n-\t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n-\t */\n-\tHTMLFormElement getForm();\n-\n-}\n+    /**\n+     * Returns the FORM element containing this control. Returns\n+     * null if this control is not within the context of a form.\n+     *\n+     * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n+     */\n+\n+\n+    HTMLFormElement getForm();\n+}\n\\ No newline at end of file\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "48",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/105/HTMLFieldSetElement.java\nindex 910a7ac9e55..8f21f0b340a 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/random/files-repaired/105/HTMLFieldSetElement.java\n@@ -44,12 +44,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+/**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "48",
+                    "column": "1",
+                    "severity": "error",
+                    "message": "File contains tab characters (this is the first instance).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/105/HTMLFieldSetElement.java\nindex 910a7ac9e55..0613744b2a4 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/violations/105/HTMLFieldSetElement.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/LoboEvolution-LoboEvolution/styler/05_predictions/three_grams/files-repaired/105/HTMLFieldSetElement.java\n@@ -44,12 +44,12 @@ package org.loboevolution.html.dom;\n  * @version $Id: $Id\n  */\n public interface HTMLFieldSetElement extends HTMLElement {\n-\t/**\n+    /**\n \t * Returns the FORM element containing this control. Returns\n \t * null if this control is not within the context of a form.\n \t *\n \t * @return a {@link org.loboevolution.html.dom.HTMLFormElement} object.\n \t */\n-\tHTMLFormElement getForm();\n+ HTMLFormElement getForm();\n \n }\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea",
+        "codebuff"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

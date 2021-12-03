@@ -1,0 +1,68 @@
+{
+    "project_name": "Qihoo360-Quicksql",
+    "violation_id": "103",
+    "information": {
+        "violations": [
+            {
+                "line": "17",
+                "severity": "error",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * limitations under the License.\n */\npackage org.apache.calcite.plan.volcano;\n\n/**\n * VolcanoPlannerPhase represents the phases of operation that the",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/103/VolcanoPlannerPhase.java\nindex b0b9baa99d2..30748fe024b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/Qihoo360-Quicksql/styler/05_predictions/final/files-repaired/103/VolcanoPlannerPhase.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n+\r\n package org.apache.calcite.plan.volcano;\r\n \r\n /**\r\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/103/VolcanoPlannerPhase.java\nindex b0b9baa99d2..8914ad5ba48 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/checkstyle_idea/103/VolcanoPlannerPhase.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n+\r\n package org.apache.calcite.plan.volcano;\r\n \r\n /**\r\n@@ -22,7 +23,7 @@ package org.apache.calcite.plan.volcano;\n  * {@link org.apache.calcite.rel.RelNode} objects.\r\n  */\r\n public enum VolcanoPlannerPhase {\r\n-  PRE_PROCESS_MDR, PRE_PROCESS, OPTIMIZE, CLEANUP,\r\n+    PRE_PROCESS_MDR, PRE_PROCESS, OPTIMIZE, CLEANUP,\r\n }\r\n \r\n // End VolcanoPlannerPhase.java\r\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "17",
+                    "severity": "error",
+                    "message": "'package' should be separated from previous statement.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/103/VolcanoPlannerPhase.java\nindex b0b9baa99d2..6db71af33a6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/codebuff/103/VolcanoPlannerPhase.java\n@@ -20,9 +20,9 @@ package org.apache.calcite.plan.volcano;\n  * VolcanoPlannerPhase represents the phases of operation that the\r\n  * {@link VolcanoPlanner} passes through during optimization of a tree of\r\n  * {@link org.apache.calcite.rel.RelNode} objects.\r\n- */\r\n-public enum VolcanoPlannerPhase {\r\n-  PRE_PROCESS_MDR, PRE_PROCESS, OPTIMIZE, CLEANUP,\r\n-}\r\n-\r\n-// End VolcanoPlannerPhase.java\r\n+ */\n+\n+\n+public enum VolcanoPlannerPhase {\n+    PRE_PROCESS_MDR, PRE_PROCESS, OPTIMIZE, CLEANUP,\n+}\n\\ No newline at end of file\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_random",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/103/VolcanoPlannerPhase.java\nindex b0b9baa99d2..30748fe024b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/violations/103/VolcanoPlannerPhase.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/Qihoo360-Quicksql/styler/05_predictions/three_grams/files-repaired/103/VolcanoPlannerPhase.java\n@@ -14,6 +14,7 @@\n  * See the License for the specific language governing permissions and\r\n  * limitations under the License.\r\n  */\r\n+\r\n package org.apache.calcite.plan.volcano;\r\n \r\n /**\r\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

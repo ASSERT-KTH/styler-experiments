@@ -1,0 +1,98 @@
+{
+    "project_name": "java110-MicroCommunity",
+    "violation_id": "461",
+    "information": {
+        "violations": [
+            {
+                "line": "65",
+                "severity": "error",
+                "message": "Line is longer than 150 characters (found 190).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": "        }\n\n        List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n\n        return feeDiscounts;\n    }",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 191).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..46acdf9801e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/java110-MicroCommunity/styler/05_predictions/final/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -62,7 +62,7 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n             feeDiscountDto.setPage((page - 1) * feeDiscountDto.getRow());\n         }\n \n-        List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n+        List <FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n \n         return feeDiscounts;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..a8e128c5b57 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/checkstyle_idea/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -62,7 +62,9 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n             feeDiscountDto.setPage((page - 1) * feeDiscountDto.getRow());\n         }\n \n-        List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n+        List<FeeDiscountDto> feeDiscounts =\n+            BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)),\n+                FeeDiscountDto.class);\n \n         return feeDiscounts;\n     }\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..2f7bbe76123 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/naturalize/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -80,4 +80,4 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n     public void setFeeDiscountServiceDaoImpl(IFeeDiscountServiceDao feeDiscountServiceDaoImpl) {\n         this.feeDiscountServiceDaoImpl = feeDiscountServiceDaoImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "74",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..7f43a86799e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/codebuff/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -1,6 +1,5 @@\n package com.java110.fee.smo.impl;\n \n-\n import com.java110.core.base.smo.BaseServiceSMO;\n import com.java110.dto.PageDto;\n import com.java110.dto.feeDiscount.FeeDiscountDto;\n@@ -11,7 +10,6 @@ import com.java110.utils.util.BeanConvertUtil;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.web.bind.annotation.RequestBody;\n import org.springframework.web.bind.annotation.RestController;\n-\n import java.util.List;\n \n /**\n@@ -22,15 +20,19 @@ import java.util.List;\n  * @Version 1.0\n  * add by wuxw 2019/4/24\n  **/\n+\n+\n @RestController\n public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IFeeDiscountInnerServiceSMO {\n \n     @Autowired\n     private IFeeDiscountServiceDao feeDiscountServiceDaoImpl;\n \n-\n     @Override\n     public int saveFeeDiscount(@RequestBody FeeDiscountPo feeDiscountPo) {\n+\n+\n+\n         int saveFlag = 1;\n         feeDiscountServiceDaoImpl.saveFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountPo));\n         return saveFlag;\n@@ -38,6 +40,9 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n \n     @Override\n     public int updateFeeDiscount(@RequestBody FeeDiscountPo feeDiscountPo) {\n+\n+\n+\n         int saveFlag = 1;\n         feeDiscountServiceDaoImpl.updateFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountPo));\n         return saveFlag;\n@@ -45,6 +50,9 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n \n     @Override\n     public int deleteFeeDiscount(@RequestBody FeeDiscountPo feeDiscountPo) {\n+\n+\n+\n         int saveFlag = 1;\n         feeDiscountPo.setStatusCd(\"1\");\n         feeDiscountServiceDaoImpl.updateFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountPo));\n@@ -56,18 +64,17 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n \n         //\u6821\u9a8c\u662f\u5426\u4f20\u4e86 \u5206\u9875\u4fe1\u606f\n \n-        int page = feeDiscountDto.getPage();\n \n+\n+        int page = feeDiscountDto.getPage();\n         if (page != PageDto.DEFAULT_PAGE) {\n             feeDiscountDto.setPage((page - 1) * feeDiscountDto.getRow());\n         }\n \n         List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n-\n         return feeDiscounts;\n     }\n \n-\n     @Override\n     public int queryFeeDiscountsCount(@RequestBody FeeDiscountDto feeDiscountDto) {\n         return feeDiscountServiceDaoImpl.queryFeeDiscountsCount(BeanConvertUtil.beanCovertMap(feeDiscountDto));\n@@ -80,4 +87,4 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n     public void setFeeDiscountServiceDaoImpl(IFeeDiscountServiceDao feeDiscountServiceDaoImpl) {\n         this.feeDiscountServiceDaoImpl = feeDiscountServiceDaoImpl;\n     }\n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 20
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "65",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 191).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..46acdf9801e 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/random/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -62,7 +62,7 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n             feeDiscountDto.setPage((page - 1) * feeDiscountDto.getRow());\n         }\n \n-        List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n+        List <FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n \n         return feeDiscounts;\n     }\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "64",
+                    "severity": "error",
+                    "message": "Line is longer than 150 characters (found 190).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\nindex 7b1f7eec67d..ad6eec482f6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/violations/461/FeeDiscountInnerServiceSMOImpl.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/java110-MicroCommunity/styler/05_predictions/three_grams/files-repaired/461/FeeDiscountInnerServiceSMOImpl.java\n@@ -61,7 +61,6 @@ public class FeeDiscountInnerServiceSMOImpl extends BaseServiceSMO implements IF\n         if (page != PageDto.DEFAULT_PAGE) {\n             feeDiscountDto.setPage((page - 1) * feeDiscountDto.getRow());\n         }\n-\n         List<FeeDiscountDto> feeDiscounts = BeanConvertUtil.covertBeanList(feeDiscountServiceDaoImpl.getFeeDiscountInfo(BeanConvertUtil.beanCovertMap(feeDiscountDto)), FeeDiscountDto.class);\n \n         return feeDiscounts;\n",
+            "diff_size": 1
+        }
+    ],
+    "repaired_by": [
+        "checkstyle_idea"
+    ],
+    "not_repaired_by": [
+        "styler",
+        "naturalize",
+        "codebuff",
+        "styler_random",
+        "styler_three_grams"
+    ]
+}

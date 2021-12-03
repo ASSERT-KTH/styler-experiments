@@ -1,0 +1,90 @@
+{
+    "project_name": "ibinti-bugvm",
+    "violation_id": "133",
+    "information": {
+        "violations": [
+            {
+                "line": "31",
+                "severity": "error",
+                "message": "Line is longer than 80 characters (found 82).",
+                "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+            }
+        ]
+    },
+    "source_code": " * @hide\n */\npublic abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {\n    /**\n     * Default constructor, for use by subclasses.\n     */",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/133/DecimalFormatSymbolsProvider.java\nindex f9f5e7d805f..8232abee963 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/ibinti-bugvm/styler/05_predictions/final/files-repaired/133/DecimalFormatSymbolsProvider.java\n@@ -28,8 +28,8 @@ import java.util.spi.LocaleServiceProvider;\n  * @since 1.6\n  * @hide\n  */\n-public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {\n-    /**\n+public abstract class DecimalFormatSymbolsProvider extends\n+        LocaleServiceProvider { /**\n      * Default constructor, for use by subclasses.\n      */\n     protected DecimalFormatSymbolsProvider() {\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [
+                {
+                    "line": "47",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 86).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/133/DecimalFormatSymbolsProvider.java\nindex f9f5e7d805f..1cbecc1e4d3 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/checkstyle_idea/133/DecimalFormatSymbolsProvider.java\n@@ -25,27 +25,28 @@ import java.util.spi.LocaleServiceProvider;\n  * This abstract class should be extended by service providers that provide\n  * instances of {@code DecimalFormatSymbols}.\n  * <p>Note that Android does not support user-supplied locale service providers.\n- * @since 1.6\n+ *\n  * @hide\n+ * @since 1.6\n  */\n-public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {\n-    /**\n-     * Default constructor, for use by subclasses.\n-     */\n-    protected DecimalFormatSymbolsProvider() {\n-        // Do nothing.\n-    }\n+public abstract class DecimalFormatSymbolsProvider\n+  extends LocaleServiceProvider {\n+  /**\n+   * Default constructor, for use by subclasses.\n+   */\n+  protected DecimalFormatSymbolsProvider() {\n+    // Do nothing.\n+  }\n \n-    /**\n-     * Returns an instance of {@code DecimalFormatSymbols} for the given locale.\n-     *\n-     * @param locale the locale\n-     * @return an instance of {@code DecimalFormatSymbols}\n-     * @throws NullPointerException if {@code locale == null}\n-     * @throws IllegalArgumentException\n-     *             if locale isn't one of the locales returned from\n-     *             getAvailableLocales().\n-     */\n-    public abstract DecimalFormatSymbols getInstance(Locale locale);\n+  /**\n+   * Returns an instance of {@code DecimalFormatSymbols} for the given locale.\n+   *\n+   * @param locale the locale\n+   * @return an instance of {@code DecimalFormatSymbols}\n+   * @throws NullPointerException     if {@code locale == null}\n+   * @throws IllegalArgumentException if locale isn't one of the locales returned from\n+   *                                  getAvailableLocales().\n+   */\n+  public abstract DecimalFormatSymbols getInstance(Locale locale);\n \n }\n",
+            "diff_size": 21
+        },
+        {
+            "tool": "naturalize",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 82).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/133/DecimalFormatSymbolsProvider.java\nindex f9f5e7d805f..084650dacaa 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/naturalize/133/DecimalFormatSymbolsProvider.java\n@@ -48,4 +48,4 @@ public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider\n      */\n     public abstract DecimalFormatSymbols getInstance(Locale locale);\n \n-}\n+}\n\\ No newline at end of file\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "31",
+                    "severity": "error",
+                    "message": "Line is longer than 80 characters (found 85).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "31",
+                    "column": "82",
+                    "severity": "error",
+                    "message": "'{' is not followed by whitespace.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/133/DecimalFormatSymbolsProvider.java\nindex f9f5e7d805f..be9a04b39c6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/random/files-repaired/133/DecimalFormatSymbolsProvider.java\n@@ -28,11 +28,10 @@ import java.util.spi.LocaleServiceProvider;\n  * @since 1.6\n  * @hide\n  */\n-public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {\n-    /**\n+public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {/**\n      * Default constructor, for use by subclasses.\n      */\n-    protected DecimalFormatSymbolsProvider() {\n+protected DecimalFormatSymbolsProvider() {\n         // Do nothing.\n     }\n \n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/133/DecimalFormatSymbolsProvider.java\nindex f9f5e7d805f..8232abee963 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/violations/133/DecimalFormatSymbolsProvider.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/ibinti-bugvm/styler/05_predictions/three_grams/files-repaired/133/DecimalFormatSymbolsProvider.java\n@@ -28,8 +28,8 @@ import java.util.spi.LocaleServiceProvider;\n  * @since 1.6\n  * @hide\n  */\n-public abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {\n-    /**\n+public abstract class DecimalFormatSymbolsProvider extends\n+        LocaleServiceProvider { /**\n      * Default constructor, for use by subclasses.\n      */\n     protected DecimalFormatSymbolsProvider() {\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "checkstyle_idea",
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}

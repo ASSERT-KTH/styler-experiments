@@ -1,0 +1,84 @@
+{
+    "project_name": "dzhw-metadatamanagement",
+    "violation_id": "123",
+    "information": {
+        "violations": [
+            {
+                "line": "21",
+                "column": "69",
+                "severity": "error",
+                "message": "'}' at column 69 should be alone on a line.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+            }
+        ]
+    },
+    "source_code": "   */\n  @Override\n  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {}\n\n  /*\n   * (non-Javadoc)",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/123/OneForeignKeyIsUsedValidator.java\nindex e7b89a8edc9..32376f38f2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/dzhw-metadatamanagement/styler/05_predictions/final/files-repaired/123/OneForeignKeyIsUsedValidator.java\n@@ -18,7 +18,9 @@ public class OneForeignKeyIsUsedValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {}\n+  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/123/OneForeignKeyIsUsedValidator.java\nindex e7b89a8edc9..d8d0f25cd69 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/checkstyle_idea/123/OneForeignKeyIsUsedValidator.java\n@@ -14,22 +14,23 @@ public class OneForeignKeyIsUsedValidator\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {}\n+  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {\n+  }\n \n   /*\n    * (non-Javadoc)\n-   * \n+   *\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n   @Override\n-  public boolean isValid(RelatedPublication relatedPublication, \n-      ConstraintValidatorContext context) {\n-    \n+  public boolean isValid(RelatedPublication relatedPublication,\n+                         ConstraintValidatorContext context) {\n+\n     //boolean vars \n     boolean notEmptyDataSetIds = false;\n     boolean notEmptyInstrumentIds = false;\n@@ -38,8 +39,8 @@ public class OneForeignKeyIsUsedValidator\n     boolean notEmptySurveyIds = false;\n     boolean notEmptyVariableIds = false;\n     boolean notEmptyStudySerieses = false;\n-    \n-    \n+\n+\n     //check all lists for null and set the isEmpty Value\n     if (relatedPublication.getDataSetIds() != null) {\n       notEmptyDataSetIds = !relatedPublication.getDataSetIds().isEmpty();\n@@ -62,10 +63,10 @@ public class OneForeignKeyIsUsedValidator\n     if (relatedPublication.getStudySerieses() != null) {\n       notEmptyStudySerieses = !relatedPublication.getStudySerieses().isEmpty();\n     }\n-       \n-    \n+\n+\n     return notEmptyDataSetIds || notEmptyInstrumentIds || notEmptyQuestionIds || notEmptyStudyIds\n-          || notEmptySurveyIds || notEmptyVariableIds || notEmptyStudySerieses;\n+        || notEmptySurveyIds || notEmptyVariableIds || notEmptyStudySerieses;\n   }\n \n }\n",
+            "diff_size": 12
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": [
+                {
+                    "line": "13",
+                    "severity": "error",
+                    "message": "Line is longer than 100 characters (found 115).",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                },
+                {
+                    "line": "36",
+                    "severity": "error",
+                    "message": "'ConstraintValidatorContext' has incorrect indentation level 4, expected level should be 6.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/123/OneForeignKeyIsUsedValidator.java\nindex e7b89a8edc9..5327003cc89 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/codebuff/123/OneForeignKeyIsUsedValidator.java\n@@ -2,23 +2,26 @@ package eu.dzhw.fdz.metadatamanagement.relatedpublicationmanagement.domain.valid\n \n import javax.validation.ConstraintValidator;\n import javax.validation.ConstraintValidatorContext;\n-\n import eu.dzhw.fdz.metadatamanagement.relatedpublicationmanagement.domain.RelatedPublication;\n \n \n /**\n  * Checks for one list of foreign keys is filled.\n  */\n-public class OneForeignKeyIsUsedValidator\n-    implements ConstraintValidator<OneForeignKeyIsUsed, RelatedPublication> {\n+\n+\n+public class OneForeignKeyIsUsedValidator implements ConstraintValidator<OneForeignKeyIsUsed, RelatedPublication> {\n \n   /*\n    * (non-Javadoc)\n    * \n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n+\n   @Override\n-  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {}\n+  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n@@ -26,9 +29,11 @@ public class OneForeignKeyIsUsedValidator\n    * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,\n    * javax.validation.ConstraintValidatorContext)\n    */\n+\n+\n   @Override\n-  public boolean isValid(RelatedPublication relatedPublication, \n-      ConstraintValidatorContext context) {\n+  public boolean isValid(RelatedPublication relatedPublication,\n+    ConstraintValidatorContext context) {\n     \n     //boolean vars \n     boolean notEmptyDataSetIds = false;\n@@ -62,10 +67,11 @@ public class OneForeignKeyIsUsedValidator\n     if (relatedPublication.getStudySerieses() != null) {\n       notEmptyStudySerieses = !relatedPublication.getStudySerieses().isEmpty();\n     }\n-       \n-    \n-    return notEmptyDataSetIds || notEmptyInstrumentIds || notEmptyQuestionIds || notEmptyStudyIds\n-          || notEmptySurveyIds || notEmptyVariableIds || notEmptyStudySerieses;\n-  }\n \n-}\n+    return notEmptyDataSetIds || notEmptyInstrumentIds\n+           || notEmptyQuestionIds\n+           || notEmptyStudyIds\n+           || notEmptySurveyIds\n+           || notEmptyVariableIds || notEmptyStudySerieses;\n+  }\n+}\n\\ No newline at end of file\n",
+            "diff_size": 24
+        },
+        {
+            "tool": "styler_random",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/123/OneForeignKeyIsUsedValidator.java\nindex e7b89a8edc9..32376f38f2b 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/violations/123/OneForeignKeyIsUsedValidator.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/dzhw-metadatamanagement/styler/05_predictions/random/files-repaired/123/OneForeignKeyIsUsedValidator.java\n@@ -18,7 +18,9 @@ public class OneForeignKeyIsUsedValidator\n    * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)\n    */\n   @Override\n-  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {}\n+  public void initialize(OneForeignKeyIsUsed constraintAnnotation) {\n+\n+  }\n \n   /*\n    * (non-Javadoc)\n",
+            "diff_size": 3
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [
+                {
+                    "line": "21",
+                    "column": "69",
+                    "severity": "error",
+                    "message": "'}' at column 69 should be alone on a line.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"
+                }
+            ],
+            "diff": "",
+            "diff_size": 0
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_random"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_three_grams"
+    ]
+}

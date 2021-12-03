@@ -1,0 +1,74 @@
+{
+    "project_name": "seedstack-seed",
+    "violation_id": "50",
+    "information": {
+        "violations": [
+            {
+                "line": "8",
+                "severity": "warning",
+                "message": "'package' should be separated from previous statement.",
+                "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"
+            }
+        ]
+    },
+    "source_code": " * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n */\npackage org.seedstack.seed.web.internal;\n\nimport static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\nimport static org.seedstack.seed.web.internal.ServletContextUtils.KERNEL_ATTRIBUTE_NAME;",
+    "results": [
+        {
+            "tool": "styler",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/50/SeedServletContainerInitializer.java\nindex f0d649296de..3760ea3bca6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/./experiments/projects/seedstack-seed/styler/05_predictions/final/files-repaired/50/SeedServletContainerInitializer.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.web.internal;\n \n import static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\n",
+            "diff_size": 2
+        },
+        {
+            "tool": "checkstyle_idea",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/50/SeedServletContainerInitializer.java\nindex f0d649296de..613e172dd35 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/checkstyle_idea/50/SeedServletContainerInitializer.java\n@@ -5,6 +5,7 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n package org.seedstack.seed.web.internal;\n \n import static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\n",
+            "diff_size": 1
+        },
+        {
+            "tool": "naturalize",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "codebuff",
+            "violations": null,
+            "diff": null
+        },
+        {
+            "tool": "styler_random",
+            "violations": [
+                {
+                    "line": "9",
+                    "severity": "warning",
+                    "message": "package statement should not be line-wrapped.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoLineWrapCheck"
+                },
+                {
+                    "line": "11",
+                    "severity": "warning",
+                    "message": "'org' has incorrect indentation level 0, expected level should be 8.",
+                    "source": "com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"
+                }
+            ],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/50/SeedServletContainerInitializer.java\nindex f0d649296de..f909a642543 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/random/files-repaired/50/SeedServletContainerInitializer.java\n@@ -5,9 +5,12 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n-package org.seedstack.seed.web.internal;\n \n-import static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\n+package\n+\n+org.seedstack.seed.web.internal;\n+\n+ import static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\n import static org.seedstack.seed.web.internal.ServletContextUtils.KERNEL_ATTRIBUTE_NAME;\n \n import com.google.inject.Injector;\n",
+            "diff_size": 6
+        },
+        {
+            "tool": "styler_three_grams",
+            "violations": [],
+            "diff": "diff --git a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/50/SeedServletContainerInitializer.java\nindex f0d649296de..3760ea3bca6 100644\n--- a/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/violations/50/SeedServletContainerInitializer.java\n+++ b/home/fernanda/mnt/fernanda/git-styler/styler/src/experiments/projects/seedstack-seed/styler/05_predictions/three_grams/files-repaired/50/SeedServletContainerInitializer.java\n@@ -5,6 +5,8 @@\n  * License, v. 2.0. If a copy of the MPL was not distributed with this\n  * file, You can obtain one at http://mozilla.org/MPL/2.0/.\n  */\n+\n+\n package org.seedstack.seed.web.internal;\n \n import static org.seedstack.seed.web.internal.ServletContextUtils.INJECTOR_ATTRIBUTE_NAME;\n",
+            "diff_size": 2
+        }
+    ],
+    "repaired_by": [
+        "styler",
+        "checkstyle_idea",
+        "styler_three_grams"
+    ],
+    "not_repaired_by": [
+        "naturalize",
+        "codebuff",
+        "styler_random"
+    ]
+}
